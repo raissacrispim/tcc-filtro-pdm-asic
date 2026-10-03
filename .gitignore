@@ -1,0 +1,52 @@
+# ============================================================
+# Synopsys VCS / Verdi
+# ============================================================
+
+# Executáveis gerados pelo VCS
+simv
+simv_*
+*/simv
+*/simv_*
+
+# Diretórios gerados pelo VCS
+csrc/
+simv.daidir/
+simv_*.daidir/
+*.daidir/
+
+# Waveforms Verdi
+*.fsdb
+
+# Arquivos temporários / logs Synopsys
+ucli.key
+novas.conf
+novas.rc
+novas_dump.log
+*.log
+
+# Backups de editor
+*.save
+*~
+*.bak
+*.swp
+
+# ============================================================
+# Arquivos compactados/gerados
+# ============================================================
+
+*.zip
+
+# ============================================================
+# Python / sistema
+# ============================================================
+
+__pycache__/
+*.pyc
+.DS_Store
+rtl/simv_fir_compile
+
+# Sessões e arquivos gerados pelo Verdi
+verdiLog/
+
+# Cópia auxiliar/antiga dos vetores
+content/
