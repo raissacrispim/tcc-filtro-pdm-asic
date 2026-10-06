@@ -1,0 +1,85 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'filtro_pdm' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : qor
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Tue Oct  6 16:08:26 2026
+****************************************
+
+
+  Timing Path Group 'clk'
+  -----------------------------------
+  Levels of Logic:              51.00
+  Critical Path Length:          5.96
+  Critical Path Slack:         202.32
+  Critical Path Clk Period:    208.33
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          1
+  Hierarchical Port Count:         40
+  Leaf Cell Count:               7912
+  Buf/Inv Cell Count:            1758
+  Buf Cell Count:                 123
+  Inv Cell Count:                1635
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      6591
+  Sequential Cell Count:         1321
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:    20463.166227
+  Noncombinational Area:  8728.830111
+  Buf/Inv Area:           2329.483925
+  Total Buffer Area:           250.08
+  Total Inverter Area:        2079.41
+  Macro/Black Box Area:      0.000000
+  Net Area:               6960.873962
+  -----------------------------------
+  Cell Area:             29191.996338
+  Design Area:           36152.870299
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:         10758
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: srv-microeletronica3
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    6.41
+  Logic Optimization:                  1.16
+  Mapping Optimization:                3.86
+  -----------------------------------------
+  Overall Compile Time:               91.35
+  Overall Compile Wall Clock Time:    92.14
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1

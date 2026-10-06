@@ -50,3 +50,22 @@ verdiLog/
 
 # Cópia auxiliar/antiga dos vetores
 content/
+
+# ============================================================
+# Synopsys Design Compiler
+# ============================================================
+
+# Arquivos intermediarios gerados pelo analyze/elaborate
+*.mr
+*-verilog.pvl
+*-verilog.syn
+
+# Diretorios temporarios do DC
+alib-52/
+cksum_dir/
+
+# Arquivo SVF gerado pelo DC
+default.svf
+
+# Backup local criado antes da adaptacao do FIR para sintese
+rtl/fir_antes_sintese.sv

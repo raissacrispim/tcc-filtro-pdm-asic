@@ -8,38 +8,37 @@ module fir #(
     parameter int TAPS      = 65,
     parameter int FRAC      = 15
 )(
-    input  logic                         clk,
-    input  logic                         rst,
-    input  logic                         valid_in,
+    input  logic                      clk,
+    input  logic                      rst,
+    input  logic                      valid_in,
+    input  logic signed [BITS_IN-1:0] x_in,
 
-    input  logic signed [BITS_IN-1:0]    x_in,
-
-    output logic                         valid_out,
-    output logic signed [BITS_OUT-1:0]   y_out
+    output logic                      valid_out,
+    output logic signed [BITS_OUT-1:0] y_out
 );
 
 
     // ========================================================
     // LINHA DE ATRASOS
     //
-    // delay[0]  = x[n]
-    // delay[1]  = x[n-1]
+    // Durante o calculo:
+    //
+    // x_in      = x[n]
+    // delay[0]  = x[n-1]
+    // delay[1]  = x[n-2]
     // ...
-    // delay[64] = x[n-64]
+    // delay[63] = x[n-64]
+    //
+    // O vetor possui TAPS elementos para manter a estrutura
+    // parametrizavel, embora no calculo sejam utilizados
+    // delay[0] ate delay[TAPS-2].
     // ========================================================
 
     logic signed [BITS_IN-1:0] delay [0:TAPS-1];
 
 
     // ========================================================
-    // COEFICIENTES FIR Q1.15
-    // ========================================================
-
-    logic signed [BITS_COEF-1:0] coef [0:TAPS-1];
-
-
-    // ========================================================
-    // VARIÁVEIS AUXILIARES
+    // VARIAVEIS AUXILIARES
     // ========================================================
 
     integer i;
@@ -51,78 +50,99 @@ module fir #(
 
 
     // ========================================================
-    // COEFICIENTES
+    // COEFICIENTES FIR Q1.15
+    //
+    // Os coeficientes sao constantes do projeto.
+    //
+    // Em vez de utilizar um bloco "initial", eles sao
+    // representados por uma funcao combinacional. Isso permite
+    // que o Design Compiler os trate diretamente como
+    // constantes durante a sintese.
     // ========================================================
 
-    initial begin
+    function automatic logic signed [BITS_COEF-1:0] coef;
+        input integer idx;
 
-        coef[ 0] = -16'sd6;
-        coef[ 1] = -16'sd2;
-        coef[ 2] =  16'sd14;
-        coef[ 3] = -16'sd11;
-        coef[ 4] = -16'sd22;
-        coef[ 5] =  16'sd43;
-        coef[ 6] = -16'sd4;
-        coef[ 7] = -16'sd80;
-        coef[ 8] =  16'sd82;
-        coef[ 9] =  16'sd56;
-        coef[10] = -16'sd196;
-        coef[11] =  16'sd81;
-        coef[12] =  16'sd218;
-        coef[13] = -16'sd330;
-        coef[14] = -16'sd28;
-        coef[15] =  16'sd515;
-        coef[16] = -16'sd404;
-        coef[17] = -16'sd389;
-        coef[18] =  16'sd869;
-        coef[19] = -16'sd207;
-        coef[20] = -16'sd1010;
-        coef[21] =  16'sd1065;
-        coef[22] =  16'sd394;
-        coef[23] = -16'sd1849;
-        coef[24] =  16'sd920;
-        coef[25] =  16'sd1915;
-        coef[26] = -16'sd2661;
-        coef[27] = -16'sd709;
-        coef[28] =  16'sd4553;
-        coef[29] = -16'sd2307;
-        coef[30] = -16'sd6823;
-        coef[31] =  16'sd10412;
-        coef[32] =  16'sd24614;
-        coef[33] =  16'sd10412;
-        coef[34] = -16'sd6823;
-        coef[35] = -16'sd2307;
-        coef[36] =  16'sd4553;
-        coef[37] = -16'sd709;
-        coef[38] = -16'sd2661;
-        coef[39] =  16'sd1915;
-        coef[40] =  16'sd920;
-        coef[41] = -16'sd1849;
-        coef[42] =  16'sd394;
-        coef[43] =  16'sd1065;
-        coef[44] = -16'sd1010;
-        coef[45] = -16'sd207;
-        coef[46] =  16'sd869;
-        coef[47] = -16'sd389;
-        coef[48] = -16'sd404;
-        coef[49] =  16'sd515;
-        coef[50] = -16'sd28;
-        coef[51] = -16'sd330;
-        coef[52] =  16'sd218;
-        coef[53] =  16'sd81;
-        coef[54] = -16'sd196;
-        coef[55] =  16'sd56;
-        coef[56] =  16'sd82;
-        coef[57] = -16'sd80;
-        coef[58] = -16'sd4;
-        coef[59] =  16'sd43;
-        coef[60] = -16'sd22;
-        coef[61] = -16'sd11;
-        coef[62] =  16'sd14;
-        coef[63] = -16'sd2;
-        coef[64] = -16'sd6;
+        begin
+            case (idx)
 
-    end
+                 0: coef = -16'sd6;
+                 1: coef = -16'sd2;
+                 2: coef =  16'sd14;
+                 3: coef = -16'sd11;
+                 4: coef = -16'sd22;
+                 5: coef =  16'sd43;
+                 6: coef = -16'sd4;
+                 7: coef = -16'sd80;
+                 8: coef =  16'sd82;
+                 9: coef =  16'sd56;
+
+                10: coef = -16'sd196;
+                11: coef =  16'sd81;
+                12: coef =  16'sd218;
+                13: coef = -16'sd330;
+                14: coef = -16'sd28;
+                15: coef =  16'sd515;
+                16: coef = -16'sd404;
+                17: coef = -16'sd389;
+                18: coef =  16'sd869;
+                19: coef = -16'sd207;
+
+                20: coef = -16'sd1010;
+                21: coef =  16'sd1065;
+                22: coef =  16'sd394;
+                23: coef = -16'sd1849;
+                24: coef =  16'sd920;
+                25: coef =  16'sd1915;
+                26: coef = -16'sd2661;
+                27: coef = -16'sd709;
+                28: coef =  16'sd4553;
+                29: coef = -16'sd2307;
+
+                30: coef = -16'sd6823;
+                31: coef =  16'sd10412;
+                32: coef =  16'sd24614;
+                33: coef =  16'sd10412;
+                34: coef = -16'sd6823;
+                35: coef = -16'sd2307;
+                36: coef =  16'sd4553;
+                37: coef = -16'sd709;
+                38: coef = -16'sd2661;
+                39: coef =  16'sd1915;
+
+                40: coef =  16'sd920;
+                41: coef = -16'sd1849;
+                42: coef =  16'sd394;
+                43: coef =  16'sd1065;
+                44: coef = -16'sd1010;
+                45: coef = -16'sd207;
+                46: coef =  16'sd869;
+                47: coef = -16'sd389;
+                48: coef = -16'sd404;
+                49: coef =  16'sd515;
+
+                50: coef = -16'sd28;
+                51: coef = -16'sd330;
+                52: coef =  16'sd218;
+                53: coef =  16'sd81;
+                54: coef = -16'sd196;
+                55: coef =  16'sd56;
+                56: coef =  16'sd82;
+                57: coef = -16'sd80;
+                58: coef = -16'sd4;
+                59: coef =  16'sd43;
+
+                60: coef = -16'sd22;
+                61: coef = -16'sd11;
+                62: coef =  16'sd14;
+                63: coef = -16'sd2;
+                64: coef = -16'sd6;
+
+                default: coef = '0;
+
+            endcase
+        end
+    endfunction
 
 
     // ========================================================
@@ -136,7 +156,7 @@ module fir #(
             for (i = 0; i < TAPS; i = i + 1)
                 delay[i] <= '0;
 
-            y_out    <= '0;
+            y_out     <= '0;
             valid_out <= 1'b0;
 
         end
@@ -151,7 +171,7 @@ module fir #(
                 // Calcula o FIR usando a amostra nova x_in
                 // como x[n].
                 //
-                // Os demais valores vêm da linha de atraso:
+                // Os demais valores vem da linha de atraso:
                 //
                 // delay[0] = x[n-1]
                 // delay[1] = x[n-2]
@@ -161,11 +181,14 @@ module fir #(
                 acc_temp = 64'sd0;
 
 
+                // ------------------------------------------------
                 // Tap k = 0
+                // ------------------------------------------------
+
                 produto_temp =
                     $signed(x_in)
                     *
-                    $signed(coef[0]);
+                    $signed(coef(0));
 
                 acc_temp =
                     acc_temp
@@ -173,13 +196,16 @@ module fir #(
                     produto_temp;
 
 
+                // ------------------------------------------------
                 // Taps k = 1 ... 64
+                // ------------------------------------------------
+
                 for (i = 1; i < TAPS; i = i + 1) begin
 
                     produto_temp =
                         $signed(delay[i-1])
                         *
-                        $signed(coef[i]);
+                        $signed(coef(i));
 
                     acc_temp =
                         acc_temp
@@ -190,8 +216,19 @@ module fir #(
 
 
                 // ------------------------------------------------
-                // SATURAÇÃO DO ACUMULADOR PARA 34 BITS
-                // Igual a sat_signed(acc, 34) do Python
+                // SATURACAO DO ACUMULADOR PARA 34 BITS
+                //
+                // Equivalente a:
+                //
+                // sat_signed(acc, 34)
+                //
+                // do Golden Model em Python.
+                //
+                // Faixa:
+                //
+                // -2^33 ate 2^33 - 1
+                //
+                // -8589934592 ate 8589934591
                 // ------------------------------------------------
 
                 if (acc_temp > 64'sd8589934591)
@@ -208,15 +245,16 @@ module fir #(
 
 
                 // ------------------------------------------------
-                // ARREDONDAMENTO SIMÉTRICO E SHIFT Q15
+                // ARREDONDAMENTO SIMETRICO E SHIFT Q15
                 //
-                // Python:
+                // Equivalente ao Python:
                 //
                 // if x >= 0:
                 //     (x + 16384) >> 15
-                //
                 // else:
                 //     -(((-x) + 16384) >> 15)
+                //
+                // 16384 = 2^(15-1)
                 // ------------------------------------------------
 
                 if (acc_sat >= 0) begin
@@ -238,7 +276,11 @@ module fir #(
 
 
                 // ------------------------------------------------
-                // SATURAÇÃO FINAL PARA 19 BITS
+                // SATURACAO FINAL PARA 19 BITS
+                //
+                // Faixa signed de 19 bits:
+                //
+                // -262144 ate 262143
                 // ------------------------------------------------
 
                 if (arredondado > 64'sd262143)
@@ -271,6 +313,5 @@ module fir #(
         end
 
     end
-
 
 endmodule

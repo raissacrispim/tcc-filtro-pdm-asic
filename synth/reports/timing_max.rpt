@@ -1,0 +1,875 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Tue Oct  6 16:08:40 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1824/Y (OR2X1_RVT)                               0.08       5.63 r
+  u_fir/U8/Y (INVX2_RVT)                                  0.07       5.70 f
+  u_fir/U2748/Y (AO22X1_RVT)                              0.12       5.83 f
+  u_fir/U2751/Y (OA222X1_RVT)                             0.12       5.95 f
+  u_fir/y_out_reg[0]/D (DFFX1_RVT)                        0.01       5.96 f
+  data arrival time                                                  5.96
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[0]/CLK (DFFX1_RVT)                      0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.32
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[17]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1824/Y (OR2X1_RVT)                               0.08       5.63 r
+  u_fir/U8/Y (INVX2_RVT)                                  0.07       5.70 f
+  u_fir/U2766/Y (AND2X1_RVT)                              0.10       5.81 f
+  u_fir/U2769/Y (AO222X1_RVT)                             0.11       5.91 f
+  u_fir/y_out_reg[17]/D (DFFX1_RVT)                       0.01       5.92 f
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[17]/CLK (DFFX1_RVT)                     0.00     208.33 r
+  library setup time                                     -0.05     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[12]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1858/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1860/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1865/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[12]/D (DFFX1_RVT)                       0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[12]/CLK (DFFX1_RVT)                     0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1866/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1868/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1873/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[11]/D (DFFX1_RVT)                       0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[11]/CLK (DFFX1_RVT)                     0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[10]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1874/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1876/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1881/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[10]/D (DFFX1_RVT)                       0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[10]/CLK (DFFX1_RVT)                     0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[9]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1882/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1884/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1889/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[9]/D (DFFX1_RVT)                        0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[9]/CLK (DFFX1_RVT)                      0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[8]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1890/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1892/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1897/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[8]/D (DFFX1_RVT)                        0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[8]/CLK (DFFX1_RVT)                      0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[7]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1898/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1900/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1905/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[7]/D (DFFX1_RVT)                        0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[7]/CLK (DFFX1_RVT)                      0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[5]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1914/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1916/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1921/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[5]/D (DFFX1_RVT)                        0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[5]/CLK (DFFX1_RVT)                      0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+  Startpoint: u_fir/delay_reg[33][0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/y_out_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                     35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_fir/delay_reg[33][0]/CLK (DFFX1_RVT)                  0.00 #     0.00 r
+  u_fir/delay_reg[33][0]/Q (DFFX1_RVT)                    0.14       0.14 r
+  u_fir/U1976/Y (AND2X1_RVT)                              0.07       0.21 r
+  u_fir/intadd_62/U17/CO (FADDX1_RVT)                     0.11       0.32 r
+  u_fir/intadd_62/U16/CO (FADDX1_RVT)                     0.12       0.44 r
+  u_fir/intadd_62/U15/S (FADDX1_RVT)                      0.20       0.63 f
+  u_fir/U1148/Y (INVX0_RVT)                               0.12       0.75 r
+  u_fir/U2311/Y (AO222X1_RVT)                             0.17       0.92 r
+  u_fir/intadd_103/U4/CO (FADDX1_RVT)                     0.13       1.05 r
+  u_fir/intadd_103/U3/S (FADDX1_RVT)                      0.16       1.21 f
+  u_fir/U843/Y (INVX0_RVT)                                0.05       1.26 r
+  u_fir/U2360/CO (FADDX1_RVT)                             0.12       1.38 r
+  u_fir/U844/Y (INVX0_RVT)                                0.05       1.43 f
+  u_fir/intadd_178/U2/CO (FADDX1_RVT)                     0.11       1.54 f
+  u_fir/U808/Y (INVX0_RVT)                                0.05       1.59 r
+  u_fir/intadd_10/U14/CO (FADDX1_RVT)                     0.13       1.72 r
+  u_fir/intadd_10/U13/CO (FADDX1_RVT)                     0.12       1.84 r
+  u_fir/intadd_10/U12/CO (FADDX1_RVT)                     0.12       1.96 r
+  u_fir/intadd_10/U11/S (FADDX1_RVT)                      0.16       2.11 f
+  u_fir/U355/Y (INVX0_RVT)                                0.05       2.17 r
+  u_fir/intadd_89/U6/S (FADDX1_RVT)                       0.17       2.34 f
+  u_fir/U203/Y (INVX0_RVT)                                0.05       2.39 r
+  u_fir/U2696/S (FADDX1_RVT)                              0.15       2.54 f
+  u_fir/U204/Y (INVX0_RVT)                                0.05       2.59 r
+  u_fir/intadd_30/U4/S (FADDX1_RVT)                       0.17       2.77 f
+  u_fir/U98/Y (INVX0_RVT)                                 0.05       2.82 r
+  u_fir/intadd_9/U8/S (FADDX1_RVT)                        0.17       2.99 f
+  u_fir/U74/Y (INVX0_RVT)                                 0.05       3.04 r
+  u_fir/intadd_19/U2/CO (FADDX1_RVT)                      0.12       3.16 r
+  u_fir/U71/Y (INVX0_RVT)                                 0.04       3.20 f
+  u_fir/intadd_15/U2/CO (FADDX1_RVT)                      0.12       3.33 f
+  u_fir/intadd_3/U14/S (FADDX1_RVT)                       0.19       3.52 r
+  u_fir/intadd_7/U5/S (FADDX1_RVT)                        0.19       3.71 f
+  u_fir/intadd_17/U3/S (FADDX1_RVT)                       0.18       3.89 r
+  u_fir/U33/Y (INVX0_RVT)                                 0.04       3.93 f
+  u_fir/intadd_14/U2/CO (FADDX1_RVT)                      0.12       4.05 f
+  u_fir/U23/Y (INVX0_RVT)                                 0.05       4.10 r
+  u_fir/intadd_17/U2/CO (FADDX1_RVT)                      0.13       4.23 r
+  u_fir/intadd_7/U3/CO (FADDX1_RVT)                       0.13       4.37 r
+  u_fir/intadd_7/U2/CO (FADDX1_RVT)                       0.12       4.49 r
+  u_fir/intadd_3/U10/CO (FADDX1_RVT)                      0.13       4.62 r
+  u_fir/intadd_3/U9/CO (FADDX1_RVT)                       0.12       4.74 r
+  u_fir/intadd_3/U8/CO (FADDX1_RVT)                       0.12       4.85 r
+  u_fir/intadd_3/U7/CO (FADDX1_RVT)                       0.12       4.97 r
+  u_fir/intadd_3/U6/CO (FADDX1_RVT)                       0.12       5.09 r
+  u_fir/intadd_3/U5/CO (FADDX1_RVT)                       0.12       5.20 r
+  u_fir/intadd_3/U4/CO (FADDX1_RVT)                       0.12       5.32 r
+  u_fir/intadd_3/U3/CO (FADDX1_RVT)                       0.12       5.44 r
+  u_fir/intadd_3/U2/CO (FADDX1_RVT)                       0.11       5.55 r
+  u_fir/U1722/Y (NAND2X0_RVT)                             0.07       5.62 f
+  u_fir/U7/Y (INVX2_RVT)                                  0.11       5.73 r
+  u_fir/U1930/Y (AND2X1_RVT)                              0.10       5.82 r
+  u_fir/U1932/Y (NAND2X0_RVT)                             0.04       5.86 f
+  u_fir/U1937/Y (NAND3X0_RVT)                             0.05       5.91 r
+  u_fir/y_out_reg[3]/D (DFFX1_RVT)                        0.01       5.92 r
+  data arrival time                                                  5.92
+
+  clock clk (rise edge)                                 208.33     208.33
+  clock network delay (ideal)                             0.00     208.33
+  u_fir/y_out_reg[3]/CLK (DFFX1_RVT)                      0.00     208.33 r
+  library setup time                                     -0.06     208.28
+  data required time                                               208.28
+  --------------------------------------------------------------------------
+  data required time                                               208.28
+  data arrival time                                                 -5.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                      202.36
+
+
+1

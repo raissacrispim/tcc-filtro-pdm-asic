@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : reference
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Tue Oct  6 16:08:46 2026
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1_RVT         saed32rvt_tt0p85v25c
+                                  2.033152      64    130.121735  
+AND3X1_RVT         saed32rvt_tt0p85v25c
+                                  2.287296       2      4.574592  
+AO21X1_RVT         saed32rvt_tt0p85v25c
+                                  2.541440       4     10.165760  
+AO22X1_RVT         saed32rvt_tt0p85v25c
+                                  2.541440     196    498.122242  
+AO222X1_RVT        saed32rvt_tt0p85v25c
+                                  3.303872      67    221.359431  
+DFFX1_RVT          saed32rvt_tt0p85v25c
+                                  6.607744     213   1407.449518  n
+FADDX1_RVT         saed32rvt_tt0p85v25c
+                                  4.828736      49    236.608056  r
+HADDX1_RVT         saed32rvt_tt0p85v25c
+                                  3.303872      69    227.967175  r
+INVX0_RVT          saed32rvt_tt0p85v25c
+                                  1.270720      59     74.972480  
+INVX4_RVT          saed32rvt_tt0p85v25c
+                                  2.033152       1      2.033152  
+NAND2X0_RVT        saed32rvt_tt0p85v25c
+                                  1.524864       4      6.099456  
+NAND3X0_RVT        saed32rvt_tt0p85v25c
+                                  1.779008       1      1.779008  
+NAND4X0_RVT        saed32rvt_tt0p85v25c
+                                  2.033152       1      2.033152  
+NBUFFX2_RVT        saed32rvt_tt0p85v25c
+                                  2.033152       9     18.298369  
+NOR2X0_RVT         saed32rvt_tt0p85v25c
+                                  2.541440       8     20.331520  
+OA21X1_RVT         saed32rvt_tt0p85v25c
+                                  2.541440       2      5.082880  
+OA22X1_RVT         saed32rvt_tt0p85v25c
+                                  2.541440       9     22.872960  
+OA221X1_RVT        saed32rvt_tt0p85v25c
+                                  3.049728      15     45.745919  
+OA222X1_RVT        saed32rvt_tt0p85v25c
+                                  3.303872       9     29.734849  
+OR2X1_RVT          saed32rvt_tt0p85v25c
+                                  2.033152       4      8.132608  
+XOR2X1_RVT         saed32rvt_tt0p85v25c
+                                  4.320448       4     17.281792  
+fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
+                              26201.229683       1  26201.229683  h, n
+-----------------------------------------------------------------------------
+Total 22 references                                 29191.996338
+1
