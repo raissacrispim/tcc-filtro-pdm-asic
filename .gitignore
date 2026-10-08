@@ -1,71 +1,47 @@
-# ============================================================
-# Synopsys VCS / Verdi
-# ============================================================
+# Bancos de dados físicos do Fusion Compiler
+pnr/work/
+CLIBs/
 
-# Executáveis gerados pelo VCS
-simv
-simv_*
-*/simv
-*/simv_*
+# Arquivos temporários do Synopsys
+*.svf
+Synopsys_stack_trace_*
+crte_*
+fc_command.log
+fc_output.txt
+lm_command.log
+command.log
+check_workspace.ems
 
-# Diretórios gerados pelo VCS
-csrc/
-simv.daidir/
-simv_*.daidir/
-*.daidir/
+# Arquivos auxiliares de diagnóstico
+defaultViaRule.txt
+viaRule_M3_M8.txt
+missing_vias_M3_M8*.rpt
 
-# Waveforms Verdi
+# Arquivos de edição
+*~
+*.swp
+*.swo
+
+# Simulacao Synopsys VCS / Verdi
 *.fsdb
-
-# Arquivos temporários / logs Synopsys
+*.mr
+*.pvl
+*.syn
+simv*
+*.daidir/
+csrc/
+alib-*/
+cksum_dir/
+content/
 ucli.key
+verdiLog/
 novas.conf
 novas.rc
 novas_dump.log
-*.log
 
-# Backups de editor
-*.save
-*~
-*.bak
-*.swp
+# Logs de simulacao gerados automaticamente
+sim/gls_test_*.log
 
-# ============================================================
-# Arquivos compactados/gerados
-# ============================================================
-
-*.zip
-
-# ============================================================
-# Python / sistema
-# ============================================================
-
-__pycache__/
-*.pyc
-.DS_Store
-rtl/simv_fir_compile
-
-# Sessões e arquivos gerados pelo Verdi
-verdiLog/
-
-# Cópia auxiliar/antiga dos vetores
-content/
-
-# ============================================================
-# Synopsys Design Compiler
-# ============================================================
-
-# Arquivos intermediarios gerados pelo analyze/elaborate
-*.mr
-*-verilog.pvl
-*-verilog.syn
-
-# Diretorios temporarios do DC
-alib-52/
-cksum_dir/
-
-# Arquivo SVF gerado pelo DC
-default.svf
-
-# Backup local criado antes da adaptacao do FIR para sintese
-rtl/fir_antes_sintese.sv
+# Arquivos auxiliares e backups
+*.sv.save
+vetores_golden.zip

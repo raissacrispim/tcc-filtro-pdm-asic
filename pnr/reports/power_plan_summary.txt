@@ -1,0 +1,28 @@
+Projeto: Filtro PDM CIC + FIR
+Ferramenta: Synopsys Fusion Compiler X-2025.06-SP3
+Tecnologia: SAED32 RVT
+
+CHECKPOINT
+filtro_pdm/power_plan
+
+FLOORPLAN
+Utilizacao-alvo do core: 60%
+Standard cells da netlist: 7912
+
+REDE DE ALIMENTACAO
+Redes: VDD e VSS
+Rails horizontais: M1
+Straps verticais: M3
+Core ring: M8 horizontal e M9 vertical
+Terminais fisicos: VDD_TOP e VSS_TOP, em M8
+
+VERIFICACOES
+check_pg_drc: No errors found.
+Floating wires/vias/terminals: 0 na verificacao final.
+Standard cells ainda sem conexao fisica PG: 7912.
+
+LIMITACOES
+Power planning preliminar, anterior ao placement.
+Reverificar conectividade PG apos placement.
+Ainda nao realizados CTS, routing, DRC/LVS finais ou EM/IR.
+Script Tcl de reproducao do power planning ainda pendente.
