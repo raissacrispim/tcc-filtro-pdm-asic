@@ -48,13 +48,16 @@ report_pin_placement > pnr/reports/place/pin_placement.rpt
 
 
 # ------------------------------------------------------------
-# 4. Opcoes de posicionamento
+# 4. Cadeia de scan (DFT)
+#
+# O scandef gerado na sintese descreve a cadeia de scan.
+# O place_opt reordena a cadeia conforme a posicao fisica dos
+# flip-flops, reduzindo o comprimento das conexoes de scan.
 # ------------------------------------------------------------
 
-# Projeto sem scan chain (sem DFT)
-set_app_options \
-    -name place.coarse.continue_on_missing_scandef \
-    -value true
+read_def synth/netlist/filtro_pdm_syn.scandef
+
+report_scan_chains > pnr/reports/place/scan_chains.rpt
 
 
 # ------------------------------------------------------------

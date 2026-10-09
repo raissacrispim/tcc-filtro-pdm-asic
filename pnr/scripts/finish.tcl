@@ -13,14 +13,15 @@ set sh_continue_on_error false
 #
 # ATENCAO:
 # Versao candidata, ainda nao validada no Fusion Compiler.
-#
-# CONFERIR NO SERVIDOR:
-#   ls /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/gds/
-# e ajustar STDCELL_GDS abaixo.
 # ============================================================
 
+# Layout (GDS) das standard cells RVT
 set STDCELL_GDS \
-    /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/gds/saed32nm_rvt_1p9m.gds
+    /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/gds/saed32nm_rvt_oa.gds
+
+# Mapa de camadas para exportacao do GDSII
+set GDS_LAYER_MAP \
+    /Tools/PDK/SAED32/EDK_Digital/tech/map/saed32nm_1p9m_gdsout.map
 
 file mkdir pnr/reports/finish
 file mkdir pnr/output
@@ -125,6 +126,7 @@ write_gds \
     -hierarchy all \
     -long_names \
     -merge_files $STDCELL_GDS \
+    -layer_map $GDS_LAYER_MAP \
     pnr/output/filtro_pdm.gds
 
 puts "Finalizacao: script executado ate o final."

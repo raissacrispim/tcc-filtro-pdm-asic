@@ -71,24 +71,45 @@ Os testes 01 a 06 usam os mesmos estímulos PDM da versão anterior. Após a cor
 
 Todos os comandos são executados a partir da raiz do repositório.
 
-| Etapa | Ferramenta | Comando | Checkpoint |
+| Etapa | Ferramenta | Comando | Executar em |
 |---|---|---|---|
-| Golden Model e vetores | Python | `python3 golden_model/golden_model.py` | `vectors/` |
-| Simulação RTL | VCS | testbenches em `tb/` | `vectors/*_output_rtl.txt` |
-| Síntese lógica | Design Compiler | `dc_shell -f synth/scripts/synth.tcl` | `synth/netlist/` |
-| Simulação gate-level | VCS | `sim/scripts/run_gls_regression.sh` | — |
-| Preparação | Fusion Compiler | `fc_shell -f pnr/scripts/setup.tcl` | `init` |
-| Floorplan | Fusion Compiler | `fc_shell -f pnr/scripts/floorplan.tcl` | `floorplan` |
-| Power plan | Fusion Compiler | `fc_shell -f pnr/scripts/power_plan.tcl` | `power_plan_reproduzido` |
-| Placement | Fusion Compiler | `fc_shell -f pnr/scripts/place.tcl` | `place` |
-| CTS | Fusion Compiler | `fc_shell -f pnr/scripts/cts.tcl` | `cts` |
-| Roteamento | Fusion Compiler | `fc_shell -f pnr/scripts/route.tcl` | `route` |
-| Finalização e GDSII | Fusion Compiler | `fc_shell -f pnr/scripts/finish.tcl` | `finish`, `pnr/output/` |
+| Golden Model e vetores | Python | `python3 golden_model/golden_model.py` | raiz |
+| Simulação RTL | VCS | ver comando abaixo | `sim/` |
+| Síntese lógica + DFT | Design Compiler | `dc_shell -f synth/scripts/synth.tcl` | raiz |
+| Simulação gate-level | VCS | `sim/scripts/compile_gls.sh` e `sim/scripts/run_gls_regression.sh` | raiz |
+| ATPG stuck-at | TestMAX ATPG | `tmax -shell atpg/scripts/atpg_stuck.tcl` | raiz |
+| Simulação dos vetores ATPG | VCS | `sim/scripts/sim_atpg.sh` | raiz |
+| ATPG transition | TestMAX ATPG | `tmax -shell atpg/scripts/atpg_transition.tcl` | raiz |
+| Preparação | Fusion Compiler | `fc_shell -f pnr/scripts/setup.tcl` | raiz |
+| Floorplan | Fusion Compiler | `fc_shell -f pnr/scripts/floorplan.tcl` | raiz |
+| Power plan | Fusion Compiler | `fc_shell -f pnr/scripts/power_plan.tcl` | raiz |
+| Placement | Fusion Compiler | `fc_shell -f pnr/scripts/place.tcl` | raiz |
+| CTS | Fusion Compiler | `fc_shell -f pnr/scripts/cts.tcl` | raiz |
+| Roteamento | Fusion Compiler | `fc_shell -f pnr/scripts/route.tcl` | raiz |
+| Finalização e GDSII | Fusion Compiler | `fc_shell -f pnr/scripts/finish.tcl` | raiz |
+| Simulação pós-layout com SDF | VCS | `sim/scripts/compile_gls.sh pnr sdf` | raiz |
 | DRC e LVS | IC Validator | pendente | — |
+
+Simulação RTL (dentro de `sim/`):
+
+```bash
+vcs -full64 -sverilog -kdb -debug_access+all \
+    ../rtl/integrador.sv ../rtl/cic_integradores.sv ../rtl/decimador.sv \
+    ../rtl/comb.sv ../rtl/cic_combs.sv ../rtl/cic.sv ../rtl/fir.sv \
+    ../rtl/filtro_pdm.sv ../tb/tb_filtro_pdm_golden.sv \
+    -o simv_filtro_rtl -l compile_rtl.log
+./simv_filtro_rtl +TEST=test_01_10k
+```
+
+### DFT
+
+A síntese insere uma cadeia de scan única (flip-flops com multiplexador) e cria as portas `scan_en`, `scan_in` e `scan_out`. Em operação normal, `scan_en = 0`. O RTL funcional não possui essas portas; o testbench as conecta somente quando compilado com `+define+DFT` (simulação gate-level).
 
 As restrições de timing ficam em `pnr/constraints/filtro_pdm_physical.sdc` e são lidas tanto na síntese quanto no Fusion Compiler.
 
-Os scripts `place.tcl`, `cts.tcl`, `route.tcl`, `finish.tcl` e `timing_setup.tcl` são versões candidatas, ainda não validadas no Fusion Compiler. Antes de executá-los, confira os caminhos indicados no cabeçalho de `timing_setup.tcl` e `finish.tcl`.
+As restrições das portas de scan ficam em `pnr/constraints/filtro_pdm_dft.sdc`.
+
+Os scripts de DFT, ATPG, `place.tcl`, `cts.tcl`, `route.tcl`, `finish.tcl` e `timing_setup.tcl` são versões candidatas, ainda não validadas nas ferramentas.
 
 ## Ferramentas
 

@@ -59,10 +59,22 @@ module tb_filtro_pdm_golden;
     // DUT
     // ========================================================
 
+    // Na netlist com DFT existem as portas de scan.
+    // Compilar com +define+DFT na simulacao gate-level.
+    // Modo funcional: scan_en = 0.
+`ifdef DFT
+    logic scan_out;
+`endif
+
     filtro_pdm dut (
         .clk       (clk),
         .rst       (rst),
         .pdm_in    (pdm_in),
+`ifdef DFT
+        .scan_en   (1'b0),
+        .scan_in   (1'b0),
+        .scan_out  (scan_out),
+`endif
         .y_out     (y_out),
         .valid_out (valid_out)
     );

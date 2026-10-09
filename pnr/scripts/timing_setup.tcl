@@ -12,44 +12,34 @@
 # ATENCAO:
 # Versao candidata, ainda nao validada no Fusion Compiler.
 #
-# CONFERIR NO SERVIDOR antes de executar:
-#
-#   ls /Tools/PDK/SAED32/EDK_Digital/tech/
-#   ls /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/
-#
-# 1. A biblioteca de referencia usada em setup.tcl
-#    (saed32rvt_frame_only.ndm) contem apenas a visao fisica.
-#    Para otimizacao guiada por timing, o bloco precisa de uma
-#    NDM com visao de timing (ex.: *_frame_timing*.ndm ou
-#    *_c.ndm). Se existir, troque PHYSICAL_LIB em setup.tcl
-#    e recrie a design library.
-#
-#    Teste rapido apos abrir o bloco:
-#        report_lib -timing [get_libs]
-#    ou
-#        get_lib_cells */DFFX1_RVT/timing
-#
-# 2. Os nomes dos arquivos TLU+ abaixo seguem o padrao do
-#    SAED32 EDK. Ajuste os caminhos se forem diferentes.
+# Biblioteca de referencia: saed32rvt_base_frame_timing.ndm
+# (definida em setup.tcl), com visoes fisica e de timing.
 # ============================================================
 
 # ------------------------------------------------------------
 # 1. Arquivos de extracao de parasitas (TLU+)
+#
+# Procurados automaticamente em tech/starrc/ e subpastas.
 # ------------------------------------------------------------
 
-set TLUP_DIR /Tools/PDK/SAED32/EDK_Digital/tech/star_rcxt
+set STARRC_DIR /Tools/PDK/SAED32/EDK_Digital/tech/starrc
 
-set TLUP_MAX $TLUP_DIR/saed32nm_1p9m_Cmax.tluplus
-set TLUP_MIN $TLUP_DIR/saed32nm_1p9m_Cmin.tluplus
-set TLUP_MAP $TLUP_DIR/saed32nm_tf_itf_tluplus.map
-
-foreach arquivo [list $TLUP_MAX $TLUP_MIN $TLUP_MAP] {
-    if {![file exists $arquivo]} {
-        puts "ERRO: arquivo nao encontrado: $arquivo"
-        puts "Ajuste TLUP_DIR em pnr/scripts/timing_setup.tcl"
+proc procura_arquivo {dir padrao} {
+    set achados [glob -nocomplain \
+        $dir/$padrao $dir/*/$padrao $dir/*/*/$padrao]
+    if {[llength $achados] == 0} {
+        puts "ERRO: nenhum arquivo '$padrao' em $dir"
+        puts "Liste com: ls -R $dir"
         return -code error
     }
+    set arquivo [lindex [lsort $achados] 0]
+    puts "TLU+: $arquivo"
+    return $arquivo
 }
+
+set TLUP_MAX [procura_arquivo $STARRC_DIR *Cmax*.tluplus]
+set TLUP_MIN [procura_arquivo $STARRC_DIR *Cmin*.tluplus]
+set TLUP_MAP [procura_arquivo $STARRC_DIR *tluplus*.map]
 
 read_parasitic_tech \
     -tlup $TLUP_MAX \
@@ -63,7 +53,22 @@ read_parasitic_tech \
 
 
 # ------------------------------------------------------------
-# 2. Cenario de analise
+# 2. Condicoes de operacao (PVT)
+#
+# A NDM contem varios corners. Seleciona o tipico
+# tt0p85v25c, o mesmo usado na sintese.
+# ------------------------------------------------------------
+
+set_process_number 1.0
+set_voltage 0.85 -object_list [get_supply_nets VDD]
+set_voltage 0.0  -object_list [get_supply_nets VSS]
+set_temperature 25
+
+report_pvt
+
+
+# ------------------------------------------------------------
+# 3. Cenario de analise
 #
 # Cenario unico no corner tipico (tt0p85v25c), o mesmo da
 # sintese. Setup analisado com Cmax e hold com Cmin.
@@ -86,7 +91,7 @@ set_scenario_status [current_scenario] \
 
 
 # ------------------------------------------------------------
-# 3. Restricoes de timing
+# 4. Restricoes de timing
 #
 # Ja lidas em setup.tcl. Conferencia:
 # ------------------------------------------------------------

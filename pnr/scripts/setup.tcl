@@ -14,7 +14,10 @@ set TECH_FILE /Tools/PDK/SAED32/EDK_Digital/tech/tf/saed32nm_1p9m.tf
 
 set LOGIC_LIB /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db
 
-set PHYSICAL_LIB /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_frame_only.ndm
+# NDM com visoes fisica (frame) e de timing das standard cells.
+# A versao frame_only nao possui timing e impede a otimizacao
+# guiada por timing no placement, CTS e roteamento.
+set PHYSICAL_LIB /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm
 
 
 # ------------------------------------------------------------
@@ -60,6 +63,9 @@ list_blocks
 # ------------------------------------------------------------
 
 read_sdc pnr/constraints/filtro_pdm_physical.sdc
+
+# Restricoes das portas de teste (scan) inseridas na sintese
+read_sdc pnr/constraints/filtro_pdm_dft.sdc
 
 
 # ------------------------------------------------------------

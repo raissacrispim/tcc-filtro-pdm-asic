@@ -48,3 +48,11 @@ vetores_golden.zip
 
 # Cache do Python
 __pycache__/
+
+# Paginas de manual das ferramentas (material proprietario)
+pnr/reports/man_*.txt
+
+# Logs locais de simulacao e compilacao
+sim/*.log
+atpg/output/*.log
+atpg/output/simv*
