@@ -2,7 +2,7 @@
 
 module tb_cic_golden;
 
-    localparam int BITS     = 17;
+    localparam int BITS     = 18;
     localparam int R        = 16;
     localparam int N_INPUT  = 9600;
     localparam int N_GOLDEN = 600;
@@ -13,7 +13,7 @@ module tb_cic_golden;
     logic rst;
 
     logic signed [BITS-1:0] x_in;
-    logic signed [BITS-1:0] y_out;
+    logic signed [BITS-2:0] y_out;
     logic                   valid_out;
 
     integer pdm_mem    [0:N_INPUT-1];
@@ -275,9 +275,9 @@ module tb_cic_golden;
         for (i = 0; i < N_INPUT; i = i + 1) begin
 
             if (pdm_mem[i] == 0)
-                x_in = -17'sd1;
+                x_in = -18'sd1;
             else
-                x_in = 17'sd1;
+                x_in = 18'sd1;
 
             @(negedge clk);
 

@@ -1,7 +1,7 @@
 `timescale 1ns/1ps
 
 module filtro_pdm #(
-    parameter int BITS_CIC = 17,
+    parameter int BITS_CIC = 18,
     parameter int R        = 16
 )(
     input  logic                    clk,
@@ -23,7 +23,7 @@ module filtro_pdm #(
     //     0 -> -1
     //     1 -> +1
     //
-    // O CIC trabalha com signed de 17 bits.
+    // O CIC trabalha com signed de 18 bits.
     // ========================================================
 
     logic signed [BITS_CIC-1:0] pdm_bipolar;
@@ -31,9 +31,9 @@ module filtro_pdm #(
     always_comb begin
 
         if (pdm_in == 1'b1)
-            pdm_bipolar = 17'sd1;
+            pdm_bipolar = 18'sd1;
         else
-            pdm_bipolar = -17'sd1;
+            pdm_bipolar = -18'sd1;
 
     end
 
@@ -42,7 +42,7 @@ module filtro_pdm #(
     // INTERFACE CIC -> FIR
     // ========================================================
 
-    logic signed [BITS_CIC-1:0] cic_out;
+    logic signed [BITS_CIC-2:0] cic_out;
     logic                       cic_valid;
 
 
@@ -50,7 +50,8 @@ module filtro_pdm #(
     // CIC
     //
     // 4,8 MHz -> 300 kHz
-    // saída signed de 17 bits
+    // integradores e combs com 18 bits
+    // saída signed de 17 bits (LSB sempre zero descartado)
     // ========================================================
 
     cic #(
@@ -77,7 +78,7 @@ module filtro_pdm #(
     // ========================================================
 
     fir #(
-        .BITS_IN   (17),
+        .BITS_IN   (BITS_CIC-1),
         .BITS_COEF (16),
         .BITS_ACC  (34),
         .BITS_OUT  (19),

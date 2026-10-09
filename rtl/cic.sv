@@ -1,7 +1,9 @@
 `timescale 1ns/1ps
 
 module cic #(
-    parameter int BITS = 17,
+    // Largura interna: 2 + N*log2(R*M) = 18 bits (Hogenauer,
+    // entrada bipolar -1/+1 ocupa 2 bits em complemento de 2)
+    parameter int BITS = 18,
     parameter int R    = 16
 )(
     input  logic clk,
@@ -10,8 +12,8 @@ module cic #(
     // Entrada PDM bipolar: -1 ou +1
     input  logic signed [BITS-1:0] x_in,
 
-    // Saída do CIC
-    output logic signed [BITS-1:0] y_out,
+    // Saída do CIC: BITS-1 bits (LSB descartado)
+    output logic signed [BITS-2:0] y_out,
     output logic                   valid_out
 );
 
@@ -23,6 +25,9 @@ module cic #(
     logic signed [BITS-1:0] int2;
     logic signed [BITS-1:0] int3;
     logic signed [BITS-1:0] int4;
+
+    // Saída do quarto comb, antes do descarte do LSB
+    logic signed [BITS-1:0] comb_out;
 
     // ============================================================
     // SINAIS DO DECIMADOR
@@ -84,8 +89,22 @@ module cic #(
         .rst       (rst),
         .valid_in  (dec_valid),
         .x_in      (int4),
-        .y_out     (y_out),
+        .y_out     (comb_out),
         .valid_out (valid_out)
     );
+
+
+    // ============================================================
+    // SAIDA
+    //
+    // Com entrada -1/+1 a saida dos combs e sempre par:
+    //
+    //     y = 2*S - R^N
+    //
+    // O LSB e sempre zero e e descartado sem perda.
+    // Faixa: [-R^N/2, +R^N/2] = [-32768, +32768] (Q1.15).
+    // ============================================================
+
+    assign y_out = comb_out[BITS-1:1];
 
 endmodule
