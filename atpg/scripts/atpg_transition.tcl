@@ -51,6 +51,12 @@ run_drc $SPF
 set_faults -model transition
 add_faults -all
 
+# Limite de tentativas por falha (padrao: 10).
+# Com o padrao, ~1.400 falhas foram abandonadas (abort) e
+# ficaram como "not detected". Um limite maior permite ao
+# ATPG insistir nessas falhas.
+set_atpg -abort_limit 200
+
 run_atpg -auto_compression
 
 report_summaries > atpg/reports/transition_summary.rpt
