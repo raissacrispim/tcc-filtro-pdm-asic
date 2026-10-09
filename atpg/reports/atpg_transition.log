@@ -1,58 +1,3 @@
-
-                             Synopsys TestMAX (TM) 
-                                  TetraMAX (R)
-
-               Version X-2025.06-SP2 for linux64 - Aug 27, 2025  
-
-                    Copyright (c) 1996 - 2025 Synopsys, Inc.
-   This software and the associated documentation are proprietary to Synopsys,
- Inc. This software may only be used in accordance with the terms and conditions
- of a written license agreement with Synopsys, Inc. All other use, reproduction,
-   or distribution of this software is strictly prohibited.  Licensed Products
-     communicate with Synopsys servers for the purpose of providing software
-    updates, detecting software piracy and verifying that customers are using
-    Licensed Products in conformity with the applicable License Key for such
-  Licensed Products. Synopsys will use information gathered in connection with
-    this process to deliver software updates and pursue software pirates and
-                                   infringers.
-
- Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
-            Inclusivity and Diversity" (Refer to article 000036315 at
-                        https://solvnetplus.synopsys.com)
-
-
- Tcl mode is on by default. Use -notcl to run in native mode.
- Executing startup file "/Tools/synopsys/syn/X-2025.06-SP2/admin/setup/tmaxtcl.rc".
-# ============================================================
-# atpg_stuck.tcl
-# Geracao automatica de vetores de teste (ATPG)
-# Modelo de falhas: stuck-at (colagem em 0 / colagem em 1)
-# Projeto: Filtro PDM CIC + FIR
-# Ferramenta: Synopsys TestMAX ATPG
-#
-# Uso (a partir da raiz do repositorio):
-#
-#   atpg/scripts/run_atpg.sh
-#
-# Entradas:
-#   synth/netlist/filtro_pdm_syn.v    netlist com scan
-#   synth/netlist/filtro_pdm_syn.spf  protocolo de teste
-#
-# Para usar a netlist pos-layout, troque NETLIST abaixo por
-# pnr/output/filtro_pdm_pnr.v.
-#
-# ATENCAO:
-# Versao candidata, ainda nao validada no TestMAX ATPG.
-# ============================================================
-set SAED32_V /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
-/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
-set NETLIST  synth/netlist/filtro_pdm_syn.v
-synth/netlist/filtro_pdm_syn.v
-set SPF      synth/netlist/filtro_pdm_syn.spf
-synth/netlist/filtro_pdm_syn.spf
-file mkdir atpg/reports
-file mkdir atpg/output
-set_messages -log atpg/reports/atpg_stuck.log -replace
 # ------------------------------------------------------------
 # 1. Leitura da biblioteca e da netlist
 # ------------------------------------------------------------
@@ -71,7 +16,7 @@ run_build_model filtro_pdm
  There were 48136 primitives and 176 faultable pins removed during model optimizations
  Warning: Rule B10 (unconnected module internal net) was violated 12 times.
  Warning: Rule N20 (underspecified UDP) was violated 2 times.
- End build model: #primitives=37368, CPU_time=0.08 sec, Memory=13MB
+ End build model: #primitives=37368, CPU_time=0.09 sec, Memory=13MB
  ------------------------------------------------------------------------------
  Begin learning analyses...
  End learning analyses, total learning CPU time=0.35 sec.
@@ -79,6 +24,7 @@ run_build_model filtro_pdm
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
 # ------------------------------------------------------------
+set_delay -launch_cycle system_clock
 run_drc $SPF
  ------------------------------------------------------------------------------
  Begin scan design rules checking...
@@ -118,20 +64,19 @@ run_drc $SPF
  No violations occurred during DRC process.
  Design rules checking was successful, total CPU time=0.03 sec.
  ------------------------------------------------------------------------------
-report_rules -fail > atpg/reports/drc_rules.rpt
-report_scan_chains > atpg/reports/scan_chains.rpt
 # ------------------------------------------------------------
-# 3. ATPG para falhas stuck-at
+# 3. ATPG para falhas de transicao
 # ------------------------------------------------------------
-set_faults -model stuck
+set_faults -model transition
 add_faults -all
- 70220 faults were added to fault list.
+ 64336 faults were added to fault list.
 # Limite de tentativas por falha (padrao: 10).
 # Com o padrao, ~1.400 falhas foram abandonadas (abort) e
 # ficaram como "not detected". Um limite maior permite ao
 # ATPG insistir nessas falhas.
 set_atpg -abort_limit 200
 run_atpg -auto_compression
+ Warning: Unconstrained primary input scan_en used as SCAN ENABLE may change during at-speed cycles. (M487)
  
  ***********************************************************
  *  NOTICE:  The following DRC violations were previously  *
@@ -141,54 +86,52 @@ run_atpg -auto_compression
  *                                                         *
  *  Rules:  N20                                            *
  ***********************************************************
- ATPG performed for stuck fault model using internal pattern source.
+ ATPG performed for transition fault model using internal pattern source.
  ----------------------------------------------------------
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=60609, abort_limit=200...
- 32          56824   3784        1/0/23    94.61%     10.19
- 64           2430   1354       1/0/540    98.07%     14.92
- 82            293   1061       1/0/899    98.49%     17.60
+ Begin deterministic ATPG: #uncollapsed_faults=59000, abort_limit=200...
+ Optimized clock launch transition fault ATPG is enabled.
+ 31          44877  14123        0/0/21    78.05%     12.42
+ 63           5500   8620        1/2/57    86.60%     14.19
+ 95           5173   3444       1/5/438    94.64%     22.21
+ 127          1841   1603       1/5/864    97.50%     28.56
+ 135           125   1478      1/5/1359    97.69%     33.75
  
-     Uncollapsed Stuck Fault Summary Report
+   Uncollapsed Transition Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      69158
+ Detected                         DT      62852
  Possibly detected                PT          0
  Undetectable                     UD          1
- ATPG untestable                  AU          0
- Not detected                     ND       1061
+ ATPG untestable                  AU          5
+ Not detected                     ND       1478
  -----------------------------------------------
- total faults                             70220
- test coverage                            98.49%
+ total faults                             64336
+ test coverage                            97.69%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                          82
-     #basic_scan patterns                    82
+ #internal patterns                         135
+     #basic_scan patterns                     1
+     #fast_sequential patterns              134
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                           17.60
+ Total CPU time                           33.75
  -----------------------------------------------
-report_summaries > atpg/reports/stuck_summary.rpt
-report_faults -summary > atpg/reports/stuck_faults.rpt
+report_summaries > atpg/reports/transition_summary.rpt
 # ------------------------------------------------------------
-# 4. Exportacao dos vetores e do testbench de simulacao
+# 4. Exportacao dos vetores
 # ------------------------------------------------------------
-write_patterns atpg/output/filtro_pdm_stuck.stil \
+write_patterns atpg/output/filtro_pdm_transition.stil \
     -format stil -replace
- Patterns written reference 250 V statements, generating 110723 test cycles
- End writing file 'filtro_pdm_stuck.stil' with 82 patterns, File_size = 304184, CPU_time = 0.0 sec.
-write_testbench \
-    -input atpg/output/filtro_pdm_stuck.stil \
-    -output atpg/output/filtro_pdm_stuck_tb \
-    -replace
- Executing 'stil2verilog'...
-puts "ATPG stuck-at: script executado ate o final."
-ATPG stuck-at: script executado ate o final.
-puts "Cobertura em atpg/reports/stuck_summary.rpt"
-Cobertura em atpg/reports/stuck_summary.rpt
+ Patterns written reference 543 V statements, generating 181559 test cycles
+ End writing file 'filtro_pdm_transition.stil' with 135 patterns, File_size = 464677, CPU_time = 0.0 sec.
+puts "ATPG transition: script executado ate o final."
+ATPG transition: script executado ate o final.
+puts "Cobertura em atpg/reports/transition_summary.rpt"
+Cobertura em atpg/reports/transition_summary.rpt
 exit
