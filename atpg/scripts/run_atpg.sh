@@ -9,23 +9,24 @@
 #   atpg/scripts/run_atpg.sh              # stuck-at
 #   atpg/scripts/run_atpg.sh transition   # transition
 #
-# O tmax exige SYNOPSYS apontando para a instalacao do
-# TestMAX. A variavel e alterada apenas neste script, sem
-# afetar o Design Compiler e o Fusion Compiler no terminal.
+# No servidor, o tmax (testmax/<versao>/bin, ja no PATH pelo
+# snps.sh) exige SYNOPSYS apontando para uma instalacao com a
+# pasta auxx/, que existe na instalacao do Design Compiler.
+# A variavel e alterada apenas neste script, sem afetar as
+# demais ferramentas no terminal.
 # ============================================================
 
 set -e
 
 MODELO=${1:-stuck}
 
-TESTMAX_HOME=/Tools/synopsys/testmax/X-2025.06-SP2
+SYN_HOME=${SYN_HOMEDIR:-/Tools/synopsys/syn/X-2025.06-SP2}
 
 cd "$(dirname "$0")/../.."
 
 mkdir -p atpg/reports atpg/output
 
-export SYNOPSYS=$TESTMAX_HOME
-export PATH=$SYNOPSYS/bin:$PATH
+export SYNOPSYS=$SYN_HOME
 
 tmax -shell "atpg/scripts/atpg_${MODELO}.tcl" \
     2>&1 | tee "atpg/reports/tmax_${MODELO}_terminal.log"
