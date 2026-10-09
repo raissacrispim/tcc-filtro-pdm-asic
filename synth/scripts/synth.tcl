@@ -55,10 +55,10 @@ check_design
 # Constraints de timing
 # ============================================================
 
-# Clock principal do sistema
-# Frequencia: 4.8 MHz
-# Periodo: 1 / 4.8 MHz = 208.333 ns
-create_clock -name clk -period 208.333 [get_ports clk]
+# Restricoes completas: clock de 4,8 MHz, incerteza,
+# atrasos de entrada/saida e cargas.
+# O mesmo arquivo e lido no Fusion Compiler (setup.tcl).
+read_sdc pnr/constraints/filtro_pdm_physical.sdc
 
 # Exibe os clocks definidos para conferencia
 report_clocks
@@ -83,9 +83,11 @@ puts "============================================"
 # Relatorios
 # ============================================================
 
+check_timing > synth/reports/check_timing.rpt
 report_qor > synth/reports/qor.rpt
 report_area -hierarchy > synth/reports/area_hier.rpt
 report_timing -delay_type max -max_paths 10 > synth/reports/timing_max.rpt
+report_timing -delay_type min -max_paths 10 > synth/reports/timing_min.rpt
 report_reference > synth/reports/reference.rpt
 report_resources > synth/reports/resources.rpt
 

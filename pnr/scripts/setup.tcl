@@ -53,10 +53,13 @@ list_blocks
 
 
 # ------------------------------------------------------------
-# 6. Leitura das restricoes da sintese
+# 6. Leitura das restricoes de timing
+#
+# Mesmo arquivo utilizado na sintese logica (synth.tcl),
+# garantindo restricoes identicas em todo o fluxo.
 # ------------------------------------------------------------
 
-read_sdc synth/netlist/filtro_pdm_syn.sdc
+read_sdc pnr/constraints/filtro_pdm_physical.sdc
 
 
 # ------------------------------------------------------------

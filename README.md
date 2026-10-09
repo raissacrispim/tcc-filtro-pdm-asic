@@ -67,6 +67,29 @@ Cada teste utiliza 9.600 amostras PDM e produz 600 amostras de saída.
 
 Os testes 01 a 06 usam os mesmos estímulos PDM da versão anterior. Após a correção do CIC para 18 bits, os vetores de saída foram regenerados e as saídas `*_output_rtl.txt` devem ser obtidas novamente com o VCS. A síntese, a regressão gate-level e o floorplan também precisam ser refeitos.
 
+## Fluxo de execução
+
+Todos os comandos são executados a partir da raiz do repositório.
+
+| Etapa | Ferramenta | Comando | Checkpoint |
+|---|---|---|---|
+| Golden Model e vetores | Python | `python3 golden_model/golden_model.py` | `vectors/` |
+| Simulação RTL | VCS | testbenches em `tb/` | `vectors/*_output_rtl.txt` |
+| Síntese lógica | Design Compiler | `dc_shell -f synth/scripts/synth.tcl` | `synth/netlist/` |
+| Simulação gate-level | VCS | `sim/scripts/run_gls_regression.sh` | — |
+| Preparação | Fusion Compiler | `fc_shell -f pnr/scripts/setup.tcl` | `init` |
+| Floorplan | Fusion Compiler | `fc_shell -f pnr/scripts/floorplan.tcl` | `floorplan` |
+| Power plan | Fusion Compiler | `fc_shell -f pnr/scripts/power_plan.tcl` | `power_plan_reproduzido` |
+| Placement | Fusion Compiler | `fc_shell -f pnr/scripts/place.tcl` | `place` |
+| CTS | Fusion Compiler | `fc_shell -f pnr/scripts/cts.tcl` | `cts` |
+| Roteamento | Fusion Compiler | `fc_shell -f pnr/scripts/route.tcl` | `route` |
+| Finalização e GDSII | Fusion Compiler | `fc_shell -f pnr/scripts/finish.tcl` | `finish`, `pnr/output/` |
+| DRC e LVS | IC Validator | pendente | — |
+
+As restrições de timing ficam em `pnr/constraints/filtro_pdm_physical.sdc` e são lidas tanto na síntese quanto no Fusion Compiler.
+
+Os scripts `place.tcl`, `cts.tcl`, `route.tcl`, `finish.tcl` e `timing_setup.tcl` são versões candidatas, ainda não validadas no Fusion Compiler. Antes de executá-los, confira os caminhos indicados no cabeçalho de `timing_setup.tcl` e `finish.tcl`.
+
 ## Ferramentas
 
 A simulação e depuração RTL foram realizadas utilizando ferramentas Synopsys, incluindo VCS e Verdi.

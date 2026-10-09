@@ -29,6 +29,13 @@ create_clock -name clk \
 set_clock_uncertainty -setup 1.0 [get_clocks clk]
 set_clock_uncertainty -hold 0.10 [get_clocks clk]
 
+# Transicao do clock ideal (antes do CTS).
+# Apos o CTS, o clock propagado substitui este valor.
+set_clock_transition 0.10 [get_clocks clk]
+
+# Transicao preliminar das entradas de dados.
+set_input_transition 0.10 [get_ports {pdm_in rst}]
+
 # ------------------------------------------------------------
 # ENTRADA PDM
 # ------------------------------------------------------------
