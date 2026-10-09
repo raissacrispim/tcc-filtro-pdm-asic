@@ -1,0 +1,4 @@
+ rule  severity  #fails  description
+ ----  --------  ------  ---------------------------------
+ N20   warning        2  underspecified UDP
+ B10   warning       12  unconnected module internal net
