@@ -56,7 +56,14 @@ fi
 echo "Netlist: $NETLIST"
 echo "Atrasos: $ATRASO"
 
+# Remove executavel antigo para nao simular uma netlist anterior
+# caso a compilacao falhe
+rm -rf simv_filtro_gls simv_filtro_gls.daidir
+
+# A netlist do Design Compiler nao possui `timescale;
+# -timescale define a unidade padrao para os modulos sem ela.
 vcs -full64 -sverilog -kdb -debug_access+all \
+    -timescale=1ns/1ps \
     +define+DFT \
     $OPCOES_ATRASO \
     -v "$SAED32_V" \

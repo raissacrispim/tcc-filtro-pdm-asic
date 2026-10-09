@@ -28,7 +28,10 @@ if [ ! -f filtro_pdm_stuck_tb.v ]; then
     exit 1
 fi
 
+rm -rf simv_atpg simv_atpg.daidir
+
 vcs -full64 -sverilog \
+    -timescale=1ns/1ps \
     +delay_mode_zero +notimingcheck +nospecify \
     +tetramax \
     -v "$SAED32_V" \
