@@ -24,7 +24,7 @@ cd "$RAIZ/atpg/output"
 
 if [ ! -f filtro_pdm_stuck_tb.v ]; then
     echo "ERRO: testbench do ATPG nao encontrado."
-    echo "Execute antes: tmax -shell atpg/scripts/atpg_stuck.tcl"
+    echo "Execute antes: atpg/scripts/run_atpg.sh"
     exit 1
 fi
 

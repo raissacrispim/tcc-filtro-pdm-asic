@@ -7,7 +7,7 @@
 #
 # Uso (a partir da raiz do repositorio, apos atpg_stuck.tcl):
 #
-#   tmax -shell atpg/scripts/atpg_transition.tcl
+#   atpg/scripts/run_atpg.sh transition
 #
 # Lancamento pela captura (launch-on-capture): dois pulsos de
 # clock funcional apos o shift, no mesmo clock do sistema.

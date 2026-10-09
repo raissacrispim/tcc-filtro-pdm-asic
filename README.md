@@ -77,9 +77,9 @@ Todos os comandos são executados a partir da raiz do repositório.
 | Simulação RTL | VCS | ver comando abaixo | `sim/` |
 | Síntese lógica + DFT | Design Compiler | `dc_shell -f synth/scripts/synth.tcl` | raiz |
 | Simulação gate-level | VCS | `sim/scripts/compile_gls.sh` e `sim/scripts/run_gls_regression.sh` | raiz |
-| ATPG stuck-at | TestMAX ATPG | `tmax -shell atpg/scripts/atpg_stuck.tcl` | raiz |
+| ATPG stuck-at | TestMAX ATPG | `atpg/scripts/run_atpg.sh` | raiz |
 | Simulação dos vetores ATPG | VCS | `sim/scripts/sim_atpg.sh` | raiz |
-| ATPG transition | TestMAX ATPG | `tmax -shell atpg/scripts/atpg_transition.tcl` | raiz |
+| ATPG transition | TestMAX ATPG | `atpg/scripts/run_atpg.sh transition` | raiz |
 | Preparação | Fusion Compiler | `fc_shell -f pnr/scripts/setup.tcl` | raiz |
 | Floorplan | Fusion Compiler | `fc_shell -f pnr/scripts/floorplan.tcl` | raiz |
 | Power plan | Fusion Compiler | `fc_shell -f pnr/scripts/power_plan.tcl` | raiz |

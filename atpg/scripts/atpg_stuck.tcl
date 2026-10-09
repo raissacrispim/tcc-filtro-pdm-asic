@@ -7,7 +7,7 @@
 #
 # Uso (a partir da raiz do repositorio):
 #
-#   tmax -shell atpg/scripts/atpg_stuck.tcl
+#   atpg/scripts/run_atpg.sh
 #
 # Entradas:
 #   synth/netlist/filtro_pdm_syn.v    netlist com scan
