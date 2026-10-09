@@ -1,0 +1,364 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 10
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Fri Oct  9 20:38:53 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: tt0p85v25c   Library: saed32rvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: scan_in (input port clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb1/valid_out_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.00       0.00 r
+  scan_in (in)                                            0.00       0.00 r
+  u_cic/u_combs/u_comb1/valid_out_reg/SI (SDFFX1_RVT)     0.01       0.01 r
+  data arrival time                                                  0.01
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb1/valid_out_reg/CLK (SDFFX1_RVT)
+                                                          0.00       0.10 r
+  library hold time                                      -0.08       0.02
+  data required time                                                 0.02
+  --------------------------------------------------------------------------
+  data required time                                                 0.02
+  data arrival time                                                 -0.01
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+  Startpoint: u_cic/u_combs/u_comb1/x_delay_reg[17]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb1/y_out_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb1/x_delay_reg[17]/CLK (SDFFX1_RVT)
+                                                          0.00 #     0.00 r
+  u_cic/u_combs/u_comb1/x_delay_reg[17]/QN (SDFFX1_RVT)
+                                                          0.12       0.12 f
+  u_cic/u_combs/u_comb1/y_out_reg[0]/SI (SDFFX1_RVT)      0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb1/y_out_reg[0]/CLK (SDFFX1_RVT)     0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb1/y_out_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb1/y_out_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb1/y_out_reg[0]/CLK (SDFFX1_RVT)     0.00 #     0.00 r
+  u_cic/u_combs/u_comb1/y_out_reg[0]/QN (SDFFX1_RVT)      0.12       0.12 f
+  u_cic/u_combs/u_comb1/y_out_reg[1]/SI (SDFFX1_RVT)      0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb1/y_out_reg[1]/CLK (SDFFX1_RVT)     0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb1/valid_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb1/x_delay_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb1/valid_out_reg/CLK (SDFFX1_RVT)
+                                                          0.00 #     0.00 r
+  u_cic/u_combs/u_comb1/valid_out_reg/QN (SDFFX1_RVT)     0.12       0.12 f
+  u_cic/u_combs/u_comb1/x_delay_reg[0]/SI (SDFFX1_RVT)
+                                                          0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb1/x_delay_reg[0]/CLK (SDFFX1_RVT)
+                                                          0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb2/x_delay_reg[17]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb2/y_out_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb2/x_delay_reg[17]/CLK (SDFFX1_RVT)
+                                                          0.00 #     0.00 r
+  u_cic/u_combs/u_comb2/x_delay_reg[17]/QN (SDFFX1_RVT)
+                                                          0.12       0.12 f
+  u_cic/u_combs/u_comb2/y_out_reg[0]/SI (SDFFX1_RVT)      0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb2/y_out_reg[0]/CLK (SDFFX1_RVT)     0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb2/y_out_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb2/y_out_reg[1]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb2/y_out_reg[0]/CLK (SDFFX1_RVT)     0.00 #     0.00 r
+  u_cic/u_combs/u_comb2/y_out_reg[0]/QN (SDFFX1_RVT)      0.12       0.12 f
+  u_cic/u_combs/u_comb2/y_out_reg[1]/SI (SDFFX1_RVT)      0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb2/y_out_reg[1]/CLK (SDFFX1_RVT)     0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb2/valid_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb2/x_delay_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb2/valid_out_reg/CLK (SDFFX1_RVT)
+                                                          0.00 #     0.00 r
+  u_cic/u_combs/u_comb2/valid_out_reg/QN (SDFFX1_RVT)     0.12       0.12 f
+  u_cic/u_combs/u_comb2/x_delay_reg[0]/SI (SDFFX1_RVT)
+                                                          0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb2/x_delay_reg[0]/CLK (SDFFX1_RVT)
+                                                          0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb1/y_out_reg[17]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb2/valid_out_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb1/y_out_reg[17]/CLK (SDFFX1_RVT)
+                                                          0.00 #     0.00 r
+  u_cic/u_combs/u_comb1/y_out_reg[17]/QN (SDFFX1_RVT)     0.12       0.12 f
+  u_cic/u_combs/u_comb2/valid_out_reg/SI (SDFFX1_RVT)     0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb2/valid_out_reg/CLK (SDFFX1_RVT)
+                                                          0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb2/y_out_reg[17]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb3/valid_out_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb2/y_out_reg[17]/CLK (SDFFX1_RVT)
+                                                          0.00 #     0.00 r
+  u_cic/u_combs/u_comb2/y_out_reg[17]/QN (SDFFX1_RVT)     0.12       0.12 f
+  u_cic/u_combs/u_comb3/valid_out_reg/SI (SDFFX1_RVT)     0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb3/valid_out_reg/CLK (SDFFX1_RVT)
+                                                          0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: u_cic/u_combs/u_comb3/valid_out_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic/u_combs/u_comb3/x_delay_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  filtro_pdm         35000                 saed32rvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_cic/u_combs/u_comb3/valid_out_reg/CLK (SDFFX1_RVT)
+                                                          0.00 #     0.00 r
+  u_cic/u_combs/u_comb3/valid_out_reg/QN (SDFFX1_RVT)     0.12       0.12 f
+  u_cic/u_combs/u_comb3/x_delay_reg[0]/SI (SDFFX1_RVT)
+                                                          0.01       0.13 f
+  data arrival time                                                  0.13
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  u_cic/u_combs/u_comb3/x_delay_reg[0]/CLK (SDFFX1_RVT)
+                                                          0.00       0.10 r
+  library hold time                                      -0.06       0.04
+  data required time                                                 0.04
+  --------------------------------------------------------------------------
+  data required time                                                 0.04
+  data arrival time                                                 -0.13
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+1

@@ -3,42 +3,42 @@
 Report : area
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct  6 16:08:33 2026
+Date   : Fri Oct  9 20:38:53 2026
 ****************************************
 
 Library(s) Used:
 
     saed32rvt_tt0p85v25c (File: /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db)
 
-Number of ports:                           63
-Number of nets:                         10798
-Number of cells:                         7913
-Number of combinational cells:           6591
-Number of sequential cells:              1321
+Number of ports:                           68
+Number of nets:                         12039
+Number of cells:                         8083
+Number of combinational cells:           6750
+Number of sequential cells:              1332
 Number of macros/black boxes:               0
-Number of buf/inv:                       1758
+Number of buf/inv:                       1890
 Number of references:                      22
 
-Combinational area:              20463.166227
-Buf/Inv area:                     2329.483925
-Noncombinational area:            8728.830111
+Combinational area:              20808.293793
+Buf/Inv area:                     2593.285410
+Noncombinational area:           11509.673264
 Macro/Black Box area:                0.000000
-Net Interconnect area:            6960.873962
+Net Interconnect area:            8199.901812
 
-Total cell area:                 29191.996338
-Total area:                      36152.870299
+Total cell area:                 32317.967057
+Total area:                      40517.868869
 
 Hierarchical area distribution
 ------------------------------
 
                                   Global cell area            Local cell area
-                                  -------------------  ----------------------------- 
-Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
-                                  Total       Total    national    national   boxes   Design
---------------------------------  ----------  -------  ----------  ---------  ------  -------------------------------------------------------------
-filtro_pdm                        29191.9963    100.0   1583.3171  1407.4495  0.0000  filtro_pdm
-u_fir                             26201.2297     89.8  18879.8491  7321.3806  0.0000  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15
---------------------------------  ----------  -------  ----------  ---------  ------  -------------------------------------------------------------
-Total                                                  20463.1662  8728.8301  0.0000
+                                  -------------------  ------------------------------ 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-   Black-
+                                  Total       Total    national    national    boxes   Design
+--------------------------------  ----------  -------  ----------  ----------  ------  --------------------------------------------------------------------
+filtro_pdm                        32317.9671    100.0   1673.7924   1935.5607  0.0000  filtro_pdm
+u_fir                             28708.6140     88.8  19134.5014   9574.1126  0.0000  fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15_test_1
+--------------------------------  ----------  -------  ----------  ----------  ------  --------------------------------------------------------------------
+Total                                                  20808.2938  11509.6733  0.0000
 
 1

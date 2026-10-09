@@ -1,0 +1,34 @@
+Warning: Design 'filtro_pdm' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+
+****************************************
+Preview_dft report
+For    : 'Insert_dft' command
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Fri Oct  9 20:38:32 2026
+****************************************
+
+Number of chains: 1
+Scan methodology: full_scan
+Scan style: multiplexed_flip_flop
+Clock domain: no_mix
+Scan enable: scan_en (no hookup pin)
+
+
+Scan chain '1' (scan_in --> scan_out) contains 1332 cells
+
+
+
+************ Test Point Plan Report ************
+Total number of test points  : 0
+Number of Autofix test points: 0
+Number of Wrapper test points: 0
+Number of test modes         : 0
+Number of test point enables : 0
+Number of data sources       : 0
+Number of data sinks         : 0
+**************************************************
+
+1

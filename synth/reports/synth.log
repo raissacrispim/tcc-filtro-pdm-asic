@@ -1,0 +1,1246 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version X-2025.06-SP2 for linux64 - Aug 27, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Fri Oct  9 20:36:17 2026
+Hostname:           srv-microeletronica3
+CPU Model:          INTEL(R) XEON(R) GOLD 6526Y
+CPU Details:        Cores = 1 : Sockets = 1 : Cache Size = 38400 KB : Freq = 2.80 GHz
+OS:                 Linux 4.18.0-553.132.1.el8_10.x86_64
+RAM:                251 GB (Free 193 GB)
+Swap:                15 GB (Free  15 GB)
+Work Filesystem:    /home mounted to /dev/sda1
+Tmp Filesystem:     / mounted to /dev/sdb2
+Work Disk:          3724 GB (Free 3454 GB)
+Tmp Disk:            99 GB (Free  83 GB)
+
+CPU Load: 32%, Ram Free: 193 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+# ============================================================
+# Sintese logica - Filtro PDM CIC + FIR
+# Tecnologia: SAED32
+# Ferramenta: Synopsys Design Compiler
+# ============================================================
+# Diretorio da biblioteca de standard cells
+set LIB_PATH /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+# Biblioteca utilizada nesta primeira sintese
+set TARGET_LIB saed32rvt_tt0p85v25c.db
+saed32rvt_tt0p85v25c.db
+# Informa ao Design Compiler onde procurar bibliotecas
+set_app_var search_path [concat $search_path $LIB_PATH]
+. /Tools/synopsys/syn/X-2025.06-SP2/libraries/syn /Tools/synopsys/syn/X-2025.06-SP2/dw/syn_ver /Tools/synopsys/syn/X-2025.06-SP2/dw/sim_ver /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+# Biblioteca para mapeamento tecnologico
+set_app_var target_library $TARGET_LIB
+saed32rvt_tt0p85v25c.db
+# Bibliotecas disponiveis para resolver as referencias do projeto
+set_app_var link_library "* $TARGET_LIB"
+* saed32rvt_tt0p85v25c.db
+puts "============================================"
+============================================
+puts "Configuracao inicial da sintese"
+Configuracao inicial da sintese
+puts "Biblioteca: $TARGET_LIB"
+Biblioteca: saed32rvt_tt0p85v25c.db
+puts "============================================"
+============================================
+# ============================================================
+# Leitura do RTL
+# ============================================================
+analyze -format sverilog {
+    rtl/integrador.sv
+    rtl/cic_integradores.sv
+    rtl/decimador.sv
+    rtl/comb.sv
+    rtl/cic_combs.sv
+    rtl/cic.sv
+    rtl/fir.sv
+    rtl/filtro_pdm.sv
+}
+Running PRESTO HDLC
+Compiling source file ./rtl/integrador.sv
+Compiling source file ./rtl/cic_integradores.sv
+Compiling source file ./rtl/decimador.sv
+Compiling source file ./rtl/comb.sv
+Compiling source file ./rtl/cic_combs.sv
+Compiling source file ./rtl/cic.sv
+Compiling source file ./rtl/fir.sv
+Compiling source file ./rtl/filtro_pdm.sv
+Presto compilation completed successfully.
+Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
+1
+# Constroi a hierarquia a partir do modulo de topo
+elaborate filtro_pdm
+Loading db file '/Tools/synopsys/syn/X-2025.06-SP2/libraries/syn/gtech.db'
+Loading db file '/Tools/synopsys/syn/X-2025.06-SP2/libraries/syn/standard.sldb'
+  Loading link library 'saed32rvt_tt0p85v25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (filtro_pdm)
+Module: filtro_pdm, Ports: 23, Input: 3, Output: 20, Inout: 0
+Module: filtro_pdm, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module filtro_pdm report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'filtro_pdm'.
+Information: Building the design 'cic' instantiated from design 'filtro_pdm' with
+	the parameters "BITS=18,R=16". (HDL-193)
+Warning:  ./rtl/cic.sv:108: signed to unsigned part selection occurs. (VER-318)
+Presto compilation completed successfully. (cic_BITS18_R16)
+Module: cic_BITS18_R16, Ports: 38, Input: 20, Output: 18, Inout: 0
+Module: cic_BITS18_R16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module cic_BITS18_R16 report end. (ELAB-965)
+Information: Building the design 'fir' instantiated from design 'filtro_pdm' with
+	the parameters "BITS_IN=17,BITS_COEF=16,BITS_ACC=34,BITS_OUT=19,TAPS=65,FRAC=15". (HDL-193)
+Warning:  ./rtl/fir.sv:296: signed to unsigned part selection occurs. (VER-318)
+Warning:  ./rtl/fir.sv:67: signed to unsigned part selection occurs. (VER-318)
+
+Inferred memory devices in process in routine 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15' in file
+	 ./rtl/fir.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      y_out_reg      | Flip-flop |  19   |  Y  | N  | None  | None  | N  | 152  |
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | None  | None  | N  | 152  |
+|      delay_reg      | Flip-flop | 1088  |  Y  | N  | None  | None  | N  | 152  |
+==================================================================================
+Presto compilation completed successfully. (fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15)
+Module: fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15, Ports: 40, Input: 20, Output: 20, Inout: 0
+Module: fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15, Registers: 1108, Async set/reset: 0, Sync set/reset: 0
+Information: Module fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15 report end. (ELAB-965)
+Information: Building the design 'cic_integradores' instantiated from design 'cic_BITS18_R16' with
+	the parameters "BITS=18". (HDL-193)
+
+Inferred memory devices in process in routine 'cic_integradores_BITS18' in file
+	 ./rtl/cic_integradores.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      int4_reg       | Flip-flop |  18   |  Y  | N  | None  | None  | N  |  38  |
+|      int1_reg       | Flip-flop |  18   |  Y  | N  | None  | None  | N  |  38  |
+|      int2_reg       | Flip-flop |  18   |  Y  | N  | None  | None  | N  |  38  |
+|      int3_reg       | Flip-flop |  18   |  Y  | N  | None  | None  | N  |  38  |
+==================================================================================
+Presto compilation completed successfully. (cic_integradores_BITS18)
+Module: cic_integradores_BITS18, Ports: 92, Input: 20, Output: 72, Inout: 0
+Module: cic_integradores_BITS18, Registers: 72, Async set/reset: 0, Sync set/reset: 0
+Information: Module cic_integradores_BITS18 report end. (ELAB-965)
+Information: Building the design 'decimador' instantiated from design 'cic_BITS18_R16' with
+	the parameters "R=16". (HDL-193)
+Warning:  ./rtl/decimador.sv:19: signed to unsigned conversion occurs. (VER-318)
+
+Inferred memory devices in process in routine 'decimador_R16' in file
+	 ./rtl/decimador.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|      valid_reg      | Flip-flop |   1   |  N  | N  | None  | None  | N  |  13  |
+|      count_reg      | Flip-flop |   4   |  Y  | N  | None  | None  | N  |  13  |
+==================================================================================
+Presto compilation completed successfully. (decimador_R16)
+Module: decimador_R16, Ports: 7, Input: 2, Output: 5, Inout: 0
+Module: decimador_R16, Registers: 5, Async set/reset: 0, Sync set/reset: 0
+Information: Module decimador_R16 report end. (ELAB-965)
+Information: Building the design 'cic_combs' instantiated from design 'cic_BITS18_R16' with
+	the parameters "BITS=18". (HDL-193)
+Presto compilation completed successfully. (cic_combs_BITS18)
+Module: cic_combs_BITS18, Ports: 40, Input: 21, Output: 19, Inout: 0
+Module: cic_combs_BITS18, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module cic_combs_BITS18 report end. (ELAB-965)
+Information: Building the design 'comb' instantiated from design 'cic_combs_BITS18' with
+	the parameters "BITS=18". (HDL-193)
+
+Inferred memory devices in process in routine 'comb_BITS18' in file
+	 ./rtl/comb.sv'.
+==================================================================================
+|    Register Name    |   Type    | Width | Bus | MB |  Set  | Reset | ST | Line |
+==================================================================================
+|    valid_out_reg    | Flip-flop |   1   |  N  | N  | None  | None  | N  |  19  |
+|     x_delay_reg     | Flip-flop |  18   |  Y  | N  | None  | None  | N  |  19  |
+|      y_out_reg      | Flip-flop |  18   |  Y  | N  | None  | None  | N  |  19  |
+==================================================================================
+Presto compilation completed successfully. (comb_BITS18)
+Module: comb_BITS18, Ports: 40, Input: 21, Output: 19, Inout: 0
+Module: comb_BITS18, Registers: 37, Async set/reset: 0, Sync set/reset: 0
+Information: Module comb_BITS18 report end. (ELAB-965)
+1
+# Define explicitamente o design corrente
+current_design filtro_pdm
+Current design is 'filtro_pdm'.
+{filtro_pdm}
+# Resolve as referencias entre os modulos e bibliotecas
+link
+
+  Linking design 'filtro_pdm'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  * (7 designs)               /home/raissa.crispim/tcc_filtro/filtro_pdm.db, etc
+  saed32rvt_tt0p85v25c (library) /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db
+
+Information: Summary of messages issued during linking: (LINK-1806)
+No messages were issued during linking.
+1
+# Verifica a consistencia estrutural do design
+check_design
+ 
+****************************************
+check_design summary:
+Version:     X-2025.06-SP2
+Date:        Fri Oct  9 20:36:18 2026
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               5
+    Cells do not drive (LINT-1)                                     4
+    Connected to power or ground (LINT-32)                          1
+
+Nets                                                               59
+    Unloaded nets (LINT-2)                                         59
+--------------------------------------------------------------------------------
+
+Warning: In design 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15', cell 'C5094' does not drive any nets. (LINT-1)
+Warning: In design 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15', cell 'C5095' does not drive any nets. (LINT-1)
+Warning: In design 'decimador_R16', cell 'B_1' does not drive any nets. (LINT-1)
+Warning: In design 'comb_BITS18', cell 'C172' does not drive any nets. (LINT-1)
+Warning: In design 'filtro_pdm', net 'u_cic/comb_out[0]' driven by pin 'u_cic/u_combs/y_out[0]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/dec_count[0]' driven by pin 'u_cic/u_decimador/count[0]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/dec_count[1]' driven by pin 'u_cic/u_decimador/count[1]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/dec_count[2]' driven by pin 'u_cic/u_decimador/count[2]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/dec_count[3]' driven by pin 'u_cic/u_decimador/count[3]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[0]' driven by pin 'u_cic/u_integradores/int3[0]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[1]' driven by pin 'u_cic/u_integradores/int3[1]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[2]' driven by pin 'u_cic/u_integradores/int3[2]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[3]' driven by pin 'u_cic/u_integradores/int3[3]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[4]' driven by pin 'u_cic/u_integradores/int3[4]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[5]' driven by pin 'u_cic/u_integradores/int3[5]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[6]' driven by pin 'u_cic/u_integradores/int3[6]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[7]' driven by pin 'u_cic/u_integradores/int3[7]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[8]' driven by pin 'u_cic/u_integradores/int3[8]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[9]' driven by pin 'u_cic/u_integradores/int3[9]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[10]' driven by pin 'u_cic/u_integradores/int3[10]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[11]' driven by pin 'u_cic/u_integradores/int3[11]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[12]' driven by pin 'u_cic/u_integradores/int3[12]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[13]' driven by pin 'u_cic/u_integradores/int3[13]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[14]' driven by pin 'u_cic/u_integradores/int3[14]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[15]' driven by pin 'u_cic/u_integradores/int3[15]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[16]' driven by pin 'u_cic/u_integradores/int3[16]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int3[17]' driven by pin 'u_cic/u_integradores/int3[17]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[0]' driven by pin 'u_cic/u_integradores/int2[0]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[1]' driven by pin 'u_cic/u_integradores/int2[1]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[2]' driven by pin 'u_cic/u_integradores/int2[2]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[3]' driven by pin 'u_cic/u_integradores/int2[3]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[4]' driven by pin 'u_cic/u_integradores/int2[4]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[5]' driven by pin 'u_cic/u_integradores/int2[5]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[6]' driven by pin 'u_cic/u_integradores/int2[6]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[7]' driven by pin 'u_cic/u_integradores/int2[7]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[8]' driven by pin 'u_cic/u_integradores/int2[8]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[9]' driven by pin 'u_cic/u_integradores/int2[9]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[10]' driven by pin 'u_cic/u_integradores/int2[10]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[11]' driven by pin 'u_cic/u_integradores/int2[11]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[12]' driven by pin 'u_cic/u_integradores/int2[12]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[13]' driven by pin 'u_cic/u_integradores/int2[13]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[14]' driven by pin 'u_cic/u_integradores/int2[14]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[15]' driven by pin 'u_cic/u_integradores/int2[15]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[16]' driven by pin 'u_cic/u_integradores/int2[16]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int2[17]' driven by pin 'u_cic/u_integradores/int2[17]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[0]' driven by pin 'u_cic/u_integradores/int1[0]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[1]' driven by pin 'u_cic/u_integradores/int1[1]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[2]' driven by pin 'u_cic/u_integradores/int1[2]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[3]' driven by pin 'u_cic/u_integradores/int1[3]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[4]' driven by pin 'u_cic/u_integradores/int1[4]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[5]' driven by pin 'u_cic/u_integradores/int1[5]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[6]' driven by pin 'u_cic/u_integradores/int1[6]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[7]' driven by pin 'u_cic/u_integradores/int1[7]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[8]' driven by pin 'u_cic/u_integradores/int1[8]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[9]' driven by pin 'u_cic/u_integradores/int1[9]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[10]' driven by pin 'u_cic/u_integradores/int1[10]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[11]' driven by pin 'u_cic/u_integradores/int1[11]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[12]' driven by pin 'u_cic/u_integradores/int1[12]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[13]' driven by pin 'u_cic/u_integradores/int1[13]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[14]' driven by pin 'u_cic/u_integradores/int1[14]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[15]' driven by pin 'u_cic/u_integradores/int1[15]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[16]' driven by pin 'u_cic/u_integradores/int1[16]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', net 'u_cic/int1[17]' driven by pin 'u_cic/u_integradores/int1[17]' has no loads. (LINT-2)
+Warning: In design 'filtro_pdm', a pin on submodule 'u_cic' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'x_in[0]' is connected to logic 1. 
+1
+# ============================================================
+# Portas de teste (DFT)
+#
+# Criadas aqui, e nao no RTL, para manter o RTL funcional
+# inalterado. Sao conectadas a cadeia de scan pelo insert_dft.
+# ============================================================
+create_port -direction in  scan_en
+Creating port 'scan_en' in design 'filtro_pdm'.
+1
+create_port -direction in  scan_in
+Creating port 'scan_in' in design 'filtro_pdm'.
+1
+create_port -direction out scan_out
+Creating port 'scan_out' in design 'filtro_pdm'.
+1
+# ============================================================
+# Constraints de timing
+# ============================================================
+# Restricoes completas: clock de 4,8 MHz, incerteza,
+# atrasos de entrada/saida e cargas.
+# O mesmo arquivo e lido no Fusion Compiler (setup.tcl).
+read_sdc pnr/constraints/filtro_pdm_physical.sdc
+
+Reading SDC version 2.2...
+1
+# Restricoes das portas de scan
+read_sdc pnr/constraints/filtro_pdm_dft.sdc
+
+Reading SDC version 2.2...
+1
+# Exibe os clocks definidos para conferencia
+report_clocks
+Information: Changed wire load model for 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'comb_BITS18' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'comb_BITS18' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'comb_BITS18' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'comb_BITS18' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'cic_combs_BITS18' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'decimador_R16' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'cic_integradores_BITS18' from '(none)' to 'ForQA'. (OPT-170)
+Information: Changed wire load model for 'cic_BITS18_R16' from '(none)' to 'ForQA'. (OPT-170)
+Module: DW02_mult_A_width17_B_width4, Ports: 43, Input: 22, Output: 21, Inout: 0
+Module: DW02_mult_A_width17_B_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width4'
+Module: DW01_MUX, Ports: 4, Input: 3, Output: 1, Inout: 0
+Module: DW01_MUX, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width2, Ports: 7, Input: 5, Output: 2, Inout: 0
+Module: DW01_mmux_width2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width3, Ports: 10, Input: 7, Output: 3, Inout: 0
+Module: DW01_mmux_width3, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width4, Ports: 13, Input: 9, Output: 4, Inout: 0
+Module: DW01_mmux_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_mmux_width5, Ports: 16, Input: 11, Output: 5, Inout: 0
+Module: DW01_mmux_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width19, Ports: 59, Input: 39, Output: 20, Inout: 0
+Module: DW01_add_width19, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width19, Ports: 59, Input: 39, Output: 20, Inout: 0
+Module: DW01_sub_width19, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width19, Ports: 59, Input: 39, Output: 20, Inout: 0
+Module: DW01_sub_width19, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width22, Ports: 68, Input: 45, Output: 23, Inout: 0
+Module: DW01_add_width22, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width22, Ports: 68, Input: 45, Output: 23, Inout: 0
+Module: DW01_add_width22, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width5, Ports: 45, Input: 23, Output: 22, Inout: 0
+Module: DW02_mult_A_width17_B_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width5'
+Module: DW01_add_width20, Ports: 62, Input: 41, Output: 21, Inout: 0
+Module: DW01_add_width20, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width23, Ports: 71, Input: 47, Output: 24, Inout: 0
+Module: DW01_add_width23, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width23, Ports: 71, Input: 47, Output: 24, Inout: 0
+Module: DW01_add_width23, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width24, Ports: 74, Input: 49, Output: 25, Inout: 0
+Module: DW01_add_width24, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width24, Ports: 74, Input: 49, Output: 25, Inout: 0
+Module: DW01_add_width24, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width6, Ports: 47, Input: 24, Output: 23, Inout: 0
+Module: DW02_mult_A_width17_B_width6, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width6'
+Module: DW01_add_width21, Ports: 65, Input: 43, Output: 22, Inout: 0
+Module: DW01_add_width21, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width25, Ports: 77, Input: 51, Output: 26, Inout: 0
+Module: DW01_add_width25, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width25, Ports: 77, Input: 51, Output: 26, Inout: 0
+Module: DW01_add_width25, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width7, Ports: 49, Input: 25, Output: 24, Inout: 0
+Module: DW02_mult_A_width17_B_width7, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width7'
+Module: DW01_add_width22, Ports: 68, Input: 45, Output: 23, Inout: 0
+Module: DW01_add_width22, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width26, Ports: 80, Input: 53, Output: 27, Inout: 0
+Module: DW01_add_width26, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width26, Ports: 80, Input: 53, Output: 27, Inout: 0
+Module: DW01_add_width26, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width20, Ports: 62, Input: 41, Output: 21, Inout: 0
+Module: DW01_sub_width20, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width20, Ports: 62, Input: 41, Output: 21, Inout: 0
+Module: DW01_sub_width20, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width27, Ports: 83, Input: 55, Output: 28, Inout: 0
+Module: DW01_add_width27, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width27, Ports: 83, Input: 55, Output: 28, Inout: 0
+Module: DW01_add_width27, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width8, Ports: 51, Input: 26, Output: 25, Inout: 0
+Module: DW02_mult_A_width17_B_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width8'
+Module: DW01_add_width23, Ports: 71, Input: 47, Output: 24, Inout: 0
+Module: DW01_add_width23, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width28, Ports: 86, Input: 57, Output: 29, Inout: 0
+Module: DW01_add_width28, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width28, Ports: 86, Input: 57, Output: 29, Inout: 0
+Module: DW01_add_width28, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width29, Ports: 89, Input: 59, Output: 30, Inout: 0
+Module: DW01_add_width29, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width29, Ports: 89, Input: 59, Output: 30, Inout: 0
+Module: DW01_add_width29, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width30, Ports: 92, Input: 61, Output: 31, Inout: 0
+Module: DW01_add_width30, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width30, Ports: 92, Input: 61, Output: 31, Inout: 0
+Module: DW01_add_width30, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width9, Ports: 53, Input: 27, Output: 26, Inout: 0
+Module: DW02_mult_A_width17_B_width9, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width9'
+Module: DW01_add_width24, Ports: 74, Input: 49, Output: 25, Inout: 0
+Module: DW01_add_width24, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width31, Ports: 95, Input: 63, Output: 32, Inout: 0
+Module: DW01_add_width31, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width31, Ports: 95, Input: 63, Output: 32, Inout: 0
+Module: DW01_add_width31, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width32, Ports: 98, Input: 65, Output: 33, Inout: 0
+Module: DW01_add_width32, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width32, Ports: 98, Input: 65, Output: 33, Inout: 0
+Module: DW01_add_width32, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width33, Ports: 101, Input: 67, Output: 34, Inout: 0
+Module: DW01_add_width33, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width33, Ports: 101, Input: 67, Output: 34, Inout: 0
+Module: DW01_add_width33, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width10, Ports: 55, Input: 28, Output: 27, Inout: 0
+Module: DW02_mult_A_width17_B_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width10'
+Module: DW01_add_width25, Ports: 77, Input: 51, Output: 26, Inout: 0
+Module: DW01_add_width25, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width34, Ports: 104, Input: 69, Output: 35, Inout: 0
+Module: DW01_add_width34, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width34, Ports: 104, Input: 69, Output: 35, Inout: 0
+Module: DW01_add_width34, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width35, Ports: 107, Input: 71, Output: 36, Inout: 0
+Module: DW01_add_width35, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width35, Ports: 107, Input: 71, Output: 36, Inout: 0
+Module: DW01_add_width35, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width11, Ports: 57, Input: 29, Output: 28, Inout: 0
+Module: DW02_mult_A_width17_B_width11, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width11'
+Module: DW01_add_width26, Ports: 80, Input: 53, Output: 27, Inout: 0
+Module: DW01_add_width26, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width36, Ports: 110, Input: 73, Output: 37, Inout: 0
+Module: DW01_add_width36, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width36, Ports: 110, Input: 73, Output: 37, Inout: 0
+Module: DW01_add_width36, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width37, Ports: 113, Input: 75, Output: 38, Inout: 0
+Module: DW01_add_width37, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width37, Ports: 113, Input: 75, Output: 38, Inout: 0
+Module: DW01_add_width37, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width38, Ports: 116, Input: 77, Output: 39, Inout: 0
+Module: DW01_add_width38, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width38, Ports: 116, Input: 77, Output: 39, Inout: 0
+Module: DW01_add_width38, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width39, Ports: 119, Input: 79, Output: 40, Inout: 0
+Module: DW01_add_width39, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width39, Ports: 119, Input: 79, Output: 40, Inout: 0
+Module: DW01_add_width39, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width40, Ports: 122, Input: 81, Output: 41, Inout: 0
+Module: DW01_add_width40, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width40, Ports: 122, Input: 81, Output: 41, Inout: 0
+Module: DW01_add_width40, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width41, Ports: 125, Input: 83, Output: 42, Inout: 0
+Module: DW01_add_width41, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width41, Ports: 125, Input: 83, Output: 42, Inout: 0
+Module: DW01_add_width41, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width12, Ports: 59, Input: 30, Output: 29, Inout: 0
+Module: DW02_mult_A_width17_B_width12, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width12'
+Module: DW01_add_width27, Ports: 83, Input: 55, Output: 28, Inout: 0
+Module: DW01_add_width27, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width42, Ports: 128, Input: 85, Output: 43, Inout: 0
+Module: DW01_add_width42, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width42, Ports: 128, Input: 85, Output: 43, Inout: 0
+Module: DW01_add_width42, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width43, Ports: 131, Input: 87, Output: 44, Inout: 0
+Module: DW01_add_width43, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width43, Ports: 131, Input: 87, Output: 44, Inout: 0
+Module: DW01_add_width43, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width44, Ports: 134, Input: 89, Output: 45, Inout: 0
+Module: DW01_add_width44, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width44, Ports: 134, Input: 89, Output: 45, Inout: 0
+Module: DW01_add_width44, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width45, Ports: 137, Input: 91, Output: 46, Inout: 0
+Module: DW01_add_width45, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width45, Ports: 137, Input: 91, Output: 46, Inout: 0
+Module: DW01_add_width45, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width46, Ports: 140, Input: 93, Output: 47, Inout: 0
+Module: DW01_add_width46, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width46, Ports: 140, Input: 93, Output: 47, Inout: 0
+Module: DW01_add_width46, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width13, Ports: 61, Input: 31, Output: 30, Inout: 0
+Module: DW02_mult_A_width17_B_width13, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width13'
+Module: DW01_add_width28, Ports: 86, Input: 57, Output: 29, Inout: 0
+Module: DW01_add_width28, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width47, Ports: 143, Input: 95, Output: 48, Inout: 0
+Module: DW01_add_width47, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width47, Ports: 143, Input: 95, Output: 48, Inout: 0
+Module: DW01_add_width47, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width48, Ports: 146, Input: 97, Output: 49, Inout: 0
+Module: DW01_add_width48, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width48, Ports: 146, Input: 97, Output: 49, Inout: 0
+Module: DW01_add_width48, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width14, Ports: 63, Input: 32, Output: 31, Inout: 0
+Module: DW02_mult_A_width17_B_width14, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width14'
+Module: DW01_add_width29, Ports: 89, Input: 59, Output: 30, Inout: 0
+Module: DW01_add_width29, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width49, Ports: 149, Input: 99, Output: 50, Inout: 0
+Module: DW01_add_width49, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width49, Ports: 149, Input: 99, Output: 50, Inout: 0
+Module: DW01_add_width49, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width50, Ports: 152, Input: 101, Output: 51, Inout: 0
+Module: DW01_add_width50, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width50, Ports: 152, Input: 101, Output: 51, Inout: 0
+Module: DW01_add_width50, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width51, Ports: 155, Input: 103, Output: 52, Inout: 0
+Module: DW01_add_width51, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width51, Ports: 155, Input: 103, Output: 52, Inout: 0
+Module: DW01_add_width51, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width15, Ports: 65, Input: 33, Output: 32, Inout: 0
+Module: DW02_mult_A_width17_B_width15, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width15'
+Module: DW01_add_width30, Ports: 92, Input: 61, Output: 31, Inout: 0
+Module: DW01_add_width30, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width52, Ports: 158, Input: 105, Output: 53, Inout: 0
+Module: DW01_add_width52, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width52, Ports: 158, Input: 105, Output: 53, Inout: 0
+Module: DW01_add_width52, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width16, Ports: 67, Input: 34, Output: 33, Inout: 0
+Module: DW02_mult_A_width17_B_width16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width16'
+Module: DW01_add_width31, Ports: 95, Input: 63, Output: 32, Inout: 0
+Module: DW01_add_width31, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width53, Ports: 161, Input: 107, Output: 54, Inout: 0
+Module: DW01_add_width53, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width53, Ports: 161, Input: 107, Output: 54, Inout: 0
+Module: DW01_add_width53, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width54, Ports: 164, Input: 109, Output: 55, Inout: 0
+Module: DW01_add_width54, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width54, Ports: 164, Input: 109, Output: 55, Inout: 0
+Module: DW01_add_width54, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width55, Ports: 167, Input: 111, Output: 56, Inout: 0
+Module: DW01_add_width55, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width55, Ports: 167, Input: 111, Output: 56, Inout: 0
+Module: DW01_add_width55, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width56, Ports: 170, Input: 113, Output: 57, Inout: 0
+Module: DW01_add_width56, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width56, Ports: 170, Input: 113, Output: 57, Inout: 0
+Module: DW01_add_width56, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width57, Ports: 173, Input: 115, Output: 58, Inout: 0
+Module: DW01_add_width57, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width57, Ports: 173, Input: 115, Output: 58, Inout: 0
+Module: DW01_add_width57, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width58, Ports: 176, Input: 117, Output: 59, Inout: 0
+Module: DW01_add_width58, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width58, Ports: 176, Input: 117, Output: 59, Inout: 0
+Module: DW01_add_width58, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width59, Ports: 179, Input: 119, Output: 60, Inout: 0
+Module: DW01_add_width59, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width59, Ports: 179, Input: 119, Output: 60, Inout: 0
+Module: DW01_add_width59, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width60, Ports: 182, Input: 121, Output: 61, Inout: 0
+Module: DW01_add_width60, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width60, Ports: 182, Input: 121, Output: 61, Inout: 0
+Module: DW01_add_width60, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width61, Ports: 185, Input: 123, Output: 62, Inout: 0
+Module: DW01_add_width61, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width61, Ports: 185, Input: 123, Output: 62, Inout: 0
+Module: DW01_add_width61, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width62, Ports: 188, Input: 125, Output: 63, Inout: 0
+Module: DW01_add_width62, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width62, Ports: 188, Input: 125, Output: 63, Inout: 0
+Module: DW01_add_width62, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width63, Ports: 191, Input: 127, Output: 64, Inout: 0
+Module: DW01_add_width63, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width63, Ports: 191, Input: 127, Output: 64, Inout: 0
+Module: DW01_add_width63, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width12, Ports: 59, Input: 30, Output: 29, Inout: 0
+Module: DW02_mult_A_width17_B_width12, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width12'
+Module: DW01_add_width27, Ports: 83, Input: 55, Output: 28, Inout: 0
+Module: DW01_add_width27, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width64, Ports: 194, Input: 129, Output: 65, Inout: 0
+Module: DW01_add_width64, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width64, Ports: 194, Input: 129, Output: 65, Inout: 0
+Module: DW01_add_width64, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width11, Ports: 57, Input: 29, Output: 28, Inout: 0
+Module: DW02_mult_A_width17_B_width11, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width11'
+Module: DW01_add_width26, Ports: 80, Input: 53, Output: 27, Inout: 0
+Module: DW01_add_width26, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width9, Ports: 53, Input: 27, Output: 26, Inout: 0
+Module: DW02_mult_A_width17_B_width9, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width9'
+Module: DW01_add_width24, Ports: 74, Input: 49, Output: 25, Inout: 0
+Module: DW01_add_width24, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width10, Ports: 55, Input: 28, Output: 27, Inout: 0
+Module: DW02_mult_A_width17_B_width10, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width10'
+Module: DW01_add_width25, Ports: 77, Input: 51, Output: 26, Inout: 0
+Module: DW01_add_width25, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width6, Ports: 47, Input: 24, Output: 23, Inout: 0
+Module: DW02_mult_A_width17_B_width6, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width6'
+Module: DW01_add_width21, Ports: 65, Input: 43, Output: 22, Inout: 0
+Module: DW01_add_width21, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width8, Ports: 51, Input: 26, Output: 25, Inout: 0
+Module: DW02_mult_A_width17_B_width8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width8'
+Module: DW01_add_width23, Ports: 71, Input: 47, Output: 24, Inout: 0
+Module: DW01_add_width23, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width7, Ports: 49, Input: 25, Output: 24, Inout: 0
+Module: DW02_mult_A_width17_B_width7, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width7'
+Module: DW01_add_width22, Ports: 68, Input: 45, Output: 23, Inout: 0
+Module: DW01_add_width22, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width20, Ports: 62, Input: 41, Output: 21, Inout: 0
+Module: DW01_sub_width20, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width5, Ports: 45, Input: 23, Output: 22, Inout: 0
+Module: DW02_mult_A_width17_B_width5, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width5'
+Module: DW01_add_width20, Ports: 62, Input: 41, Output: 21, Inout: 0
+Module: DW01_add_width20, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width19, Ports: 59, Input: 39, Output: 20, Inout: 0
+Module: DW01_sub_width19, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW02_mult_A_width17_B_width4, Ports: 43, Input: 22, Output: 21, Inout: 0
+Module: DW02_mult_A_width17_B_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Allocating blocks in 'DW02_mult_A_width17_B_width4'
+Module: DW01_add_width19, Ports: 59, Input: 39, Output: 20, Inout: 0
+Module: DW01_add_width19, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_cmp2_width64, Ports: 132, Input: 130, Output: 2, Inout: 0
+Module: DW01_cmp2_width64, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width64, Ports: 194, Input: 129, Output: 65, Inout: 0
+Module: DW01_sub_width64, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width64, Ports: 194, Input: 129, Output: 65, Inout: 0
+Module: DW01_sub_width64, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width50, Ports: 152, Input: 101, Output: 51, Inout: 0
+Module: DW01_sub_width50, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width50, Ports: 152, Input: 101, Output: 51, Inout: 0
+Module: DW01_sub_width50, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width18, Ports: 56, Input: 37, Output: 19, Inout: 0
+Module: DW01_add_width18, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_add_width18, Ports: 56, Input: 37, Output: 19, Inout: 0
+Module: DW01_add_width18, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_inc_width4, Ports: 8, Input: 4, Output: 4, Inout: 0
+Module: DW01_inc_width4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width18, Ports: 56, Input: 37, Output: 19, Inout: 0
+Module: DW01_sub_width18, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Module: DW01_sub_width18, Ports: 56, Input: 37, Output: 19, Inout: 0
+Module: DW01_sub_width18, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Updating graph... (UID-83)
+Warning: Design 'filtro_pdm' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : clocks
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Fri Oct  9 20:36:50 2026
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk            208.33   {0 104.166}                   {clk}
+--------------------------------------------------------------------------------
+1
+puts "============================================"
+============================================
+puts "RTL analisado, elaborado e linkado"
+RTL analisado, elaborado e linkado
+puts "Top: filtro_pdm"
+Top: filtro_pdm
+puts "============================================"
+============================================
+# ============================================================
+# Sintese e otimizacao
+# ============================================================
+# Evita comandos assign na netlist (portas ligadas entre si
+# ou a constantes), que atrapalham o P&R e o LVS
+set_fix_multiple_port_nets -all -buffer_constants
+1
+# ------------------------------------------------------------
+# Configuracao do DFT
+#
+# Estilo: flip-flop com multiplexador (mux-scan)
+# Uma unica cadeia de scan com todos os flip-flops.
+# O reset e sincrono (logica no caminho de dados), portanto
+# nao precisa ser declarado como sinal de teste.
+# ------------------------------------------------------------
+set_scan_configuration \
+    -style multiplexed_flip_flop \
+    -chain_count 1
+Accepted scan configuration for modes: all_dft
+1
+set_dft_signal -view existing_dft \
+    -type ScanClock \
+    -port clk \
+    -timing {45 55}
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -view spec \
+    -type ScanEnable \
+    -port scan_en \
+    -active_state 1
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -view spec \
+    -type ScanDataIn \
+    -port scan_in
+Accepted dft signal specification for modes: all_dft
+1
+set_dft_signal -view spec \
+    -type ScanDataOut \
+    -port scan_out
+Accepted dft signal specification for modes: all_dft
+1
+# Sintese logica e mapeamento para a biblioteca tecnologica,
+# ja utilizando flip-flops com scan
+compile_ultra -scan
+Loading db file '/Tools/synopsys/syn/X-2025.06-SP2/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 1%, Ram Free: 193 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+Alib files are up-to-date.
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | X-2025.06-DWBB_202506.2 |     *     |
+| Licensed DW Building Blocks        | X-2025.06-DWBB_202506.2 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra -scan                                                               |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 1565                                   |
+| Number of User Hierarchies                              | 9                                      |
+| Sequential Cell Count                                   | 1333                                   |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 1                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 44                                     |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 100 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 4 instances of design 'comb_BITS18'. (OPT-1056)
+  Simplifying Design 'filtro_pdm'
+Information: The register 'u_cic/u_combs/u_comb4/y_out_reg[0]' will be removed. (OPT-1207)
+Information: The register 'u_cic/u_combs/u_comb4/y_out_reg[0]' will be removed. (OPT-1207)
+
+Loaded alib file './alib-52/saed32rvt_tt0p85v25c.db.alib'
+Module: DW01_NAND2, Ports: 3, Input: 2, Output: 1, Inout: 0
+Module: DW01_NAND2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy u_cic before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_cic/u_integradores before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_cic/u_decimador before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_cic/u_combs before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_cic/u_combs/u_comb1 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_cic/u_combs/u_comb4 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_cic/u_combs/u_comb3 before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_cic/u_combs/u_comb2 before Pass 1 (OPT-776)
+Information: Ungrouping 8 of 10 hierarchies before Pass 1 (OPT-775)
+CPU Load: 1%, Ram Free: 193 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15'
+ Implement Synthetic for 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15'.
+Information: Added key list 'DesignWare' to design 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15'. (DDB-72)
+  Processing 'filtro_pdm'
+Information: Added key list 'DesignWare' to design 'filtro_pdm'. (DDB-72)
+ Implement Synthetic for 'filtro_pdm'.
+CPU Load: 1%, Ram Free: 193 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'PMT3_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+Information: Automatic shift-register identification is enabled for scan. Not all registers will be scan-replaced. (OPT-467)
+Information: Complementing port 'valid_in' in design 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15'.
+	 The new name of the port is 'valid_in_BAR'. (OPT-319)
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:27   36375.6      0.00       0.0      56.2                           1573595392.0000
+    0:01:27   36375.6      0.00       0.0      56.2                           1573595392.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:01:27   36375.6      0.00       0.0      56.2                           1573595392.0000
+    0:01:27   36375.6      0.00       0.0      56.2                           1573595392.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:01:29   32142.9      0.00       0.0     144.3                           916847808.0000
+    0:01:29   32142.9      0.00       0.0     144.3                           916847808.0000
+    0:01:29   32142.9      0.00       0.0     144.3                           916847808.0000
+    0:01:29   32142.9      0.00       0.0     144.3                           916847808.0000
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+    0:01:29   32142.9      0.00       0.0     144.3                           916847808.0000
+    0:01:29   32142.9      0.00       0.0     144.3                           916847808.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:01:30   32066.9      0.00       0.0      86.1                           902939904.0000
+    0:01:30   32066.9      0.00       0.0      86.1                           902939904.0000
+    0:01:30   32066.9      0.00       0.0      86.1                           902939904.0000
+    0:01:30   32066.9      0.00       0.0      86.1                           902939904.0000
+    0:01:30   32066.9      0.00       0.0      86.1                           902939904.0000
+    0:01:31   32031.8      0.00       0.0      62.7                           896488704.0000
+    0:01:31   32031.8      0.00       0.0      62.7                           896488704.0000
+    0:01:31   32031.8      0.00       0.0      62.7                           896488704.0000
+    0:01:31   32031.8      0.00       0.0      62.7                           896488704.0000
+    0:01:31   32031.8      0.00       0.0      62.7                           896488704.0000
+    0:01:31   32031.8      0.00       0.0      62.7                           896488704.0000
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:31   32031.8      0.00       0.0      62.7                           896488704.0000
+  Global Optimization (Phase 31)
+  Global Optimization (Phase 32)
+  Global Optimization (Phase 33)
+    0:01:31   32036.9      0.00       0.0       0.0                           897167872.0000
+    0:01:31   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:31   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:31   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:31   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:31   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:31   32036.9      0.00       0.0       0.0                           886395200.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:01:31   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:32   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:32   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:32   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32036.9      0.00       0.0       0.0                           886395200.0000
+    0:01:33   32034.9      0.00       0.0       0.0                           886189952.0000
+CPU Load: 1%, Ram Free: 193 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'filtro_pdm' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1332 load(s), 1 driver(s)
+     Net 'u_fir/n70': 2216 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 1%, Ram Free: 193 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+puts "============================================"
+============================================
+puts "Sintese e mapeamento concluidos"
+Sintese e mapeamento concluidos
+puts "============================================"
+============================================
+# ------------------------------------------------------------
+# Insercao da cadeia de scan
+# ------------------------------------------------------------
+create_test_protocol
+In mode: all_dft...
+
+Information: Starting test protocol creation. (TEST-219)
+  ...reading user specified clock signals...
+Information: Identified system/test clock port clk (45.0,55.0). (TEST-265)
+  ...reading user specified asynchronous signals...
+1
+dft_drc -verbose > synth/reports/dft_drc_pre.rpt
+preview_dft > synth/reports/dft_preview.rpt
+insert_dft
+Warning: Design 'filtro_pdm' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+  Information: Using test design rule information from previous dft_drc run.
+  Architecting Scan Chains
+  Routing Scan Chains
+  Routing Global Signals
+  Mapping New Logic
+Resetting current test mode
+Warning: Design 'filtro_pdm' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+  Beginning Mapping Optimizations
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01   32045.5      0.00       0.0       0.0                          
+
+1
+dft_drc -coverage_estimate > synth/reports/dft_drc_post.rpt
+# Otimizacao incremental apos a insercao do scan
+compile_ultra -incremental -scan
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 1%, Ram Free: 192 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+Alib files are up-to-date.
+Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra -incremental -scan                                                  |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 7943                                   |
+| Number of User Hierarchies                              | 1                                      |
+| Sequential Cell Count                                   | 1332                                   |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 1                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+----------------------------------------------------------------------------------------------------
+| Variables                                               | Value                                  |
+----------------------------------------------------------------------------------------------------
+| set_fix_multiple_port_nets                              | -all -buffer_constants                 |
+====================================================================================================
+
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'PMT3_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT2_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'PMT1_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT3_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT2_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'NMT1_RVT' in the library 'saed32rvt_tt0p85v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02   32045.5      0.00       0.0       0.0                           888110528.0000
+    0:00:02   32045.5      0.00       0.0       0.0                           888110528.0000
+Information: Complementing port 'y_out[18]' in design 'fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15_test_1'.
+	 The new name of the port is 'y_out[18]_BAR'. (OPT-319)
+
+Threshold voltage group cell usage:
+>> saed32cell_svt 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+    0:00:02   32037.9      0.00       0.0       0.0                           886247552.0000
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02   32037.9      0.00       0.0       0.0                           886247552.0000
+    0:00:03   33553.6      0.00       0.0       0.0                           1158969600.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:03   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+    0:00:04   32377.9      0.00       0.0       0.0                           913983680.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04   40562.8      0.00       0.0       0.0                           913983680.0000
+    0:00:04   40562.8      0.00       0.0       0.0                           913983680.0000
+    0:00:06   40523.9      0.00       0.0       0.0                           906540480.0000
+    0:00:06   40523.9      0.00       0.0       0.0                           906540480.0000
+    0:00:06   40523.9      0.00       0.0       0.0                           906540480.0000
+    0:00:06   40523.9      0.00       0.0       0.0                           906540480.0000
+    0:00:07   40517.9      0.00       0.0       0.0                           902699328.0000
+Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design 'filtro_pdm' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+     Net 'clk': 1332 load(s), 1 driver(s)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 1%, Ram Free: 192 GB, Swap Free: 15 GB, Work Disk Free: 3454 GB, Tmp Disk Free: 83 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+puts "============================================"
+============================================
+puts "Cadeia de scan inserida"
+Cadeia de scan inserida
+puts "============================================"
+============================================
+# ============================================================
+# Relatorios
+# ============================================================
+check_timing > synth/reports/check_timing.rpt
+report_qor > synth/reports/qor.rpt
+report_area -hierarchy > synth/reports/area_hier.rpt
+report_timing -delay_type max -max_paths 10 > synth/reports/timing_max.rpt
+report_timing -delay_type min -max_paths 10 > synth/reports/timing_min.rpt
+report_reference > synth/reports/reference.rpt
+report_resources > synth/reports/resources.rpt
+report_scan_path -view existing_dft -chain all > synth/reports/scan_path.rpt
+report_dft_signal -view existing_dft > synth/reports/dft_signals.rpt
+puts "============================================"
+============================================
+puts "Relatorios gerados em synth/reports"
+Relatorios gerados em synth/reports
+puts "============================================"
+============================================
+# ============================================================
+# Resultados da sintese
+# ============================================================
+# Nomes compativeis com Verilog para P&R, ATPG e simulacao
+change_names -rules verilog -hierarchy
+1
+# Banco de dados do Design Compiler
+write -format ddc -hierarchy \
+    -output synth/netlist/filtro_pdm_syn.ddc
+Writing ddc file 'synth/netlist/filtro_pdm_syn.ddc'.
+1
+# Netlist Verilog mapeado para standard cells
+write -format verilog -hierarchy \
+    -output synth/netlist/filtro_pdm_syn.v
+Writing verilog file '/home/raissa.crispim/tcc_filtro/synth/netlist/filtro_pdm_syn.v'.
+1
+# Constraints utilizadas na sintese
+write_sdc synth/netlist/filtro_pdm_syn.sdc
+1
+# Atrasos estimados para simulacao gate-level (opcional)
+write_sdf synth/netlist/filtro_pdm_syn.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/raissa.crispim/tcc_filtro/synth/netlist/filtro_pdm_syn.sdf'. (WT-3)
+1
+# Ordem da cadeia de scan para o placement (Fusion Compiler)
+write_scan_def -output synth/netlist/filtro_pdm_syn.scandef
+1
+# Protocolo de teste para o ATPG (TestMAX ATPG)
+write_test_protocol -output synth/netlist/filtro_pdm_syn.spf
+Writing test protocol file '/home/raissa.crispim/tcc_filtro/synth/netlist/filtro_pdm_syn.spf' for mode 'Internal_scan'...
+1
+puts "============================================"
+============================================
+puts "Fluxo de sintese concluido"
+Fluxo de sintese concluido
+puts "Netlist: synth/netlist/filtro_pdm_syn.v"
+Netlist: synth/netlist/filtro_pdm_syn.v
+puts "DDC:     synth/netlist/filtro_pdm_syn.ddc"
+DDC:     synth/netlist/filtro_pdm_syn.ddc
+puts "SDC:     synth/netlist/filtro_pdm_syn.sdc"
+SDC:     synth/netlist/filtro_pdm_syn.sdc
+puts "============================================"
+============================================
+dc_shell> exit
+
+Memory usage for this session 512 Mbytes.
+Memory usage for this session including child processes 512 Mbytes.
+CPU usage for this session 150 seconds ( 0.04 hours ).
+Elapsed time for this session 241 seconds ( 0.07 hours ).
+
+Thank you...
