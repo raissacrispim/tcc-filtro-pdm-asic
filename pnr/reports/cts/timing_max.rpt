@@ -1,0 +1,553 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 10
+        -report_by design
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:16:41 2026
+****************************************
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_17_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/S (FADDX1_RVT)                      0.15    144.47 f
+  U261/Y (INVX0_RVT)                               0.05    144.53 r
+  intadd_1_U18/S (FADDX1_RVT)                      0.16    144.68 f
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.85 r
+  U299/Y (INVX0_RVT)                               0.04    144.89 f
+  U301/Y (OA222X1_RVT)                             0.11    144.99 f
+  U307/Y (OA222X1_RVT)                             0.13    145.12 f
+  U313/Y (OA222X1_RVT)                             0.11    145.23 f
+  U319/Y (OA222X1_RVT)                             0.13    145.37 f
+  U325/Y (OA222X1_RVT)                             0.13    145.50 f
+  U331/Y (OA222X1_RVT)                             0.13    145.62 f
+  U337/Y (OA222X1_RVT)                             0.13    145.75 f
+  U343/Y (OA222X1_RVT)                             0.13    145.88 f
+  U349/Y (OA222X1_RVT)                             0.12    146.00 f
+  U350/Y (INVX0_RVT)                               0.05    146.05 r
+  U355/Y (AO222X1_RVT)                             0.13    146.18 r
+  U360/Y (AO222X1_RVT)                             0.14    146.32 r
+  U365/Y (AO222X1_RVT)                             0.14    146.45 r
+  U370/Y (AO222X1_RVT)                             0.14    146.59 r
+  U375/Y (AO222X1_RVT)                             0.14    146.73 r
+  U381/Y (AO222X1_RVT)                             0.14    146.86 r
+  U394/Y (AO222X1_RVT)                             0.13    146.99 r
+  U395/SO (HADDX1_RVT)                             0.10    147.09 f
+  U396/SO (HADDX1_RVT)                             0.10    147.19 r
+  U397/Y (AND2X1_RVT)                              0.05    147.24 r
+  u_cic_u_integradores_int4_reg_17_/D (SDFFX1_RVT)
+                                                   0.00    147.24 r
+  data arrival time                                        147.24
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int4_reg_17_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.10    207.33
+  data required time                                       207.33
+  ------------------------------------------------------------------------
+  data required time                                       207.33
+  data arrival time                                        -147.24
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.09
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/S (FADDX1_RVT)                      0.15    144.47 f
+  U261/Y (INVX0_RVT)                               0.05    144.53 r
+  intadd_1_U18/S (FADDX1_RVT)                      0.16    144.68 f
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.85 r
+  U299/Y (INVX0_RVT)                               0.04    144.89 f
+  U301/Y (OA222X1_RVT)                             0.11    144.99 f
+  U307/Y (OA222X1_RVT)                             0.13    145.12 f
+  U313/Y (OA222X1_RVT)                             0.11    145.23 f
+  U319/Y (OA222X1_RVT)                             0.13    145.37 f
+  U325/Y (OA222X1_RVT)                             0.13    145.50 f
+  U331/Y (OA222X1_RVT)                             0.13    145.62 f
+  U337/Y (OA222X1_RVT)                             0.13    145.75 f
+  U343/Y (OA222X1_RVT)                             0.13    145.88 f
+  U349/Y (OA222X1_RVT)                             0.12    146.00 f
+  U350/Y (INVX0_RVT)                               0.05    146.05 r
+  U355/Y (AO222X1_RVT)                             0.13    146.18 r
+  U360/Y (AO222X1_RVT)                             0.14    146.32 r
+  U365/Y (AO222X1_RVT)                             0.14    146.45 r
+  U370/Y (AO222X1_RVT)                             0.14    146.59 r
+  U375/Y (AO222X1_RVT)                             0.14    146.73 r
+  U381/Y (AO222X1_RVT)                             0.14    146.86 r
+  U382/SO (HADDX1_RVT)                             0.11    146.97 f
+  U385/Y (OA221X1_RVT)                             0.10    147.07 f
+  u_cic_u_integradores_int4_reg_16_/D (SDFFX1_RVT)
+                                                   0.00    147.07 f
+  data arrival time                                        147.07
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int4_reg_16_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.11    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -147.07
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.24
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_15_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/S (FADDX1_RVT)                      0.15    144.47 f
+  U261/Y (INVX0_RVT)                               0.05    144.53 r
+  intadd_1_U18/S (FADDX1_RVT)                      0.16    144.68 f
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.85 r
+  U299/Y (INVX0_RVT)                               0.04    144.89 f
+  U301/Y (OA222X1_RVT)                             0.11    144.99 f
+  U307/Y (OA222X1_RVT)                             0.13    145.12 f
+  U313/Y (OA222X1_RVT)                             0.11    145.23 f
+  U319/Y (OA222X1_RVT)                             0.13    145.37 f
+  U325/Y (OA222X1_RVT)                             0.13    145.50 f
+  U331/Y (OA222X1_RVT)                             0.13    145.62 f
+  U337/Y (OA222X1_RVT)                             0.13    145.75 f
+  U343/Y (OA222X1_RVT)                             0.13    145.88 f
+  U349/Y (OA222X1_RVT)                             0.12    146.00 f
+  U350/Y (INVX0_RVT)                               0.05    146.05 r
+  U355/Y (AO222X1_RVT)                             0.13    146.18 r
+  U360/Y (AO222X1_RVT)                             0.14    146.32 r
+  U365/Y (AO222X1_RVT)                             0.14    146.45 r
+  U370/Y (AO222X1_RVT)                             0.14    146.59 r
+  U375/Y (AO222X1_RVT)                             0.14    146.73 r
+  U376/SO (HADDX1_RVT)                             0.11    146.83 f
+  U379/Y (OA221X1_RVT)                             0.10    146.94 f
+  u_cic_u_integradores_int4_reg_15_/D (SDFFX1_RVT)
+                                                   0.00    146.94 f
+  data arrival time                                        146.94
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int4_reg_15_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.11    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -146.94
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.38
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_14_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/S (FADDX1_RVT)                      0.15    144.47 f
+  U261/Y (INVX0_RVT)                               0.05    144.53 r
+  intadd_1_U18/S (FADDX1_RVT)                      0.16    144.68 f
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.85 r
+  U299/Y (INVX0_RVT)                               0.04    144.89 f
+  U301/Y (OA222X1_RVT)                             0.11    144.99 f
+  U307/Y (OA222X1_RVT)                             0.13    145.12 f
+  U313/Y (OA222X1_RVT)                             0.11    145.23 f
+  U319/Y (OA222X1_RVT)                             0.13    145.37 f
+  U325/Y (OA222X1_RVT)                             0.13    145.50 f
+  U331/Y (OA222X1_RVT)                             0.13    145.62 f
+  U337/Y (OA222X1_RVT)                             0.13    145.75 f
+  U343/Y (OA222X1_RVT)                             0.13    145.88 f
+  U349/Y (OA222X1_RVT)                             0.12    146.00 f
+  U350/Y (INVX0_RVT)                               0.05    146.05 r
+  U355/Y (AO222X1_RVT)                             0.13    146.18 r
+  U360/Y (AO222X1_RVT)                             0.14    146.32 r
+  U365/Y (AO222X1_RVT)                             0.14    146.45 r
+  U370/Y (AO222X1_RVT)                             0.14    146.59 r
+  U371/SO (HADDX1_RVT)                             0.11    146.70 f
+  U374/Y (OA221X1_RVT)                             0.10    146.80 f
+  u_cic_u_integradores_int4_reg_14_/D (SDFFX1_RVT)
+                                                   0.00    146.80 f
+  data arrival time                                        146.80
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int4_reg_14_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.11    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -146.80
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.52
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_13_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/S (FADDX1_RVT)                      0.15    144.47 f
+  U261/Y (INVX0_RVT)                               0.05    144.53 r
+  intadd_1_U18/S (FADDX1_RVT)                      0.16    144.68 f
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.85 r
+  U299/Y (INVX0_RVT)                               0.04    144.89 f
+  U301/Y (OA222X1_RVT)                             0.11    144.99 f
+  U307/Y (OA222X1_RVT)                             0.13    145.12 f
+  U313/Y (OA222X1_RVT)                             0.11    145.23 f
+  U319/Y (OA222X1_RVT)                             0.13    145.37 f
+  U325/Y (OA222X1_RVT)                             0.13    145.50 f
+  U331/Y (OA222X1_RVT)                             0.13    145.62 f
+  U337/Y (OA222X1_RVT)                             0.13    145.75 f
+  U343/Y (OA222X1_RVT)                             0.13    145.88 f
+  U349/Y (OA222X1_RVT)                             0.12    146.00 f
+  U350/Y (INVX0_RVT)                               0.05    146.05 r
+  U355/Y (AO222X1_RVT)                             0.13    146.18 r
+  U360/Y (AO222X1_RVT)                             0.14    146.32 r
+  U365/Y (AO222X1_RVT)                             0.14    146.45 r
+  U366/SO (HADDX1_RVT)                             0.11    146.56 f
+  U369/Y (OA221X1_RVT)                             0.10    146.66 f
+  u_cic_u_integradores_int4_reg_13_/D (SDFFX1_RVT)
+                                                   0.00    146.66 f
+  data arrival time                                        146.66
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int4_reg_13_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.11    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -146.66
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.66
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_12_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/S (FADDX1_RVT)                      0.15    144.47 f
+  U261/Y (INVX0_RVT)                               0.05    144.53 r
+  intadd_1_U18/S (FADDX1_RVT)                      0.16    144.68 f
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.85 r
+  U299/Y (INVX0_RVT)                               0.04    144.89 f
+  U301/Y (OA222X1_RVT)                             0.11    144.99 f
+  U307/Y (OA222X1_RVT)                             0.13    145.12 f
+  U313/Y (OA222X1_RVT)                             0.11    145.23 f
+  U319/Y (OA222X1_RVT)                             0.13    145.37 f
+  U325/Y (OA222X1_RVT)                             0.13    145.50 f
+  U331/Y (OA222X1_RVT)                             0.13    145.62 f
+  U337/Y (OA222X1_RVT)                             0.13    145.75 f
+  U343/Y (OA222X1_RVT)                             0.13    145.88 f
+  U349/Y (OA222X1_RVT)                             0.12    146.00 f
+  U350/Y (INVX0_RVT)                               0.05    146.05 r
+  U355/Y (AO222X1_RVT)                             0.13    146.18 r
+  U360/Y (AO222X1_RVT)                             0.14    146.32 r
+  U361/SO (HADDX1_RVT)                             0.10    146.42 f
+  U364/Y (OA221X1_RVT)                             0.10    146.52 f
+  u_cic_u_integradores_int4_reg_12_/D (SDFFX1_RVT)
+                                                   0.00    146.52 f
+  data arrival time                                        146.52
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int4_reg_12_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.11    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -146.52
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.80
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int3_reg_17_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/CO (FADDX1_RVT)                     0.12    144.44 r
+  intadd_2_U15/CO (FADDX1_RVT)                     0.09    144.53 r
+  intadd_2_U14/CO (FADDX1_RVT)                     0.09    144.62 r
+  intadd_2_U13/CO (FADDX1_RVT)                     0.09    144.72 r
+  intadd_2_U12/CO (FADDX1_RVT)                     0.09    144.81 r
+  intadd_2_U11/CO (FADDX1_RVT)                     0.09    144.90 r
+  intadd_2_U10/CO (FADDX1_RVT)                     0.09    145.00 r
+  intadd_2_U9/CO (FADDX1_RVT)                      0.09    145.09 r
+  intadd_2_U8/CO (FADDX1_RVT)                      0.09    145.18 r
+  intadd_2_U7/CO (FADDX1_RVT)                      0.09    145.28 r
+  intadd_2_U6/CO (FADDX1_RVT)                      0.09    145.37 r
+  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.46 r
+  intadd_2_U4/CO (FADDX1_RVT)                      0.09    145.56 r
+  intadd_2_U3/CO (FADDX1_RVT)                      0.09    145.65 r
+  intadd_2_U2/CO (FADDX1_RVT)                      0.11    145.76 r
+  U387/Y (INVX0_RVT)                               0.03    145.79 f
+  U388/Y (OA222X1_RVT)                             0.09    145.88 f
+  U389/SO (HADDX1_RVT)                             0.12    146.00 r
+  U390/Y (XOR2X1_RVT)                              0.11    146.11 f
+  U391/Y (XOR2X1_RVT)                              0.13    146.24 r
+  U392/Y (XOR2X1_RVT)                              0.11    146.35 f
+  U393/Y (XOR2X1_RVT)                              0.12    146.47 f
+  U415/Y (AND2X1_RVT)                              0.06    146.53 f
+  u_cic_u_integradores_int3_reg_17_/D (SDFFX1_RVT)
+                                                   0.00    146.53 f
+  data arrival time                                        146.53
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int3_reg_17_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.10    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -146.53
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.80
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_11_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/S (FADDX1_RVT)                      0.15    144.47 f
+  U261/Y (INVX0_RVT)                               0.05    144.53 r
+  intadd_1_U18/S (FADDX1_RVT)                      0.16    144.68 f
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.85 r
+  U299/Y (INVX0_RVT)                               0.04    144.89 f
+  U301/Y (OA222X1_RVT)                             0.11    144.99 f
+  U307/Y (OA222X1_RVT)                             0.13    145.12 f
+  U313/Y (OA222X1_RVT)                             0.11    145.23 f
+  U319/Y (OA222X1_RVT)                             0.13    145.37 f
+  U325/Y (OA222X1_RVT)                             0.13    145.50 f
+  U331/Y (OA222X1_RVT)                             0.13    145.62 f
+  U337/Y (OA222X1_RVT)                             0.13    145.75 f
+  U343/Y (OA222X1_RVT)                             0.13    145.88 f
+  U349/Y (OA222X1_RVT)                             0.12    146.00 f
+  U350/Y (INVX0_RVT)                               0.05    146.05 r
+  U355/Y (AO222X1_RVT)                             0.13    146.18 r
+  U356/SO (HADDX1_RVT)                             0.10    146.28 f
+  U359/Y (OA221X1_RVT)                             0.10    146.38 f
+  u_cic_u_integradores_int4_reg_11_/D (SDFFX1_RVT)
+                                                   0.00    146.38 f
+  data arrival time                                        146.38
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int4_reg_11_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.11    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -146.38
+  ------------------------------------------------------------------------
+  slack (MET)                                               60.94
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int3_reg_16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/CO (FADDX1_RVT)                     0.12    144.44 r
+  intadd_2_U15/CO (FADDX1_RVT)                     0.09    144.53 r
+  intadd_2_U14/CO (FADDX1_RVT)                     0.09    144.62 r
+  intadd_2_U13/CO (FADDX1_RVT)                     0.09    144.72 r
+  intadd_2_U12/CO (FADDX1_RVT)                     0.09    144.81 r
+  intadd_2_U11/CO (FADDX1_RVT)                     0.09    144.90 r
+  intadd_2_U10/CO (FADDX1_RVT)                     0.09    145.00 r
+  intadd_2_U9/CO (FADDX1_RVT)                      0.09    145.09 r
+  intadd_2_U8/CO (FADDX1_RVT)                      0.09    145.18 r
+  intadd_2_U7/CO (FADDX1_RVT)                      0.09    145.28 r
+  intadd_2_U6/CO (FADDX1_RVT)                      0.09    145.37 r
+  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.46 r
+  intadd_2_U4/CO (FADDX1_RVT)                      0.09    145.56 r
+  intadd_2_U3/S (FADDX1_RVT)                       0.13    145.69 f
+  U274/Y (INVX0_RVT)                               0.06    145.75 r
+  intadd_1_U5/CO (FADDX1_RVT)                      0.11    145.85 r
+  intadd_1_U4/CO (FADDX1_RVT)                      0.10    145.95 r
+  intadd_1_U3/S (FADDX1_RVT)                       0.15    146.10 f
+  intadd_0_U3/S (FADDX1_RVT)                       0.18    146.28 r
+  U414/Y (AND2X1_RVT)                              0.05    146.33 r
+  u_cic_u_integradores_int3_reg_16_/D (SDFFX1_RVT)
+                                                   0.00    146.33 r
+  data arrival time                                        146.33
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int3_reg_16_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.10    207.33
+  data required time                                       207.33
+  ------------------------------------------------------------------------
+  data required time                                       207.33
+  data arrival time                                        -146.33
+  ------------------------------------------------------------------------
+  slack (MET)                                               61.00
+
+
+
+  Startpoint: pdm_in (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int2_reg_17_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (fall edge)                          104.17    104.17
+  clock network delay (propagated)                 0.15    104.32
+  input external delay                            40.00    144.32 r
+  pdm_in (in)                                      0.00    144.32 r
+  intadd_2_U16/CO (FADDX1_RVT)                     0.12    144.44 r
+  intadd_2_U15/CO (FADDX1_RVT)                     0.09    144.53 r
+  intadd_2_U14/CO (FADDX1_RVT)                     0.09    144.62 r
+  intadd_2_U13/CO (FADDX1_RVT)                     0.09    144.72 r
+  intadd_2_U12/CO (FADDX1_RVT)                     0.09    144.81 r
+  intadd_2_U11/CO (FADDX1_RVT)                     0.09    144.90 r
+  intadd_2_U10/CO (FADDX1_RVT)                     0.09    145.00 r
+  intadd_2_U9/CO (FADDX1_RVT)                      0.09    145.09 r
+  intadd_2_U8/CO (FADDX1_RVT)                      0.09    145.18 r
+  intadd_2_U7/CO (FADDX1_RVT)                      0.09    145.28 r
+  intadd_2_U6/CO (FADDX1_RVT)                      0.09    145.37 r
+  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.46 r
+  intadd_2_U4/CO (FADDX1_RVT)                      0.09    145.56 r
+  intadd_2_U3/CO (FADDX1_RVT)                      0.09    145.65 r
+  intadd_2_U2/CO (FADDX1_RVT)                      0.11    145.76 r
+  U387/Y (INVX0_RVT)                               0.03    145.79 f
+  U388/Y (OA222X1_RVT)                             0.09    145.88 f
+  U389/SO (HADDX1_RVT)                             0.12    146.00 r
+  U390/Y (XOR2X1_RVT)                              0.11    146.11 f
+  U391/Y (XOR2X1_RVT)                              0.12    146.23 f
+  U433/Y (AND2X1_RVT)                              0.06    146.29 f
+  u_cic_u_integradores_int2_reg_17_/D (SDFFX1_RVT)
+                                                   0.00    146.29 f
+  data arrival time                                        146.29
+
+  clock clk (rise edge)                          208.33    208.33
+  clock network delay (propagated)                 0.09    208.43
+  u_cic_u_integradores_int2_reg_17_/CLK (SDFFX1_RVT)
+                                                   0.00    208.43 r
+  clock uncertainty                               -1.00    207.43
+  library setup time                              -0.10    207.32
+  data required time                                       207.32
+  ------------------------------------------------------------------------
+  data required time                                       207.32
+  data arrival time                                        -146.29
+  ------------------------------------------------------------------------
+  slack (MET)                                               61.04
+
+
+1
