@@ -1,13 +1,17 @@
 ****************************************
 Report : constraint
         -all_violators
-        -max_capacitance
-        -min_delay
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:21:37 2026
+Date   : Fri Oct  9 21:27:28 2026
 ****************************************
 
+   late_timing
+   -----------
+
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+No paths.
 
    early_timing
    -----------
@@ -17,37 +21,23 @@ Endpoint                         Path Delay     Path Required       CRP    Slack
 y_out[13] (out)                    0.25 r         0.25           0.00    -0.00   **reg2out_default**
                                                                                           default
 
-Information: Activity for scenario default was cached, no propagation required. (POW-005)
+   Mode: default Corner: default
+   Scenario: default
+   max_transition                                                              
+                             Required        Actual                            
+   Net                      Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+   cic_out[2]                   0.08           0.08           0.01  (MET)      
+
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 0
+
    Mode: default Corner: default
    Scenario: default
    max_capacitance                                                             
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/ropt_net_88           16.00          16.73          -0.73  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_2262/Y
-                               16.00          16.73          -0.73  (VIOLATED) 
-
-   u_fir/HFSNET_878             8.00           8.31          -0.31  (VIOLATED) 
-     PIN : u_fir/HFSINV_232_889/Y
-                                8.00           8.31          -0.31  (VIOLATED) 
-
-   u_fir/ropt_net_66           16.00          16.29          -0.29  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_2240/Y
-                               16.00          16.29          -0.29  (VIOLATED) 
-
-   u_fir/HFSNET_1111           32.00          32.19          -0.19  (VIOLATED) 
-     PIN : u_fir/HFSBUF_1995_1143/Y
-                               32.00          32.19          -0.19  (VIOLATED) 
-
-   u_fir/ropt_net_63           16.00          16.16          -0.16  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_2237/Y
-                               16.00          16.16          -0.16  (VIOLATED) 
-
-   HFSNET_13                   32.00          32.09          -0.09  (VIOLATED) 
-     PIN : HFSBUF_1261_1059/Y
-                               32.00          32.09          -0.09  (VIOLATED) 
-
    u_fir/intadd_45_SUM_5_       8.00           8.07          -0.07  (VIOLATED) 
      PIN : u_fir/intadd_45_U12/S
                                 8.00           8.07          -0.07  (VIOLATED) 
@@ -55,6 +45,10 @@ Information: Activity for scenario default was cached, no propagation required. 
    u_fir/HFSNET_730             8.00           8.07          -0.07  (VIOLATED) 
      PIN : u_fir/HFSINV_256_741/Y
                                 8.00           8.07          -0.07  (VIOLATED) 
+
+   HFSNET_13                   32.00          32.07          -0.07  (VIOLATED) 
+     PIN : HFSBUF_1261_1059/Y
+                               32.00          32.07          -0.07  (VIOLATED) 
 
    u_fir/intadd_48_SUM_14_      8.00           8.06          -0.06  (VIOLATED) 
      PIN : u_fir/intadd_48_U3/S
@@ -101,7 +95,19 @@ Information: Activity for scenario default was cached, no propagation required. 
                                 8.00           8.00          -0.00  (VIOLATED) 
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 19
+   Number of max_capacitance violation(s): 14
 
-   Total number of violation(s): 19
+
+   Mode: default Corner: default
+   Scenario: default
+  ---------------------------------------------------------------------------
+   Number of min_capacitance violation(s): 0
+
+  Mode: default
+  Corner: default
+  Scenario: default
+
+  ---------------------------------------------------------------------------
+   Number of min_pulse_width violation(s): 0
+   Total number of violation(s): 14
 1

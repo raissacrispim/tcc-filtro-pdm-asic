@@ -24,9 +24,12 @@ Check 12048 nets, 0 have Errors
 [CHECK OPEN NETS] Elapsed real time: 0:00:00 
 [CHECK OPEN NETS] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
 [CHECK OPEN NETS] Stage (MB): Used    0  Alloctr    0  Proc    0 
-[CHECK OPEN NETS] Total (MB): Used    0  Alloctr    0  Proc 5212 
+[CHECK OPEN NETS] Total (MB): Used    0  Alloctr    0  Proc 5262 
 Printing options for 'route.common.*'
+common.concurrent_redundant_via_mode                    :	 off                 
+common.eco_route_concurrent_redundant_via_mode          :	 off                 
 common.eco_route_fix_existing_drc                       :	 true                
+common.post_detail_route_redundant_via_insertion        :	 off                 
 common.verbose_level                                    :	 0                   
 
 Printing options for 'route.detail.*'
@@ -56,10 +59,10 @@ Checked	13/16 Partitions, Violations =	34
 Checked	14/16 Partitions, Violations =	37
 Checked	15/16 Partitions, Violations =	38
 Checked	16/16 Partitions, Violations =	41
-[DRC CHECK] Elapsed real time: 0:00:04 
-[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:04 total=0:00:04
+[DRC CHECK] Elapsed real time: 0:00:03 
+[DRC CHECK] Elapsed cpu  time: sys=0:00:00 usr=0:00:03 total=0:00:03
 [DRC CHECK] Stage (MB): Used    0  Alloctr    0  Proc    0 
-[DRC CHECK] Total (MB): Used    0  Alloctr    0  Proc 5212 
+[DRC CHECK] Total (MB): Used    0  Alloctr    0  Proc 5262 
 Warning: No antenna rules defined, Skip antenna analysis. (ZRT-309)
 
 DRC-SUMMARY:
@@ -70,17 +73,17 @@ Information: The app option "route.detail.report_soft_drc_separately" will be on
 	@@@@@@@ TOTAL SOFT VIOLATIONS =	0
 
 
-Total Wire Length =                    219125 micron
-Total Number of Contacts =             77169
-Total Number of Wires =                72250
-Total Number of PtConns =              11211
-Total Number of Routed Wires =       72243
-Total Routed Wire Length =           217861 micron
-Total Number of Routed Contacts =       77169
-	Layer                 M1 :       2330 micron
-	Layer                 M2 :      75958 micron
-	Layer                 M3 :      79014 micron
-	Layer                 M4 :      14097 micron
+Total Wire Length =                    219120 micron
+Total Number of Contacts =             77160
+Total Number of Wires =                72251
+Total Number of PtConns =              11206
+Total Number of Routed Wires =       72244
+Total Routed Wire Length =           217857 micron
+Total Number of Routed Contacts =       77160
+	Layer                 M1 :       2333 micron
+	Layer                 M2 :      75962 micron
+	Layer                 M3 :      79002 micron
+	Layer                 M4 :      14099 micron
 	Layer                 M5 :      36648 micron
 	Layer                 M6 :       1102 micron
 	Layer                 M7 :       8443 micron
@@ -94,11 +97,11 @@ Total Number of Routed Contacts =       77169
 	Via       VIA56SQ_C(rot) :        344
 	Via            VIA45SQ_C :       2375
 	Via            VIA34SQ_C :         17
-	Via       VIA34SQ_C(rot) :       4304
-	Via            VIA23SQ_C :      34102
+	Via       VIA34SQ_C(rot) :       4305
+	Via            VIA23SQ_C :      34091
 	Via       VIA23SQ_C(rot) :        393
-	Via            VIA12SQ_C :       2122
-	Via       VIA12SQ_C(rot) :      33090
+	Via            VIA12SQ_C :       2124
+	Via       VIA12SQ_C(rot) :      33089
 	Via   VIA12SQ_C(rot)_1x2 :          2
 	Via        VIA12SQ_C_1x2 :          2
 	Via          VIA12SQ_1x2 :         38
@@ -107,18 +110,18 @@ Total Number of Routed Contacts =       77169
 Redundant via conversion report:
 --------------------------------
 
-  Total optimized via conversion rate =  0.06% (47 / 77169 vias)
+  Total optimized via conversion rate =  0.06% (47 / 77160 vias)
  
-    Layer VIA1       =  0.12% (42     / 35254   vias)
+    Layer VIA1       =  0.12% (42     / 35255   vias)
         Weight 1     =  0.12% (42      vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 99.88% (35212   vias)
-    Layer VIA2       =  0.00% (0      / 34495   vias)
+        Un-mapped    = 99.88% (35213   vias)
+    Layer VIA2       =  0.00% (0      / 34484   vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (34495   vias)
-    Layer VIA3       =  0.00% (0      / 4321    vias)
+        Un-mapped    = 100.00% (34484   vias)
+    Layer VIA3       =  0.00% (0      / 4322    vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (4321    vias)
+        Un-mapped    = 100.00% (4322    vias)
     Layer VIA4       =  0.00% (0      / 2375    vias)
         Un-optimized =  0.00% (0       vias)
         Un-mapped    = 100.00% (2375    vias)
@@ -136,29 +139,29 @@ Redundant via conversion report:
         Un-optimized =  0.00% (0       vias)
         Un-mapped    = 100.00% (12      vias)
  
-  Total double via conversion rate    =  0.06% (47 / 77169 vias)
+  Total double via conversion rate    =  0.06% (47 / 77160 vias)
  
-    Layer VIA1       =  0.12% (42     / 35254   vias)
-    Layer VIA2       =  0.00% (0      / 34495   vias)
-    Layer VIA3       =  0.00% (0      / 4321    vias)
+    Layer VIA1       =  0.12% (42     / 35255   vias)
+    Layer VIA2       =  0.00% (0      / 34484   vias)
+    Layer VIA3       =  0.00% (0      / 4322    vias)
     Layer VIA4       =  0.00% (0      / 2375    vias)
     Layer VIA5       =  0.00% (0      / 344     vias)
     Layer VIA6       =  0.00% (0      / 356     vias)
     Layer VIA7       = 41.67% (5      / 12      vias)
     Layer VIA8       =  0.00% (0      / 12      vias)
  
-  The optimized via conversion rate based on total routed via count =  0.06% (47 / 77169 vias)
+  The optimized via conversion rate based on total routed via count =  0.06% (47 / 77160 vias)
  
-    Layer VIA1       =  0.12% (42     / 35254   vias)
+    Layer VIA1       =  0.12% (42     / 35255   vias)
         Weight 1     =  0.12% (42      vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 99.88% (35212   vias)
-    Layer VIA2       =  0.00% (0      / 34495   vias)
+        Un-mapped    = 99.88% (35213   vias)
+    Layer VIA2       =  0.00% (0      / 34484   vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (34495   vias)
-    Layer VIA3       =  0.00% (0      / 4321    vias)
+        Un-mapped    = 100.00% (34484   vias)
+    Layer VIA3       =  0.00% (0      / 4322    vias)
         Un-optimized =  0.00% (0       vias)
-        Un-mapped    = 100.00% (4321    vias)
+        Un-mapped    = 100.00% (4322    vias)
     Layer VIA4       =  0.00% (0      / 2375    vias)
         Un-optimized =  0.00% (0       vias)
         Un-mapped    = 100.00% (2375    vias)

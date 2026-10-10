@@ -2,7 +2,7 @@
 Report : qor
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:20:03 2026
+Date   : Fri Oct  9 21:27:28 2026
 ****************************************
 
 
@@ -80,27 +80,27 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            21476.44
+Combinational Area:            21478.98
 Noncombinational Area:         11509.67
-Buf/Inv Area:                   3095.73
-Total Buffer Area:               829.02
-Total Inverter Area:            2266.71
+Buf/Inv Area:                   3098.27
+Total Buffer Area:               831.31
+Total Inverter Area:            2266.96
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   95180.47
-Net YLength:                  130953.54
+Net XLength:                   95177.26
+Net YLength:                  130952.37
 ----------------------------------------
-Cell Area (netlist):                          32986.11
-Cell Area (netlist and physical only):        32986.11
-Net Length:                   226134.01
+Cell Area (netlist):                          32988.65
+Cell Area (netlist and physical only):        32988.65
+Net Length:                   226129.63
 
 
 Design Rules
 ----------------------------------------
 Total Number of Nets:             12048
-Nets with Violations:                19
+Nets with Violations:                14
 Max Trans Violations:                 0
-Max Cap Violations:                  19
+Max Cap Violations:                  14
 ----------------------------------------
 
 1

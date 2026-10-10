@@ -6,7 +6,7 @@ Report : timing
         -report_by design
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:20:03 2026
+Date   : Fri Oct  9 21:27:28 2026
 ****************************************
 
   Startpoint: u_fir/y_out_reg_13_ (rising edge-triggered flip-flop clocked by clk)
@@ -138,38 +138,6 @@ Date   : Fri Oct  9 21:20:03 2026
 
 
 
-  Startpoint: u_fir/delay_reg_9__9_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_fir/delay_reg_10__9_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: clk
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.08      0.08
-
-  u_fir/delay_reg_9__9_/CLK (SDFFX1_RVT)           0.00      0.08 r
-  u_fir/delay_reg_9__9_/QN (SDFFX1_RVT)            0.11      0.19 f
-  u_fir/delay_reg_10__9_/SI (SDFFX1_RVT)           0.00      0.19 f
-  data arrival time                                          0.19
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.12      0.12
-  u_fir/delay_reg_10__9_/CLK (SDFFX1_RVT)          0.00      0.12 r
-  clock uncertainty                                0.10      0.22
-  library hold time                               -0.06      0.17
-  data required time                                         0.17
-  ------------------------------------------------------------------------
-  data required time                                         0.17
-  data arrival time                                         -0.19
-  ------------------------------------------------------------------------
-  slack (MET)                                                0.02
-
-
-
   Startpoint: u_fir/y_out_reg_18_ (rising edge-triggered flip-flop clocked by clk)
   Endpoint: y_out[18] (output port clocked by clk)
   Mode: default
@@ -197,6 +165,38 @@ Date   : Fri Oct  9 21:20:03 2026
   ------------------------------------------------------------------------
   data required time                                         0.25
   data arrival time                                         -0.27
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.02
+
+
+
+  Startpoint: u_fir/delay_reg_9__9_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_10__9_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.08      0.08
+
+  u_fir/delay_reg_9__9_/CLK (SDFFX1_RVT)           0.00      0.08 r
+  u_fir/delay_reg_9__9_/QN (SDFFX1_RVT)            0.11      0.19 f
+  u_fir/delay_reg_10__9_/SI (SDFFX1_RVT)           0.00      0.19 f
+  data arrival time                                          0.19
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.12      0.12
+  u_fir/delay_reg_10__9_/CLK (SDFFX1_RVT)          0.00      0.12 r
+  clock uncertainty                                0.10      0.22
+  library hold time                               -0.06      0.17
+  data required time                                         0.17
+  ------------------------------------------------------------------------
+  data required time                                         0.17
+  data arrival time                                         -0.19
   ------------------------------------------------------------------------
   slack (MET)                                                0.02
 

@@ -26,6 +26,9 @@ Information: When applicable Min-max layer allow_pin_connection mode will allow 
 Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range on clock nets. (ZRT-718)
 Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
 Printing options for 'route.common.*'
+common.concurrent_redundant_via_mode                    :	 off                 
+common.eco_route_concurrent_redundant_via_mode          :	 off                 
+common.post_detail_route_redundant_via_insertion        :	 off                 
 
 Printing options for 'route.detail.*'
 detail.enable_auto_ndr_flow                             :	 true                
@@ -180,4 +183,4 @@ There are 0 out of total 12009 nets with relaxed min layer from GR.
 Info: Attach forbidden region on filtro_pdm.dlib:filtro_pdm/cts.design
 
 End of check_routability
-rtapiOptAttrInterf: set attribute check_routability_called=1791591509 
+rtapiOptAttrInterf: set attribute check_routability_called=1791591936 

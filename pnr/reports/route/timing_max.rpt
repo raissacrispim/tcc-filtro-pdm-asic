@@ -6,7 +6,7 @@ Report : timing
         -report_by design
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:20:03 2026
+Date   : Fri Oct  9 21:27:28 2026
 ****************************************
 
   Startpoint: pdm_in (input port clocked by clk)
