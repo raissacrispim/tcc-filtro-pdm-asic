@@ -31,6 +31,9 @@ set_app_var link_library "* $LOGIC_LIB"
 # 3. Criacao da design library
 # ------------------------------------------------------------
 
+# A pasta de trabalho (ignorada pelo git) precisa existir
+file mkdir pnr/work
+
 create_lib \
     -technology $TECH_FILE \
     -ref_libs $PHYSICAL_LIB \
