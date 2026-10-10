@@ -32,6 +32,10 @@ open_block filtro_pdm/place
 # aqui porque o bloco foi criado antes dessa restricao).
 set_max_transition 0.50 [current_design]
 
+# Camadas de roteamento de sinais e do clock: M1-M8
+# (M9: anel de alimentacao; MRDL: redistribuicao para pads)
+set_ignored_layers -min_routing_layer M1 -max_routing_layer M8
+
 # Permite o uso das celulas TIE (TIEH/TIEL) caso a otimizacao
 # gere redes constantes (aviso OPT-200 no placement).
 set_lib_cell_purpose -include optimization [get_lib_cells */TIE*]
@@ -85,7 +89,11 @@ report_utilization > pnr/reports/cts/utilization.rpt
 
 # ------------------------------------------------------------
 # 7. Salvar checkpoint
+#
+# Remove o checkpoint de uma execucao anterior, se existir.
 # ------------------------------------------------------------
+
+catch {remove_blocks -force filtro_pdm/cts}
 
 save_block -label cts
 
