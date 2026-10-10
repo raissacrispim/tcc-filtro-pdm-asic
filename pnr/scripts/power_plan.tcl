@@ -106,20 +106,68 @@ compile_pg \
 
 # ------------------------------------------------------------
 # 8. Terminais fisicos VDD e VSS
-# Coordenadas recuperadas do checkpoint original
+#
+# Cada terminal (2 um de largura) e criado sobre o segmento
+# horizontal superior do anel da rede, em M8, no centro do
+# segmento. As coordenadas sao obtidas do proprio anel, e nao
+# fixadas no script, pois o Fusion Compiler ajusta a altura do
+# core para um numero inteiro de linhas de celulas.
 # ------------------------------------------------------------
 
-create_terminal \
-    -port [get_ports VDD] \
-    -boundary {{119.000 231.032} {121.000 231.232}} \
-    -layer M8 \
-    -name VDD_TOP
+proc cria_terminal_no_anel {rede nome} {
 
-create_terminal \
-    -port [get_ports VSS] \
-    -boundary {{119.000 231.432} {121.000 231.632}} \
-    -layer M8 \
-    -name VSS_TOP
+    set shapes [get_shapes -quiet \
+        -filter "net.name == $rede && layer.name == M8"]
+
+    if {[sizeof_collection $shapes] == 0} {
+        puts "ERRO: nenhum shape de $rede em M8 (anel nao encontrado)."
+        return -code error
+    }
+
+    # Segmentos longos (anel) e, entre eles, o mais alto
+    set melhor {}
+    set y_max -1.0e9
+
+    foreach_in_collection s $shapes {
+        set bb  [get_attribute $s bbox]
+        set llx [lindex $bb 0 0]
+        set lly [lindex $bb 0 1]
+        set urx [lindex $bb 1 0]
+        set ury [lindex $bb 1 1]
+
+        if {($urx - $llx) < 100.0} {
+            continue
+        }
+
+        if {$ury > $y_max} {
+            set y_max $ury
+            set melhor [list $llx $lly $urx $ury]
+        }
+    }
+
+    if {[llength $melhor] == 0} {
+        puts "ERRO: segmento superior do anel de $rede nao encontrado."
+        return -code error
+    }
+
+    lassign $melhor llx lly urx ury
+    set xc [expr {($llx + $urx) / 2.0}]
+
+    set limites [list \
+        [list [expr {$xc - 1.0}] $lly] \
+        [list [expr {$xc + 1.0}] $ury]]
+
+    create_terminal \
+        -port [get_ports $rede] \
+        -boundary $limites \
+        -layer M8 \
+        -name $nome
+
+    puts "Terminal $nome criado em $limites (M8)"
+}
+
+cria_terminal_no_anel VDD VDD_TOP
+cria_terminal_no_anel VSS VSS_TOP
 
 # ------------------------------------------------------------
 # 9. Relatorios das estrategias
@@ -138,7 +186,11 @@ check_pg_connectivity
 
 # ------------------------------------------------------------
 # 11. Salvar checkpoint de reproducao
+#
+# Remove o checkpoint de uma execucao anterior, se existir.
 # ------------------------------------------------------------
+
+catch {remove_blocks -force filtro_pdm/power_plan_reproduzido}
 
 save_block -label power_plan_reproduzido
 

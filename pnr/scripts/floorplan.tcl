@@ -17,13 +17,13 @@ open_block filtro_pdm/init
 # 2. Cria o floorplan
 # ------------------------------------------------------------
 
-# Dimensoes fixas do core (largura x altura, em um).
+# Dimensoes do core (largura x altura, em um), fixas para que
+# o tamanho nao varie entre execucoes.
 #
-# Correspondem ao floorplan original, obtido com
-# -core_utilization 0.60 e -side_ratio {1 1}.
-# Fixar as dimensoes mantem validas as coordenadas dos
-# terminais VDD_TOP/VSS_TOP usadas em power_plan.tcl
-# (topo do core 229.03 + offset do anel 2.0).
+# Valores de referencia do floorplan original, obtido com
+# -core_utilization 0.60 e -side_ratio {1 1}. O Fusion
+# Compiler ajusta as dimensoes para um numero inteiro de
+# sites e linhas de celulas (core resultante: 220.40 x 217.36).
 
 initialize_floorplan \
     -control_type core \
