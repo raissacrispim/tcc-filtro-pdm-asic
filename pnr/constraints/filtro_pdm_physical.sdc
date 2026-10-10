@@ -36,6 +36,11 @@ set_clock_transition 0.10 [get_clocks clk]
 # Transicao preliminar das entradas de dados.
 set_input_transition 0.10 [get_ports {pdm_in rst}]
 
+# Transicao maxima permitida em todas as redes.
+# A biblioteca SAED32 nao define um valor padrao
+# (aviso OPT-070 no Fusion Compiler).
+set_max_transition 0.50 [current_design]
+
 # ------------------------------------------------------------
 # ENTRADA PDM
 # ------------------------------------------------------------
