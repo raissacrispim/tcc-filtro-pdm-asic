@@ -25,14 +25,29 @@ open_block filtro_pdm/cts
 
 
 # ------------------------------------------------------------
-# 2. Verificacoes antes do roteamento
+# 2. Camadas de roteamento de sinais
+#
+# Sinais em M1-M8. M9 e reservada ao anel de alimentacao
+# (vertical) e MRDL e a camada de redistribuicao para pads
+# (largura minima de 2 um), inadequada para sinais.
+# ------------------------------------------------------------
+
+set_ignored_layers \
+    -min_routing_layer M1 \
+    -max_routing_layer M8
+
+report_ignored_layers
+
+
+# ------------------------------------------------------------
+# 3. Verificacoes antes do roteamento
 # ------------------------------------------------------------
 
 check_routability > pnr/reports/route/check_routability.rpt
 
 
 # ------------------------------------------------------------
-# 3. Roteamento
+# 4. Roteamento
 #
 # route_auto: global route + track assignment + detail route
 # route_opt:  otimizacao de timing com parasitas extraidos
@@ -44,14 +59,14 @@ route_opt
 
 
 # ------------------------------------------------------------
-# 4. Conexao PG das celulas inseridas na otimizacao
+# 5. Conexao PG das celulas inseridas na otimizacao
 # ------------------------------------------------------------
 
 connect_pg_net -automatic
 
 
 # ------------------------------------------------------------
-# 5. Verificacoes e relatorios
+# 6. Verificacoes e relatorios
 # ------------------------------------------------------------
 
 check_routes > pnr/reports/route/check_routes.rpt
@@ -66,7 +81,7 @@ report_timing -delay_type min -max_paths 10 \
 
 
 # ------------------------------------------------------------
-# 6. Salvar checkpoint
+# 7. Salvar checkpoint
 # ------------------------------------------------------------
 
 save_block -label route
