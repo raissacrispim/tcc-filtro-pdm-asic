@@ -1,0 +1,188 @@
+
+
+
+                              Fusion Compiler (TM)
+
+                Version X-2025.06-SP3 for linux64 - Feb 27, 2026
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+# ============================================================
+# setup.tcl
+# Preparacao do ambiente de implementacao fisica
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys Fusion Compiler
+# Tecnologia: SAED32 1P9M - RVT
+# ============================================================
+# ------------------------------------------------------------
+# 1. Caminhos do PDK
+# ------------------------------------------------------------
+set TECH_FILE /Tools/PDK/SAED32/EDK_Digital/tech/tf/saed32nm_1p9m.tf
+/Tools/PDK/SAED32/EDK_Digital/tech/tf/saed32nm_1p9m.tf
+set LOGIC_LIB /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db
+/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db
+# NDM com visoes fisica (frame) e de timing das standard cells.
+# A versao frame_only nao possui timing e impede a otimizacao
+# guiada por timing no placement, CTS e roteamento.
+set PHYSICAL_LIB /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm
+/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm
+# ------------------------------------------------------------
+# 2. Biblioteca logica
+# ------------------------------------------------------------
+set_app_var link_library "* $LOGIC_LIB"
+* /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db
+# ------------------------------------------------------------
+# 3. Criacao da design library
+# ------------------------------------------------------------
+# A pasta de trabalho (ignorada pelo git) precisa existir
+file mkdir pnr/work
+create_lib \
+    -technology $TECH_FILE \
+    -ref_libs $PHYSICAL_LIB \
+    pnr/work/filtro_pdm.dlib
+Warning: Layer 'VIA1' 'onGrid' and 'onWireTrack' coexist. (TECH-025)
+Information: Loading technology file '/Tools/PDK/SAED32/EDK_Digital/tech/tf/saed32nm_1p9m.tf' (FILE-007)
+Information: db files specified in link_library already covered by full NDM reference libraries, the auto reference library creation will be disabled. (LIB-097)
+{filtro_pdm.dlib}
+# ------------------------------------------------------------
+# 4. Leitura da netlist sintetizada
+# ------------------------------------------------------------
+read_verilog \
+    -design filtro_pdm \
+    -top filtro_pdm \
+    synth/netlist/filtro_pdm_syn.v
+Information: Reading Verilog into new design 'filtro_pdm' in library 'filtro_pdm.dlib'. (VR-012)
+Loading verilog file '/home/raissa.crispim/tcc_filtro/synth/netlist/filtro_pdm_syn.v'
+Number of modules read: 2
+Top level ports: 26
+Total ports in all modules: 68
+Total nets in all modules: 12039
+Total instances in all modules: 8083
+Elapsed = 00:00:00.12, CPU = 00:00:00.08
+1
+# ------------------------------------------------------------
+# 5. Verificacao do bloco corrente
+# ------------------------------------------------------------
+current_block
+{filtro_pdm.dlib:filtro_pdm.design}
+list_blocks
+Lib filtro_pdm.dlib /home/raissa.crispim/tcc_filtro/pnr/work/filtro_pdm.dlib tech current
+  *>  0 filtro_pdm.design Oct-09-21:01 current
+1
+# ------------------------------------------------------------
+# 6. Leitura das restricoes de timing
+#
+# Mesmo arquivo utilizado na sintese logica (synth.tcl),
+# garantindo restricoes identicas em todo o fluxo.
+# ------------------------------------------------------------
+read_sdc pnr/constraints/filtro_pdm_physical.sdc
+Using libraries: filtro_pdm.dlib saed32rvt_base_frame_timing
+Linking block filtro_pdm.dlib:filtro_pdm.design
+Information: User units loaded from library 'saed32rvt_base_frame_timing' (LNK-040)
+Design 'filtro_pdm' was successfully linked.
+Information: Loading SDC version 2.2 file '/home/raissa.crispim/tcc_filtro/pnr/constraints/filtro_pdm_physical.sdc' (FILE-007)
+Information: Timer using 1 threads
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 466 MB / Date: Fri Oct  9 21:01:32 2026
+
+Timing Update Completed: Mem-peak: 466 MB / Date: Fri Oct  9 21:01:32 2026
+
+1
+# Restricoes das portas de teste (scan) inseridas na sintese
+read_sdc pnr/constraints/filtro_pdm_dft.sdc
+Information: Loading SDC version 2.2 file '/home/raissa.crispim/tcc_filtro/pnr/constraints/filtro_pdm_dft.sdc' (FILE-007)
+1
+# ------------------------------------------------------------
+# 7. Verificacoes iniciais
+# ------------------------------------------------------------
+report_ref_libs
+****************************************
+Report : Reference Library Report
+Library: filtro_pdm.dlib
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:01:32 2026
+****************************************
+
+    Name                        Path                                                                              Location
+    ----------------------------------------------------------------------------------------------------------------------
+*+  saed32rvt_base_frame_timing /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm
+    "*" = Library currently open
+    "+" = Library has technology information
+1
+report_clocks
+****************************************
+Report : clock
+Design : filtro_pdm
+Mode   : default
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:01:32 2026
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    U - Unexpanded generated clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk            208.33   {0 104.166}                   {clk}
+
+1
+check_design \
+    -checks {dp_pre_floorplan netlist unbound} \
+    -log_file pnr/reports/check_pre_floorplan.log
+****************************************
+ Report : check_design 
+ Options: { dp_pre_floorplan netlist unbound }
+ Design : filtro_pdm
+ Version: X-2025.06-SP3
+ Date   : Fri Oct  9 21:01:33 2026
+****************************************
+
+Running atomic-check 'dp_pre_floorplan'
+Running atomic-check 'netlist'
+Running atomic-check 'unbound'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  DPUI-924     Warn   10         The routing directions for layer '%s' are missing. Auto deriving...
+  ----------------------------------------------------------------------------------------------------
+  Total 10 non-EMS messages : 0 errors, 10 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+Information: Non-EMS messages are saved into file 'pnr/reports/check_pre_floorplan.log'.
+1
+# ------------------------------------------------------------
+# 8. Salva checkpoint inicial
+# ------------------------------------------------------------
+save_block -label init
+Information: Saving 'filtro_pdm.dlib:filtro_pdm.design' to 'filtro_pdm.dlib:filtro_pdm/init.design'. (DES-028)
+1
+1
+fc_shell> exit
+Maximum memory usage for this session: 482.25 MB
+Maximum memory usage for this session including child processes: 482.25 MB
+CPU usage for this session:     12 seconds (  0.00 hours)
+Elapsed time for this session:     53 seconds (  0.01 hours)
+Thank you for using Fusion Compiler.

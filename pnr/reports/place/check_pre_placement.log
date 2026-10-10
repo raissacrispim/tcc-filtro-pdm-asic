@@ -1,0 +1,50 @@
+****************************************
+ Report : check_design
+ Options: { pre_placement_stage }
+ Design : filtro_pdm
+ Version: X-2025.06-SP3
+ Date   : Fri Oct  9 21:07:17 2026
+****************************************
+
+****************************************
+Report : Data Mismatches
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:07:17 2026
+****************************************
+No mismatches exist on the design.
+1
+Information: The command 'check_scan_chain' cleared the undo history. (UNDO-016)
+****************************************
+Report : SCANDEF check
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:07:17 2026
+****************************************
+  Checking between SCANDEF file and design:
+
+  Total PARTITION group count: 1
+  Total SCANCHAINS checked: 1
+  Total OPTIMIZABLE BITS: 1332
+  VALIDATED :  1
+  FAILED    :  0
+
+  Chain name     Status    #cells    #bits     PARTITION      Scan in        Scan out
+  1              V         1332      1332      clk_45_45      scan_in        scan_out
+1
+Information: There are no relative placement groups in the design. (NDMUI-173)
+1
+1
+
+  *** EMS Message summary ***
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary *** 
+  ----------------------------------------------------------------------------------------------------
+   Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+     NDMUI-173   Info          1 There are no relative placement groups in the design.
+      UNDO-016   Info          1 The command '%s' cleared the undo history.
+  ----------------------------------------------------------------------------------------------------
+  Total 2 non-EMS messages : 0 errors, 0 warnings, 2 info.
+  ----------------------------------------------------------------------------------------------------

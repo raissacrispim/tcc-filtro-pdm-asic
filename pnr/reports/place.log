@@ -1,0 +1,3270 @@
+
+
+
+                              Fusion Compiler (TM)
+
+                Version X-2025.06-SP3 for linux64 - Feb 27, 2026
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+set sh_continue_on_error false
+false
+# ============================================================
+# place.tcl
+# Posicionamento das standard cells
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys Fusion Compiler
+# Tecnologia: SAED32 RVT
+#
+# Entrada:  filtro_pdm/power_plan_reproduzido
+# Saida:    filtro_pdm/place
+#
+# ATENCAO:
+# Versao candidata, ainda nao validada no Fusion Compiler.
+# ============================================================
+file mkdir pnr/reports/place
+# ------------------------------------------------------------
+# 1. Abrir o checkpoint do power plan
+# ------------------------------------------------------------
+open_lib pnr/work/filtro_pdm.dlib
+Information: Loading library file '/home/raissa.crispim/tcc_filtro/pnr/work/filtro_pdm.dlib' (FILE-007)
+Information: Loading library file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm' (FILE-007)
+{filtro_pdm.dlib}
+open_block filtro_pdm/power_plan_reproduzido
+Information: User units loaded from library 'saed32rvt_base_frame_timing' (LNK-040)
+Opening block 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design' in edit mode
+{filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design}
+# ------------------------------------------------------------
+# 2. Configuracao de timing e parasitas
+# ------------------------------------------------------------
+source pnr/scripts/timing_setup.tcl
+TLU+: /Tools/PDK/SAED32/EDK_Digital/tech/starrc/max/saed32nm_1p9m_Cmax.tluplus
+TLU+: /Tools/PDK/SAED32/EDK_Digital/tech/starrc/min/saed32nm_1p9m_Cmin.tluplus
+TLU+: /Tools/PDK/SAED32/EDK_Digital/tech/starrc/saed32nm_tf_itf_tluplus.map
+Using libraries: filtro_pdm.dlib saed32rvt_base_frame_timing
+Warning: In library filtro_pdm.dlib, no block views exist for block filtro_pdm. (LNK-064)
+Visiting block filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design
+Design 'filtro_pdm' was successfully linked.
+Information: Timer using 1 threads
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 467 MB / Date: Fri Oct  9 21:07:16 2026
+
+Information: Corner default: no PVT mismatches. (PVT-032)
+Timing Update Completed: Mem-peak: 467 MB / Date: Fri Oct  9 21:07:16 2026
+
+****************************************
+Report : pvt
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:07:16 2026
+****************************************
+
+--------------------------------------------------------------------------------
+Information: Corner default: no PVT mismatches. (PVT-032)
+--------------------------------------------------------------------------------
+
+
+
+Scenario default (mode default corner default) is active for setup/hold/leakage_power/dynamic_power/max_transition/max_capacitance/min_capacitance analysis.
+****************************************
+Report : scenario
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:07:16 2026
+****************************************
+
+                                                                     Leakage  Dynamic                              Cell  Signal
+Name            Mode            Corner          Active  Setup  Hold  Power    Power    Max_tran  Max_cap  Min_cap  EM    EM
+----------------------------------------------------------------------------------------------------------------------------------
+default         default         default         true    true   true  true     true     true      true     true     false false
+
+****************************************
+Report : clock
+Design : filtro_pdm
+Mode   : default
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:07:16 2026
+****************************************
+
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    U - Unexpanded generated clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+clk            208.33   {0 104.166}                   {clk}
+
+
+ mapping = /Tools/PDK/SAED32/EDK_Digital/tech/starrc/saed32nm_tf_itf_tluplus.map 
+
+
+Corner: default
+ early_spec = Cmin
+ Cmin = /Tools/PDK/SAED32/EDK_Digital/tech/starrc/min/saed32nm_1p9m_Cmin.tluplus 
+ late_spec = Cmax
+ Cmax = /Tools/PDK/SAED32/EDK_Digital/tech/starrc/max/saed32nm_1p9m_Cmax.tluplus 
+
+library = filtro_pdm.dlib 
+1
+# ------------------------------------------------------------
+# 3. Posicionamento dos pinos de I/O
+#
+# Sem pad ring: os pinos ficam na borda do bloco.
+# Camadas intermediarias, abaixo do anel M8/M9.
+# ------------------------------------------------------------
+set_block_pin_constraints \
+    -self \
+    -allowed_layers {M3 M4 M5 M6}
+Information: Block pin constraints allowed_layers are set for top block filtro_pdm/power_plan_reproduzido. (DPPA-403)
+1
+place_pins -self
+Information: Starting 'place_pins' (FLW-8000)
+Information: Time: 2026-10-09 21:07:16 / Session:  00:00:12 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 468 MB (FLW-8100)
+Load DB...
+CPU Time for load db: 00:00:00.01u 00:00:00.00s 00:00:00.01e: 
+
+Min routing layer: M1
+Max routing layer: MRDL
+
+Non default block pin constraint setting(s) of top block: filtro_pdm
+allowed_layers: M3 M4 M5 M6 
+
+CPU Time for Top Level Pre-Route Processing: 00:00:00.01u 00:00:00.00s 00:00:00.01e: 
+CPU Time for Leaf Level Pre-Route Processing: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of block ports: 26
+Number of block pin locations assigned from router: 0
+CPU Time for Pin Preparation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of PG ports on blocks: 0
+Number of pins created: 26
+CPU Time for Pin Creation: 00:00:00.00u 00:00:00.00s 00:00:00.01e: 
+Total Pin Placement CPU Time: 00:00:00.04u 00:00:00.01s 00:00:00.04e: 
+Information: Ending   'place_pins' (FLW-8001)
+Information: Time: 2026-10-09 21:07:16 / Session:  00:00:12 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 484 MB (FLW-8100)
+1
+report_pin_placement > pnr/reports/place/pin_placement.rpt
+# ------------------------------------------------------------
+# 4. Cadeia de scan (DFT)
+#
+# O scandef gerado na sintese descreve a cadeia de scan.
+# O place_opt reordena a cadeia conforme a posicao fisica dos
+# flip-flops, reduzindo o comprimento das conexoes de scan.
+# ------------------------------------------------------------
+read_def synth/netlist/filtro_pdm_syn.scandef
+Information: Loading DEF file '/home/raissa.crispim/tcc_filtro/synth/netlist/filtro_pdm_syn.scandef' (FILE-007)
+Information: Reading 'VERSION' statement. (DEFR-016)
+Warning: Ignoring unsupported 'NAMESCASESENSITIVE' statement. (DEFR-015)
+Information: Reading 'DIVIDERCHAR' statement. (DEFR-016)
+Information: Reading 'BUSBITCHARS' statement. (DEFR-016)
+Information: Reading 'DESIGN' statement. (DEFR-016)
+Information: Reading 'SCANCHAINS' section. (DEFR-016)
+--------------------------------
+Number of Ignored DEF Constructs
+--------------------------------
+NAMESCASESENSITIVE             : 1/1
+---------------------------------------
+Number of Processed/Read DEF Constructs
+---------------------------------------
+VERSION                        : 1/1
+DIVIDERCHAR                    : 1/1
+BUSBITCHARS                    : 1/1
+DESIGN                         : 1/1
+SCANCHAINS                     : 1/1
+1
+report_scan_chains > pnr/reports/place/scan_chains.rpt
+# ------------------------------------------------------------
+# 5. Verificacoes antes do posicionamento
+# ------------------------------------------------------------
+check_design \
+    -checks pre_placement_stage \
+    -log_file pnr/reports/place/check_pre_placement.log
+****************************************
+ Report : check_design 
+ Options: { pre_placement_stage }
+ Design : filtro_pdm
+ Version: X-2025.06-SP3
+ Date   : Fri Oct  9 21:07:17 2026
+****************************************
+
+Running mega-check 'pre_placement_stage': 
+    Running atomic-check 'design_mismatch'
+    Running atomic-check 'scan_chain'
+    Running atomic-check 'mv_design'
+    Running atomic-check 'rp_constraints'
+    Running atomic-check 'timing'
+    Running atomic-check 'hier_pre_placement'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Total 0 EMS messages : 0 errors, 0 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  NDMUI-173    Info   1          There are no relative placement groups in the design.
+  UNDO-016     Info   1          The command '%s' cleared the undo history.
+  ----------------------------------------------------------------------------------------------------
+  Total 2 non-EMS messages : 0 errors, 0 warnings, 2 info.
+  ----------------------------------------------------------------------------------------------------
+Information: Non-EMS messages are saved into file 'pnr/reports/place/check_pre_placement.log'.
+1
+# ------------------------------------------------------------
+# 6. Posicionamento com otimizacao
+# ------------------------------------------------------------
+place_opt
+Information: Starting 'place_opt' (FLW-8000)
+Information: Time: 2026-10-09 21:07:18 / Session:  00:00:14 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 532 MB (FLW-8100)
+INFO: place_opt is running in balanced flow mode
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
+INFO: disable CRPR-based timing. 
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Information: Design Average RC for design filtro_pdm  (NEX-011)
+Information: r = 1.671985 ohm/um, via_r = 0.578740 ohm/cut, c = 0.065123 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.790249 ohm/um, via_r = 0.466160 ohm/cut, c = 0.057761 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (2304000 2273600)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+INFO: Running power improvement flow (1)
+INFO: place_opt is running with flow.common.io_priority high.
+
+----------------------------------------------------------------------------------------------------------
+Information: Starting place_opt / initial_place (FLW-8000)
+Information: Time: 2026-10-09 21:07:18 / Session:  00:00:14 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 628 MB (FLW-8100)
+----------------------------------------------------------------------------------------------------------
+
+
+Information: Starting place_opt / initial_place / Initial Placement (FLW-8000)
+Information: Time: 2026-10-09 21:07:18 / Session:  00:00:14 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 628 MB (FLW-8100)
+Information: The RC mode used is VR for design 'filtro_pdm'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 11997, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+Running merge clock gates
+************************************************************
+* CTS STEP: Clock Gate Merging
+************************************************************
+Setting for clock gate merging......
+Setting all modes active.
+Information: CTS will work on the following scenarios. (CTS-101)
+   default	(Mode: default; Corner: default)
+Information: CTS will work on all clocks in active scenarios, including 1 master clocks and 0 generated clocks. (CTS-107)
+Output units used in this log:
+   Time        : 1.00ns
+   Resistance  : 1.00MOhm
+   Capacitance : 1.00fF
+   Power       : 1.00pW
+   Length      : 1.00um
+Information: Clock derating is enabled
+
+CTS related app options set by user:
+   cts.common.enable_ndr_enhancement = 1
+   cts.icg.timing_aware = true
+   cts.optimize.honor_max_net_length = true
+   cts.optimize.patch_route_keep_topology = 1
+   cts.optimize.problem_generator_enhancement_revision = 1
+   cts.optimize.respect_preserved_hier_port = true
+
+Collecting ICGs in clock trees......
+
+Searching for equivalent ICGs......
+
+Merging equivalent ICGs......
+
+Clearing settings of clock gate merging......
+Clearing enable all modes setting.
+
+Information: Total 0 ICGs are not considered in merging for reasons: don't touch - 0; fixed - 0; other reasons - 0. (CTS-124)
+ - message 'CTS-125' limit is (10).
+
+Information: Total 0 ICGs are unique in the design. (CTS-126)
+ - message 'CTS-127' limit is (10).
+
+************************************************************
+* CTS STEP: Summary
+************************************************************
+merge_clock_gates Statistics: Total
+    ICG                       0
+    Merged                    0
+    Survived                  0
+    Removed                   0
+    ICG at the end            0
+
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (2304000 2273600)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+INFO: sweep stats: 0 gates / 0 nets gobbled, 0 gates (0 seq) simplified
+Running initial placement
+----------------------------------------------------------------
+running create_placement
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+CGRW: permuting timing equivalent pins only
+Corner Scaling is off, multiplier is 1.000000
+Information: timingScenario default timingCorner default.  Using corner default for worst leakage corner. (OPT-078)
+nplLib: default vr hor dist = 1046
+nplLib: default vr ver dist = 1046
+nplLib: default vr buf size = 6
+nplLib: default vr buf size = 2
+Placer using max_unbuffered_distance = 1046.00
+Info: embedded eLpp will optimize for scenario default
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Info: e-eLpp used with low effort
+
+Placement Options:
+Effort:                        high_effort         
+Timing Driven:                 true                
+Buffering Aware Timing Driven: true                
+Seed locs:                     false               
+Incremental:                   false               
+Congestion:                    false               
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+
+Information: using ELPP mode 2
+Start transferring placement data.
+ELPPver2: wire length prioritization enabled
+****** eLpp estimated wire length 
+0.746373% of the net wire length are clock nets
+0% of the clock net wire length has no activity
+Clock net wire length: 2.27121e+06
+Total net wire length: 3.04299e+08
+****** eLpp weights (no caps) (no lengths)
+Number of nets: 11997, of which 11996 non-clock nets
+Number of nets with 0 toggle rate: 43 (0.358423%)
+Max toggle rate = 0.00960002, average toggle rate = 0.00178985
+Max non-clock toggle rate = 0.00334317
+eLpp weight range = (0.000545611, 5.36358)
+*** 2 nets are filtered out
+****** Net weight manager: report ******
+Weights included: eLpp  PostEffort  
+Number of nets with non-default weights: 11997
+Amt power = 0.1
+Non-default weight range: (0.900055, 5.43636)
+                             Min         Max         Avg       Stdev        Skew
+       Toggle Rates  9.76564e-07  0.00960002  0.00178984 0.000591125   -0.629436
+      Power Weights  0.000545611     5.36358    0.999991    0.330264   -0.629436
+      Final Weights     0.900055     5.43636     1.00033   0.0521083     51.2098
+Information: Automatic repeater spreading is enabled.
+Restructuring in 2 hierarchies
+CGRW: importing permutable pins & pairs, size 8 and above
+Information: Automatic timing control is enabled.
+Information: Clock gate latency aware placement is enabled. (PLACE-085)
+Using worst RC corner 'default' for buffer aware analysis.
+DTDP placement: scenario=default
+Factor(0) = 1
+Factor(BASE) = 1
+skew 0 name=clk included=1
+Completed transferring placement data.
+Running placement using 1 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.60, congestion_driven_max_util 0.87. (PLACE-027)
+Information: HFW control 'on' invoked.
+Creating placement from scratch.
+coarse place 0% done.
+Selected 1107 sequential cells for slack balancing.
+coarse place 9% done.
+coarse place 18% done.
+coarse place 27% done.
+coarse place 36% done.
+coarse place 45% done.
+coarse place 55% done.
+coarse place 64% done.
+coarse place 73% done.
+coarse place 82% done.
+coarse place 91% done.
+coarse place 100% done.
+Information: Coarse placer wire length estimate = 235071
+Information: Coarse placer active wire length estimate = 418.021
+Information: Coarse placer weighted wire length estimate = 257723
+Information: Extraction observers are detached as design net change threshold is reached.
+Stored 0 bounds for preserving balanced registers 
+START_CMD: optimize_dft        CPU:     32 s ( 0.01 hr) ELAPSE:     33 s ( 0.01 hr) MEM-PEAK:   741 Mb Fri Oct  9 21:07:36 2026
+
+  Total PARTITION group count: 1
+  Total SCANCHAINS checked: 1
+  Total OPTIMIZABLE BITS: 1332
+  VALIDATED :  1
+  FAILED    :  0
+
+DFT: Repaired SCANDEF MV crossings.
+DFT: repartition_method: physical_aware
+DFT: reordering_method: physical_aware
+Information: Switching output filtering off (MSG-3401)
+Non-default App Option report
+All App Options have their default value.
+Running DFT optimization using 1 thread(s)
+Information: Switching output filtering on (MSG-3401)
+DFT: pre-opt  wirelength: 24966
+DFT: post-opt wirelength: 9315
+DFT: post-opt wirelength difference: -15651 (ratio: -62.687456 %)
+
+  Total PARTITION group count: 1
+  Total SCANCHAINS checked: 1
+  Total OPTIMIZABLE BITS: 1332
+  VALIDATED :  1
+  FAILED    :  0
+
+END_CMD: optimize_dft          CPU:     32 s ( 0.01 hr) ELAPSE:     33 s ( 0.01 hr) MEM-PEAK:   741 Mb Fri Oct  9 21:07:36 2026
+----------------------------------------------------------------
+Information: Ending   place_opt / initial_place / Initial Placement (FLW-8001)
+Information: Time: 2026-10-09 21:07:36 / Session:  00:00:32 / Command:  00:00:18 / CPU:  00:00:18 / Memory: 742 MB (FLW-8100)
+
+
+
+Information: Runtime Summary (place_opt / initial_place)  (FLW-9000)
+----------------------------------------------------------------------------
+    Elapse (Hrs)   Elapse (%)       CPU/Elapse       Category
+----------------------------------------------------------------------------
+      0.01           98.6%             1.0           Placement 
+      0.00            1.4%             1.0           DFT Opt 
+      0.00            0.0%             0.9           Full Timing Update 
+      0.00            0.0%             1.0           Other 
+      0.00            0.0%             1.1           Init 
+----------------------------------------------------------------------------
+      0.01          100.0%             1.0           Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 1
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6526Y / 64 CPUs  
+Sockets: 2, Cores: 16, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Ending   place_opt / initial_place (FLW-8001)
+Information: Time: 2026-10-09 21:07:37 / Session:  00:00:32 / Command:  00:00:18 / CPU:  00:00:18 / Memory: 742 MB (FLW-8100)
+
+----------------------------------------------------------------------------------------------------------
+Information: Starting place_opt / initial_drc (FLW-8000)
+Information: Time: 2026-10-09 21:07:37 / Session:  00:00:32 / Command:  00:00:18 / CPU:  00:00:18 / Memory: 742 MB (FLW-8100)
+----------------------------------------------------------------------------------------------------------
+
+
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Information: Estimating clock gate latencies for scenario 'default'. (OPT-909)
+
+Information: Starting place_opt / initial_drc / High Fanout Synthesis (FLW-8000)
+Information: Time: 2026-10-09 21:07:37 / Session:  00:00:33 / Command:  00:00:19 / CPU:  00:00:19 / Memory: 742 MB (FLW-8100)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Information: Design Average RC for design filtro_pdm  (NEX-011)
+Information: r = 1.671985 ohm/um, via_r = 0.578740 ohm/cut, c = 0.087978 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.786550 ohm/um, via_r = 0.461403 ohm/cut, c = 0.076509 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'filtro_pdm'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 11997, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 11996, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Running initial HFS and DRC step.
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      0:00:34     0.000     0.000 32317.969     7.474  8599.832       249      1641         0     0.000       741 
+
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+INFO: sweep stats: 0 gates / 1 nets gobbled, 0 gates (0 seq) simplified
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+
+    Processing cells .....10%.....20%.....30%.....40%.....50%.....60%.....70%.....80%.....90%.....100%
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      0:00:35     0.000     0.000 32317.969     7.474  8599.832       249      1641         0     0.000       741 
+
+Corner Scaling is off, multiplier is 1.000000
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+    Scenario default  WNHS = 0.023714, TNHS = 0.023714, NHVP = 1
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK     MIN DELAY 
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY       COST   
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- -----------
+      0:00:35     0.000     0.000 32317.969     7.474  8599.832       249      1641         0     0.000       741    -0.024
+
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0332 seconds to build cellmap data
+INFO: creating 29(r) x 29(c) GridCells YDim 8.36 XDim 8.36
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 841
+INFO: creating 29(r) x 29(c) GridCells YDim 8.36 XDim 8.36
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 841
+Total 0.0828 seconds to load 8082 cell instances into cellmap, 8082 cells are off site row
+Moveable cells: 8082; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
+Average cell width 2.3916, cell height 1.6720, cell area 3.9988 for total 8082 placed and application fixed cells
+Information: timingScenario default timingCorner default.  Using corner default for worst leakage corner. (OPT-078)
+Information: Nominal = 0.0378744  Design MT = inf  Target = 0.1510302  MaxRC = 0.105045 Fast Target = 0.049263 (OPT-081)
+Collecting Drivers ...  
+Design max_transition = inf
+Design max_capacitance = inf
+Using layer M4 for buffering distances in roi (originally M4)
+GRE layer bins: None, M2
+Running clock data isolation flow.
+Found 0 buffer-tree drivers
+No violators found
+Running tristate isolation flow.
+TSI: added 0 repeaters
+Running mv isolation flow.
+Found 0 buffer-tree drivers
+No violators found
+Found 661 buffer-tree drivers
+
+Roi-HfsDrc SN: 1798569713 435980330 0 67108865 0 (1261.929565)
+
+Processing Buffer Trees  (ROI) ... 
+
+    [67]  10% ...
+    [134]  20% ...
+    [201]  30% ...
+    [268]  40% ...
+    [335]  50% ...
+    [402]  60% ...
+    [469]  70% ...
+    [536]  80% ...
+    [603]  90% ...
+    [661] 100% Done
+
+                  Deleted        Added
+------------ ------------ ------------
+    Buffers:          249          762
+  Inverters:          393          436
+------------ ------------ ------------
+      Total:          642         1198
+------------ ------------ ------------
+
+Number of Drivers Sized: 43 [6.51%]
+
+                      P: 36 [5.45%]
+                      N: 7 [1.06%]
+
+Zbuf-RUNTIME (Hr:Min:Sec)  CPU 0 hr : 0 min : 3.90 sec ELAPSE 0 hr : 0 min : 3.88 sec
+Zbuf-RUNTIME         (Min) CPU 0 min ELAPSE 0 min
+ZBuf-MEM(max-mem) total 759356 K / inuse 686980 K
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Information: Design Average RC for design filtro_pdm  (NEX-011)
+Information: r = 1.671985 ohm/um, via_r = 0.578740 ohm/cut, c = 0.085561 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.786233 ohm/um, via_r = 0.460999 ohm/cut, c = 0.075324 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'filtro_pdm'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 12553, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 12552, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      0:00:40     0.000     0.000 34908.711     0.007    29.832       762      1684         0     0.000       741 
+
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      0:00:40     0.000     0.000 34908.711     0.007    29.832       762      1684         0     0.000       741 
+
+INFO: Restore MV PD Boundary Restriction
+Information: Ending   place_opt / initial_drc / High Fanout Synthesis (FLW-8001)
+Information: Time: 2026-10-09 21:07:44 / Session:  00:00:40 / Command:  00:00:26 / CPU:  00:00:25 / Memory: 742 MB (FLW-8100)
+
+
+
+INFO: sweep stats: 0 gates / 0 nets gobbled, 0 gates (0 seq) simplified
+
+
+Information: Runtime Summary (place_opt / initial_drc)  (FLW-9000)
+----------------------------------------------------------------------------
+    Elapse (Hrs)   Elapse (%)       CPU/Elapse       Category
+----------------------------------------------------------------------------
+      0.00           86.9%             1.0           LDRC 
+      0.00            7.7%             1.0           CTS 
+      0.00            5.4%             1.0           Other 
+      0.00            0.0%             1.0           RC Refresh 
+      0.00            0.0%             1.0           Init 
+----------------------------------------------------------------------------
+      0.00          100.0%             1.0           Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 1
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6526Y / 64 CPUs  
+Sockets: 2, Cores: 16, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Ending   place_opt / initial_drc (FLW-8001)
+Information: Time: 2026-10-09 21:07:44 / Session:  00:00:40 / Command:  00:00:26 / CPU:  00:00:26 / Memory: 742 MB (FLW-8100)
+INFO: Start environment monitoring: UCF
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+INFO: place_opt is running in balanced flow mode.
+INFO: EIO v6 - EPO v3 - Cost Function Configuration 0.5/0.5/0.5/0.5/0.9
+INFO: ARE v5
+****************************************
+Report : report_tbcs
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:07:45 2026
+****************************************
+INFO: EOO V3 is enabled
+INFO: Start environment monitoring: recipes
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+INFO: place_opt is running in balanced flow mode.
+INFO: EIO v6 - EPO v3 - Cost Function Configuration 0.5/0.5/0.5/0.5/0.9
+INFO: ARE v5
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+Information: Change threshold for extractor is reset. (FLW-1300)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Warning: Previously executed stage '' may be unexpected for the current flow stage 'initial_opto' (FLW-5561)
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Information: Timer using 1 threads
+INFO: place_opt is running in balanced flow mode
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+Warning: Power app option opt.power.effort has been deprecated. Please remove it from your script. (OPT-035)
+INFO: Leakage Power Aware Optimization Enabled
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 741 MB / Date: Fri Oct  9 21:07:50 2026
+
+Timing Update Completed: Mem-peak: 741 MB / Date: Fri Oct  9 21:07:50 2026
+
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+INFO: compile_fusion is running with flow.common.io_priority high.
+INFO: disable CRPR-based timing. 
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (2304000 2273600)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+Info: update em.
+Information: The netlist change observers are disabled for incremental extraction. (TIM-126)
+INFO: using 1 threads
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+WARNING: Net clk is a high-fanout net with 1332 sinks; skipping this net during optimization. 
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+Information: The netlist change observers are enabled for incremental extraction. (TIM-127)
+
+
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : false
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0180 seconds to build cellmap data
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+Total 0.0629 seconds to load 8638 cell instances into cellmap, 7440 cells are off site row
+Moveable cells: 8638; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
+Average cell width 2.4170, cell height 1.6720, cell area 4.0413 for total 8638 placed and application fixed cells
+
+
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 2 Iter  1          0.00        0.00      0.00        89      33751.34  986827008.00        8638              0.01       917
+
+Disable clock slack update for ideal clocks
+Corner Scaling is off, multiplier is 1.000000
+Place-opt optimization Phase 3 Iter  1          0.00        0.00      0.00        89      33751.34  986827008.00        8638              0.01       949
+
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 1 Iter  1          0.00        0.00      0.00        89      33751.34  986827008.00        8638              0.01       965
+Information: DesignWare Summary. (DWS-3518)
+-----------------
+ Content Summary 
+-----------------
+
+
+
+Refreshing optGlobal after filter change.
+
+
+
+
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : false
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0180 seconds to build cellmap data
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+Total 0.0627 seconds to load 8638 cell instances into cellmap, 7440 cells are off site row
+Moveable cells: 8638; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
+Average cell width 2.3369, cell height 1.6720, cell area 3.9073 for total 8638 placed and application fixed cells
+Place-opt optimization Phase 11 Iter  1         0.00        0.00      0.00        89      33751.34  986827008.00        8638              0.02       965
+Warning: No tie cell is available for constant fixing. (OPT-200)
+
+Place-opt optimization Phase 12 Iter  1         0.00        0.00      0.00        89      33751.34  986827008.00        8638              0.02       965
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+
+Place-opt optimization Phase 13 Iter  1         0.00        0.00      0.00        89      33751.34  986827008.00        8638              0.02       965
+
+Multi-thread GR for layer opto ...
+INFO: wire-opt feature for router enabled
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    0  Alloctr    0  Proc 5083 
+Printing options for 'route.common.*'
+
+Printing options for 'route.global.*'
+global.deterministic                                    :	 on                  
+global.timing_driven                                    :	 false               
+
+Begin global routing.
+NEX(Warning): extract.rc_techfile_for_diode_mode_26_thickness not set, will igonre it
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = MRDL
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CO. (ZRT-022)
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Information: AutoNdr rule can't be found. Check the settings.
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: Cell u_fir/delay_reg_61__1_ is placed overlapping with other cells at {{23.526 20.841} {28.694 22.513}}. (ZRT-763)
+Warning: Cell U688 is placed overlapping with other cells at {{145.220 10.001} {146.740 11.673}}. (ZRT-763)
+Warning: Cell u_cic_u_combs_u_comb3_x_delay_reg_14_ is placed overlapping with other cells at {{170.410 10.393} {175.577 12.065}}. (ZRT-763)
+Warning: Cell u_fir/intadd_7_U23 is placed overlapping with other cells at {{10.001 84.831} {12.889 86.503}}. (ZRT-763)
+Warning: Cell u_fir/intadd_17_U16 is placed overlapping with other cells at {{82.632 81.250} {85.520 82.922}}. (ZRT-763)
+Warning: Cell u_fir/delay_reg_12__15_ is placed overlapping with other cells at {{161.949 79.886} {167.117 81.558}}. (ZRT-763)
+Warning: Cell u_fir/delay_reg_16__1_ is placed overlapping with other cells at {{19.065 161.276} {24.233 162.948}}. (ZRT-763)
+Warning: Cell u_fir/delay_reg_15__8_ is placed overlapping with other cells at {{87.413 164.890} {92.581 166.562}}. (ZRT-763)
+Warning: Cell u_fir/intadd_34_U4 is placed overlapping with other cells at {{161.745 159.951} {164.633 161.623}}. (ZRT-763)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used    0  Alloctr    0  Proc   16 
+[End of Read DB] Total (MB): Used    0  Alloctr    0  Proc 5099 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00um,0.00um,240.40um,237.36um)
+Number of routing layers = 10
+layer M1, dir Ver, min width = 0.05um, min space = 0.05um pitch = 0.152um
+layer M2, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.152um
+layer M3, dir Ver, min width = 0.056um, min space = 0.056um pitch = 0.304um
+layer M4, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.304um
+layer M5, dir Ver, min width = 0.056um, min space = 0.056um pitch = 0.608um
+layer M6, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.608um
+layer M7, dir Ver, min width = 0.056um, min space = 0.056um pitch = 1.216um
+layer M8, dir Hor, min width = 0.056um, min space = 0.056um pitch = 1.216um
+layer M9, dir Ver, min width = 0.16um, min space = 0.16um pitch = 2.432um
+layer MRDL, dir Hor, min width = 2um, min space = 2um pitch = 4.864um
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used    0  Alloctr    0  Proc 5099 
+Net statistics:
+Total number of nets     = 12555
+Number of nets to route  = 12511
+12511 open nets
+ of which 12511 are without routing or PSV shapes
+44 nets are fully connected,
+ of which 44 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc   16 
+[End of Build All Nets] Total (MB): Used    0  Alloctr    0  Proc 5115 
+Net length statistics: 
+Net Count(Ignore Fully Rted) 12511, Total Half Perimeter Wire Length (HPWL) 218336 microns
+HPWL   0 ~   50 microns: Net Count    11414	Total HPWL       123008 microns
+HPWL  50 ~  100 microns: Net Count      801	Total HPWL        58234 microns
+HPWL 100 ~  200 microns: Net Count      286	Total HPWL        34205 microns
+HPWL 200 ~  300 microns: Net Count        6	Total HPWL         1395 microns
+HPWL 300 ~  400 microns: Net Count        3	Total HPWL         1051 microns
+HPWL 400 ~  500 microns: Net Count        1	Total HPWL          442 microns
+HPWL 500 ~  600 microns: Net Count        0	Total HPWL            0 microns
+HPWL 600 ~  700 microns: Net Count        0	Total HPWL            0 microns
+HPWL 700 ~  800 microns: Net Count        0	Total HPWL            0 microns
+HPWL 800 ~  900 microns: Net Count        0	Total HPWL            0 microns
+HPWL 900 ~ 1000 microns: Net Count        0	Total HPWL            0 microns
+HPWL     > 1000 microns: Net Count        0	Total HPWL            0 microns
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+Average gCell capacity  1.75	 on layer (1)	 M1
+Average gCell capacity  10.94	 on layer (2)	 M2
+Average gCell capacity  5.43	 on layer (3)	 M3
+Average gCell capacity  5.49	 on layer (4)	 M4
+Average gCell capacity  2.74	 on layer (5)	 M5
+Average gCell capacity  2.74	 on layer (6)	 M6
+Average gCell capacity  1.36	 on layer (7)	 M7
+Average gCell capacity  1.36	 on layer (8)	 M8
+Average gCell capacity  0.67	 on layer (9)	 M9
+Average gCell capacity  0.33	 on layer (10)	 MRDL
+Average number of tracks per gCell 10.99	 on layer (1)	 M1
+Average number of tracks per gCell 11.00	 on layer (2)	 M2
+Average number of tracks per gCell 5.50	 on layer (3)	 M3
+Average number of tracks per gCell 5.51	 on layer (4)	 M4
+Average number of tracks per gCell 2.76	 on layer (5)	 M5
+Average number of tracks per gCell 2.76	 on layer (6)	 M6
+Average number of tracks per gCell 1.39	 on layer (7)	 M7
+Average number of tracks per gCell 1.39	 on layer (8)	 M8
+Average number of tracks per gCell 0.70	 on layer (9)	 M9
+Average number of tracks per gCell 0.35	 on layer (10)	 MRDL
+Number of gCells = 204480
+Current Stage stats:
+[End of Build Congestion Map] Elapsed real time: 0:00:00 
+[End of Build Congestion Map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion Map] Stage (MB): Used    0  Alloctr    0  Proc   16 
+[End of Build Congestion Map] Total (MB): Used    0  Alloctr    0  Proc 5131 
+Current Stage stats:
+[End of Add Nets Demand] Elapsed real time: 0:00:00 
+[End of Add Nets Demand] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Add Nets Demand] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Add Nets Demand] Total (MB): Used    0  Alloctr    0  Proc 5131 
+Number of user frozen nets = 0
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc   32 
+[End of Build Data] Total (MB): Used    0  Alloctr    0  Proc 5131 
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc  106 
+[End of Blocked Pin Detection] Total (MB): Used    0  Alloctr    0  Proc 5237 
+Information: Using 1 threads for routing. (ZRT-444)
+Information: Placement fast mode ON
+Information: Multiple gcell levels ON
+Information: Buffer distance is estimated to be ~862.0000um (515 gCells)
+
+Start GR phase 0
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+10% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+20% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+30% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+40% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+50% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+60% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+70% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+80% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+90% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+[rtAllBotParts] Elapsed real time: 0:00:01 
+[rtAllBotParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[rtTop] Elapsed real time: 0:00:00 
+[rtTop] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:01 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc   16 
+[End of Initial Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Initial. Routing result:
+Initial. Both Dirs: Dmd-Cap  =    64 Max = 3 GRCs =   257 (0.63%)
+Initial. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. V routing: Dmd-Cap  =    64 Max = 3 (GRCs =  2) GRCs =   257 (1.26%)
+Initial. Both Dirs: Overflow =   291 Max = 3 GRCs =  1257 (3.07%)
+Initial. H routing: Overflow =    12 Max = 2 (GRCs =  2) GRCs =    27 (0.13%)
+Initial. V routing: Overflow =   278 Max = 3 (GRCs =  4) GRCs =  1230 (6.02%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =    12 Max = 2 (GRCs =  2) GRCs =    27 (0.13%)
+Initial. M3         Overflow =   265 Max = 3 (GRCs =  4) GRCs =  1217 (5.95%)
+Initial. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M5         Overflow =    13 Max = 1 (GRCs = 13) GRCs =    13 (0.06%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. MRDL       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 214906.97
+Initial. Layer M1 wire length = 1551.38
+Initial. Layer M2 wire length = 76383.61
+Initial. Layer M3 wire length = 73394.58
+Initial. Layer M4 wire length = 9658.15
+Initial. Layer M5 wire length = 38547.95
+Initial. Layer M6 wire length = 1683.32
+Initial. Layer M7 wire length = 12000.34
+Initial. Layer M8 wire length = 240.37
+Initial. Layer M9 wire length = 1447.27
+Initial. Layer MRDL wire length = 0.00
+Initial. Total Number of Contacts = 70922
+Initial. Via VIA12SQ_C count = 34317
+Initial. Via VIA23SQ_C count = 30468
+Initial. Via VIA34SQ_C count = 2533
+Initial. Via VIA45SQ_C count = 2374
+Initial. Via VIA56SQ_C count = 549
+Initial. Via VIA67SQ_C count = 569
+Initial. Via VIA78SQ_C count = 56
+Initial. Via VIA89_C count = 56
+Initial. Via VIA9RDL count = 0
+Initial. completed.
+
+Start GR phase 1
+Fri Oct  9 21:08:01 2026
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+10% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+20% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+30% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+40% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+50% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+60% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+70% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+80% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+90% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+[rtAllParts] Elapsed real time: 0:00:00 
+[rtAllParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[updNetsDmd] Elapsed real time: 0:00:00 
+[updNetsDmd] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+phase1. Routing result:
+phase1. Both Dirs: Dmd-Cap  =     0 Max = 0 GRCs =     0 (0.00%)
+phase1. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+phase1. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M3         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. MRDL       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 216751.53
+phase1. Layer M1 wire length = 1855.53
+phase1. Layer M2 wire length = 76962.05
+phase1. Layer M3 wire length = 72510.59
+phase1. Layer M4 wire length = 11033.37
+phase1. Layer M5 wire length = 38981.58
+phase1. Layer M6 wire length = 1708.43
+phase1. Layer M7 wire length = 11844.49
+phase1. Layer M8 wire length = 235.79
+phase1. Layer M9 wire length = 1619.71
+phase1. Layer MRDL wire length = 0.00
+phase1. Total Number of Contacts = 72003
+phase1. Via VIA12SQ_C count = 34333
+phase1. Via VIA23SQ_C count = 30647
+phase1. Via VIA34SQ_C count = 3029
+phase1. Via VIA45SQ_C count = 2613
+phase1. Via VIA56SQ_C count = 599
+phase1. Via VIA67SQ_C count = 630
+phase1. Via VIA78SQ_C count = 76
+phase1. Via VIA89_C count = 76
+phase1. Via VIA9RDL count = 0
+phase1. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:02 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
+[End of Whole Chip Routing] Stage (MB): Used    0  Alloctr    0  Proc  154 
+[End of Whole Chip Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+
+Congestion utilization per direction:
+Average vertical track utilization   = 38.21 %
+Peak    vertical track utilization   = 100.00 %
+Average horizontal track utilization = 20.42 %
+Peak    horizontal track utilization = 66.67 %
+
+[End of Global Routing] Elapsed real time: 0:00:02 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc  154 
+[End of Global Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+[End of dbOut] Elapsed real time: 0:00:00 
+[End of dbOut] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of dbOut] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of dbOut] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Information: Maximum hot spot size per layer
+	M4	0
+	M5	0
+	M6	0
+	M7	0
+	M8	0
+	M9	0
+	MRDL	0
+Maximum hot spot size is 0 
+CONG_HS metric is 0.000 
+
+{_snps_autoNdr_delay_1w3s}
+Place-opt optimization Phase 14 Iter  1         0.00        0.00      0.00        89      33751.34  986827008.00        8638              0.02      1135
+Number of Site types in the design = 1
+INFO: Skipping activation of hold scenarios prior to CUS.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Information: CTS will work on the following scenarios. (CTS-101)
+Information: CTS will work on all clocks in active scenarios, including 1 master clocks and 0 generated clocks. (CTS-107)
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+CCD app option: ccd.targeted_ccd_path_groups:  **clock_gating_default**
+Target path group: scenario default pathgroup **clock_gating_default**
+Information: CCD will use corner default for honoring max prepone/postpone limits
+Uskew Characterizer: corner: default, scalingFactor: 1.000
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+@ CG solver holdWeight = 0.500000
+@ CG solver setupWeight = 1.000000
+@ CG solver delayCostWeight = 5.000000
+@ CG solver powerAwareDelayCostWeight = 5.000000
+@ CG solver zeroDirWeight = 5.000000
+@ CG solver wnsWeight = 400.000000
+Information: Scenario: default type: DYNAMIC,LEAKAGE
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'low'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 4 ****
+CCD-Info: The design has concentrated toggle rate data.
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+CTS-038    1  Warning  No clock routing rule is specified.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Information: Estimating clock gate latencies for scenario 'default'. (OPT-909)
+INFO: Skipping deactivation of hold scenarios after CUS.
+Number of Site types in the design = 1
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 14 Iter  2         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Disable clock slack update for ideal clocks
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 14 Iter  3         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 14 Iter  4         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 14 Iter  5         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 14 Iter  6         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 15 Iter  1         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 15 Iter  2         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 15 Iter  3         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Number of Site types in the design = 1
+INFO: Skipping activation of hold scenarios prior to CUS.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Information: CTS will work on the following scenarios. (CTS-101)
+Information: CTS will work on all clocks in active scenarios, including 1 master clocks and 0 generated clocks. (CTS-107)
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+CCD app option: ccd.targeted_ccd_path_groups:  **clock_gating_default**
+Target path group: scenario default pathgroup **clock_gating_default**
+Information: CCD will use corner default for honoring max prepone/postpone limits
+Uskew Characterizer: corner: default, scalingFactor: 1.000
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+@ CG solver holdWeight = 0.500000
+@ CG solver setupWeight = 1.000000
+@ CG solver delayCostWeight = 5.000000
+@ CG solver powerAwareDelayCostWeight = 5.000000
+@ CG solver zeroDirWeight = 5.000000
+@ CG solver wnsWeight = 400.000000
+Information: Scenario: default type: DYNAMIC,LEAKAGE
+Information: Activity for scenario default was cached, no propagation required. (POW-005)
+CCD-Info: The design has concentrated toggle rate data.
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+CTS-038    1  Warning  No clock routing rule is specified.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Information: Estimating clock gate latencies for scenario 'default'. (OPT-909)
+INFO: Skipping deactivation of hold scenarios after CUS.
+Number of Site types in the design = 1
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 16 Iter  1         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 17 Iter  1         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Place-opt optimization Phase 18 Iter  1         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+
+Information: Skipping dirty design check since timing is met or no cells in design
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 19 Iter  1         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Disable clock slack update for ideal clocks
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 19 Iter  2         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter  3         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter  4         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter  5         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter  6         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter  7         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter  8         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter  9         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter 10         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter 11         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter 12         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Place-opt optimization Phase 19 Iter 13         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter 14         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter 15         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+Place-opt optimization Phase 19 Iter 16         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+
+Place-opt optimization Phase 20 Iter  1         0.00        0.00      0.00        89      33751.34  986305408.00        8638              0.02      1135
+
+Place-opt optimization Phase 21 Iter  1         0.00        0.00      0.00        89      33064.90  956078144.00        8226              0.02      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+Place-opt optimization Phase 21 Iter  2         0.00        0.00      0.00        89      33003.65  949204288.00        8226              0.02      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 22 Iter  1         0.00        0.00      0.00        89      33001.11  949055168.00        8226              0.02      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Place-opt optimization Phase 23 Iter  1         0.00        0.00      0.00        89      33001.11  949055168.00        8226              0.02      1135
+Place-opt optimization Phase 23 Iter  2         0.00        0.00      0.00        89      33001.11  949055168.00        8226              0.02      1135
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 24 Iter  1         0.00        0.00      0.00        89      32896.14  946363008.00        8107              0.02      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Place-opt optimization Phase 25 Iter  1         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+
+Place-opt optimization Phase 26 Iter  1         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+LAO is disable, refresh para
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+
+Place-opt optimization Phase 27 Iter  1         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+
+Place-opt optimization Phase 28 Iter  1         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 29 Iter  1         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Disable clock slack update for ideal clocks
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 29 Iter  2         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 29 Iter  3         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 29 Iter  4         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 29 Iter  5         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 29 Iter  6         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 29 Iter  7         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 29 Iter  8         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 29 Iter  9         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+
+Disable clock slack update for ideal clocks
+INFO:  SEQ DEL WNS is protecting TNS
+INFO:  SEQ DEL WNS is protecting TNS
+Place-opt optimization Phase 30 Iter  1         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Place-opt optimization Phase 31 Iter  1         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Corner Scaling is off, multiplier is 1.000000
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 31 Iter  2         0.00        0.00      0.00        89      32896.14  946352768.00        8107              0.02      1135
+Place-opt optimization Phase 31 Iter  3         0.00        0.00      0.00        13      33009.49  962445696.00        8107              0.02      1135
+Place-opt optimization Phase 31 Iter  4         0.00        0.00      0.00        13      33009.49  962445696.00        8107              0.02      1135
+INFO: Restore MV PD Boundary Restriction
+
+Place-opt optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Place-opt optimization Phase 32 Iter  1         0.00        0.00      0.00        12      33009.49  962445696.00        8122              0.02      1135
+
+
+Place-opt optimization Phase 34 Iter  1         0.00        0.00      0.00        13      33009.49  962445696.00        8122              0.02      1135
+
+
+Place-opt optimization complete                 0.00        0.00      0.00        12      33009.49  962445696.00        8122              0.02      1135
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Co-efficient Ratio Summary:
+4.193421605155  6.578038173730  2.479639287277  7.744187540401  -0.485050100353  3.179565833784  5.567214754587  2.894454387461  6.565921317863  9.017937505449  3.104678700933  86.216095898516  0.784504773736  7.442846211238  3.181122249079  6.992318660832
+4.646239500641  3.823702212269  3.871840296193  1.424294066690  -9.687527999646  6.131807232944  1.465787932247  8.763589181122  1.911351136960  9.637341410517  7.001482338813  72.627706244037  5.023970449850  6.345647029962  1.220182995077  5.967905796778
+6.224305671704  0.238797715000  3.284509589705  9.611151237147  -0.128739789272  0.513551216982  7.835139826811  8.372519099733  3.443640924458  6.760973162846  7.389436436496  57.491699561759  1.480612110647  2.106156066767  9.078039526983  1.314346030187
+8.805817928323  0.072343539122  6.270037326705  0.450494780240  -3.928173731613  9.852544054410  0.210066110127  4.718589655457  0.746653163562  4.878808820357  6.857251578475  89.916882435409  0.272538805583  8.236381140626  1.425352946381  6.766687599187
+4.740224950513  6.567966215027  5.706185626119  8.134461036181  -4.723121171581  6.753657767486  0.418221079584  5.624697562041  7.273871293921  1.608673380225  4.886821359472  33.472940733684  8.432764571855  1.154765868601  4.924411420001  0.405227590953
+4.590768921970  4.170951209159  0.006744354660  9.230842681426  -9.005588446071  9.326522482444  6.379456735048  7.070545116827  1.601288971734  3.371851099960  6.270835236178  40.354383694677  2.630927249870  9.532560252994  6.656238509097  9.409853958072
+6.136993113139  7.763510072170  9.625254751594  7.417690064932  -2.209371201703  1.043513581151  9.666269582673  0.883342434938  3.292435121621  6.918317961889  2.422525631115  55.403740623519  1.419555489045  2.866791822019  5.692818803132  5.858503424802
+5.513631359359  5.213535407563  4.512012804123  4.775181265300  -0.522000517760  3.135331833872  4.650816448557  7.371884848373  1.125482036801  0.550338671069  1.242252112305  29.243790876272  7.014508114955  7.845019874711  0.998551347436  4.042485046769
+7.943493242169  3.877015511999  8.999723005082  0.262507546850  -3.017919714214  1.169627813033  4.141833553751  5.565094379098  9.360291467026  4.254590202667  0.846497684714  83.799446545773  4.040682250356  1.421744392074  0.044409341463  7.138109752498
+4.361330991019  8.619745279820  6.103190282792  4.529562340725  -9.547726036300  8.696336740310  3.784709364151  5.702741133615  6.476694524697  6.650523956167  1.087488118964  61.405594201463  8.327806743393  3.421468955657  8.038149930247  9.639345677774
+4.187540401048  5.050000353317  9.565833784556  7.214754587289  -4.454387561656  5.921217863901  7.937505874310  4.670800933986  3.439509951607  8.123964085849  4.208349023831  79.786589879699  2.253535965348  6.239363441382  3.702288469387  1.840354593142
+4.294066690968  7.527899646613  1.807232944146  5.787932247876  -3.589181222191  1.351036960963  7.341410942700  1.484438813840  4.500644503750  2.060531697238  4.588420896212  18.746235877596  7.840661801506  4.305434504023  8.797781200328  4.509647105961
+1.151237147012  8.739689272051  3.551216982783  5.139826811837  -2.519099833344  3.640824458676  0.973162271738  9.438536496698  1.999976275914  8.734708776996  0.639324576790  66.693866783131  4.281905210764  5.817781123007  2.343505322627  0.037484105045
+0.494780240392  8.173631613985  2.544054410021  0.066110127471  -8.589655557074  6.653063562487  8.808820782685  7.253678475913  3.418263640902  7.926377260557  3.652832962614  13.916286181676  6.522464210358  0.224713313656  7.966281227570  6.185784519813
+4.461036181472  3.121071581675  3.657767486041  8.221079584562  -4.697562141727  3.871193921160  8.673380650488  6.823459472458  9.024093468484  3.949944897786  5.490204760149  12.075760801040  5.162465086333  0.768784770417  0.951275359000  6.744412060923
+0.842681426900  5.588346071932  6.522482444637  9.456735048707  -0.545116927160  1.288871734337  1.851099395627  0.837336178527  7.268389567726  3.765211699260  3.270743199466  44.892849897940  9.798823105597  6.993976939776  3.510048370962  5.254819994741
+7.690064932220  9.371101703104  3.513581151966  6.269582673088  -3.342434038329  2.435021621691  8.317961214242  2.527731115678  2.104082451914  1.628035616793  6.693801901956  87.449417532585  8.448320281395  3.631171959521  3.535432563451  2.012962523477
+5.181265300052  2.000417760313  5.331833872465  0.816448557737  -1.884848473112  5.482936801055  0.338671494124  2.254212305316  6.109007727270  1.123308107743  4.525606871109  82.480653236404  2.320946879231  3.493064769387  7.015546999899  9.723163482026
+2.507546850301  7.919614214116  9.627813033414  1.833553751556  -5.094379198936  0.291367026425  4.590202092084  6.499784714951  1.774674677340  4.731712747889  2.198158607400  38.338657263713  8.044652508973  1.330713619861  9.745204820610  3.190340192452
+9.562340725954  7.726936300869  6.336740310378  4.709364151570  -2.741133715647  6.694424697665  0.523956592108  7.480218964738  2.389440146383  2.453161041934  2.160525765780  22.709030047963  9.280456388861  7.540211748505  0.000387817956  5.833845256721
+4.754587289445  4.387461656592  1.217863901793  7.505874310467  -0.800933086343  9.509851607812  3.964085274420  8.341123831811  5.604907969922  5.026083246462  3.950074338237  96.847435187184  0.299372756872  4.066400668752  7.899670113180  7.232005846578
+7.932247876358  9.181122191135  1.036960963734  1.410942700148  -4.438813940450  0.644403750206  0.531697663458  8.422996212201  1.679507759678  4.739677862243  0.567180602387  81.340276128450  9.582984575568  1.237957712873  9.689206551355  1.216043483513
+9.826811837251  9.099733344364  0.824458676097  3.162271738943  -8.536496798199  9.976175914873  4.708776321063  9.326676790780  6.332698313142  8.863018788058  1.792842600723  37.164398427003  7.329984659492  4.780050092817  3.631647485254  4.054571721006
+6.110127471858  9.655457074665  3.063562487880  8.820782685725  -3.678475013341  8.263540902792  6.377260982365  2.834062614253  8.674638167665  2.919918747402  2.495061665679  50.840293370618  5.629398427899  1.036991172312  1.071515175365  7.767547741822
+1.079584562469  7.562041727387  1.193921160867  3.380650488682  -3.459472558902  4.093368484394  9.944897111549  0.206860149244  4.522000104051  6.919095345907  6.892107341709  45.834325800674  4.357849537437  2.681236600558  8.346005432652  2.482505337945
+6.735048707054  5.116827160128  8.871734337185  1.099395627083  -7.336178627726  8.389467726376  5.211699695327  0.745299466562  6.230909794097  9.555807261369  9.311323277635  04.607346762525  4.754773355112  0.064742920937  1.101737604351  3.581212666626
+9.582673088334  2.434938329243  5.021621691831  7.961214242252  -7.731115778210  4.082351914162  8.035616128669  3.802201956928  4.260313258584  4.502480255136  3.135945252135  29.032739251201  2.807302081961  1.265110752200  0.417794813533  1.833933165081
+6.448557737188  4.848373112548  2.936801055033  8.671494124225  -4.212305416610  9.007627270112  3.308107178452  5.607471109985  8.514743640423  2.764676979434  9.324217238770  01.755458499972  3.008382965469  7.546662501791  9.614240116962  7.813194114183
+3.553751556509  4.379098936029  1.367026425459  0.202092084649  -9.784714051177  4.674577340473  1.712747214219  8.159207400444  3.314146371380  4.135249843613  3.099102286197  31.413389210319  0.285092391165  2.340537154772  6.936336869633  6.740471078470
+9.364151570274  1.133615647669  4.424697665052  3.956592108748  -0.218964838238  9.440146383245  3.161041934216  0.515565780381  7.373024796392  8.727777441875  4.040105150500  96.597876556583  3.787856660684  4.587091645438  7.461682592121  7.863062493750
+5.874310467080  0.933986343950  9.851607812396  4.085274420834  -1.123831911560  4.907969922502  6.083246462395  0.064138237022  1.226938718402  9.619314242940  6.669097175278  85.880172780723  2.947446417902  2.247688558918  1.122127135103  6.960024434141
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+
+Place-opt final QoR
+___________________
+Scenario Mapping Table
+1: default
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: clk
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+PATHGROUP QOR 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV       WHV        THV    NHV
+    1   1   0.0000     0.0000      0        -          -      -
+    1   2   0.0000     0.0000      0        -          -      -
+    1   3   0.0000     0.0000      0        -          -      -
+    1   4   0.0000     0.0000      0        -          -      -
+    1   5   0.0000     0.0000      0        -          -      -
+    1   6   0.0000     0.0000      0        -          -      -
+    1   7   0.0000     0.0000      0        -          -      -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SCENARIO QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV       WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   0.0000     0.0000   0.0000      0        -          -      -        0     0.0000       13  962445696
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESIGN QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV       WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   0.0000     0.0000   0.0000      0   0.0000     0.0000      0        0     0.0000       13  962445696     33009.49       8122        360       1617
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Place-opt final QoR Summary         WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+Place-opt final QoR Summary      0.0000     0.0000   0.0000      0   0.0000     0.0000      0        0       13  962445696     33009.49       8122
+
+Place-opt command complete                CPU:    84 s (  0.02 hr )  ELAPSE:    86 s (  0.02 hr )  MEM-PEAK:  1135 MB
+Place-opt command statistics  CPU=39 sec (0.01 hr) ELAPSED=39 sec (0.01 hr) MEM-PEAK=1.108 GB
+
+Information: Summary of UPF Cells (UPF-532)
+*******************************************************************************
+                            Summary of UPF Cells                               
+*******************************************************************************
+This is NOT a UPF design.
+UPF is NOT loaded.
+UPF is NOT committed.
+-------------------------------------------------------------------------------
+*******************************************************************************
+                        End of Summary of UPF Cells                            
+*******************************************************************************
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 16 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 8 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     1     1  0 FLW-5561  WARNING   Warning: Previously executed stage '' may be unexpected for ... (MSG-3032)
+Information:     9     9  0 ZRT-763   WARNING   Warning: Cell u_fir/intadd_34_U4 is placed overlapping with ... (MSG-3032)
+Information:     1     1  0 ZRT-022   WARNING   Warning: Cannot find a default contact code for layer CO. (Z... (MSG-3032)
+Information:     2     2  0 CTS-038   WARNING   Warning: No clock routing rule is specified. (CTS-038)          (MSG-3032)
+Information:     1     1  0 OPT-035   WARNING   Warning: Power app option opt.power.effort has been deprecat... (MSG-3032)
+Information:     4     3  0 OPT-070   WARNING   Warning: Cannot find any default max transition constraint o... (MSG-3032)
+Information:     1     1  0 OPT-200   WARNING   Warning: No tie cell is available for constant fixing. (OPT-... (MSG-3032)
+Information:     7     4  0 OPT-902   WARNING   Warning: No clock routing rules were specified. Use set_cloc... (MSG-3032)
+Information:    26    22  0        8  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 22 error&warning MSGs observed during fusion (MSG-3103)
+INFO: End environment monitoring: UCF
+INFO: Restored 0 timer status, 148 app options, 0 tcl gvars, 0 env vars
+place_opt.flow.fusion_handoff false
+INFO: place_opt is running in balanced flow mode
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
+INFO: disable CRPR-based timing. 
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Information: Design Average RC for design filtro_pdm  (NEX-011)
+Information: r = 1.671985 ohm/um, via_r = 0.578740 ohm/cut, c = 0.085551 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.786445 ohm/um, via_r = 0.461268 ohm/cut, c = 0.075380 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (2304000 2273600)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+INFO: Running power improvement flow (1)
+INFO: place_opt is running with flow.common.io_priority high.
+
+----------------------------------------------------------------------------------------------------------
+Information: Starting place_opt / final_place (FLW-8000)
+Information: Time: 2026-10-09 21:08:31 / Session:  00:01:27 / Command:  00:01:13 / CPU:  00:01:12 / Memory: 1136 MB (FLW-8100)
+----------------------------------------------------------------------------------------------------------
+
+
+Information: The RC mode used is VR for design 'filtro_pdm'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 12037, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 12036, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Starting place_opt / final_place / Timing and Congestion Driven Placement with Legalization (FLW-8000)
+Information: Time: 2026-10-09 21:08:31 / Session:  00:01:27 / Command:  00:01:13 / CPU:  00:01:13 / Memory: 1136 MB (FLW-8100)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      0:01:28     0.000     0.000 33009.492     0.000     0.440       360      1617         0     0.000      1135 
+
+Running final (timing-driven) placement step.
+----------------------------------------------------------------
+Running congestion-aware direct-timing-driven placement
+Start Timing-driven placement
+Information: Disabling integrated legalization, because it requires that the advanced legalizer is enabled.
+Information: using ELPP mode 2
+Start transferring placement data.
+Warning: To enable pin track alignment feature, the advanced legalizer has to be turned on using app option "place.legalize.enable_advanced_legalizer".
+Warning: Pin track alignment feature will be disabled in this run
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0179 seconds to build cellmap data
+Information: Extraction observers are detached as design net change threshold is reached.
+Snapped 8122 standard cells to the nearest cellrow to improve the accuracy of congestion analysis.
+Information: Coarse placer is using floating point demand from GR.
+INFO: wire-opt feature for router enabled
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Printing options for 'route.common.*'
+
+Printing options for 'route.global.*'
+global.deterministic                                    :	 on                  
+global.timing_driven                                    :	 false               
+
+Begin global routing.
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = MRDL
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CO. (ZRT-022)
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Information: AutoNdr rule can't be found. Check the settings.
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: Cell u_fir/U1677 is placed overlapping with other cells at {{16.232 18.360} {17.144 20.032}}. (ZRT-763)
+Warning: Cell u_fir/delay_reg_0__8_ is placed overlapping with other cells at {{82.960 21.704} {88.128 23.376}}. (ZRT-763)
+Warning: Cell u_cic_u_integradores_int3_reg_17_ is placed overlapping with other cells at {{215.048 10.000} {220.216 11.672}}. (ZRT-763)
+Warning: Cell u_fir/intadd_3_U32 is placed overlapping with other cells at {{12.888 80.224} {15.776 81.896}}. (ZRT-763)
+Warning: Cell u_fir/intadd_98_U6 is placed overlapping with other cells at {{109.864 81.896} {112.752 83.568}}. (ZRT-763)
+Warning: Cell u_fir/U850 is placed overlapping with other cells at {{173.856 86.912} {174.616 88.584}}. (ZRT-763)
+Warning: Cell u_fir/delay_reg_17__2_ is placed overlapping with other cells at {{19.880 163.824} {25.048 165.496}}. (ZRT-763)
+Warning: Cell u_fir/intadd_48_U11 is placed overlapping with other cells at {{83.568 163.824} {86.760 165.496}}. (ZRT-763)
+Warning: Cell u_fir/intadd_34_U4 is placed overlapping with other cells at {{161.696 160.480} {164.584 162.152}}. (ZRT-763)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Read DB] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00um,0.00um,240.40um,237.36um)
+Number of routing layers = 10
+layer M1, dir Ver, min width = 0.05um, min space = 0.05um pitch = 0.152um
+layer M2, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.152um
+layer M3, dir Ver, min width = 0.056um, min space = 0.056um pitch = 0.304um
+layer M4, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.304um
+layer M5, dir Ver, min width = 0.056um, min space = 0.056um pitch = 0.608um
+layer M6, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.608um
+layer M7, dir Ver, min width = 0.056um, min space = 0.056um pitch = 1.216um
+layer M8, dir Hor, min width = 0.056um, min space = 0.056um pitch = 1.216um
+layer M9, dir Ver, min width = 0.16um, min space = 0.16um pitch = 2.432um
+layer MRDL, dir Hor, min width = 2um, min space = 2um pitch = 4.864um
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Tech Data] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Net statistics:
+Total number of nets     = 12039
+Number of nets to route  = 11997
+11997 open nets
+ of which 11997 are without routing or PSV shapes
+42 nets are fully connected,
+ of which 42 are detail routed and 0 are global routed.
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Net length statistics: 
+Net Count(Ignore Fully Rted) 11997, Total Half Perimeter Wire Length (HPWL) 217658 microns
+HPWL   0 ~   50 microns: Net Count    10897	Total HPWL       121525 microns
+HPWL  50 ~  100 microns: Net Count      790	Total HPWL        57469 microns
+HPWL 100 ~  200 microns: Net Count      300	Total HPWL        35762 microns
+HPWL 200 ~  300 microns: Net Count        6	Total HPWL         1395 microns
+HPWL 300 ~  400 microns: Net Count        3	Total HPWL         1064 microns
+HPWL 400 ~  500 microns: Net Count        1	Total HPWL          443 microns
+HPWL 500 ~  600 microns: Net Count        0	Total HPWL            0 microns
+HPWL 600 ~  700 microns: Net Count        0	Total HPWL            0 microns
+HPWL 700 ~  800 microns: Net Count        0	Total HPWL            0 microns
+HPWL 800 ~  900 microns: Net Count        0	Total HPWL            0 microns
+HPWL 900 ~ 1000 microns: Net Count        0	Total HPWL            0 microns
+HPWL     > 1000 microns: Net Count        0	Total HPWL            0 microns
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+Average gCell capacity  1.75	 on layer (1)	 M1
+Average gCell capacity  10.94	 on layer (2)	 M2
+Average gCell capacity  5.43	 on layer (3)	 M3
+Average gCell capacity  5.49	 on layer (4)	 M4
+Average gCell capacity  2.74	 on layer (5)	 M5
+Average gCell capacity  2.74	 on layer (6)	 M6
+Average gCell capacity  1.36	 on layer (7)	 M7
+Average gCell capacity  1.36	 on layer (8)	 M8
+Average gCell capacity  0.67	 on layer (9)	 M9
+Average gCell capacity  0.33	 on layer (10)	 MRDL
+Average number of tracks per gCell 10.99	 on layer (1)	 M1
+Average number of tracks per gCell 11.00	 on layer (2)	 M2
+Average number of tracks per gCell 5.50	 on layer (3)	 M3
+Average number of tracks per gCell 5.51	 on layer (4)	 M4
+Average number of tracks per gCell 2.76	 on layer (5)	 M5
+Average number of tracks per gCell 2.76	 on layer (6)	 M6
+Average number of tracks per gCell 1.39	 on layer (7)	 M7
+Average number of tracks per gCell 1.39	 on layer (8)	 M8
+Average number of tracks per gCell 0.70	 on layer (9)	 M9
+Average number of tracks per gCell 0.35	 on layer (10)	 MRDL
+Number of gCells = 204480
+Current Stage stats:
+[End of Build Congestion Map] Elapsed real time: 0:00:00 
+[End of Build Congestion Map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion Map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion Map] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Current Stage stats:
+[End of Add Nets Demand] Elapsed real time: 0:00:00 
+[End of Add Nets Demand] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Add Nets Demand] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Add Nets Demand] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Number of user frozen nets = 0
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Data] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Information: Using 1 threads for routing. (ZRT-444)
+Information: Placement fast mode ON
+Information: Multiple gcell levels ON
+Information: Buffer distance is estimated to be ~862.0000um (515 gCells)
+
+Start GR phase 0
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+10% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+20% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+30% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+40% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+50% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+60% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+70% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+80% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+90% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+[rtAllBotParts] Elapsed real time: 0:00:01 
+[rtAllBotParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[rtTop] Elapsed real time: 0:00:00 
+[rtTop] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:01 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[End of Initial Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Initial Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Initial. Routing result:
+Initial. Both Dirs: Dmd-Cap  =    70 Max = 2 GRCs =   212 (0.52%)
+Initial. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. V routing: Dmd-Cap  =    70 Max = 2 (GRCs = 29) GRCs =   212 (1.04%)
+Initial. Both Dirs: Overflow =   344 Max = 3 GRCs =  1229 (3.01%)
+Initial. H routing: Overflow =    14 Max = 3 (GRCs =  1) GRCs =    26 (0.13%)
+Initial. V routing: Overflow =   329 Max = 3 (GRCs =  3) GRCs =  1203 (5.88%)
+Initial. M1         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.00%)
+Initial. M2         Overflow =    14 Max = 3 (GRCs =  1) GRCs =    26 (0.13%)
+Initial. M3         Overflow =   317 Max = 3 (GRCs =  3) GRCs =  1191 (5.82%)
+Initial. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M5         Overflow =    11 Max = 1 (GRCs = 11) GRCs =    11 (0.05%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. MRDL       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 215479.84
+Initial. Layer M1 wire length = 1152.86
+Initial. Layer M2 wire length = 76264.14
+Initial. Layer M3 wire length = 76133.93
+Initial. Layer M4 wire length = 9364.47
+Initial. Layer M5 wire length = 38091.93
+Initial. Layer M6 wire length = 1438.94
+Initial. Layer M7 wire length = 11853.80
+Initial. Layer M8 wire length = 96.39
+Initial. Layer M9 wire length = 1083.38
+Initial. Layer MRDL wire length = 0.00
+Initial. Total Number of Contacts = 70461
+Initial. Via VIA12SQ_C count = 33814
+Initial. Via VIA23SQ_C count = 30717
+Initial. Via VIA34SQ_C count = 2437
+Initial. Via VIA45SQ_C count = 2359
+Initial. Via VIA56SQ_C count = 509
+Initial. Via VIA67SQ_C count = 539
+Initial. Via VIA78SQ_C count = 44
+Initial. Via VIA89_C count = 42
+Initial. Via VIA9RDL count = 0
+Initial. completed.
+
+Start GR phase 1
+Fri Oct  9 21:08:34 2026
+Number of partitions: 1 (1 x 1)
+Size of partitions: 144 gCells x 142 gCells
+10% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+20% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+30% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+40% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+50% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+60% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+70% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+80% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+90% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+[rtAllParts] Elapsed real time: 0:00:00 
+[rtAllParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[updNetsDmd] Elapsed real time: 0:00:00 
+[updNetsDmd] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+phase1. Routing result:
+phase1. Both Dirs: Dmd-Cap  =     0 Max = 0 GRCs =     0 (0.00%)
+phase1. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. Both Dirs: Overflow =     0 Max = 0 GRCs =     0 (0.00%)
+phase1. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M3         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. MRDL       Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 217519.62
+phase1. Layer M1 wire length = 1546.89
+phase1. Layer M2 wire length = 77154.81
+phase1. Layer M3 wire length = 74749.18
+phase1. Layer M4 wire length = 10448.80
+phase1. Layer M5 wire length = 38402.10
+phase1. Layer M6 wire length = 1569.05
+phase1. Layer M7 wire length = 11978.98
+phase1. Layer M8 wire length = 171.63
+phase1. Layer M9 wire length = 1498.18
+phase1. Layer MRDL wire length = 0.00
+phase1. Total Number of Contacts = 71556
+phase1. Via VIA12SQ_C count = 33825
+phase1. Via VIA23SQ_C count = 30956
+phase1. Via VIA34SQ_C count = 2890
+phase1. Via VIA45SQ_C count = 2584
+phase1. Via VIA56SQ_C count = 568
+phase1. Via VIA67SQ_C count = 603
+phase1. Via VIA78SQ_C count = 66
+phase1. Via VIA89_C count = 64
+phase1. Via VIA9RDL count = 0
+phase1. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:02 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
+[End of Whole Chip Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Whole Chip Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+
+Congestion utilization per direction:
+Average vertical track utilization   = 38.38 %
+Peak    vertical track utilization   = 100.00 %
+Average horizontal track utilization = 20.15 %
+Peak    horizontal track utilization = 68.42 %
+
+[End of Global Routing] Elapsed real time: 0:00:02 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
+[End of Global Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Global Routing] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+[End of dbOut] Elapsed real time: 0:00:00 
+[End of dbOut] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of dbOut] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of dbOut] Total (MB): Used    0  Alloctr    0  Proc 5253 
+Information: Maximum hot spot size per layer
+	M4	0
+	M5	0
+	M6	0
+	M7	0
+	M8	0
+	M9	0
+	MRDL	0
+Maximum hot spot size is 0 
+CONG_HS metric is 0.000 
+
+Using per-layer congestion maps for congestion reduction.
+Information: Found routing layer 'M1'.
+Information: Found routing layer 'M2'.
+Information: Found routing layer 'M3'.
+Information: Found routing layer 'M4'.
+Information: Found routing layer 'M5'.
+Information: Found routing layer 'M6'.
+Information: Found routing layer 'M7'.
+Information: Found routing layer 'M8'.
+Information: Found routing layer 'M9'.
+Information: Found routing layer 'MRDL'.
+Information: min layer:            'M1'.
+Information: min horizontal layer: 'M2' On-grid: yes.
+Information: min vertical layer:   'M1' On-grid: yes.
+Information: 0.00% of design has horizontal routing density above target_routing_density of 0.80.
+Information: 49.35% of design has vertical routing density above target_routing_density of 0.80.
+Completed transferring placement data.
+Running placement using 1 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.70, congestion_driven_max_util 0.89. (PLACE-027)
+Information: HFW control 'on' invoked.
+coarse place 100% done.
+Warning: There is insufficient area available to achieve the target routing density of 0.80. Using a value of 0.84 instead. (PLACE-029)
+Information: Reducing cell density for 67.1% of the movable cells to alleviate congestion. This changes the average cell density in non-congested areas from 0.689 to 0.860. (PLACE-030)
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Information: The RC mode used is VR for design 'filtro_pdm'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 12037, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 12036, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Corner Scaling is off, multiplier is 1.000000
+Information: timingScenario default timingCorner default.  Using corner default for worst leakage corner. (OPT-078)
+nplLib: default vr hor dist = 1046
+nplLib: default vr ver dist = 1046
+nplLib: default vr buf size = 6
+nplLib: default vr buf size = 2
+Placer using max_unbuffered_distance = 1046.00
+
+Placement Options:
+Effort:                        medium_effort       
+Timing Driven:                 true                
+Buffering Aware Timing Driven: false               
+Seed locs:                     true                
+Incremental:                   false               
+Congestion:                    true                
+Congestion Effort:             medium              
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+
+ELPPver2: wire length prioritization enabled
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+****** eLpp estimated wire length 
+0.207091% of the net wire length are clock nets
+0% of the clock net wire length has no activity
+Clock net wire length: 4.42348e+06
+Total net wire length: 2.136e+09
+****** eLpp weights (with caps) (no lengths)
+Number of nets: 12037, of which 12036 non-clock nets
+Number of nets with 0 toggle rate: 56 (0.465232%)
+Max toggle rate = 0.00960002, average toggle rate = 0.00172568
+Max non-clock toggle rate = 0.00314766
+eLpp weight range = (0.000111589, 5.48483)
+*** 2 nets are filtered out
+Information: using ELPP mode 2
+Start transferring placement data.
+****** Net weight manager: report ******
+Weights included: eLpp  PostEffort  
+Number of nets with non-default weights: 12037
+Amt power = 0.1
+Non-default weight range: (0.900011, 5.44848)
+                             Min         Max         Avg       Stdev        Skew
+       Toggle Rates  1.95313e-07  0.00960002  0.00172567 0.000579606   -0.321534
+      Power Weights  0.000111589     5.48483    0.985936     0.33115   -0.321534
+      Final Weights     0.900011     5.44848    0.998926   0.0521989     51.3144
+Information: Automatic repeater spreading is enabled.
+Information: Automatic timing control is enabled.
+Information: Clock gate latency aware placement is enabled. (PLACE-085)
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+DTDP placement: scenario=default
+Factor(0) = 1
+Factor(BASE) = 1
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+skew 16244 name=clk included=1
+Completed transferring placement data.
+Running placement using 1 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.70, congestion_driven_max_util 0.89. (PLACE-027)
+Information: HFW control 'on' invoked.
+coarse place 50% done.
+coarse place 67% done.
+coarse place 83% done.
+coarse place 100% done.
+Information: Coarse placer wire length estimate = 204441
+Information: Coarse placer active wire length estimate = 397.437
+Information: Coarse placer weighted wire length estimate = 227230
+Information: Extraction observers are detached as design net change threshold is reached.
+----------------------------------------------------------------
+START_CMD: optimize_dft        CPU:     95 s ( 0.03 hr) ELAPSE:     96 s ( 0.03 hr) MEM-PEAK:  1135 Mb Fri Oct  9 21:08:39 2026
+
+  Total PARTITION group count: 1
+  Total SCANCHAINS checked: 1
+  Total OPTIMIZABLE BITS: 1332
+  VALIDATED :  1
+  FAILED    :  0
+
+DFT: Repaired SCANDEF MV crossings.
+DFT: repartition_method: physical_aware
+DFT: reordering_method: timing_friendly
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Information: Design Average RC for design filtro_pdm  (NEX-011)
+Information: r = 1.671985 ohm/um, via_r = 0.578740 ohm/cut, c = 0.085252 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.786445 ohm/um, via_r = 0.461268 ohm/cut, c = 0.074908 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'filtro_pdm'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 12037, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 12036, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+APSINFO: No multi-Vth libcells found, turning off percentage LVT optimization flow
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0182 seconds to build cellmap data
+INFO: creating 29(r) x 29(c) GridCells YDim 8.36 XDim 8.36
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 841
+INFO: creating 29(r) x 29(c) GridCells YDim 8.36 XDim 8.36
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 841
+Total 0.0595 seconds to load 8122 cell instances into cellmap, 8122 cells are off site row
+Moveable cells: 8122; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
+Average cell width 2.4307, cell height 1.6720, cell area 4.0642 for total 8122 placed and application fixed cells
+APS-CHARZ: Performing leakage analysis
+Information: Switching output filtering off (MSG-3401)
+Non-default App Option report
+All App Options have their default value.
+Running DFT optimization using 1 thread(s)
+Information: Switching output filtering on (MSG-3401)
+DFT: pre-opt  wirelength: 11590
+DFT: post-opt wirelength: 7502
+DFT: post-opt wirelength difference: -4087 (ratio: -35.269549 %)
+DFT: Timing on scan path is likely to be met after proper buffering.
+
+  Total PARTITION group count: 1
+  Total SCANCHAINS checked: 1
+  Total OPTIMIZABLE BITS: 1332
+  VALIDATED :  1
+  FAILED    :  0
+
+END_CMD: optimize_dft          CPU:     97 s ( 0.03 hr) ELAPSE:     97 s ( 0.03 hr) MEM-PEAK:  1135 Mb Fri Oct  9 21:08:41 2026
+Fixing logic constant
+Completed Timing-driven placement, Elapsed time =   0: 0: 9 
+----------------------------------------------------------------
+Running legalize_placement
+Start Legalization
+nplDplc2Placer::setParam(effort,1)
+nplDplc2Placer::setParam(debug,0)
+nplDplc2Placer::setParam(site_check,2)
+nplDplc2Placer::setParam(app_firm_wgt,0)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 131 total shapes.
+Cached 1442 vias out of 1560 total vias.
+
+Legalizing Top Level Design filtro_pdm ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0180 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 59 ref cells (8 fillers) from library
+
+Bounds/Regions In This Design:
+        Area    Num Cells  Exclusive Name
+ (square um)
+     47906.1         8122        Yes DEFAULT_VA
+
+Warning: max_legality_failures=5000 ignored.
+	To use it, set limit_legality_checks to true.
+Warning: max_legality_check_range=500 ignored.
+	To use it, set limit_legality_checks to true.
+Starting legalizer.
+Warning: Exclusive bound 'DEFAULT' has no cells.
+Optimizing Exclusive Bound 'DEFAULT_VA' (2/2)
+    Done Exclusive Bound 'DEFAULT_VA' (2/2) (0 sec)
+Legalization complete (0 total sec)
+
+****************************************
+  Report : Placement Attempts
+  Site   : unit
+****************************************
+
+number of cells:                   8122
+number of references:                59
+number of site rows:                130
+number of locations attempted:   188474
+number of locations failed:           0  (0.0%)
+
+Legality of references at locations:
+0 references had failures.
+
+Legality of references in rows:
+0 references had row failures.
+
+****************************************
+  Report : Cell Displacements
+****************************************
+
+number of cells aggregated:        8122 (129885 total sites)
+avg row height over cells:        1.672 um
+rms cell displacement:            0.529 um ( 0.32 row height)
+rms weighted cell displacement:   0.529 um ( 0.32 row height)
+max cell displacement:            2.771 um ( 1.66 row height)
+avg cell displacement:            0.453 um ( 0.27 row height)
+avg weighted cell displacement:   0.453 um ( 0.27 row height)
+number of cells moved:             8122
+number of large displacements:        0
+large displacement threshold:     3.000 row height
+
+Displacements of worst 10 cells:
+Cell: u_fir/U3307 (AO22X1_RVT)
+  Input location: (70.7659,212.96)
+  Legal location: (71.408,215.656)
+  Displacement:   2.771 um ( 1.66 row height)
+Cell: U269 (INVX0_RVT)
+  Input location: (227.574,41.049)
+  Legal location: (228.272,38.424)
+  Displacement:   2.716 um ( 1.62 row height)
+Cell: U403 (AND2X1_RVT)
+  Input location: (216.013,52.775)
+  Legal location: (216.264,50.128)
+  Displacement:   2.659 um ( 1.59 row height)
+Cell: U461 (AO22X1_RVT)
+  Input location: (196.103,50.9866)
+  Legal location: (196.048,53.472)
+  Displacement:   2.486 um ( 1.49 row height)
+Cell: u_fir/U2806 (AO22X1_RVT)
+  Input location: (114.094,27.4492)
+  Legal location: (114.728,25.048)
+  Displacement:   2.484 um ( 1.49 row height)
+Cell: U260 (INVX0_RVT)
+  Input location: (223.028,69.3128)
+  Legal location: (223.104,66.848)
+  Displacement:   2.466 um ( 1.47 row height)
+Cell: U400 (AND2X1_RVT)
+  Input location: (215.608,67.7446)
+  Legal location: (215.656,70.192)
+  Displacement:   2.448 um ( 1.46 row height)
+Cell: U784 (AO22X1_RVT)
+  Input location: (158.387,20.9448)
+  Legal location: (158.352,23.376)
+  Displacement:   2.431 um ( 1.45 row height)
+Cell: U802 (AO22X1_RVT)
+  Input location: (170.869,10.9166)
+  Legal location: (170.816,13.344)
+  Displacement:   2.428 um ( 1.45 row height)
+Cell: U501 (AO22X1_RVT)
+  Input location: (198.243,25.792)
+  Legal location: (198.176,23.376)
+  Displacement:   2.417 um ( 1.45 row height)
+
+Information: Extraction observers are detached as design net change threshold is reached.
+Completed Legalization, Elapsed time =   0: 0: 0 
+Moved 8122 out of 8122 cells, ratio = 1.000000
+Total displacement = 4336.064453(um)
+Max displacement = 3.338100(um), u_fir/U3307 (70.765900, 212.960007, 0) => (71.407997, 215.656006, 0)
+Displacement histogram:
+  0 ~  10% cells displacement <=      0.13(um)
+  0 ~  20% cells displacement <=      0.22(um)
+  0 ~  30% cells displacement <=      0.32(um)
+  0 ~  40% cells displacement <=      0.41(um)
+  0 ~  50% cells displacement <=      0.50(um)
+  0 ~  60% cells displacement <=      0.59(um)
+  0 ~  70% cells displacement <=      0.69(um)
+  0 ~  80% cells displacement <=      0.78(um)
+  0 ~  90% cells displacement <=      0.90(um)
+  0 ~ 100% cells displacement <=      3.34(um)
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Legalization succeeded.
+----------------------------------------------------------------
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Information: Design Average RC for design filtro_pdm  (NEX-011)
+Information: r = 1.671985 ohm/um, via_r = 0.578740 ohm/cut, c = 0.085006 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.786445 ohm/um, via_r = 0.461268 ohm/cut, c = 0.074802 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'filtro_pdm'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 12037, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 12036, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+    Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
+
+     ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
+      TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
+    --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
+      0:01:38     0.000     0.000 33009.492     0.011    44.199       360      1617         0     0.000      1135 
+
+Information: Ending   place_opt / final_place / Timing and Congestion Driven Placement with Legalization (FLW-8001)
+Information: Time: 2026-10-09 21:08:42 / Session:  00:01:38 / Command:  00:01:24 / CPU:  00:01:24 / Memory: 1136 MB (FLW-8100)
+
+
+
+INFO: sweep stats: 0 gates / 16 nets gobbled, 0 gates (0 seq) simplified
+
+
+Information: Runtime Summary (place_opt / final_place)  (FLW-9000)
+----------------------------------------------------------------------------
+    Elapse (Hrs)   Elapse (%)       CPU/Elapse       Category
+----------------------------------------------------------------------------
+      0.00           42.4%             1.0           Placement 
+      0.00           26.2%             1.0           Global Route 
+      0.00           14.6%             1.0           DFT Opt 
+      0.00            9.1%             1.0           Full Timing Update 
+      0.00            6.0%             1.0           Legalize 
+      0.00            1.7%             1.0           Other 
+      0.00            0.0%             1.3           Init 
+      0.00            0.0%             2.0           RC Refresh 
+----------------------------------------------------------------------------
+      0.00          100.0%             1.0           Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 1
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6526Y / 64 CPUs  
+Sockets: 2, Cores: 16, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Ending   place_opt / final_place (FLW-8001)
+Information: Time: 2026-10-09 21:08:43 / Session:  00:01:38 / Command:  00:01:24 / CPU:  00:01:24 / Memory: 1136 MB (FLW-8100)
+
+Information: >>>>>>> 5 unique error and warning message tags while observing place_opt / final_place: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:    18     9  0 ZRT-763   WARNING   Warning: Cell u_fir/intadd_34_U4 is placed overlapping with ... (MSG-3032)
+Information:     2     1  0 ZRT-022   WARNING   Warning: Cannot find a default contact code for layer CO. (Z... (MSG-3032)
+Information:     2     2  0 PDC-003   WARNING   Warning: Routing direction of metal layer PO is neither "hor... (MSG-3032)
+Information:     8     1  0 OPT-902   WARNING   Warning: No clock routing rules were specified. Use set_cloc... (MSG-3032)
+Information:     1     1  0 PLACE-029 WARNING   Warning: There is insufficient area available to achieve the... (MSG-3032)
+Information:    31    14  0        5  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 14 error&warning MSGs observed during place_opt / final_place (MSG-3103)
+
+INFO: Start environment monitoring: UCF
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+INFO: place_opt is running in balanced flow mode.
+INFO: EIO v6 - EPO v3 - Cost Function Configuration 0.5/0.5/0.5/0.5/0.9
+INFO: ARE v5
+****************************************
+Report : report_tbcs
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:08:43 2026
+****************************************
+INFO: EOO V3 is enabled
+INFO: Start environment monitoring: recipes
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+INFO: place_opt is running in balanced flow mode.
+INFO: EIO v6 - EPO v3 - Cost Function Configuration 0.5/0.5/0.5/0.5/0.9
+INFO: ARE v5
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+INFO: place_opt is running in balanced flow mode
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+Warning: Power app option opt.power.effort has been deprecated. Please remove it from your script. (OPT-035)
+INFO: Leakage Power Aware Optimization Enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+INFO: compile_fusion is running with flow.common.io_priority high.
+INFO: disable CRPR-based timing. 
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (2304000 2273600)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+
+Warning: Previously executed stage 'initial_opto' may be unexpected for the current flow stage 'final_opto' (FLW-5561)
+
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (2304000 2273600)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+
+
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+Info: update em.
+
+Place-opt timing update complete          CPU:    99 s (  0.03 hr )  ELAPSE:   101 s (  0.03 hr )  MEM-PEAK:  1135 MB
+
+Place-opt initial QoR
+_____________________
+Scenario Mapping Table
+1: default
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: clk
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+PATHGROUP QOR 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV       WHV        THV    NHV
+    1   1   0.0000     0.0000      0        -          -      -
+    1   2   0.0000     0.0000      0        -          -      -
+    1   3   0.0000     0.0000      0        -          -      -
+    1   4   0.0000     0.0000      0        -          -      -
+    1   5   0.0000     0.0000      0        -          -      -
+    1   6   0.0000     0.0000      0        -          -      -
+    1   7   0.0000     0.0000      0        -          -      -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SCENARIO QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV       WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   0.0000     0.0000   0.0000      0        -          -      -        2     0.0109       69  963103232
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESIGN QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV       WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   0.0000     0.0000   0.0000      0   0.0000     0.0000      0        2     0.0109       69  963103232     33009.49       8122        360       1617
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Place-opt initial QoR Summary       WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+Place-opt initial QoR Summary    0.0000     0.0000   0.0000      0   0.0000     0.0000      0        2       69  963103232     33009.49       8122
+Information: The netlist change observers are disabled for incremental extraction. (TIM-126)
+INFO: using 1 threads
+Place-opt initialization complete         CPU:   101 s (  0.03 hr )  ELAPSE:   103 s (  0.03 hr )  MEM-PEAK:  1135 MB
+WARNING: Net clk is a high-fanout net with 1332 sinks; skipping this net during optimization. 
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+Information: The netlist change observers are enabled for incremental extraction. (TIM-127)
+
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0181 seconds to build cellmap data
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+Total 0.0615 seconds to load 8122 cell instances into cellmap
+Moveable cells: 8122; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
+Average cell width 2.4307, cell height 1.6720, cell area 4.0642 for total 8122 placed and application fixed cells
+Place-opt optimization Phase 5 Iter  1          0.00        0.00      0.00        71      33009.49  963103232.00        8122              0.03      1135
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+
+Place-opt optimization Phase 6 Iter  1          0.00        0.00      0.00        71      33009.49  963103232.00        8122              0.03      1135
+Corner Scaling is off, multiplier is 1.000000
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 6 Iter  2          0.00        0.00      0.00        71      33009.49  963103232.00        8122              0.03      1135
+Place-opt optimization Phase 6 Iter  3          0.00        0.00      0.00         7      33097.94  969828992.00        8122              0.03      1135
+INFO: Restore MV PD Boundary Restriction
+
+Place-opt optimization Phase 7 Iter  1          0.00        0.00      0.00         4      33100.48  970070144.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter  2          0.00        0.00      0.00         4      33100.48  970070144.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter  3          0.00        0.00      0.00         4      33100.48  970070144.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter  4          0.00        0.00      0.00         4      33100.48  970070144.00        8162              0.03      1135
+Number of Site types in the design = 1
+INFO: Skipping activation of hold scenarios prior to CUS.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Information: CTS will work on the following scenarios. (CTS-101)
+Information: CTS will work on all clocks in active scenarios, including 1 master clocks and 0 generated clocks. (CTS-107)
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+CCD app option: ccd.targeted_ccd_path_groups:  **clock_gating_default**
+Target path group: scenario default pathgroup **clock_gating_default**
+Information: CCD will use corner default for honoring max prepone/postpone limits
+Uskew Characterizer: corner: default, scalingFactor: 1.000
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+@ CG solver holdWeight = 0.500000
+@ CG solver setupWeight = 1.000000
+@ CG solver delayCostWeight = 5.000000
+@ CG solver powerAwareDelayCostWeight = 5.000000
+@ CG solver zeroDirWeight = 5.000000
+@ CG solver wnsWeight = 400.000000
+Information: Scenario: default type: DYNAMIC,LEAKAGE
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'low'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 4 ****
+CCD-Info: The design has concentrated toggle rate data.
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+CTS-038    1  Warning  No clock routing rule is specified.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Information: Estimating clock gate latencies for scenario 'default'. (OPT-909)
+INFO: Skipping deactivation of hold scenarios after CUS.
+Number of Site types in the design = 1
+Place-opt optimization Phase 7 Iter  5          0.00        0.00      0.00         4      33100.48  970070144.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter  6          0.00        0.00      0.00         4      33100.48  970070144.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter  7          0.00        0.00      0.00         4      33100.48  970070144.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter  8          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+Number of Site types in the design = 1
+INFO: Skipping activation of hold scenarios prior to CUS.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Information: CTS will work on the following scenarios. (CTS-101)
+Information: CTS will work on all clocks in active scenarios, including 1 master clocks and 0 generated clocks. (CTS-107)
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+CCD app option: ccd.targeted_ccd_path_groups:  **clock_gating_default**
+Target path group: scenario default pathgroup **clock_gating_default**
+Information: CCD will use corner default for honoring max prepone/postpone limits
+Uskew Characterizer: corner: default, scalingFactor: 1.000
+Information: 'default' is identified as primary corner for initial clock tree building. (CTS-103)
+@ CG solver holdWeight = 0.500000
+@ CG solver setupWeight = 1.000000
+@ CG solver delayCostWeight = 5.000000
+@ CG solver powerAwareDelayCostWeight = 5.000000
+@ CG solver zeroDirWeight = 5.000000
+@ CG solver wnsWeight = 400.000000
+Information: Scenario: default type: DYNAMIC,LEAKAGE
+Information: Activity for scenario default was cached, no propagation required. (POW-005)
+CCD-Info: The design has concentrated toggle rate data.
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+CTS-038    1  Warning  No clock routing rule is specified.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Information: Estimating clock gate latencies for scenario 'default'. (OPT-909)
+INFO: Skipping deactivation of hold scenarios after CUS.
+Number of Site types in the design = 1
+Place-opt optimization Phase 7 Iter  9          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 7 Iter 10          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter 11          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter 12          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter 13          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+Place-opt optimization Phase 7 Iter 14          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+
+Place-opt optimization Phase 8 Iter  1          0.00        0.00      0.00         4      33100.48  969279616.00        8162              0.03      1135
+
+Place-opt optimization Phase 9 Iter  1          0.00        0.00      0.00         4      33096.16  968617600.00        8162              0.03      1135
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 10 Iter  1         0.00        0.00      0.00         4      33096.16  968617600.00        8162              0.03      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Disable clock slack update for ideal clocks
+Place-opt optimization Phase 11 Iter  1         0.00        0.00      0.00         4      33096.16  968617600.00        8162              0.03      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Place-opt optimization Phase 12 Iter  1         0.00        0.00      0.00         4      33096.16  968617600.00        8162              0.03      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+
+Place-opt optimization Phase 13 Iter  1         0.00        0.00      0.00         4      33096.16  968617600.00        8162              0.03      1135
+
+Place-opt optimization Phase 14 Iter  1         0.00        0.00      0.00         4      33056.77  966599680.00        8145              0.03      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+Place-opt optimization Phase 14 Iter  2         0.00        0.00      0.00         4      32955.61  952866688.00        8145              0.03      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+
+Disable clock slack update for ideal clocks
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'low'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 4 ****
+Place-opt optimization Phase 15 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Place-opt optimization Phase 16 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+
+Disable clock slack update for ideal clocks
+INFO:  SEQ DEL WNS is protecting TNS
+INFO:  SEQ DEL WNS is protecting TNS
+Place-opt optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Place-opt optimization Phase 17 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+
+Place-opt optimization Phase 18 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+Place-opt optimization Phase 18 Iter  2         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+
+Place-opt optimization Phase 19 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+Warning: No tie cell is available for constant fixing. (OPT-200)
+
+Place-opt optimization Phase 20 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+
+Place-opt optimization Phase 21 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+
+
+
+Place-opt optimization Phase 24 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+Corner Scaling is off, multiplier is 1.000000
+INFO: Restore MV PD Boundary Restriction
+
+START_FUNC : legalize_placement_pre_run_core CPU :    118 s ( 0.03 hr) ELAPSE :    120 s ( 0.03 hr) MEM-PEAK :  1135 Mb
+END_FUNC : legalize_placement_pre_run_core CPU :    118 s ( 0.03 hr) ELAPSE :    120 s ( 0.03 hr) MEM-PEAK :  1135 Mb
+Place-opt optimization Phase 25 Iter  1         0.00        0.00      0.00         4      32955.36  952832256.00        8145              0.03      1135
+nplDplc2Placer::setParam(effort,1)
+nplDplc2Placer::setParam(debug,0)
+nplDplc2Placer::setParam(site_check,2)
+nplDplc2Placer::setParam(app_firm_wgt,0)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 131 total shapes.
+Cached 1442 vias out of 1560 total vias.
+
+Legalizing Top Level Design filtro_pdm ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0180 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 56 ref cells (8 fillers) from library
+
+Bounds/Regions In This Design:
+        Area    Num Cells  Exclusive Name
+ (square um)
+     47906.1         8145        Yes DEFAULT_VA
+
+Starting legalizer.
+Warning: Exclusive bound 'DEFAULT' has no cells.
+Optimizing Exclusive Bound 'DEFAULT_VA' (2/2)
+    Done Exclusive Bound 'DEFAULT_VA' (2/2) (0 sec)
+Legalization complete (0 total sec)
+
+****************************************
+  Report : Placement Attempts
+  Site   : unit
+****************************************
+
+number of cells:                   8145
+number of references:                56
+number of site rows:                130
+number of locations attempted:   165163
+number of locations failed:           0  (0.0%)
+
+Legality of references at locations:
+0 references had failures.
+
+Legality of references in rows:
+0 references had row failures.
+
+****************************************
+  Report : Cell Displacements
+****************************************
+
+number of cells aggregated:        8145 (129672 total sites)
+avg row height over cells:        1.672 um
+rms cell displacement:            0.066 um ( 0.04 row height)
+rms weighted cell displacement:   0.066 um ( 0.04 row height)
+max cell displacement:            1.733 um ( 1.04 row height)
+avg cell displacement:            0.006 um ( 0.00 row height)
+avg weighted cell displacement:   0.006 um ( 0.00 row height)
+number of cells moved:              152
+number of large displacements:        0
+large displacement threshold:     3.000 row height
+
+Displacements of worst 10 cells:
+Cell: u_fir/ZBUF_141_inst_1618 (NBUFFX4_RVT)
+  Input location: (20.032,202.28)
+  Legal location: (20.488,200.608)
+  Displacement:   1.733 um ( 1.04 row height)
+Cell: u_fir/ZBUF_73_inst_1651 (NBUFFX2_RVT)
+  Input location: (139.808,203.952)
+  Legal location: (140.264,202.28)
+  Displacement:   1.733 um ( 1.04 row height)
+Cell: u_fir/ZBUF_47_inst_1633 (NBUFFX4_RVT)
+  Input location: (88.432,195.592)
+  Legal location: (88.888,193.92)
+  Displacement:   1.733 um ( 1.04 row height)
+Cell: u_fir/ZBUF_40_inst_1619 (NBUFFX2_RVT)
+  Input location: (100.288,175.528)
+  Legal location: (99.984,173.856)
+  Displacement:   1.699 um ( 1.02 row height)
+Cell: u_fir/ZBUF_38_inst_1645 (NBUFFX2_RVT)
+  Input location: (204.104,175.528)
+  Legal location: (203.952,173.856)
+  Displacement:   1.679 um ( 1.00 row height)
+Cell: u_fir/ZBUF_60_inst_1640 (NBUFFX4_RVT)
+  Input location: (197.112,208.968)
+  Legal location: (197.112,207.296)
+  Displacement:   1.672 um ( 1.00 row height)
+Cell: u_fir/ZBUF_32_inst_1616 (NBUFFX2_RVT)
+  Input location: (81.896,11.672)
+  Legal location: (81.896,10)
+  Displacement:   1.672 um ( 1.00 row height)
+Cell: u_fir/ZBUF_51_inst_1637 (NBUFFX4_RVT)
+  Input location: (123.544,198.936)
+  Legal location: (124.76,198.936)
+  Displacement:   1.216 um ( 0.73 row height)
+Cell: u_fir/ZBUF_84_inst_1644 (NBUFFX4_RVT)
+  Input location: (204.408,197.264)
+  Legal location: (205.624,197.264)
+  Displacement:   1.216 um ( 0.73 row height)
+Cell: u_fir/ZBUF_53_inst_1627 (NBUFFX4_RVT)
+  Input location: (78.4,210.64)
+  Legal location: (79.464,210.64)
+  Displacement:   1.064 um ( 0.64 row height)
+
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+
+
+INFO: Enabled CLO at stage after_LGL3.
+
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+INFO: place.legalize.enable_advanced_legalizer not set - need to revert CLO
+INFO: First Place-opt did not mark run with CLO enabled/disabled property
+INFO: Concurrent Legalization and Optimization (CLO) Reverted
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0182 seconds to build cellmap data
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+Total 0.0617 seconds to load 8145 cell instances into cellmap
+Moveable cells: 8145; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
+Average cell width 2.4199, cell height 1.6720, cell area 4.0461 for total 8145 placed and application fixed cells
+Place-opt optimization Phase 29 Iter  1         0.00        0.00      0.00         7      32955.36  952832256.00        8145              0.03      1135
+
+secOpt: All Scenarios Report
+-----------------------------------
+	 scenario   :  default  
+	 Constraint :  setup max-tran max-cap Dynamic Leakage   
+	 Active     :  true 
+
+
+secOpt: reduced Scenarios Report
+-----------------------------------
+
+secOpt: Worst TPO Scenarios Report
+-----------------------------------
+	 WORST TPO scenario   :  default  
+	 WORST LKG scenario   :  default  
+	 WORST DYN scenario   :  default  
+-----------------------------------
+
+Place-opt optimization Phase 30 Iter  1         0.00        0.00      0.00         6      32955.36  952832256.00        8145              0.03      1135
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+
+Place-opt optimization Phase 31 Iter  1         0.00        0.00      0.00         6      32955.36  952832256.00        8145              0.03      1135
+Place-opt optimization Phase 31 Iter  2         0.00        0.00      0.00         6      32955.36  952832256.00        8145              0.03      1135
+Place-opt optimization Phase 31 Iter  3         0.00        0.00      0.00         5      32959.68  953494336.00        8145              0.03      1135
+INFO: Restore MV PD Boundary Restriction
+
+Place-opt optimization Phase 32 Iter  1         0.00        0.00      0.00         4      32959.68  953494336.00        8145              0.03      1135
+Place-opt optimization Phase 32 Iter  2         0.00        0.00      0.00         4      32959.68  953494336.00        8145              0.03      1135
+Place-opt optimization Phase 32 Iter  3         0.00        0.00      0.00         4      32959.68  953494336.00        8145              0.03      1135
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 32 Iter  4         0.00        0.00      0.00         4      32959.68  953494336.00        8145              0.03      1135
+Place-opt optimization Phase 32 Iter  5         0.00        0.00      0.00         4      32959.68  953494336.00        8145              0.03      1135
+
+Place-opt optimization Phase 33 Iter  1         0.00        0.00      0.00         4      32959.68  953494336.00        8145              0.03      1135
+
+Place-opt optimization Phase 34 Iter  1         0.00        0.00      0.00         4      32934.77  952289408.00        8131              0.03      1135
+Corner Scaling is off, multiplier is 1.000000
+Corner Scaling is off, multiplier is 1.000000
+ndr _snps_autoNdr_delay_1w3s is auto ndr
+bmap: stepx = stepy = 83600
+creating bmap
+DB units per micron : 10000
+Place-opt optimization Phase 34 Iter  2         0.00        0.00      0.00         4      32934.77  952289408.00        8131              0.03      1135
+Place-opt optimization Phase 34 Iter  3         0.00        0.00      0.00         1      32946.21  953189120.00        8131              0.03      1135
+INFO: Restore MV PD Boundary Restriction
+
+
+
+START_FUNC : legalize_placement_pre_run_core CPU :    123 s ( 0.03 hr) ELAPSE :    125 s ( 0.03 hr) MEM-PEAK :  1135 Mb
+END_FUNC : legalize_placement_pre_run_core CPU :    123 s ( 0.03 hr) ELAPSE :    125 s ( 0.03 hr) MEM-PEAK :  1135 Mb
+Place-opt optimization Phase 37 Iter  1         0.00        0.00      0.00         0      32946.21  953189120.00        8136              0.03      1135
+nplDplc2Placer::setParam(effort,1)
+nplDplc2Placer::setParam(debug,0)
+nplDplc2Placer::setParam(site_check,2)
+nplDplc2Placer::setParam(app_firm_wgt,0)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 131 total shapes.
+Cached 1442 vias out of 1560 total vias.
+
+Legalizing Top Level Design filtro_pdm ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0180 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 58 ref cells (8 fillers) from library
+
+Bounds/Regions In This Design:
+        Area    Num Cells  Exclusive Name
+ (square um)
+     47906.1         8136        Yes DEFAULT_VA
+
+Starting legalizer.
+Warning: Exclusive bound 'DEFAULT' has no cells.
+Optimizing Exclusive Bound 'DEFAULT_VA' (2/2)
+    Done Exclusive Bound 'DEFAULT_VA' (2/2) (0 sec)
+Legalization complete (0 total sec)
+
+****************************************
+  Report : Placement Attempts
+  Site   : unit
+****************************************
+
+number of cells:                   8136
+number of references:                58
+number of site rows:                130
+number of locations attempted:   164123
+number of locations failed:           0  (0.0%)
+
+Legality of references at locations:
+0 references had failures.
+
+Legality of references in rows:
+0 references had row failures.
+
+****************************************
+  Report : Cell Displacements
+****************************************
+
+number of cells aggregated:        8136 (129636 total sites)
+avg row height over cells:        1.672 um
+rms cell displacement:            0.023 um ( 0.01 row height)
+rms weighted cell displacement:   0.023 um ( 0.01 row height)
+max cell displacement:            1.837 um ( 1.10 row height)
+avg cell displacement:            0.001 um ( 0.00 row height)
+avg weighted cell displacement:   0.001 um ( 0.00 row height)
+number of cells moved:               24
+number of large displacements:        0
+large displacement threshold:     3.000 row height
+
+Displacements of worst 10 cells:
+Cell: u_fir/ZBUF_925_inst_1605 (NBUFFX2_RVT)
+  Input location: (155.92,208.968)
+  Legal location: (155.16,207.296)
+  Displacement:   1.837 um ( 1.10 row height)
+Cell: u_fir/ZBUF_2_inst_1935 (NBUFFX2_RVT)
+  Input location: (225.232,187.232)
+  Legal location: (226.296,187.232)
+  Displacement:   1.064 um ( 0.64 row height)
+Cell: u_fir/intadd_59_U4 (FADDX1_RVT)
+  Input location: (183.888,202.28)
+  Legal location: (182.976,202.28)
+  Displacement:   0.912 um ( 0.55 row height)
+Cell: u_fir/ZBUF_107_inst_1934 (NBUFFX4_RVT)
+  Input location: (185.256,202.28)
+  Legal location: (185.864,202.28)
+  Displacement:   0.608 um ( 0.36 row height)
+Cell: u_fir/U729 (NAND2X0_RVT)
+  Input location: (115.64,175.528)
+  Legal location: (116.248,175.528)
+  Displacement:   0.608 um ( 0.36 row height)
+Cell: u_fir/U1066 (INVX0_RVT)
+  Input location: (77.792,85.24)
+  Legal location: (78.248,85.24)
+  Displacement:   0.456 um ( 0.27 row height)
+Cell: u_fir/ZBUF_17_inst_1933 (NBUFFX2_RVT)
+  Input location: (77.336,85.24)
+  Legal location: (77.032,85.24)
+  Displacement:   0.304 um ( 0.18 row height)
+Cell: u_fir/U3552 (AO22X1_RVT)
+  Input location: (154.4,208.968)
+  Legal location: (154.096,208.968)
+  Displacement:   0.304 um ( 0.18 row height)
+Cell: u_fir/intadd_51_U3 (FADDX2_RVT)
+  Input location: (192.248,202.28)
+  Legal location: (192.552,202.28)
+  Displacement:   0.304 um ( 0.18 row height)
+Cell: u_fir/ZBUF_28_inst_1932 (NBUFFX2_RVT)
+  Input location: (115.336,175.528)
+  Legal location: (115.032,175.528)
+  Displacement:   0.304 um ( 0.18 row height)
+
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+
+INFO: Enabled CLO at stage after_LGL4.
+
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+INFO: place.legalize.enable_advanced_legalizer not set - need to revert CLO
+INFO: First Place-opt did not mark run with CLO enabled/disabled property
+INFO: Concurrent Legalization and Optimization (CLO) Reverted
+Warning: Cannot find any default max transition constraint on the design. (OPT-070)
+
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0182 seconds to build cellmap data
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+INFO: creating 48(r) x 48(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (filtro_pdm/power_plan_reproduzido): 2304
+Total 0.0620 seconds to load 8136 cell instances into cellmap
+Moveable cells: 8136; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
+Average cell width 2.4219, cell height 1.6720, cell area 4.0494 for total 8136 placed and application fixed cells
+Place-opt optimization Phase 40 Iter  1         0.00        0.00      0.00         2      32946.21  953189120.00        8136              0.04      1135
+
+Place-opt optimization Phase 41 Iter  1         0.00        0.00      0.00         2      32946.21  953189120.00        8136              0.04      1135
+
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (100000 100000) (2304000 2273600)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+INFO: Running FTB cleanup in end of npo flow.
+Enable dominated scenarios
+
+Place-opt optimization complete                 0.00        0.00      0.00         1      32946.21  953189120.00        8136              0.04      1135
+Co-efficient Ratio Summary:
+4.193421605155  6.578038173730  2.479639287277  7.744187540401  -0.485050100353  3.179565833784  5.567214754587  2.894454387461  6.565921417863  9.017937506851  3.104676700933  84.944618298516  0.784539589061  7.442895611238  3.181182049079  6.992311960832
+4.646239500641  3.823702212269  3.871840296193  1.424294066690  -9.687527999646  6.131807232944  1.465787932247  8.763589181122  1.911351236960  9.637341411929  7.001480338813  70.355329644037  5.023905255185  6.345696429962  1.220142795077  5.967908096778
+6.224305671704  0.238797715000  3.284509589705  9.611151237147  -0.128739789272  0.513551216982  7.835139826811  8.372519099733  3.443640024458  6.760973163258  7.389434436496  55.129212961759  1.480647926972  2.106105466767  9.078099326983  1.314349330187
+8.805817928323  0.072343539122  6.270037326705  0.450494780240  -3.928173731613  9.852544054410  0.210066110127  4.718589655457  0.746653063562  4.878808820782  6.857253178475  88.331196035409  0.272573719255  8.236334540626  1.425326746381  6.766680899187
+4.740224950513  6.567966215027  5.706185626119  8.134461036181  -4.723121171581  6.753657767486  0.418221079584  5.624697562041  7.273871193921  1.608673380650  4.886823959472  31.717101533684  8.432709485527  1.154718268601  4.924485220001  0.405220890953
+4.590768921970  4.170951209159  0.006744354660  9.230842681426  -9.005588446071  9.326522482444  6.379456735048  7.070545116827  1.601288871734  3.371851099395  6.270837036178  48.533343894677  2.630951721511  9.532513652994  6.656202309097  9.409856258072
+6.136993113139  7.763510072170  9.625254751594  7.417690064932  -2.209371201703  1.043513581151  9.666269582673  0.883342434938  3.292435021621  6.918317961214  2.422527431115  53.682700823519  1.419589961786  2.866744222019  5.692882603132  5.858506724802
+5.513631359359  5.213535407563  4.512012804123  4.775181265300  -0.522000517760  3.135331833872  4.650816448557  7.371884848373  1.125482936801  0.550338671494  1.242254912305  27.422750076272  7.014532696696  7.845062274711  0.998525147436  4.042488346769
+7.943493242169  3.877015511999  8.999723005082  0.262507546850  -3.017919714214  1.169627813033  4.141833553751  5.565094379098  9.360291367026  4.254590202092  0.846499484714  81.978406745773  4.040616732097  1.421797792074  0.044473141463  7.138102052498
+4.361330991019  8.619745279820  6.103190282792  4.529562340725  -9.547726036300  8.696336740310  3.784709364151  5.702741133615  6.476694424697  6.650523956592  1.087480918964  69.684554401463  8.327830225034  3.421411355657  8.038113730247  9.639348977774
+4.187540401048  5.050000353317  9.565833784556  7.214754587289  -4.454387561656  5.921217863901  7.937505874310  4.670800933986  3.439509851607  8.123964085274  4.208341923831  77.705907079699  2.253565408927  6.239314141382  3.702240569387  1.840357893142
+4.294066690968  7.527899646613  1.807232944146  5.787932247876  -3.589181222191  1.351036960963  7.341410942700  1.484438813840  4.500644403750  2.060531697663  4.588422596212  15.399910677596  7.840581203559  4.305485204023  8.797743300328  4.509640405961
+1.151237147012  8.739689272051  3.551216982783  5.139826811837  -2.519099833344  3.640824458676  0.973162271738  9.438536496698  1.999976175914  8.734708776321  0.639326276790  63.246541583131  4.281825612717  5.817732823007  2.343567422627  0.037487405045
+0.494780240392  8.173631613985  2.544054410021  0.066110127471  -8.589655557074  6.653063562487  8.808820782685  7.253678475913  3.418263540902  7.926377260982  3.652834662614  10.569961981676  6.522384612301  0.224764013656  7.966243327570  6.185787819813
+4.461036181472  3.121071581675  3.657767486041  8.221079584562  -4.697562141727  3.871193921160  8.673380650488  6.823459472458  9.024093368484  3.949944897111  5.490206460149  19.628445601040  5.162385488386  0.768735470417  0.951237459000  6.744415360923
+0.842681426900  5.588346071932  6.522482444637  9.456735048707  -0.545116927160  1.288871734337  1.851099395627  0.837336178527  7.268389467726  3.765211699695  3.270745899466  41.445524697940  9.798743507540  6.993927639776  3.510000470962  5.254812294741
+7.690064932220  9.371101703104  3.513581151966  6.269582673088  -3.342434038329  2.435021621691  8.317961214242  2.527731115678  2.104082351914  1.628035616128  6.693802801956  87.025828732585  8.448219337488  3.631163859521  3.535435863451  2.012965823477
+5.181265300052  2.000417760313  5.331833872465  0.816448557737  -1.884848473112  5.482936801055  0.338671494124  2.254212305316  6.109007627270  1.123308107178  4.525607071109  83.768362036404  2.320831294621  3.493056669387  7.015549299899  9.723166782026
+2.507546850301  7.919614214116  9.627813033414  1.833553751556  -5.094379198936  0.291367026425  4.590202092084  6.499784714951  1.774674577340  4.731712747214  2.198159807400  39.616366063713  8.044547923363  1.330705519861  9.745207120610  3.190343492452
+9.562340725954  7.726936300869  6.336740310378  4.709364151570  -2.741133715647  6.694424697665  0.523956592108  7.480218964738  2.389440146383  2.453161041934  2.160515165780  23.356955847963  9.280462209345  7.540215548505  0.000381617956  5.833845256721
+4.754587289445  4.387461656592  1.217863901793  7.505874310467  -0.800933086343  9.509851607812  3.964085274420  8.341123831811  5.604907969922  5.026083246462  3.950064738237  97.495484987184  0.299388677356  4.066404468752  7.899674913180  7.232005846578
+7.932247876358  9.181122191135  1.036960963734  1.410942700148  -4.438813940450  0.644403750206  0.531697663458  8.422996212201  1.679507759678  4.739677862243  0.567170002387  82.998225928450  9.582990496042  1.237951512873  9.689200351355  1.216043483513
+9.826811837251  9.099733344364  0.824458676097  3.162271738943  -8.536496798199  9.976175914873  4.708776321063  9.326676790780  6.332698313142  8.863018788058  1.792832000723  38.712347227003  7.329990570976  4.780054892817  3.631641285254  4.054571721006
+6.110127471858  9.655457074665  3.063562487880  8.820782685725  -3.678475013341  8.263540902792  6.377260982365  2.834062614253  8.674638167665  2.919918747402  2.495051065679  51.498242170618  5.629304348373  1.036995972312  1.071519975365  7.767547741822
+1.079584562469  7.562041727387  1.193921160867  3.380650488682  -3.459472558902  4.093368484394  9.944897111549  0.206860149244  4.522000104051  6.919095345907  6.892197741709  46.482374600674  4.357855458911  2.681230400558  8.346009232652  2.482505337945
+6.735048707054  5.116827160128  8.871734337185  1.099395627083  -7.336178627726  8.389467726376  5.211699695327  0.745299466562  6.230909794097  9.555807261369  9.311313677635  05.255395562525  4.754789276696  0.064746720937  1.101731404351  3.581212666626
+9.582673088334  2.434938329243  5.021621691831  7.961214242252  -7.731115778210  4.082351914162  8.035616128669  3.802201956928  4.260313258584  4.502480255136  3.135935652135  20.680788051201  2.807318902445  1.265114552200  0.417798613533  1.833933165081
+6.448557737188  4.848373112548  2.936801055033  8.671494124225  -4.212305416610  9.007627270112  3.308107178452  5.607471109985  8.514743640423  2.764676979434  9.324216438770  00.850322499972  3.008277983119  7.546664801791  9.614242416962  7.813194114183
+3.553751556509  4.379098936029  1.367026425459  0.202092084649  -9.784714051177  4.674577340473  1.712747214219  8.159207400444  3.314146371380  4.135249843613  3.099101486197  30.518253210319  0.285987319815  2.340539454772  6.936338169633  6.740471078470
+9.364151570274  1.133615647669  4.424697665052  3.956592108748  -0.218964838238  9.440146383245  3.161041934216  0.515565780381  7.373024796392  8.727777441875  4.040104450500  95.571257756583  3.787749198719  4.587092545438  7.461682492121  7.863062493750
+5.874310467080  0.933986343950  9.851607812396  4.085274420834  -1.123831911560  4.907969922502  6.083246462395  0.064138237022  1.226938718402  9.619314242940  6.669096975278  84.954525180723  2.947330199787  2.247689958918  1.122128535103  6.960024434141
+0.942700148443  8.813840450064  4.403750206053  1.697663458842  -2.996212301167  9.507759678473  9.677862243056  7.170402387977  1.500032845095  8.970596111512  3.714701387396  74.580963355121  6.985977134976  6.811640851909  9.733371764082  4.458737797316
+2.271738943853  6.496698199997  6.175914873470  8.776321063932  -6.676790880633  2.698313142886  3.018788058179  2.832300723435  3.912262700373  2.670504504947  8.024039381736  26.921897254405  4.413215627605  0.127284458965  5.457001065306  3.562548580882
+0.782685725367  8.475913341826  3.540902792637  7.260982365283  -4.062614353867  4.638167665291  9.918747402249  5.051365679662  1.502757061856  2.611981344610  3.618147431210  66.899587365776  7.489235443191  9.584375069756  2.041754787119  3.921221567338
+0.650488682345  9.472458902409  3.368484394994  4.897111549020  -6.860149344452  2.000104051691  9.095345907689  2.197041709512  0.915900067443  5.466092308426  8.142690255883  31.389844652248  2.447821566667  5.048510654511  6.827197528887  1.734498885109
+9.395627083733  6.178527726838  9.467726376521  1.699695327074  -5.299466662623  0.909794097955  5.807261369931  1.313977635100  7.217096252547  5.159474176900  6.493222293711  96.011016351358  1.154150247942  2.673891934243  4.938356643502  1.621752531796
+1.214242252773  1.115678210408  2.351914162803  5.616128669380  -2.201956028426  0.313258584450  2.480255136313  5.935952135354  0.756345120128  0.412347751812  6.530005420004  02.078225533183  3.875659602638  8.557540788484  8.373149948293  6.801116733867
+1.494124225421  2.305316610900  7.627270112330  8.107178452560  -7.471109085851  4.743640423276  4.676979434932  4.216938770155  1.199989997230  0.508202625075  4.685030379196  09.522028962781  3.036608704349  3.751369109437  9.098963429136  7.026586159020
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (TIM-125)
+
+Place-opt final QoR
+___________________
+Scenario Mapping Table
+1: default
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: clk
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+PATHGROUP QOR 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV       WHV        THV    NHV
+    1   1   0.0000     0.0000      0   0.0000     0.0000      0
+    1   2   0.0000     0.0000      0   0.0000     0.0000      0
+    1   3   0.0000     0.0000      0   0.0000     0.0000      0
+    1   4   0.0000     0.0000      0   0.0236     0.0236      1
+    1   5   0.0000     0.0000      0   0.0000     0.0000      0
+    1   6   0.0000     0.0000      0   0.0000     0.0000      0
+    1   7   0.0000     0.0000      0   0.0000     0.0000      0
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SCENARIO QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV       WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   0.0000     0.0000   0.0000      0   0.0236     0.0236      1        0     0.0000        2  953189120
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESIGN QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV       WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   0.0000     0.0000   0.0000      0   0.0236     0.0236      1        0     0.0000        2  953189120     32946.21       8136        374       1617
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Place-opt final QoR Summary         WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+Place-opt final QoR Summary      0.0000     0.0000   0.0000      0   0.0236     0.0236      1        0        2  953189120     32946.21       8136
+
+Place-opt command complete                CPU:   126 s (  0.04 hr )  ELAPSE:   129 s (  0.04 hr )  MEM-PEAK:  1135 MB
+Place-opt command statistics  CPU=28 sec (0.01 hr) ELAPSED=28 sec (0.01 hr) MEM-PEAK=1.108 GB
+Information: The net parasitics of block filtro_pdm are cleared. (TIM-123)
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 16 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 7 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     2     1  0 FLW-5561  WARNING   Warning: Previously executed stage 'initial_opto' may be une... (MSG-3032)
+Information:     6     4  0 PDC-003   WARNING   Warning: Routing direction of metal layer PO is neither "hor... (MSG-3032)
+Information:     4     2  0 CTS-038   WARNING   Warning: No clock routing rule is specified. (CTS-038)          (MSG-3032)
+Information:     2     1  0 OPT-035   WARNING   Warning: Power app option opt.power.effort has been deprecat... (MSG-3032)
+Information:    12     7  0 OPT-070   WARNING   Warning: Cannot find any default max transition constraint o... (MSG-3032)
+Information:     2     1  0 OPT-200   WARNING   Warning: No tie cell is available for constant fixing. (OPT-... (MSG-3032)
+Information:    12     4  0 OPT-902   WARNING   Warning: No clock routing rules were specified. Use set_cloc... (MSG-3032)
+Information:    40    20  0        7  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 20 error&warning MSGs observed during fusion (MSG-3103)
+Information: Running auto PG connection. (NDM-099)
+INFO: End environment monitoring: UCF
+INFO: Restored 0 timer status, 148 app options, 0 tcl gvars, 0 env vars
+place_opt.flow.fusion_handoff false
+
+Information: Runtime Summary (All Commands) (FLW-9000)
+----------------------------------------------------------------------------
+    Elapse (Hrs)   Elapse (%)       CPU/Elapse       Category
+----------------------------------------------------------------------------
+      0.02           68.1%             1.0           Other 
+      0.01           19.8%             1.0           Placement 
+      0.00            5.7%             1.0           LDRC 
+      0.00            2.6%             1.0           Global Route 
+      0.00            1.7%             1.0           DFT Opt 
+      0.00            0.9%             1.0           Full Timing Update 
+      0.00            0.6%             1.0           Legalize 
+      0.00            0.5%             1.0           CTS 
+      0.00            0.0%             1.1           RC Refresh 
+      0.00            0.0%             1.1           Init 
+----------------------------------------------------------------------------
+      0.03          100.0%             1.0           Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 1
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6526Y / 64 CPUs  
+Sockets: 2, Cores: 16, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Running auto PG connection. (NDM-099)
+Information: Ending   'place_opt' (FLW-8001)
+Information: Time: 2026-10-09 21:09:13 / Session:  00:02:09 / Command:  00:01:55 / CPU:  00:01:54 / Memory: 1136 MB (FLW-8100)
+1
+# ------------------------------------------------------------
+# 7. Conexao PG das celulas posicionadas
+# ------------------------------------------------------------
+connect_pg_net -automatic
+Information: Connecting to PG and tie pins in automatic mode. (MV-396)
+****************************************
+Report : Power/Ground Connection Summary
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:09:13 2026
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 8136/8136
+Ground net VSS                8136/8136
+--------------------------------------------------------------------------------
+Information: connections of 0 power/ground pin(s) are created or changed. (MV-382)
+
+1
+check_legality
+Information: The command 'check_legality' cleared the undo history. (UNDO-016)
+
+************************
+
+running check_legality
+
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 131 total shapes.
+Cached 1442 vias out of 1560 total vias.
+
+check_legality for block design filtro_pdm ... 
+Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : false
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : false
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0324 seconds to build cellmap data
+Information: Creating classic rule checker.
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+=====> Processed 58 ref cells (8 fillers) from library
+Design has no advanced rules
+Checking legality
+Checking cell legality:
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Sorting rows.
+Checking spacing rule legality.
+0%....10%....20%....30%....40%....50%....60%....70%....80%....90%....100%
+Checking packing rule legality.
+
+
+****************************************
+  Report : Legality
+****************************************
+
+VIOLATIONS BY CATEGORY:
+   MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+         0          0          0  Two objects overlap.
+         0          0          0  A cell violates a pnet.
+         0          0          0  A cell is illegal at a site.
+         0          0          0  A cell is not aligned with a site.
+         0          0          0  A cell has an illegal orientation.
+         0          0          0  A cell spacing rule is violated.
+         0          0          0  A layer rule is violated.
+         0          0          0  A cell is in the wrong region.
+         0          0          0  Two cells violate cts margins.
+         0          0          0  Two cells violate coloring.
+
+         0          0          0  TOTAL
+
+TOTAL 0 Violations.
+
+VIOLATIONS BY SUBCATEGORY:
+     MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
+
+         0          0          0    Two objects overlap.
+           0          0          0    Two cells overlap.
+           0          0          0    Two cells have overlapping keepout margins.
+           0          0          0    A cell overlaps a blockage.
+           0          0          0    A cell keepout margin overlaps a blockage.
+
+         0          0          0    A cell violates a pnet.
+
+         0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates pin-track alignment rules.
+           0          0          0    A cell is illegal at a site.
+           0          0          0    A cell violates legal index rule.
+           0          0          0    A cell has the wrong variant for its location.
+
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
+           0          0          0    A cell is not aligned with an overlaid site.
+
+         0          0          0    A cell has an illegal orientation.
+
+         0          0          0    A cell spacing rule is violated.
+           0          0          0    A spacing rule is violated in a row.
+           0          0          0    A spacing rule is violated between adjacent rows.
+           0          0          0    A cell violates vertical abutment rule.
+           0          0          0    A cell violates metal spacing rule.
+
+         0          0          0    A layer rule is violated.
+           0          0          0    A layer VTH rule is violated.
+           0          0          0    A layer OD rule is violated.
+           0          0          0    A layer OD max-width rule is violated.
+           0          0          0    A layer ALL_OD corner rule is violated.
+           0          0          0    A layer max-vertical-length rule is violated.
+           0          0          0    A layer TPO rule is violated.
+           0          0          0    Filler cell insertion cannot satisfy layer rules.
+
+         0          0          0    A cell is in the wrong region.
+           0          0          0    A cell is outside its hard bound.
+           0          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell violates an exclusive movebound.
+
+         0          0          0    Two cells violate cts margins.
+
+         0          0          0    Two cells violate coloring.
+
+
+check_legality for block design filtro_pdm succeeded!
+
+
+check_legality succeeded.
+
+**************************
+
+1
+# ------------------------------------------------------------
+# 8. Relatorios
+# ------------------------------------------------------------
+report_utilization   > pnr/reports/place/utilization.rpt
+report_qor           > pnr/reports/place/qor.rpt
+report_congestion    > pnr/reports/place/congestion.rpt
+report_timing -delay_type max -max_paths 10 \
+    > pnr/reports/place/timing_max.rpt
+report_timing -delay_type min -max_paths 10 \
+    > pnr/reports/place/timing_min.rpt
+check_pg_connectivity > pnr/reports/place/pg_connectivity.rpt
+# ------------------------------------------------------------
+# 9. Salvar checkpoint
+# ------------------------------------------------------------
+save_block -label place
+Information: Saving 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design' to 'filtro_pdm.dlib:filtro_pdm/place.design'. (DES-028)
+1
+puts "Placement: script executado ate o final."
+Placement: script executado ate o final.
+puts "Relatorios em pnr/reports/place/"
+Relatorios em pnr/reports/place/
+fc_shell> exit
+Maximum memory usage for this session: 1135.56 MB
+Maximum memory usage for this session including child processes: 1135.56 MB
+CPU usage for this session:    128 seconds (  0.04 hours)
+Elapsed time for this session:    281 seconds (  0.08 hours)
+Thank you for using Fusion Compiler.

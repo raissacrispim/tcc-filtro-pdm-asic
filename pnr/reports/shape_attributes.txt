@@ -1,0 +1,99 @@
+****************************************
+Report : List of Attribute Definitions
+Version: X-2025.06-SP3
+Date   : Wed Oct  7 15:34:02 2026
+****************************************
+
+Properties:
+    A - Application-defined
+    U - User-defined
+    I - Importable from design/library (for user-defined)
+    S - Settable
+    B - Subscripted
+
+Attribute Name            Object     Type       Properties  Constraints
+--------------------------------------------------------------------------------
+access_direction          shape      access_dir A           
+anchor                    shape      collection A           anchor
+angle                     shape      double     A           
+bbox                      shape      rect       A,S         
+bottom_left_radius        shape      distance   A,S         
+bottom_right_radius       shape      distance   A,S         
+boundary                  shape      coord_list A,S         
+bounding_box              shape      collection A,S         bounding_box
+center                    shape      coord      A,S         
+curved_polyrect           shape      curved_poly_rect
+                                                A,S         
+custom_route_flow         shape      string     A,S         
+custom_shield_net1_associated
+                          shape      string     A,S         
+custom_shield_net2_associated
+                          shape      string     A,S         
+design_name               shape      string     A           
+end_endcap                shape      string     A,S         flush, full_width, half_width, octagon, round, variable, variable_octagon
+end_extension             shape      distance   A,S         
+full_name                 shape      string     A           
+groups                    shape      collection A           group
+height                    shape      distance   A,S         
+holes                     shape      curved_polygon_list
+                                                A,S         
+ignore_ndr_spacing        shape      boolean    A,S,B       
+ignore_pin_color_align_check
+                          shape      boolean    A,S         
+in_edit_group             shape      boolean    A           
+inner_radius              shape      distance   A,S         
+is_45                     shape      boolean    A           
+is_drc_shape              shape      boolean    A           
+is_dummy_metal            shape      boolean    A,S         
+is_fixed                  shape      boolean    A           
+is_horizontal             shape      boolean    A           
+is_manhattan              shape      boolean    A           
+is_mask_fixed             shape      boolean    A,S         
+is_package_drc_patch      shape      boolean    A,S         
+is_parallel_wire          shape      boolean    A           
+is_pattern_must_join      shape      boolean    A           
+is_probe                  shape      boolean    A           
+is_shadow                 shape      boolean    A           
+is_vertical               shape      boolean    A           
+is_via_ladder             shape      boolean    A           
+justification             shape      string     A,S         C, CB, CT, LB, LC, LT, RB, RC, RT
+layer                     shape      collection A           layer
+layer_name                shape      string     A           
+layer_number              shape      int        A           
+length                    shape      distance   A           
+mask_constraint           shape      string     A,S         no_mask, mask_one, mask_two, mask_three, mask_four, same_mask
+msgts_topology_edge       shape      string     A,S         
+name                      shape      string     A           
+net                       shape      collection A,S         net
+net_type                  shape      string     A           analog_ground, analog_power, analog_signal, clock, deep_nwell, deep_pwell, ground, nwell, power, pwell, reset, scan, signal, tie_high, tie_low, unset
+number_of_points          shape      int        A           
+object_class              shape      string     A           
+object_id                 shape      int        A           
+orientation               shape      string     A,S         R0, R90, R180, R270, MX, MXR90, MY, MYR90
+origin                    shape      coord      A,S         
+outer_radius              shape      distance   A,S         
+owner                     shape      collection A,S         terminal metal_area net
+package_route_taper_type  shape      string     A,S         
+parent_block              shape      collection A           block
+parent_block_cell         shape      collection A           cell
+parent_cell               shape      collection A           cell
+physical_hierarchy_level  shape      int        A           
+physical_status           shape      string     A,S         application_fixed, fixed, locked, minor_change, unrestricted
+pnet_ignore               shape      boolean    A,S         
+points                    shape      coord_list A,S         
+purpose_number            shape      int        A           
+radius                    shape      distance   A,S         
+rule_type                 shape      string     A,S         default, net_non_default, none, shape_non_default
+shadow_status             shape      string     A,S         copied_down, copied_up, normal, pulled_up, pushed_down, virtual_flat
+shape_type                shape      string     A           
+shape_use                 shape      string     A,S         area_fill, core_wire, detail_route, follow_pin, global_route, lib_cell_pin_connect, macro_pin_connect, opc, partial_parallel_route, pg_augmentation, rdl, ring, shield_route, stripe, taper, trunk, user_route, zero_skew
+start_endcap              shape      string     A,S         flush, full_width, half_width, octagon, round, variable, variable_octagon
+start_extension           shape      distance   A,S         
+tag                       shape      string     A,S         
+text                      shape      string     A,S         
+top_block                 shape      collection A           block
+top_left_radius           shape      distance   A,S         
+top_right_radius          shape      distance   A,S         
+width                     shape      distance   A,S         
+x_axis_radius             shape      distance   A,S         
+y_axis_radius             shape      distance   A,S         

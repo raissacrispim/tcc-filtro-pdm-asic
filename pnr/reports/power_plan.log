@@ -1,0 +1,545 @@
+
+
+
+                              Fusion Compiler (TM)
+
+                Version X-2025.06-SP3 for linux64 - Feb 27, 2026
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+set sh_continue_on_error false
+false
+# ============================================================
+# TCC - Filtro digital PDM CIC + FIR
+# Power Planning - Synopsys Fusion Compiler
+# Tecnologia: SAED32 RVT
+#
+# Entrada:  filtro_pdm/floorplan
+# Saida:    filtro_pdm/power_plan_reproduzido
+#
+# ATENCAO:
+# Versao candidata, ainda nao validada no Fusion Compiler.
+# Nao sobrescreve o checkpoint power_plan original.
+# ============================================================
+# ------------------------------------------------------------
+# 1. Abrir o floorplan
+# ------------------------------------------------------------
+open_lib pnr/work/filtro_pdm.dlib
+Information: Loading library file '/home/raissa.crispim/tcc_filtro/pnr/work/filtro_pdm.dlib' (FILE-007)
+Information: Loading library file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm' (FILE-007)
+{filtro_pdm.dlib}
+open_block filtro_pdm/floorplan
+Information: User units loaded from library 'saed32rvt_base_frame_timing' (LNK-040)
+Opening block 'filtro_pdm.dlib:filtro_pdm/floorplan.design' in edit mode
+{filtro_pdm.dlib:filtro_pdm/floorplan.design}
+# ------------------------------------------------------------
+# 2. Conectar logicamente VDD e VSS
+# ------------------------------------------------------------
+connect_pg_net -automatic
+Using libraries: filtro_pdm.dlib saed32rvt_base_frame_timing
+Warning: In library filtro_pdm.dlib, no block views exist for block filtro_pdm. (LNK-064)
+Visiting block filtro_pdm.dlib:filtro_pdm/floorplan.design
+Design 'filtro_pdm' was successfully linked.
+Information: Connecting to PG and tie pins in automatic mode. (MV-396)
+****************************************
+Report : Power/Ground Connection Summary
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:05:54 2026
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 0/8082
+Ground net VSS                0/8082
+--------------------------------------------------------------------------------
+Information: connections of 16164 power/ground pin(s) are created or changed. (MV-382)
+
+1
+# ------------------------------------------------------------
+# 3. Rails das standard cells em M1
+# ------------------------------------------------------------
+create_pg_std_cell_conn_pattern std_cell_rails \
+    -layers {M1}
+Information: The command 'create_pg_std_cell_conn_pattern' cleared the undo history. (UNDO-016)
+Successfully create standard cell rail pattern std_cell_rails.
+set_pg_strategy std_cell_rail_strategy \
+    -core \
+    -pattern {{name: std_cell_rails} {nets: {VDD VSS}}}
+Successfully set PG strategy std_cell_rail_strategy.
+compile_pg \
+    -strategies {std_cell_rail_strategy} \
+    -tag pg_std_rails
+Sanity check for inputs.
+Warning: Strategy via rule is not defined. Add appropriate via rule to get expected results and avoid runtime penalties. (PGR-095)
+Set tag to pg_std_rails
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy std_cell_rail_strategy.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating standard cell rails.
+Creating standard cell rails for strategy std_cell_rail_strategy.
+DRC checking and fixing for standard cell rail strategy std_cell_rail_strategy.
+Number of threads: 1
+Number of partitions: 12
+Direction of partitions: horizontal
+Number of wires: 131
+Checking DRC for 131 wires: 0% 100%
+Creating 131 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag pg_std_rails to committed wires.
+Committing wires takes 0.00 seconds.
+Committing vias takes 0.00 seconds.
+Committed 131 wires.
+Committed 0 vias.
+Committed 0 wires for via creation.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+1
+# ------------------------------------------------------------
+# 4. Anel de alimentacao M8/M9
+# ------------------------------------------------------------
+create_pg_ring_pattern core_ring \
+    -horizontal_layer M8 \
+    -vertical_layer M9 \
+    -horizontal_width 0.20 \
+    -vertical_width 0.20 \
+    -horizontal_spacing 0.20 \
+    -vertical_spacing 0.20
+Successfully create PG ring pattern core_ring.
+set_pg_strategy core_ring_strategy \
+    -core \
+    -pattern {{name: core_ring} {nets: {VDD VSS}} \
+              {offset: {2 2}}}
+Successfully set PG strategy core_ring_strategy.
+compile_pg \
+    -strategies {core_ring_strategy} \
+    -tag pg_core_ring
+Sanity check for inputs.
+Warning: Strategy via rule is not defined. Add appropriate via rule to get expected results and avoid runtime penalties. (PGR-095)
+Set tag to pg_core_ring
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy core_ring_strategy.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating rings.
+Creating via connection between strategies and existing shapes.
+via connection runtime: 0 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias inside strategy core_ring_strategy.
+Checking 8 stacked vias: 0% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag pg_core_ring to committed wires.
+Committing wires takes 0.00 seconds.
+Committing vias takes 0.00 seconds.
+Committed 8 wires.
+Committed 8 vias.
+Committed 0 wires for via creation.
+Overall PG creation runtime: 0 seconds.
+Successfully compiled PG.
+Overall runtime: 0 seconds.
+1
+# ------------------------------------------------------------
+# 5. Straps verticais em M3
+# ------------------------------------------------------------
+create_pg_mesh_pattern core_straps \
+    -layers { \
+        {{vertical_layer: M3} \
+         {width: minimum} \
+         {spacing: interleaving} \
+         {pitch: 40} \
+         {offset: 20}} \
+    }
+Successfully create mesh pattern core_straps.
+1
+set_pg_strategy core_strap_strategy \
+    -core \
+    -pattern {{name: core_straps} {nets: {VDD VSS}}} \
+    -extension {{stop: innermost_ring}}
+Successfully set PG strategy core_strap_strategy.
+# ------------------------------------------------------------
+# 6. Regra de vias
+# ------------------------------------------------------------
+set_pg_strategy_via_rule core_strap_via_rule \
+    -via_rule { \
+        {{{strategies: core_strap_strategy} {layers: M3}} \
+         {{existing: std_conn} {layers: M1}} \
+         {via_master: default}} \
+        {{{strategies: core_strap_strategy} {layers: M3}} \
+         {existing: ring} \
+         {via_master: default}} \
+        {{intersection: undefined} {via_master: NIL}} \
+    }
+Successfully set strategy via rule core_strap_via_rule.
+# ------------------------------------------------------------
+# 7. Gerar straps e conexoes
+# ------------------------------------------------------------
+compile_pg \
+    -strategies {core_strap_strategy} \
+    -via_rule core_strap_via_rule \
+    -tag pg_core_strap_vias
+Sanity check for inputs.
+Set tag to pg_core_strap_vias
+Automatic PG net connection through connect_pg_net is disabled.
+Updating PG strategies.
+Updating strategy core_strap_strategy.
+Loading library and design information.
+Number of Standard Cells: 0
+Number of Hard Macros: 0
+Number of Pads: 0
+Creating straps and vias in power plan.
+Creating wire shapes for strategies core_strap_strategy .
+Creating wire shapes runtime: 0 seconds
+Blockage cutting and DRC fixing for wire shapes for strategies core_strap_strategy .
+Check and fix DRC for 11 wires for strategy core_strap_strategy.
+Checking DRC for 11 wires: 0% 100%
+Creating 11 wires after DRC fixing.
+Wire DRC checking runtime 0.00 seconds.
+Creating via shapes for strategies core_strap_strategy .
+Working on strategy core_strap_strategy.
+Number of detected intersections: 0
+Total runtime of via shapes creation: 0 seconds
+Runtime of via DRC checking for strategy core_strap_strategy: 0.00 seconds.
+Creating via connection between strategies and existing shapes.
+Check and fix DRCs for 743 stacked vias.
+Checking DRC for 22 stacked vias:: 0% 100%
+Number of threads: 1
+Number of partitions: 12
+Direction of partitions: horizontal
+Number of vias: 721
+Checking DRC for 721 stacked vias:: 0% 100%
+Via DRC checking runtime 0.00 seconds.
+via connection runtime: 1 seconds.
+Removing dangling/floating wire/vias after DRC check.
+Start iteration 1:
+Checking potential dangling/floating power plan wires.
+Checking dangling/floating vias between strategies and existing shapes.
+Checking 743 stacked vias: 0% 100%
+Finish removing all dangling or floating wires and vias.
+Commiting wires and vias.
+Setting tag pg_core_strap_vias to committed wires.
+Committing wires takes 0.00 seconds.
+Committing vias takes 0.00 seconds.
+Committed 11 wires.
+Committed 1552 vias.
+Committed 809 wires for via creation.
+Overall PG creation runtime: 1 seconds.
+Successfully compiled PG.
+Overall runtime: 1 seconds.
+1
+# ------------------------------------------------------------
+# 8. Terminais fisicos VDD e VSS
+#
+# Cada terminal (2 um de largura) e criado sobre o segmento
+# horizontal superior do anel da rede, em M8, no centro do
+# segmento. As coordenadas sao obtidas do proprio anel, e nao
+# fixadas no script, pois o Fusion Compiler ajusta a altura do
+# core para um numero inteiro de linhas de celulas.
+# ------------------------------------------------------------
+proc cria_terminal_no_anel {rede nome} {
+
+    set shapes [get_shapes -quiet \
+        -filter "net.name == $rede && layer.name == M8"]
+
+    if {[sizeof_collection $shapes] == 0} {
+        puts "ERRO: nenhum shape de $rede em M8 (anel nao encontrado)."
+        return -code error
+    }
+
+    # Segmentos longos (anel) e, entre eles, o mais alto
+    set melhor {}
+    set y_max -1.0e9
+
+    foreach_in_collection s $shapes {
+        set bb  [get_attribute $s bbox]
+        set llx [lindex $bb 0 0]
+        set lly [lindex $bb 0 1]
+        set urx [lindex $bb 1 0]
+        set ury [lindex $bb 1 1]
+
+        if {($urx - $llx) < 100.0} {
+            continue
+        }
+
+        if {$ury > $y_max} {
+            set y_max $ury
+            set melhor [list $llx $lly $urx $ury]
+        }
+    }
+
+    if {[llength $melhor] == 0} {
+        puts "ERRO: segmento superior do anel de $rede nao encontrado."
+        return -code error
+    }
+
+    lassign $melhor llx lly urx ury
+    set xc [expr {($llx + $urx) / 2.0}]
+
+    set limites [list \
+        [list [expr {$xc - 1.0}] $lly] \
+        [list [expr {$xc + 1.0}] $ury]]
+
+    create_terminal \
+        -port [get_ports $rede] \
+        -boundary $limites \
+        -layer M8 \
+        -name $nome
+
+    puts "Terminal $nome criado em $limites (M8)"
+}
+cria_terminal_no_anel VDD VDD_TOP
+Terminal VDD_TOP criado em {119.2 229.3600} {121.2 229.5600} (M8)
+cria_terminal_no_anel VSS VSS_TOP
+Terminal VSS_TOP criado em {119.2 229.7600} {121.2 229.9600} (M8)
+# ------------------------------------------------------------
+# 9. Relatorios das estrategias
+# ------------------------------------------------------------
+report_pg_patterns
+#------------------------------------------#
+Pattern Name: core_ring
+Type: Ring Pattern
+Symbolic Nets: 
+Ring Width:
+	{side: horizontal}{width: 0.2}
+	{side: vertical}{width: 0.2}
+Ring Layer:
+	{side: horizontal}{layer: M8}
+	{side: vertical}{layer: M9}
+Ring Spacing:
+	{side: horizontal}{spacing: 0.2}
+	{side: vertical}{spacing: 0.2}
+Corner Bridge: false
+Via Rules: 
+	{intersection: all} {via_master : {default}}
+Track Alignment: no alignment
+Parameters: 
+#------------------------------------------#
+Pattern Name: core_straps
+Type: Mesh Pattern
+Parameters: 
+Layers: 
+{ {vertical_layer : M3} {width : {minimum }} {spacing : interleaving} {trim : true} {track_alignment : none}   {pitch : 40} {offset : 20} } 
+Via Rules: 
+{intersection: all} {via_master : {default}}
+#------------------------------------------#
+Pattern Name: std_cell_rails
+Type: Standard Cell Rail Pattern
+Rail Width: undefined undefined 
+Rail Layers: M1 
+Rail Shift: undefined undefined 
+Rail Masks: no_mask no_mask 
+Rail pin DRC option: false
+Mark as follow pin option: false
+Parameters: 
+#------------------------------------------#
+report_pg_strategies
+#------------------------------------------#
+name: std_cell_rail_strategy
+region: 
+	Region: core area
+	Coordinate: {{10.0000 10.0000} {10.0000 227.3600} {230.4000 227.3600} {230.4000 10.0000} }
+
+Pattern Expression :
+	pattern: std_cell_rails
+	nets: VDD VSS
+	parameters: 
+	offset: undefined undefined
+	offset start: boundary
+
+Instantiated Pattern :
+Pattern Name: std_cell_rails
+Type: Standard Cell Rail Pattern
+Rail Width: undefined undefined 
+Rail Layers: M1 
+Rail Shift: undefined undefined 
+Rail Masks: no_mask no_mask 
+Rail pin DRC option: false
+Mark as follow pin option: false
+Parameters: 
+
+
+Extension: 
+
+Blockage: 
+#------------------------------------------#
+name: core_ring_strategy
+region: 
+	Region: core area
+	Coordinate: {{10.0000 10.0000} {10.0000 227.3600} {230.4000 227.3600} {230.4000 10.0000} }
+
+Pattern Expression :
+	pattern: core_ring
+	nets: VDD VSS
+	parameters: 
+	offset: 2.0000 2.0000
+	offset start: boundary
+	skip_sides: 
+	side_offset: 
+	merge: undefined undefined
+	fill_gap: undefined
+
+Instantiated Pattern :
+Pattern Name: core_ring
+Type: Ring Pattern
+Symbolic Nets: VDD VSS 
+Ring Width:
+	{side: horizontal}{width: 0.2}
+	{side: vertical}{width: 0.2}
+Ring Layer:
+	{side: horizontal}{layer: M8}
+	{side: vertical}{layer: M9}
+Ring Spacing:
+	{side: horizontal}{spacing: 0.2}
+	{side: vertical}{spacing: 0.2}
+Corner Bridge: false
+Via Rules: 
+	{intersection: all} {via_master : {default}}
+Track Alignment: no alignment
+Parameters: 
+
+
+Extension: 
+
+Blockage: 
+#------------------------------------------#
+name: core_strap_strategy
+region: 
+	Region: core area
+	Coordinate: {{10.0000 10.0000} {10.0000 227.3600} {230.4000 227.3600} {230.4000 10.0000} }
+
+Pattern Expression :
+	pattern: core_straps
+	nets: VDD VSS
+	parameters: 
+	offset: undefined undefined
+	offset start: boundary
+	pitch: undefined undefined
+	repeat: undefined undefined
+
+Instantiated Pattern :
+Pattern Name: core_straps
+Type: Mesh Pattern
+Parameters: 
+Layers: 
+{ {vertical_layer : M3} {width : {minimum }} {spacing : interleaving} {trim : true} {track_alignment : none}   {pitch : 40} {offset : 20} } 
+Via Rules: 
+{intersection: all} {via_master : {default}}
+
+
+Extension: 
+	Nets: 
+	Layers: 	StopLayers: 
+	Sides: 
+	Direction: LRTB
+	Stop: inner-most ring
+
+
+Blockage: 
+#------------------------------------------#
+report_pg_strategy_via_rules
+#------------------------------------------#
+Rule Name: core_strap_via_rule
+{{strategies: core_strap_strategy} {layers: {M3}} } {{existing: std_conn} {layers: {M1}} } {via_master : {default}}
+{{strategies: core_strap_strategy} {layers: {M3}} } {{existing: ring} } {via_master : {default}}
+{intersection: undefined} {via_master : {nil}}
+#------------------------------------------#
+# ------------------------------------------------------------
+# 10. Verificacoes da rede de alimentacao
+# ------------------------------------------------------------
+check_pg_drc
+Command check_pg_drc started  at Fri Oct  9 21:05:55 2026
+Command check_pg_drc finished at Fri Oct  9 21:05:55 2026
+CPU usage for check_pg_drc: 0.01 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 0.01 seconds ( 0.00 hours)
+No errors found.
+check_pg_connectivity
+Information: The command 'check_pg_connectivity' cleared the undo history. (UNDO-016)
+Checking secondary net through power switch is enabled. 
+Secondary net will be checked together from primary net. They will be treated as the same net
+Primary Net : VDD    Secondary Net:
+Primary Net : VSS    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 8082
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Number of Blocks: 0
+Loading P/G wires and vias...
+Number of VDD Wires: 520
+Number of VDD Vias: 856
+Number of VDD Terminals: 1
+**************Verify net VDD connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 8082
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Loading cell instances...
+Loading P/G wires and vias...
+Number of VSS Wires: 439
+Number of VSS Vias: 704
+Number of VSS Terminals: 1
+**************Verify net VSS connectivity*****************
+  Number of floating wires: 0
+  Number of floating vias: 0
+  Number of floating std cells: 8082
+  Number of floating hard macros: 0
+  Number of floating I/O pads: 0
+  Number of floating terminals: 0
+  Number of floating hierarchical blocks: 0
+************************************************************
+Overall runtime: 0 seconds.
+# ------------------------------------------------------------
+# 11. Salvar checkpoint de reproducao
+#
+# Remove o checkpoint de uma execucao anterior, se existir.
+# ------------------------------------------------------------
+catch {remove_blocks -force filtro_pdm/power_plan_reproduzido}
+Information: Removed design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design' from memory and disk. (NDMUI-064)
+0
+save_block -label power_plan_reproduzido
+Information: Saving 'filtro_pdm.dlib:filtro_pdm/floorplan.design' to 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (DES-028)
+1
+puts "Power planning: script executado ate o final."
+Power planning: script executado ate o final.
+puts "Verifique os relatorios e compare com o checkpoint original."
+Verifique os relatorios e compare com o checkpoint original.
+fc_shell> exit
+Maximum memory usage for this session: 483.23 MB
+Maximum memory usage for this session including child processes: 483.23 MB
+CPU usage for this session:     12 seconds (  0.00 hours)
+Elapsed time for this session:     74 seconds (  0.02 hours)
+Thank you for using Fusion Compiler.

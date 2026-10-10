@@ -1,0 +1,109 @@
+
+
+
+                              Fusion Compiler (TM)
+
+                Version X-2025.06-SP3 for linux64 - Feb 27, 2026
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+# ============================================================
+# floorplan.tcl
+# Floorplan inicial
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys Fusion Compiler
+# ============================================================
+# ------------------------------------------------------------
+# 1. Abre a design library e o checkpoint inicial
+# ------------------------------------------------------------
+open_lib pnr/work/filtro_pdm.dlib
+Information: Loading library file '/home/raissa.crispim/tcc_filtro/pnr/work/filtro_pdm.dlib' (FILE-007)
+Information: Loading library file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm' (FILE-007)
+{filtro_pdm.dlib}
+open_block filtro_pdm/init
+Information: User units loaded from library 'saed32rvt_base_frame_timing' (LNK-040)
+Opening block 'filtro_pdm.dlib:filtro_pdm/init.design' in edit mode
+{filtro_pdm.dlib:filtro_pdm/init.design}
+# ------------------------------------------------------------
+# 2. Cria o floorplan
+# ------------------------------------------------------------
+# Dimensoes fixas do core (largura x altura, em um).
+#
+# Correspondem ao floorplan original, obtido com
+# -core_utilization 0.60 e -side_ratio {1 1}.
+# Fixar as dimensoes mantem validas as coordenadas dos
+# terminais VDD_TOP/VSS_TOP usadas em power_plan.tcl
+# (topo do core 229.03 + offset do anel 2.0).
+initialize_floorplan \
+    -control_type core \
+    -shape R \
+    -side_length {220.55 219.03} \
+    -core_offset {10}
+Using libraries: filtro_pdm.dlib saed32rvt_base_frame_timing
+Warning: In library filtro_pdm.dlib, no block views exist for block filtro_pdm. (LNK-064)
+Visiting block filtro_pdm.dlib:filtro_pdm/init.design
+Design 'filtro_pdm' was successfully linked.
+Use site_def 'unit' to initialize floorplan.
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 67.46%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+report_utilization
+****************************************
+Report : report_utilization
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Fri Oct  9 21:02:34 2026
+****************************************
+Utilization Ratio:			0.6746
+Utilization options:
+ - Area calculation based on:		site_row of block filtro_pdm/init
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				47906.1440
+Total Capacity Area:			47906.1440
+Total Area of cells:			32317.9676
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+Total Area of excluded objects:		0.0000
+Ratio of excluded objects:		0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':				0.6746
+
+0.6746
+# ------------------------------------------------------------
+# 3. Salva checkpoint do floorplan
+# ------------------------------------------------------------
+save_block -label floorplan
+Information: The command 'save_block' cleared the undo history. (UNDO-016)
+Information: Saving 'filtro_pdm.dlib:filtro_pdm/init.design' to 'filtro_pdm.dlib:filtro_pdm/floorplan.design'. (DES-028)
+1
+1
+fc_shell> exit
+Maximum memory usage for this session: 467.02 MB
+Maximum memory usage for this session including child processes: 467.02 MB
+CPU usage for this session:     12 seconds (  0.00 hours)
+Elapsed time for this session:     69 seconds (  0.02 hours)
+Thank you for using Fusion Compiler.
