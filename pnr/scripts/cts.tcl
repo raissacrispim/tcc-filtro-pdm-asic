@@ -25,14 +25,27 @@ open_block filtro_pdm/place
 
 
 # ------------------------------------------------------------
-# 2. Verificacoes antes do CTS
+# 2. Ajustes de otimizacao
+# ------------------------------------------------------------
+
+# Transicao maxima (tambem definida no SDC fisico; reaplicada
+# aqui porque o bloco foi criado antes dessa restricao).
+set_max_transition 0.50 [current_design]
+
+# Permite o uso das celulas TIE (TIEH/TIEL) caso a otimizacao
+# gere redes constantes (aviso OPT-200 no placement).
+set_lib_cell_purpose -include optimization [get_lib_cells */TIE*]
+
+
+# ------------------------------------------------------------
+# 3. Verificacoes antes do CTS
 # ------------------------------------------------------------
 
 check_clock_trees > pnr/reports/cts/check_clock_trees.rpt
 
 
 # ------------------------------------------------------------
-# 3. CTS, roteamento do clock e otimizacao
+# 4. CTS, roteamento do clock e otimizacao
 #
 # clock_opt executa:
 #   - construcao da arvore (buffers de clock)
@@ -44,7 +57,7 @@ clock_opt
 
 
 # ------------------------------------------------------------
-# 4. Conexao PG das celulas inseridas
+# 5. Conexao PG das celulas inseridas
 # ------------------------------------------------------------
 
 connect_pg_net -automatic
@@ -53,7 +66,7 @@ check_legality
 
 
 # ------------------------------------------------------------
-# 5. Relatorios
+# 6. Relatorios
 #
 # Apos o CTS a analise de hold passa a ser significativa.
 # ------------------------------------------------------------
@@ -71,7 +84,7 @@ report_utilization > pnr/reports/cts/utilization.rpt
 
 
 # ------------------------------------------------------------
-# 6. Salvar checkpoint
+# 7. Salvar checkpoint
 # ------------------------------------------------------------
 
 save_block -label cts
