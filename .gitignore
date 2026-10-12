@@ -56,3 +56,12 @@ pnr/reports/man_*.txt
 sim/*.log
 atpg/output/*.log
 atpg/output/simv*
+
+# Execucoes do IC Validator (arquivos grandes)
+verif/run_drc/
+verif/run_lvs/
+
+# Saidas do P&R (GDS, SPEF, DEF: arquivos grandes)
+pnr/output/*.gds
+pnr/output/*.spef
+pnr/output/*.def

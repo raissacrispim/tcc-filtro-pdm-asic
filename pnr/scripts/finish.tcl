@@ -19,9 +19,9 @@ set sh_continue_on_error false
 set STDCELL_GDS \
     /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/gds/saed32nm_rvt_oa.gds
 
-# Mapa de camadas para exportacao do GDSII
-set GDS_LAYER_MAP \
-    /Tools/PDK/SAED32/EDK_Digital/tech/map/saed32nm_1p9m_gdsout.map
+# A numeracao GDS das camadas vem do arquivo de tecnologia.
+# O saed32nm_1p9m_gdsout.map esta no formato do Milkyway e
+# nao e aceito pelo write_gds do Fusion Compiler (GDS-017).
 
 file mkdir pnr/reports/finish
 file mkdir pnr/output
@@ -42,7 +42,12 @@ open_block filtro_pdm/route
 # Ordem decrescente de largura.
 # ------------------------------------------------------------
 
-set FILLERS [get_lib_cells */SHFILL*_RVT]
+# A lista precisa estar da maior para a menor (aviso CHF-008);
+# fora de ordem, apenas SHFILL1 e utilizada.
+unset -nocomplain FILLERS
+foreach nome {SHFILL128_RVT SHFILL64_RVT SHFILL3_RVT SHFILL2_RVT SHFILL1_RVT} {
+    append_to_collection FILLERS [get_lib_cells */$nome]
+}
 
 if {[sizeof_collection $FILLERS] == 0} {
     puts "ERRO: celulas SHFILL*_RVT nao encontradas na biblioteca."
@@ -90,7 +95,11 @@ report_design -floorplan > pnr/reports/finish/design.rpt
 
 # ------------------------------------------------------------
 # 5. Salvar checkpoint final
+#
+# Remove o checkpoint de uma execucao anterior, se existir.
 # ------------------------------------------------------------
+
+catch {remove_blocks -force filtro_pdm/finish}
 
 save_block -label finish
 
@@ -126,7 +135,6 @@ write_gds \
     -hierarchy all \
     -long_names \
     -merge_files $STDCELL_GDS \
-    -layer_map $GDS_LAYER_MAP \
     pnr/output/filtro_pdm.gds
 
 puts "Finalizacao: script executado ate o final."

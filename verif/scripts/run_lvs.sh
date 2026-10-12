@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# ============================================================
+# LVS (Layout Versus Schematic) com o IC Validator
+# Filtro PDM CIC + FIR - SAED32 1P9M
+#
+# Uso (a partir da raiz do repositorio):
+#
+#   verif/scripts/run_lvs.sh
+#
+# Compara o layout (GDS) com a netlist pos-layout com
+# conexoes VDD/VSS (filtro_pdm_lvs.v). A netlist Verilog e
+# convertida pelo icv_nettran, usando o CDL das standard
+# cells para descrever o conteudo de cada celula.
+#
+# Entradas: pnr/output/filtro_pdm.gds
+#           pnr/output/filtro_pdm_lvs.v
+# Saida:    verif/reports/lvs/  (resumo da comparacao)
+#           verif/run_lvs/      (arquivos de execucao, ignorados
+#                                pelo git)
+#
+# ATENCAO:
+# Versao candidata, ainda nao validada no IC Validator.
+# ============================================================
+
+set -e
+
+PDK=/Tools/PDK/SAED32/EDK_Digital
+RUNSET=$PDK/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+CDL=$PDK/lib/stdcell_rvt/lvs/saed32nm_rvt.cdl
+TOPO=filtro_pdm
+
+RAIZ="$(cd "$(dirname "$0")/../.." && pwd)"
+GDS=$RAIZ/pnr/output/$TOPO.gds
+NETLIST=$RAIZ/pnr/output/${TOPO}_lvs.v
+
+for arq in "$GDS" "$NETLIST"; do
+    if [ ! -f "$arq" ]; then
+        echo "ERRO: arquivo nao encontrado: $arq"
+        echo "Execute antes: fc_shell -f pnr/scripts/finish.tcl"
+        exit 1
+    fi
+done
+
+rm -rf "$RAIZ/verif/run_lvs"
+mkdir -p "$RAIZ/verif/run_lvs" "$RAIZ/verif/reports/lvs"
+cd "$RAIZ/verif/run_lvs"
+
+# 1. Netlist Verilog + CDL das celulas -> netlist do ICV
+icv_nettran \
+    -verilog "$NETLIST" \
+    -sp "$CDL" \
+    -outName $TOPO.icv.net \
+    2>&1 | tee icv_nettran.log
+
+# 2. Comparacao layout x netlist
+icv -i "$GDS" -c $TOPO -f GDSII \
+    -s $TOPO.icv.net -sf ICV -stc $TOPO \
+    -I "$PDK/tech/icv_lvs" \
+    "$RUNSET" \
+    2>&1 | tee icv_lvs.log
+
+for arq in $TOPO.LVS_ERRORS $TOPO.RESULTS icv_nettran.log icv_lvs.log; do
+    [ -f "$arq" ] && cp "$arq" "$RAIZ/verif/reports/lvs/"
+done
+
+echo
+echo "============================================"
+echo "RESUMO DO LVS"
+echo "============================================"
+grep -iE "pass|fail|match|error" "$TOPO.LVS_ERRORS" 2>/dev/null | head -20 \
+    || echo "Arquivo $TOPO.LVS_ERRORS nao encontrado: verifique icv_lvs.log"
+echo
+echo "Relatorios em verif/reports/lvs/"
