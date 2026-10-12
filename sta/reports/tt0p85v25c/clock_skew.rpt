@@ -1,0 +1,19 @@
+****************************************
+Report : clock timing
+	-type skew
+	-nworst 1
+	-setup
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Mon Oct 12 10:26:01 2026
+****************************************
+
+  Clock: clk
+
+  Clock Pin                                    Latency  CRP    Skew
+----------------------------------------------------------------------------
+  u_cic_u_combs_u_comb2_valid_out_reg/CLK      0.13                    rp-+
+  u_cic_u_combs_u_comb3_valid_out_reg/CLK      0.08    -0.00   0.05    rp-+
+----------------------------------------------------------------------------
+
+1

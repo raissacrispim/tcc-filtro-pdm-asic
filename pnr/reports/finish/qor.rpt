@@ -1,15 +1,9 @@
-Information: Timer using 1 threads
-Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 785 MB / Date: Mon Oct 12 09:51:47 2026
-
-Timing Update Completed: Mem-peak: 785 MB / Date: Mon Oct 12 09:51:47 2026
-
 ****************************************
 Report : qor
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:51:47 2026
+Date   : Mon Oct 12 10:19:58 2026
 ****************************************
-Information: Corner default: no PVT mismatches. (PVT-032)
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
 Information: Design filtro_pdm has 12045 nets, 0 global routed, 12043 detail routed. (NEX-024)
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
@@ -31,28 +25,9 @@ Extracting design: filtro_pdm
 Information: coupling capacitance is lumped to ground. (NEX-030)
 Information: 12043 nets are successfully extracted. (NEX-028)
 Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
-Information: Activity propagation will be performed for scenario default.
-Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
-Information: Timer-derived activity data is cached on scenario default (POW-052)
-Information: Running switching activity propagation in scalar mode!
-
- **** Information : No. of simulation cycles = 6 ****
+Information: Activity for scenario default was cached, no propagation required. (POW-005)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Net estimation statistics: timing graph nets = 12043, routed nets = 12043, across physical hierarchy nets = 0, parasitics cached nets = 12043, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
-[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[29407]
-************************************************************
-Timer Settings:
-Delay Calculation Style:                   auto
-Signal Integrity Analysis:                 disabled
-Timing Window Analysis:                    disabled
-Advanced Waveform Propagation:             disabled
-Variation Type:                            fixed_derate
-Clock Reconvergence Pessimism Removal:     disabled
-Advanced Receiver Model:                   disabled
-LLE:                                       disabled
-ML Acceleration:                           off
-Smart Arc Optimization:                    disabled
-************************************************************
 
 
 Scenario           'default'
@@ -129,27 +104,27 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            21476.69
-Noncombinational Area:         11509.67
-Buf/Inv Area:                   3086.07
-Total Buffer Area:               821.90
-Total Inverter Area:            2264.17
+Combinational Area:            21480.51
+Noncombinational Area:         11510.18
+Buf/Inv Area:                   3089.63
+Total Buffer Area:               824.44
+Total Inverter Area:            2265.19
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   95229.43
-Net YLength:                  130934.31
+Net XLength:                   95230.47
+Net YLength:                  130931.39
 ----------------------------------------
-Cell Area (netlist):                          32986.37
+Cell Area (netlist):                          32990.69
 Cell Area (netlist and physical only):        47906.14
-Net Length:                   226163.75
+Net Length:                   226161.86
 
 
 Design Rules
 ----------------------------------------
 Total Number of Nets:             12045
-Nets with Violations:                12
+Nets with Violations:                 3
 Max Trans Violations:                 0
-Max Cap Violations:                  12
+Max Cap Violations:                   3
 ----------------------------------------
 
 1

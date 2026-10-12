@@ -1,10 +1,10 @@
-                               RESULTS: CLEAN
+                             RESULTS: NOT CLEAN
 
-                      ####  #      #####   ###   #   #
-                     #      #      #      #   #  ##  #
-                     #      #      ####   #####  # # #
-                     #      #      #      #   #  #  ##
-                      ####  #####  #####  #   #  #   #
+         #   #   ###   #####      ####  #      #####   ###   #   #
+         ##  #  #   #    #       #      #      #      #   #  ##  #
+         # # #  #   #    #       #      #      ####   #####  # # #
+         #  ##  #   #    #       #      #      #      #   #  #  ##
+         #   #   ###     #        ####  #####  #####  #   #  #   #
 
 ===========================================================================
 
@@ -46,8 +46,8 @@ Working directory:      /home/raissa.crispim/tcc_filtro/verif/run_drc
 Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_drc/run_details
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 09:59:18AM
-Time ended:             2026/10/12 09:59:47AM
+Time started:           2026/10/12 10:20:31AM
+Time ended:             2026/10/12 10:21:01AM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -59,9 +59,14 @@ Rule and DRC Error Summary
 
 396 total rules were run.
 0 rules NOT EXECUTED.
-0 rules have violations.
-There are 0 total violations.
+1 rule has violations.
+There are 2 total violations.
 Refer to filtro_pdm.LAYOUT_ERRORS
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Rule                          Violations Found
+M1.S.1                        v = 2
 
 
 ---------------------------------------------------------------------------
@@ -128,8 +133,8 @@ Performance Statistics
 ---------------------------------------------------------------------------
 
 IC Validator Run Time = 0:00:29
-Peak Single Command Memory = 0.114 GB
+Peak Single Command Memory = 0.116 GB
 
 Distributed Host Memory Usage
-srv-microeletronica3 (2/2)  ....  Average=0.686 GB, Peak=0.781 GB / 251.112 GB
+srv-microeletronica3 (2/2)  ....  Average=0.674 GB, Peak=0.763 GB / 251.112 GB
 IC Validator is done.

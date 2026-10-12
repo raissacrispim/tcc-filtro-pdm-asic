@@ -1,0 +1,114 @@
+****************************************
+Report : constraint
+        -all_violators
+        -max_capacitance
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Mon Oct 12 10:18:40 2026
+****************************************
+
+
+
+Information: Timer using 1 threads
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 483 MB / Date: Mon Oct 12 10:18:40 2026
+
+Information: Corner default: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
+Information: Design filtro_pdm has 12045 nets, 0 global routed, 12043 detail routed. (NEX-024)
+Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
+---extraction options---
+Corner: default
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.enable_coupling_cap    : false
+Extracting design: filtro_pdm 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 12043 nets are successfully extracted. (NEX-028)
+Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 12043, routed nets = 12043, across physical hierarchy nets = 0, parasitics cached nets = 12043, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[8131]
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+Timing Update Completed: Mem-peak: 595 MB / Date: Mon Oct 12 10:18:45 2026
+
+   Mode: default Corner: default
+   Scenario: default
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   u_fir/HFSNET_518             8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_fir/HFSINV_188_527/Y
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   u_fir/HFSNET_806            16.00          16.07          -0.07  (VIOLATED) 
+     PIN : u_fir/HFSBUF_332_817/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   u_fir/HFSNET_458             8.00           8.06          -0.06  (VIOLATED) 
+     PIN : u_fir/HFSINV_205_467/Y
+                                8.00           8.06          -0.06  (VIOLATED) 
+
+   u_fir/HFSNET_1146           16.00          16.05          -0.05  (VIOLATED) 
+     PIN : u_fir/HFSINV_9809_1184/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_fir/ropt_net_65           16.00          16.05          -0.05  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_2282/Y
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_fir/intadd_28_A_12_       16.00          16.05          -0.05  (VIOLATED) 
+     PIN : u_fir/intadd_54_U5/S
+                               16.00          16.05          -0.05  (VIOLATED) 
+
+   u_fir/delay_31__11_          8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_fir/delay_reg_31__11_/Q
+                                8.00           8.05          -0.05  (VIOLATED) 
+
+   u_fir/HFSNET_808            16.00          16.03          -0.03  (VIOLATED) 
+     PIN : u_fir/HFSBUF_217_819/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   u_fir/ropt_net_66           16.00          16.03          -0.03  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_2283/Y
+                               16.00          16.03          -0.03  (VIOLATED) 
+
+   u_fir/ropt_net_79           16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_2296/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
+
+   u_fir/intadd_157_A_1_        8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_fir/U2334/Y        8.00           8.01          -0.01  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 11
+
+   Total number of violation(s): 11
+1

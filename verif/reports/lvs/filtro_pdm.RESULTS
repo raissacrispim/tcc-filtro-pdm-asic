@@ -1,10 +1,10 @@
-                         LVS Compare Results: PASS
+                         LVS Compare Results: FAIL
 
-                          ####   ###    ####   ####
-                         #   #  #   #  #      #
-                         ####   #####  #####  #####
-                         #      #   #      #      #
-                         #      #   #  ####   #### 
+                          #####   ###   #   #
+                          #      #   #  #   #
+                          ####   #####  #   #
+                          #      #   #  #   #
+                          #      #   #  #   #####
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -68,8 +68,8 @@ Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_detail
 LVS error file:         filtro_pdm.LVS_ERRORS
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 10:00:54AM
-Time ended:             2026/10/12 10:01:48AM
+Time started:           2026/10/12 10:21:29AM
+Time ended:             2026/10/12 10:22:24AM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -95,7 +95,7 @@ Violation                     v = 1
 
 LVS Compare Summary
 
-LVS Compare Result: PASS
+LVS Compare Result: FAIL
 TOP equivalence point: [filtro_pdm, filtro_pdm]
 
     blackbox cells checked: 0
@@ -103,13 +103,13 @@ TOP equivalence point: [filtro_pdm, filtro_pdm]
       failed  0
 
     equivalence points checked: 1
-      passed  1
-      failed  0
+      passed  0
+    * failed  1
 
 Refer to filtro_pdm.LVS_ERRORS for LVS Error Diagnostics
 
+    [FAIL]  filtro_pdm != filtro_pdm   (level 0)
 
-    [PASS]  filtro_pdm == filtro_pdm   (level 0)
 
 
 ---------------------------------------------------------------------------
@@ -186,14 +186,14 @@ Allocated CPU Time = 0.0 CPU hours
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:00:54
-Peak Single Command Memory = 0.463 GB
+IC Validator Run Time = 0:00:55
+Peak Single Command Memory = 0.464 GB
 Peak Disk Usage = 0.034 GB
 Network Disk Usage Peak=0.014 GB (no group)
 Group File Disk Usage Peak=0.020 GB
 
 Distributed Host Memory Usage
- srv-microeletronica3 (2/64)  ....  Average=1.577 GB, Peak=1.577 GB / 251.109 GB
+ srv-microeletronica3 (2/64)  ....  Average=1.591 GB, Peak=1.591 GB / 251.109 GB
 
 Overall Distributed Utilization: not available
 IC Validator is done.

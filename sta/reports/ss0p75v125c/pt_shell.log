@@ -1,0 +1,138 @@
+
+                                 PrimeTime (R)
+
+               Version X-2025.06-SP2 for linux64 - Oct 17, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+# ============================================================
+# sta_corner.tcl
+# Analise estatica de timing pos-layout em um corner
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys PrimeTime
+# Tecnologia: SAED32 RVT
+#
+# Chamado por sta/scripts/run_sta.sh, que define:
+#   STA_CORNER  nome do corner da biblioteca (ex.: ss0p75v125c)
+#   STA_SPEF    parasitas extraidos (Cmax ou Cmin)
+#
+# Entradas:
+#   pnr/output/filtro_pdm_pnr.v          netlist pos-layout
+#   pnr/output/filtro_pdm.C*_25.spef     parasitas (finish.tcl)
+#   pnr/constraints/*.sdc                mesmas restricoes do fluxo
+# ============================================================
+set CORNER $env(STA_CORNER)
+ss0p75v125c
+set SPEF   $env(STA_SPEF)
+pnr/output/filtro_pdm.Cmax_25.spef
+set DB_DIR /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+set REP    sta/reports/$CORNER
+sta/reports/ss0p75v125c
+file mkdir $REP
+# ------------------------------------------------------------
+# 1. Biblioteca do corner e netlist
+# ------------------------------------------------------------
+set_app_var search_path [list . $DB_DIR]
+. /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+set_app_var link_path   [list * saed32rvt_${CORNER}.db]
+* saed32rvt_ss0p75v125c.db
+read_verilog pnr/output/filtro_pdm_pnr.v
+1
+current_design filtro_pdm
+Information: current_design won't return any data before link (DES-071)
+link_design
+Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.v'
+Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75v125c.db'
+Linking design filtro_pdm...
+Information: Removing 1 unneeded designs..... (LNK-034)
+Information: 240 (81.63%) library cells are unused in library saed32rvt_ss0p75v125c..... (LNK-045)
+Information: total 240 library cells are unused (LNK-046)
+Design 'filtro_pdm' was successfully linked.
+Information: There are 8159 leaf cells, ports, hiers and 12404 nets in the design (LNK-047)
+1
+# ------------------------------------------------------------
+# 2. Parasitas e restricoes
+#
+# Clock propagado: atrasos reais da arvore de clock do CTS.
+# ------------------------------------------------------------
+read_parasitics -format SPEF $SPEF
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+Information: read_parasitics command is executed in background
+1
+report_annotated_parasitics > $REP/parasitas.rpt
+read_sdc pnr/constraints/filtro_pdm_physical.sdc
+
+Reading SDC version 2.2...
+1
+1
+read_sdc pnr/constraints/filtro_pdm_dft.sdc
+
+Reading SDC version 2.2...
+1
+1
+set_propagated_clock [all_clocks]
+1
+update_timing -full
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Information: Building multi voltage information for entire design. (MV-022)
+1
+# ------------------------------------------------------------
+# 3. Relatorios
+# ------------------------------------------------------------
+report_global_timing > $REP/global_timing.rpt
+report_timing -delay_type max -max_paths 10     -significant_digits 3 > $REP/timing_max.rpt
+report_timing -delay_type min -max_paths 10     -significant_digits 3 > $REP/timing_min.rpt
+report_constraint -all_violators > $REP/violadores.rpt
+report_clock_timing -type skew > $REP/clock_skew.rpt
+# Resumo no terminal
+set pior_setup [get_attribute     [get_timing_paths -delay_type max] slack]
+56.873856
+set pior_hold  [get_attribute     [get_timing_paths -delay_type min] slack]
+-0.079238
+puts ""
+
+puts "=================================================="
+==================================================
+puts "Corner     : $CORNER"
+Corner     : ss0p75v125c
+puts "Parasitas  : $SPEF"
+Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef
+puts "Pior setup : $pior_setup ns"
+Pior setup : 56.873856 ns
+puts "Pior hold  : $pior_hold ns"
+Pior hold  : -0.079238 ns
+puts "Relatorios : $REP/"
+Relatorios : sta/reports/ss0p75v125c/
+puts "=================================================="
+==================================================
+exit
+Information: Defining new variable 'DB_DIR'. (CMD-041)
+Information: Defining new variable 'pior_hold'. (CMD-041)
+Information: Defining new variable 'SPEF'. (CMD-041)
+Information: Defining new variable 'pior_setup'. (CMD-041)
+Information: Defining new variable 'CORNER'. (CMD-041)
+Information: Defining new variable 'REP'. (CMD-041)
+
+Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 2890.30 MB
+CPU usage for this session: 14 seconds 
+Elapsed time for this session: 10 seconds
+Diagnostics summary: 1 warning, 16 informationals
+
+Thank you for using pt_shell!

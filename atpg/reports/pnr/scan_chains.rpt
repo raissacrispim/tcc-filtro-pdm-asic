@@ -1,0 +1,3 @@
+ chain             group  length  input_pin           output_pin
+ ----------------  -----  ------  ------------------  ------------------
+ 1                 sg0      1332  scan_in             scan_out          

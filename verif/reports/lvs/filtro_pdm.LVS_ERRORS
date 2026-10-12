@@ -15,18 +15,18 @@ Layout netlist     = /home/raissa.crispim/tcc_filtro/verif/run_lvs/filtro_pdm.ne
 Runset file        = saed32nm_1p9m_lvs_rules_local.rs
 Working directory  = /home/raissa.crispim/tcc_filtro/verif/run_lvs
 Compare directory  = run_details/compare
-Compare start time = 2026-10-12 10:01:37
+Compare start time = 2026-10-12 10:22:13
 
 
 
 --------------------------------------------------------------------------
-Final comparison result:PASS
+Final comparison result:FAIL
 
-			#####   ##   ##### #####
-			#   #  #  #  #     #    
-			##### ###### ##### #####
-			#     #    #     #     #
-			#     #    # ##### #####
+			######   ##   ##### #    
+			#       #  #    #   #    
+			#####  ######   #   #    
+			#      #    #   #   #    
+			#      #    # ##### #####
 
 
 TOP equivalence point:
@@ -34,10 +34,53 @@ TOP equivalence point:
 
 Comparison summary
 
-    1 Successful equivalence points
-    0 Failed equivalence points
+    0 Successful equivalence points
+  * 1 Failed equivalence points
+        1 First priority errors
+        0 Second priority errors
 
-TOP-level Post-compare summary (* = unmatched devices, nets or ports):
+
+--------------------------------------------------------------------------
+
+
+Failed equivalence points:
+		[filtro_pdm != filtro_pdm]
+
+
+
+
+
+
+
++------------------------------------------------------------------------+
+|                          First Priority Errors                         |
++------------------------------------------------------------------------+
+
+First priority errors are equivalence points that IC Validator has
+determined probably contain errors that need to be fixed first.
+
+==========================================================================
+
+> filtro_pdm != filtro_pdm (level = 0)
+
+Error summary:
+
+           0 Unmatched schematic instance 
+           2 Unmatched schematic nets
+           0 Unmatched layout instance 
+           1 Unmatched layout net 
+
+      144242 Matched instances
+       73523 Matched nets
+
+Port summary:
+
+           0 Unmatched schematic port
+           0 Unmatched layout port
+          27 Matched ports
+
+
+Post-compare summary (* = unmatched devices, nets or ports):
 
         Matched      Unmatched    Unmatched        Instance types
                      schematic    layout           [schematic, layout]
@@ -47,15 +90,281 @@ TOP-level Post-compare summary (* = unmatched devices, nets or ports):
         ---------    ---------    ---------        --------------------
            144242            0            0        Total instances
 
-            73525            0            0        Total nets
+            73523            2            1      * Total nets
 
                27            0            0        Total ports
 
 
 
-Schematic and layout agree at all user-intended equivalent points involved
-in compare.
+Diagnostic summary:
 
+    1 shorted layout net
+    Text shorted nets are found
+
+
+DIAGNOSTIC: 1 shorted layout net
+
+    The following unmatched nets are highly suspected to indicate
+    source of shorts in the layout netlist.
+
+    Group 1 of 1:
+
+        Schematic net : connections  		Layout net : connections
+        ---------------------------  		------------------------
+        u_fir/intadd_3_SUM_0_ : 4               N27149 : 14
+        u_fir/intadd_14_SUM_0_ : 10             
+
+    For all matched devices:  ! = unmatched net belonging to shorted net group 1
+                              * = other unmatched net
+
+    4 matched devices connected to shorted net u_fir/intadd_3_SUM_0_.
+    --------------------------------------------------------------------
+
+    Instance 1 of 4:
+        Instance          Schematic                   Layout (10.6840, 98.1800)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/U1604/MN              M42468
+        Instance type     NMOS[fir_BITS_IN17_BITS_    NMOS[n105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/INVX0_RVT/n105]       
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_3_SUM_0_ (G  ! N27149 (GATE)
+                            ATE)                        
+
+
+    Instance 2 of 4:
+        Instance          Schematic                   Layout (14.6360, 98.9570)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_3_U34/MN13     M42447
+        Instance type     NMOS[fir_BITS_IN17_BITS_    NMOS[n105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/n105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        1               ! u_fir/intadd_3_SUM_0_ (D  ! N27149 (DRN)
+                            RN)                         
+
+
+    Instance 3 of 4:
+        Instance          Schematic                   Layout (14.6360, 99.7650)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_3_U34/MP13     M116840
+        Instance type     PMOS[fir_BITS_IN17_BITS_    PMOS[p105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/p105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        1               ! u_fir/intadd_3_SUM_0_ (D  ! N27149 (DRN)
+                            RN)                         
+
+
+    Instance 4 of 4:
+        Instance          Schematic                   Layout (10.6840, 97.5900)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/U1604/MP              M116875
+        Instance type     PMOS[fir_BITS_IN17_BITS_    PMOS[p105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/INVX0_RVT/p105]       
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_3_SUM_0_ (G  ! N27149 (GATE)
+                            ATE)                        
+
+
+
+    10 matched devices connected to shorted net u_fir/intadd_14_SUM_0_.
+    --------------------------------------------------------------------
+
+    Instance 1 of 10:
+        Instance          Schematic                   Layout (11.1400, 82.1670)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MN4     M48197
+        Instance type     NMOS[fir_BITS_IN17_BITS_    NMOS[n105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/n105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+    Instance 2 of 10:
+        Instance          Schematic                   Layout (11.5960, 82.1670)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MN8     M48186
+        Instance type     NMOS[fir_BITS_IN17_BITS_    NMOS[n105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/n105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+    Instance 3 of 10:
+        Instance          Schematic                   Layout (10.8360, 98.9570)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_14_U21/MN13    M42466
+        Instance type     NMOS[fir_BITS_IN17_BITS_    NMOS[n105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/n105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        1               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (DRN)
+                            DRN)                        
+
+
+    Instance 4 of 10:
+        Instance          Schematic                   Layout (12.2040, 82.1670)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MN11    M48173
+        Instance type     NMOS[fir_BITS_IN17_BITS_    NMOS[n105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/n105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+    Instance 5 of 10:
+        Instance          Schematic                   Layout (10.8360, 82.1670)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MN3     M48203
+        Instance type     NMOS[fir_BITS_IN17_BITS_    NMOS[n105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/n105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+    Instance 6 of 10:
+        Instance          Schematic                   Layout (10.8360, 99.7650)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_14_U21/MP13    M116873
+        Instance type     PMOS[fir_BITS_IN17_BITS_    PMOS[p105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/p105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        1               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (DRN)
+                            DRN)                        
+
+
+    Instance 7 of 10:
+        Instance          Schematic                   Layout (10.8360, 83.1350)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MP2     M124441
+        Instance type     PMOS[fir_BITS_IN17_BITS_    PMOS[p105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/p105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+    Instance 8 of 10:
+        Instance          Schematic                   Layout (11.1400, 83.1350)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MP5     M124435
+        Instance type     PMOS[fir_BITS_IN17_BITS_    PMOS[p105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/p105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+    Instance 9 of 10:
+        Instance          Schematic                   Layout (12.2040, 83.1350)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MP11    M124408
+        Instance type     PMOS[fir_BITS_IN17_BITS_    PMOS[p105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/p105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+    Instance 10 of 10:
+        Instance          Schematic                   Layout (11.5960, 83.1350)
+        --------------    ------------------------    ------------------------
+        Instance name     u_fir/intadd_144_U5/MP8     M124424
+        Instance type     PMOS[fir_BITS_IN17_BITS_    PMOS[p105]
+                            COEF16_BITS_ACC34_BITS      
+                            _OUT19_TAPS65_FRAC15_t      
+                            est_1/FADDX1_RVT/p105]      
+
+        Class             Schematic net (port)        Layout net (port)
+        --------------    ------------------------    ------------------------
+        4               ! u_fir/intadd_14_SUM_0_ (  ! N27149 (GATE)
+                            GATE)                       
+
+
+DIAGNOSTIC: Text shorted nets are found
+
+    The following nets are found to be text shorted:
+      Group 1 - scan_out (used) y_out[18]
+
+    Please check filtro_pdm.LAYOUT_ERRORS for more details
+
+
++------------------------------------------------------------------------+
+|                            Unmatched Nodes                             |
++------------------------------------------------------------------------+
+
+Unmatched schematic nets are listed as follows:
+
+    Net name : connections
+    ----------------------------------------
+    u_fir/intadd_14_SUM_0_ : 10
+    u_fir/intadd_3_SUM_0_ : 4
+
+
+Unmatched layout nets are listed as follows:
+
+    Net name : connections
+    ----------------------------------------
+    N27149 : 14
+
+
+
+
+
+    Please check run_details/compare/filtro_pdm/sum.filtro_pdm.filtro_pdm
 
 
 +------------------------------------------------------------------------+

@@ -17,6 +17,8 @@ Information: Using 1 threads for LVS
 [Check Net] 90% 	Elapsed =    0:00:02, CPU =    0:00:02
 [Check Net] All nets are submitted.
 [Check Net] 100%	Elapsed =    0:00:02, CPU =    0:00:02
+Information: Detected short violation. Net1: u_fir/intadd_14_SUM_0_. Net2: u_fir/intadd_3_SUM_0_. BBox: (10.8570 99.6520)(10.9670 99.7080). Layer: M2. (RT-586)
+Information: Detected short violation. Net1: u_fir/intadd_14_SUM_0_. Net2: u_fir/intadd_3_SUM_0_. BBox: (10.8840 99.6520)(10.9400 99.7080). Layer: M2. (RT-586)
 
 ===============================================================
     Maximum number of violations is set to 20
@@ -24,7 +26,7 @@ Information: Using 1 threads for LVS
     All violations might not be found.
 ===============================================================
 Total number of input nets is 12045.
-Total number of short violations is 0.
+Total number of short violations is 2.
 Total number of open nets is 0.
 Total number of floating route violations is 0.
 
