@@ -135,24 +135,14 @@ for {set rodada 1} {$rodada <= 3} {incr rodada} {
 
 
 # ------------------------------------------------------------
-# 1c. Correcao de hold nos corners extremos (ECO do PrimeTime)
+# 1c. Incerteza de hold da especificacao
 #
-# O P&R otimizou o hold somente no corner tipico. A analise
-# do PrimeTime no corner rapido (ff0p95vn40c) gera, com
-# "sta/scripts/run_sta.sh eco", a lista de mudancas
-# sta/eco/hold_eco.tcl (buffers/celulas de atraso). Se o
-# arquivo existir, as mudancas sao aplicadas aqui.
+# cts.tcl e route.tcl otimizam com 0,20 ns (margem para o
+# corner rapido). Relatorios e SDC exportado usam o valor
+# da especificacao, 0,10 ns.
 # ------------------------------------------------------------
 
-set HOLD_ECO sta/eco/hold_eco.tcl
-
-if {[file exists $HOLD_ECO]} {
-    puts "Aplicando ECO de hold: $HOLD_ECO"
-    source -echo $HOLD_ECO
-    posiciona_e_roteia_eco
-} else {
-    puts "ECO de hold nao encontrado ($HOLD_ECO): etapa ignorada."
-}
+set_clock_uncertainty -hold 0.10 [get_clocks clk]
 
 
 # ------------------------------------------------------------

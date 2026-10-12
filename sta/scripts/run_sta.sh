@@ -6,8 +6,7 @@
 #
 # Uso (a partir da raiz do repositorio, apos finish.tcl):
 #
-#   sta/scripts/run_sta.sh        # analise nos 3 corners
-#   sta/scripts/run_sta.sh eco    # gera ECO de hold no corner ff
+#   sta/scripts/run_sta.sh
 #
 # O P&R foi otimizado somente no corner tipico. Aqui o mesmo
 # layout e verificado nos extremos de processo, tensao e
@@ -21,8 +20,6 @@
 # ============================================================
 
 set -e
-
-MODO=${1:-analise}
 
 DB_DIR=/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
 
@@ -60,14 +57,7 @@ for ITEM in "${CORNERS[@]}"; do
 
     mkdir -p "sta/reports/$CORNER"
 
-    # ECO de hold somente no corner rapido (pior caso de hold)
-    ECO=0
-    if [ "$MODO" = "eco" ]; then
-        [ "$CORNER" = "ff0p95vn40c" ] || continue
-        ECO=1
-    fi
-
-    STA_CORNER=$CORNER STA_SPEF=$SPEF STA_ECO=$ECO \
+    STA_CORNER=$CORNER STA_SPEF=$SPEF \
         pt_shell -f sta/scripts/sta_corner.tcl \
         > "sta/reports/$CORNER/pt_shell.log" 2>&1 || true
 

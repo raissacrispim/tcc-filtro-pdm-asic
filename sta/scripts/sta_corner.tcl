@@ -8,7 +8,6 @@
 # Chamado por sta/scripts/run_sta.sh, que define:
 #   STA_CORNER  nome do corner da biblioteca (ex.: ss0p75v125c)
 #   STA_SPEF    parasitas extraidos (Cmax ou Cmin)
-#   STA_ECO     1 = gerar ECO de hold (sta/eco/hold_eco.tcl)
 #
 # Entradas:
 #   pnr/output/filtro_pdm_pnr.v          netlist pos-layout
@@ -70,31 +69,6 @@ report_timing -delay_type min -max_paths 10 \
 report_constraint -all_violators > $REP/violadores.rpt
 
 report_clock_timing -type skew > $REP/clock_skew.rpt
-
-# ------------------------------------------------------------
-# 4. ECO de hold (opcional)
-#
-# Insere buffers/celulas de atraso nos caminhos com hold
-# violado e grava os comandos para o Fusion Compiler. A folga
-# de setup e grande (> 50 ns) em todos os corners, portanto o
-# atraso inserido nao compromete o setup.
-# ------------------------------------------------------------
-
-if {[info exists env(STA_ECO)] && $env(STA_ECO) eq "1"} {
-    file mkdir sta/eco
-    set BUFS {}
-    foreach nome {DELLN1X2_RVT DELLN2X2_RVT NBUFFX2_RVT} {
-        if {[sizeof_collection [get_lib_cells -quiet */$nome]] > 0} {
-            lappend BUFS $nome
-        }
-    }
-    puts "ECO de hold com: $BUFS"
-    fix_eco_timing -type hold -methods {size_cell insert_buffer} \
-        -buffer_list $BUFS
-    report_global_timing > $REP/global_timing_apos_eco.rpt
-    write_changes -format icc2tcl -output sta/eco/hold_eco.tcl
-    puts "ECO gravado: sta/eco/hold_eco.tcl"
-}
 
 # Resumo no terminal
 set pior_setup [get_attribute \

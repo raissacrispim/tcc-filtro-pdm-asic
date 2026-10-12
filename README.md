@@ -91,7 +91,6 @@ Todos os comandos são executados a partir da raiz do repositório.
 | Atividade de chaveamento (SAIF) | VCS | `sim/scripts/run_saif.sh` | raiz |
 | Potência com SAIF | Fusion Compiler | `fc_shell -f pnr/scripts/power_saif.tcl` | raiz |
 | Timing multi-corner (tt/ss/ff) | PrimeTime | `sta/scripts/run_sta.sh` | raiz |
-| ECO de hold (corner ff) | PrimeTime + Fusion Compiler | `sta/scripts/run_sta.sh eco` e depois `finish.tcl` | raiz |
 | ATPG pós-layout | TestMAX ATPG | `atpg/scripts/run_atpg.sh stuck pnr` e `atpg/scripts/run_atpg.sh transition pnr` | raiz |
 | Verificação do GDS | Python | `python3 pnr/scripts/check_gds.py pnr/output/filtro_pdm_final.gds` | raiz |
 | DRC | IC Validator | `verif/scripts/run_drc.sh` | raiz |
