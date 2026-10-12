@@ -4,17 +4,17 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 10:19:14 2026
+Date   : Mon Oct 12 10:37:40 2026
 ****************************************
 
 
 
 Information: Deserialized np data
-INFO: timer data loaded from /tmp/filtro_pdm_4040186_590288896.timdat
+INFO: timer data loaded from /tmp/filtro_pdm_4051670_590831820.timdat
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 12043 nets are successfully extracted. (NEX-028)
+Information: 12044 nets are successfully extracted. (NEX-028)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
    Mode: default Corner: default
@@ -31,12 +31,8 @@ Information: Activity for scenario default was cached, no propagation required. 
      PIN : u_fir/HFSINV_205_467/Y
                                 8.00           8.06          -0.06  (VIOLATED) 
 
-   u_fir/intadd_28_A_12_       16.00          16.05          -0.05  (VIOLATED) 
-     PIN : u_fir/intadd_54_U5/S
-                               16.00          16.05          -0.05  (VIOLATED) 
-
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 3
+   Number of max_capacitance violation(s): 2
 
-   Total number of violation(s): 3
+   Total number of violation(s): 2
 1

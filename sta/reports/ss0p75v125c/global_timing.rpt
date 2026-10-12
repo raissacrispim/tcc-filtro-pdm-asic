@@ -3,18 +3,10 @@ Report : global_timing
 	-format { narrow }
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Mon Oct 12 10:26:13 2026
+Date   : Mon Oct 12 10:50:29 2026
 ****************************************
 
 No setup violations found.
 
-Hold violations
----------------------------------------------------------
-         Total  reg->reg   in->reg  reg->out   in->out
----------------------------------------------------------
-WNS      -0.08      0.00     -0.08      0.00      0.00
-TNS      -1.47      0.00     -1.47      0.00      0.00
-NUM         34         0        34         0         0
----------------------------------------------------------
-
+No hold violations found.
 1

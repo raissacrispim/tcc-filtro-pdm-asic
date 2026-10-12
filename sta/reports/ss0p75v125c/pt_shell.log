@@ -28,11 +28,12 @@
 # Chamado por sta/scripts/run_sta.sh, que define:
 #   STA_CORNER  nome do corner da biblioteca (ex.: ss0p75v125c)
 #   STA_SPEF    parasitas extraidos (Cmax ou Cmin)
+#   STA_ECO     1 = gerar ECO de hold (sta/eco/hold_eco.tcl)
 #
 # Entradas:
 #   pnr/output/filtro_pdm_pnr.v          netlist pos-layout
 #   pnr/output/filtro_pdm.C*_25.spef     parasitas (finish.tcl)
-#   pnr/constraints/*.sdc                mesmas restricoes do fluxo
+#   pnr/output/filtro_pdm_pnr.sdc        restricoes exportadas pelo FC
 # ============================================================
 set CORNER $env(STA_CORNER)
 ss0p75v125c
@@ -59,10 +60,10 @@ Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.
 Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75v125c.db'
 Linking design filtro_pdm...
 Information: Removing 1 unneeded designs..... (LNK-034)
-Information: 240 (81.63%) library cells are unused in library saed32rvt_ss0p75v125c..... (LNK-045)
-Information: total 240 library cells are unused (LNK-046)
+Information: 238 (80.95%) library cells are unused in library saed32rvt_ss0p75v125c..... (LNK-045)
+Information: total 238 library cells are unused (LNK-046)
 Design 'filtro_pdm' was successfully linked.
-Information: There are 8159 leaf cells, ports, hiers and 12404 nets in the design (LNK-047)
+Information: There are 9513 leaf cells, ports, hiers and 13757 nets in the design (LNK-047)
 1
 # ------------------------------------------------------------
 # 2. Parasitas e restricoes
@@ -74,17 +75,19 @@ Information: Log for 'read_parasitics command' will be generated in 'parasitics_
 Information: read_parasitics command is executed in background
 1
 report_annotated_parasitics > $REP/parasitas.rpt
-read_sdc pnr/constraints/filtro_pdm_physical.sdc
+# SDC exportado pelo Fusion Compiler apos o CTS: alem das
+# restricoes originais, contem a latencia do clock para os
+# caminhos de E/S (set_clock_latency). Com o SDC original, as
+# entradas eram lancadas no instante 0 enquanto o clock chega
+# aos flip-flops ~0,12 ns depois, gerando falsas violacoes de
+# hold nos caminhos scan_in/scan_en -> registradores.
+read_sdc pnr/output/filtro_pdm_pnr.sdc
 
 Reading SDC version 2.2...
+Warning: Nothing implicitly matched 'VDD' (SEL-003)
+Warning: Nothing implicitly matched 'VSS' (SEL-003)
+Warning: Converting a propagated clock 'clk' to an ideal clock. (UITE-305)
 1
-1
-read_sdc pnr/constraints/filtro_pdm_dft.sdc
-
-Reading SDC version 2.2...
-1
-1
-set_propagated_clock [all_clocks]
 1
 update_timing -full
 Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
@@ -99,11 +102,33 @@ report_timing -delay_type max -max_paths 10     -significant_digits 3 > $REP/tim
 report_timing -delay_type min -max_paths 10     -significant_digits 3 > $REP/timing_min.rpt
 report_constraint -all_violators > $REP/violadores.rpt
 report_clock_timing -type skew > $REP/clock_skew.rpt
+# ------------------------------------------------------------
+# 4. ECO de hold (opcional)
+#
+# Insere buffers/celulas de atraso nos caminhos com hold
+# violado e grava os comandos para o Fusion Compiler. A folga
+# de setup e grande (> 50 ns) em todos os corners, portanto o
+# atraso inserido nao compromete o setup.
+# ------------------------------------------------------------
+if {[info exists env(STA_ECO)] && $env(STA_ECO) eq "1"} {
+    file mkdir sta/eco
+    set BUFS {}
+    foreach nome {DELLN1X2_RVT DELLN2X2_RVT NBUFFX2_RVT} {
+        if {[sizeof_collection [get_lib_cells -quiet */$nome]] > 0} {
+            lappend BUFS $nome
+        }
+    }
+    puts "ECO de hold com: $BUFS"
+    fix_eco_timing -type hold -methods {size_cell insert_buffer}         -buffer_list $BUFS
+    report_global_timing > $REP/global_timing_apos_eco.rpt
+    write_changes -format icc2tcl -output sta/eco/hold_eco.tcl
+    puts "ECO gravado: sta/eco/hold_eco.tcl"
+}
 # Resumo no terminal
 set pior_setup [get_attribute     [get_timing_paths -delay_type max] slack]
-56.873856
+55.726582
 set pior_hold  [get_attribute     [get_timing_paths -delay_type min] slack]
--0.079238
+0.039971
 puts ""
 
 puts "=================================================="
@@ -113,9 +138,9 @@ Corner     : ss0p75v125c
 puts "Parasitas  : $SPEF"
 Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef
 puts "Pior setup : $pior_setup ns"
-Pior setup : 56.873856 ns
+Pior setup : 55.726582 ns
 puts "Pior hold  : $pior_hold ns"
-Pior hold  : -0.079238 ns
+Pior hold  : 0.039971 ns
 puts "Relatorios : $REP/"
 Relatorios : sta/reports/ss0p75v125c/
 puts "=================================================="
@@ -130,9 +155,9 @@ Information: Defining new variable 'REP'. (CMD-041)
 
 Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
 Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
-Maximum memory usage for this session: 2890.30 MB
+Maximum memory usage for this session: 2890.18 MB
 CPU usage for this session: 14 seconds 
 Elapsed time for this session: 10 seconds
-Diagnostics summary: 1 warning, 16 informationals
+Diagnostics summary: 3 warnings, 16 informationals
 
 Thank you for using pt_shell!

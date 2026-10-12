@@ -1,5 +1,5 @@
 // Fusion Compiler Version X-2025.06-SP3 Verilog Writer
-// Generated on 10/12/2026 at 10:20:1
+// Generated on 10/12/2026 at 10:46:38
 // Library Name: filtro_pdm.dlib
 // Block Name: filtro_pdm
 // User Label: route
@@ -8849,88 +8849,132 @@ wire ropt_net_94 ;
 wire n1694 ;
 wire n1695 ;
 wire ropt_net_95 ;
+wire eco_net ;
 wire n1698 ;
 wire n1699 ;
 wire n1700 ;
+wire net_PTECO_HOLD_NET2 ;
+wire net_PTECO_HOLD_NET4 ;
 wire n1703 ;
 wire n1704 ;
 wire n1705 ;
 wire n1706 ;
 wire n1707 ;
+wire net_PTECO_HOLD_NET6 ;
+wire net_PTECO_HOLD_NET7 ;
 wire n1710 ;
 wire n1711 ;
 wire n1712 ;
+wire net_PTECO_HOLD_NET8 ;
+wire net_PTECO_HOLD_NET10 ;
+wire net_PTECO_HOLD_NET11 ;
+wire net_PTECO_HOLD_NET12 ;
 wire n1718 ;
 wire n1719 ;
+wire net_PTECO_HOLD_NET13 ;
+wire net_PTECO_HOLD_NET14 ;
 wire n1722 ;
 wire n1723 ;
 wire n1724 ;
+wire net_PTECO_HOLD_NET15 ;
+wire net_PTECO_HOLD_NET17 ;
+wire net_PTECO_HOLD_NET19 ;
+wire net_PTECO_HOLD_NET20 ;
+wire net_PTECO_HOLD_NET21 ;
 wire n1730 ;
 wire n1731 ;
+wire net_PTECO_HOLD_NET24 ;
+wire net_PTECO_HOLD_NET25 ;
 wire n1734 ;
 wire n1735 ;
 wire n1736 ;
+wire net_PTECO_HOLD_NET26 ;
+wire net_PTECO_HOLD_NET28 ;
+wire net_PTECO_HOLD_NET30 ;
+wire net_PTECO_HOLD_NET32 ;
 wire ZBUF_40_1 ;
 wire n1742 ;
 wire n1743 ;
+wire net_PTECO_HOLD_NET34 ;
 wire ZBUF_39_1 ;
 wire n1746 ;
 wire n1747 ;
 wire n1748 ;
+wire net_PTECO_HOLD_NET35 ;
 wire ZBUF_54_1 ;
 wire n1751 ;
 wire n1752 ;
 wire n1753 ;
 wire n1754 ;
 wire n1755 ;
+wire net_PTECO_HOLD_NET36 ;
+wire net_PTECO_HOLD_NET38 ;
 wire n1758 ;
 wire n1759 ;
 wire n1760 ;
+wire net_PTECO_HOLD_NET39 ;
+wire net_PTECO_HOLD_NET40 ;
 wire n1763 ;
 wire n1764 ;
 wire n1765 ;
 wire n1766 ;
 wire n1767 ;
 wire n1768 ;
+wire net_PTECO_HOLD_NET41 ;
+wire net_PTECO_HOLD_NET42 ;
 wire n1771 ;
 wire n1772 ;
+wire net_PTECO_HOLD_NET43 ;
+wire net_PTECO_HOLD_NET44 ;
 wire n1775 ;
 wire n1776 ;
 wire n1777 ;
 wire n1778 ;
 wire n1779 ;
 wire HFSNET_567 ;
+wire net_PTECO_HOLD_NET45 ;
 wire ZBUF_2_2 ;
 wire n1783 ;
 wire n1784 ;
 wire n1785 ;
+wire net_PTECO_HOLD_NET47 ;
+wire net_PTECO_HOLD_NET48 ;
 wire n1788 ;
 wire n1789 ;
 wire n1790 ;
 wire n1791 ;
 wire n1792 ;
 wire n1793 ;
+wire net_PTECO_HOLD_NET50 ;
+wire net_PTECO_HOLD_NET51 ;
 wire n1796 ;
 wire n1797 ;
 wire HFSNET_609 ;
+wire net_PTECO_HOLD_NET52 ;
 wire n1801 ;
 wire n1802 ;
 wire n1803 ;
 wire n1804 ;
 wire HFSNET_611 ;
+wire net_PTECO_HOLD_NET53 ;
 wire ZBUF_860_6 ;
 wire n1808 ;
 wire n1809 ;
 wire n1810 ;
+wire net_PTECO_HOLD_NET54 ;
 wire ZCTSNET_0 ;
 wire n1813 ;
 wire n1814 ;
 wire n1815 ;
 wire n1816 ;
 wire n1817 ;
+wire net_PTECO_HOLD_NET55 ;
+wire net_PTECO_HOLD_NET56 ;
 wire n1820 ;
 wire n1821 ;
 wire HFSNET_563 ;
+wire net_PTECO_HOLD_NET57 ;
+wire net_PTECO_HOLD_NET58 ;
 wire n1825 ;
 wire n1826 ;
 wire n1827 ;
@@ -8990,6 +9034,7 @@ wire n1880 ;
 wire n1881 ;
 wire n1882 ;
 wire n1883 ;
+wire net_PTECO_HOLD_NET59 ;
 wire HFSNET_865 ;
 wire n1886 ;
 wire n1887 ;
@@ -9026,6 +9071,9 @@ wire n1917 ;
 wire n1918 ;
 wire n1919 ;
 wire n1920 ;
+wire net_PTECO_HOLD_NET60 ;
+wire net_PTECO_HOLD_NET61 ;
+wire net_PTECO_HOLD_NET62 ;
 wire ZCTSNET_3 ;
 wire n1925 ;
 wire n1926 ;
@@ -9046,6 +9094,7 @@ wire n1940 ;
 wire n1941 ;
 wire HFSNET_805 ;
 wire n1943 ;
+wire net_PTECO_HOLD_NET63 ;
 wire HFSNET_1034 ;
 wire ZCTSNET_4 ;
 wire n1947 ;
@@ -9056,9 +9105,12 @@ wire HFSNET_1000 ;
 wire n1952 ;
 wire n1953 ;
 wire n1954 ;
+wire net_PTECO_HOLD_NET64 ;
+wire net_PTECO_HOLD_NET65 ;
 wire n1957 ;
 wire n1958 ;
 wire n1959 ;
+wire net_PTECO_HOLD_NET66 ;
 wire n1961 ;
 wire n1962 ;
 wire n1963 ;
@@ -9073,6 +9125,7 @@ wire n1971 ;
 wire n1972 ;
 wire n1973 ;
 wire n1974 ;
+wire net_PTECO_HOLD_NET67 ;
 wire n1976 ;
 wire n1977 ;
 wire n1978 ;
@@ -9259,6 +9312,7 @@ wire n2160 ;
 wire n2161 ;
 wire n2162 ;
 wire ZCTSNET_23 ;
+wire net_PTECO_HOLD_NET68 ;
 wire n2165 ;
 wire n2166 ;
 wire HFSNET_565 ;
@@ -9354,13 +9408,18 @@ wire n2264 ;
 wire n2265 ;
 wire n2266 ;
 wire n2267 ;
+wire net_PTECO_HOLD_NET69 ;
 wire n2269 ;
 wire n2270 ;
 wire n2271 ;
 wire n2272 ;
 wire HFSNET_659 ;
 wire n2274 ;
+wire net_PTECO_HOLD_NET70 ;
+wire net_PTECO_HOLD_NET71 ;
 wire n2277 ;
+wire net_PTECO_HOLD_NET72 ;
+wire net_PTECO_HOLD_NET73 ;
 wire n2280 ;
 wire n2281 ;
 wire n2282 ;
@@ -9378,13 +9437,16 @@ wire n2293 ;
 wire n2294 ;
 wire HFSNET_397 ;
 wire n2296 ;
+wire net_PTECO_HOLD_NET74 ;
 wire HFSNET_1012 ;
+wire net_PTECO_HOLD_NET75 ;
 wire n2300 ;
 wire n2301 ;
 wire HFSNET_495 ;
 wire n2303 ;
 wire n2304 ;
 wire n2305 ;
+wire net_PTECO_HOLD_NET76 ;
 wire n2307 ;
 wire n2308 ;
 wire n2309 ;
@@ -9393,6 +9455,7 @@ wire n2311 ;
 wire n2312 ;
 wire n2313 ;
 wire n2314 ;
+wire net_PTECO_HOLD_NET78 ;
 wire n2316 ;
 wire HFSNET_444 ;
 wire n2318 ;
@@ -9400,6 +9463,8 @@ wire n2319 ;
 wire n2320 ;
 wire n2321 ;
 wire n2322 ;
+wire net_PTECO_HOLD_NET79 ;
+wire net_PTECO_HOLD_NET80 ;
 wire n2325 ;
 wire n2326 ;
 wire n2327 ;
@@ -9418,6 +9483,7 @@ wire n2339 ;
 wire n2340 ;
 wire n2341 ;
 wire n2342 ;
+wire net_PTECO_HOLD_NET81 ;
 wire n2344 ;
 wire n2345 ;
 wire n2346 ;
@@ -9461,6 +9527,7 @@ wire n2383 ;
 wire n2384 ;
 wire HFSNET_944 ;
 wire HFSNET_928 ;
+wire net_PTECO_HOLD_NET82 ;
 wire n2388 ;
 wire n2389 ;
 wire n2390 ;
@@ -9579,6 +9646,8 @@ wire n2502 ;
 wire n2503 ;
 wire n2504 ;
 wire n2505 ;
+wire net_PTECO_HOLD_NET83 ;
+wire net_PTECO_HOLD_NET84 ;
 wire n2508 ;
 wire n2509 ;
 wire n2510 ;
@@ -9591,6 +9660,7 @@ wire n2516 ;
 wire n2517 ;
 wire n2518 ;
 wire n2519 ;
+wire net_PTECO_HOLD_NET85 ;
 wire n2521 ;
 wire n2522 ;
 wire HFSNET_1042 ;
@@ -9611,6 +9681,7 @@ wire HFSNET_1090 ;
 wire HFSNET_1091 ;
 wire HFSNET_1044 ;
 wire HFSNET_1045 ;
+wire net_PTECO_HOLD_NET86 ;
 wire HFSNET_1047 ;
 wire HFSNET_1048 ;
 wire HFSNET_1049 ;
@@ -10789,6 +10860,7 @@ wire HFSNET_1148 ;
 wire HFSNET_1149 ;
 wire HFSNET_1150 ;
 wire HFSNET_1151 ;
+wire net_PTECO_HOLD_NET87 ;
 wire HFSNET_1153 ;
 wire HFSNET_1154 ;
 wire HFSNET_1155 ;
@@ -10806,11 +10878,26 @@ wire HFSNET_1166 ;
 wire tmp_net10 ;
 wire tmp_net11 ;
 wire tmp_net12 ;
+wire net_PTECO_HOLD_NET88 ;
+wire net_PTECO_HOLD_NET90 ;
+wire net_PTECO_HOLD_NET91 ;
+wire net_PTECO_HOLD_NET92 ;
+wire net_PTECO_HOLD_NET94 ;
+wire net_PTECO_HOLD_NET95 ;
+wire net_PTECO_HOLD_NET96 ;
+wire net_PTECO_HOLD_NET97 ;
+wire net_PTECO_HOLD_NET98 ;
+wire net_PTECO_HOLD_NET99 ;
 wire ZBUF_57_9 ;
+wire net_PTECO_HOLD_NET100 ;
+wire net_PTECO_HOLD_NET101 ;
 wire ZBUF_17_9 ;
 wire ZBUF_50_9 ;
 wire ZBUF_686_9 ;
+wire net_PTECO_HOLD_NET103 ;
+wire net_PTECO_HOLD_NET104 ;
 wire ZBUF_601_9 ;
+wire net_PTECO_HOLD_NET105 ;
 wire ZBUF_827_0 ;
 wire ZBUF_382_0 ;
 wire tmp_net17 ;
@@ -10824,6 +10911,7 @@ wire tmp_net24 ;
 wire tmp_net25 ;
 wire tmp_net26 ;
 wire tmp_net27 ;
+wire net_PTECO_HOLD_NET106 ;
 wire tmp_net30 ;
 wire tmp_net31 ;
 wire tmp_net32 ;
@@ -10849,14 +10937,131 @@ wire tmp_net51 ;
 wire ZBUF_807_2 ;
 wire ZBUF_289_2 ;
 wire copt_net_52 ;
+wire net_PTECO_HOLD_NET107 ;
+wire net_PTECO_HOLD_NET108 ;
+wire net_PTECO_HOLD_NET110 ;
+wire net_PTECO_HOLD_NET111 ;
+wire net_PTECO_HOLD_NET112 ;
+wire net_PTECO_HOLD_NET113 ;
+wire net_PTECO_HOLD_NET114 ;
+wire net_PTECO_HOLD_NET115 ;
+wire net_PTECO_HOLD_NET116 ;
+wire net_PTECO_HOLD_NET118 ;
+wire net_PTECO_HOLD_NET119 ;
+wire net_PTECO_HOLD_NET120 ;
+wire net_PTECO_HOLD_NET121 ;
+wire net_PTECO_HOLD_NET122 ;
+wire net_PTECO_HOLD_NET123 ;
+wire net_PTECO_HOLD_NET125 ;
+wire net_PTECO_HOLD_NET126 ;
+wire net_PTECO_HOLD_NET127 ;
+wire net_PTECO_HOLD_NET128 ;
+wire net_PTECO_HOLD_NET129 ;
+wire net_PTECO_HOLD_NET130 ;
+wire net_PTECO_HOLD_NET132 ;
+wire net_PTECO_HOLD_NET135 ;
+wire net_PTECO_HOLD_NET136 ;
+wire net_PTECO_HOLD_NET137 ;
+wire net_PTECO_HOLD_NET138 ;
+wire net_PTECO_HOLD_NET139 ;
+wire net_PTECO_HOLD_NET140 ;
+wire net_PTECO_HOLD_NET141 ;
+wire net_PTECO_HOLD_NET142 ;
+wire net_PTECO_HOLD_NET143 ;
+wire net_PTECO_HOLD_NET144 ;
+wire net_PTECO_HOLD_NET146 ;
+wire net_PTECO_HOLD_NET148 ;
+wire net_PTECO_HOLD_NET149 ;
+wire net_PTECO_HOLD_NET150 ;
+wire net_PTECO_HOLD_NET151 ;
+wire net_PTECO_HOLD_NET152 ;
+wire net_PTECO_HOLD_NET153 ;
+wire net_PTECO_HOLD_NET154 ;
+wire net_PTECO_HOLD_NET156 ;
+wire net_PTECO_HOLD_NET157 ;
+wire net_PTECO_HOLD_NET158 ;
+wire net_PTECO_HOLD_NET159 ;
+wire net_PTECO_HOLD_NET160 ;
+wire net_PTECO_HOLD_NET161 ;
+wire net_PTECO_HOLD_NET163 ;
+wire net_PTECO_HOLD_NET164 ;
+wire net_PTECO_HOLD_NET165 ;
 wire HFSNET_1 ;
 wire HFSNET_2 ;
 wire HFSNET_3 ;
+wire net_PTECO_HOLD_NET166 ;
+wire net_PTECO_HOLD_NET167 ;
+wire net_PTECO_HOLD_NET168 ;
 wire HFSNET_7 ;
+wire net_PTECO_HOLD_NET170 ;
 wire HFSNET_9 ;
 wire HFSNET_10 ;
+wire net_PTECO_HOLD_NET173 ;
+wire net_PTECO_HOLD_NET174 ;
+wire net_PTECO_HOLD_NET175 ;
+wire net_PTECO_HOLD_NET176 ;
+wire net_PTECO_HOLD_NET177 ;
+wire net_PTECO_HOLD_NET180 ;
+wire net_PTECO_HOLD_NET181 ;
+wire net_PTECO_HOLD_NET182 ;
+wire net_PTECO_HOLD_NET183 ;
+wire net_PTECO_HOLD_NET184 ;
+wire net_PTECO_HOLD_NET185 ;
+wire net_PTECO_HOLD_NET186 ;
+wire net_PTECO_HOLD_NET187 ;
+wire net_PTECO_HOLD_NET188 ;
+wire net_PTECO_HOLD_NET189 ;
+wire net_PTECO_HOLD_NET190 ;
 wire HFSNET_31 ;
+wire net_PTECO_HOLD_NET191 ;
 wire HFSNET_33 ;
+wire net_PTECO_HOLD_NET193 ;
+wire net_PTECO_HOLD_NET194 ;
+wire net_PTECO_HOLD_NET195 ;
+wire net_PTECO_HOLD_NET196 ;
+wire net_PTECO_HOLD_NET197 ;
+wire net_PTECO_HOLD_NET198 ;
+wire net_PTECO_HOLD_NET199 ;
+wire net_PTECO_HOLD_NET200 ;
+wire net_PTECO_HOLD_NET202 ;
+wire net_PTECO_HOLD_NET203 ;
+wire net_PTECO_HOLD_NET204 ;
+wire net_PTECO_HOLD_NET205 ;
+wire net_PTECO_HOLD_NET206 ;
+wire net_PTECO_HOLD_NET208 ;
+wire net_PTECO_HOLD_NET209 ;
+wire net_PTECO_HOLD_NET211 ;
+wire net_PTECO_HOLD_NET213 ;
+wire net_PTECO_HOLD_NET214 ;
+wire net_PTECO_HOLD_NET215 ;
+wire net_PTECO_HOLD_NET216 ;
+wire net_PTECO_HOLD_NET217 ;
+wire net_PTECO_HOLD_NET218 ;
+wire net_PTECO_HOLD_NET220 ;
+wire net_PTECO_HOLD_NET222 ;
+wire net_PTECO_HOLD_NET223 ;
+wire net_PTECO_HOLD_NET225 ;
+wire net_PTECO_HOLD_NET226 ;
+wire net_PTECO_HOLD_NET227 ;
+wire net_PTECO_HOLD_NET228 ;
+wire net_PTECO_HOLD_NET229 ;
+wire net_PTECO_HOLD_NET230 ;
+wire net_PTECO_HOLD_NET231 ;
+wire net_PTECO_HOLD_NET232 ;
+wire net_PTECO_HOLD_NET233 ;
+wire net_PTECO_HOLD_NET234 ;
+wire net_PTECO_HOLD_NET235 ;
+wire net_PTECO_HOLD_NET236 ;
+wire net_PTECO_HOLD_NET237 ;
+wire net_PTECO_HOLD_NET238 ;
+wire net_PTECO_HOLD_NET240 ;
+wire net_PTECO_HOLD_NET242 ;
+wire net_PTECO_HOLD_NET243 ;
+wire net_PTECO_HOLD_NET244 ;
+wire net_PTECO_HOLD_NET245 ;
+wire net_PTECO_HOLD_NET246 ;
+wire net_PTECO_HOLD_NET247 ;
+wire net_PTECO_HOLD_NET248 ;
 wire HFSNET_114 ;
 wire HFSNET_115 ;
 wire HFSNET_116 ;
@@ -10877,6 +11082,7 @@ wire HFSNET_130 ;
 wire HFSNET_131 ;
 wire HFSNET_132 ;
 wire HFSNET_133 ;
+wire net_PTECO_HOLD_NET249 ;
 wire HFSNET_135 ;
 wire HFSNET_136 ;
 wire HFSNET_137 ;
@@ -10904,132 +11110,1045 @@ wire HFSNET_158 ;
 wire HFSNET_159 ;
 wire HFSNET_160 ;
 wire HFSNET_161 ;
+wire net_PTECO_HOLD_NET251 ;
+wire net_PTECO_HOLD_NET252 ;
+wire net_PTECO_HOLD_NET253 ;
+wire net_PTECO_HOLD_NET254 ;
+wire net_PTECO_HOLD_NET255 ;
+wire net_PTECO_HOLD_NET256 ;
+wire net_PTECO_HOLD_NET257 ;
+wire net_PTECO_HOLD_NET258 ;
+wire net_PTECO_HOLD_NET259 ;
+wire net_PTECO_HOLD_NET260 ;
+wire net_PTECO_HOLD_NET261 ;
+wire net_PTECO_HOLD_NET262 ;
+wire net_PTECO_HOLD_NET263 ;
 wire HFSNET_175 ;
+wire net_PTECO_HOLD_NET264 ;
+wire net_PTECO_HOLD_NET267 ;
+wire net_PTECO_HOLD_NET268 ;
+wire net_PTECO_HOLD_NET269 ;
+wire net_PTECO_HOLD_NET271 ;
+wire net_PTECO_HOLD_NET272 ;
+wire net_PTECO_HOLD_NET273 ;
+wire net_PTECO_HOLD_NET274 ;
+wire net_PTECO_HOLD_NET275 ;
+wire net_PTECO_HOLD_NET276 ;
+wire net_PTECO_HOLD_NET277 ;
+wire net_PTECO_HOLD_NET278 ;
+wire net_PTECO_HOLD_NET282 ;
+wire net_PTECO_HOLD_NET283 ;
 wire HFSNET_190 ;
+wire net_PTECO_HOLD_NET284 ;
+wire net_PTECO_HOLD_NET285 ;
+wire net_PTECO_HOLD_NET287 ;
+wire net_PTECO_HOLD_NET288 ;
+wire net_PTECO_HOLD_NET289 ;
+wire net_PTECO_HOLD_NET290 ;
+wire net_PTECO_HOLD_NET291 ;
+wire net_PTECO_HOLD_NET292 ;
+wire net_PTECO_HOLD_NET293 ;
+wire net_PTECO_HOLD_NET294 ;
+wire net_PTECO_HOLD_NET295 ;
+wire net_PTECO_HOLD_NET296 ;
+wire net_PTECO_HOLD_NET297 ;
+wire net_PTECO_HOLD_NET298 ;
+wire net_PTECO_HOLD_NET299 ;
+wire net_PTECO_HOLD_NET300 ;
+wire net_PTECO_HOLD_NET301 ;
+wire net_PTECO_HOLD_NET302 ;
+wire net_PTECO_HOLD_NET303 ;
+wire net_PTECO_HOLD_NET304 ;
+wire net_PTECO_HOLD_NET305 ;
+wire net_PTECO_HOLD_NET307 ;
+wire net_PTECO_HOLD_NET308 ;
+wire net_PTECO_HOLD_NET309 ;
+wire net_PTECO_HOLD_NET310 ;
+wire net_PTECO_HOLD_NET311 ;
+wire net_PTECO_HOLD_NET313 ;
+wire net_PTECO_HOLD_NET314 ;
+wire net_PTECO_HOLD_NET316 ;
+wire net_PTECO_HOLD_NET317 ;
+wire net_PTECO_HOLD_NET318 ;
+wire net_PTECO_HOLD_NET319 ;
+wire net_PTECO_HOLD_NET320 ;
+wire net_PTECO_HOLD_NET321 ;
+wire net_PTECO_HOLD_NET322 ;
+wire net_PTECO_HOLD_NET323 ;
+wire net_PTECO_HOLD_NET324 ;
+wire net_PTECO_HOLD_NET325 ;
+wire net_PTECO_HOLD_NET327 ;
+wire net_PTECO_HOLD_NET329 ;
+wire net_PTECO_HOLD_NET330 ;
+wire net_PTECO_HOLD_NET331 ;
+wire net_PTECO_HOLD_NET332 ;
+wire net_PTECO_HOLD_NET333 ;
+wire net_PTECO_HOLD_NET334 ;
+wire net_PTECO_HOLD_NET336 ;
+wire net_PTECO_HOLD_NET337 ;
+wire net_PTECO_HOLD_NET339 ;
+wire net_PTECO_HOLD_NET341 ;
+wire net_PTECO_HOLD_NET342 ;
+wire net_PTECO_HOLD_NET345 ;
+wire net_PTECO_HOLD_NET346 ;
+wire net_PTECO_HOLD_NET347 ;
+wire net_PTECO_HOLD_NET348 ;
+wire net_PTECO_HOLD_NET349 ;
+wire net_PTECO_HOLD_NET350 ;
+wire net_PTECO_HOLD_NET351 ;
+wire net_PTECO_HOLD_NET352 ;
+wire net_PTECO_HOLD_NET353 ;
+wire net_PTECO_HOLD_NET354 ;
+wire net_PTECO_HOLD_NET356 ;
+wire net_PTECO_HOLD_NET357 ;
+wire net_PTECO_HOLD_NET358 ;
+wire net_PTECO_HOLD_NET359 ;
+wire net_PTECO_HOLD_NET360 ;
+wire net_PTECO_HOLD_NET361 ;
+wire net_PTECO_HOLD_NET362 ;
+wire net_PTECO_HOLD_NET363 ;
+wire net_PTECO_HOLD_NET365 ;
+wire net_PTECO_HOLD_NET366 ;
 wire HFSNET_328 ;
 wire HFSNET_329 ;
 wire HFSNET_330 ;
+wire net_PTECO_HOLD_NET368 ;
 wire HFSNET_332 ;
 wire HFSNET_333 ;
 wire HFSNET_334 ;
 wire HFSNET_335 ;
+wire net_PTECO_HOLD_NET369 ;
+wire net_PTECO_HOLD_NET370 ;
+wire net_PTECO_HOLD_NET371 ;
+wire net_PTECO_HOLD_NET372 ;
+wire net_PTECO_HOLD_NET373 ;
+wire net_PTECO_HOLD_NET375 ;
 wire HFSNET_342 ;
+wire net_PTECO_HOLD_NET376 ;
+wire net_PTECO_HOLD_NET377 ;
+wire net_PTECO_HOLD_NET378 ;
+wire net_PTECO_HOLD_NET379 ;
+wire net_PTECO_HOLD_NET380 ;
+wire net_PTECO_HOLD_NET381 ;
+wire net_PTECO_HOLD_NET382 ;
+wire net_PTECO_HOLD_NET383 ;
+wire net_PTECO_HOLD_NET384 ;
+wire net_PTECO_HOLD_NET385 ;
+wire net_PTECO_HOLD_NET387 ;
+wire net_PTECO_HOLD_NET388 ;
+wire net_PTECO_HOLD_NET389 ;
 wire HFSNET_356 ;
+wire net_PTECO_HOLD_NET390 ;
 wire HFSNET_358 ;
 wire HFSNET_359 ;
+wire net_PTECO_HOLD_NET391 ;
 wire HFSNET_361 ;
+wire net_PTECO_HOLD_NET392 ;
 wire HFSNET_363 ;
+wire net_PTECO_HOLD_NET393 ;
+wire net_PTECO_HOLD_NET394 ;
 wire HFSNET_366 ;
+wire net_PTECO_HOLD_NET395 ;
+wire net_PTECO_HOLD_NET396 ;
+wire net_PTECO_HOLD_NET397 ;
+wire net_PTECO_HOLD_NET398 ;
 wire HFSNET_376 ;
+wire net_PTECO_HOLD_NET399 ;
+wire net_PTECO_HOLD_NET400 ;
+wire net_PTECO_HOLD_NET401 ;
+wire net_PTECO_HOLD_NET402 ;
+wire net_PTECO_HOLD_NET403 ;
 wire HFSNET_387 ;
 wire HFSNET_389 ;
+wire net_PTECO_HOLD_NET404 ;
+wire net_PTECO_HOLD_NET405 ;
+wire net_PTECO_HOLD_NET406 ;
+wire net_PTECO_HOLD_NET407 ;
+wire net_PTECO_HOLD_NET408 ;
+wire net_PTECO_HOLD_NET409 ;
+wire net_PTECO_HOLD_NET410 ;
+wire net_PTECO_HOLD_NET411 ;
+wire net_PTECO_HOLD_NET412 ;
+wire net_PTECO_HOLD_NET413 ;
+wire net_PTECO_HOLD_NET414 ;
+wire net_PTECO_HOLD_NET415 ;
+wire net_PTECO_HOLD_NET416 ;
 wire HFSNET_415 ;
+wire net_PTECO_HOLD_NET417 ;
+wire net_PTECO_HOLD_NET419 ;
+wire net_PTECO_HOLD_NET420 ;
+wire net_PTECO_HOLD_NET421 ;
+wire net_PTECO_HOLD_NET423 ;
+wire net_PTECO_HOLD_NET424 ;
+wire net_PTECO_HOLD_NET425 ;
+wire net_PTECO_HOLD_NET426 ;
+wire net_PTECO_HOLD_NET427 ;
+wire net_PTECO_HOLD_NET428 ;
+wire net_PTECO_HOLD_NET429 ;
+wire net_PTECO_HOLD_NET430 ;
 wire HFSNET_441 ;
 wire HFSNET_443 ;
+wire net_PTECO_HOLD_NET431 ;
+wire net_PTECO_HOLD_NET432 ;
+wire net_PTECO_HOLD_NET434 ;
+wire net_PTECO_HOLD_NET435 ;
+wire net_PTECO_HOLD_NET436 ;
 wire HFSNET_453 ;
+wire net_PTECO_HOLD_NET437 ;
 wire HFSNET_457 ;
 wire HFSNET_459 ;
+wire net_PTECO_HOLD_NET438 ;
+wire net_PTECO_HOLD_NET439 ;
+wire net_PTECO_HOLD_NET440 ;
+wire net_PTECO_HOLD_NET441 ;
 wire HFSNET_469 ;
+wire net_PTECO_HOLD_NET442 ;
+wire net_PTECO_HOLD_NET443 ;
 wire HFSNET_475 ;
+wire net_PTECO_HOLD_NET444 ;
+wire net_PTECO_HOLD_NET446 ;
+wire net_PTECO_HOLD_NET447 ;
+wire net_PTECO_HOLD_NET448 ;
+wire net_PTECO_HOLD_NET449 ;
+wire net_PTECO_HOLD_NET450 ;
+wire net_PTECO_HOLD_NET451 ;
+wire net_PTECO_HOLD_NET452 ;
+wire net_PTECO_HOLD_NET453 ;
+wire net_PTECO_HOLD_NET454 ;
+wire net_PTECO_HOLD_NET455 ;
+wire net_PTECO_HOLD_NET456 ;
+wire net_PTECO_HOLD_NET457 ;
+wire net_PTECO_HOLD_NET458 ;
+wire net_PTECO_HOLD_NET459 ;
+wire net_PTECO_HOLD_NET460 ;
+wire net_PTECO_HOLD_NET462 ;
+wire net_PTECO_HOLD_NET463 ;
+wire net_PTECO_HOLD_NET464 ;
+wire net_PTECO_HOLD_NET465 ;
+wire net_PTECO_HOLD_NET466 ;
+wire net_PTECO_HOLD_NET467 ;
+wire net_PTECO_HOLD_NET468 ;
+wire net_PTECO_HOLD_NET469 ;
+wire net_PTECO_HOLD_NET470 ;
+wire net_PTECO_HOLD_NET471 ;
+wire net_PTECO_HOLD_NET472 ;
+wire net_PTECO_HOLD_NET473 ;
+wire net_PTECO_HOLD_NET474 ;
+wire net_PTECO_HOLD_NET475 ;
+wire net_PTECO_HOLD_NET476 ;
+wire net_PTECO_HOLD_NET477 ;
+wire net_PTECO_HOLD_NET478 ;
+wire net_PTECO_HOLD_NET479 ;
+wire net_PTECO_HOLD_NET481 ;
+wire net_PTECO_HOLD_NET482 ;
+wire net_PTECO_HOLD_NET483 ;
+wire net_PTECO_HOLD_NET484 ;
+wire net_PTECO_HOLD_NET486 ;
+wire net_PTECO_HOLD_NET487 ;
+wire net_PTECO_HOLD_NET488 ;
+wire net_PTECO_HOLD_NET489 ;
+wire net_PTECO_HOLD_NET490 ;
+wire net_PTECO_HOLD_NET491 ;
+wire net_PTECO_HOLD_NET492 ;
+wire net_PTECO_HOLD_NET493 ;
+wire net_PTECO_HOLD_NET494 ;
+wire net_PTECO_HOLD_NET495 ;
+wire net_PTECO_HOLD_NET496 ;
+wire net_PTECO_HOLD_NET497 ;
+wire net_PTECO_HOLD_NET498 ;
+wire net_PTECO_HOLD_NET499 ;
+wire net_PTECO_HOLD_NET500 ;
+wire net_PTECO_HOLD_NET501 ;
+wire net_PTECO_HOLD_NET502 ;
+wire net_PTECO_HOLD_NET503 ;
+wire net_PTECO_HOLD_NET504 ;
+wire net_PTECO_HOLD_NET506 ;
+wire net_PTECO_HOLD_NET508 ;
+wire net_PTECO_HOLD_NET510 ;
+wire net_PTECO_HOLD_NET511 ;
+wire net_PTECO_HOLD_NET512 ;
+wire net_PTECO_HOLD_NET513 ;
+wire net_PTECO_HOLD_NET514 ;
+wire net_PTECO_HOLD_NET515 ;
+wire net_PTECO_HOLD_NET516 ;
+wire net_PTECO_HOLD_NET517 ;
+wire net_PTECO_HOLD_NET518 ;
+wire net_PTECO_HOLD_NET519 ;
+wire net_PTECO_HOLD_NET520 ;
+wire net_PTECO_HOLD_NET521 ;
 wire HFSNET_617 ;
 wire HFSNET_618 ;
 wire HFSNET_619 ;
 wire HFSNET_620 ;
 wire HFSNET_621 ;
+wire net_PTECO_HOLD_NET522 ;
+wire net_PTECO_HOLD_NET523 ;
+wire net_PTECO_HOLD_NET524 ;
+wire net_PTECO_HOLD_NET525 ;
+wire net_PTECO_HOLD_NET526 ;
+wire net_PTECO_HOLD_NET527 ;
+wire net_PTECO_HOLD_NET528 ;
+wire net_PTECO_HOLD_NET529 ;
 wire HFSNET_630 ;
 wire HFSNET_632 ;
 wire HFSNET_633 ;
+wire net_PTECO_HOLD_NET530 ;
 wire HFSNET_635 ;
+wire net_PTECO_HOLD_NET531 ;
+wire net_PTECO_HOLD_NET532 ;
+wire net_PTECO_HOLD_NET533 ;
+wire net_PTECO_HOLD_NET534 ;
 wire HFSNET_643 ;
+wire net_PTECO_HOLD_NET535 ;
+wire net_PTECO_HOLD_NET536 ;
+wire net_PTECO_HOLD_NET537 ;
+wire net_PTECO_HOLD_NET538 ;
+wire net_PTECO_HOLD_NET539 ;
 wire HFSNET_655 ;
+wire net_PTECO_HOLD_NET540 ;
+wire net_PTECO_HOLD_NET541 ;
 wire HFSNET_660 ;
 wire HFSNET_662 ;
 wire HFSNET_664 ;
 wire HFSNET_666 ;
 wire HFSNET_668 ;
+wire net_PTECO_HOLD_NET542 ;
+wire net_PTECO_HOLD_NET543 ;
+wire net_PTECO_HOLD_NET545 ;
+wire net_PTECO_HOLD_NET546 ;
 wire HFSNET_677 ;
+wire net_PTECO_HOLD_NET547 ;
+wire net_PTECO_HOLD_NET548 ;
+wire net_PTECO_HOLD_NET549 ;
+wire net_PTECO_HOLD_NET550 ;
+wire net_PTECO_HOLD_NET551 ;
+wire net_PTECO_HOLD_NET552 ;
+wire net_PTECO_HOLD_NET555 ;
+wire net_PTECO_HOLD_NET556 ;
 wire HFSNET_694 ;
+wire net_PTECO_HOLD_NET557 ;
+wire net_PTECO_HOLD_NET558 ;
+wire net_PTECO_HOLD_NET559 ;
 wire HFSNET_701 ;
 wire HFSNET_703 ;
+wire net_PTECO_HOLD_NET560 ;
+wire net_PTECO_HOLD_NET561 ;
+wire net_PTECO_HOLD_NET562 ;
 wire HFSNET_710 ;
+wire net_PTECO_HOLD_NET563 ;
 wire HFSNET_714 ;
 wire HFSNET_716 ;
 wire HFSNET_718 ;
 wire HFSNET_720 ;
 wire HFSNET_722 ;
 wire HFSNET_724 ;
+wire net_PTECO_HOLD_NET564 ;
 wire HFSNET_727 ;
+wire net_PTECO_HOLD_NET565 ;
+wire net_PTECO_HOLD_NET566 ;
+wire net_PTECO_HOLD_NET567 ;
+wire net_PTECO_HOLD_NET569 ;
+wire net_PTECO_HOLD_NET570 ;
+wire net_PTECO_HOLD_NET571 ;
+wire net_PTECO_HOLD_NET572 ;
+wire net_PTECO_HOLD_NET573 ;
+wire net_PTECO_HOLD_NET575 ;
+wire net_PTECO_HOLD_NET576 ;
+wire net_PTECO_HOLD_NET577 ;
+wire net_PTECO_HOLD_NET578 ;
+wire net_PTECO_HOLD_NET579 ;
+wire net_PTECO_HOLD_NET580 ;
+wire net_PTECO_HOLD_NET581 ;
+wire net_PTECO_HOLD_NET582 ;
 wire HFSNET_761 ;
+wire net_PTECO_HOLD_NET583 ;
 wire HFSNET_763 ;
 wire HFSNET_764 ;
 wire HFSNET_765 ;
 wire HFSNET_766 ;
 wire HFSNET_767 ;
+wire net_PTECO_HOLD_NET584 ;
+wire net_PTECO_HOLD_NET585 ;
+wire net_PTECO_HOLD_NET586 ;
+wire net_PTECO_HOLD_NET587 ;
 wire HFSNET_772 ;
 wire HFSNET_773 ;
 wire HFSNET_775 ;
 wire HFSNET_776 ;
 wire HFSNET_777 ;
+wire net_PTECO_HOLD_NET588 ;
 wire HFSNET_779 ;
 wire HFSNET_781 ;
+wire net_PTECO_HOLD_NET589 ;
+wire net_PTECO_HOLD_NET590 ;
+wire net_PTECO_HOLD_NET591 ;
+wire net_PTECO_HOLD_NET593 ;
 wire HFSNET_787 ;
+wire net_PTECO_HOLD_NET594 ;
 wire HFSNET_791 ;
 wire HFSNET_792 ;
+wire net_PTECO_HOLD_NET595 ;
 wire HFSNET_796 ;
+wire net_PTECO_HOLD_NET596 ;
+wire net_PTECO_HOLD_NET597 ;
 wire HFSNET_802 ;
 wire HFSNET_804 ;
 wire HFSNET_806 ;
 wire HFSNET_808 ;
 wire HFSNET_810 ;
 wire HFSNET_812 ;
+wire net_PTECO_HOLD_NET598 ;
+wire net_PTECO_HOLD_NET599 ;
+wire net_PTECO_HOLD_NET600 ;
+wire net_PTECO_HOLD_NET601 ;
+wire net_PTECO_HOLD_NET602 ;
 wire HFSNET_824 ;
 wire HFSNET_826 ;
 wire HFSNET_828 ;
+wire net_PTECO_HOLD_NET603 ;
+wire net_PTECO_HOLD_NET604 ;
+wire net_PTECO_HOLD_NET605 ;
+wire net_PTECO_HOLD_NET606 ;
+wire net_PTECO_HOLD_NET607 ;
+wire net_PTECO_HOLD_NET608 ;
+wire net_PTECO_HOLD_NET609 ;
+wire net_PTECO_HOLD_NET610 ;
+wire net_PTECO_HOLD_NET611 ;
+wire net_PTECO_HOLD_NET612 ;
 wire HFSNET_848 ;
+wire net_PTECO_HOLD_NET613 ;
 wire HFSNET_850 ;
+wire net_PTECO_HOLD_NET614 ;
 wire HFSNET_852 ;
 wire HFSNET_853 ;
 wire HFSNET_854 ;
+wire net_PTECO_HOLD_NET615 ;
 wire HFSNET_856 ;
+wire net_PTECO_HOLD_NET616 ;
 wire HFSNET_858 ;
+wire net_PTECO_HOLD_NET617 ;
 wire HFSNET_864 ;
+wire net_PTECO_HOLD_NET619 ;
 wire HFSNET_868 ;
 wire HFSNET_869 ;
+wire net_PTECO_HOLD_NET620 ;
+wire net_PTECO_HOLD_NET621 ;
+wire net_PTECO_HOLD_NET622 ;
+wire net_PTECO_HOLD_NET623 ;
+wire net_PTECO_HOLD_NET624 ;
+wire net_PTECO_HOLD_NET625 ;
+wire net_PTECO_HOLD_NET626 ;
+wire net_PTECO_HOLD_NET628 ;
+wire net_PTECO_HOLD_NET629 ;
+wire net_PTECO_HOLD_NET630 ;
 wire HFSNET_890 ;
 wire HFSNET_892 ;
+wire net_PTECO_HOLD_NET631 ;
+wire net_PTECO_HOLD_NET633 ;
+wire net_PTECO_HOLD_NET634 ;
 wire HFSNET_901 ;
 wire HFSNET_903 ;
 wire HFSNET_905 ;
+wire net_PTECO_HOLD_NET635 ;
+wire net_PTECO_HOLD_NET636 ;
+wire net_PTECO_HOLD_NET637 ;
+wire net_PTECO_HOLD_NET638 ;
+wire net_PTECO_HOLD_NET639 ;
 wire HFSNET_916 ;
 wire HFSNET_917 ;
+wire net_PTECO_HOLD_NET640 ;
 wire HFSNET_920 ;
 wire HFSNET_921 ;
 wire HFSNET_922 ;
 wire HFSNET_923 ;
+wire net_PTECO_HOLD_NET641 ;
 wire HFSNET_925 ;
 wire HFSNET_927 ;
 wire HFSNET_929 ;
+wire net_PTECO_HOLD_NET642 ;
 wire HFSNET_933 ;
+wire net_PTECO_HOLD_NET643 ;
+wire net_PTECO_HOLD_NET644 ;
+wire net_PTECO_HOLD_NET645 ;
 wire HFSNET_941 ;
 wire HFSNET_943 ;
+wire net_PTECO_HOLD_NET646 ;
+wire net_PTECO_HOLD_NET647 ;
+wire net_PTECO_HOLD_NET648 ;
 wire HFSNET_951 ;
+wire net_PTECO_HOLD_NET649 ;
 wire HFSNET_955 ;
+wire net_PTECO_HOLD_NET651 ;
+wire net_PTECO_HOLD_NET652 ;
+wire net_PTECO_HOLD_NET653 ;
 wire HFSNET_963 ;
+wire net_PTECO_HOLD_NET654 ;
+wire net_PTECO_HOLD_NET655 ;
+wire net_PTECO_HOLD_NET656 ;
+wire net_PTECO_HOLD_NET657 ;
+wire net_PTECO_HOLD_NET658 ;
 wire HFSNET_973 ;
 wire HFSNET_975 ;
 wire HFSNET_977 ;
 wire HFSNET_979 ;
+wire net_PTECO_HOLD_NET659 ;
+wire net_PTECO_HOLD_NET660 ;
+wire net_PTECO_HOLD_NET661 ;
 wire HFSNET_986 ;
+wire net_PTECO_HOLD_NET662 ;
+wire net_PTECO_HOLD_NET663 ;
 wire HFSNET_991 ;
+wire net_PTECO_HOLD_NET664 ;
 wire HFSNET_994 ;
+wire net_PTECO_HOLD_NET665 ;
+wire net_PTECO_HOLD_NET666 ;
+wire net_PTECO_HOLD_NET667 ;
 wire HFSNET_1001 ;
 wire HFSNET_1003 ;
+wire net_PTECO_HOLD_NET668 ;
+wire net_PTECO_HOLD_NET669 ;
 wire HFSNET_1009 ;
+wire net_PTECO_HOLD_NET670 ;
+wire net_PTECO_HOLD_NET671 ;
+wire net_PTECO_HOLD_NET672 ;
+wire net_PTECO_HOLD_NET673 ;
+wire net_PTECO_HOLD_NET674 ;
+wire net_PTECO_HOLD_NET675 ;
 wire HFSNET_1021 ;
 wire HFSNET_1023 ;
 wire HFSNET_1024 ;
 wire HFSNET_1026 ;
+wire net_PTECO_HOLD_NET676 ;
 wire HFSNET_1029 ;
+wire net_PTECO_HOLD_NET677 ;
+wire net_PTECO_HOLD_NET678 ;
+wire net_PTECO_HOLD_NET679 ;
+wire net_PTECO_HOLD_NET681 ;
+wire net_PTECO_HOLD_NET682 ;
+wire net_PTECO_HOLD_NET683 ;
+wire net_PTECO_HOLD_NET684 ;
+wire net_PTECO_HOLD_NET685 ;
+wire net_PTECO_HOLD_NET686 ;
+wire net_PTECO_HOLD_NET687 ;
+wire net_PTECO_HOLD_NET688 ;
+wire net_PTECO_HOLD_NET689 ;
+wire net_PTECO_HOLD_NET690 ;
+wire net_PTECO_HOLD_NET691 ;
+wire net_PTECO_HOLD_NET692 ;
+wire net_PTECO_HOLD_NET693 ;
+wire net_PTECO_HOLD_NET694 ;
+wire net_PTECO_HOLD_NET695 ;
+wire net_PTECO_HOLD_NET696 ;
+wire net_PTECO_HOLD_NET697 ;
+wire net_PTECO_HOLD_NET699 ;
+wire net_PTECO_HOLD_NET700 ;
+wire net_PTECO_HOLD_NET701 ;
+wire net_PTECO_HOLD_NET703 ;
+wire net_PTECO_HOLD_NET704 ;
+wire net_PTECO_HOLD_NET705 ;
+wire net_PTECO_HOLD_NET707 ;
+wire net_PTECO_HOLD_NET708 ;
+wire net_PTECO_HOLD_NET709 ;
+wire net_PTECO_HOLD_NET710 ;
+wire net_PTECO_HOLD_NET711 ;
+wire net_PTECO_HOLD_NET712 ;
+wire net_PTECO_HOLD_NET713 ;
+wire net_PTECO_HOLD_NET714 ;
+wire net_PTECO_HOLD_NET715 ;
+wire net_PTECO_HOLD_NET716 ;
+wire net_PTECO_HOLD_NET718 ;
+wire net_PTECO_HOLD_NET719 ;
+wire net_PTECO_HOLD_NET720 ;
+wire net_PTECO_HOLD_NET721 ;
+wire net_PTECO_HOLD_NET723 ;
+wire net_PTECO_HOLD_NET724 ;
+wire net_PTECO_HOLD_NET725 ;
+wire net_PTECO_HOLD_NET726 ;
+wire net_PTECO_HOLD_NET727 ;
+wire net_PTECO_HOLD_NET728 ;
+wire net_PTECO_HOLD_NET729 ;
+wire net_PTECO_HOLD_NET730 ;
+wire net_PTECO_HOLD_NET731 ;
+wire net_PTECO_HOLD_NET732 ;
+wire net_PTECO_HOLD_NET733 ;
+wire net_PTECO_HOLD_NET734 ;
+wire net_PTECO_HOLD_NET735 ;
+wire net_PTECO_HOLD_NET736 ;
+wire net_PTECO_HOLD_NET737 ;
+wire net_PTECO_HOLD_NET738 ;
+wire net_PTECO_HOLD_NET739 ;
+wire net_PTECO_HOLD_NET740 ;
+wire net_PTECO_HOLD_NET741 ;
+wire net_PTECO_HOLD_NET742 ;
+wire net_PTECO_HOLD_NET743 ;
+wire net_PTECO_HOLD_NET744 ;
+wire net_PTECO_HOLD_NET745 ;
+wire net_PTECO_HOLD_NET746 ;
+wire net_PTECO_HOLD_NET747 ;
+wire net_PTECO_HOLD_NET748 ;
+wire net_PTECO_HOLD_NET749 ;
+wire net_PTECO_HOLD_NET750 ;
+wire net_PTECO_HOLD_NET751 ;
+wire net_PTECO_HOLD_NET752 ;
+wire net_PTECO_HOLD_NET754 ;
+wire net_PTECO_HOLD_NET755 ;
+wire net_PTECO_HOLD_NET756 ;
+wire net_PTECO_HOLD_NET758 ;
+wire net_PTECO_HOLD_NET759 ;
+wire net_PTECO_HOLD_NET760 ;
+wire net_PTECO_HOLD_NET761 ;
+wire net_PTECO_HOLD_NET762 ;
+wire net_PTECO_HOLD_NET763 ;
+wire net_PTECO_HOLD_NET764 ;
+wire net_PTECO_HOLD_NET765 ;
+wire net_PTECO_HOLD_NET766 ;
+wire net_PTECO_HOLD_NET768 ;
+wire net_PTECO_HOLD_NET770 ;
+wire net_PTECO_HOLD_NET771 ;
+wire net_PTECO_HOLD_NET772 ;
+wire net_PTECO_HOLD_NET773 ;
+wire net_PTECO_HOLD_NET774 ;
+wire net_PTECO_HOLD_NET775 ;
+wire net_PTECO_HOLD_NET776 ;
+wire net_PTECO_HOLD_NET778 ;
+wire net_PTECO_HOLD_NET779 ;
+wire net_PTECO_HOLD_NET780 ;
+wire net_PTECO_HOLD_NET781 ;
+wire net_PTECO_HOLD_NET782 ;
+wire net_PTECO_HOLD_NET783 ;
+wire net_PTECO_HOLD_NET784 ;
+wire net_PTECO_HOLD_NET785 ;
+wire net_PTECO_HOLD_NET786 ;
+wire net_PTECO_HOLD_NET787 ;
+wire net_PTECO_HOLD_NET788 ;
+wire net_PTECO_HOLD_NET789 ;
+wire net_PTECO_HOLD_NET790 ;
+wire net_PTECO_HOLD_NET791 ;
+wire net_PTECO_HOLD_NET792 ;
+wire net_PTECO_HOLD_NET793 ;
+wire net_PTECO_HOLD_NET794 ;
+wire net_PTECO_HOLD_NET795 ;
+wire net_PTECO_HOLD_NET796 ;
+wire net_PTECO_HOLD_NET797 ;
+wire net_PTECO_HOLD_NET798 ;
+wire net_PTECO_HOLD_NET800 ;
+wire net_PTECO_HOLD_NET801 ;
+wire net_PTECO_HOLD_NET802 ;
+wire net_PTECO_HOLD_NET804 ;
+wire net_PTECO_HOLD_NET806 ;
+wire net_PTECO_HOLD_NET807 ;
+wire net_PTECO_HOLD_NET808 ;
+wire net_PTECO_HOLD_NET809 ;
+wire net_PTECO_HOLD_NET810 ;
+wire net_PTECO_HOLD_NET811 ;
+wire net_PTECO_HOLD_NET812 ;
+wire net_PTECO_HOLD_NET813 ;
+wire net_PTECO_HOLD_NET814 ;
+wire net_PTECO_HOLD_NET815 ;
+wire net_PTECO_HOLD_NET816 ;
+wire net_PTECO_HOLD_NET817 ;
+wire net_PTECO_HOLD_NET818 ;
+wire net_PTECO_HOLD_NET821 ;
+wire net_PTECO_HOLD_NET822 ;
+wire net_PTECO_HOLD_NET823 ;
+wire net_PTECO_HOLD_NET824 ;
+wire net_PTECO_HOLD_NET825 ;
+wire net_PTECO_HOLD_NET826 ;
+wire net_PTECO_HOLD_NET827 ;
+wire net_PTECO_HOLD_NET828 ;
+wire net_PTECO_HOLD_NET829 ;
+wire net_PTECO_HOLD_NET830 ;
+wire net_PTECO_HOLD_NET831 ;
+wire net_PTECO_HOLD_NET833 ;
+wire net_PTECO_HOLD_NET834 ;
+wire net_PTECO_HOLD_NET835 ;
+wire net_PTECO_HOLD_NET836 ;
+wire net_PTECO_HOLD_NET837 ;
+wire net_PTECO_HOLD_NET838 ;
+wire net_PTECO_HOLD_NET839 ;
+wire net_PTECO_HOLD_NET840 ;
+wire net_PTECO_HOLD_NET841 ;
+wire net_PTECO_HOLD_NET842 ;
+wire net_PTECO_HOLD_NET843 ;
+wire net_PTECO_HOLD_NET845 ;
+wire net_PTECO_HOLD_NET846 ;
+wire net_PTECO_HOLD_NET847 ;
+wire net_PTECO_HOLD_NET848 ;
+wire net_PTECO_HOLD_NET849 ;
+wire net_PTECO_HOLD_NET850 ;
+wire net_PTECO_HOLD_NET851 ;
+wire net_PTECO_HOLD_NET852 ;
+wire net_PTECO_HOLD_NET853 ;
+wire net_PTECO_HOLD_NET854 ;
+wire net_PTECO_HOLD_NET856 ;
+wire net_PTECO_HOLD_NET857 ;
+wire net_PTECO_HOLD_NET858 ;
+wire net_PTECO_HOLD_NET859 ;
+wire net_PTECO_HOLD_NET860 ;
+wire net_PTECO_HOLD_NET861 ;
+wire net_PTECO_HOLD_NET862 ;
+wire net_PTECO_HOLD_NET863 ;
+wire net_PTECO_HOLD_NET864 ;
+wire net_PTECO_HOLD_NET865 ;
+wire net_PTECO_HOLD_NET866 ;
+wire net_PTECO_HOLD_NET867 ;
+wire net_PTECO_HOLD_NET868 ;
+wire net_PTECO_HOLD_NET869 ;
+wire net_PTECO_HOLD_NET870 ;
+wire net_PTECO_HOLD_NET871 ;
+wire net_PTECO_HOLD_NET872 ;
+wire net_PTECO_HOLD_NET874 ;
+wire net_PTECO_HOLD_NET875 ;
+wire net_PTECO_HOLD_NET876 ;
+wire net_PTECO_HOLD_NET877 ;
+wire net_PTECO_HOLD_NET878 ;
+wire net_PTECO_HOLD_NET879 ;
+wire net_PTECO_HOLD_NET880 ;
+wire net_PTECO_HOLD_NET881 ;
+wire net_PTECO_HOLD_NET882 ;
+wire net_PTECO_HOLD_NET883 ;
+wire net_PTECO_HOLD_NET884 ;
+wire net_PTECO_HOLD_NET885 ;
+wire net_PTECO_HOLD_NET886 ;
+wire net_PTECO_HOLD_NET887 ;
+wire net_PTECO_HOLD_NET889 ;
+wire net_PTECO_HOLD_NET890 ;
+wire net_PTECO_HOLD_NET891 ;
+wire net_PTECO_HOLD_NET892 ;
+wire net_PTECO_HOLD_NET894 ;
+wire net_PTECO_HOLD_NET895 ;
+wire net_PTECO_HOLD_NET897 ;
+wire net_PTECO_HOLD_NET898 ;
+wire net_PTECO_HOLD_NET899 ;
+wire net_PTECO_HOLD_NET901 ;
+wire net_PTECO_HOLD_NET902 ;
+wire net_PTECO_HOLD_NET903 ;
+wire net_PTECO_HOLD_NET904 ;
+wire net_PTECO_HOLD_NET905 ;
+wire net_PTECO_HOLD_NET906 ;
+wire net_PTECO_HOLD_NET907 ;
+wire net_PTECO_HOLD_NET908 ;
+wire net_PTECO_HOLD_NET909 ;
+wire net_PTECO_HOLD_NET910 ;
+wire net_PTECO_HOLD_NET911 ;
+wire net_PTECO_HOLD_NET912 ;
+wire net_PTECO_HOLD_NET913 ;
+wire net_PTECO_HOLD_NET914 ;
+wire net_PTECO_HOLD_NET915 ;
+wire net_PTECO_HOLD_NET916 ;
+wire net_PTECO_HOLD_NET917 ;
+wire net_PTECO_HOLD_NET918 ;
+wire net_PTECO_HOLD_NET921 ;
+wire net_PTECO_HOLD_NET922 ;
+wire net_PTECO_HOLD_NET923 ;
+wire net_PTECO_HOLD_NET924 ;
+wire net_PTECO_HOLD_NET926 ;
+wire net_PTECO_HOLD_NET927 ;
+wire net_PTECO_HOLD_NET928 ;
+wire net_PTECO_HOLD_NET929 ;
+wire net_PTECO_HOLD_NET931 ;
+wire net_PTECO_HOLD_NET932 ;
+wire net_PTECO_HOLD_NET933 ;
+wire net_PTECO_HOLD_NET934 ;
+wire net_PTECO_HOLD_NET935 ;
+wire net_PTECO_HOLD_NET936 ;
+wire net_PTECO_HOLD_NET937 ;
+wire net_PTECO_HOLD_NET939 ;
+wire net_PTECO_HOLD_NET940 ;
+wire net_PTECO_HOLD_NET941 ;
+wire net_PTECO_HOLD_NET942 ;
+wire net_PTECO_HOLD_NET943 ;
+wire net_PTECO_HOLD_NET944 ;
+wire net_PTECO_HOLD_NET945 ;
+wire net_PTECO_HOLD_NET946 ;
+wire net_PTECO_HOLD_NET947 ;
+wire net_PTECO_HOLD_NET949 ;
+wire net_PTECO_HOLD_NET950 ;
+wire net_PTECO_HOLD_NET951 ;
+wire net_PTECO_HOLD_NET952 ;
+wire net_PTECO_HOLD_NET953 ;
+wire net_PTECO_HOLD_NET954 ;
+wire net_PTECO_HOLD_NET955 ;
+wire net_PTECO_HOLD_NET956 ;
+wire net_PTECO_HOLD_NET957 ;
+wire net_PTECO_HOLD_NET960 ;
+wire net_PTECO_HOLD_NET961 ;
+wire net_PTECO_HOLD_NET962 ;
+wire net_PTECO_HOLD_NET963 ;
+wire net_PTECO_HOLD_NET964 ;
+wire net_PTECO_HOLD_NET966 ;
+wire net_PTECO_HOLD_NET967 ;
+wire net_PTECO_HOLD_NET968 ;
+wire net_PTECO_HOLD_NET969 ;
+wire net_PTECO_HOLD_NET970 ;
+wire net_PTECO_HOLD_NET971 ;
+wire net_PTECO_HOLD_NET972 ;
+wire net_PTECO_HOLD_NET973 ;
+wire net_PTECO_HOLD_NET974 ;
+wire net_PTECO_HOLD_NET975 ;
+wire net_PTECO_HOLD_NET976 ;
+wire net_PTECO_HOLD_NET977 ;
+wire net_PTECO_HOLD_NET978 ;
+wire net_PTECO_HOLD_NET981 ;
+wire net_PTECO_HOLD_NET982 ;
+wire net_PTECO_HOLD_NET983 ;
+wire net_PTECO_HOLD_NET984 ;
+wire net_PTECO_HOLD_NET985 ;
+wire net_PTECO_HOLD_NET986 ;
+wire net_PTECO_HOLD_NET987 ;
+wire net_PTECO_HOLD_NET988 ;
+wire net_PTECO_HOLD_NET989 ;
+wire net_PTECO_HOLD_NET990 ;
+wire net_PTECO_HOLD_NET991 ;
+wire net_PTECO_HOLD_NET992 ;
+wire net_PTECO_HOLD_NET993 ;
+wire net_PTECO_HOLD_NET994 ;
+wire net_PTECO_HOLD_NET996 ;
+wire net_PTECO_HOLD_NET997 ;
+wire net_PTECO_HOLD_NET999 ;
+wire net_PTECO_HOLD_NET1000 ;
+wire net_PTECO_HOLD_NET1002 ;
+wire net_PTECO_HOLD_NET1003 ;
+wire net_PTECO_HOLD_NET1004 ;
+wire net_PTECO_HOLD_NET1005 ;
+wire net_PTECO_HOLD_NET1006 ;
+wire net_PTECO_HOLD_NET1007 ;
+wire net_PTECO_HOLD_NET1009 ;
+wire net_PTECO_HOLD_NET1010 ;
+wire net_PTECO_HOLD_NET1011 ;
+wire net_PTECO_HOLD_NET1012 ;
+wire net_PTECO_HOLD_NET1013 ;
+wire net_PTECO_HOLD_NET1014 ;
+wire net_PTECO_HOLD_NET1016 ;
+wire net_PTECO_HOLD_NET1017 ;
+wire net_PTECO_HOLD_NET1018 ;
+wire net_PTECO_HOLD_NET1019 ;
+wire net_PTECO_HOLD_NET1020 ;
+wire net_PTECO_HOLD_NET1021 ;
+wire net_PTECO_HOLD_NET1022 ;
+wire net_PTECO_HOLD_NET1024 ;
+wire net_PTECO_HOLD_NET1025 ;
+wire net_PTECO_HOLD_NET1026 ;
+wire net_PTECO_HOLD_NET1027 ;
+wire net_PTECO_HOLD_NET1028 ;
+wire net_PTECO_HOLD_NET1029 ;
+wire net_PTECO_HOLD_NET1030 ;
+wire net_PTECO_HOLD_NET1031 ;
+wire net_PTECO_HOLD_NET1032 ;
+wire net_PTECO_HOLD_NET1033 ;
+wire net_PTECO_HOLD_NET1034 ;
+wire net_PTECO_HOLD_NET1035 ;
+wire net_PTECO_HOLD_NET1036 ;
+wire net_PTECO_HOLD_NET1039 ;
+wire net_PTECO_HOLD_NET1040 ;
+wire net_PTECO_HOLD_NET1041 ;
+wire net_PTECO_HOLD_NET1042 ;
+wire net_PTECO_HOLD_NET1044 ;
+wire net_PTECO_HOLD_NET1045 ;
+wire net_PTECO_HOLD_NET1046 ;
+wire net_PTECO_HOLD_NET1047 ;
+wire net_PTECO_HOLD_NET1048 ;
+wire net_PTECO_HOLD_NET1049 ;
+wire net_PTECO_HOLD_NET1050 ;
+wire net_PTECO_HOLD_NET1052 ;
+wire net_PTECO_HOLD_NET1054 ;
+wire net_PTECO_HOLD_NET1055 ;
+wire net_PTECO_HOLD_NET1057 ;
+wire net_PTECO_HOLD_NET1058 ;
+wire net_PTECO_HOLD_NET1059 ;
+wire net_PTECO_HOLD_NET1060 ;
+wire net_PTECO_HOLD_NET1061 ;
+wire net_PTECO_HOLD_NET1062 ;
+wire net_PTECO_HOLD_NET1063 ;
+wire net_PTECO_HOLD_NET1064 ;
+wire net_PTECO_HOLD_NET1065 ;
+wire net_PTECO_HOLD_NET1066 ;
+wire net_PTECO_HOLD_NET1067 ;
+wire net_PTECO_HOLD_NET1068 ;
+wire net_PTECO_HOLD_NET1069 ;
+wire net_PTECO_HOLD_NET1070 ;
+wire net_PTECO_HOLD_NET1071 ;
+wire net_PTECO_HOLD_NET1072 ;
+wire net_PTECO_HOLD_NET1073 ;
+wire net_PTECO_HOLD_NET1074 ;
+wire net_PTECO_HOLD_NET1075 ;
+wire net_PTECO_HOLD_NET1076 ;
+wire net_PTECO_HOLD_NET1079 ;
+wire net_PTECO_HOLD_NET1080 ;
+wire net_PTECO_HOLD_NET1081 ;
+wire net_PTECO_HOLD_NET1082 ;
+wire net_PTECO_HOLD_NET1083 ;
+wire net_PTECO_HOLD_NET1084 ;
+wire net_PTECO_HOLD_NET1085 ;
+wire net_PTECO_HOLD_NET1086 ;
+wire net_PTECO_HOLD_NET1088 ;
+wire net_PTECO_HOLD_NET1089 ;
+wire net_PTECO_HOLD_NET1091 ;
+wire net_PTECO_HOLD_NET1092 ;
+wire net_PTECO_HOLD_NET1093 ;
+wire net_PTECO_HOLD_NET1094 ;
+wire net_PTECO_HOLD_NET1095 ;
+wire net_PTECO_HOLD_NET1096 ;
+wire net_PTECO_HOLD_NET1097 ;
+wire net_PTECO_HOLD_NET1100 ;
+wire net_PTECO_HOLD_NET1101 ;
+wire net_PTECO_HOLD_NET1102 ;
+wire net_PTECO_HOLD_NET1104 ;
+wire net_PTECO_HOLD_NET1105 ;
+wire net_PTECO_HOLD_NET1106 ;
+wire net_PTECO_HOLD_NET1108 ;
+wire net_PTECO_HOLD_NET1109 ;
+wire net_PTECO_HOLD_NET1110 ;
+wire net_PTECO_HOLD_NET1111 ;
+wire net_PTECO_HOLD_NET1112 ;
+wire net_PTECO_HOLD_NET1113 ;
+wire net_PTECO_HOLD_NET1114 ;
+wire net_PTECO_HOLD_NET1115 ;
+wire net_PTECO_HOLD_NET1116 ;
+wire net_PTECO_HOLD_NET1117 ;
+wire net_PTECO_HOLD_NET1118 ;
+wire net_PTECO_HOLD_NET1119 ;
+wire net_PTECO_HOLD_NET1120 ;
+wire net_PTECO_HOLD_NET1121 ;
+wire net_PTECO_HOLD_NET1122 ;
+wire net_PTECO_HOLD_NET1123 ;
+wire net_PTECO_HOLD_NET1124 ;
+wire net_PTECO_HOLD_NET1125 ;
+wire net_PTECO_HOLD_NET1126 ;
+wire net_PTECO_HOLD_NET1127 ;
+wire net_PTECO_HOLD_NET1128 ;
+wire net_PTECO_HOLD_NET1129 ;
+wire net_PTECO_HOLD_NET1132 ;
+wire net_PTECO_HOLD_NET1135 ;
+wire net_PTECO_HOLD_NET1136 ;
+wire net_PTECO_HOLD_NET1137 ;
+wire net_PTECO_HOLD_NET1138 ;
+wire net_PTECO_HOLD_NET1139 ;
+wire net_PTECO_HOLD_NET1140 ;
+wire net_PTECO_HOLD_NET1142 ;
+wire net_PTECO_HOLD_NET1143 ;
+wire net_PTECO_HOLD_NET1144 ;
+wire net_PTECO_HOLD_NET1145 ;
+wire net_PTECO_HOLD_NET1146 ;
+wire net_PTECO_HOLD_NET1147 ;
+wire net_PTECO_HOLD_NET1148 ;
+wire net_PTECO_HOLD_NET1149 ;
+wire net_PTECO_HOLD_NET1151 ;
+wire net_PTECO_HOLD_NET1152 ;
+wire net_PTECO_HOLD_NET1154 ;
+wire net_PTECO_HOLD_NET1155 ;
+wire net_PTECO_HOLD_NET1157 ;
+wire net_PTECO_HOLD_NET1158 ;
+wire net_PTECO_HOLD_NET1159 ;
+wire net_PTECO_HOLD_NET1160 ;
+wire net_PTECO_HOLD_NET1161 ;
+wire net_PTECO_HOLD_NET1162 ;
+wire net_PTECO_HOLD_NET1163 ;
+wire net_PTECO_HOLD_NET1164 ;
+wire net_PTECO_HOLD_NET1167 ;
+wire net_PTECO_HOLD_NET1168 ;
+wire net_PTECO_HOLD_NET1169 ;
+wire net_PTECO_HOLD_NET1170 ;
+wire net_PTECO_HOLD_NET1171 ;
+wire net_PTECO_HOLD_NET1172 ;
+wire net_PTECO_HOLD_NET1173 ;
+wire net_PTECO_HOLD_NET1174 ;
+wire net_PTECO_HOLD_NET1175 ;
+wire net_PTECO_HOLD_NET1176 ;
+wire net_PTECO_HOLD_NET1177 ;
+wire net_PTECO_HOLD_NET1178 ;
+wire net_PTECO_HOLD_NET1179 ;
+wire net_PTECO_HOLD_NET1180 ;
+wire net_PTECO_HOLD_NET1181 ;
+wire net_PTECO_HOLD_NET1184 ;
+wire net_PTECO_HOLD_NET1205 ;
+wire net_PTECO_HOLD_NET1206 ;
+wire net_PTECO_HOLD_NET1210 ;
+wire net_PTECO_HOLD_NET1213 ;
+wire net_PTECO_HOLD_NET1215 ;
+wire net_PTECO_HOLD_NET1217 ;
+wire net_PTECO_HOLD_NET1218 ;
+wire net_PTECO_HOLD_NET1219 ;
+wire net_PTECO_HOLD_NET1220 ;
+wire net_PTECO_HOLD_NET1222 ;
+wire net_PTECO_HOLD_NET1223 ;
+wire net_PTECO_HOLD_NET1224 ;
+wire net_PTECO_HOLD_NET1225 ;
+wire net_PTECO_HOLD_NET1226 ;
+wire net_PTECO_HOLD_NET1227 ;
+wire net_PTECO_HOLD_NET1228 ;
+wire net_PTECO_HOLD_NET1229 ;
+wire net_PTECO_HOLD_NET1230 ;
+wire net_PTECO_HOLD_NET1232 ;
+wire net_PTECO_HOLD_NET1233 ;
+wire net_PTECO_HOLD_NET1234 ;
+wire net_PTECO_HOLD_NET1235 ;
+wire net_PTECO_HOLD_NET1236 ;
+wire net_PTECO_HOLD_NET1237 ;
+wire net_PTECO_HOLD_NET1238 ;
+wire net_PTECO_HOLD_NET1240 ;
+wire net_PTECO_HOLD_NET1242 ;
+wire net_PTECO_HOLD_NET1243 ;
+wire net_PTECO_HOLD_NET1246 ;
+wire net_PTECO_HOLD_NET1250 ;
+wire net_PTECO_HOLD_NET1251 ;
+wire net_PTECO_HOLD_NET1254 ;
+wire net_PTECO_HOLD_NET1256 ;
+wire net_PTECO_HOLD_NET1258 ;
+wire net_PTECO_HOLD_NET1259 ;
+wire net_PTECO_HOLD_NET1260 ;
+wire net_PTECO_HOLD_NET1262 ;
+wire net_PTECO_HOLD_NET1263 ;
+wire net_PTECO_HOLD_NET1265 ;
+wire net_PTECO_HOLD_NET1266 ;
+wire net_PTECO_HOLD_NET1269 ;
+wire net_PTECO_HOLD_NET1271 ;
+wire net_PTECO_HOLD_NET1275 ;
+wire net_PTECO_HOLD_NET1277 ;
+wire net_PTECO_HOLD_NET1281 ;
+wire net_PTECO_HOLD_NET1284 ;
+wire net_PTECO_HOLD_NET1285 ;
+wire net_PTECO_HOLD_NET1288 ;
+wire net_PTECO_HOLD_NET1291 ;
+wire net_PTECO_HOLD_NET1292 ;
+wire net_PTECO_HOLD_NET1293 ;
+wire net_PTECO_HOLD_NET1294 ;
+wire net_PTECO_HOLD_NET1295 ;
+wire net_PTECO_HOLD_NET1296 ;
+wire net_PTECO_HOLD_NET1297 ;
+wire net_PTECO_HOLD_NET1298 ;
+wire net_PTECO_HOLD_NET1299 ;
+wire net_PTECO_HOLD_NET1301 ;
+wire net_PTECO_HOLD_NET1302 ;
+wire net_PTECO_HOLD_NET1304 ;
+wire net_PTECO_HOLD_NET1306 ;
+wire net_PTECO_HOLD_NET1308 ;
+wire net_PTECO_HOLD_NET1310 ;
+wire net_PTECO_HOLD_NET1311 ;
+wire net_PTECO_HOLD_NET1313 ;
+wire net_PTECO_HOLD_NET1315 ;
+wire net_PTECO_HOLD_NET1318 ;
+wire net_PTECO_HOLD_NET1320 ;
+wire net_PTECO_HOLD_NET1324 ;
+wire net_PTECO_HOLD_NET1326 ;
+wire net_PTECO_HOLD_NET1327 ;
+wire net_PTECO_HOLD_NET1330 ;
+wire net_PTECO_HOLD_NET1332 ;
+wire net_PTECO_HOLD_NET1333 ;
+wire net_PTECO_HOLD_NET1334 ;
+wire net_PTECO_HOLD_NET1336 ;
+wire net_PTECO_HOLD_NET1337 ;
+wire net_PTECO_HOLD_NET1339 ;
+wire net_PTECO_HOLD_NET1340 ;
+wire net_PTECO_HOLD_NET1341 ;
+wire net_PTECO_HOLD_NET1342 ;
+wire net_PTECO_HOLD_NET1343 ;
+wire net_PTECO_HOLD_NET1344 ;
+wire net_PTECO_HOLD_NET1345 ;
+wire net_PTECO_HOLD_NET1347 ;
+wire net_PTECO_HOLD_NET1350 ;
+wire net_PTECO_HOLD_NET1351 ;
+wire net_PTECO_HOLD_NET1352 ;
 wire SYNOPSYS_UNCONNECTED_1 ;
 wire SYNOPSYS_UNCONNECTED_2 ;
 wire SYNOPSYS_UNCONNECTED_3 ;
@@ -11129,3277 +12248,3300 @@ wire SYNOPSYS_UNCONNECTED_96 ;
 wire SYNOPSYS_UNCONNECTED_97 ;
 wire SYNOPSYS_UNCONNECTED_98 ;
 
-SDFFX1_RVT y_out_reg_18_ ( .D ( n1158 ) , .SI ( delay_11__16_ ) , 
+SDFFX1_RVT y_out_reg_18_ ( .D ( n1158 ) , .SI ( net_PTECO_HOLD_NET1220 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_28 ) , .Q ( y_out_18_ ) , 
     .QN ( y_out_18__BAR ) ) ;
-SDFFX1_RVT y_out_reg_17_ ( .D ( n1159 ) , .SI ( dftopt76 ) , 
+SDFFX1_RVT y_out_reg_17_ ( .D ( n1159 ) , .SI ( net_PTECO_HOLD_NET646 ) , 
     .SE ( HFSNET_1131 ) , .CLK ( ZCTSNET_28 ) , .Q ( aps_rename_1_ ) , 
     .QN ( dftopt25 ) ) ;
-SDFFX1_RVT y_out_reg_16_ ( .D ( HFSNET_2 ) , .SI ( dftopt24 ) , 
+SDFFX1_RVT y_out_reg_16_ ( .D ( HFSNET_2 ) , .SI ( net_PTECO_HOLD_NET1004 ) , 
     .SE ( HFSNET_1131 ) , .CLK ( ZCTSNET_28 ) , .Q ( aps_rename_2_ ) , 
     .QN ( dftopt75 ) ) ;
-SDFFX1_RVT y_out_reg_15_ ( .D ( HFSNET_3 ) , .SI ( dftopt74 ) , 
+SDFFX1_RVT y_out_reg_15_ ( .D ( HFSNET_3 ) , .SI ( net_PTECO_HOLD_NET564 ) , 
     .SE ( HFSNET_1131 ) , .CLK ( ZCTSNET_28 ) , .Q ( aps_rename_3_ ) , 
     .QN ( dftopt58 ) ) ;
-SDFFX1_RVT y_out_reg_14_ ( .D ( n1162 ) , .SI ( n2784 ) , 
+SDFFX1_RVT y_out_reg_14_ ( .D ( n1162 ) , .SI ( net_PTECO_HOLD_NET26 ) , 
     .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( copt_gre_net_58 ) , 
     .QN ( n2771 ) ) ;
-SDFFX1_RVT y_out_reg_13_ ( .D ( n1163 ) , .SI ( n2771 ) , 
+SDFFX1_RVT y_out_reg_13_ ( .D ( n1163 ) , .SI ( net_PTECO_HOLD_NET8 ) , 
     .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_13_ ) , 
     .QN ( n2772 ) ) ;
-SDFFX1_RVT y_out_reg_12_ ( .D ( n1164 ) , .SI ( n2772 ) , 
+SDFFX1_RVT y_out_reg_12_ ( .D ( n1164 ) , .SI ( net_PTECO_HOLD_NET2 ) , 
     .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_12_ ) , 
     .QN ( n2773 ) ) ;
-SDFFX1_RVT y_out_reg_11_ ( .D ( n1165 ) , .SI ( n2776 ) , 
+SDFFX1_RVT y_out_reg_11_ ( .D ( n1165 ) , .SI ( net_PTECO_HOLD_NET14 ) , 
     .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_4_ ) , 
     .QN ( n2774 ) ) ;
-SDFFX1_RVT y_out_reg_10_ ( .D ( n1166 ) , .SI ( n2774 ) , 
+SDFFX1_RVT y_out_reg_10_ ( .D ( n1166 ) , .SI ( net_PTECO_HOLD_NET12 ) , 
     .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_5_ ) , 
     .QN ( dftopt23_gOb7 ) ) ;
-SDFFX1_RVT y_out_reg_9_ ( .D ( n1167 ) , .SI ( n2773 ) , .SE ( HFSNET_1146 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_6_ ) , .QN ( n2776 ) ) ;
-SDFFX1_RVT y_out_reg_8_ ( .D ( n1168 ) , .SI ( n2778 ) , .SE ( HFSNET_1146 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( y_out_8_ ) , .QN ( n2777 ) ) ;
-SDFFX1_RVT y_out_reg_7_ ( .D ( n1169 ) , .SI ( n2780 ) , .SE ( HFSNET_1146 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( y_out_7_ ) , .QN ( n2778 ) ) ;
-SDFFX1_RVT y_out_reg_6_ ( .D ( n1170 ) , .SI ( n2777 ) , .SE ( HFSNET_1146 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( y_out_6_ ) , .QN ( n2779 ) ) ;
-SDFFX1_RVT y_out_reg_5_ ( .D ( n1171 ) , .SI ( n2781 ) , .SE ( HFSNET_1146 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( y_out_5_ ) , .QN ( n2780 ) ) ;
-SDFFX1_RVT y_out_reg_4_ ( .D ( n1172 ) , .SI ( delay_39__16_ ) , 
+SDFFX1_RVT y_out_reg_9_ ( .D ( n1167 ) , .SI ( net_PTECO_HOLD_NET4 ) , 
+    .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_6_ ) , 
+    .QN ( n2776 ) ) ;
+SDFFX1_RVT y_out_reg_8_ ( .D ( n1168 ) , .SI ( net_PTECO_HOLD_NET6 ) , 
+    .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_8_ ) , 
+    .QN ( n2777 ) ) ;
+SDFFX1_RVT y_out_reg_7_ ( .D ( n1169 ) , .SI ( net_PTECO_HOLD_NET32 ) , 
+    .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_7_ ) , 
+    .QN ( n2778 ) ) ;
+SDFFX1_RVT y_out_reg_6_ ( .D ( n1170 ) , .SI ( net_PTECO_HOLD_NET10 ) , 
+    .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_6_ ) , 
+    .QN ( n2779 ) ) ;
+SDFFX1_RVT y_out_reg_5_ ( .D ( n1171 ) , .SI ( net_PTECO_HOLD_NET28 ) , 
+    .SE ( HFSNET_1146 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_5_ ) , 
+    .QN ( n2780 ) ) ;
+SDFFX1_RVT y_out_reg_4_ ( .D ( n1172 ) , .SI ( net_PTECO_HOLD_NET1285 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_4_ ) , 
     .QN ( n2781 ) ) ;
-SDFFX1_RVT y_out_reg_3_ ( .D ( n1173 ) , .SI ( n2783 ) , .SE ( HFSNET_1145 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_7_ ) , .QN ( n2782 ) ) ;
-SDFFX1_RVT y_out_reg_2_ ( .D ( n1174 ) , .SI ( n2779 ) , .SE ( HFSNET_1145 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_8_ ) , .QN ( n2783 ) ) ;
-SDFFX1_RVT y_out_reg_1_ ( .D ( n1175 ) , .SI ( delay_40__16_ ) , 
+SDFFX1_RVT y_out_reg_3_ ( .D ( n1173 ) , .SI ( net_PTECO_HOLD_NET20 ) , 
+    .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_7_ ) , 
+    .QN ( n2782 ) ) ;
+SDFFX1_RVT y_out_reg_2_ ( .D ( n1174 ) , .SI ( net_PTECO_HOLD_NET24 ) , 
+    .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_8_ ) , 
+    .QN ( n2783 ) ) ;
+SDFFX1_RVT y_out_reg_1_ ( .D ( n1175 ) , .SI ( net_PTECO_HOLD_NET1254 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( aps_rename_9_ ) , 
     .QN ( n2784 ) ) ;
-SDFFX1_RVT y_out_reg_0_ ( .D ( n1176 ) , .SI ( n3082 ) , .SE ( HFSNET_1145 ) , 
-    .CLK ( ZCTSNET_4 ) , .Q ( y_out_0_ ) , .QN ( n2785 ) ) ;
-SDFFX1_RVT valid_out_reg ( .D ( HFSNET_1063 ) , .SI ( n3543 ) , 
-    .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( valid_out ) , 
-    .QN ( n2786 ) ) ;
-SDFFX1_RVT delay_reg_0__16_ ( .D ( n71 ) , .SI ( n3718 ) , 
+SDFFX1_RVT y_out_reg_0_ ( .D ( n1176 ) , .SI ( net_PTECO_HOLD_NET523 ) , 
+    .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( y_out_0_ ) , 
+    .QN ( n2785 ) ) ;
+SDFFX1_RVT valid_out_reg ( .D ( HFSNET_1063 ) , 
+    .SI ( net_PTECO_HOLD_NET725 ) , .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , 
+    .Q ( valid_out ) , .QN ( n2786 ) ) ;
+SDFFX1_RVT delay_reg_0__16_ ( .D ( n71 ) , .SI ( net_PTECO_HOLD_NET341 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_0__16_ ) , 
     .QN ( n3717 ) ) ;
-SDFFX1_RVT delay_reg_0__15_ ( .D ( n72 ) , .SI ( n2803 ) , 
+SDFFX1_RVT delay_reg_0__15_ ( .D ( n72 ) , .SI ( net_PTECO_HOLD_NET337 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_0__15_ ) , 
     .QN ( n3718 ) ) ;
-SDFFX1_RVT delay_reg_0__14_ ( .D ( n73 ) , .SI ( n2787 ) , 
+SDFFX1_RVT delay_reg_0__14_ ( .D ( n73 ) , .SI ( net_PTECO_HOLD_NET428 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_0__14_ ) , 
     .QN ( dftopt39 ) ) ;
-SDFFX1_RVT delay_reg_0__13_ ( .D ( n74 ) , .SI ( n3689 ) , 
+SDFFX1_RVT delay_reg_0__13_ ( .D ( n74 ) , .SI ( net_PTECO_HOLD_NET54 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_0__13_ ) , 
     .QN ( n2659 ) ) ;
-SDFFX1_RVT delay_reg_0__12_ ( .D ( n75 ) , .SI ( n2818 ) , 
+SDFFX1_RVT delay_reg_0__12_ ( .D ( n75 ) , .SI ( net_PTECO_HOLD_NET339 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_0__12_ ) , 
     .QN ( dftopt13_gOb4 ) ) ;
-SDFFX1_RVT delay_reg_0__11_ ( .D ( n76 ) , .SI ( n3692 ) , 
+SDFFX1_RVT delay_reg_0__11_ ( .D ( n76 ) , .SI ( net_PTECO_HOLD_NET116 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_0__11_ ) , 
     .QN ( dftopt53_gOb10 ) ) ;
-SDFFX1_RVT delay_reg_0__10_ ( .D ( n77 ) , .SI ( dftopt35_gOb4 ) , 
+SDFFX1_RVT delay_reg_0__10_ ( .D ( n77 ) , .SI ( net_PTECO_HOLD_NET166 ) , 
     .SE ( HFSNET_1123 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_0__10_ ) , 
     .QN ( dftopt3_gOb1 ) ) ;
-SDFFX1_RVT delay_reg_0__9_ ( .D ( n78 ) , .SI ( n3679 ) , 
+SDFFX1_RVT delay_reg_0__9_ ( .D ( n78 ) , .SI ( net_PTECO_HOLD_NET237 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_0__9_ ) , 
     .QN ( dftopt1_gOb0 ) ) ;
-SDFFX1_RVT delay_reg_0__8_ ( .D ( n79 ) , .SI ( n3709 ) , 
+SDFFX1_RVT delay_reg_0__8_ ( .D ( n79 ) , .SI ( net_PTECO_HOLD_NET862 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_0__8_ ) , 
     .QN ( dftopt19 ) ) ;
-SDFFX1_RVT delay_reg_0__7_ ( .D ( n80 ) , .SI ( dftopt33 ) , 
+SDFFX1_RVT delay_reg_0__7_ ( .D ( n80 ) , .SI ( net_PTECO_HOLD_NET1142 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_0__7_ ) , .QN ( n3725 ) ) ;
-SDFFX1_RVT delay_reg_0__6_ ( .D ( n81 ) , .SI ( dftopt21_gOb1 ) , 
+SDFFX1_RVT delay_reg_0__6_ ( .D ( n81 ) , .SI ( net_PTECO_HOLD_NET506 ) , 
     .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_0__6_ ) , .QN ( dftopt59 ) ) ;
-SDFFX1_RVT delay_reg_0__5_ ( .D ( n82 ) , .SI ( n2810 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_0__5_ ) , .QN ( n3727 ) ) ;
-SDFFX1_RVT delay_reg_0__4_ ( .D ( n83 ) , .SI ( n2798 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_0__4_ ) , .QN ( n3728 ) ) ;
-SDFFX1_RVT delay_reg_0__3_ ( .D ( n84 ) , .SI ( n2799 ) , 
+SDFFX1_RVT delay_reg_0__5_ ( .D ( n82 ) , .SI ( net_PTECO_HOLD_NET327 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_0__5_ ) , 
+    .QN ( n3727 ) ) ;
+SDFFX1_RVT delay_reg_0__4_ ( .D ( n83 ) , .SI ( net_PTECO_HOLD_NET377 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_0__4_ ) , 
+    .QN ( n3728 ) ) ;
+SDFFX1_RVT delay_reg_0__3_ ( .D ( n84 ) , .SI ( net_PTECO_HOLD_NET206 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_0__3_ ) , 
     .QN ( n3729 ) ) ;
-SDFFX1_RVT delay_reg_0__2_ ( .D ( n85 ) , .SI ( n2800 ) , 
+SDFFX1_RVT delay_reg_0__2_ ( .D ( n85 ) , .SI ( net_PTECO_HOLD_NET408 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_0__2_ ) , 
     .QN ( n3730 ) ) ;
-SDFFX1_RVT delay_reg_0__1_ ( .D ( n86 ) , .SI ( n3732 ) , 
+SDFFX1_RVT delay_reg_0__1_ ( .D ( n86 ) , .SI ( net_PTECO_HOLD_NET262 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_0__1_ ) , 
     .QN ( n3731 ) ) ;
-SDFFX1_RVT delay_reg_0__0_ ( .D ( n87 ) , .SI ( n2801 ) , 
+SDFFX1_RVT delay_reg_0__0_ ( .D ( n87 ) , .SI ( net_PTECO_HOLD_NET163 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_0__0_ ) , 
     .QN ( n3732 ) ) ;
-SDFFX1_RVT delay_reg_1__16_ ( .D ( n88 ) , .SI ( n3672 ) , 
+SDFFX1_RVT delay_reg_1__16_ ( .D ( n88 ) , .SI ( net_PTECO_HOLD_NET282 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_1__16_ ) , 
     .QN ( n2684 ) ) ;
-SDFFX1_RVT delay_reg_1__15_ ( .D ( n89 ) , .SI ( n2831 ) , 
+SDFFX1_RVT delay_reg_1__15_ ( .D ( n89 ) , .SI ( net_PTECO_HOLD_NET333 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_1__15_ ) , 
     .QN ( dftopt41_gOb5 ) ) ;
-SDFFX1_RVT delay_reg_1__14_ ( .D ( n90 ) , .SI ( dftopt67 ) , 
+SDFFX1_RVT delay_reg_1__14_ ( .D ( n90 ) , .SI ( net_PTECO_HOLD_NET1337 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_1__14_ ) , 
     .QN ( dftopt68 ) ) ;
-SDFFX1_RVT delay_reg_1__13_ ( .D ( n91 ) , .SI ( n2805 ) , 
+SDFFX1_RVT delay_reg_1__13_ ( .D ( n91 ) , .SI ( net_PTECO_HOLD_NET211 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_1__13_ ) , 
     .QN ( n3704 ) ) ;
-SDFFX1_RVT delay_reg_1__12_ ( .D ( n92 ) , .SI ( n3690 ) , 
+SDFFX1_RVT delay_reg_1__12_ ( .D ( n92 ) , .SI ( net_PTECO_HOLD_NET305 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_1__12_ ) , 
     .QN ( n3705 ) ) ;
-SDFFX1_RVT delay_reg_1__11_ ( .D ( n93 ) , .SI ( n2819 ) , 
+SDFFX1_RVT delay_reg_1__11_ ( .D ( n93 ) , .SI ( net_PTECO_HOLD_NET775 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_1__11_ ) , 
     .QN ( n3706 ) ) ;
-SDFFX1_RVT delay_reg_1__10_ ( .D ( n94 ) , .SI ( dftopt53_gOb10 ) , 
+SDFFX1_RVT delay_reg_1__10_ ( .D ( n94 ) , .SI ( net_PTECO_HOLD_NET560 ) , 
     .SE ( HFSNET_1123 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_1__10_ ) , 
     .QN ( dftopt55 ) ) ;
-SDFFX1_RVT delay_reg_1__9_ ( .D ( n95 ) , .SI ( n3694 ) , 
+SDFFX1_RVT delay_reg_1__9_ ( .D ( n95 ) , .SI ( net_PTECO_HOLD_NET1125 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_1__9_ ) , 
     .QN ( n3708 ) ) ;
-SDFFX1_RVT delay_reg_1__8_ ( .D ( n96 ) , .SI ( n2853 ) , 
+SDFFX1_RVT delay_reg_1__8_ ( .D ( n96 ) , .SI ( net_PTECO_HOLD_NET60 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_1__8_ ) , .QN ( n3709 ) ) ;
-SDFFX1_RVT delay_reg_1__7_ ( .D ( n97 ) , .SI ( dftopt30_gOb2 ) , 
+SDFFX1_RVT delay_reg_1__7_ ( .D ( n97 ) , .SI ( net_PTECO_HOLD_NET496 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_1__7_ ) , .QN ( n3710 ) ) ;
-SDFFX1_RVT delay_reg_1__6_ ( .D ( n98 ) , .SI ( n3725 ) , .SE ( test_se ) , 
-    .CLK ( clk ) , .Q ( delay_1__6_ ) , .QN ( n3711 ) ) ;
-SDFFX1_RVT delay_reg_1__5_ ( .D ( n99 ) , .SI ( n2825 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_1__5_ ) , .QN ( n3712 ) ) ;
-SDFFX1_RVT delay_reg_1__4_ ( .D ( n100 ) , .SI ( n2826 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_1__4_ ) , .QN ( n3713 ) ) ;
-SDFFX1_RVT delay_reg_1__3_ ( .D ( n101 ) , .SI ( n3699 ) , 
+SDFFX1_RVT delay_reg_1__6_ ( .D ( n98 ) , .SI ( net_PTECO_HOLD_NET631 ) , 
+    .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_1__6_ ) , .QN ( n3711 ) ) ;
+SDFFX1_RVT delay_reg_1__5_ ( .D ( n99 ) , .SI ( net_PTECO_HOLD_NET174 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_1__5_ ) , 
+    .QN ( n3712 ) ) ;
+SDFFX1_RVT delay_reg_1__4_ ( .D ( n100 ) , .SI ( net_PTECO_HOLD_NET72 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_1__4_ ) , 
+    .QN ( n3713 ) ) ;
+SDFFX1_RVT delay_reg_1__3_ ( .D ( n101 ) , .SI ( net_PTECO_HOLD_NET105 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_1__3_ ) , 
     .QN ( n3714 ) ) ;
-SDFFX1_RVT delay_reg_1__2_ ( .D ( n102 ) , .SI ( n3730 ) , 
+SDFFX1_RVT delay_reg_1__2_ ( .D ( n102 ) , .SI ( net_PTECO_HOLD_NET1091 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_1__2_ ) , 
     .QN ( n3715 ) ) ;
-SDFFX1_RVT delay_reg_1__1_ ( .D ( n103 ) , .SI ( n3701 ) , 
+SDFFX1_RVT delay_reg_1__1_ ( .D ( n103 ) , .SI ( net_PTECO_HOLD_NET520 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_1__1_ ) , 
     .QN ( n3716 ) ) ;
-SDFFX1_RVT delay_reg_1__0_ ( .D ( n104 ) , .SI ( n2829 ) , 
+SDFFX1_RVT delay_reg_1__0_ ( .D ( n104 ) , .SI ( net_PTECO_HOLD_NET423 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_1__0_ ) , 
     .QN ( n2657 ) ) ;
-SDFFX1_RVT delay_reg_2__16_ ( .D ( n105 ) , .SI ( dftopt7_gOb3 ) , 
+SDFFX1_RVT delay_reg_2__16_ ( .D ( n105 ) , .SI ( net_PTECO_HOLD_NET1238 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_30 ) , .Q ( dftopt45_gOb7 ) , 
     .QN ( n2756 ) ) ;
-SDFFX1_RVT delay_reg_2__15_ ( .D ( n106 ) , .SI ( dftopt66 ) , 
+SDFFX1_RVT delay_reg_2__15_ ( .D ( n106 ) , .SI ( net_PTECO_HOLD_NET987 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_2__15_ ) , 
     .QN ( dftopt43_gOb6 ) ) ;
-SDFFX1_RVT delay_reg_2__14_ ( .D ( n107 ) , .SI ( dftopt37 ) , 
+SDFFX1_RVT delay_reg_2__14_ ( .D ( n107 ) , .SI ( net_PTECO_HOLD_NET137 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_2__14_ ) , 
     .QN ( n3688 ) ) ;
-SDFFX1_RVT delay_reg_2__13_ ( .D ( n108 ) , .SI ( n3675 ) , 
+SDFFX1_RVT delay_reg_2__13_ ( .D ( n108 ) , .SI ( net_PTECO_HOLD_NET138 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_2__13_ ) , 
     .QN ( n3689 ) ) ;
-SDFFX1_RVT delay_reg_2__12_ ( .D ( n109 ) , .SI ( n2833 ) , 
+SDFFX1_RVT delay_reg_2__12_ ( .D ( n109 ) , .SI ( net_PTECO_HOLD_NET304 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_2__12_ ) , 
     .QN ( n3690 ) ) ;
-SDFFX1_RVT delay_reg_2__11_ ( .D ( n110 ) , .SI ( n3677 ) , 
+SDFFX1_RVT delay_reg_2__11_ ( .D ( n110 ) , .SI ( net_PTECO_HOLD_NET80 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_2__11_ ) , 
     .QN ( n3691 ) ) ;
-SDFFX1_RVT delay_reg_2__10_ ( .D ( n111 ) , .SI ( dftopt54 ) , 
+SDFFX1_RVT delay_reg_2__10_ ( .D ( n111 ) , .SI ( net_PTECO_HOLD_NET151 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_2__10_ ) , 
     .QN ( n3692 ) ) ;
-SDFFX1_RVT delay_reg_2__9_ ( .D ( n112 ) , .SI ( dftopt3_gOb1 ) , 
+SDFFX1_RVT delay_reg_2__9_ ( .D ( n112 ) , .SI ( net_PTECO_HOLD_NET898 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_2__9_ ) , 
     .QN ( n3693 ) ) ;
-SDFFX1_RVT delay_reg_2__8_ ( .D ( n113 ) , .SI ( dftopt17_gOb6 ) , 
+SDFFX1_RVT delay_reg_2__8_ ( .D ( n113 ) , .SI ( net_PTECO_HOLD_NET254 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_2__8_ ) , .QN ( n3694 ) ) ;
-SDFFX1_RVT delay_reg_2__7_ ( .D ( n114 ) , .SI ( n2823 ) , 
+SDFFX1_RVT delay_reg_2__7_ ( .D ( n114 ) , .SI ( net_PTECO_HOLD_NET193 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_2__7_ ) , .QN ( n3695 ) ) ;
-SDFFX1_RVT delay_reg_2__6_ ( .D ( n115 ) , .SI ( n2824 ) , .SE ( test_se ) , 
-    .CLK ( clk ) , .Q ( delay_2__6_ ) , .QN ( n3696 ) ) ;
-SDFFX1_RVT delay_reg_2__5_ ( .D ( n116 ) , .SI ( n3683 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_2__5_ ) , .QN ( n3697 ) ) ;
-SDFFX1_RVT delay_reg_2__4_ ( .D ( n117 ) , .SI ( n3713 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_2__4_ ) , .QN ( n3698 ) ) ;
-SDFFX1_RVT delay_reg_2__3_ ( .D ( n118 ) , .SI ( n2843 ) , 
+SDFFX1_RVT delay_reg_2__6_ ( .D ( n115 ) , .SI ( net_PTECO_HOLD_NET609 ) , 
+    .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_2__6_ ) , .QN ( n3696 ) ) ;
+SDFFX1_RVT delay_reg_2__5_ ( .D ( n116 ) , .SI ( net_PTECO_HOLD_NET108 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_2__5_ ) , 
+    .QN ( n3697 ) ) ;
+SDFFX1_RVT delay_reg_2__4_ ( .D ( n117 ) , .SI ( net_PTECO_HOLD_NET139 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_2__4_ ) , 
+    .QN ( n3698 ) ) ;
+SDFFX1_RVT delay_reg_2__3_ ( .D ( n118 ) , .SI ( net_PTECO_HOLD_NET69 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_2__3_ ) , 
     .QN ( n3699 ) ) ;
-SDFFX1_RVT delay_reg_2__2_ ( .D ( n119 ) , .SI ( n2828 ) , 
+SDFFX1_RVT delay_reg_2__2_ ( .D ( n119 ) , .SI ( net_PTECO_HOLD_NET368 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_2__2_ ) , 
     .QN ( n3700 ) ) ;
-SDFFX1_RVT delay_reg_2__1_ ( .D ( n120 ) , .SI ( n3685 ) , 
+SDFFX1_RVT delay_reg_2__1_ ( .D ( n120 ) , .SI ( net_PTECO_HOLD_NET976 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_2__1_ ) , 
     .QN ( n3701 ) ) ;
-SDFFX1_RVT delay_reg_2__0_ ( .D ( n121 ) , .SI ( n2657 ) , 
+SDFFX1_RVT delay_reg_2__0_ ( .D ( n121 ) , .SI ( net_PTECO_HOLD_NET1025 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_2__0_ ) , 
     .QN ( n2731 ) ) ;
-SDFFX1_RVT delay_reg_3__16_ ( .D ( n122 ) , .SI ( n2845 ) , 
+SDFFX1_RVT delay_reg_3__16_ ( .D ( n122 ) , .SI ( net_PTECO_HOLD_NET324 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_3__16_ ) , 
     .QN ( n2670 ) ) ;
-SDFFX1_RVT delay_reg_3__15_ ( .D ( n123 ) , .SI ( n2846 ) , 
+SDFFX1_RVT delay_reg_3__15_ ( .D ( n123 ) , .SI ( net_PTECO_HOLD_NET128 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_3__15_ ) , 
     .QN ( n3672 ) ) ;
-SDFFX1_RVT delay_reg_3__14_ ( .D ( n124 ) , .SI ( dftopt5_gOb2 ) , 
+SDFFX1_RVT delay_reg_3__14_ ( .D ( n124 ) , .SI ( net_PTECO_HOLD_NET1291 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_3__14_ ) , 
     .QN ( n3673 ) ) ;
-SDFFX1_RVT delay_reg_3__13_ ( .D ( n125 ) , .SI ( delay_63__16_ ) , 
+SDFFX1_RVT delay_reg_3__13_ ( .D ( n125 ) , .SI ( net_PTECO_HOLD_NET1227 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_3__13_ ) , 
     .QN ( n3674 ) ) ;
-SDFFX1_RVT delay_reg_3__12_ ( .D ( n126 ) , .SI ( n2848 ) , 
+SDFFX1_RVT delay_reg_3__12_ ( .D ( n126 ) , .SI ( net_PTECO_HOLD_NET1155 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_3__12_ ) , 
     .QN ( n3675 ) ) ;
-SDFFX1_RVT delay_reg_3__11_ ( .D ( n127 ) , .SI ( n2834 ) , 
+SDFFX1_RVT delay_reg_3__11_ ( .D ( n127 ) , .SI ( net_PTECO_HOLD_NET437 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_3__11_ ) , 
     .QN ( n3676 ) ) ;
-SDFFX1_RVT delay_reg_3__10_ ( .D ( n128 ) , .SI ( n2850 ) , 
+SDFFX1_RVT delay_reg_3__10_ ( .D ( n128 ) , .SI ( net_PTECO_HOLD_NET238 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_3__10_ ) , 
     .QN ( n3677 ) ) ;
-SDFFX1_RVT delay_reg_3__9_ ( .D ( n129 ) , .SI ( n2836 ) , 
+SDFFX1_RVT delay_reg_3__9_ ( .D ( n129 ) , .SI ( net_PTECO_HOLD_NET258 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_3__9_ ) , 
     .QN ( n3678 ) ) ;
-SDFFX1_RVT delay_reg_3__8_ ( .D ( n130 ) , .SI ( delay_62__9_ ) , 
+SDFFX1_RVT delay_reg_3__8_ ( .D ( n130 ) , .SI ( net_PTECO_HOLD_NET1226 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_3__8_ ) , 
     .QN ( n3679 ) ) ;
-SDFFX1_RVT delay_reg_3__7_ ( .D ( n131 ) , .SI ( n3665 ) , 
+SDFFX1_RVT delay_reg_3__7_ ( .D ( n131 ) , .SI ( net_PTECO_HOLD_NET630 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_3__7_ ) , .QN ( n3680 ) ) ;
-SDFFX1_RVT delay_reg_3__6_ ( .D ( n132 ) , .SI ( n2809 ) , 
+SDFFX1_RVT delay_reg_3__6_ ( .D ( n132 ) , .SI ( net_PTECO_HOLD_NET249 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_3__6_ ) , .QN ( n3681 ) ) ;
-SDFFX1_RVT delay_reg_3__5_ ( .D ( n133 ) , .SI ( n3667 ) , .SE ( test_se ) , 
-    .CLK ( clk ) , .Q ( delay_3__5_ ) , .QN ( n3682 ) ) ;
-SDFFX1_RVT delay_reg_3__4_ ( .D ( n134 ) , .SI ( n3698 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_3__4_ ) , .QN ( n3683 ) ) ;
-SDFFX1_RVT delay_reg_3__3_ ( .D ( n135 ) , .SI ( n3729 ) , 
+SDFFX1_RVT delay_reg_3__5_ ( .D ( n133 ) , .SI ( net_PTECO_HOLD_NET191 ) , 
+    .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_3__5_ ) , .QN ( n3682 ) ) ;
+SDFFX1_RVT delay_reg_3__4_ ( .D ( n134 ) , .SI ( net_PTECO_HOLD_NET136 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_3__4_ ) , 
+    .QN ( n3683 ) ) ;
+SDFFX1_RVT delay_reg_3__3_ ( .D ( n135 ) , .SI ( net_PTECO_HOLD_NET635 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_3__3_ ) , 
     .QN ( n3684 ) ) ;
-SDFFX1_RVT delay_reg_3__2_ ( .D ( n136 ) , .SI ( n2858 ) , 
+SDFFX1_RVT delay_reg_3__2_ ( .D ( n136 ) , .SI ( net_PTECO_HOLD_NET245 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_3__2_ ) , 
     .QN ( n3685 ) ) ;
-SDFFX1_RVT delay_reg_3__1_ ( .D ( n137 ) , .SI ( n3671 ) , 
+SDFFX1_RVT delay_reg_3__1_ ( .D ( n137 ) , .SI ( net_PTECO_HOLD_NET402 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_3__1_ ) , 
     .QN ( n3686 ) ) ;
-SDFFX1_RVT delay_reg_3__0_ ( .D ( n138 ) , .SI ( n2706 ) , 
+SDFFX1_RVT delay_reg_3__0_ ( .D ( n138 ) , .SI ( net_PTECO_HOLD_NET1040 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_3__0_ ) , 
     .QN ( n2653 ) ) ;
-SDFFX1_RVT delay_reg_4__16_ ( .D ( n139 ) , .SI ( delay_6__16_ ) , 
+SDFFX1_RVT delay_reg_4__16_ ( .D ( n139 ) , .SI ( net_PTECO_HOLD_NET1310 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_4__16_ ) , 
     .QN ( n2744 ) ) ;
-SDFFX1_RVT delay_reg_4__15_ ( .D ( n140 ) , .SI ( n3642 ) , 
+SDFFX1_RVT delay_reg_4__15_ ( .D ( n140 ) , .SI ( net_PTECO_HOLD_NET122 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_4__15_ ) , 
     .QN ( n3657 ) ) ;
-SDFFX1_RVT delay_reg_4__14_ ( .D ( n141 ) , .SI ( n3644 ) , 
+SDFFX1_RVT delay_reg_4__14_ ( .D ( n141 ) , .SI ( net_PTECO_HOLD_NET153 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_4__14_ ) , 
     .QN ( n3658 ) ) ;
-SDFFX1_RVT delay_reg_4__13_ ( .D ( n142 ) , .SI ( n2832 ) , 
+SDFFX1_RVT delay_reg_4__13_ ( .D ( n142 ) , .SI ( net_PTECO_HOLD_NET244 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_4__13_ ) , 
     .QN ( n3659 ) ) ;
-SDFFX1_RVT delay_reg_4__12_ ( .D ( n143 ) , .SI ( n2863 ) , 
+SDFFX1_RVT delay_reg_4__12_ ( .D ( n143 ) , .SI ( net_PTECO_HOLD_NET528 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_4__12_ ) , 
     .QN ( n3660 ) ) ;
-SDFFX1_RVT delay_reg_4__11_ ( .D ( n144 ) , .SI ( delay_5__11_ ) , 
+SDFFX1_RVT delay_reg_4__11_ ( .D ( n144 ) , .SI ( net_PTECO_HOLD_NET1223 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_4__11_ ) , 
     .QN ( n3661 ) ) ;
-SDFFX1_RVT delay_reg_4__10_ ( .D ( n145 ) , .SI ( n2880 ) , 
+SDFFX1_RVT delay_reg_4__10_ ( .D ( n145 ) , .SI ( net_PTECO_HOLD_NET150 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_4__10_ ) , 
     .QN ( n3662 ) ) ;
-SDFFX1_RVT delay_reg_4__9_ ( .D ( n146 ) , .SI ( n3647 ) , 
+SDFFX1_RVT delay_reg_4__9_ ( .D ( n146 ) , .SI ( net_PTECO_HOLD_NET1059 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_4__9_ ) , 
     .QN ( n3663 ) ) ;
-SDFFX1_RVT delay_reg_4__8_ ( .D ( n147 ) , .SI ( n3649 ) , 
+SDFFX1_RVT delay_reg_4__8_ ( .D ( n147 ) , .SI ( net_PTECO_HOLD_NET811 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_4__8_ ) , 
     .QN ( n3664 ) ) ;
-SDFFX1_RVT delay_reg_4__7_ ( .D ( n148 ) , .SI ( n2893 ) , 
+SDFFX1_RVT delay_reg_4__7_ ( .D ( n148 ) , .SI ( net_PTECO_HOLD_NET570 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_4__7_ ) , .QN ( n3665 ) ) ;
-SDFFX1_RVT delay_reg_4__6_ ( .D ( n149 ) , .SI ( n3651 ) , 
+SDFFX1_RVT delay_reg_4__6_ ( .D ( n149 ) , .SI ( net_PTECO_HOLD_NET478 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( clk ) , .Q ( delay_4__6_ ) , .QN ( n3666 ) ) ;
-SDFFX1_RVT delay_reg_4__5_ ( .D ( n150 ) , .SI ( n2840 ) , .SE ( test_se ) , 
-    .CLK ( clk ) , .Q ( delay_4__5_ ) , .QN ( n3667 ) ) ;
-SDFFX1_RVT delay_reg_4__4_ ( .D ( n151 ) , .SI ( n3653 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_17 ) , .Q ( delay_4__4_ ) , .QN ( n3668 ) ) ;
-SDFFX1_RVT delay_reg_4__3_ ( .D ( n152 ) , .SI ( n2842 ) , 
+SDFFX1_RVT delay_reg_4__5_ ( .D ( n150 ) , .SI ( net_PTECO_HOLD_NET421 ) , 
+    .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_4__5_ ) , .QN ( n3667 ) ) ;
+SDFFX1_RVT delay_reg_4__4_ ( .D ( n151 ) , .SI ( net_PTECO_HOLD_NET84 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_4__4_ ) , 
+    .QN ( n3668 ) ) ;
+SDFFX1_RVT delay_reg_4__3_ ( .D ( n152 ) , .SI ( net_PTECO_HOLD_NET273 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_4__3_ ) , 
     .QN ( n3669 ) ) ;
-SDFFX1_RVT delay_reg_4__2_ ( .D ( n153 ) , .SI ( n3654 ) , 
+SDFFX1_RVT delay_reg_4__2_ ( .D ( n153 ) , .SI ( net_PTECO_HOLD_NET173 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_4__2_ ) , 
     .QN ( n3670 ) ) ;
-SDFFX1_RVT delay_reg_4__1_ ( .D ( n154 ) , .SI ( n3655 ) , 
+SDFFX1_RVT delay_reg_4__1_ ( .D ( n154 ) , .SI ( net_PTECO_HOLD_NET316 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_4__1_ ) , 
     .QN ( n3671 ) ) ;
-SDFFX1_RVT delay_reg_4__0_ ( .D ( n155 ) , .SI ( n2646 ) , 
+SDFFX1_RVT delay_reg_4__0_ ( .D ( n155 ) , .SI ( net_PTECO_HOLD_NET954 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_4__0_ ) , 
     .QN ( n2706 ) ) ;
-SDFFX1_RVT delay_reg_5__16_ ( .D ( n156 ) , .SI ( n2860 ) , 
+SDFFX1_RVT delay_reg_5__16_ ( .D ( n156 ) , .SI ( net_PTECO_HOLD_NET762 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_5__16_ ) , 
     .QN ( n3642 ) ) ;
-SDFFX1_RVT delay_reg_5__15_ ( .D ( n157 ) , .SI ( n2877 ) , 
+SDFFX1_RVT delay_reg_5__15_ ( .D ( n157 ) , .SI ( net_PTECO_HOLD_NET845 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_5__15_ ) , 
     .QN ( n3643 ) ) ;
-SDFFX1_RVT delay_reg_5__14_ ( .D ( n158 ) , .SI ( n2847 ) , 
+SDFFX1_RVT delay_reg_5__14_ ( .D ( n158 ) , .SI ( net_PTECO_HOLD_NET165 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_5__14_ ) , 
     .QN ( n3644 ) ) ;
-SDFFX1_RVT delay_reg_5__13_ ( .D ( n159 ) , .SI ( n2862 ) , 
+SDFFX1_RVT delay_reg_5__13_ ( .D ( n159 ) , .SI ( net_PTECO_HOLD_NET581 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_5__13_ ) , 
     .QN ( n3645 ) ) ;
-SDFFX1_RVT delay_reg_5__12_ ( .D ( n160 ) , .SI ( n2879 ) , 
+SDFFX1_RVT delay_reg_5__12_ ( .D ( n160 ) , .SI ( net_PTECO_HOLD_NET220 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_5__12_ ) , 
     .QN ( n3646 ) ) ;
-SDFFX1_RVT delay_reg_5__11_ ( .D ( n161 ) , .SI ( n3662 ) , 
+SDFFX1_RVT delay_reg_5__11_ ( .D ( n161 ) , .SI ( net_PTECO_HOLD_NET125 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_5__11_ ) , 
     .QN ( n2704 ) ) ;
-SDFFX1_RVT delay_reg_5__10_ ( .D ( n162 ) , .SI ( n2890 ) , 
+SDFFX1_RVT delay_reg_5__10_ ( .D ( n162 ) , .SI ( net_PTECO_HOLD_NET349 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_5__10_ ) , 
     .QN ( n3647 ) ) ;
-SDFFX1_RVT delay_reg_5__9_ ( .D ( n163 ) , .SI ( n2891 ) , 
+SDFFX1_RVT delay_reg_5__9_ ( .D ( n163 ) , .SI ( net_PTECO_HOLD_NET156 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_5__9_ ) , 
     .QN ( n3648 ) ) ;
-SDFFX1_RVT delay_reg_5__8_ ( .D ( n164 ) , .SI ( n2852 ) , 
+SDFFX1_RVT delay_reg_5__8_ ( .D ( n164 ) , .SI ( net_PTECO_HOLD_NET474 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_5__8_ ) , 
     .QN ( n3649 ) ) ;
-SDFFX1_RVT delay_reg_5__7_ ( .D ( n165 ) , .SI ( n2892 ) , 
+SDFFX1_RVT delay_reg_5__7_ ( .D ( n165 ) , .SI ( net_PTECO_HOLD_NET876 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_5__7_ ) , 
     .QN ( n3650 ) ) ;
-SDFFX1_RVT delay_reg_5__6_ ( .D ( n166 ) , .SI ( n2855 ) , 
+SDFFX1_RVT delay_reg_5__6_ ( .D ( n166 ) , .SI ( net_PTECO_HOLD_NET106 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( clk ) , .Q ( delay_5__6_ ) , .QN ( n3651 ) ) ;
-SDFFX1_RVT delay_reg_5__5_ ( .D ( n167 ) , .SI ( n3668 ) , 
+SDFFX1_RVT delay_reg_5__5_ ( .D ( n167 ) , .SI ( net_PTECO_HOLD_NET81 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_5__5_ ) , 
     .QN ( n3652 ) ) ;
-SDFFX1_RVT delay_reg_5__4_ ( .D ( n168 ) , .SI ( n3638 ) , 
+SDFFX1_RVT delay_reg_5__4_ ( .D ( n168 ) , .SI ( net_PTECO_HOLD_NET141 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_5__4_ ) , 
     .QN ( n3653 ) ) ;
-SDFFX1_RVT delay_reg_5__3_ ( .D ( n169 ) , .SI ( delay_57__3_ ) , 
+SDFFX1_RVT delay_reg_5__3_ ( .D ( n169 ) , .SI ( net_PTECO_HOLD_NET1277 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_5__3_ ) , 
     .QN ( n2729 ) ) ;
-SDFFX1_RVT delay_reg_5__2_ ( .D ( n170 ) , .SI ( n2882 ) , 
+SDFFX1_RVT delay_reg_5__2_ ( .D ( n170 ) , .SI ( net_PTECO_HOLD_NET667 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_5__2_ ) , 
     .QN ( n3654 ) ) ;
-SDFFX1_RVT delay_reg_5__1_ ( .D ( n171 ) , .SI ( n2873 ) , 
+SDFFX1_RVT delay_reg_5__1_ ( .D ( n171 ) , .SI ( net_PTECO_HOLD_NET1046 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_5__1_ ) , 
     .QN ( n3655 ) ) ;
-SDFFX1_RVT delay_reg_5__0_ ( .D ( n172 ) , .SI ( n2716 ) , 
+SDFFX1_RVT delay_reg_5__0_ ( .D ( n172 ) , .SI ( net_PTECO_HOLD_NET48 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_5__0_ ) , 
     .QN ( n3656 ) ) ;
-SDFFX1_RVT delay_reg_6__16_ ( .D ( n173 ) , .SI ( n2916 ) , 
+SDFFX1_RVT delay_reg_6__16_ ( .D ( n173 ) , .SI ( net_PTECO_HOLD_NET142 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_6__16_ ) , 
     .QN ( n2689 ) ) ;
-SDFFX1_RVT delay_reg_6__15_ ( .D ( n174 ) , .SI ( n2876 ) , 
+SDFFX1_RVT delay_reg_6__15_ ( .D ( n174 ) , .SI ( net_PTECO_HOLD_NET205 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_6__15_ ) , 
     .QN ( n3627 ) ) ;
-SDFFX1_RVT delay_reg_6__14_ ( .D ( n175 ) , .SI ( n3643 ) , 
+SDFFX1_RVT delay_reg_6__14_ ( .D ( n175 ) , .SI ( net_PTECO_HOLD_NET532 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_6__14_ ) , 
     .QN ( n3628 ) ) ;
-SDFFX1_RVT delay_reg_6__13_ ( .D ( n176 ) , .SI ( n2902 ) , 
+SDFFX1_RVT delay_reg_6__13_ ( .D ( n176 ) , .SI ( net_PTECO_HOLD_NET300 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_6__13_ ) , 
     .QN ( n3629 ) ) ;
-SDFFX1_RVT delay_reg_6__12_ ( .D ( n177 ) , .SI ( n3615 ) , 
+SDFFX1_RVT delay_reg_6__12_ ( .D ( n177 ) , .SI ( net_PTECO_HOLD_NET491 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_6__12_ ) , 
     .QN ( n3630 ) ) ;
-SDFFX1_RVT delay_reg_6__11_ ( .D ( n178 ) , .SI ( n2864 ) , 
+SDFFX1_RVT delay_reg_6__11_ ( .D ( n178 ) , .SI ( net_PTECO_HOLD_NET269 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_6__11_ ) , 
     .QN ( n3631 ) ) ;
-SDFFX1_RVT delay_reg_6__10_ ( .D ( n179 ) , .SI ( n2905 ) , 
+SDFFX1_RVT delay_reg_6__10_ ( .D ( n179 ) , .SI ( net_PTECO_HOLD_NET85 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_6__10_ ) , 
     .QN ( n3632 ) ) ;
-SDFFX1_RVT delay_reg_6__9_ ( .D ( n180 ) , .SI ( n3648 ) , 
+SDFFX1_RVT delay_reg_6__9_ ( .D ( n180 ) , .SI ( net_PTECO_HOLD_NET154 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_6__9_ ) , 
     .QN ( n3633 ) ) ;
-SDFFX1_RVT delay_reg_6__8_ ( .D ( n181 ) , .SI ( n3604 ) , 
+SDFFX1_RVT delay_reg_6__8_ ( .D ( n181 ) , .SI ( net_PTECO_HOLD_NET566 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_6__8_ ) , 
     .QN ( n3634 ) ) ;
-SDFFX1_RVT delay_reg_6__7_ ( .D ( n182 ) , .SI ( n2881 ) , 
+SDFFX1_RVT delay_reg_6__7_ ( .D ( n182 ) , .SI ( net_PTECO_HOLD_NET236 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_6__7_ ) , 
     .QN ( n3635 ) ) ;
-SDFFX1_RVT delay_reg_6__6_ ( .D ( n183 ) , .SI ( n2713 ) , 
+SDFFX1_RVT delay_reg_6__6_ ( .D ( n183 ) , .SI ( net_PTECO_HOLD_NET44 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_6__6_ ) , 
     .QN ( n3636 ) ) ;
-SDFFX1_RVT delay_reg_6__5_ ( .D ( n184 ) , .SI ( delay_57__5_ ) , 
+SDFFX1_RVT delay_reg_6__5_ ( .D ( n184 ) , .SI ( net_PTECO_HOLD_NET1324 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_6__5_ ) , 
     .QN ( n3637 ) ) ;
-SDFFX1_RVT delay_reg_6__4_ ( .D ( n185 ) , .SI ( n3623 ) , 
+SDFFX1_RVT delay_reg_6__4_ ( .D ( n185 ) , .SI ( net_PTECO_HOLD_NET100 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_6__4_ ) , 
     .QN ( n3638 ) ) ;
-SDFFX1_RVT delay_reg_6__3_ ( .D ( n186 ) , .SI ( delay_5__3_ ) , 
+SDFFX1_RVT delay_reg_6__3_ ( .D ( n186 ) , .SI ( net_PTECO_HOLD_NET1218 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_6__3_ ) , 
     .QN ( n3639 ) ) ;
-SDFFX1_RVT delay_reg_6__2_ ( .D ( n187 ) , .SI ( n3641 ) , 
+SDFFX1_RVT delay_reg_6__2_ ( .D ( n187 ) , .SI ( net_PTECO_HOLD_NET307 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_6__2_ ) , 
     .QN ( n3640 ) ) ;
-SDFFX1_RVT delay_reg_6__1_ ( .D ( n188 ) , .SI ( n2898 ) , 
+SDFFX1_RVT delay_reg_6__1_ ( .D ( n188 ) , .SI ( net_PTECO_HOLD_NET276 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_6__1_ ) , 
     .QN ( n3641 ) ) ;
-SDFFX1_RVT delay_reg_6__0_ ( .D ( n189 ) , .SI ( n2660 ) , 
+SDFFX1_RVT delay_reg_6__0_ ( .D ( n189 ) , .SI ( net_PTECO_HOLD_NET1114 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_6__0_ ) , 
     .QN ( n2652 ) ) ;
-SDFFX1_RVT delay_reg_7__16_ ( .D ( n190 ) , .SI ( n3596 ) , 
+SDFFX1_RVT delay_reg_7__16_ ( .D ( n190 ) , .SI ( net_PTECO_HOLD_NET278 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_7__16_ ) , 
     .QN ( n2743 ) ) ;
-SDFFX1_RVT delay_reg_7__15_ ( .D ( n191 ) , .SI ( dftopt71 ) , 
+SDFFX1_RVT delay_reg_7__15_ ( .D ( n191 ) , .SI ( net_PTECO_HOLD_NET1327 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_7__15_ ) , 
     .QN ( n3612 ) ) ;
-SDFFX1_RVT delay_reg_7__14_ ( .D ( n192 ) , .SI ( delay_4__16_ ) , 
+SDFFX1_RVT delay_reg_7__14_ ( .D ( n192 ) , .SI ( net_PTECO_HOLD_NET1275 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_7__14_ ) , 
     .QN ( n3613 ) ) ;
-SDFFX1_RVT delay_reg_7__13_ ( .D ( n193 ) , .SI ( n3598 ) , 
+SDFFX1_RVT delay_reg_7__13_ ( .D ( n193 ) , .SI ( net_PTECO_HOLD_NET758 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_7__13_ ) , 
     .QN ( n3614 ) ) ;
-SDFFX1_RVT delay_reg_7__12_ ( .D ( n194 ) , .SI ( n2918 ) , 
+SDFFX1_RVT delay_reg_7__12_ ( .D ( n194 ) , .SI ( net_PTECO_HOLD_NET1119 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_7__12_ ) , 
     .QN ( n3615 ) ) ;
-SDFFX1_RVT delay_reg_7__11_ ( .D ( n195 ) , .SI ( n3586 ) , 
+SDFFX1_RVT delay_reg_7__11_ ( .D ( n195 ) , .SI ( net_PTECO_HOLD_NET292 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_7__11_ ) , 
     .QN ( n3616 ) ) ;
-SDFFX1_RVT delay_reg_7__10_ ( .D ( n196 ) , .SI ( n2889 ) , 
+SDFFX1_RVT delay_reg_7__10_ ( .D ( n196 ) , .SI ( net_PTECO_HOLD_NET230 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_7__10_ ) , 
     .QN ( n3617 ) ) ;
-SDFFX1_RVT delay_reg_7__9_ ( .D ( n197 ) , .SI ( n3602 ) , 
+SDFFX1_RVT delay_reg_7__9_ ( .D ( n197 ) , .SI ( net_PTECO_HOLD_NET746 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_7__9_ ) , 
     .QN ( n3618 ) ) ;
-SDFFX1_RVT delay_reg_7__8_ ( .D ( n198 ) , .SI ( n3633 ) , 
+SDFFX1_RVT delay_reg_7__8_ ( .D ( n198 ) , .SI ( net_PTECO_HOLD_NET550 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_7__8_ ) , 
     .QN ( n3619 ) ) ;
-SDFFX1_RVT delay_reg_7__7_ ( .D ( n199 ) , .SI ( n3634 ) , 
+SDFFX1_RVT delay_reg_7__7_ ( .D ( n199 ) , .SI ( net_PTECO_HOLD_NET880 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_7__7_ ) , 
     .QN ( n3620 ) ) ;
-SDFFX1_RVT delay_reg_7__6_ ( .D ( n200 ) , .SI ( n3636 ) , 
+SDFFX1_RVT delay_reg_7__6_ ( .D ( n200 ) , .SI ( net_PTECO_HOLD_NET427 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_7__6_ ) , 
     .QN ( n3621 ) ) ;
-SDFFX1_RVT delay_reg_7__5_ ( .D ( n201 ) , .SI ( n3637 ) , 
+SDFFX1_RVT delay_reg_7__5_ ( .D ( n201 ) , .SI ( net_PTECO_HOLD_NET68 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_7__5_ ) , 
     .QN ( n3622 ) ) ;
-SDFFX1_RVT delay_reg_7__4_ ( .D ( n202 ) , .SI ( n2895 ) , 
+SDFFX1_RVT delay_reg_7__4_ ( .D ( n202 ) , .SI ( net_PTECO_HOLD_NET76 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_7__4_ ) , 
     .QN ( n3623 ) ) ;
-SDFFX1_RVT delay_reg_7__3_ ( .D ( n203 ) , .SI ( n3593 ) , 
+SDFFX1_RVT delay_reg_7__3_ ( .D ( n203 ) , .SI ( net_PTECO_HOLD_NET160 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_7__3_ ) , 
     .QN ( n3624 ) ) ;
-SDFFX1_RVT delay_reg_7__2_ ( .D ( n204 ) , .SI ( n2897 ) , 
+SDFFX1_RVT delay_reg_7__2_ ( .D ( n204 ) , .SI ( net_PTECO_HOLD_NET119 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_7__2_ ) , 
     .QN ( n3625 ) ) ;
-SDFFX1_RVT delay_reg_7__1_ ( .D ( n205 ) , .SI ( n2913 ) , 
+SDFFX1_RVT delay_reg_7__1_ ( .D ( n205 ) , .SI ( net_PTECO_HOLD_NET113 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_7__1_ ) , 
     .QN ( n3626 ) ) ;
-SDFFX1_RVT delay_reg_7__0_ ( .D ( n206 ) , .SI ( n2727 ) , 
+SDFFX1_RVT delay_reg_7__0_ ( .D ( n206 ) , .SI ( net_PTECO_HOLD_NET40 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_7__0_ ) , 
     .QN ( n2655 ) ) ;
-SDFFX1_RVT delay_reg_8__16_ ( .D ( n207 ) , .SI ( dftopt47_gOb8 ) , 
+SDFFX1_RVT delay_reg_8__16_ ( .D ( n207 ) , .SI ( net_PTECO_HOLD_NET170 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_8__16_ ) , 
     .QN ( n2679 ) ) ;
-SDFFX1_RVT delay_reg_8__15_ ( .D ( n208 ) , .SI ( n2899 ) , 
+SDFFX1_RVT delay_reg_8__15_ ( .D ( n208 ) , .SI ( net_PTECO_HOLD_NET143 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_8__15_ ) , 
     .QN ( n3596 ) ) ;
-SDFFX1_RVT delay_reg_8__14_ ( .D ( n209 ) , .SI ( delay_3__16_ ) , 
+SDFFX1_RVT delay_reg_8__14_ ( .D ( n209 ) , .SI ( net_PTECO_HOLD_NET1229 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_8__14_ ) , 
     .QN ( n3597 ) ) ;
-SDFFX1_RVT delay_reg_8__13_ ( .D ( n210 ) , .SI ( delay_58__16_ ) , 
+SDFFX1_RVT delay_reg_8__13_ ( .D ( n210 ) , .SI ( net_PTECO_HOLD_NET1259 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_8__13_ ) , 
     .QN ( n3598 ) ) ;
-SDFFX1_RVT delay_reg_8__12_ ( .D ( n211 ) , .SI ( n2885 ) , 
+SDFFX1_RVT delay_reg_8__12_ ( .D ( n211 ) , .SI ( net_PTECO_HOLD_NET684 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_8__12_ ) , 
     .QN ( n3599 ) ) ;
-SDFFX1_RVT delay_reg_8__11_ ( .D ( n212 ) , .SI ( n3616 ) , 
+SDFFX1_RVT delay_reg_8__11_ ( .D ( n212 ) , .SI ( net_PTECO_HOLD_NET606 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_8__11_ ) , 
     .QN ( n3600 ) ) ;
-SDFFX1_RVT delay_reg_8__10_ ( .D ( n213 ) , .SI ( n2904 ) , 
+SDFFX1_RVT delay_reg_8__10_ ( .D ( n213 ) , .SI ( net_PTECO_HOLD_NET233 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_8__10_ ) , 
     .QN ( n3601 ) ) ;
-SDFFX1_RVT delay_reg_8__9_ ( .D ( n214 ) , .SI ( n3617 ) , 
+SDFFX1_RVT delay_reg_8__9_ ( .D ( n214 ) , .SI ( net_PTECO_HOLD_NET469 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_8__9_ ) , 
     .QN ( n3602 ) ) ;
-SDFFX1_RVT delay_reg_8__8_ ( .D ( n215 ) , .SI ( n3619 ) , 
+SDFFX1_RVT delay_reg_8__8_ ( .D ( n215 ) , .SI ( net_PTECO_HOLD_NET252 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_8__8_ ) , 
     .QN ( n3603 ) ) ;
-SDFFX1_RVT delay_reg_8__7_ ( .D ( n216 ) , .SI ( n2906 ) , 
+SDFFX1_RVT delay_reg_8__7_ ( .D ( n216 ) , .SI ( net_PTECO_HOLD_NET864 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_8__7_ ) , 
     .QN ( n3604 ) ) ;
-SDFFX1_RVT delay_reg_8__6_ ( .D ( n217 ) , .SI ( n2939 ) , 
+SDFFX1_RVT delay_reg_8__6_ ( .D ( n217 ) , .SI ( net_PTECO_HOLD_NET856 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_8__6_ ) , 
     .QN ( n3605 ) ) ;
-SDFFX1_RVT delay_reg_8__5_ ( .D ( n218 ) , .SI ( n2909 ) , 
+SDFFX1_RVT delay_reg_8__5_ ( .D ( n218 ) , .SI ( net_PTECO_HOLD_NET64 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_8__5_ ) , 
     .QN ( n3606 ) ) ;
-SDFFX1_RVT delay_reg_8__4_ ( .D ( n219 ) , .SI ( n2924 ) , 
+SDFFX1_RVT delay_reg_8__4_ ( .D ( n219 ) , .SI ( net_PTECO_HOLD_NET529 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_8__4_ ) , 
     .QN ( n3607 ) ) ;
-SDFFX1_RVT delay_reg_8__3_ ( .D ( n220 ) , .SI ( n2910 ) , 
+SDFFX1_RVT delay_reg_8__3_ ( .D ( n220 ) , .SI ( net_PTECO_HOLD_NET425 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_8__3_ ) , 
     .QN ( n3608 ) ) ;
-SDFFX1_RVT delay_reg_8__2_ ( .D ( n221 ) , .SI ( n3626 ) , 
+SDFFX1_RVT delay_reg_8__2_ ( .D ( n221 ) , .SI ( net_PTECO_HOLD_NET92 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_8__2_ ) , 
     .QN ( n3609 ) ) ;
-SDFFX1_RVT delay_reg_8__1_ ( .D ( n222 ) , .SI ( n2928 ) , 
+SDFFX1_RVT delay_reg_8__1_ ( .D ( n222 ) , .SI ( net_PTECO_HOLD_NET120 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_8__1_ ) , 
     .QN ( n3610 ) ) ;
-SDFFX1_RVT delay_reg_8__0_ ( .D ( n223 ) , .SI ( n2929 ) , 
+SDFFX1_RVT delay_reg_8__0_ ( .D ( n223 ) , .SI ( net_PTECO_HOLD_NET214 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_8__0_ ) , 
     .QN ( n3611 ) ) ;
-SDFFX1_RVT delay_reg_9__16_ ( .D ( n224 ) , .SI ( n3566 ) , 
+SDFFX1_RVT delay_reg_9__16_ ( .D ( n224 ) , .SI ( net_PTECO_HOLD_NET115 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( dftopt51 ) , 
     .QN ( n2763 ) ) ;
-SDFFX1_RVT delay_reg_9__15_ ( .D ( n225 ) , .SI ( delay_55__16_ ) , 
+SDFFX1_RVT delay_reg_9__15_ ( .D ( n225 ) , .SI ( net_PTECO_HOLD_NET1334 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_9__15_ ) , 
     .QN ( dftopt47_gOb8 ) ) ;
-SDFFX1_RVT delay_reg_9__14_ ( .D ( n226 ) , .SI ( n3568 ) , 
+SDFFX1_RVT delay_reg_9__14_ ( .D ( n226 ) , .SI ( net_PTECO_HOLD_NET229 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_9__14_ ) , 
     .QN ( n3582 ) ) ;
-SDFFX1_RVT delay_reg_9__13_ ( .D ( n227 ) , .SI ( n3582 ) , 
+SDFFX1_RVT delay_reg_9__13_ ( .D ( n227 ) , .SI ( net_PTECO_HOLD_NET679 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_9__13_ ) , 
     .QN ( n3583 ) ) ;
-SDFFX1_RVT delay_reg_9__12_ ( .D ( n228 ) , .SI ( n3569 ) , 
+SDFFX1_RVT delay_reg_9__12_ ( .D ( n228 ) , .SI ( net_PTECO_HOLD_NET404 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_9__12_ ) , 
     .QN ( n3584 ) ) ;
-SDFFX1_RVT delay_reg_9__11_ ( .D ( n229 ) , .SI ( n3570 ) , 
+SDFFX1_RVT delay_reg_9__11_ ( .D ( n229 ) , .SI ( net_PTECO_HOLD_NET605 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_9__11_ ) , 
     .QN ( n3585 ) ) ;
-SDFFX1_RVT delay_reg_9__10_ ( .D ( n230 ) , .SI ( n2919 ) , 
+SDFFX1_RVT delay_reg_9__10_ ( .D ( n230 ) , .SI ( net_PTECO_HOLD_NET180 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_9__10_ ) , 
     .QN ( n3586 ) ) ;
-SDFFX1_RVT delay_reg_9__9_ ( .D ( n231 ) , .SI ( n2936 ) , 
+SDFFX1_RVT delay_reg_9__9_ ( .D ( n231 ) , .SI ( net_PTECO_HOLD_NET189 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_9__9_ ) , 
     .QN ( n3587 ) ) ;
-SDFFX1_RVT delay_reg_9__8_ ( .D ( n232 ) , .SI ( n3603 ) , 
+SDFFX1_RVT delay_reg_9__8_ ( .D ( n232 ) , .SI ( net_PTECO_HOLD_NET388 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_9__8_ ) , 
     .QN ( n3588 ) ) ;
-SDFFX1_RVT delay_reg_9__7_ ( .D ( n233 ) , .SI ( n2938 ) , 
+SDFFX1_RVT delay_reg_9__7_ ( .D ( n233 ) , .SI ( net_PTECO_HOLD_NET352 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_9__7_ ) , 
     .QN ( n3589 ) ) ;
-SDFFX1_RVT delay_reg_9__6_ ( .D ( n234 ) , .SI ( n2907 ) , 
+SDFFX1_RVT delay_reg_9__6_ ( .D ( n234 ) , .SI ( net_PTECO_HOLD_NET772 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_9__6_ ) , 
     .QN ( n3590 ) ) ;
-SDFFX1_RVT delay_reg_9__5_ ( .D ( n235 ) , .SI ( n3621 ) , 
+SDFFX1_RVT delay_reg_9__5_ ( .D ( n235 ) , .SI ( net_PTECO_HOLD_NET1136 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_9__5_ ) , 
     .QN ( n3591 ) ) ;
-SDFFX1_RVT delay_reg_9__4_ ( .D ( n236 ) , .SI ( n2925 ) , 
+SDFFX1_RVT delay_reg_9__4_ ( .D ( n236 ) , .SI ( net_PTECO_HOLD_NET235 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_9__4_ ) , 
     .QN ( n3592 ) ) ;
-SDFFX1_RVT delay_reg_9__3_ ( .D ( n237 ) , .SI ( n2942 ) , 
+SDFFX1_RVT delay_reg_9__3_ ( .D ( n237 ) , .SI ( net_PTECO_HOLD_NET259 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_9__3_ ) , 
     .QN ( n3593 ) ) ;
-SDFFX1_RVT delay_reg_9__2_ ( .D ( n238 ) , .SI ( n3609 ) , 
+SDFFX1_RVT delay_reg_9__2_ ( .D ( n238 ) , .SI ( net_PTECO_HOLD_NET385 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_9__2_ ) , 
     .QN ( n3594 ) ) ;
-SDFFX1_RVT delay_reg_9__1_ ( .D ( n239 ) , .SI ( n2927 ) , 
+SDFFX1_RVT delay_reg_9__1_ ( .D ( n239 ) , .SI ( net_PTECO_HOLD_NET1178 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_9__1_ ) , 
     .QN ( n3595 ) ) ;
-SDFFX1_RVT delay_reg_9__0_ ( .D ( n240 ) , .SI ( n3594 ) , 
+SDFFX1_RVT delay_reg_9__0_ ( .D ( n240 ) , .SI ( net_PTECO_HOLD_NET1140 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_9__0_ ) , 
     .QN ( n2638 ) ) ;
-SDFFX1_RVT delay_reg_10__16_ ( .D ( n241 ) , .SI ( dftopt77 ) , 
+SDFFX1_RVT delay_reg_10__16_ ( .D ( n241 ) , .SI ( net_PTECO_HOLD_NET1294 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_28 ) , .Q ( delay_10__16_ ) , 
     .QN ( n2680 ) ) ;
-SDFFX1_RVT delay_reg_10__15_ ( .D ( n242 ) , .SI ( dftopt56_gOb11 ) , 
+SDFFX1_RVT delay_reg_10__15_ ( .D ( n242 ) , .SI ( net_PTECO_HOLD_NET243 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_10__15_ ) , 
     .QN ( n3566 ) ) ;
-SDFFX1_RVT delay_reg_10__14_ ( .D ( n243 ) , .SI ( n2930 ) , 
+SDFFX1_RVT delay_reg_10__14_ ( .D ( n243 ) , .SI ( net_PTECO_HOLD_NET587 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_10__14_ ) , 
     .QN ( n3567 ) ) ;
-SDFFX1_RVT delay_reg_10__13_ ( .D ( n244 ) , .SI ( n2946 ) , 
+SDFFX1_RVT delay_reg_10__13_ ( .D ( n244 ) , .SI ( net_PTECO_HOLD_NET807 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_10__13_ ) , 
     .QN ( n3568 ) ) ;
-SDFFX1_RVT delay_reg_10__12_ ( .D ( n245 ) , .SI ( n2963 ) , 
+SDFFX1_RVT delay_reg_10__12_ ( .D ( n245 ) , .SI ( net_PTECO_HOLD_NET534 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_10__12_ ) , 
     .QN ( n3569 ) ) ;
-SDFFX1_RVT delay_reg_10__11_ ( .D ( n246 ) , .SI ( n3556 ) , 
+SDFFX1_RVT delay_reg_10__11_ ( .D ( n246 ) , .SI ( net_PTECO_HOLD_NET188 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_10__11_ ) , 
     .QN ( n3570 ) ) ;
-SDFFX1_RVT delay_reg_10__10_ ( .D ( n247 ) , .SI ( n3600 ) , 
+SDFFX1_RVT delay_reg_10__10_ ( .D ( n247 ) , .SI ( net_PTECO_HOLD_NET978 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_10__10_ ) , 
     .QN ( n3571 ) ) ;
-SDFFX1_RVT delay_reg_10__9_ ( .D ( n248 ) , .SI ( n3587 ) , 
+SDFFX1_RVT delay_reg_10__9_ ( .D ( n248 ) , .SI ( net_PTECO_HOLD_NET47 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_10__9_ ) , 
     .QN ( n3572 ) ) ;
-SDFFX1_RVT delay_reg_10__8_ ( .D ( n249 ) , .SI ( n2952 ) , 
+SDFFX1_RVT delay_reg_10__8_ ( .D ( n249 ) , .SI ( net_PTECO_HOLD_NET87 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_10__8_ ) , 
     .QN ( n3573 ) ) ;
-SDFFX1_RVT delay_reg_10__7_ ( .D ( n250 ) , .SI ( n2937 ) , 
+SDFFX1_RVT delay_reg_10__7_ ( .D ( n250 ) , .SI ( net_PTECO_HOLD_NET774 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_10__7_ ) , 
     .QN ( n3574 ) ) ;
-SDFFX1_RVT delay_reg_10__6_ ( .D ( n251 ) , .SI ( n2922 ) , 
+SDFFX1_RVT delay_reg_10__6_ ( .D ( n251 ) , .SI ( net_PTECO_HOLD_NET540 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_10__6_ ) , 
     .QN ( n3575 ) ) ;
-SDFFX1_RVT delay_reg_10__5_ ( .D ( n252 ) , .SI ( n2923 ) , 
+SDFFX1_RVT delay_reg_10__5_ ( .D ( n252 ) , .SI ( net_PTECO_HOLD_NET894 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_10__5_ ) , 
     .QN ( n3576 ) ) ;
-SDFFX1_RVT delay_reg_10__4_ ( .D ( n253 ) , .SI ( n3592 ) , 
+SDFFX1_RVT delay_reg_10__4_ ( .D ( n253 ) , .SI ( net_PTECO_HOLD_NET248 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_10__4_ ) , 
     .QN ( n3577 ) ) ;
-SDFFX1_RVT delay_reg_10__3_ ( .D ( n254 ) , .SI ( n3563 ) , 
+SDFFX1_RVT delay_reg_10__3_ ( .D ( n254 ) , .SI ( net_PTECO_HOLD_NET91 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_10__3_ ) , 
     .QN ( n3578 ) ) ;
-SDFFX1_RVT delay_reg_10__2_ ( .D ( n255 ) , .SI ( n2958 ) , 
+SDFFX1_RVT delay_reg_10__2_ ( .D ( n255 ) , .SI ( net_PTECO_HOLD_NET213 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_10__2_ ) , 
     .QN ( n3579 ) ) ;
-SDFFX1_RVT delay_reg_10__1_ ( .D ( n256 ) , .SI ( n2944 ) , 
+SDFFX1_RVT delay_reg_10__1_ ( .D ( n256 ) , .SI ( net_PTECO_HOLD_NET112 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_10__1_ ) , 
     .QN ( n3580 ) ) ;
-SDFFX1_RVT delay_reg_10__0_ ( .D ( n257 ) , .SI ( n2654 ) , 
+SDFFX1_RVT delay_reg_10__0_ ( .D ( n257 ) , .SI ( net_PTECO_HOLD_NET659 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_10__0_ ) , 
     .QN ( n2725 ) ) ;
-SDFFX1_RVT delay_reg_11__16_ ( .D ( n258 ) , .SI ( delay_10__16_ ) , 
+SDFFX1_RVT delay_reg_11__16_ ( .D ( n258 ) , .SI ( net_PTECO_HOLD_NET1228 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_28 ) , .Q ( delay_11__16_ ) , 
     .QN ( n2749 ) ) ;
-SDFFX1_RVT delay_reg_11__15_ ( .D ( n259 ) , .SI ( n3552 ) , 
+SDFFX1_RVT delay_reg_11__15_ ( .D ( n259 ) , .SI ( net_PTECO_HOLD_NET101 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_11__15_ ) , 
     .QN ( n3551 ) ) ;
-SDFFX1_RVT delay_reg_11__14_ ( .D ( n260 ) , .SI ( delay_51__16_ ) , 
+SDFFX1_RVT delay_reg_11__14_ ( .D ( n260 ) , .SI ( net_PTECO_HOLD_NET1161 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_11__14_ ) , 
     .QN ( n3552 ) ) ;
-SDFFX1_RVT delay_reg_11__13_ ( .D ( n261 ) , .SI ( n2947 ) , 
+SDFFX1_RVT delay_reg_11__13_ ( .D ( n261 ) , .SI ( net_PTECO_HOLD_NET289 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_11__13_ ) , 
     .QN ( n3553 ) ) ;
-SDFFX1_RVT delay_reg_11__12_ ( .D ( n262 ) , .SI ( n3555 ) , 
+SDFFX1_RVT delay_reg_11__12_ ( .D ( n262 ) , .SI ( net_PTECO_HOLD_NET645 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_11__12_ ) , 
     .QN ( n3554 ) ) ;
-SDFFX1_RVT delay_reg_11__11_ ( .D ( n263 ) , .SI ( n2964 ) , 
+SDFFX1_RVT delay_reg_11__11_ ( .D ( n263 ) , .SI ( net_PTECO_HOLD_NET360 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_11__11_ ) , 
     .QN ( n3555 ) ) ;
-SDFFX1_RVT delay_reg_11__10_ ( .D ( n264 ) , .SI ( n2965 ) , 
+SDFFX1_RVT delay_reg_11__10_ ( .D ( n264 ) , .SI ( net_PTECO_HOLD_NET164 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_11__10_ ) , 
     .QN ( n3556 ) ) ;
-SDFFX1_RVT delay_reg_11__9_ ( .D ( n265 ) , .SI ( n2966 ) , 
+SDFFX1_RVT delay_reg_11__9_ ( .D ( n265 ) , .SI ( net_PTECO_HOLD_NET184 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_11__9_ ) , 
     .QN ( n3557 ) ) ;
-SDFFX1_RVT delay_reg_11__8_ ( .D ( n266 ) , .SI ( n2967 ) , 
+SDFFX1_RVT delay_reg_11__8_ ( .D ( n266 ) , .SI ( net_PTECO_HOLD_NET410 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_11__8_ ) , 
     .QN ( n3558 ) ) ;
-SDFFX1_RVT delay_reg_11__7_ ( .D ( n267 ) , .SI ( n2968 ) , 
+SDFFX1_RVT delay_reg_11__7_ ( .D ( n267 ) , .SI ( net_PTECO_HOLD_NET704 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_11__7_ ) , 
     .QN ( n3559 ) ) ;
-SDFFX1_RVT delay_reg_11__6_ ( .D ( n268 ) , .SI ( n3575 ) , 
+SDFFX1_RVT delay_reg_11__6_ ( .D ( n268 ) , .SI ( net_PTECO_HOLD_NET643 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_11__6_ ) , 
     .QN ( n3560 ) ) ;
-SDFFX1_RVT delay_reg_11__5_ ( .D ( n269 ) , .SI ( n2969 ) , 
+SDFFX1_RVT delay_reg_11__5_ ( .D ( n269 ) , .SI ( net_PTECO_HOLD_NET734 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_11__5_ ) , 
     .QN ( n3561 ) ) ;
-SDFFX1_RVT delay_reg_11__4_ ( .D ( n270 ) , .SI ( n3577 ) , 
+SDFFX1_RVT delay_reg_11__4_ ( .D ( n270 ) , .SI ( net_PTECO_HOLD_NET296 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_11__4_ ) , 
     .QN ( n3562 ) ) ;
-SDFFX1_RVT delay_reg_11__3_ ( .D ( n271 ) , .SI ( n2972 ) , 
+SDFFX1_RVT delay_reg_11__3_ ( .D ( n271 ) , .SI ( net_PTECO_HOLD_NET196 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_11__3_ ) , 
     .QN ( n3563 ) ) ;
-SDFFX1_RVT delay_reg_11__2_ ( .D ( n272 ) , .SI ( n2974 ) , 
+SDFFX1_RVT delay_reg_11__2_ ( .D ( n272 ) , .SI ( net_PTECO_HOLD_NET97 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_11__2_ ) , 
     .QN ( n3564 ) ) ;
-SDFFX1_RVT delay_reg_11__1_ ( .D ( n273 ) , .SI ( n2973 ) , 
+SDFFX1_RVT delay_reg_11__1_ ( .D ( n273 ) , .SI ( net_PTECO_HOLD_NET525 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_11__1_ ) , 
     .QN ( n3565 ) ) ;
-SDFFX1_RVT delay_reg_11__0_ ( .D ( n274 ) , .SI ( n2650 ) , 
+SDFFX1_RVT delay_reg_11__0_ ( .D ( n274 ) , .SI ( net_PTECO_HOLD_NET877 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_11__0_ ) , 
     .QN ( n2711 ) ) ;
-SDFFX1_RVT delay_reg_12__16_ ( .D ( n275 ) , .SI ( n2976 ) , 
+SDFFX1_RVT delay_reg_12__16_ ( .D ( n275 ) , .SI ( net_PTECO_HOLD_NET313 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_12__16_ ) , 
     .QN ( n2678 ) ) ;
-SDFFX1_RVT delay_reg_12__15_ ( .D ( n276 ) , .SI ( n3537 ) , 
+SDFFX1_RVT delay_reg_12__15_ ( .D ( n276 ) , .SI ( net_PTECO_HOLD_NET351 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_12__15_ ) , 
     .QN ( n3536 ) ) ;
-SDFFX1_RVT delay_reg_12__14_ ( .D ( n277 ) , .SI ( n3553 ) , 
+SDFFX1_RVT delay_reg_12__14_ ( .D ( n277 ) , .SI ( net_PTECO_HOLD_NET297 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_12__14_ ) , 
     .QN ( n3537 ) ) ;
-SDFFX1_RVT delay_reg_12__13_ ( .D ( n278 ) , .SI ( n2933 ) , 
+SDFFX1_RVT delay_reg_12__13_ ( .D ( n278 ) , .SI ( net_PTECO_HOLD_NET406 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_12__13_ ) , 
     .QN ( n3538 ) ) ;
-SDFFX1_RVT delay_reg_12__12_ ( .D ( n279 ) , .SI ( n2978 ) , 
+SDFFX1_RVT delay_reg_12__12_ ( .D ( n279 ) , .SI ( net_PTECO_HOLD_NET937 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_12__12_ ) , 
     .QN ( n3539 ) ) ;
-SDFFX1_RVT delay_reg_12__11_ ( .D ( n280 ) , .SI ( n2979 ) , 
+SDFFX1_RVT delay_reg_12__11_ ( .D ( n280 ) , .SI ( net_PTECO_HOLD_NET579 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_12__11_ ) , 
     .QN ( n3540 ) ) ;
-SDFFX1_RVT delay_reg_12__10_ ( .D ( n281 ) , .SI ( n3540 ) , 
+SDFFX1_RVT delay_reg_12__10_ ( .D ( n281 ) , .SI ( net_PTECO_HOLD_NET1154 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_12__10_ ) , 
     .QN ( n3541 ) ) ;
-SDFFX1_RVT delay_reg_12__9_ ( .D ( n282 ) , .SI ( n2981 ) , 
+SDFFX1_RVT delay_reg_12__9_ ( .D ( n282 ) , .SI ( net_PTECO_HOLD_NET416 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_12__9_ ) , 
     .QN ( n3542 ) ) ;
-SDFFX1_RVT delay_reg_12__8_ ( .D ( n283 ) , .SI ( n3544 ) , 
+SDFFX1_RVT delay_reg_12__8_ ( .D ( n283 ) , .SI ( net_PTECO_HOLD_NET600 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_12__8_ ) , 
     .QN ( n3543 ) ) ;
-SDFFX1_RVT delay_reg_12__7_ ( .D ( n284 ) , .SI ( n2983 ) , 
+SDFFX1_RVT delay_reg_12__7_ ( .D ( n284 ) , .SI ( net_PTECO_HOLD_NET472 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_12__7_ ) , 
     .QN ( n3544 ) ) ;
-SDFFX1_RVT delay_reg_12__6_ ( .D ( n285 ) , .SI ( n3529 ) , 
+SDFFX1_RVT delay_reg_12__6_ ( .D ( n285 ) , .SI ( net_PTECO_HOLD_NET906 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_12__6_ ) , 
     .QN ( n3545 ) ) ;
-SDFFX1_RVT delay_reg_12__5_ ( .D ( n286 ) , .SI ( n3001 ) , 
+SDFFX1_RVT delay_reg_12__5_ ( .D ( n286 ) , .SI ( net_PTECO_HOLD_NET561 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_12__5_ ) , 
     .QN ( n3546 ) ) ;
-SDFFX1_RVT delay_reg_12__4_ ( .D ( n287 ) , .SI ( n3531 ) , 
+SDFFX1_RVT delay_reg_12__4_ ( .D ( n287 ) , .SI ( net_PTECO_HOLD_NET731 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_12__4_ ) , 
     .QN ( n3547 ) ) ;
-SDFFX1_RVT delay_reg_12__3_ ( .D ( n288 ) , .SI ( n3533 ) , 
+SDFFX1_RVT delay_reg_12__3_ ( .D ( n288 ) , .SI ( net_PTECO_HOLD_NET454 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_12__3_ ) , 
     .QN ( n3548 ) ) ;
-SDFFX1_RVT delay_reg_12__2_ ( .D ( n289 ) , .SI ( n3550 ) , 
+SDFFX1_RVT delay_reg_12__2_ ( .D ( n289 ) , .SI ( net_PTECO_HOLD_NET512 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_12__2_ ) , 
     .QN ( n3549 ) ) ;
-SDFFX1_RVT delay_reg_12__1_ ( .D ( n290 ) , .SI ( n2989 ) , 
+SDFFX1_RVT delay_reg_12__1_ ( .D ( n290 ) , .SI ( net_PTECO_HOLD_NET357 ) , 
     .SE ( HFSNET_1161 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_12__1_ ) , 
     .QN ( n3550 ) ) ;
 SDFFX1_RVT delay_reg_12__0_ ( .D ( n291 ) , .SI ( copt_net_52 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_12__0_ ) , 
     .QN ( n2637 ) ) ;
-SDFFX1_RVT delay_reg_13__16_ ( .D ( n292 ) , .SI ( delay_49__16_ ) , 
+SDFFX1_RVT delay_reg_13__16_ ( .D ( n292 ) , .SI ( net_PTECO_HOLD_NET1301 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_13__16_ ) , 
     .QN ( n2758 ) ) ;
-SDFFX1_RVT delay_reg_13__15_ ( .D ( n293 ) , .SI ( delay_13__16_ ) , 
+SDFFX1_RVT delay_reg_13__15_ ( .D ( n293 ) , .SI ( net_PTECO_HOLD_NET1258 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_13__15_ ) , 
     .QN ( n3520 ) ) ;
-SDFFX1_RVT delay_reg_13__14_ ( .D ( n294 ) , .SI ( n3506 ) , 
+SDFFX1_RVT delay_reg_13__14_ ( .D ( n294 ) , .SI ( net_PTECO_HOLD_NET826 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_13__14_ ) , 
     .QN ( n3521 ) ) ;
-SDFFX1_RVT delay_reg_13__13_ ( .D ( n295 ) , .SI ( n2992 ) , 
+SDFFX1_RVT delay_reg_13__13_ ( .D ( n295 ) , .SI ( net_PTECO_HOLD_NET931 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_13__13_ ) , 
     .QN ( n3522 ) ) ;
-SDFFX1_RVT delay_reg_13__12_ ( .D ( n296 ) , .SI ( n2993 ) , 
+SDFFX1_RVT delay_reg_13__12_ ( .D ( n296 ) , .SI ( net_PTECO_HOLD_NET716 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_13__12_ ) , 
     .QN ( n3523 ) ) ;
-SDFFX1_RVT delay_reg_13__11_ ( .D ( n297 ) , .SI ( n3508 ) , 
+SDFFX1_RVT delay_reg_13__11_ ( .D ( n297 ) , .SI ( net_PTECO_HOLD_NET1079 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_13__11_ ) , 
     .QN ( n3524 ) ) ;
-SDFFX1_RVT delay_reg_13__10_ ( .D ( n298 ) , .SI ( n2994 ) , 
+SDFFX1_RVT delay_reg_13__10_ ( .D ( n298 ) , .SI ( net_PTECO_HOLD_NET887 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_13__10_ ) , 
     .QN ( n3525 ) ) ;
-SDFFX1_RVT delay_reg_13__9_ ( .D ( n299 ) , .SI ( n3542 ) , 
+SDFFX1_RVT delay_reg_13__9_ ( .D ( n299 ) , .SI ( net_PTECO_HOLD_NET800 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_13__9_ ) , 
     .QN ( n3526 ) ) ;
-SDFFX1_RVT delay_reg_13__8_ ( .D ( n300 ) , .SI ( n2996 ) , 
+SDFFX1_RVT delay_reg_13__8_ ( .D ( n300 ) , .SI ( net_PTECO_HOLD_NET1086 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_13__8_ ) , 
     .QN ( n3527 ) ) ;
-SDFFX1_RVT delay_reg_13__7_ ( .D ( n301 ) , .SI ( n2997 ) , 
+SDFFX1_RVT delay_reg_13__7_ ( .D ( n301 ) , .SI ( net_PTECO_HOLD_NET1113 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_13__7_ ) , 
     .QN ( n3528 ) ) ;
-SDFFX1_RVT delay_reg_13__6_ ( .D ( n302 ) , .SI ( n2984 ) , 
+SDFFX1_RVT delay_reg_13__6_ ( .D ( n302 ) , .SI ( net_PTECO_HOLD_NET598 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_13__6_ ) , 
     .QN ( n3529 ) ) ;
 SDFFX1_RVT delay_reg_13__5_ ( .D ( n303 ) , .SI ( ZBUF_47_5 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_13__5_ ) , 
     .QN ( n3530 ) ) ;
-SDFFX1_RVT delay_reg_13__4_ ( .D ( n304 ) , .SI ( n3018 ) , 
+SDFFX1_RVT delay_reg_13__4_ ( .D ( n304 ) , .SI ( net_PTECO_HOLD_NET754 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_13__4_ ) , 
     .QN ( n3531 ) ) ;
-SDFFX1_RVT delay_reg_13__3_ ( .D ( n305 ) , .SI ( n2987 ) , 
+SDFFX1_RVT delay_reg_13__3_ ( .D ( n305 ) , .SI ( net_PTECO_HOLD_NET846 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_13__3_ ) , 
     .QN ( n3532 ) ) ;
-SDFFX1_RVT delay_reg_13__2_ ( .D ( n306 ) , .SI ( n2988 ) , 
+SDFFX1_RVT delay_reg_13__2_ ( .D ( n306 ) , .SI ( net_PTECO_HOLD_NET522 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_13__2_ ) , 
     .QN ( n3533 ) ) ;
-SDFFX1_RVT delay_reg_13__1_ ( .D ( n307 ) , .SI ( n3004 ) , 
+SDFFX1_RVT delay_reg_13__1_ ( .D ( n307 ) , .SI ( net_PTECO_HOLD_NET539 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_13__1_ ) , 
     .QN ( n3534 ) ) ;
-SDFFX1_RVT delay_reg_13__0_ ( .D ( n308 ) , .SI ( n3549 ) , 
+SDFFX1_RVT delay_reg_13__0_ ( .D ( n308 ) , .SI ( net_PTECO_HOLD_NET1139 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_13__0_ ) , 
     .QN ( n3535 ) ) ;
-SDFFX1_RVT delay_reg_14__16_ ( .D ( n309 ) , .SI ( delay_48__16_ ) , 
+SDFFX1_RVT delay_reg_14__16_ ( .D ( n309 ) , .SI ( net_PTECO_HOLD_NET1295 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_14__16_ ) , 
     .QN ( n2672 ) ) ;
-SDFFX1_RVT delay_reg_14__15_ ( .D ( n310 ) , .SI ( n2990 ) , 
+SDFFX1_RVT delay_reg_14__15_ ( .D ( n310 ) , .SI ( net_PTECO_HOLD_NET810 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_14__15_ ) , 
     .QN ( n3505 ) ) ;
-SDFFX1_RVT delay_reg_14__14_ ( .D ( n311 ) , .SI ( n2991 ) , 
+SDFFX1_RVT delay_reg_14__14_ ( .D ( n311 ) , .SI ( net_PTECO_HOLD_NET616 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_14__14_ ) , 
     .QN ( n3506 ) ) ;
-SDFFX1_RVT delay_reg_14__13_ ( .D ( n312 ) , .SI ( n3008 ) , 
+SDFFX1_RVT delay_reg_14__13_ ( .D ( n312 ) , .SI ( net_PTECO_HOLD_NET651 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_14__13_ ) , 
     .QN ( n3507 ) ) ;
-SDFFX1_RVT delay_reg_14__12_ ( .D ( n313 ) , .SI ( n3509 ) , 
+SDFFX1_RVT delay_reg_14__12_ ( .D ( n313 ) , .SI ( net_PTECO_HOLD_NET815 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_14__12_ ) , 
     .QN ( n3508 ) ) ;
-SDFFX1_RVT delay_reg_14__11_ ( .D ( n314 ) , .SI ( n3493 ) , 
+SDFFX1_RVT delay_reg_14__11_ ( .D ( n314 ) , .SI ( net_PTECO_HOLD_NET969 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_14__11_ ) , 
     .QN ( n3509 ) ) ;
-SDFFX1_RVT delay_reg_14__10_ ( .D ( n315 ) , .SI ( n2995 ) , 
+SDFFX1_RVT delay_reg_14__10_ ( .D ( n315 ) , .SI ( net_PTECO_HOLD_NET882 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_14__10_ ) , 
     .QN ( n3510 ) ) ;
-SDFFX1_RVT delay_reg_14__9_ ( .D ( n316 ) , .SI ( n3526 ) , 
+SDFFX1_RVT delay_reg_14__9_ ( .D ( n316 ) , .SI ( net_PTECO_HOLD_NET870 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_14__9_ ) , 
     .QN ( n3511 ) ) ;
-SDFFX1_RVT delay_reg_14__8_ ( .D ( n317 ) , .SI ( n3513 ) , 
+SDFFX1_RVT delay_reg_14__8_ ( .D ( n317 ) , .SI ( net_PTECO_HOLD_NET442 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_14__8_ ) , 
     .QN ( n3512 ) ) ;
-SDFFX1_RVT delay_reg_14__7_ ( .D ( n318 ) , .SI ( n3528 ) , 
+SDFFX1_RVT delay_reg_14__7_ ( .D ( n318 ) , .SI ( net_PTECO_HOLD_NET1157 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_14__7_ ) , 
     .QN ( n3513 ) ) ;
-SDFFX1_RVT delay_reg_14__6_ ( .D ( n319 ) , .SI ( n3014 ) , 
+SDFFX1_RVT delay_reg_14__6_ ( .D ( n319 ) , .SI ( net_PTECO_HOLD_NET1076 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_14__6_ ) , 
     .QN ( n3514 ) ) ;
-SDFFX1_RVT delay_reg_14__5_ ( .D ( n320 ) , .SI ( n3016 ) , 
+SDFFX1_RVT delay_reg_14__5_ ( .D ( n320 ) , .SI ( net_PTECO_HOLD_NET1071 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_14__5_ ) , 
     .QN ( n3515 ) ) ;
-SDFFX1_RVT delay_reg_14__4_ ( .D ( n321 ) , .SI ( n3501 ) , 
+SDFFX1_RVT delay_reg_14__4_ ( .D ( n321 ) , .SI ( net_PTECO_HOLD_NET668 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_14__4_ ) , 
     .QN ( n3516 ) ) ;
-SDFFX1_RVT delay_reg_14__3_ ( .D ( n322 ) , .SI ( n3518 ) , 
+SDFFX1_RVT delay_reg_14__3_ ( .D ( n322 ) , .SI ( net_PTECO_HOLD_NET813 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_14__3_ ) , 
     .QN ( n3517 ) ) ;
-SDFFX1_RVT delay_reg_14__2_ ( .D ( n323 ) , .SI ( n3002 ) , 
+SDFFX1_RVT delay_reg_14__2_ ( .D ( n323 ) , .SI ( net_PTECO_HOLD_NET1048 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_14__2_ ) , 
     .QN ( n3518 ) ) ;
-SDFFX1_RVT delay_reg_14__1_ ( .D ( n324 ) , .SI ( n3020 ) , 
+SDFFX1_RVT delay_reg_14__1_ ( .D ( n324 ) , .SI ( net_PTECO_HOLD_NET790 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_14__1_ ) , 
     .QN ( n3519 ) ) ;
-SDFFX1_RVT delay_reg_14__0_ ( .D ( n325 ) , .SI ( n3519 ) , 
+SDFFX1_RVT delay_reg_14__0_ ( .D ( n325 ) , .SI ( net_PTECO_HOLD_NET1055 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_14__0_ ) , 
     .QN ( n2724 ) ) ;
-SDFFX1_RVT delay_reg_15__16_ ( .D ( n326 ) , .SI ( n3006 ) , 
+SDFFX1_RVT delay_reg_15__16_ ( .D ( n326 ) , .SI ( net_PTECO_HOLD_NET363 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_15__16_ ) , 
     .QN ( n2740 ) ) ;
-SDFFX1_RVT delay_reg_15__15_ ( .D ( n327 ) , .SI ( delay_14__16_ ) , 
+SDFFX1_RVT delay_reg_15__15_ ( .D ( n327 ) , .SI ( net_PTECO_HOLD_NET1302 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_15__15_ ) , 
     .QN ( n3490 ) ) ;
-SDFFX1_RVT delay_reg_15__14_ ( .D ( n328 ) , .SI ( n3477 ) , 
+SDFFX1_RVT delay_reg_15__14_ ( .D ( n328 ) , .SI ( net_PTECO_HOLD_NET604 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_15__14_ ) , 
     .QN ( n3491 ) ) ;
-SDFFX1_RVT delay_reg_15__13_ ( .D ( n329 ) , .SI ( n3507 ) , 
+SDFFX1_RVT delay_reg_15__13_ ( .D ( n329 ) , .SI ( net_PTECO_HOLD_NET441 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_15__13_ ) , 
     .QN ( n3492 ) ) ;
-SDFFX1_RVT delay_reg_15__12_ ( .D ( n330 ) , .SI ( n3478 ) , 
+SDFFX1_RVT delay_reg_15__12_ ( .D ( n330 ) , .SI ( net_PTECO_HOLD_NET817 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_15__12_ ) , 
     .QN ( n3493 ) ) ;
-SDFFX1_RVT delay_reg_15__11_ ( .D ( n331 ) , .SI ( n3479 ) , 
+SDFFX1_RVT delay_reg_15__11_ ( .D ( n331 ) , .SI ( net_PTECO_HOLD_NET760 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_15__11_ ) , 
     .QN ( n3494 ) ) ;
-SDFFX1_RVT delay_reg_15__10_ ( .D ( n332 ) , .SI ( n3480 ) , 
+SDFFX1_RVT delay_reg_15__10_ ( .D ( n332 ) , .SI ( net_PTECO_HOLD_NET455 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_15__10_ ) , 
     .QN ( n3495 ) ) ;
-SDFFX1_RVT delay_reg_15__9_ ( .D ( n333 ) , .SI ( n3481 ) , 
+SDFFX1_RVT delay_reg_15__9_ ( .D ( n333 ) , .SI ( net_PTECO_HOLD_NET537 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_15__9_ ) , 
     .QN ( n3496 ) ) ;
-SDFFX1_RVT delay_reg_15__8_ ( .D ( n334 ) , .SI ( n2697 ) , 
+SDFFX1_RVT delay_reg_15__8_ ( .D ( n334 ) , .SI ( net_PTECO_HOLD_NET1326 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_15__8_ ) , 
     .QN ( n3497 ) ) ;
-SDFFX1_RVT delay_reg_15__7_ ( .D ( n335 ) , .SI ( n3483 ) , 
+SDFFX1_RVT delay_reg_15__7_ ( .D ( n335 ) , .SI ( net_PTECO_HOLD_NET1030 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_15__7_ ) , 
     .QN ( n3498 ) ) ;
-SDFFX1_RVT delay_reg_15__6_ ( .D ( n336 ) , .SI ( n3484 ) , 
+SDFFX1_RVT delay_reg_15__6_ ( .D ( n336 ) , .SI ( net_PTECO_HOLD_NET791 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_15__6_ ) , 
     .QN ( n3499 ) ) ;
-SDFFX1_RVT delay_reg_15__5_ ( .D ( n337 ) , .SI ( n3515 ) , 
+SDFFX1_RVT delay_reg_15__5_ ( .D ( n337 ) , .SI ( net_PTECO_HOLD_NET311 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_15__5_ ) , 
     .QN ( n3500 ) ) ;
-SDFFX1_RVT delay_reg_15__4_ ( .D ( n338 ) , .SI ( n3032 ) , 
+SDFFX1_RVT delay_reg_15__4_ ( .D ( n338 ) , .SI ( net_PTECO_HOLD_NET939 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_15__4_ ) , 
     .QN ( n3501 ) ) ;
-SDFFX1_RVT delay_reg_15__3_ ( .D ( n339 ) , .SI ( n3487 ) , 
+SDFFX1_RVT delay_reg_15__3_ ( .D ( n339 ) , .SI ( net_PTECO_HOLD_NET768 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_15__3_ ) , 
     .QN ( n3502 ) ) ;
-SDFFX1_RVT delay_reg_15__2_ ( .D ( n340 ) , .SI ( n3035 ) , 
+SDFFX1_RVT delay_reg_15__2_ ( .D ( n340 ) , .SI ( net_PTECO_HOLD_NET446 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_15__2_ ) , 
     .QN ( n3503 ) ) ;
-SDFFX1_RVT delay_reg_15__1_ ( .D ( n341 ) , .SI ( n3003 ) , 
+SDFFX1_RVT delay_reg_15__1_ ( .D ( n341 ) , .SI ( net_PTECO_HOLD_NET1006 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_15__1_ ) , 
     .QN ( n3504 ) ) ;
-SDFFX1_RVT delay_reg_15__0_ ( .D ( n342 ) , .SI ( n2649 ) , 
+SDFFX1_RVT delay_reg_15__0_ ( .D ( n342 ) , .SI ( net_PTECO_HOLD_NET1177 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_15__0_ ) , 
     .QN ( n2702 ) ) ;
-SDFFX1_RVT delay_reg_16__16_ ( .D ( n343 ) , .SI ( delay_17__16_ ) , 
+SDFFX1_RVT delay_reg_16__16_ ( .D ( n343 ) , .SI ( net_PTECO_HOLD_NET1311 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_16__16_ ) , 
     .QN ( n2661 ) ) ;
-SDFFX1_RVT delay_reg_16__15_ ( .D ( n344 ) , .SI ( delay_16__16_ ) , 
+SDFFX1_RVT delay_reg_16__15_ ( .D ( n344 ) , .SI ( net_PTECO_HOLD_NET1288 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_16__15_ ) , 
     .QN ( n3475 ) ) ;
-SDFFX1_RVT delay_reg_16__14_ ( .D ( n345 ) , .SI ( n3022 ) , 
+SDFFX1_RVT delay_reg_16__14_ ( .D ( n345 ) , .SI ( net_PTECO_HOLD_NET411 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_16__14_ ) , 
     .QN ( n3476 ) ) ;
-SDFFX1_RVT delay_reg_16__13_ ( .D ( n346 ) , .SI ( n3038 ) , 
+SDFFX1_RVT delay_reg_16__13_ ( .D ( n346 ) , .SI ( net_PTECO_HOLD_NET370 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_16__13_ ) , 
     .QN ( n3477 ) ) ;
-SDFFX1_RVT delay_reg_16__12_ ( .D ( n347 ) , .SI ( n3494 ) , 
+SDFFX1_RVT delay_reg_16__12_ ( .D ( n347 ) , .SI ( net_PTECO_HOLD_NET624 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_16__12_ ) , 
     .QN ( n3478 ) ) ;
-SDFFX1_RVT delay_reg_16__11_ ( .D ( n348 ) , .SI ( n3040 ) , 
+SDFFX1_RVT delay_reg_16__11_ ( .D ( n348 ) , .SI ( net_PTECO_HOLD_NET596 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_16__11_ ) , 
     .QN ( n3479 ) ) ;
-SDFFX1_RVT delay_reg_16__10_ ( .D ( n349 ) , .SI ( n3026 ) , 
+SDFFX1_RVT delay_reg_16__10_ ( .D ( n349 ) , .SI ( net_PTECO_HOLD_NET637 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_16__10_ ) , 
     .QN ( n3480 ) ) ;
-SDFFX1_RVT delay_reg_16__9_ ( .D ( n350 ) , .SI ( delay_31__8_ ) , 
+SDFFX1_RVT delay_reg_16__9_ ( .D ( n350 ) , .SI ( net_PTECO_HOLD_NET1351 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_16__9_ ) , 
     .QN ( n3481 ) ) ;
-SDFFX1_RVT delay_reg_16__8_ ( .D ( n351 ) , .SI ( n3467 ) , 
+SDFFX1_RVT delay_reg_16__8_ ( .D ( n351 ) , .SI ( net_PTECO_HOLD_NET822 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_16__8_ ) , 
     .QN ( n3482 ) ) ;
-SDFFX1_RVT delay_reg_16__7_ ( .D ( n352 ) , .SI ( n3029 ) , 
+SDFFX1_RVT delay_reg_16__7_ ( .D ( n352 ) , .SI ( net_PTECO_HOLD_NET839 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_16__7_ ) , 
     .QN ( n3483 ) ) ;
-SDFFX1_RVT delay_reg_16__6_ ( .D ( n353 ) , .SI ( delay_31__6_ ) , 
+SDFFX1_RVT delay_reg_16__6_ ( .D ( n353 ) , .SI ( net_PTECO_HOLD_NET1342 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_16__6_ ) , 
     .QN ( n3484 ) ) ;
-SDFFX1_RVT delay_reg_16__5_ ( .D ( n354 ) , .SI ( n3500 ) , 
+SDFFX1_RVT delay_reg_16__5_ ( .D ( n354 ) , .SI ( net_PTECO_HOLD_NET858 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_16__5_ ) , 
     .QN ( n3485 ) ) ;
-SDFFX1_RVT delay_reg_16__4_ ( .D ( n355 ) , .SI ( n3502 ) , 
+SDFFX1_RVT delay_reg_16__4_ ( .D ( n355 ) , .SI ( net_PTECO_HOLD_NET470 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_16__4_ ) , 
     .QN ( n3486 ) ) ;
-SDFFX1_RVT delay_reg_16__3_ ( .D ( n356 ) , .SI ( n3033 ) , 
+SDFFX1_RVT delay_reg_16__3_ ( .D ( n356 ) , .SI ( net_PTECO_HOLD_NET835 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_16__3_ ) , 
     .QN ( n3487 ) ) ;
-SDFFX1_RVT delay_reg_16__2_ ( .D ( n357 ) , .SI ( n3034 ) , 
+SDFFX1_RVT delay_reg_16__2_ ( .D ( n357 ) , .SI ( net_PTECO_HOLD_NET1120 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_16__2_ ) , 
     .QN ( n3488 ) ) ;
-SDFFX1_RVT delay_reg_16__1_ ( .D ( n358 ) , .SI ( n2718 ) , 
+SDFFX1_RVT delay_reg_16__1_ ( .D ( n358 ) , .SI ( net_PTECO_HOLD_NET1112 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_16__1_ ) , 
     .QN ( n3489 ) ) ;
-SDFFX1_RVT delay_reg_16__0_ ( .D ( n359 ) , .SI ( n2641 ) , 
+SDFFX1_RVT delay_reg_16__0_ ( .D ( n359 ) , .SI ( net_PTECO_HOLD_NET1168 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_16__0_ ) , 
     .QN ( n2718 ) ) ;
-SDFFX1_RVT delay_reg_17__16_ ( .D ( n360 ) , .SI ( delay_46__16_ ) , 
+SDFFX1_RVT delay_reg_17__16_ ( .D ( n360 ) , .SI ( net_PTECO_HOLD_NET1271 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_17__16_ ) , 
     .QN ( n2755 ) ) ;
-SDFFX1_RVT delay_reg_17__15_ ( .D ( n361 ) , .SI ( n3036 ) , 
+SDFFX1_RVT delay_reg_17__15_ ( .D ( n361 ) , .SI ( net_PTECO_HOLD_NET964 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_17__15_ ) , 
     .QN ( n3460 ) ) ;
-SDFFX1_RVT delay_reg_17__14_ ( .D ( n362 ) , .SI ( n3446 ) , 
+SDFFX1_RVT delay_reg_17__14_ ( .D ( n362 ) , .SI ( net_PTECO_HOLD_NET284 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_17__14_ ) , 
     .QN ( n3461 ) ) ;
-SDFFX1_RVT delay_reg_17__13_ ( .D ( n363 ) , .SI ( n3476 ) , 
+SDFFX1_RVT delay_reg_17__13_ ( .D ( n363 ) , .SI ( net_PTECO_HOLD_NET1172 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_17__13_ ) , 
     .QN ( n3462 ) ) ;
-SDFFX1_RVT delay_reg_17__12_ ( .D ( n364 ) , .SI ( n3265 ) , 
+SDFFX1_RVT delay_reg_17__12_ ( .D ( n364 ) , .SI ( net_PTECO_HOLD_NET514 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_17__12_ ) , 
     .QN ( n3463 ) ) ;
-SDFFX1_RVT delay_reg_17__11_ ( .D ( n365 ) , .SI ( n3055 ) , 
+SDFFX1_RVT delay_reg_17__11_ ( .D ( n365 ) , .SI ( net_PTECO_HOLD_NET669 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_17__11_ ) , 
     .QN ( n3464 ) ) ;
-SDFFX1_RVT delay_reg_17__10_ ( .D ( n366 ) , .SI ( n3251 ) , 
+SDFFX1_RVT delay_reg_17__10_ ( .D ( n366 ) , .SI ( net_PTECO_HOLD_NET806 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_17__10_ ) , 
     .QN ( n3465 ) ) ;
-SDFFX1_RVT delay_reg_17__9_ ( .D ( n367 ) , .SI ( ropt_net_70 ) , 
+SDFFX1_RVT delay_reg_17__9_ ( .D ( n367 ) , .SI ( net_PTECO_HOLD_NET1352 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_17__9_ ) , 
     .QN ( n3466 ) ) ;
-SDFFX1_RVT delay_reg_17__8_ ( .D ( n368 ) , .SI ( n3028 ) , 
+SDFFX1_RVT delay_reg_17__8_ ( .D ( n368 ) , .SI ( net_PTECO_HOLD_NET784 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_17__8_ ) , 
     .QN ( n3467 ) ) ;
-SDFFX1_RVT delay_reg_17__7_ ( .D ( n369 ) , .SI ( n3059 ) , 
+SDFFX1_RVT delay_reg_17__7_ ( .D ( n369 ) , .SI ( net_PTECO_HOLD_NET94 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_17__7_ ) , 
     .QN ( n3468 ) ) ;
-SDFFX1_RVT delay_reg_17__6_ ( .D ( n370 ) , .SI ( n3453 ) , 
+SDFFX1_RVT delay_reg_17__6_ ( .D ( n370 ) , .SI ( net_PTECO_HOLD_NET866 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_17__6_ ) , 
     .QN ( n3469 ) ) ;
-SDFFX1_RVT delay_reg_17__5_ ( .D ( n371 ) , .SI ( n3261 ) , 
+SDFFX1_RVT delay_reg_17__5_ ( .D ( n371 ) , .SI ( net_PTECO_HOLD_NET836 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_17__5_ ) , 
     .QN ( n3470 ) ) ;
-SDFFX1_RVT delay_reg_17__4_ ( .D ( n372 ) , .SI ( n2629 ) , 
+SDFFX1_RVT delay_reg_17__4_ ( .D ( n372 ) , .SI ( net_PTECO_HOLD_NET1169 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_17__4_ ) , 
     .QN ( n3471 ) ) ;
-SDFFX1_RVT delay_reg_17__3_ ( .D ( n373 ) , .SI ( n3047 ) , 
+SDFFX1_RVT delay_reg_17__3_ ( .D ( n373 ) , .SI ( net_PTECO_HOLD_NET1096 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_17__3_ ) , 
     .QN ( n3472 ) ) ;
-SDFFX1_RVT delay_reg_17__2_ ( .D ( n374 ) , .SI ( n3049 ) , 
+SDFFX1_RVT delay_reg_17__2_ ( .D ( n374 ) , .SI ( net_PTECO_HOLD_NET755 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_17__2_ ) , 
     .QN ( n3473 ) ) ;
-SDFFX1_RVT delay_reg_17__1_ ( .D ( n375 ) , .SI ( n2696 ) , 
+SDFFX1_RVT delay_reg_17__1_ ( .D ( n375 ) , .SI ( net_PTECO_HOLD_NET1094 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_17__1_ ) , 
     .QN ( n3474 ) ) ;
-SDFFX1_RVT delay_reg_17__0_ ( .D ( n376 ) , .SI ( n2648 ) , 
+SDFFX1_RVT delay_reg_17__0_ ( .D ( n376 ) , .SI ( net_PTECO_HOLD_NET1138 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_17__0_ ) , 
     .QN ( n2696 ) ) ;
-SDFFX1_RVT delay_reg_18__16_ ( .D ( n377 ) , .SI ( delay_44__16_ ) , 
+SDFFX1_RVT delay_reg_18__16_ ( .D ( n377 ) , .SI ( net_PTECO_HOLD_NET1299 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_18__16_ ) , 
     .QN ( n2673 ) ) ;
-SDFFX1_RVT delay_reg_18__15_ ( .D ( n378 ) , .SI ( n3098 ) , 
+SDFFX1_RVT delay_reg_18__15_ ( .D ( n378 ) , .SI ( net_PTECO_HOLD_NET556 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_18__15_ ) , 
     .QN ( n3444 ) ) ;
-SDFFX1_RVT delay_reg_18__14_ ( .D ( n379 ) , .SI ( n3052 ) , 
+SDFFX1_RVT delay_reg_18__14_ ( .D ( n379 ) , .SI ( net_PTECO_HOLD_NET519 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_18__14_ ) , 
     .QN ( n3445 ) ) ;
-SDFFX1_RVT delay_reg_18__13_ ( .D ( n380 ) , .SI ( n3053 ) , 
+SDFFX1_RVT delay_reg_18__13_ ( .D ( n380 ) , .SI ( net_PTECO_HOLD_NET399 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_18__13_ ) , 
     .QN ( n3446 ) ) ;
-SDFFX1_RVT delay_reg_18__12_ ( .D ( n381 ) , .SI ( n3069 ) , 
+SDFFX1_RVT delay_reg_18__12_ ( .D ( n381 ) , .SI ( net_PTECO_HOLD_NET644 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_18__12_ ) , 
     .QN ( n3447 ) ) ;
-SDFFX1_RVT delay_reg_18__11_ ( .D ( n382 ) , .SI ( n3464 ) , 
+SDFFX1_RVT delay_reg_18__11_ ( .D ( n382 ) , .SI ( net_PTECO_HOLD_NET795 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_18__11_ ) , 
     .QN ( n3448 ) ) ;
-SDFFX1_RVT delay_reg_18__10_ ( .D ( n383 ) , .SI ( n3419 ) , 
+SDFFX1_RVT delay_reg_18__10_ ( .D ( n383 ) , .SI ( net_PTECO_HOLD_NET749 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_18__10_ ) , 
     .QN ( n3449 ) ) ;
-SDFFX1_RVT delay_reg_18__9_ ( .D ( n384 ) , .SI ( n3057 ) , 
+SDFFX1_RVT delay_reg_18__9_ ( .D ( n384 ) , .SI ( net_PTECO_HOLD_NET435 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_18__9_ ) , 
     .QN ( n3450 ) ) ;
-SDFFX1_RVT delay_reg_18__8_ ( .D ( n385 ) , .SI ( n3436 ) , 
+SDFFX1_RVT delay_reg_18__8_ ( .D ( n385 ) , .SI ( net_PTECO_HOLD_NET834 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_18__8_ ) , 
     .QN ( n3451 ) ) ;
-SDFFX1_RVT delay_reg_18__7_ ( .D ( n386 ) , .SI ( n3287 ) , 
+SDFFX1_RVT delay_reg_18__7_ ( .D ( n386 ) , .SI ( net_PTECO_HOLD_NET583 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_18__7_ ) , 
     .QN ( n3452 ) ) ;
-SDFFX1_RVT delay_reg_18__6_ ( .D ( n387 ) , .SI ( n3438 ) , 
+SDFFX1_RVT delay_reg_18__6_ ( .D ( n387 ) , .SI ( net_PTECO_HOLD_NET557 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_18__6_ ) , 
     .QN ( n3453 ) ) ;
-SDFFX1_RVT delay_reg_18__5_ ( .D ( n388 ) , .SI ( n3061 ) , 
+SDFFX1_RVT delay_reg_18__5_ ( .D ( n388 ) , .SI ( net_PTECO_HOLD_NET638 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_18__5_ ) , 
     .QN ( n3454 ) ) ;
-SDFFX1_RVT delay_reg_18__4_ ( .D ( n389 ) , .SI ( n2627 ) , 
+SDFFX1_RVT delay_reg_18__4_ ( .D ( n389 ) , .SI ( net_PTECO_HOLD_NET1080 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_18__4_ ) , 
     .QN ( n3455 ) ) ;
-SDFFX1_RVT delay_reg_18__3_ ( .D ( n390 ) , .SI ( n3063 ) , 
+SDFFX1_RVT delay_reg_18__3_ ( .D ( n390 ) , .SI ( net_PTECO_HOLD_NET495 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_18__3_ ) , 
     .QN ( n3456 ) ) ;
-SDFFX1_RVT delay_reg_18__2_ ( .D ( n391 ) , .SI ( n3443 ) , 
+SDFFX1_RVT delay_reg_18__2_ ( .D ( n391 ) , .SI ( net_PTECO_HOLD_NET752 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_18__2_ ) , 
     .QN ( n3457 ) ) ;
-SDFFX1_RVT delay_reg_18__1_ ( .D ( n392 ) , .SI ( n3457 ) , 
+SDFFX1_RVT delay_reg_18__1_ ( .D ( n392 ) , .SI ( net_PTECO_HOLD_NET857 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_18__1_ ) , 
     .QN ( n3458 ) ) ;
-SDFFX1_RVT delay_reg_18__0_ ( .D ( n393 ) , .SI ( n3081 ) , 
+SDFFX1_RVT delay_reg_18__0_ ( .D ( n393 ) , .SI ( net_PTECO_HOLD_NET626 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_18__0_ ) , 
     .QN ( n3459 ) ) ;
-SDFFX1_RVT delay_reg_19__16_ ( .D ( n394 ) , .SI ( delay_18__16_ ) , 
+SDFFX1_RVT delay_reg_19__16_ ( .D ( n394 ) , .SI ( net_PTECO_HOLD_NET1293 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_19__16_ ) , 
     .QN ( n2752 ) ) ;
-SDFFX1_RVT delay_reg_19__15_ ( .D ( n395 ) , .SI ( n3444 ) , 
+SDFFX1_RVT delay_reg_19__15_ ( .D ( n395 ) , .SI ( net_PTECO_HOLD_NET613 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_19__15_ ) , 
     .QN ( n3429 ) ) ;
-SDFFX1_RVT delay_reg_19__14_ ( .D ( n396 ) , .SI ( n3067 ) , 
+SDFFX1_RVT delay_reg_19__14_ ( .D ( n396 ) , .SI ( net_PTECO_HOLD_NET424 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_19__14_ ) , 
     .QN ( n3430 ) ) ;
-SDFFX1_RVT delay_reg_19__13_ ( .D ( n397 ) , .SI ( n3068 ) , 
+SDFFX1_RVT delay_reg_19__13_ ( .D ( n397 ) , .SI ( net_PTECO_HOLD_NET655 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_19__13_ ) , 
     .QN ( n3431 ) ) ;
-SDFFX1_RVT delay_reg_19__12_ ( .D ( n398 ) , .SI ( n3235 ) , 
+SDFFX1_RVT delay_reg_19__12_ ( .D ( n398 ) , .SI ( net_PTECO_HOLD_NET301 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_19__12_ ) , 
     .QN ( n3432 ) ) ;
-SDFFX1_RVT delay_reg_19__11_ ( .D ( n399 ) , .SI ( n3086 ) , 
+SDFFX1_RVT delay_reg_19__11_ ( .D ( n399 ) , .SI ( net_PTECO_HOLD_NET615 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_19__11_ ) , 
     .QN ( n3433 ) ) ;
-SDFFX1_RVT delay_reg_19__10_ ( .D ( n400 ) , .SI ( n3071 ) , 
+SDFFX1_RVT delay_reg_19__10_ ( .D ( n400 ) , .SI ( net_PTECO_HOLD_NET255 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_19__10_ ) , 
     .QN ( n3434 ) ) ;
-SDFFX1_RVT delay_reg_19__9_ ( .D ( n401 ) , .SI ( n3088 ) , 
+SDFFX1_RVT delay_reg_19__9_ ( .D ( n401 ) , .SI ( net_PTECO_HOLD_NET629 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_19__9_ ) , 
     .QN ( n3435 ) ) ;
-SDFFX1_RVT delay_reg_19__8_ ( .D ( n402 ) , .SI ( n3421 ) , 
+SDFFX1_RVT delay_reg_19__8_ ( .D ( n402 ) , .SI ( net_PTECO_HOLD_NET662 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_19__8_ ) , 
     .QN ( n3436 ) ) ;
-SDFFX1_RVT delay_reg_19__7_ ( .D ( n403 ) , .SI ( n3074 ) , 
+SDFFX1_RVT delay_reg_19__7_ ( .D ( n403 ) , .SI ( net_PTECO_HOLD_NET918 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_19__7_ ) , 
     .QN ( n3437 ) ) ;
-SDFFX1_RVT delay_reg_19__6_ ( .D ( n404 ) , .SI ( n3075 ) , 
+SDFFX1_RVT delay_reg_19__6_ ( .D ( n404 ) , .SI ( net_PTECO_HOLD_NET450 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_19__6_ ) , 
     .QN ( n3438 ) ) ;
-SDFFX1_RVT delay_reg_19__5_ ( .D ( n405 ) , .SI ( n3093 ) , 
+SDFFX1_RVT delay_reg_19__5_ ( .D ( n405 ) , .SI ( net_PTECO_HOLD_NET621 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_19__5_ ) , 
     .QN ( n3439 ) ) ;
-SDFFX1_RVT delay_reg_19__4_ ( .D ( n406 ) , .SI ( n3062 ) , 
+SDFFX1_RVT delay_reg_19__4_ ( .D ( n406 ) , .SI ( net_PTECO_HOLD_NET908 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_19__4_ ) , 
     .QN ( n3440 ) ) ;
-SDFFX1_RVT delay_reg_19__3_ ( .D ( n407 ) , .SI ( n3442 ) , 
+SDFFX1_RVT delay_reg_19__3_ ( .D ( n407 ) , .SI ( net_PTECO_HOLD_NET309 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_19__3_ ) , 
     .QN ( n3441 ) ) ;
-SDFFX1_RVT delay_reg_19__2_ ( .D ( n408 ) , .SI ( n3064 ) , 
+SDFFX1_RVT delay_reg_19__2_ ( .D ( n408 ) , .SI ( net_PTECO_HOLD_NET346 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_19__2_ ) , 
     .QN ( n3442 ) ) ;
-SDFFX1_RVT delay_reg_19__1_ ( .D ( n409 ) , .SI ( n3428 ) , 
+SDFFX1_RVT delay_reg_19__1_ ( .D ( n409 ) , .SI ( net_PTECO_HOLD_NET879 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_19__1_ ) , 
     .QN ( n3443 ) ) ;
-SDFFX1_RVT delay_reg_19__0_ ( .D ( n410 ) , .SI ( n2644 ) , 
+SDFFX1_RVT delay_reg_19__0_ ( .D ( n410 ) , .SI ( net_PTECO_HOLD_NET963 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_19__0_ ) , 
     .QN ( n2708 ) ) ;
-SDFFX1_RVT delay_reg_20__16_ ( .D ( n411 ) , .SI ( n3414 ) , 
+SDFFX1_RVT delay_reg_20__16_ ( .D ( n411 ) , .SI ( net_PTECO_HOLD_NET451 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_20__16_ ) , 
     .QN ( n2681 ) ) ;
-SDFFX1_RVT delay_reg_20__15_ ( .D ( n412 ) , .SI ( n3429 ) , 
+SDFFX1_RVT delay_reg_20__15_ ( .D ( n412 ) , .SI ( net_PTECO_HOLD_NET789 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_20__15_ ) , 
     .QN ( n3414 ) ) ;
-SDFFX1_RVT delay_reg_20__14_ ( .D ( n413 ) , .SI ( n3083 ) , 
+SDFFX1_RVT delay_reg_20__14_ ( .D ( n413 ) , .SI ( net_PTECO_HOLD_NET674 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_20__14_ ) , 
     .QN ( n3415 ) ) ;
-SDFFX1_RVT delay_reg_20__13_ ( .D ( n414 ) , .SI ( n3233 ) , 
+SDFFX1_RVT delay_reg_20__13_ ( .D ( n414 ) , .SI ( net_PTECO_HOLD_NET503 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_20__13_ ) , 
     .QN ( n3416 ) ) ;
-SDFFX1_RVT delay_reg_20__12_ ( .D ( n415 ) , .SI ( n3085 ) , 
+SDFFX1_RVT delay_reg_20__12_ ( .D ( n415 ) , .SI ( net_PTECO_HOLD_NET298 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_20__12_ ) , 
     .QN ( n3417 ) ) ;
-SDFFX1_RVT delay_reg_20__11_ ( .D ( n416 ) , .SI ( n3237 ) , 
+SDFFX1_RVT delay_reg_20__11_ ( .D ( n416 ) , .SI ( net_PTECO_HOLD_NET362 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_20__11_ ) , 
     .QN ( n3418 ) ) ;
-SDFFX1_RVT delay_reg_20__10_ ( .D ( n417 ) , .SI ( n3283 ) , 
+SDFFX1_RVT delay_reg_20__10_ ( .D ( n417 ) , .SI ( net_PTECO_HOLD_NET486 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_20__10_ ) , 
     .QN ( n3419 ) ) ;
-SDFFX1_RVT delay_reg_20__9_ ( .D ( n418 ) , .SI ( n3284 ) , 
+SDFFX1_RVT delay_reg_20__9_ ( .D ( n418 ) , .SI ( net_PTECO_HOLD_NET666 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_20__9_ ) , 
     .QN ( n3420 ) ) ;
-SDFFX1_RVT delay_reg_20__8_ ( .D ( n419 ) , .SI ( n3073 ) , 
+SDFFX1_RVT delay_reg_20__8_ ( .D ( n419 ) , .SI ( net_PTECO_HOLD_NET518 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_20__8_ ) , 
     .QN ( n3421 ) ) ;
-SDFFX1_RVT delay_reg_20__7_ ( .D ( n420 ) , .SI ( n3242 ) , 
+SDFFX1_RVT delay_reg_20__7_ ( .D ( n420 ) , .SI ( net_PTECO_HOLD_NET787 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_20__7_ ) , 
     .QN ( n3422 ) ) ;
-SDFFX1_RVT delay_reg_20__6_ ( .D ( n421 ) , .SI ( n3106 ) , 
+SDFFX1_RVT delay_reg_20__6_ ( .D ( n421 ) , .SI ( net_PTECO_HOLD_NET672 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_20__6_ ) , 
     .QN ( n3423 ) ) ;
-SDFFX1_RVT delay_reg_20__5_ ( .D ( n422 ) , .SI ( n3410 ) , 
+SDFFX1_RVT delay_reg_20__5_ ( .D ( n422 ) , .SI ( net_PTECO_HOLD_NET256 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_20__5_ ) , 
     .QN ( n3424 ) ) ;
-SDFFX1_RVT delay_reg_20__4_ ( .D ( n423 ) , .SI ( n3092 ) , 
+SDFFX1_RVT delay_reg_20__4_ ( .D ( n423 ) , .SI ( net_PTECO_HOLD_NET917 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_20__4_ ) , 
     .QN ( n3425 ) ) ;
-SDFFX1_RVT delay_reg_20__3_ ( .D ( n424 ) , .SI ( n3094 ) , 
+SDFFX1_RVT delay_reg_20__3_ ( .D ( n424 ) , .SI ( net_PTECO_HOLD_NET848 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_20__3_ ) , 
     .QN ( n3426 ) ) ;
-SDFFX1_RVT delay_reg_20__2_ ( .D ( n425 ) , .SI ( n3110 ) , 
+SDFFX1_RVT delay_reg_20__2_ ( .D ( n425 ) , .SI ( net_PTECO_HOLD_NET467 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_20__2_ ) , 
     .QN ( n3427 ) ) ;
-SDFFX1_RVT delay_reg_20__1_ ( .D ( n426 ) , .SI ( n3427 ) , 
+SDFFX1_RVT delay_reg_20__1_ ( .D ( n426 ) , .SI ( net_PTECO_HOLD_NET852 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_20__1_ ) , 
     .QN ( n3428 ) ) ;
-SDFFX1_RVT delay_reg_20__0_ ( .D ( n427 ) , .SI ( n2631 ) , 
+SDFFX1_RVT delay_reg_20__0_ ( .D ( n427 ) , .SI ( net_PTECO_HOLD_NET1070 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_20__0_ ) , 
     .QN ( n2695 ) ) ;
-SDFFX1_RVT delay_reg_21__16_ ( .D ( n428 ) , .SI ( delay_41__16_ ) , 
+SDFFX1_RVT delay_reg_21__16_ ( .D ( n428 ) , .SI ( net_PTECO_HOLD_NET1306 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_21__16_ ) , 
     .QN ( n2746 ) ) ;
-SDFFX1_RVT delay_reg_21__15_ ( .D ( n429 ) , .SI ( n3113 ) , 
+SDFFX1_RVT delay_reg_21__15_ ( .D ( n429 ) , .SI ( net_PTECO_HOLD_NET681 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_21__15_ ) , 
     .QN ( n3399 ) ) ;
-SDFFX1_RVT delay_reg_21__14_ ( .D ( n430 ) , .SI ( n3415 ) , 
+SDFFX1_RVT delay_reg_21__14_ ( .D ( n430 ) , .SI ( net_PTECO_HOLD_NET992 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_21__14_ ) , 
     .QN ( n3400 ) ) ;
-SDFFX1_RVT delay_reg_21__13_ ( .D ( n431 ) , .SI ( n3084 ) , 
+SDFFX1_RVT delay_reg_21__13_ ( .D ( n431 ) , .SI ( net_PTECO_HOLD_NET923 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_21__13_ ) , 
     .QN ( n3401 ) ) ;
-SDFFX1_RVT delay_reg_21__12_ ( .D ( n432 ) , .SI ( n3278 ) , 
+SDFFX1_RVT delay_reg_21__12_ ( .D ( n432 ) , .SI ( net_PTECO_HOLD_NET1084 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_21__12_ ) , 
     .QN ( n3402 ) ) ;
-SDFFX1_RVT delay_reg_21__11_ ( .D ( n433 ) , .SI ( n3281 ) , 
+SDFFX1_RVT delay_reg_21__11_ ( .D ( n433 ) , .SI ( net_PTECO_HOLD_NET665 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_21__11_ ) , 
     .QN ( n3403 ) ) ;
-SDFFX1_RVT delay_reg_21__10_ ( .D ( n434 ) , .SI ( n3282 ) , 
+SDFFX1_RVT delay_reg_21__10_ ( .D ( n434 ) , .SI ( net_PTECO_HOLD_NET736 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_21__10_ ) , 
     .QN ( n3404 ) ) ;
-SDFFX1_RVT delay_reg_21__9_ ( .D ( n435 ) , .SI ( n3103 ) , 
+SDFFX1_RVT delay_reg_21__9_ ( .D ( n435 ) , .SI ( net_PTECO_HOLD_NET861 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_21__9_ ) , 
     .QN ( n3405 ) ) ;
-SDFFX1_RVT delay_reg_21__8_ ( .D ( n436 ) , .SI ( n3090 ) , 
+SDFFX1_RVT delay_reg_21__8_ ( .D ( n436 ) , .SI ( net_PTECO_HOLD_NET530 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_21__8_ ) , 
     .QN ( n3406 ) ) ;
-SDFFX1_RVT delay_reg_21__7_ ( .D ( n437 ) , .SI ( n3227 ) , 
+SDFFX1_RVT delay_reg_21__7_ ( .D ( n437 ) , .SI ( net_PTECO_HOLD_NET285 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_21__7_ ) , 
     .QN ( n3407 ) ) ;
-SDFFX1_RVT delay_reg_21__6_ ( .D ( n438 ) , .SI ( n3393 ) , 
+SDFFX1_RVT delay_reg_21__6_ ( .D ( n438 ) , .SI ( net_PTECO_HOLD_NET1024 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_21__6_ ) , 
     .QN ( n3408 ) ) ;
-SDFFX1_RVT delay_reg_21__5_ ( .D ( n439 ) , .SI ( n3424 ) , 
+SDFFX1_RVT delay_reg_21__5_ ( .D ( n439 ) , .SI ( net_PTECO_HOLD_NET290 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_21__5_ ) , 
     .QN ( n3409 ) ) ;
-SDFFX1_RVT delay_reg_21__4_ ( .D ( n440 ) , .SI ( n3108 ) , 
+SDFFX1_RVT delay_reg_21__4_ ( .D ( n440 ) , .SI ( net_PTECO_HOLD_NET310 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_21__4_ ) , 
     .QN ( n3410 ) ) ;
-SDFFX1_RVT delay_reg_21__3_ ( .D ( n441 ) , .SI ( n3396 ) , 
+SDFFX1_RVT delay_reg_21__3_ ( .D ( n441 ) , .SI ( net_PTECO_HOLD_NET412 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_21__3_ ) , 
     .QN ( n3411 ) ) ;
-SDFFX1_RVT delay_reg_21__2_ ( .D ( n442 ) , .SI ( n3109 ) , 
+SDFFX1_RVT delay_reg_21__2_ ( .D ( n442 ) , .SI ( net_PTECO_HOLD_NET1095 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_21__2_ ) , 
     .QN ( n3412 ) ) ;
-SDFFX1_RVT delay_reg_21__1_ ( .D ( n443 ) , .SI ( n3095 ) , 
+SDFFX1_RVT delay_reg_21__1_ ( .D ( n443 ) , .SI ( net_PTECO_HOLD_NET872 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_21__1_ ) , 
     .QN ( n3413 ) ) ;
-SDFFX1_RVT delay_reg_21__0_ ( .D ( n444 ) , .SI ( n2656 ) , 
+SDFFX1_RVT delay_reg_21__0_ ( .D ( n444 ) , .SI ( net_PTECO_HOLD_NET1088 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_21__0_ ) , 
     .QN ( n2728 ) ) ;
-SDFFX1_RVT delay_reg_22__16_ ( .D ( n445 ) , .SI ( delay_21__16_ ) , 
+SDFFX1_RVT delay_reg_22__16_ ( .D ( n445 ) , .SI ( net_PTECO_HOLD_NET1269 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_22__16_ ) , 
     .QN ( n2665 ) ) ;
-SDFFX1_RVT delay_reg_22__15_ ( .D ( n446 ) , .SI ( n3399 ) , 
+SDFFX1_RVT delay_reg_22__15_ ( .D ( n446 ) , .SI ( net_PTECO_HOLD_NET620 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_22__15_ ) , 
     .QN ( n3384 ) ) ;
-SDFFX1_RVT delay_reg_22__14_ ( .D ( n447 ) , .SI ( n3400 ) , 
+SDFFX1_RVT delay_reg_22__14_ ( .D ( n447 ) , .SI ( net_PTECO_HOLD_NET713 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_22__14_ ) , 
     .QN ( n3385 ) ) ;
-SDFFX1_RVT delay_reg_22__13_ ( .D ( n448 ) , .SI ( delay_28__16_ ) , 
+SDFFX1_RVT delay_reg_22__13_ ( .D ( n448 ) , .SI ( net_PTECO_HOLD_NET1284 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_22__13_ ) , 
     .QN ( n3386 ) ) ;
-SDFFX1_RVT delay_reg_22__12_ ( .D ( n449 ) , .SI ( n3279 ) , 
+SDFFX1_RVT delay_reg_22__12_ ( .D ( n449 ) , .SI ( net_PTECO_HOLD_NET686 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_22__12_ ) , 
     .QN ( n3387 ) ) ;
-SDFFX1_RVT delay_reg_22__11_ ( .D ( n450 ) , .SI ( n3373 ) , 
+SDFFX1_RVT delay_reg_22__11_ ( .D ( n450 ) , .SI ( net_PTECO_HOLD_NET548 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_22__11_ ) , 
     .QN ( n3388 ) ) ;
-SDFFX1_RVT delay_reg_22__10_ ( .D ( n451 ) , .SI ( n3298 ) , 
+SDFFX1_RVT delay_reg_22__10_ ( .D ( n451 ) , .SI ( net_PTECO_HOLD_NET511 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_22__10_ ) , 
     .QN ( n3389 ) ) ;
-SDFFX1_RVT delay_reg_22__9_ ( .D ( n452 ) , .SI ( n3405 ) , 
+SDFFX1_RVT delay_reg_22__9_ ( .D ( n452 ) , .SI ( net_PTECO_HOLD_NET945 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_22__9_ ) , 
     .QN ( n3390 ) ) ;
-SDFFX1_RVT delay_reg_22__8_ ( .D ( n453 ) , .SI ( n3406 ) , 
+SDFFX1_RVT delay_reg_22__8_ ( .D ( n453 ) , .SI ( net_PTECO_HOLD_NET1060 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_22__8_ ) , 
     .QN ( n3391 ) ) ;
-SDFFX1_RVT delay_reg_22__7_ ( .D ( n454 ) , .SI ( n3120 ) , 
+SDFFX1_RVT delay_reg_22__7_ ( .D ( n454 ) , .SI ( net_PTECO_HOLD_NET809 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_22__7_ ) , 
     .QN ( n3392 ) ) ;
-SDFFX1_RVT delay_reg_22__6_ ( .D ( n455 ) , .SI ( n3302 ) , 
+SDFFX1_RVT delay_reg_22__6_ ( .D ( n455 ) , .SI ( net_PTECO_HOLD_NET981 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_22__6_ ) , 
     .QN ( n3393 ) ) ;
-SDFFX1_RVT delay_reg_22__5_ ( .D ( n456 ) , .SI ( n3228 ) , 
+SDFFX1_RVT delay_reg_22__5_ ( .D ( n456 ) , .SI ( net_PTECO_HOLD_NET1042 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_22__5_ ) , 
     .QN ( n3394 ) ) ;
-SDFFX1_RVT delay_reg_22__4_ ( .D ( n457 ) , .SI ( n3289 ) , 
+SDFFX1_RVT delay_reg_22__4_ ( .D ( n457 ) , .SI ( net_PTECO_HOLD_NET955 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_22__4_ ) , 
     .QN ( n3395 ) ) ;
-SDFFX1_RVT delay_reg_22__3_ ( .D ( n458 ) , .SI ( n2693 ) , 
+SDFFX1_RVT delay_reg_22__3_ ( .D ( n458 ) , .SI ( net_PTECO_HOLD_NET1054 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_22__3_ ) , 
     .QN ( n3396 ) ) ;
-SDFFX1_RVT delay_reg_22__2_ ( .D ( n459 ) , .SI ( n3383 ) , 
+SDFFX1_RVT delay_reg_22__2_ ( .D ( n459 ) , .SI ( net_PTECO_HOLD_NET685 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_22__2_ ) , 
     .QN ( n3397 ) ) ;
-SDFFX1_RVT delay_reg_22__1_ ( .D ( n460 ) , .SI ( n3397 ) , 
+SDFFX1_RVT delay_reg_22__1_ ( .D ( n460 ) , .SI ( net_PTECO_HOLD_NET608 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_22__1_ ) , 
     .QN ( n3398 ) ) ;
-SDFFX1_RVT delay_reg_22__0_ ( .D ( n461 ) , .SI ( n2728 ) , 
+SDFFX1_RVT delay_reg_22__0_ ( .D ( n461 ) , .SI ( net_PTECO_HOLD_NET1145 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_22__0_ ) , 
     .QN ( n2712 ) ) ;
-SDFFX1_RVT delay_reg_23__16_ ( .D ( n462 ) , .SI ( n3112 ) , 
+SDFFX1_RVT delay_reg_23__16_ ( .D ( n462 ) , .SI ( net_PTECO_HOLD_NET664 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_23__16_ ) , 
     .QN ( n2764 ) ) ;
-SDFFX1_RVT delay_reg_23__15_ ( .D ( n463 ) , .SI ( delay_23__16_ ) , 
+SDFFX1_RVT delay_reg_23__15_ ( .D ( n463 ) , .SI ( net_PTECO_HOLD_NET1336 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_23__15_ ) , 
     .QN ( n3369 ) ) ;
-SDFFX1_RVT delay_reg_23__14_ ( .D ( n464 ) , .SI ( n3128 ) , 
+SDFFX1_RVT delay_reg_23__14_ ( .D ( n464 ) , .SI ( net_PTECO_HOLD_NET726 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_23__14_ ) , 
     .QN ( n3370 ) ) ;
-SDFFX1_RVT delay_reg_23__13_ ( .D ( n465 ) , .SI ( n3129 ) , 
+SDFFX1_RVT delay_reg_23__13_ ( .D ( n465 ) , .SI ( net_PTECO_HOLD_NET1014 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_23__13_ ) , 
     .QN ( n3371 ) ) ;
-SDFFX1_RVT delay_reg_23__12_ ( .D ( n466 ) , .SI ( n3387 ) , 
+SDFFX1_RVT delay_reg_23__12_ ( .D ( n466 ) , .SI ( net_PTECO_HOLD_NET642 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_23__12_ ) , 
     .QN ( n3372 ) ) ;
-SDFFX1_RVT delay_reg_23__11_ ( .D ( n467 ) , .SI ( n3358 ) , 
+SDFFX1_RVT delay_reg_23__11_ ( .D ( n467 ) , .SI ( net_PTECO_HOLD_NET750 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_23__11_ ) , 
     .QN ( n3373 ) ) ;
-SDFFX1_RVT delay_reg_23__10_ ( .D ( n468 ) , .SI ( n3297 ) , 
+SDFFX1_RVT delay_reg_23__10_ ( .D ( n468 ) , .SI ( net_PTECO_HOLD_NET814 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_23__10_ ) , 
     .QN ( n3374 ) ) ;
-SDFFX1_RVT delay_reg_23__9_ ( .D ( n469 ) , .SI ( n3299 ) , 
+SDFFX1_RVT delay_reg_23__9_ ( .D ( n469 ) , .SI ( net_PTECO_HOLD_NET788 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_23__9_ ) , 
     .QN ( n3375 ) ) ;
-SDFFX1_RVT delay_reg_23__8_ ( .D ( n470 ) , .SI ( n3149 ) , 
+SDFFX1_RVT delay_reg_23__8_ ( .D ( n470 ) , .SI ( net_PTECO_HOLD_NET974 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_23__8_ ) , 
     .QN ( n3376 ) ) ;
-SDFFX1_RVT delay_reg_23__7_ ( .D ( n471 ) , .SI ( n3135 ) , 
+SDFFX1_RVT delay_reg_23__7_ ( .D ( n471 ) , .SI ( net_PTECO_HOLD_NET458 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_23__7_ ) , 
     .QN ( n3377 ) ) ;
-SDFFX1_RVT delay_reg_23__6_ ( .D ( n472 ) , .SI ( n3151 ) , 
+SDFFX1_RVT delay_reg_23__6_ ( .D ( n472 ) , .SI ( net_PTECO_HOLD_NET1124 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_23__6_ ) , 
     .QN ( n3378 ) ) ;
-SDFFX1_RVT delay_reg_23__5_ ( .D ( n473 ) , .SI ( n3137 ) , 
+SDFFX1_RVT delay_reg_23__5_ ( .D ( n473 ) , .SI ( net_PTECO_HOLD_NET559 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_23__5_ ) , 
     .QN ( n3379 ) ) ;
-SDFFX1_RVT delay_reg_23__4_ ( .D ( n474 ) , .SI ( n3395 ) , 
+SDFFX1_RVT delay_reg_23__4_ ( .D ( n474 ) , .SI ( net_PTECO_HOLD_NET692 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_23__4_ ) , 
     .QN ( n3380 ) ) ;
-SDFFX1_RVT delay_reg_23__3_ ( .D ( n475 ) , .SI ( n3215 ) , 
+SDFFX1_RVT delay_reg_23__3_ ( .D ( n475 ) , .SI ( net_PTECO_HOLD_NET291 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_23__3_ ) , 
     .QN ( n3381 ) ) ;
-SDFFX1_RVT delay_reg_23__2_ ( .D ( n476 ) , .SI ( n3186 ) , 
+SDFFX1_RVT delay_reg_23__2_ ( .D ( n476 ) , .SI ( net_PTECO_HOLD_NET185 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_23__2_ ) , 
     .QN ( n3382 ) ) ;
-SDFFX1_RVT delay_reg_23__1_ ( .D ( n477 ) , .SI ( n3368 ) , 
+SDFFX1_RVT delay_reg_23__1_ ( .D ( n477 ) , .SI ( net_PTECO_HOLD_NET943 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_23__1_ ) , 
     .QN ( n3383 ) ) ;
-SDFFX1_RVT delay_reg_23__0_ ( .D ( n478 ) , .SI ( n2640 ) , 
+SDFFX1_RVT delay_reg_23__0_ ( .D ( n478 ) , .SI ( net_PTECO_HOLD_NET1109 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_23__0_ ) , 
     .QN ( n2701 ) ) ;
-SDFFX1_RVT delay_reg_24__16_ ( .D ( n479 ) , .SI ( n3127 ) , 
+SDFFX1_RVT delay_reg_24__16_ ( .D ( n479 ) , .SI ( net_PTECO_HOLD_NET781 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_24__16_ ) , 
     .QN ( n2663 ) ) ;
-SDFFX1_RVT delay_reg_24__15_ ( .D ( n480 ) , .SI ( n3157 ) , 
+SDFFX1_RVT delay_reg_24__15_ ( .D ( n480 ) , .SI ( net_PTECO_HOLD_NET711 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_24__15_ ) , 
     .QN ( n3354 ) ) ;
-SDFFX1_RVT delay_reg_24__14_ ( .D ( n481 ) , .SI ( n3158 ) , 
+SDFFX1_RVT delay_reg_24__14_ ( .D ( n481 ) , .SI ( net_PTECO_HOLD_NET935 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_24__14_ ) , 
     .QN ( n3355 ) ) ;
-SDFFX1_RVT delay_reg_24__13_ ( .D ( n482 ) , .SI ( n3144 ) , 
+SDFFX1_RVT delay_reg_24__13_ ( .D ( n482 ) , .SI ( net_PTECO_HOLD_NET673 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_24__13_ ) , 
     .QN ( n3356 ) ) ;
-SDFFX1_RVT delay_reg_24__12_ ( .D ( n483 ) , .SI ( n3203 ) , 
+SDFFX1_RVT delay_reg_24__12_ ( .D ( n483 ) , .SI ( net_PTECO_HOLD_NET1003 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_24__12_ ) , 
     .QN ( n3357 ) ) ;
-SDFFX1_RVT delay_reg_24__11_ ( .D ( n484 ) , .SI ( n3206 ) , 
+SDFFX1_RVT delay_reg_24__11_ ( .D ( n484 ) , .SI ( net_PTECO_HOLD_NET202 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_24__11_ ) , 
     .QN ( n3358 ) ) ;
-SDFFX1_RVT delay_reg_24__10_ ( .D ( n485 ) , .SI ( n3191 ) , 
+SDFFX1_RVT delay_reg_24__10_ ( .D ( n485 ) , .SI ( net_PTECO_HOLD_NET756 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_24__10_ ) , 
     .QN ( n3359 ) ) ;
-SDFFX1_RVT delay_reg_24__9_ ( .D ( n486 ) , .SI ( n3314 ) , 
+SDFFX1_RVT delay_reg_24__9_ ( .D ( n486 ) , .SI ( net_PTECO_HOLD_NET432 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_24__9_ ) , 
     .QN ( n3360 ) ) ;
-SDFFX1_RVT delay_reg_24__8_ ( .D ( n487 ) , .SI ( n3208 ) , 
+SDFFX1_RVT delay_reg_24__8_ ( .D ( n487 ) , .SI ( net_PTECO_HOLD_NET1064 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_24__8_ ) , 
     .QN ( n3361 ) ) ;
-SDFFX1_RVT delay_reg_24__7_ ( .D ( n488 ) , .SI ( n3165 ) , 
+SDFFX1_RVT delay_reg_24__7_ ( .D ( n488 ) , .SI ( net_PTECO_HOLD_NET878 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_24__7_ ) , 
     .QN ( n3362 ) ) ;
-SDFFX1_RVT delay_reg_24__6_ ( .D ( n489 ) , .SI ( n3364 ) , 
+SDFFX1_RVT delay_reg_24__6_ ( .D ( n489 ) , .SI ( net_PTECO_HOLD_NET465 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_24__6_ ) , 
     .QN ( n3363 ) ) ;
-SDFFX1_RVT delay_reg_24__5_ ( .D ( n490 ) , .SI ( n3152 ) , 
+SDFFX1_RVT delay_reg_24__5_ ( .D ( n490 ) , .SI ( net_PTECO_HOLD_NET372 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_24__5_ ) , 
     .QN ( n3364 ) ) ;
-SDFFX1_RVT delay_reg_24__4_ ( .D ( n491 ) , .SI ( n3350 ) , 
+SDFFX1_RVT delay_reg_24__4_ ( .D ( n491 ) , .SI ( net_PTECO_HOLD_NET721 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_24__4_ ) , 
     .QN ( n3365 ) ) ;
-SDFFX1_RVT delay_reg_24__3_ ( .D ( n492 ) , .SI ( n3321 ) , 
+SDFFX1_RVT delay_reg_24__3_ ( .D ( n492 ) , .SI ( net_PTECO_HOLD_NET517 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_24__3_ ) , 
     .QN ( n3366 ) ) ;
-SDFFX1_RVT delay_reg_24__2_ ( .D ( n493 ) , .SI ( n3170 ) , 
+SDFFX1_RVT delay_reg_24__2_ ( .D ( n493 ) , .SI ( net_PTECO_HOLD_NET1158 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_24__2_ ) , 
     .QN ( n3367 ) ) ;
-SDFFX1_RVT delay_reg_24__1_ ( .D ( n494 ) , .SI ( n3353 ) , 
+SDFFX1_RVT delay_reg_24__1_ ( .D ( n494 ) , .SI ( net_PTECO_HOLD_NET871 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_24__1_ ) , 
     .QN ( n3368 ) ) ;
-SDFFX1_RVT delay_reg_24__0_ ( .D ( n495 ) , .SI ( n2647 ) , 
+SDFFX1_RVT delay_reg_24__0_ ( .D ( n495 ) , .SI ( net_PTECO_HOLD_NET1020 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_24__0_ ) , 
     .QN ( n2719 ) ) ;
-SDFFX1_RVT delay_reg_25__16_ ( .D ( n496 ) , .SI ( n3354 ) , 
+SDFFX1_RVT delay_reg_25__16_ ( .D ( n496 ) , .SI ( net_PTECO_HOLD_NET563 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_25__16_ ) , 
     .QN ( n2737 ) ) ;
-SDFFX1_RVT delay_reg_25__15_ ( .D ( n497 ) , .SI ( n3172 ) , 
+SDFFX1_RVT delay_reg_25__15_ ( .D ( n497 ) , .SI ( net_PTECO_HOLD_NET710 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_25__15_ ) , 
     .QN ( n3339 ) ) ;
-SDFFX1_RVT delay_reg_25__14_ ( .D ( n498 ) , .SI ( n3173 ) , 
+SDFFX1_RVT delay_reg_25__14_ ( .D ( n498 ) , .SI ( net_PTECO_HOLD_NET869 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_25__14_ ) , 
     .QN ( n3340 ) ) ;
-SDFFX1_RVT delay_reg_25__13_ ( .D ( n499 ) , .SI ( n3174 ) , 
+SDFFX1_RVT delay_reg_25__13_ ( .D ( n499 ) , .SI ( net_PTECO_HOLD_NET398 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_25__13_ ) , 
     .QN ( n3341 ) ) ;
-SDFFX1_RVT delay_reg_25__12_ ( .D ( n500 ) , .SI ( n3175 ) , 
+SDFFX1_RVT delay_reg_25__12_ ( .D ( n500 ) , .SI ( net_PTECO_HOLD_NET466 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_25__12_ ) , 
     .QN ( n3342 ) ) ;
-SDFFX1_RVT delay_reg_25__11_ ( .D ( n501 ) , .SI ( n3311 ) , 
+SDFFX1_RVT delay_reg_25__11_ ( .D ( n501 ) , .SI ( net_PTECO_HOLD_NET910 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_25__11_ ) , 
     .QN ( n3343 ) ) ;
-SDFFX1_RVT delay_reg_25__10_ ( .D ( n502 ) , .SI ( n3329 ) , 
+SDFFX1_RVT delay_reg_25__10_ ( .D ( n502 ) , .SI ( net_PTECO_HOLD_NET612 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_25__10_ ) , 
     .QN ( n3344 ) ) ;
-SDFFX1_RVT delay_reg_25__9_ ( .D ( n503 ) , .SI ( n3344 ) , 
+SDFFX1_RVT delay_reg_25__9_ ( .D ( n503 ) , .SI ( net_PTECO_HOLD_NET1180 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_25__9_ ) , 
     .QN ( n3345 ) ) ;
-SDFFX1_RVT delay_reg_25__8_ ( .D ( n504 ) , .SI ( n3193 ) , 
+SDFFX1_RVT delay_reg_25__8_ ( .D ( n504 ) , .SI ( net_PTECO_HOLD_NET1017 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_25__8_ ) , 
     .QN ( n3346 ) ) ;
-SDFFX1_RVT delay_reg_25__7_ ( .D ( n505 ) , .SI ( n3332 ) , 
+SDFFX1_RVT delay_reg_25__7_ ( .D ( n505 ) , .SI ( net_PTECO_HOLD_NET825 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_25__7_ ) , 
     .QN ( n3347 ) ) ;
-SDFFX1_RVT delay_reg_25__6_ ( .D ( n506 ) , .SI ( n3181 ) , 
+SDFFX1_RVT delay_reg_25__6_ ( .D ( n506 ) , .SI ( net_PTECO_HOLD_NET821 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_25__6_ ) , 
     .QN ( n3348 ) ) ;
-SDFFX1_RVT delay_reg_25__5_ ( .D ( n507 ) , .SI ( n3334 ) , 
+SDFFX1_RVT delay_reg_25__5_ ( .D ( n507 ) , .SI ( net_PTECO_HOLD_NET1019 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_25__5_ ) , 
     .QN ( n3349 ) ) ;
-SDFFX1_RVT delay_reg_25__4_ ( .D ( n508 ) , .SI ( n3335 ) , 
+SDFFX1_RVT delay_reg_25__4_ ( .D ( n508 ) , .SI ( net_PTECO_HOLD_NET1021 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_25__4_ ) , 
     .QN ( n3350 ) ) ;
-SDFFX1_RVT delay_reg_25__3_ ( .D ( n509 ) , .SI ( n3184 ) , 
+SDFFX1_RVT delay_reg_25__3_ ( .D ( n509 ) , .SI ( net_PTECO_HOLD_NET588 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_25__3_ ) , 
     .QN ( n3351 ) ) ;
-SDFFX1_RVT delay_reg_25__2_ ( .D ( n510 ) , .SI ( n2634 ) , 
+SDFFX1_RVT delay_reg_25__2_ ( .D ( n510 ) , .SI ( net_PTECO_HOLD_NET1044 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_25__2_ ) , 
     .QN ( n3352 ) ) ;
-SDFFX1_RVT delay_reg_25__1_ ( .D ( n511 ) , .SI ( n2690 ) , 
+SDFFX1_RVT delay_reg_25__1_ ( .D ( n511 ) , .SI ( net_PTECO_HOLD_NET1149 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_25__1_ ) , 
     .QN ( n3353 ) ) ;
-SDFFX1_RVT delay_reg_25__0_ ( .D ( n512 ) , .SI ( n2626 ) , 
+SDFFX1_RVT delay_reg_25__0_ ( .D ( n512 ) , .SI ( net_PTECO_HOLD_NET1127 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_25__0_ ) , 
     .QN ( n2690 ) ) ;
-SDFFX1_RVT delay_reg_26__16_ ( .D ( n513 ) , .SI ( delay_35__16_ ) , 
+SDFFX1_RVT delay_reg_26__16_ ( .D ( n513 ) , .SI ( net_PTECO_HOLD_NET1318 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_26__16_ ) , 
     .QN ( n2666 ) ) ;
-SDFFX1_RVT delay_reg_26__15_ ( .D ( n514 ) , .SI ( n3188 ) , 
+SDFFX1_RVT delay_reg_26__15_ ( .D ( n514 ) , .SI ( net_PTECO_HOLD_NET217 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_26__15_ ) , 
     .QN ( n3324 ) ) ;
-SDFFX1_RVT delay_reg_26__14_ ( .D ( n515 ) , .SI ( n3308 ) , 
+SDFFX1_RVT delay_reg_26__14_ ( .D ( n515 ) , .SI ( net_PTECO_HOLD_NET985 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_26__14_ ) , 
     .QN ( n3325 ) ) ;
-SDFFX1_RVT delay_reg_26__13_ ( .D ( n516 ) , .SI ( n3310 ) , 
+SDFFX1_RVT delay_reg_26__13_ ( .D ( n516 ) , .SI ( net_PTECO_HOLD_NET946 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_26__13_ ) , 
     .QN ( n3326 ) ) ;
-SDFFX1_RVT delay_reg_26__12_ ( .D ( n517 ) , .SI ( n3190 ) , 
+SDFFX1_RVT delay_reg_26__12_ ( .D ( n517 ) , .SI ( net_PTECO_HOLD_NET434 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_26__12_ ) , 
     .QN ( n3327 ) ) ;
-SDFFX1_RVT delay_reg_26__11_ ( .D ( n518 ) , .SI ( n3343 ) , 
+SDFFX1_RVT delay_reg_26__11_ ( .D ( n518 ) , .SI ( net_PTECO_HOLD_NET571 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_26__11_ ) , 
     .QN ( n3328 ) ) ;
-SDFFX1_RVT delay_reg_26__10_ ( .D ( n519 ) , .SI ( n3313 ) , 
+SDFFX1_RVT delay_reg_26__10_ ( .D ( n519 ) , .SI ( net_PTECO_HOLD_NET656 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_26__10_ ) , 
     .QN ( n3329 ) ) ;
-SDFFX1_RVT delay_reg_26__9_ ( .D ( n520 ) , .SI ( n3178 ) , 
+SDFFX1_RVT delay_reg_26__9_ ( .D ( n520 ) , .SI ( net_PTECO_HOLD_NET715 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_26__9_ ) , 
     .QN ( n3330 ) ) ;
-SDFFX1_RVT delay_reg_26__8_ ( .D ( n521 ) , .SI ( n3346 ) , 
+SDFFX1_RVT delay_reg_26__8_ ( .D ( n521 ) , .SI ( net_PTECO_HOLD_NET838 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_26__8_ ) , 
     .QN ( n3331 ) ) ;
-SDFFX1_RVT delay_reg_26__7_ ( .D ( n522 ) , .SI ( n3195 ) , 
+SDFFX1_RVT delay_reg_26__7_ ( .D ( n522 ) , .SI ( net_PTECO_HOLD_NET484 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_26__7_ ) , 
     .QN ( n3332 ) ) ;
-SDFFX1_RVT delay_reg_26__6_ ( .D ( n523 ) , .SI ( n3317 ) , 
+SDFFX1_RVT delay_reg_26__6_ ( .D ( n523 ) , .SI ( net_PTECO_HOLD_NET778 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_26__6_ ) , 
     .QN ( n3333 ) ) ;
-SDFFX1_RVT delay_reg_26__5_ ( .D ( n524 ) , .SI ( n3318 ) , 
+SDFFX1_RVT delay_reg_26__5_ ( .D ( n524 ) , .SI ( net_PTECO_HOLD_NET763 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_26__5_ ) , 
     .QN ( n3334 ) ) ;
-SDFFX1_RVT delay_reg_26__4_ ( .D ( n525 ) , .SI ( n3319 ) , 
+SDFFX1_RVT delay_reg_26__4_ ( .D ( n525 ) , .SI ( net_PTECO_HOLD_NET676 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_26__4_ ) , 
     .QN ( n3335 ) ) ;
-SDFFX1_RVT delay_reg_26__3_ ( .D ( n526 ) , .SI ( n3320 ) , 
+SDFFX1_RVT delay_reg_26__3_ ( .D ( n526 ) , .SI ( net_PTECO_HOLD_NET776 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_26__3_ ) , 
     .QN ( n3336 ) ) ;
-SDFFX1_RVT delay_reg_26__2_ ( .D ( n527 ) , .SI ( n3366 ) , 
+SDFFX1_RVT delay_reg_26__2_ ( .D ( n527 ) , .SI ( net_PTECO_HOLD_NET724 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_26__2_ ) , 
     .QN ( n3337 ) ) ;
-SDFFX1_RVT delay_reg_26__1_ ( .D ( n528 ) , .SI ( n3352 ) , 
+SDFFX1_RVT delay_reg_26__1_ ( .D ( n528 ) , .SI ( net_PTECO_HOLD_NET342 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_26__1_ ) , 
     .QN ( n3338 ) ) ;
-SDFFX1_RVT delay_reg_26__0_ ( .D ( n529 ) , .SI ( n3337 ) , 
+SDFFX1_RVT delay_reg_26__0_ ( .D ( n529 ) , .SI ( net_PTECO_HOLD_NET962 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_26__0_ ) , 
     .QN ( n2698 ) ) ;
-SDFFX1_RVT delay_reg_27__16_ ( .D ( n530 ) , .SI ( n3143 ) , 
+SDFFX1_RVT delay_reg_27__16_ ( .D ( n530 ) , .SI ( net_PTECO_HOLD_NET966 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_27__16_ ) , 
     .QN ( n2761 ) ) ;
-SDFFX1_RVT delay_reg_27__15_ ( .D ( n531 ) , .SI ( n3187 ) , 
+SDFFX1_RVT delay_reg_27__15_ ( .D ( n531 ) , .SI ( net_PTECO_HOLD_NET764 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_27__15_ ) , 
     .QN ( n3308 ) ) ;
-SDFFX1_RVT delay_reg_27__14_ ( .D ( n532 ) , .SI ( n3340 ) , 
+SDFFX1_RVT delay_reg_27__14_ ( .D ( n532 ) , .SI ( net_PTECO_HOLD_NET1083 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_27__14_ ) , 
     .QN ( n3309 ) ) ;
-SDFFX1_RVT delay_reg_27__13_ ( .D ( n533 ) , .SI ( n3357 ) , 
+SDFFX1_RVT delay_reg_27__13_ ( .D ( n533 ) , .SI ( net_PTECO_HOLD_NET883 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_27__13_ ) , 
     .QN ( n3310 ) ) ;
-SDFFX1_RVT delay_reg_27__12_ ( .D ( n534 ) , .SI ( n3205 ) , 
+SDFFX1_RVT delay_reg_27__12_ ( .D ( n534 ) , .SI ( net_PTECO_HOLD_NET479 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_27__12_ ) , 
     .QN ( n3311 ) ) ;
-SDFFX1_RVT delay_reg_27__11_ ( .D ( n535 ) , .SI ( n3176 ) , 
+SDFFX1_RVT delay_reg_27__11_ ( .D ( n535 ) , .SI ( net_PTECO_HOLD_NET863 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_27__11_ ) , 
     .QN ( n3312 ) ) ;
-SDFFX1_RVT delay_reg_27__10_ ( .D ( n536 ) , .SI ( n3177 ) , 
+SDFFX1_RVT delay_reg_27__10_ ( .D ( n536 ) , .SI ( net_PTECO_HOLD_NET501 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_27__10_ ) , 
     .QN ( n3313 ) ) ;
-SDFFX1_RVT delay_reg_27__9_ ( .D ( n537 ) , .SI ( n3163 ) , 
+SDFFX1_RVT delay_reg_27__9_ ( .D ( n537 ) , .SI ( net_PTECO_HOLD_NET1049 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_27__9_ ) , 
     .QN ( n3314 ) ) ;
-SDFFX1_RVT delay_reg_27__8_ ( .D ( n538 ) , .SI ( n3179 ) , 
+SDFFX1_RVT delay_reg_27__8_ ( .D ( n538 ) , .SI ( net_PTECO_HOLD_NET707 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_27__8_ ) , 
     .QN ( n3315 ) ) ;
-SDFFX1_RVT delay_reg_27__7_ ( .D ( n539 ) , .SI ( n3315 ) , 
+SDFFX1_RVT delay_reg_27__7_ ( .D ( n539 ) , .SI ( net_PTECO_HOLD_NET742 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_27__7_ ) , 
     .QN ( n3316 ) ) ;
-SDFFX1_RVT delay_reg_27__6_ ( .D ( n540 ) , .SI ( n3347 ) , 
+SDFFX1_RVT delay_reg_27__6_ ( .D ( n540 ) , .SI ( net_PTECO_HOLD_NET1102 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_27__6_ ) , 
     .QN ( n3317 ) ) ;
-SDFFX1_RVT delay_reg_27__5_ ( .D ( n541 ) , .SI ( n3348 ) , 
+SDFFX1_RVT delay_reg_27__5_ ( .D ( n541 ) , .SI ( net_PTECO_HOLD_NET994 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_27__5_ ) , 
     .QN ( n3318 ) ) ;
-SDFFX1_RVT delay_reg_27__4_ ( .D ( n542 ) , .SI ( n3183 ) , 
+SDFFX1_RVT delay_reg_27__4_ ( .D ( n542 ) , .SI ( net_PTECO_HOLD_NET687 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_27__4_ ) , 
     .QN ( n3319 ) ) ;
-SDFFX1_RVT delay_reg_27__3_ ( .D ( n543 ) , .SI ( n3365 ) , 
+SDFFX1_RVT delay_reg_27__3_ ( .D ( n543 ) , .SI ( net_PTECO_HOLD_NET56 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_27__3_ ) , 
     .QN ( n3320 ) ) ;
-SDFFX1_RVT delay_reg_27__2_ ( .D ( n544 ) , .SI ( n3351 ) , 
+SDFFX1_RVT delay_reg_27__2_ ( .D ( n544 ) , .SI ( net_PTECO_HOLD_NET867 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_27__2_ ) , 
     .QN ( n3321 ) ) ;
-SDFFX1_RVT delay_reg_27__1_ ( .D ( n545 ) , .SI ( n3323 ) , 
+SDFFX1_RVT delay_reg_27__1_ ( .D ( n545 ) , .SI ( net_PTECO_HOLD_NET234 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_27__1_ ) , 
     .QN ( n3322 ) ) ;
-SDFFX1_RVT delay_reg_27__0_ ( .D ( n546 ) , .SI ( n3338 ) , 
+SDFFX1_RVT delay_reg_27__0_ ( .D ( n546 ) , .SI ( net_PTECO_HOLD_NET389 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_27__0_ ) , 
     .QN ( n3323 ) ) ;
-SDFFX1_RVT delay_reg_28__16_ ( .D ( n547 ) , .SI ( n3218 ) , 
+SDFFX1_RVT delay_reg_28__16_ ( .D ( n547 ) , .SI ( net_PTECO_HOLD_NET502 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_28__16_ ) , 
     .QN ( n2664 ) ) ;
-SDFFX1_RVT delay_reg_28__15_ ( .D ( n548 ) , .SI ( n3371 ) , 
+SDFFX1_RVT delay_reg_28__15_ ( .D ( n548 ) , .SI ( net_PTECO_HOLD_NET884 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_28__15_ ) , 
     .QN ( n3293 ) ) ;
-SDFFX1_RVT delay_reg_28__14_ ( .D ( n549 ) , .SI ( n3372 ) , 
+SDFFX1_RVT delay_reg_28__14_ ( .D ( n549 ) , .SI ( net_PTECO_HOLD_NET730 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_28__14_ ) , 
     .QN ( n3294 ) ) ;
-SDFFX1_RVT delay_reg_28__13_ ( .D ( n550 ) , .SI ( n3130 ) , 
+SDFFX1_RVT delay_reg_28__13_ ( .D ( n550 ) , .SI ( net_PTECO_HOLD_NET739 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_28__13_ ) , 
     .QN ( n3295 ) ) ;
-SDFFX1_RVT delay_reg_28__12_ ( .D ( n551 ) , .SI ( n3116 ) , 
+SDFFX1_RVT delay_reg_28__12_ ( .D ( n551 ) , .SI ( net_PTECO_HOLD_NET718 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_28__12_ ) , 
     .QN ( n3296 ) ) ;
-SDFFX1_RVT delay_reg_28__11_ ( .D ( n552 ) , .SI ( n3222 ) , 
+SDFFX1_RVT delay_reg_28__11_ ( .D ( n552 ) , .SI ( net_PTECO_HOLD_NET728 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_28__11_ ) , 
     .QN ( n3297 ) ) ;
-SDFFX1_RVT delay_reg_28__10_ ( .D ( n553 ) , .SI ( n3388 ) , 
+SDFFX1_RVT delay_reg_28__10_ ( .D ( n553 ) , .SI ( net_PTECO_HOLD_NET1067 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_28__10_ ) , 
     .QN ( n3298 ) ) ;
-SDFFX1_RVT delay_reg_28__9_ ( .D ( n554 ) , .SI ( n3148 ) , 
+SDFFX1_RVT delay_reg_28__9_ ( .D ( n554 ) , .SI ( net_PTECO_HOLD_NET1089 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_28__9_ ) , 
     .QN ( n3299 ) ) ;
-SDFFX1_RVT delay_reg_28__8_ ( .D ( n555 ) , .SI ( n3226 ) , 
+SDFFX1_RVT delay_reg_28__8_ ( .D ( n555 ) , .SI ( net_PTECO_HOLD_NET682 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_28__8_ ) , 
     .QN ( n3300 ) ) ;
-SDFFX1_RVT delay_reg_28__7_ ( .D ( n556 ) , .SI ( n3209 ) , 
+SDFFX1_RVT delay_reg_28__7_ ( .D ( n556 ) , .SI ( net_PTECO_HOLD_NET993 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_28__7_ ) , 
     .QN ( n3301 ) ) ;
-SDFFX1_RVT delay_reg_28__6_ ( .D ( n557 ) , .SI ( n3392 ) , 
+SDFFX1_RVT delay_reg_28__6_ ( .D ( n557 ) , .SI ( net_PTECO_HOLD_NET1031 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_28__6_ ) , 
     .QN ( n3302 ) ) ;
-SDFFX1_RVT delay_reg_28__5_ ( .D ( n558 ) , .SI ( n3379 ) , 
+SDFFX1_RVT delay_reg_28__5_ ( .D ( n558 ) , .SI ( net_PTECO_HOLD_NET658 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_28__5_ ) , 
     .QN ( n3303 ) ) ;
-SDFFX1_RVT delay_reg_28__4_ ( .D ( n559 ) , .SI ( n3229 ) , 
+SDFFX1_RVT delay_reg_28__4_ ( .D ( n559 ) , .SI ( net_PTECO_HOLD_NET798 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_28__4_ ) , 
     .QN ( n3304 ) ) ;
-SDFFX1_RVT delay_reg_28__3_ ( .D ( n560 ) , .SI ( n3306 ) , 
+SDFFX1_RVT delay_reg_28__3_ ( .D ( n560 ) , .SI ( net_PTECO_HOLD_NET591 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_28__3_ ) , 
     .QN ( n3305 ) ) ;
-SDFFX1_RVT delay_reg_28__2_ ( .D ( n561 ) , .SI ( n3138 ) , 
+SDFFX1_RVT delay_reg_28__2_ ( .D ( n561 ) , .SI ( net_PTECO_HOLD_NET934 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_28__2_ ) , 
     .QN ( n3306 ) ) ;
-SDFFX1_RVT delay_reg_28__1_ ( .D ( n562 ) , .SI ( n3305 ) , 
+SDFFX1_RVT delay_reg_28__1_ ( .D ( n562 ) , .SI ( net_PTECO_HOLD_NET1035 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_28__1_ ) , 
     .QN ( n3307 ) ) ;
-SDFFX1_RVT delay_reg_28__0_ ( .D ( n563 ) , .SI ( n3139 ) , 
+SDFFX1_RVT delay_reg_28__0_ ( .D ( n563 ) , .SI ( net_PTECO_HOLD_NET744 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_28__0_ ) , 
     .QN ( n2693 ) ) ;
-SDFFX1_RVT delay_reg_29__16_ ( .D ( n564 ) , .SI ( n3416 ) , 
+SDFFX1_RVT delay_reg_29__16_ ( .D ( n564 ) , .SI ( net_PTECO_HOLD_NET720 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_29__16_ ) , 
     .QN ( n2757 ) ) ;
-SDFFX1_RVT delay_reg_29__15_ ( .D ( n565 ) , .SI ( delay_33__16_ ) , 
+SDFFX1_RVT delay_reg_29__15_ ( .D ( n565 ) , .SI ( net_PTECO_HOLD_NET1296 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_29__15_ ) , 
     .QN ( n3278 ) ) ;
-SDFFX1_RVT delay_reg_29__14_ ( .D ( n566 ) , .SI ( n3402 ) , 
+SDFFX1_RVT delay_reg_29__14_ ( .D ( n566 ) , .SI ( net_PTECO_HOLD_NET430 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_29__14_ ) , 
     .QN ( n3279 ) ) ;
-SDFFX1_RVT delay_reg_29__13_ ( .D ( n567 ) , .SI ( n3100 ) , 
+SDFFX1_RVT delay_reg_29__13_ ( .D ( n567 ) , .SI ( net_PTECO_HOLD_NET634 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_29__13_ ) , 
     .QN ( n3280 ) ) ;
-SDFFX1_RVT delay_reg_29__12_ ( .D ( n568 ) , .SI ( n3432 ) , 
+SDFFX1_RVT delay_reg_29__12_ ( .D ( n568 ) , .SI ( net_PTECO_HOLD_NET818 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_29__12_ ) , 
     .QN ( n3281 ) ) ;
-SDFFX1_RVT delay_reg_29__11_ ( .D ( n569 ) , .SI ( n3389 ) , 
+SDFFX1_RVT delay_reg_29__11_ ( .D ( n569 ) , .SI ( net_PTECO_HOLD_NET464 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_29__11_ ) , 
     .QN ( n3282 ) ) ;
-SDFFX1_RVT delay_reg_29__10_ ( .D ( n570 ) , .SI ( n3102 ) , 
+SDFFX1_RVT delay_reg_29__10_ ( .D ( n570 ) , .SI ( net_PTECO_HOLD_NET562 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_29__10_ ) , 
     .QN ( n3283 ) ) ;
-SDFFX1_RVT delay_reg_29__9_ ( .D ( n571 ) , .SI ( n3089 ) , 
+SDFFX1_RVT delay_reg_29__9_ ( .D ( n571 ) , .SI ( net_PTECO_HOLD_NET302 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_29__9_ ) , 
     .QN ( n3284 ) ) ;
-SDFFX1_RVT delay_reg_29__8_ ( .D ( n572 ) , .SI ( n3286 ) , 
+SDFFX1_RVT delay_reg_29__8_ ( .D ( n572 ) , .SI ( net_PTECO_HOLD_NET436 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_29__8_ ) , 
     .QN ( n3285 ) ) ;
-SDFFX1_RVT delay_reg_29__7_ ( .D ( n573 ) , .SI ( n3105 ) , 
+SDFFX1_RVT delay_reg_29__7_ ( .D ( n573 ) , .SI ( net_PTECO_HOLD_NET526 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_29__7_ ) , 
     .QN ( n3286 ) ) ;
-SDFFX1_RVT delay_reg_29__6_ ( .D ( n574 ) , .SI ( n3407 ) , 
+SDFFX1_RVT delay_reg_29__6_ ( .D ( n574 ) , .SI ( net_PTECO_HOLD_NET1057 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_29__6_ ) , 
     .QN ( n3287 ) ) ;
-SDFFX1_RVT delay_reg_29__5_ ( .D ( n575 ) , .SI ( n3409 ) , 
+SDFFX1_RVT delay_reg_29__5_ ( .D ( n575 ) , .SI ( net_PTECO_HOLD_NET405 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_29__5_ ) , 
     .QN ( n3288 ) ) ;
-SDFFX1_RVT delay_reg_29__4_ ( .D ( n576 ) , .SI ( n3107 ) , 
+SDFFX1_RVT delay_reg_29__4_ ( .D ( n576 ) , .SI ( net_PTECO_HOLD_NET956 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_29__4_ ) , 
     .QN ( n3289 ) ) ;
-SDFFX1_RVT delay_reg_29__3_ ( .D ( n577 ) , .SI ( n3291 ) , 
+SDFFX1_RVT delay_reg_29__3_ ( .D ( n577 ) , .SI ( net_PTECO_HOLD_NET773 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_29__3_ ) , 
     .QN ( n3290 ) ) ;
-SDFFX1_RVT delay_reg_29__2_ ( .D ( n578 ) , .SI ( n3232 ) , 
+SDFFX1_RVT delay_reg_29__2_ ( .D ( n578 ) , .SI ( net_PTECO_HOLD_NET379 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_29__2_ ) , 
     .QN ( n3291 ) ) ;
-SDFFX1_RVT delay_reg_29__1_ ( .D ( n579 ) , .SI ( n3077 ) , 
+SDFFX1_RVT delay_reg_29__1_ ( .D ( n579 ) , .SI ( net_PTECO_HOLD_NET922 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_29__1_ ) , 
     .QN ( n3292 ) ) ;
-SDFFX1_RVT delay_reg_29__0_ ( .D ( n580 ) , .SI ( n3292 ) , 
+SDFFX1_RVT delay_reg_29__0_ ( .D ( n580 ) , .SI ( net_PTECO_HOLD_NET933 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_29__0_ ) , 
     .QN ( n2691 ) ) ;
-SDFFX1_RVT delay_reg_30__16_ ( .D ( n581 ) , .SI ( n3248 ) , 
+SDFFX1_RVT delay_reg_30__16_ ( .D ( n581 ) , .SI ( net_PTECO_HOLD_NET251 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_30__16_ ) , 
     .QN ( n2676 ) ) ;
-SDFFX1_RVT delay_reg_30__15_ ( .D ( n582 ) , .SI ( n3431 ) , 
+SDFFX1_RVT delay_reg_30__15_ ( .D ( n582 ) , .SI ( net_PTECO_HOLD_NET1174 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_30__15_ ) , 
     .QN ( n3263 ) ) ;
-SDFFX1_RVT delay_reg_30__14_ ( .D ( n583 ) , .SI ( n3234 ) , 
+SDFFX1_RVT delay_reg_30__14_ ( .D ( n583 ) , .SI ( net_PTECO_HOLD_NET840 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_30__14_ ) , 
     .QN ( n3264 ) ) ;
-SDFFX1_RVT delay_reg_30__13_ ( .D ( n584 ) , .SI ( n3250 ) , 
+SDFFX1_RVT delay_reg_30__13_ ( .D ( n584 ) , .SI ( net_PTECO_HOLD_NET558 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_30__13_ ) , 
     .QN ( n3265 ) ) ;
-SDFFX1_RVT delay_reg_30__12_ ( .D ( n585 ) , .SI ( n3447 ) , 
+SDFFX1_RVT delay_reg_30__12_ ( .D ( n585 ) , .SI ( net_PTECO_HOLD_NET853 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_30__12_ ) , 
     .QN ( n3266 ) ) ;
-SDFFX1_RVT delay_reg_30__11_ ( .D ( n586 ) , .SI ( n3449 ) , 
+SDFFX1_RVT delay_reg_30__11_ ( .D ( n586 ) , .SI ( net_PTECO_HOLD_NET538 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_30__11_ ) , 
     .QN ( n3267 ) ) ;
-SDFFX1_RVT delay_reg_30__10_ ( .D ( n587 ) , .SI ( n3465 ) , 
+SDFFX1_RVT delay_reg_30__10_ ( .D ( n587 ) , .SI ( net_PTECO_HOLD_NET1081 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_30__10_ ) , 
     .QN ( n3268 ) ) ;
-SDFFX1_RVT delay_reg_30__9_ ( .D ( n588 ) , .SI ( n3253 ) , 
+SDFFX1_RVT delay_reg_30__9_ ( .D ( n588 ) , .SI ( net_PTECO_HOLD_NET960 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_30__9_ ) , 
     .QN ( n3269 ) ) ;
-SDFFX1_RVT delay_reg_30__8_ ( .D ( n589 ) , .SI ( n3451 ) , 
+SDFFX1_RVT delay_reg_30__8_ ( .D ( n589 ) , .SI ( net_PTECO_HOLD_NET482 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_30__8_ ) , 
     .QN ( n3270 ) ) ;
-SDFFX1_RVT delay_reg_30__7_ ( .D ( n590 ) , .SI ( n3256 ) , 
+SDFFX1_RVT delay_reg_30__7_ ( .D ( n590 ) , .SI ( net_PTECO_HOLD_NET1106 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_30__7_ ) , 
     .QN ( n3271 ) ) ;
-SDFFX1_RVT delay_reg_30__6_ ( .D ( n591 ) , .SI ( n3257 ) , 
+SDFFX1_RVT delay_reg_30__6_ ( .D ( n591 ) , .SI ( net_PTECO_HOLD_NET348 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_30__6_ ) , 
     .QN ( n3272 ) ) ;
-SDFFX1_RVT delay_reg_30__5_ ( .D ( n592 ) , .SI ( n3045 ) , 
+SDFFX1_RVT delay_reg_30__5_ ( .D ( n592 ) , .SI ( net_PTECO_HOLD_NET533 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_30__5_ ) , 
     .QN ( n3273 ) ) ;
-SDFFX1_RVT delay_reg_30__4_ ( .D ( n593 ) , .SI ( n3060 ) , 
+SDFFX1_RVT delay_reg_30__4_ ( .D ( n593 ) , .SI ( net_PTECO_HOLD_NET1122 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_30__4_ ) , 
     .QN ( n3274 ) ) ;
-SDFFX1_RVT delay_reg_30__3_ ( .D ( n594 ) , .SI ( n3470 ) , 
+SDFFX1_RVT delay_reg_30__3_ ( .D ( n594 ) , .SI ( net_PTECO_HOLD_NET975 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_30__3_ ) , 
     .QN ( n3275 ) ) ;
-SDFFX1_RVT delay_reg_30__2_ ( .D ( n595 ) , .SI ( n3245 ) , 
+SDFFX1_RVT delay_reg_30__2_ ( .D ( n595 ) , .SI ( net_PTECO_HOLD_NET903 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_30__2_ ) , 
     .QN ( n3276 ) ) ;
-SDFFX1_RVT delay_reg_30__1_ ( .D ( n596 ) , .SI ( n3260 ) , 
+SDFFX1_RVT delay_reg_30__1_ ( .D ( n596 ) , .SI ( net_PTECO_HOLD_NET1005 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_30__1_ ) , 
     .QN ( n3277 ) ) ;
-SDFFX1_RVT delay_reg_30__0_ ( .D ( n597 ) , .SI ( n3277 ) , 
+SDFFX1_RVT delay_reg_30__0_ ( .D ( n597 ) , .SI ( net_PTECO_HOLD_NET640 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_30__0_ ) , 
     .QN ( n2694 ) ) ;
-SDFFX1_RVT delay_reg_31__16_ ( .D ( n598 ) , .SI ( n3462 ) , 
+SDFFX1_RVT delay_reg_31__16_ ( .D ( n598 ) , .SI ( net_PTECO_HOLD_NET1016 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_31__16_ ) , 
     .QN ( n2658 ) ) ;
-SDFFX1_RVT delay_reg_31__15_ ( .D ( n599 ) , .SI ( n3249 ) , 
+SDFFX1_RVT delay_reg_31__15_ ( .D ( n599 ) , .SI ( net_PTECO_HOLD_NET274 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_31__15_ ) , 
     .QN ( n2730 ) ) ;
-SDFFX1_RVT delay_reg_31__14_ ( .D ( n600 ) , .SI ( n3009 ) , 
+SDFFX1_RVT delay_reg_31__14_ ( .D ( n600 ) , .SI ( net_PTECO_HOLD_NET1007 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_31__14_ ) , 
     .QN ( n2643 ) ) ;
 SDFFX1_RVT delay_reg_31__13_ ( .D ( n601 ) , .SI ( ZBUF_50_0 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_31__13_ ) , 
     .QN ( n2697 ) ) ;
-SDFFX1_RVT delay_reg_31__12_ ( .D ( n602 ) , .SI ( n2632 ) , 
+SDFFX1_RVT delay_reg_31__12_ ( .D ( n602 ) , .SI ( net_PTECO_HOLD_NET1041 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_31__12_ ) , 
     .QN ( n2707 ) ) ;
-SDFFX2_RVT delay_reg_31__11_ ( .D ( n603 ) , .SI ( n3254 ) , 
+SDFFX2_RVT delay_reg_31__11_ ( .D ( n603 ) , .SI ( net_PTECO_HOLD_NET567 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_31__11_ ) , 
     .QN ( n2632 ) ) ;
-SDFFX1_RVT delay_reg_31__10_ ( .D ( n604 ) , .SI ( n2699 ) , 
+SDFFX1_RVT delay_reg_31__10_ ( .D ( n604 ) , .SI ( net_PTECO_HOLD_NET1304 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_31__10_ ) , 
     .QN ( n2624 ) ) ;
-SDFFX1_RVT delay_reg_31__9_ ( .D ( n605 ) , .SI ( n3496 ) , 
+SDFFX1_RVT delay_reg_31__9_ ( .D ( n605 ) , .SI ( net_PTECO_HOLD_NET371 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_31__9_ ) , 
     .QN ( n2699 ) ) ;
-SDFFX1_RVT delay_reg_31__8_ ( .D ( n606 ) , .SI ( n3027 ) , 
+SDFFX1_RVT delay_reg_31__8_ ( .D ( n606 ) , .SI ( net_PTECO_HOLD_NET865 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_31__8_ ) , 
     .QN ( n2625 ) ) ;
-SDFFX1_RVT delay_reg_31__7_ ( .D ( n607 ) , .SI ( n3013 ) , 
+SDFFX1_RVT delay_reg_31__7_ ( .D ( n607 ) , .SI ( net_PTECO_HOLD_NET589 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_31__7_ ) , 
     .QN ( n2703 ) ) ;
-SDFFX1_RVT delay_reg_31__6_ ( .D ( n608 ) , .SI ( n3498 ) , 
+SDFFX1_RVT delay_reg_31__6_ ( .D ( n608 ) , .SI ( net_PTECO_HOLD_NET905 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_31__6_ ) , 
     .QN ( n2692 ) ) ;
-SDFFX1_RVT delay_reg_31__5_ ( .D ( n609 ) , .SI ( n2717 ) , 
+SDFFX1_RVT delay_reg_31__5_ ( .D ( n609 ) , .SI ( net_PTECO_HOLD_NET1159 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_31__5_ ) , 
     .QN ( n2705 ) ) ;
-SDFFX1_RVT delay_reg_31__4_ ( .D ( n610 ) , .SI ( n2705 ) , 
+SDFFX1_RVT delay_reg_31__4_ ( .D ( n610 ) , .SI ( net_PTECO_HOLD_NET1210 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_31__4_ ) , 
     .QN ( n2633 ) ) ;
-SDFFX1_RVT delay_reg_31__3_ ( .D ( n611 ) , .SI ( n2630 ) , 
+SDFFX1_RVT delay_reg_31__3_ ( .D ( n611 ) , .SI ( net_PTECO_HOLD_NET1222 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_31__3_ ) , 
     .QN ( n2645 ) ) ;
-SDFFX1_RVT delay_reg_31__2_ ( .D ( n612 ) , .SI ( n2721 ) , 
+SDFFX1_RVT delay_reg_31__2_ ( .D ( n612 ) , .SI ( net_PTECO_HOLD_NET1344 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_31__2_ ) , 
     .QN ( n2717 ) ) ;
-SDFFX1_RVT delay_reg_31__1_ ( .D ( n613 ) , .SI ( n3262 ) , 
+SDFFX1_RVT delay_reg_31__1_ ( .D ( n613 ) , .SI ( net_PTECO_HOLD_NET453 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_31__1_ ) , 
     .QN ( n2630 ) ) ;
-SDFFX1_RVT delay_reg_31__0_ ( .D ( n614 ) , .SI ( n3031 ) , 
+SDFFX1_RVT delay_reg_31__0_ ( .D ( n614 ) , .SI ( net_PTECO_HOLD_NET483 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_31__0_ ) , 
     .QN ( n2721 ) ) ;
-SDFFX1_RVT delay_reg_32__16_ ( .D ( n615 ) , .SI ( delay_30__16_ ) , 
+SDFFX1_RVT delay_reg_32__16_ ( .D ( n615 ) , .SI ( net_PTECO_HOLD_NET1250 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_32__16_ ) , 
     .QN ( n2760 ) ) ;
-SDFFX1_RVT delay_reg_32__15_ ( .D ( n616 ) , .SI ( delay_31__15_ ) , 
+SDFFX1_RVT delay_reg_32__15_ ( .D ( n616 ) , .SI ( net_PTECO_HOLD_NET1281 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_32__15_ ) , 
     .QN ( n3248 ) ) ;
-SDFFX1_RVT delay_reg_32__14_ ( .D ( n617 ) , .SI ( n3054 ) , 
+SDFFX1_RVT delay_reg_32__14_ ( .D ( n617 ) , .SI ( net_PTECO_HOLD_NET391 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_32__14_ ) , 
     .QN ( n3249 ) ) ;
-SDFFX1_RVT delay_reg_32__13_ ( .D ( n618 ) , .SI ( n3448 ) , 
+SDFFX1_RVT delay_reg_32__13_ ( .D ( n618 ) , .SI ( net_PTECO_HOLD_NET748 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_32__13_ ) , 
     .QN ( n3250 ) ) ;
-SDFFX1_RVT delay_reg_32__12_ ( .D ( n619 ) , .SI ( n3267 ) , 
+SDFFX1_RVT delay_reg_32__12_ ( .D ( n619 ) , .SI ( net_PTECO_HOLD_NET354 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_32__12_ ) , 
     .QN ( n3251 ) ) ;
-SDFFX1_RVT delay_reg_32__11_ ( .D ( n620 ) , .SI ( n3056 ) , 
+SDFFX1_RVT delay_reg_32__11_ ( .D ( n620 ) , .SI ( net_PTECO_HOLD_NET318 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_32__11_ ) , 
     .QN ( n3252 ) ) ;
-SDFFX1_RVT delay_reg_32__10_ ( .D ( n621 ) , .SI ( n3041 ) , 
+SDFFX1_RVT delay_reg_32__10_ ( .D ( n621 ) , .SI ( net_PTECO_HOLD_NET977 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_32__10_ ) , 
     .QN ( n3253 ) ) ;
-SDFFX1_RVT delay_reg_32__9_ ( .D ( n622 ) , .SI ( n3269 ) , 
+SDFFX1_RVT delay_reg_32__9_ ( .D ( n622 ) , .SI ( net_PTECO_HOLD_NET1093 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_32__9_ ) , 
     .QN ( n3254 ) ) ;
-SDFFX1_RVT delay_reg_32__8_ ( .D ( n623 ) , .SI ( n3270 ) , 
+SDFFX1_RVT delay_reg_32__8_ ( .D ( n623 ) , .SI ( net_PTECO_HOLD_NET660 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_32__8_ ) , 
     .QN ( n3255 ) ) ;
-SDFFX1_RVT delay_reg_32__7_ ( .D ( n624 ) , .SI ( n3482 ) , 
+SDFFX1_RVT delay_reg_32__7_ ( .D ( n624 ) , .SI ( net_PTECO_HOLD_NET1123 ) , 
     .SE ( HFSNET_1165 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_32__7_ ) , 
     .QN ( n3256 ) ) ;
-SDFFX1_RVT delay_reg_32__6_ ( .D ( n625 ) , .SI ( n3469 ) , 
+SDFFX1_RVT delay_reg_32__6_ ( .D ( n625 ) , .SI ( net_PTECO_HOLD_NET555 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_32__6_ ) , 
     .QN ( n3257 ) ) ;
-SDFFX1_RVT delay_reg_32__5_ ( .D ( n626 ) , .SI ( n3259 ) , 
+SDFFX1_RVT delay_reg_32__5_ ( .D ( n626 ) , .SI ( net_PTECO_HOLD_NET733 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_32__5_ ) , 
     .QN ( n3258 ) ) ;
-SDFFX1_RVT delay_reg_32__4_ ( .D ( n627 ) , .SI ( n3030 ) , 
+SDFFX1_RVT delay_reg_32__4_ ( .D ( n627 ) , .SI ( net_PTECO_HOLD_NET1002 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_32__4_ ) , 
     .QN ( n3259 ) ) ;
-SDFFX1_RVT delay_reg_32__3_ ( .D ( n628 ) , .SI ( n3275 ) , 
+SDFFX1_RVT delay_reg_32__3_ ( .D ( n628 ) , .SI ( net_PTECO_HOLD_NET729 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_32__3_ ) , 
     .QN ( n3260 ) ) ;
-SDFFX1_RVT delay_reg_32__2_ ( .D ( n629 ) , .SI ( n3485 ) , 
+SDFFX1_RVT delay_reg_32__2_ ( .D ( n629 ) , .SI ( net_PTECO_HOLD_NET1175 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_32__2_ ) , 
     .QN ( n3261 ) ) ;
-SDFFX1_RVT delay_reg_32__1_ ( .D ( n630 ) , .SI ( n3017 ) , 
+SDFFX1_RVT delay_reg_32__1_ ( .D ( n630 ) , .SI ( net_PTECO_HOLD_NET293 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_32__1_ ) , 
     .QN ( n3262 ) ) ;
-SDFFX1_RVT delay_reg_32__0_ ( .D ( n631 ) , .SI ( n2694 ) , 
+SDFFX1_RVT delay_reg_32__0_ ( .D ( n631 ) , .SI ( net_PTECO_HOLD_NET1129 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_32__0_ ) , 
     .QN ( n2629 ) ) ;
-SDFFX1_RVT delay_reg_33__16_ ( .D ( n632 ) , .SI ( n3263 ) , 
+SDFFX1_RVT delay_reg_33__16_ ( .D ( n632 ) , .SI ( net_PTECO_HOLD_NET378 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_33__16_ ) , 
     .QN ( n2671 ) ) ;
-SDFFX1_RVT delay_reg_33__15_ ( .D ( n633 ) , .SI ( n3219 ) , 
+SDFFX1_RVT delay_reg_33__15_ ( .D ( n633 ) , .SI ( net_PTECO_HOLD_NET499 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_33__15_ ) , 
     .QN ( n3233 ) ) ;
-SDFFX1_RVT delay_reg_33__14_ ( .D ( n634 ) , .SI ( n3417 ) , 
+SDFFX1_RVT delay_reg_33__14_ ( .D ( n634 ) , .SI ( net_PTECO_HOLD_NET294 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_33__14_ ) , 
     .QN ( n3234 ) ) ;
-SDFFX1_RVT delay_reg_33__13_ ( .D ( n635 ) , .SI ( n3236 ) , 
+SDFFX1_RVT delay_reg_33__13_ ( .D ( n635 ) , .SI ( net_PTECO_HOLD_NET541 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_33__13_ ) , 
     .QN ( n3235 ) ) ;
-SDFFX1_RVT delay_reg_33__12_ ( .D ( n636 ) , .SI ( n3266 ) , 
+SDFFX1_RVT delay_reg_33__12_ ( .D ( n636 ) , .SI ( net_PTECO_HOLD_NET614 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_33__12_ ) , 
     .QN ( n3236 ) ) ;
-SDFFX1_RVT delay_reg_33__11_ ( .D ( n637 ) , .SI ( n3070 ) , 
+SDFFX1_RVT delay_reg_33__11_ ( .D ( n637 ) , .SI ( net_PTECO_HOLD_NET1018 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_33__11_ ) , 
     .QN ( n3237 ) ) ;
-SDFFX1_RVT delay_reg_33__10_ ( .D ( n638 ) , .SI ( n3239 ) , 
+SDFFX1_RVT delay_reg_33__10_ ( .D ( n638 ) , .SI ( net_PTECO_HOLD_NET438 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_33__10_ ) , 
     .QN ( n3238 ) ) ;
-SDFFX1_RVT delay_reg_33__9_ ( .D ( n639 ) , .SI ( n3435 ) , 
+SDFFX1_RVT delay_reg_33__9_ ( .D ( n639 ) , .SI ( net_PTECO_HOLD_NET271 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_33__9_ ) , 
     .QN ( n3239 ) ) ;
-SDFFX1_RVT delay_reg_33__8_ ( .D ( n640 ) , .SI ( n3072 ) , 
+SDFFX1_RVT delay_reg_33__8_ ( .D ( n640 ) , .SI ( net_PTECO_HOLD_NET982 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_33__8_ ) , 
     .QN ( n3240 ) ) ;
-SDFFX1_RVT delay_reg_33__7_ ( .D ( n641 ) , .SI ( n3437 ) , 
+SDFFX1_RVT delay_reg_33__7_ ( .D ( n641 ) , .SI ( net_PTECO_HOLD_NET619 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_33__7_ ) , 
     .QN ( n3241 ) ) ;
-SDFFX1_RVT delay_reg_33__6_ ( .D ( n642 ) , .SI ( n3452 ) , 
+SDFFX1_RVT delay_reg_33__6_ ( .D ( n642 ) , .SI ( net_PTECO_HOLD_NET907 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_33__6_ ) , 
     .QN ( n3242 ) ) ;
-SDFFX1_RVT delay_reg_33__5_ ( .D ( n643 ) , .SI ( n3244 ) , 
+SDFFX1_RVT delay_reg_33__5_ ( .D ( n643 ) , .SI ( net_PTECO_HOLD_NET536 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_33__5_ ) , 
     .QN ( n3243 ) ) ;
-SDFFX1_RVT delay_reg_33__4_ ( .D ( n644 ) , .SI ( n3091 ) , 
+SDFFX1_RVT delay_reg_33__4_ ( .D ( n644 ) , .SI ( net_PTECO_HOLD_NET950 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_33__4_ ) , 
     .QN ( n3244 ) ) ;
-SDFFX1_RVT delay_reg_33__3_ ( .D ( n645 ) , .SI ( n3246 ) , 
+SDFFX1_RVT delay_reg_33__3_ ( .D ( n645 ) , .SI ( net_PTECO_HOLD_NET623 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_33__3_ ) , 
     .QN ( n3245 ) ) ;
-SDFFX1_RVT delay_reg_33__2_ ( .D ( n646 ) , .SI ( n3440 ) , 
+SDFFX1_RVT delay_reg_33__2_ ( .D ( n646 ) , .SI ( net_PTECO_HOLD_NET569 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_33__2_ ) , 
     .QN ( n3246 ) ) ;
-SDFFX1_RVT delay_reg_33__1_ ( .D ( n647 ) , .SI ( n2691 ) , 
+SDFFX1_RVT delay_reg_33__1_ ( .D ( n647 ) , .SI ( net_PTECO_HOLD_NET1039 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_33__1_ ) , 
     .QN ( n3247 ) ) ;
-SDFFX1_RVT delay_reg_33__0_ ( .D ( n648 ) , .SI ( n3078 ) , 
+SDFFX1_RVT delay_reg_33__0_ ( .D ( n648 ) , .SI ( net_PTECO_HOLD_NET780 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_33__0_ ) , 
     .QN ( n2627 ) ) ;
-SDFFX1_RVT delay_reg_34__16_ ( .D ( n649 ) , .SI ( n3386 ) , 
+SDFFX1_RVT delay_reg_34__16_ ( .D ( n649 ) , .SI ( net_PTECO_HOLD_NET986 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_34__16_ ) , 
     .QN ( n2739 ) ) ;
-SDFFX1_RVT delay_reg_34__15_ ( .D ( n650 ) , .SI ( n3293 ) , 
+SDFFX1_RVT delay_reg_34__15_ ( .D ( n650 ) , .SI ( net_PTECO_HOLD_NET842 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_34__15_ ) , 
     .QN ( n3218 ) ) ;
-SDFFX1_RVT delay_reg_34__14_ ( .D ( n651 ) , .SI ( delay_34__16_ ) , 
+SDFFX1_RVT delay_reg_34__14_ ( .D ( n651 ) , .SI ( net_PTECO_HOLD_NET1340 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_34__14_ ) , 
     .QN ( n3219 ) ) ;
-SDFFX1_RVT delay_reg_34__13_ ( .D ( n652 ) , .SI ( n3115 ) , 
+SDFFX1_RVT delay_reg_34__13_ ( .D ( n652 ) , .SI ( net_PTECO_HOLD_NET761 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_34__13_ ) , 
     .QN ( n3220 ) ) ;
-SDFFX1_RVT delay_reg_34__12_ ( .D ( n653 ) , .SI ( n3296 ) , 
+SDFFX1_RVT delay_reg_34__12_ ( .D ( n653 ) , .SI ( net_PTECO_HOLD_NET524 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_34__12_ ) , 
     .QN ( n3221 ) ) ;
-SDFFX1_RVT delay_reg_34__11_ ( .D ( n654 ) , .SI ( n3101 ) , 
+SDFFX1_RVT delay_reg_34__11_ ( .D ( n654 ) , .SI ( net_PTECO_HOLD_NET891 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_34__11_ ) , 
     .QN ( n3222 ) ) ;
-SDFFX1_RVT delay_reg_34__10_ ( .D ( n655 ) , .SI ( n3132 ) , 
+SDFFX1_RVT delay_reg_34__10_ ( .D ( n655 ) , .SI ( net_PTECO_HOLD_NET823 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_34__10_ ) , 
     .QN ( n3223 ) ) ;
-SDFFX1_RVT delay_reg_34__9_ ( .D ( n656 ) , .SI ( n3134 ) , 
+SDFFX1_RVT delay_reg_34__9_ ( .D ( n656 ) , .SI ( net_PTECO_HOLD_NET622 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_34__9_ ) , 
     .QN ( n3224 ) ) ;
-SDFFX1_RVT delay_reg_34__8_ ( .D ( n657 ) , .SI ( n3104 ) , 
+SDFFX1_RVT delay_reg_34__8_ ( .D ( n657 ) , .SI ( net_PTECO_HOLD_NET1009 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_34__8_ ) , 
     .QN ( n3225 ) ) ;
-SDFFX1_RVT delay_reg_34__7_ ( .D ( n658 ) , .SI ( n3391 ) , 
+SDFFX1_RVT delay_reg_34__7_ ( .D ( n658 ) , .SI ( net_PTECO_HOLD_NET936 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_34__7_ ) , 
     .QN ( n3226 ) ) ;
-SDFFX1_RVT delay_reg_34__6_ ( .D ( n659 ) , .SI ( n3408 ) , 
+SDFFX1_RVT delay_reg_34__6_ ( .D ( n659 ) , .SI ( net_PTECO_HOLD_NET447 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_34__6_ ) , 
     .QN ( n3227 ) ) ;
-SDFFX1_RVT delay_reg_34__5_ ( .D ( n660 ) , .SI ( n3121 ) , 
+SDFFX1_RVT delay_reg_34__5_ ( .D ( n660 ) , .SI ( net_PTECO_HOLD_NET837 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_34__5_ ) , 
     .QN ( n3228 ) ) ;
-SDFFX1_RVT delay_reg_34__4_ ( .D ( n661 ) , .SI ( n3380 ) , 
+SDFFX1_RVT delay_reg_34__4_ ( .D ( n661 ) , .SI ( net_PTECO_HOLD_NET493 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_34__4_ ) , 
     .QN ( n3229 ) ) ;
-SDFFX1_RVT delay_reg_34__3_ ( .D ( n662 ) , .SI ( n3231 ) , 
+SDFFX1_RVT delay_reg_34__3_ ( .D ( n662 ) , .SI ( net_PTECO_HOLD_NET288 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_34__3_ ) , 
     .QN ( n3230 ) ) ;
-SDFFX1_RVT delay_reg_34__2_ ( .D ( n663 ) , .SI ( n2628 ) , 
+SDFFX1_RVT delay_reg_34__2_ ( .D ( n663 ) , .SI ( net_PTECO_HOLD_NET1146 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_34__2_ ) , 
     .QN ( n3231 ) ) ;
-SDFFX1_RVT delay_reg_34__1_ ( .D ( n664 ) , .SI ( n3411 ) , 
+SDFFX1_RVT delay_reg_34__1_ ( .D ( n664 ) , .SI ( net_PTECO_HOLD_NET287 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_34__1_ ) , 
     .QN ( n3232 ) ) ;
-SDFFX1_RVT delay_reg_34__0_ ( .D ( n665 ) , .SI ( n3247 ) , 
+SDFFX1_RVT delay_reg_34__0_ ( .D ( n665 ) , .SI ( net_PTECO_HOLD_NET914 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_34__0_ ) , 
     .QN ( n2628 ) ) ;
-SDFFX1_RVT delay_reg_35__16_ ( .D ( n666 ) , .SI ( n3099 ) , 
+SDFFX1_RVT delay_reg_35__16_ ( .D ( n666 ) , .SI ( net_PTECO_HOLD_NET395 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_35__16_ ) , 
     .QN ( n2685 ) ) ;
-SDFFX1_RVT delay_reg_35__15_ ( .D ( n667 ) , .SI ( n3356 ) , 
+SDFFX1_RVT delay_reg_35__15_ ( .D ( n667 ) , .SI ( net_PTECO_HOLD_NET654 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_35__15_ ) , 
     .QN ( n3202 ) ) ;
-SDFFX1_RVT delay_reg_35__14_ ( .D ( n668 ) , .SI ( n3189 ) , 
+SDFFX1_RVT delay_reg_35__14_ ( .D ( n668 ) , .SI ( net_PTECO_HOLD_NET277 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_35__14_ ) , 
     .QN ( n3203 ) ) ;
-SDFFX1_RVT delay_reg_35__13_ ( .D ( n669 ) , .SI ( n3160 ) , 
+SDFFX1_RVT delay_reg_35__13_ ( .D ( n669 ) , .SI ( net_PTECO_HOLD_NET625 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_35__13_ ) , 
     .QN ( n3204 ) ) ;
-SDFFX1_RVT delay_reg_35__12_ ( .D ( n670 ) , .SI ( n3131 ) , 
+SDFFX1_RVT delay_reg_35__12_ ( .D ( n670 ) , .SI ( net_PTECO_HOLD_NET535 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_35__12_ ) , 
     .QN ( n3205 ) ) ;
-SDFFX1_RVT delay_reg_35__11_ ( .D ( n671 ) , .SI ( n3359 ) , 
+SDFFX1_RVT delay_reg_35__11_ ( .D ( n671 ) , .SI ( net_PTECO_HOLD_NET353 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_35__11_ ) , 
     .QN ( n3206 ) ) ;
-SDFFX1_RVT delay_reg_35__10_ ( .D ( n672 ) , .SI ( n3147 ) , 
+SDFFX1_RVT delay_reg_35__10_ ( .D ( n672 ) , .SI ( net_PTECO_HOLD_NET885 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_35__10_ ) , 
     .QN ( n3207 ) ) ;
-SDFFX1_RVT delay_reg_35__9_ ( .D ( n673 ) , .SI ( n3192 ) , 
+SDFFX1_RVT delay_reg_35__9_ ( .D ( n673 ) , .SI ( net_PTECO_HOLD_NET1176 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_35__9_ ) , 
     .QN ( n3208 ) ) ;
-SDFFX1_RVT delay_reg_35__8_ ( .D ( n674 ) , .SI ( n3300 ) , 
+SDFFX1_RVT delay_reg_35__8_ ( .D ( n674 ) , .SI ( net_PTECO_HOLD_NET727 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_35__8_ ) , 
     .QN ( n3209 ) ) ;
-SDFFX1_RVT delay_reg_35__7_ ( .D ( n675 ) , .SI ( n3301 ) , 
+SDFFX1_RVT delay_reg_35__7_ ( .D ( n675 ) , .SI ( net_PTECO_HOLD_NET683 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_35__7_ ) , 
     .QN ( n3210 ) ) ;
-SDFFX1_RVT delay_reg_35__6_ ( .D ( n676 ) , .SI ( n3196 ) , 
+SDFFX1_RVT delay_reg_35__6_ ( .D ( n676 ) , .SI ( net_PTECO_HOLD_NET500 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_35__6_ ) , 
     .QN ( n3211 ) ) ;
-SDFFX1_RVT delay_reg_35__5_ ( .D ( n677 ) , .SI ( n3378 ) , 
+SDFFX1_RVT delay_reg_35__5_ ( .D ( n677 ) , .SI ( net_PTECO_HOLD_NET1063 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_35__5_ ) , 
     .QN ( n3212 ) ) ;
-SDFFX1_RVT delay_reg_35__4_ ( .D ( n678 ) , .SI ( n3304 ) , 
+SDFFX1_RVT delay_reg_35__4_ ( .D ( n678 ) , .SI ( net_PTECO_HOLD_NET675 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_35__4_ ) , 
     .QN ( n3213 ) ) ;
-SDFFX1_RVT delay_reg_35__3_ ( .D ( n679 ) , .SI ( n3381 ) , 
+SDFFX1_RVT delay_reg_35__3_ ( .D ( n679 ) , .SI ( net_PTECO_HOLD_NET181 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_35__3_ ) , 
     .QN ( n3214 ) ) ;
-SDFFX1_RVT delay_reg_35__2_ ( .D ( n680 ) , .SI ( n3307 ) , 
+SDFFX1_RVT delay_reg_35__2_ ( .D ( n680 ) , .SI ( net_PTECO_HOLD_NET830 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_35__2_ ) , 
     .QN ( n3215 ) ) ;
-SDFFX1_RVT delay_reg_35__1_ ( .D ( n681 ) , .SI ( n3201 ) , 
+SDFFX1_RVT delay_reg_35__1_ ( .D ( n681 ) , .SI ( net_PTECO_HOLD_NET510 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_35__1_ ) , 
     .QN ( n3216 ) ) ;
-SDFFX1_RVT delay_reg_35__0_ ( .D ( n682 ) , .SI ( n3382 ) , 
+SDFFX1_RVT delay_reg_35__0_ ( .D ( n682 ) , .SI ( net_PTECO_HOLD_NET457 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_35__0_ ) , 
     .QN ( n3217 ) ) ;
-SDFFX1_RVT delay_reg_36__16_ ( .D ( n683 ) , .SI ( n3370 ) , 
+SDFFX1_RVT delay_reg_36__16_ ( .D ( n683 ) , .SI ( net_PTECO_HOLD_NET911 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_36__16_ ) , 
     .QN ( n2741 ) ) ;
-SDFFX1_RVT delay_reg_36__15_ ( .D ( n684 ) , .SI ( delay_26__16_ ) , 
+SDFFX1_RVT delay_reg_36__15_ ( .D ( n684 ) , .SI ( net_PTECO_HOLD_NET1266 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_36__15_ ) , 
     .QN ( n3187 ) ) ;
-SDFFX1_RVT delay_reg_36__14_ ( .D ( n685 ) , .SI ( n3325 ) , 
+SDFFX1_RVT delay_reg_36__14_ ( .D ( n685 ) , .SI ( net_PTECO_HOLD_NET331 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_36__14_ ) , 
     .QN ( n3188 ) ) ;
-SDFFX1_RVT delay_reg_36__13_ ( .D ( n686 ) , .SI ( n3145 ) , 
+SDFFX1_RVT delay_reg_36__13_ ( .D ( n686 ) , .SI ( net_PTECO_HOLD_NET448 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_36__13_ ) , 
     .QN ( n3189 ) ) ;
-SDFFX1_RVT delay_reg_36__12_ ( .D ( n687 ) , .SI ( n3161 ) , 
+SDFFX1_RVT delay_reg_36__12_ ( .D ( n687 ) , .SI ( net_PTECO_HOLD_NET267 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_36__12_ ) , 
     .QN ( n3190 ) ) ;
-SDFFX1_RVT delay_reg_36__11_ ( .D ( n688 ) , .SI ( n3312 ) , 
+SDFFX1_RVT delay_reg_36__11_ ( .D ( n688 ) , .SI ( net_PTECO_HOLD_NET663 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_36__11_ ) , 
     .QN ( n3191 ) ) ;
-SDFFX1_RVT delay_reg_36__10_ ( .D ( n689 ) , .SI ( n3162 ) , 
+SDFFX1_RVT delay_reg_36__10_ ( .D ( n689 ) , .SI ( net_PTECO_HOLD_NET970 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_36__10_ ) , 
     .QN ( n3192 ) ) ;
-SDFFX1_RVT delay_reg_36__9_ ( .D ( n690 ) , .SI ( n3164 ) , 
+SDFFX1_RVT delay_reg_36__9_ ( .D ( n690 ) , .SI ( net_PTECO_HOLD_NET611 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_36__9_ ) , 
     .QN ( n3193 ) ) ;
-SDFFX1_RVT delay_reg_36__8_ ( .D ( n691 ) , .SI ( n3210 ) , 
+SDFFX1_RVT delay_reg_36__8_ ( .D ( n691 ) , .SI ( net_PTECO_HOLD_NET413 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_36__8_ ) , 
     .QN ( n3194 ) ) ;
-SDFFX1_RVT delay_reg_36__7_ ( .D ( n692 ) , .SI ( n3316 ) , 
+SDFFX1_RVT delay_reg_36__7_ ( .D ( n692 ) , .SI ( net_PTECO_HOLD_NET1027 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_36__7_ ) , 
     .QN ( n3195 ) ) ;
-SDFFX1_RVT delay_reg_36__6_ ( .D ( n693 ) , .SI ( n3150 ) , 
+SDFFX1_RVT delay_reg_36__6_ ( .D ( n693 ) , .SI ( net_PTECO_HOLD_NET984 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_36__6_ ) , 
     .QN ( n3196 ) ) ;
-SDFFX1_RVT delay_reg_36__5_ ( .D ( n694 ) , .SI ( n3198 ) , 
+SDFFX1_RVT delay_reg_36__5_ ( .D ( n694 ) , .SI ( net_PTECO_HOLD_NET649 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_36__5_ ) , 
     .QN ( n3197 ) ) ;
-SDFFX1_RVT delay_reg_36__4_ ( .D ( n695 ) , .SI ( n3213 ) , 
+SDFFX1_RVT delay_reg_36__4_ ( .D ( n695 ) , .SI ( net_PTECO_HOLD_NET827 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_36__4_ ) , 
     .QN ( n3198 ) ) ;
-SDFFX1_RVT delay_reg_36__3_ ( .D ( n696 ) , .SI ( n3168 ) , 
+SDFFX1_RVT delay_reg_36__3_ ( .D ( n696 ) , .SI ( net_PTECO_HOLD_NET860 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_36__3_ ) , 
     .QN ( n3199 ) ) ;
-SDFFX1_RVT delay_reg_36__2_ ( .D ( n697 ) , .SI ( n3322 ) , 
+SDFFX1_RVT delay_reg_36__2_ ( .D ( n697 ) , .SI ( net_PTECO_HOLD_NET253 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_36__2_ ) , 
     .QN ( n3200 ) ) ;
-SDFFX1_RVT delay_reg_36__1_ ( .D ( n698 ) , .SI ( n3185 ) , 
+SDFFX1_RVT delay_reg_36__1_ ( .D ( n698 ) , .SI ( net_PTECO_HOLD_NET521 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_36__1_ ) , 
     .QN ( n3201 ) ) ;
-SDFFX1_RVT delay_reg_36__0_ ( .D ( n699 ) , .SI ( n2698 ) , 
+SDFFX1_RVT delay_reg_36__0_ ( .D ( n699 ) , .SI ( net_PTECO_HOLD_NET1116 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_36__0_ ) , 
     .QN ( n2634 ) ) ;
-SDFFX1_RVT delay_reg_37__16_ ( .D ( n700 ) , .SI ( delay_25__16_ ) , 
+SDFFX1_RVT delay_reg_37__16_ ( .D ( n700 ) , .SI ( net_PTECO_HOLD_NET1343 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_37__16_ ) , 
     .QN ( n2662 ) ) ;
-SDFFX1_RVT delay_reg_37__15_ ( .D ( n701 ) , .SI ( n3355 ) , 
+SDFFX1_RVT delay_reg_37__15_ ( .D ( n701 ) , .SI ( net_PTECO_HOLD_NET439 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_37__15_ ) , 
     .QN ( n3172 ) ) ;
-SDFFX1_RVT delay_reg_37__14_ ( .D ( n702 ) , .SI ( n3324 ) , 
+SDFFX1_RVT delay_reg_37__14_ ( .D ( n702 ) , .SI ( net_PTECO_HOLD_NET314 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_37__14_ ) , 
     .QN ( n3173 ) ) ;
-SDFFX1_RVT delay_reg_37__13_ ( .D ( n703 ) , .SI ( n3309 ) , 
+SDFFX1_RVT delay_reg_37__13_ ( .D ( n703 ) , .SI ( net_PTECO_HOLD_NET1148 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_37__13_ ) , 
     .QN ( n3174 ) ) ;
-SDFFX1_RVT delay_reg_37__12_ ( .D ( n704 ) , .SI ( n3326 ) , 
+SDFFX1_RVT delay_reg_37__12_ ( .D ( n704 ) , .SI ( net_PTECO_HOLD_NET575 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_37__12_ ) , 
     .QN ( n3175 ) ) ;
-SDFFX1_RVT delay_reg_37__11_ ( .D ( n705 ) , .SI ( n3327 ) , 
+SDFFX1_RVT delay_reg_37__11_ ( .D ( n705 ) , .SI ( net_PTECO_HOLD_NET1163 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_37__11_ ) , 
     .QN ( n3176 ) ) ;
-SDFFX1_RVT delay_reg_37__10_ ( .D ( n706 ) , .SI ( n3207 ) , 
+SDFFX1_RVT delay_reg_37__10_ ( .D ( n706 ) , .SI ( net_PTECO_HOLD_NET1104 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_37__10_ ) , 
     .QN ( n3177 ) ) ;
-SDFFX1_RVT delay_reg_37__9_ ( .D ( n707 ) , .SI ( n3331 ) , 
+SDFFX1_RVT delay_reg_37__9_ ( .D ( n707 ) , .SI ( net_PTECO_HOLD_NET444 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_37__9_ ) , 
     .QN ( n3178 ) ) ;
-SDFFX1_RVT delay_reg_37__8_ ( .D ( n708 ) , .SI ( n3194 ) , 
+SDFFX1_RVT delay_reg_37__8_ ( .D ( n708 ) , .SI ( net_PTECO_HOLD_NET597 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_37__8_ ) , 
     .QN ( n3179 ) ) ;
-SDFFX1_RVT delay_reg_37__7_ ( .D ( n709 ) , .SI ( n3333 ) , 
+SDFFX1_RVT delay_reg_37__7_ ( .D ( n709 ) , .SI ( net_PTECO_HOLD_NET345 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_37__7_ ) , 
     .QN ( n3180 ) ) ;
-SDFFX1_RVT delay_reg_37__6_ ( .D ( n710 ) , .SI ( n3166 ) , 
+SDFFX1_RVT delay_reg_37__6_ ( .D ( n710 ) , .SI ( net_PTECO_HOLD_NET912 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_37__6_ ) , 
     .QN ( n3181 ) ) ;
-SDFFX1_RVT delay_reg_37__5_ ( .D ( n711 ) , .SI ( n3349 ) , 
+SDFFX1_RVT delay_reg_37__5_ ( .D ( n711 ) , .SI ( net_PTECO_HOLD_NET940 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_37__5_ ) , 
     .QN ( n3182 ) ) ;
-SDFFX1_RVT delay_reg_37__4_ ( .D ( n712 ) , .SI ( n3167 ) , 
+SDFFX1_RVT delay_reg_37__4_ ( .D ( n712 ) , .SI ( net_PTECO_HOLD_NET1026 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_37__4_ ) , 
     .QN ( n3183 ) ) ;
-SDFFX1_RVT delay_reg_37__3_ ( .D ( n713 ) , .SI ( n3336 ) , 
+SDFFX1_RVT delay_reg_37__3_ ( .D ( n713 ) , .SI ( net_PTECO_HOLD_NET996 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_37__3_ ) , 
     .QN ( n3184 ) ) ;
-SDFFX1_RVT delay_reg_37__2_ ( .D ( n714 ) , .SI ( n3200 ) , 
+SDFFX1_RVT delay_reg_37__2_ ( .D ( n714 ) , .SI ( net_PTECO_HOLD_NET701 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_37__2_ ) , 
     .QN ( n3185 ) ) ;
-SDFFX1_RVT delay_reg_37__1_ ( .D ( n715 ) , .SI ( n3216 ) , 
+SDFFX1_RVT delay_reg_37__1_ ( .D ( n715 ) , .SI ( net_PTECO_HOLD_NET1171 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_37__1_ ) , 
     .QN ( n3186 ) ) ;
-SDFFX1_RVT delay_reg_37__0_ ( .D ( n716 ) , .SI ( n2719 ) , 
+SDFFX1_RVT delay_reg_37__0_ ( .D ( n716 ) , .SI ( net_PTECO_HOLD_NET941 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_37__0_ ) , 
     .QN ( n2626 ) ) ;
-SDFFX1_RVT delay_reg_38__16_ ( .D ( n717 ) , .SI ( n3142 ) , 
+SDFFX1_RVT delay_reg_38__16_ ( .D ( n717 ) , .SI ( net_PTECO_HOLD_NET854 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_38__16_ ) , 
     .QN ( n2738 ) ) ;
-SDFFX1_RVT delay_reg_38__15_ ( .D ( n718 ) , .SI ( n3339 ) , 
+SDFFX1_RVT delay_reg_38__15_ ( .D ( n718 ) , .SI ( net_PTECO_HOLD_NET816 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_38__15_ ) , 
     .QN ( n3157 ) ) ;
-SDFFX1_RVT delay_reg_38__14_ ( .D ( n719 ) , .SI ( delay_36__16_ ) , 
+SDFFX1_RVT delay_reg_38__14_ ( .D ( n719 ) , .SI ( net_PTECO_HOLD_NET1313 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_38__14_ ) , 
     .QN ( n3158 ) ) ;
-SDFFX1_RVT delay_reg_38__13_ ( .D ( n720 ) , .SI ( n3341 ) , 
+SDFFX1_RVT delay_reg_38__13_ ( .D ( n720 ) , .SI ( net_PTECO_HOLD_NET321 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_38__13_ ) , 
     .QN ( n3159 ) ) ;
-SDFFX1_RVT delay_reg_38__12_ ( .D ( n721 ) , .SI ( n3342 ) , 
+SDFFX1_RVT delay_reg_38__12_ ( .D ( n721 ) , .SI ( net_PTECO_HOLD_NET874 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_38__12_ ) , 
     .QN ( n3160 ) ) ;
-SDFFX1_RVT delay_reg_38__11_ ( .D ( n722 ) , .SI ( n3328 ) , 
+SDFFX1_RVT delay_reg_38__11_ ( .D ( n722 ) , .SI ( net_PTECO_HOLD_NET261 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_38__11_ ) , 
     .QN ( n3161 ) ) ;
-SDFFX1_RVT delay_reg_38__10_ ( .D ( n723 ) , .SI ( n3345 ) , 
+SDFFX1_RVT delay_reg_38__10_ ( .D ( n723 ) , .SI ( net_PTECO_HOLD_NET633 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_38__10_ ) , 
     .QN ( n3162 ) ) ;
-SDFFX1_RVT delay_reg_38__9_ ( .D ( n724 ) , .SI ( n3330 ) , 
+SDFFX1_RVT delay_reg_38__9_ ( .D ( n724 ) , .SI ( net_PTECO_HOLD_NET703 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_38__9_ ) , 
     .QN ( n3163 ) ) ;
-SDFFX1_RVT delay_reg_38__8_ ( .D ( n725 ) , .SI ( n3376 ) , 
+SDFFX1_RVT delay_reg_38__8_ ( .D ( n725 ) , .SI ( net_PTECO_HOLD_NET1065 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_38__8_ ) , 
     .QN ( n3164 ) ) ;
-SDFFX1_RVT delay_reg_38__7_ ( .D ( n726 ) , .SI ( n3180 ) , 
+SDFFX1_RVT delay_reg_38__7_ ( .D ( n726 ) , .SI ( net_PTECO_HOLD_NET671 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_38__7_ ) , 
     .QN ( n3165 ) ) ;
-SDFFX1_RVT delay_reg_38__6_ ( .D ( n727 ) , .SI ( n3363 ) , 
+SDFFX1_RVT delay_reg_38__6_ ( .D ( n727 ) , .SI ( net_PTECO_HOLD_NET801 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_38__6_ ) , 
     .QN ( n3166 ) ) ;
-SDFFX1_RVT delay_reg_38__5_ ( .D ( n728 ) , .SI ( n3182 ) , 
+SDFFX1_RVT delay_reg_38__5_ ( .D ( n728 ) , .SI ( net_PTECO_HOLD_NET847 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_38__5_ ) , 
     .QN ( n3167 ) ) ;
-SDFFX1_RVT delay_reg_38__4_ ( .D ( n729 ) , .SI ( n3153 ) , 
+SDFFX1_RVT delay_reg_38__4_ ( .D ( n729 ) , .SI ( net_PTECO_HOLD_NET419 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_38__4_ ) , 
     .QN ( n3168 ) ) ;
-SDFFX1_RVT delay_reg_38__3_ ( .D ( n730 ) , .SI ( n3199 ) , 
+SDFFX1_RVT delay_reg_38__3_ ( .D ( n730 ) , .SI ( net_PTECO_HOLD_NET565 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_38__3_ ) , 
     .QN ( n3169 ) ) ;
-SDFFX1_RVT delay_reg_38__2_ ( .D ( n731 ) , .SI ( n3154 ) , 
+SDFFX1_RVT delay_reg_38__2_ ( .D ( n731 ) , .SI ( net_PTECO_HOLD_NET947 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_38__2_ ) , 
     .QN ( n3170 ) ) ;
-SDFFX1_RVT delay_reg_38__1_ ( .D ( n732 ) , .SI ( n3367 ) , 
+SDFFX1_RVT delay_reg_38__1_ ( .D ( n732 ) , .SI ( net_PTECO_HOLD_NET786 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_38__1_ ) , 
     .QN ( n3171 ) ) ;
-SDFFX1_RVT delay_reg_38__0_ ( .D ( n733 ) , .SI ( n2642 ) , 
+SDFFX1_RVT delay_reg_38__0_ ( .D ( n733 ) , .SI ( net_PTECO_HOLD_NET1075 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_38__0_ ) , 
     .QN ( n2647 ) ) ;
-SDFFX1_RVT delay_reg_39__16_ ( .D ( n734 ) , .SI ( delay_38__16_ ) , 
+SDFFX1_RVT delay_reg_39__16_ ( .D ( n734 ) , .SI ( net_PTECO_HOLD_NET1246 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_39__16_ ) , 
     .QN ( n2686 ) ) ;
-SDFFX1_RVT delay_reg_39__15_ ( .D ( n735 ) , .SI ( delay_24__16_ ) , 
+SDFFX1_RVT delay_reg_39__15_ ( .D ( n735 ) , .SI ( net_PTECO_HOLD_NET1263 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_39__15_ ) , 
     .QN ( n3142 ) ) ;
-SDFFX1_RVT delay_reg_39__14_ ( .D ( n736 ) , .SI ( n3369 ) , 
+SDFFX1_RVT delay_reg_39__14_ ( .D ( n736 ) , .SI ( net_PTECO_HOLD_NET62 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_39__14_ ) , 
     .QN ( n3143 ) ) ;
-SDFFX1_RVT delay_reg_39__13_ ( .D ( n737 ) , .SI ( n3159 ) , 
+SDFFX1_RVT delay_reg_39__13_ ( .D ( n737 ) , .SI ( net_PTECO_HOLD_NET426 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_39__13_ ) , 
     .QN ( n3144 ) ) ;
-SDFFX1_RVT delay_reg_39__12_ ( .D ( n738 ) , .SI ( n3294 ) , 
+SDFFX1_RVT delay_reg_39__12_ ( .D ( n738 ) , .SI ( net_PTECO_HOLD_NET961 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_39__12_ ) , 
     .QN ( n3145 ) ) ;
-SDFFX1_RVT delay_reg_39__11_ ( .D ( n739 ) , .SI ( n3221 ) , 
+SDFFX1_RVT delay_reg_39__11_ ( .D ( n739 ) , .SI ( net_PTECO_HOLD_NET743 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_39__11_ ) , 
     .QN ( n3146 ) ) ;
-SDFFX1_RVT delay_reg_39__10_ ( .D ( n740 ) , .SI ( n3374 ) , 
+SDFFX1_RVT delay_reg_39__10_ ( .D ( n740 ) , .SI ( net_PTECO_HOLD_NET1137 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_39__10_ ) , 
     .QN ( n3147 ) ) ;
-SDFFX1_RVT delay_reg_39__9_ ( .D ( n741 ) , .SI ( n3360 ) , 
+SDFFX1_RVT delay_reg_39__9_ ( .D ( n741 ) , .SI ( net_PTECO_HOLD_NET886 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_39__9_ ) , 
     .QN ( n3148 ) ) ;
-SDFFX1_RVT delay_reg_39__8_ ( .D ( n742 ) , .SI ( n3361 ) , 
+SDFFX1_RVT delay_reg_39__8_ ( .D ( n742 ) , .SI ( net_PTECO_HOLD_NET926 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_39__8_ ) , 
     .QN ( n3149 ) ) ;
-SDFFX1_RVT delay_reg_39__7_ ( .D ( n743 ) , .SI ( n3377 ) , 
+SDFFX1_RVT delay_reg_39__7_ ( .D ( n743 ) , .SI ( net_PTECO_HOLD_NET1100 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_39__7_ ) , 
     .QN ( n3150 ) ) ;
-SDFFX1_RVT delay_reg_39__6_ ( .D ( n744 ) , .SI ( n3211 ) , 
+SDFFX1_RVT delay_reg_39__6_ ( .D ( n744 ) , .SI ( net_PTECO_HOLD_NET1082 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_39__6_ ) , 
     .QN ( n3151 ) ) ;
-SDFFX1_RVT delay_reg_39__5_ ( .D ( n745 ) , .SI ( n3197 ) , 
+SDFFX1_RVT delay_reg_39__5_ ( .D ( n745 ) , .SI ( net_PTECO_HOLD_NET546 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_39__5_ ) , 
     .QN ( n3152 ) ) ;
-SDFFX1_RVT delay_reg_39__4_ ( .D ( n746 ) , .SI ( n3214 ) , 
+SDFFX1_RVT delay_reg_39__4_ ( .D ( n746 ) , .SI ( net_PTECO_HOLD_NET407 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_39__4_ ) , 
     .QN ( n3153 ) ) ;
-SDFFX1_RVT delay_reg_39__3_ ( .D ( n747 ) , .SI ( n3169 ) , 
+SDFFX1_RVT delay_reg_39__3_ ( .D ( n747 ) , .SI ( net_PTECO_HOLD_NET991 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_39__3_ ) , 
     .QN ( n3154 ) ) ;
-SDFFX1_RVT delay_reg_39__2_ ( .D ( n748 ) , .SI ( n3217 ) , 
+SDFFX1_RVT delay_reg_39__2_ ( .D ( n748 ) , .SI ( net_PTECO_HOLD_NET200 ) , 
     .SE ( HFSNET_1150 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_39__2_ ) , 
     .QN ( n3155 ) ) ;
-SDFFX1_RVT delay_reg_39__1_ ( .D ( n749 ) , .SI ( n3171 ) , 
+SDFFX1_RVT delay_reg_39__1_ ( .D ( n749 ) , .SI ( net_PTECO_HOLD_NET889 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_39__1_ ) , 
     .QN ( n3156 ) ) ;
-SDFFX1_RVT delay_reg_39__0_ ( .D ( n750 ) , .SI ( n2701 ) , 
+SDFFX1_RVT delay_reg_39__0_ ( .D ( n750 ) , .SI ( net_PTECO_HOLD_NET1069 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_39__0_ ) , 
     .QN ( n2642 ) ) ;
-SDFFX1_RVT delay_reg_40__16_ ( .D ( n751 ) , .SI ( n2782 ) , 
+SDFFX1_RVT delay_reg_40__16_ ( .D ( n751 ) , .SI ( net_PTECO_HOLD_NET36 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_40__16_ ) , 
     .QN ( n2742 ) ) ;
-SDFFX1_RVT delay_reg_40__15_ ( .D ( n752 ) , .SI ( delay_37__16_ ) , 
+SDFFX1_RVT delay_reg_40__15_ ( .D ( n752 ) , .SI ( net_PTECO_HOLD_NET1265 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_40__15_ ) , 
     .QN ( n3127 ) ) ;
-SDFFX1_RVT delay_reg_40__14_ ( .D ( n753 ) , .SI ( n3384 ) , 
+SDFFX1_RVT delay_reg_40__14_ ( .D ( n753 ) , .SI ( net_PTECO_HOLD_NET1000 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_40__14_ ) , 
     .QN ( n3128 ) ) ;
-SDFFX1_RVT delay_reg_40__13_ ( .D ( n754 ) , .SI ( n3202 ) , 
+SDFFX1_RVT delay_reg_40__13_ ( .D ( n754 ) , .SI ( net_PTECO_HOLD_NET648 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_40__13_ ) , 
     .QN ( n3129 ) ) ;
-SDFFX1_RVT delay_reg_40__12_ ( .D ( n755 ) , .SI ( n3204 ) , 
+SDFFX1_RVT delay_reg_40__12_ ( .D ( n755 ) , .SI ( net_PTECO_HOLD_NET647 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_40__12_ ) , 
     .QN ( n3130 ) ) ;
-SDFFX1_RVT delay_reg_40__11_ ( .D ( n756 ) , .SI ( n3146 ) , 
+SDFFX1_RVT delay_reg_40__11_ ( .D ( n756 ) , .SI ( net_PTECO_HOLD_NET381 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_40__11_ ) , 
     .QN ( n3131 ) ) ;
-SDFFX1_RVT delay_reg_40__10_ ( .D ( n757 ) , .SI ( n3118 ) , 
+SDFFX1_RVT delay_reg_40__10_ ( .D ( n757 ) , .SI ( net_PTECO_HOLD_NET572 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_40__10_ ) , 
     .QN ( n3132 ) ) ;
-SDFFX1_RVT delay_reg_40__9_ ( .D ( n758 ) , .SI ( n3375 ) , 
+SDFFX1_RVT delay_reg_40__9_ ( .D ( n758 ) , .SI ( net_PTECO_HOLD_NET409 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_40__9_ ) , 
     .QN ( n3133 ) ) ;
-SDFFX1_RVT delay_reg_40__8_ ( .D ( n759 ) , .SI ( n3390 ) , 
+SDFFX1_RVT delay_reg_40__8_ ( .D ( n759 ) , .SI ( net_PTECO_HOLD_NET1062 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_40__8_ ) , 
     .QN ( n3134 ) ) ;
-SDFFX1_RVT delay_reg_40__7_ ( .D ( n760 ) , .SI ( n3362 ) , 
+SDFFX1_RVT delay_reg_40__7_ ( .D ( n760 ) , .SI ( net_PTECO_HOLD_NET639 ) , 
     .SE ( HFSNET_1151 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_40__7_ ) , 
     .QN ( n3135 ) ) ;
-SDFFX1_RVT delay_reg_40__6_ ( .D ( n761 ) , .SI ( n3303 ) , 
+SDFFX1_RVT delay_reg_40__6_ ( .D ( n761 ) , .SI ( net_PTECO_HOLD_NET527 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_40__6_ ) , 
     .QN ( n3136 ) ) ;
-SDFFX1_RVT delay_reg_40__5_ ( .D ( n762 ) , .SI ( n3212 ) , 
+SDFFX1_RVT delay_reg_40__5_ ( .D ( n762 ) , .SI ( net_PTECO_HOLD_NET1036 ) , 
     .SE ( HFSNET_1149 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_40__5_ ) , 
     .QN ( n3137 ) ) ;
-SDFFX1_RVT delay_reg_40__4_ ( .D ( n763 ) , .SI ( n3123 ) , 
+SDFFX1_RVT delay_reg_40__4_ ( .D ( n763 ) , .SI ( net_PTECO_HOLD_NET741 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_40__4_ ) , 
     .QN ( n3138 ) ) ;
-SDFFX1_RVT delay_reg_40__3_ ( .D ( n764 ) , .SI ( n3155 ) , 
+SDFFX1_RVT delay_reg_40__3_ ( .D ( n764 ) , .SI ( net_PTECO_HOLD_NET332 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_40__3_ ) , 
     .QN ( n3139 ) ) ;
-SDFFX1_RVT delay_reg_40__2_ ( .D ( n765 ) , .SI ( n3124 ) , 
+SDFFX1_RVT delay_reg_40__2_ ( .D ( n765 ) , .SI ( net_PTECO_HOLD_NET697 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_40__2_ ) , 
     .QN ( n3140 ) ) ;
-SDFFX1_RVT delay_reg_40__1_ ( .D ( n766 ) , .SI ( n3156 ) , 
+SDFFX1_RVT delay_reg_40__1_ ( .D ( n766 ) , .SI ( net_PTECO_HOLD_NET829 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_40__1_ ) , 
     .QN ( n3141 ) ) ;
-SDFFX1_RVT delay_reg_40__0_ ( .D ( n767 ) , .SI ( n2712 ) , 
+SDFFX1_RVT delay_reg_40__0_ ( .D ( n767 ) , .SI ( net_PTECO_HOLD_NET1105 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_40__0_ ) , 
     .QN ( n2640 ) ) ;
-SDFFX1_RVT delay_reg_41__16_ ( .D ( n768 ) , .SI ( n3097 ) , 
+SDFFX1_RVT delay_reg_41__16_ ( .D ( n768 ) , .SI ( net_PTECO_HOLD_NET1013 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_41__16_ ) , 
     .QN ( n2675 ) ) ;
-SDFFX1_RVT delay_reg_41__15_ ( .D ( n769 ) , .SI ( delay_22__16_ ) , 
+SDFFX1_RVT delay_reg_41__15_ ( .D ( n769 ) , .SI ( net_PTECO_HOLD_NET1256 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_41__15_ ) , 
     .QN ( n3112 ) ) ;
-SDFFX1_RVT delay_reg_41__14_ ( .D ( n770 ) , .SI ( n3385 ) , 
+SDFFX1_RVT delay_reg_41__14_ ( .D ( n770 ) , .SI ( net_PTECO_HOLD_NET576 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_41__14_ ) , 
     .QN ( n3113 ) ) ;
-SDFFX1_RVT delay_reg_41__13_ ( .D ( n771 ) , .SI ( delay_27__16_ ) , 
+SDFFX1_RVT delay_reg_41__13_ ( .D ( n771 ) , .SI ( net_PTECO_HOLD_NET1333 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_41__13_ ) , 
     .QN ( n3114 ) ) ;
-SDFFX1_RVT delay_reg_41__12_ ( .D ( n772 ) , .SI ( n3295 ) , 
+SDFFX1_RVT delay_reg_41__12_ ( .D ( n772 ) , .SI ( net_PTECO_HOLD_NET400 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_41__12_ ) , 
     .QN ( n3115 ) ) ;
-SDFFX1_RVT delay_reg_41__11_ ( .D ( n773 ) , .SI ( n3403 ) , 
+SDFFX1_RVT delay_reg_41__11_ ( .D ( n773 ) , .SI ( net_PTECO_HOLD_NET552 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_41__11_ ) , 
     .QN ( n3116 ) ) ;
-SDFFX1_RVT delay_reg_41__10_ ( .D ( n774 ) , .SI ( n3223 ) , 
+SDFFX1_RVT delay_reg_41__10_ ( .D ( n774 ) , .SI ( net_PTECO_HOLD_NET1066 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_41__10_ ) , 
     .QN ( n3117 ) ) ;
-SDFFX1_RVT delay_reg_41__9_ ( .D ( n775 ) , .SI ( n3133 ) , 
+SDFFX1_RVT delay_reg_41__9_ ( .D ( n775 ) , .SI ( net_PTECO_HOLD_NET705 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_41__9_ ) , 
     .QN ( n3118 ) ) ;
-SDFFX1_RVT delay_reg_41__8_ ( .D ( n776 ) , .SI ( n3224 ) , 
+SDFFX1_RVT delay_reg_41__8_ ( .D ( n776 ) , .SI ( net_PTECO_HOLD_NET988 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_41__8_ ) , 
     .QN ( n3119 ) ) ;
-SDFFX1_RVT delay_reg_41__7_ ( .D ( n777 ) , .SI ( n3225 ) , 
+SDFFX1_RVT delay_reg_41__7_ ( .D ( n777 ) , .SI ( net_PTECO_HOLD_NET1162 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_41__7_ ) , 
     .QN ( n3120 ) ) ;
-SDFFX1_RVT delay_reg_41__6_ ( .D ( n778 ) , .SI ( n3136 ) , 
+SDFFX1_RVT delay_reg_41__6_ ( .D ( n778 ) , .SI ( net_PTECO_HOLD_NET989 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_41__6_ ) , 
     .QN ( n3121 ) ) ;
-SDFFX1_RVT delay_reg_41__5_ ( .D ( n779 ) , .SI ( n3394 ) , 
+SDFFX1_RVT delay_reg_41__5_ ( .D ( n779 ) , .SI ( net_PTECO_HOLD_NET928 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_41__5_ ) , 
     .QN ( n3122 ) ) ;
-SDFFX1_RVT delay_reg_41__4_ ( .D ( n780 ) , .SI ( n3230 ) , 
+SDFFX1_RVT delay_reg_41__4_ ( .D ( n780 ) , .SI ( net_PTECO_HOLD_NET204 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_41__4_ ) , 
     .QN ( n3123 ) ) ;
-SDFFX1_RVT delay_reg_41__3_ ( .D ( n781 ) , .SI ( n3426 ) , 
+SDFFX1_RVT delay_reg_41__3_ ( .D ( n781 ) , .SI ( net_PTECO_HOLD_NET586 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_41__3_ ) , 
     .QN ( n3124 ) ) ;
-SDFFX1_RVT delay_reg_41__2_ ( .D ( n782 ) , .SI ( n3398 ) , 
+SDFFX1_RVT delay_reg_41__2_ ( .D ( n782 ) , .SI ( net_PTECO_HOLD_NET617 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_41__2_ ) , 
     .QN ( n3125 ) ) ;
-SDFFX1_RVT delay_reg_41__1_ ( .D ( n783 ) , .SI ( n3141 ) , 
+SDFFX1_RVT delay_reg_41__1_ ( .D ( n783 ) , .SI ( net_PTECO_HOLD_NET849 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_41__1_ ) , 
     .QN ( n3126 ) ) ;
-SDFFX1_RVT delay_reg_41__0_ ( .D ( n784 ) , .SI ( n3126 ) , 
+SDFFX1_RVT delay_reg_41__0_ ( .D ( n784 ) , .SI ( net_PTECO_HOLD_NET1011 ) , 
     .SE ( ZBUF_701_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_41__0_ ) , 
     .QN ( n2656 ) ) ;
-SDFFX1_RVT delay_reg_42__16_ ( .D ( n785 ) , .SI ( n2785 ) , 
+SDFFX1_RVT delay_reg_42__16_ ( .D ( n785 ) , .SI ( net_PTECO_HOLD_NET34 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_42__16_ ) , 
     .QN ( n2754 ) ) ;
-SDFFX1_RVT delay_reg_42__15_ ( .D ( n786 ) , .SI ( delay_42__16_ ) , 
+SDFFX1_RVT delay_reg_42__15_ ( .D ( n786 ) , .SI ( net_PTECO_HOLD_NET1262 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_42__15_ ) , 
     .QN ( n3097 ) ) ;
-SDFFX1_RVT delay_reg_42__14_ ( .D ( n787 ) , .SI ( n3066 ) , 
+SDFFX1_RVT delay_reg_42__14_ ( .D ( n787 ) , .SI ( net_PTECO_HOLD_NET1033 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_42__14_ ) , 
     .QN ( n3098 ) ) ;
-SDFFX1_RVT delay_reg_42__13_ ( .D ( n788 ) , .SI ( n3114 ) , 
+SDFFX1_RVT delay_reg_42__13_ ( .D ( n788 ) , .SI ( net_PTECO_HOLD_NET477 ) , 
     .SE ( HFSNET_1147 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_42__13_ ) , 
     .QN ( n3099 ) ) ;
-SDFFX1_RVT delay_reg_42__12_ ( .D ( n789 ) , .SI ( n3220 ) , 
+SDFFX1_RVT delay_reg_42__12_ ( .D ( n789 ) , .SI ( net_PTECO_HOLD_NET771 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_42__12_ ) , 
     .QN ( n3100 ) ) ;
-SDFFX1_RVT delay_reg_42__11_ ( .D ( n790 ) , .SI ( n3418 ) , 
+SDFFX1_RVT delay_reg_42__11_ ( .D ( n790 ) , .SI ( net_PTECO_HOLD_NET897 ) , 
     .SE ( HFSNET_1144 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_42__11_ ) , 
     .QN ( n3101 ) ) ;
-SDFFX1_RVT delay_reg_42__10_ ( .D ( n791 ) , .SI ( n3434 ) , 
+SDFFX1_RVT delay_reg_42__10_ ( .D ( n791 ) , .SI ( net_PTECO_HOLD_NET1117 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_42__10_ ) , 
     .QN ( n3102 ) ) ;
-SDFFX1_RVT delay_reg_42__9_ ( .D ( n792 ) , .SI ( n3087 ) , 
+SDFFX1_RVT delay_reg_42__9_ ( .D ( n792 ) , .SI ( net_PTECO_HOLD_NET1115 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_42__9_ ) , 
     .QN ( n3103 ) ) ;
-SDFFX1_RVT delay_reg_42__8_ ( .D ( n793 ) , .SI ( n3119 ) , 
+SDFFX1_RVT delay_reg_42__8_ ( .D ( n793 ) , .SI ( net_PTECO_HOLD_NET967 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_42__8_ ) , 
     .QN ( n3104 ) ) ;
-SDFFX1_RVT delay_reg_42__7_ ( .D ( n794 ) , .SI ( n3422 ) , 
+SDFFX1_RVT delay_reg_42__7_ ( .D ( n794 ) , .SI ( net_PTECO_HOLD_NET747 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_42__7_ ) , 
     .QN ( n3105 ) ) ;
-SDFFX1_RVT delay_reg_42__6_ ( .D ( n795 ) , .SI ( n3288 ) , 
+SDFFX1_RVT delay_reg_42__6_ ( .D ( n795 ) , .SI ( net_PTECO_HOLD_NET504 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_42__6_ ) , 
     .QN ( n3106 ) ) ;
-SDFFX1_RVT delay_reg_42__5_ ( .D ( n796 ) , .SI ( n3122 ) , 
+SDFFX1_RVT delay_reg_42__5_ ( .D ( n796 ) , .SI ( net_PTECO_HOLD_NET1126 ) , 
     .SE ( HFSNET_1164 ) , .CLK ( ZCTSNET_10 ) , .Q ( delay_42__5_ ) , 
     .QN ( n3107 ) ) ;
-SDFFX1_RVT delay_reg_42__4_ ( .D ( n797 ) , .SI ( n3425 ) , 
+SDFFX1_RVT delay_reg_42__4_ ( .D ( n797 ) , .SI ( net_PTECO_HOLD_NET690 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_42__4_ ) , 
     .QN ( n3108 ) ) ;
-SDFFX1_RVT delay_reg_42__3_ ( .D ( n798 ) , .SI ( n3140 ) , 
+SDFFX1_RVT delay_reg_42__3_ ( .D ( n798 ) , .SI ( net_PTECO_HOLD_NET582 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_42__3_ ) , 
     .QN ( n3109 ) ) ;
-SDFFX1_RVT delay_reg_42__2_ ( .D ( n799 ) , .SI ( n3125 ) , 
+SDFFX1_RVT delay_reg_42__2_ ( .D ( n799 ) , .SI ( net_PTECO_HOLD_NET782 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_42__2_ ) , 
     .QN ( n3110 ) ) ;
-SDFFX1_RVT delay_reg_42__1_ ( .D ( n800 ) , .SI ( n3413 ) , 
+SDFFX1_RVT delay_reg_42__1_ ( .D ( n800 ) , .SI ( net_PTECO_HOLD_NET1028 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_42__1_ ) , 
     .QN ( n3111 ) ) ;
-SDFFX1_RVT delay_reg_42__0_ ( .D ( n801 ) , .SI ( n3111 ) , 
+SDFFX1_RVT delay_reg_42__0_ ( .D ( n801 ) , .SI ( net_PTECO_HOLD_NET471 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_42__0_ ) , 
     .QN ( n2631 ) ) ;
-SDFFX1_RVT delay_reg_43__16_ ( .D ( n802 ) , .SI ( delay_20__16_ ) , 
+SDFFX1_RVT delay_reg_43__16_ ( .D ( n802 ) , .SI ( net_PTECO_HOLD_NET1315 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_43__16_ ) , 
     .QN ( n2683 ) ) ;
-SDFFX1_RVT delay_reg_43__15_ ( .D ( n803 ) , .SI ( dftopt23_gOb7 ) , 
+SDFFX1_RVT delay_reg_43__15_ ( .D ( n803 ) , .SI ( net_PTECO_HOLD_NET39 ) , 
     .SE ( HFSNET_1145 ) , .CLK ( ZCTSNET_4 ) , .Q ( delay_43__15_ ) , 
     .QN ( n3082 ) ) ;
-SDFFX1_RVT delay_reg_43__14_ ( .D ( n804 ) , .SI ( n3401 ) , 
+SDFFX1_RVT delay_reg_43__14_ ( .D ( n804 ) , .SI ( net_PTECO_HOLD_NET580 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_43__14_ ) , 
     .QN ( n3083 ) ) ;
-SDFFX1_RVT delay_reg_43__13_ ( .D ( n805 ) , .SI ( n3430 ) , 
+SDFFX1_RVT delay_reg_43__13_ ( .D ( n805 ) , .SI ( net_PTECO_HOLD_NET1050 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_43__13_ ) , 
     .QN ( n3084 ) ) ;
-SDFFX1_RVT delay_reg_43__12_ ( .D ( n806 ) , .SI ( n3280 ) , 
+SDFFX1_RVT delay_reg_43__12_ ( .D ( n806 ) , .SI ( net_PTECO_HOLD_NET347 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_43__12_ ) , 
     .QN ( n3085 ) ) ;
-SDFFX1_RVT delay_reg_43__11_ ( .D ( n807 ) , .SI ( n3404 ) , 
+SDFFX1_RVT delay_reg_43__11_ ( .D ( n807 ) , .SI ( net_PTECO_HOLD_NET209 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_43__11_ ) , 
     .QN ( n3086 ) ) ;
-SDFFX1_RVT delay_reg_43__10_ ( .D ( n808 ) , .SI ( n3117 ) , 
+SDFFX1_RVT delay_reg_43__10_ ( .D ( n808 ) , .SI ( net_PTECO_HOLD_NET859 ) , 
     .SE ( HFSNET_1148 ) , .CLK ( ZCTSNET_2 ) , .Q ( delay_43__10_ ) , 
     .QN ( n3087 ) ) ;
-SDFFX1_RVT delay_reg_43__9_ ( .D ( n809 ) , .SI ( n3420 ) , 
+SDFFX1_RVT delay_reg_43__9_ ( .D ( n809 ) , .SI ( net_PTECO_HOLD_NET712 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_43__9_ ) , 
     .QN ( n3088 ) ) ;
-SDFFX1_RVT delay_reg_43__8_ ( .D ( n810 ) , .SI ( n3240 ) , 
+SDFFX1_RVT delay_reg_43__8_ ( .D ( n810 ) , .SI ( net_PTECO_HOLD_NET949 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_43__8_ ) , 
     .QN ( n3089 ) ) ;
-SDFFX1_RVT delay_reg_43__7_ ( .D ( n811 ) , .SI ( n3241 ) , 
+SDFFX1_RVT delay_reg_43__7_ ( .D ( n811 ) , .SI ( net_PTECO_HOLD_NET892 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_43__7_ ) , 
     .QN ( n3090 ) ) ;
-SDFFX1_RVT delay_reg_43__6_ ( .D ( n812 ) , .SI ( n3423 ) , 
+SDFFX1_RVT delay_reg_43__6_ ( .D ( n812 ) , .SI ( net_PTECO_HOLD_NET1047 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_43__6_ ) , 
     .QN ( n3091 ) ) ;
-SDFFX1_RVT delay_reg_43__5_ ( .D ( n813 ) , .SI ( n3439 ) , 
+SDFFX1_RVT delay_reg_43__5_ ( .D ( n813 ) , .SI ( net_PTECO_HOLD_NET515 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_43__5_ ) , 
     .QN ( n3092 ) ) ;
-SDFFX1_RVT delay_reg_43__4_ ( .D ( n814 ) , .SI ( n3076 ) , 
+SDFFX1_RVT delay_reg_43__4_ ( .D ( n814 ) , .SI ( net_PTECO_HOLD_NET902 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_43__4_ ) , 
     .QN ( n3093 ) ) ;
-SDFFX1_RVT delay_reg_43__3_ ( .D ( n815 ) , .SI ( n3441 ) , 
+SDFFX1_RVT delay_reg_43__3_ ( .D ( n815 ) , .SI ( net_PTECO_HOLD_NET901 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_43__3_ ) , 
     .QN ( n3094 ) ) ;
-SDFFX1_RVT delay_reg_43__2_ ( .D ( n816 ) , .SI ( n3412 ) , 
+SDFFX1_RVT delay_reg_43__2_ ( .D ( n816 ) , .SI ( net_PTECO_HOLD_NET971 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_43__2_ ) , 
     .QN ( n3095 ) ) ;
-SDFFX1_RVT delay_reg_43__1_ ( .D ( n817 ) , .SI ( n2695 ) , 
+SDFFX1_RVT delay_reg_43__1_ ( .D ( n817 ) , .SI ( net_PTECO_HOLD_NET1101 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_43__1_ ) , 
     .QN ( n3096 ) ) ;
-SDFFX1_RVT delay_reg_43__0_ ( .D ( n818 ) , .SI ( n3096 ) , 
+SDFFX1_RVT delay_reg_43__0_ ( .D ( n818 ) , .SI ( net_PTECO_HOLD_NET695 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_43__0_ ) , 
     .QN ( n2644 ) ) ;
-SDFFX1_RVT delay_reg_44__16_ ( .D ( n819 ) , .SI ( delay_43__16_ ) , 
+SDFFX1_RVT delay_reg_44__16_ ( .D ( n819 ) , .SI ( net_PTECO_HOLD_NET1260 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_44__16_ ) , 
     .QN ( n2750 ) ) ;
-SDFFX1_RVT delay_reg_44__15_ ( .D ( n820 ) , .SI ( n3460 ) , 
+SDFFX1_RVT delay_reg_44__15_ ( .D ( n820 ) , .SI ( net_PTECO_HOLD_NET653 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_44__15_ ) , 
     .QN ( n3066 ) ) ;
-SDFFX1_RVT delay_reg_44__14_ ( .D ( n821 ) , .SI ( n3445 ) , 
+SDFFX1_RVT delay_reg_44__14_ ( .D ( n821 ) , .SI ( net_PTECO_HOLD_NET792 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_44__14_ ) , 
     .QN ( n3067 ) ) ;
-SDFFX1_RVT delay_reg_44__13_ ( .D ( n822 ) , .SI ( delay_29__16_ ) , 
+SDFFX1_RVT delay_reg_44__13_ ( .D ( n822 ) , .SI ( net_PTECO_HOLD_NET1308 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_1 ) , .Q ( delay_44__13_ ) , 
     .QN ( n3068 ) ) ;
-SDFFX1_RVT delay_reg_44__12_ ( .D ( n823 ) , .SI ( n3264 ) , 
+SDFFX1_RVT delay_reg_44__12_ ( .D ( n823 ) , .SI ( net_PTECO_HOLD_NET968 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_44__12_ ) , 
     .QN ( n3069 ) ) ;
-SDFFX1_RVT delay_reg_44__11_ ( .D ( n824 ) , .SI ( n3433 ) , 
+SDFFX1_RVT delay_reg_44__11_ ( .D ( n824 ) , .SI ( net_PTECO_HOLD_NET657 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_0 ) , .Q ( delay_44__11_ ) , 
     .QN ( n3070 ) ) ;
-SDFFX1_RVT delay_reg_44__10_ ( .D ( n825 ) , .SI ( n3238 ) , 
+SDFFX1_RVT delay_reg_44__10_ ( .D ( n825 ) , .SI ( net_PTECO_HOLD_NET585 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_44__10_ ) , 
     .QN ( n3071 ) ) ;
-SDFFX1_RVT delay_reg_44__9_ ( .D ( n826 ) , .SI ( n3450 ) , 
+SDFFX1_RVT delay_reg_44__9_ ( .D ( n826 ) , .SI ( net_PTECO_HOLD_NET953 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_44__9_ ) , 
     .QN ( n3072 ) ) ;
-SDFFX1_RVT delay_reg_44__8_ ( .D ( n827 ) , .SI ( n3058 ) , 
+SDFFX1_RVT delay_reg_44__8_ ( .D ( n827 ) , .SI ( net_PTECO_HOLD_NET670 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_44__8_ ) , 
     .QN ( n3073 ) ) ;
-SDFFX1_RVT delay_reg_44__7_ ( .D ( n828 ) , .SI ( n3285 ) , 
+SDFFX1_RVT delay_reg_44__7_ ( .D ( n828 ) , .SI ( net_PTECO_HOLD_NET921 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_9 ) , .Q ( delay_44__7_ ) , 
     .QN ( n3074 ) ) ;
-SDFFX1_RVT delay_reg_44__6_ ( .D ( n829 ) , .SI ( n3243 ) , 
+SDFFX1_RVT delay_reg_44__6_ ( .D ( n829 ) , .SI ( net_PTECO_HOLD_NET308 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_44__6_ ) , 
     .QN ( n3075 ) ) ;
-SDFFX1_RVT delay_reg_44__5_ ( .D ( n830 ) , .SI ( n3454 ) , 
+SDFFX1_RVT delay_reg_44__5_ ( .D ( n830 ) , .SI ( net_PTECO_HOLD_NET545 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_44__5_ ) , 
     .QN ( n3076 ) ) ;
-SDFFX1_RVT delay_reg_44__4_ ( .D ( n831 ) , .SI ( n3290 ) , 
+SDFFX1_RVT delay_reg_44__4_ ( .D ( n831 ) , .SI ( net_PTECO_HOLD_NET492 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_11 ) , .Q ( delay_44__4_ ) , 
     .QN ( n3077 ) ) ;
-SDFFX1_RVT delay_reg_44__3_ ( .D ( n832 ) , .SI ( n3456 ) , 
+SDFFX1_RVT delay_reg_44__3_ ( .D ( n832 ) , .SI ( net_PTECO_HOLD_NET841 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_44__3_ ) , 
     .QN ( n3078 ) ) ;
-SDFFX1_RVT delay_reg_44__2_ ( .D ( n833 ) , .SI ( n2708 ) , 
+SDFFX1_RVT delay_reg_44__2_ ( .D ( n833 ) , .SI ( net_PTECO_HOLD_NET1068 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_44__2_ ) , 
     .QN ( n3079 ) ) ;
-SDFFX1_RVT delay_reg_44__1_ ( .D ( n834 ) , .SI ( n3079 ) , 
+SDFFX1_RVT delay_reg_44__1_ ( .D ( n834 ) , .SI ( net_PTECO_HOLD_NET696 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_44__1_ ) , 
     .QN ( n3080 ) ) ;
-SDFFX1_RVT delay_reg_44__0_ ( .D ( n835 ) , .SI ( n3080 ) , 
+SDFFX1_RVT delay_reg_44__0_ ( .D ( n835 ) , .SI ( net_PTECO_HOLD_NET498 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_44__0_ ) , 
     .QN ( n3081 ) ) ;
-SDFFX1_RVT delay_reg_45__16_ ( .D ( n836 ) , .SI ( delay_19__16_ ) , 
+SDFFX1_RVT delay_reg_45__16_ ( .D ( n836 ) , .SI ( net_PTECO_HOLD_NET1320 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_45__16_ ) , 
     .QN ( n2677 ) ) ;
-SDFFX1_RVT delay_reg_45__15_ ( .D ( n837 ) , .SI ( delay_45__16_ ) , 
+SDFFX1_RVT delay_reg_45__15_ ( .D ( n837 ) , .SI ( net_PTECO_HOLD_NET1347 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_45__15_ ) , 
     .QN ( n3051 ) ) ;
-SDFFX1_RVT delay_reg_45__14_ ( .D ( n838 ) , .SI ( n3051 ) , 
+SDFFX1_RVT delay_reg_45__14_ ( .D ( n838 ) , .SI ( net_PTECO_HOLD_NET1118 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_45__14_ ) , 
     .QN ( n3052 ) ) ;
-SDFFX1_RVT delay_reg_45__13_ ( .D ( n839 ) , .SI ( delay_32__16_ ) , 
+SDFFX1_RVT delay_reg_45__13_ ( .D ( n839 ) , .SI ( net_PTECO_HOLD_NET1235 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_45__13_ ) , 
     .QN ( n3053 ) ) ;
-SDFFX1_RVT delay_reg_45__12_ ( .D ( n840 ) , .SI ( n3039 ) , 
+SDFFX1_RVT delay_reg_45__12_ ( .D ( n840 ) , .SI ( net_PTECO_HOLD_NET689 ) , 
     .SE ( HFSNET_1141 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_45__12_ ) , 
     .QN ( n3054 ) ) ;
-SDFFX1_RVT delay_reg_45__11_ ( .D ( n841 ) , .SI ( n3025 ) , 
+SDFFX1_RVT delay_reg_45__11_ ( .D ( n841 ) , .SI ( net_PTECO_HOLD_NET1061 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_45__11_ ) , 
     .QN ( n3055 ) ) ;
-SDFFX1_RVT delay_reg_45__10_ ( .D ( n842 ) , .SI ( n3268 ) , 
+SDFFX1_RVT delay_reg_45__10_ ( .D ( n842 ) , .SI ( net_PTECO_HOLD_NET462 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_45__10_ ) , 
     .QN ( n3056 ) ) ;
-SDFFX1_RVT delay_reg_45__9_ ( .D ( n843 ) , .SI ( n3042 ) , 
+SDFFX1_RVT delay_reg_45__9_ ( .D ( n843 ) , .SI ( net_PTECO_HOLD_NET708 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_45__9_ ) , 
     .QN ( n3057 ) ) ;
-SDFFX1_RVT delay_reg_45__8_ ( .D ( n844 ) , .SI ( n3043 ) , 
+SDFFX1_RVT delay_reg_45__8_ ( .D ( n844 ) , .SI ( net_PTECO_HOLD_NET356 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_45__8_ ) , 
     .QN ( n3058 ) ) ;
-SDFFX1_RVT delay_reg_45__7_ ( .D ( n845 ) , .SI ( n3272 ) , 
+SDFFX1_RVT delay_reg_45__7_ ( .D ( n845 ) , .SI ( net_PTECO_HOLD_NET463 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_45__7_ ) , 
     .QN ( n3059 ) ) ;
-SDFFX1_RVT delay_reg_45__6_ ( .D ( n846 ) , .SI ( n3273 ) , 
+SDFFX1_RVT delay_reg_45__6_ ( .D ( n846 ) , .SI ( net_PTECO_HOLD_NET393 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_45__6_ ) , 
     .QN ( n3060 ) ) ;
-SDFFX1_RVT delay_reg_45__5_ ( .D ( n847 ) , .SI ( n3274 ) , 
+SDFFX1_RVT delay_reg_45__5_ ( .D ( n847 ) , .SI ( net_PTECO_HOLD_NET951 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_45__5_ ) , 
     .QN ( n3061 ) ) ;
-SDFFX1_RVT delay_reg_45__4_ ( .D ( n848 ) , .SI ( n3455 ) , 
+SDFFX1_RVT delay_reg_45__4_ ( .D ( n848 ) , .SI ( net_PTECO_HOLD_NET459 ) , 
     .SE ( HFSNET_1159 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_45__4_ ) , 
     .QN ( n3062 ) ) ;
-SDFFX1_RVT delay_reg_45__3_ ( .D ( n849 ) , .SI ( n3048 ) , 
+SDFFX1_RVT delay_reg_45__3_ ( .D ( n849 ) , .SI ( net_PTECO_HOLD_NET868 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_45__3_ ) , 
     .QN ( n3063 ) ) ;
-SDFFX1_RVT delay_reg_45__2_ ( .D ( n850 ) , .SI ( n3458 ) , 
+SDFFX1_RVT delay_reg_45__2_ ( .D ( n850 ) , .SI ( net_PTECO_HOLD_NET489 ) , 
     .SE ( HFSNET_1160 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_45__2_ ) , 
     .QN ( n3064 ) ) ;
-SDFFX1_RVT delay_reg_45__1_ ( .D ( n851 ) , .SI ( n3459 ) , 
+SDFFX1_RVT delay_reg_45__1_ ( .D ( n851 ) , .SI ( net_PTECO_HOLD_NET700 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_45__1_ ) , 
     .QN ( n3065 ) ) ;
-SDFFX1_RVT delay_reg_45__0_ ( .D ( n852 ) , .SI ( n3065 ) , 
+SDFFX1_RVT delay_reg_45__0_ ( .D ( n852 ) , .SI ( net_PTECO_HOLD_NET417 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_14 ) , .Q ( delay_45__0_ ) , 
     .QN ( n2635 ) ) ;
-SDFFX1_RVT delay_reg_46__16_ ( .D ( n853 ) , .SI ( delay_47__16_ ) , 
+SDFFX1_RVT delay_reg_46__16_ ( .D ( n853 ) , .SI ( net_PTECO_HOLD_NET1330 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_46__16_ ) , 
     .QN ( n2736 ) ) ;
-SDFFX1_RVT delay_reg_46__15_ ( .D ( n854 ) , .SI ( n3475 ) , 
+SDFFX1_RVT delay_reg_46__15_ ( .D ( n854 ) , .SI ( net_PTECO_HOLD_NET547 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_46__15_ ) , 
     .QN ( n3036 ) ) ;
-SDFFX1_RVT delay_reg_46__14_ ( .D ( n855 ) , .SI ( n3461 ) , 
+SDFFX1_RVT delay_reg_46__14_ ( .D ( n855 ) , .SI ( net_PTECO_HOLD_NET932 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_46__14_ ) , 
     .QN ( n3037 ) ) ;
-SDFFX1_RVT delay_reg_46__13_ ( .D ( n856 ) , .SI ( n3023 ) , 
+SDFFX1_RVT delay_reg_46__13_ ( .D ( n856 ) , .SI ( net_PTECO_HOLD_NET396 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_46__13_ ) , 
     .QN ( n3038 ) ) ;
-SDFFX1_RVT delay_reg_46__12_ ( .D ( n857 ) , .SI ( n3463 ) , 
+SDFFX1_RVT delay_reg_46__12_ ( .D ( n857 ) , .SI ( net_PTECO_HOLD_NET52 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_46__12_ ) , 
     .QN ( n3039 ) ) ;
-SDFFX1_RVT delay_reg_46__11_ ( .D ( n858 ) , .SI ( n3495 ) , 
+SDFFX1_RVT delay_reg_46__11_ ( .D ( n858 ) , .SI ( net_PTECO_HOLD_NET833 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_46__11_ ) , 
     .QN ( n3040 ) ) ;
-SDFFX1_RVT delay_reg_46__10_ ( .D ( n859 ) , .SI ( n3252 ) , 
+SDFFX1_RVT delay_reg_46__10_ ( .D ( n859 ) , .SI ( net_PTECO_HOLD_NET737 ) , 
     .SE ( HFSNET_1143 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_46__10_ ) , 
     .QN ( n3041 ) ) ;
-SDFFX1_RVT delay_reg_46__9_ ( .D ( n860 ) , .SI ( n3466 ) , 
+SDFFX1_RVT delay_reg_46__9_ ( .D ( n860 ) , .SI ( net_PTECO_HOLD_NET972 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_46__9_ ) , 
     .QN ( n3042 ) ) ;
-SDFFX1_RVT delay_reg_46__8_ ( .D ( n861 ) , .SI ( n3271 ) , 
+SDFFX1_RVT delay_reg_46__8_ ( .D ( n861 ) , .SI ( net_PTECO_HOLD_NET58 ) , 
     .SE ( HFSNET_1153 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_46__8_ ) , 
     .QN ( n3043 ) ) ;
-SDFFX1_RVT delay_reg_46__7_ ( .D ( n862 ) , .SI ( n3468 ) , 
+SDFFX1_RVT delay_reg_46__7_ ( .D ( n862 ) , .SI ( net_PTECO_HOLD_NET1010 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_46__7_ ) , 
     .QN ( n3044 ) ) ;
-SDFFX1_RVT delay_reg_46__6_ ( .D ( n863 ) , .SI ( n3258 ) , 
+SDFFX1_RVT delay_reg_46__6_ ( .D ( n863 ) , .SI ( net_PTECO_HOLD_NET812 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_46__6_ ) , 
     .QN ( n3045 ) ) ;
-SDFFX1_RVT delay_reg_46__5_ ( .D ( n864 ) , .SI ( n3276 ) , 
+SDFFX1_RVT delay_reg_46__5_ ( .D ( n864 ) , .SI ( net_PTECO_HOLD_NET549 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_46__5_ ) , 
     .QN ( n3046 ) ) ;
-SDFFX1_RVT delay_reg_46__4_ ( .D ( n865 ) , .SI ( n3471 ) , 
+SDFFX1_RVT delay_reg_46__4_ ( .D ( n865 ) , .SI ( net_PTECO_HOLD_NET909 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_46__4_ ) , 
     .QN ( n3047 ) ) ;
-SDFFX1_RVT delay_reg_46__3_ ( .D ( n866 ) , .SI ( n3472 ) , 
+SDFFX1_RVT delay_reg_46__3_ ( .D ( n866 ) , .SI ( net_PTECO_HOLD_NET983 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_46__3_ ) , 
     .QN ( n3048 ) ) ;
-SDFFX1_RVT delay_reg_46__2_ ( .D ( n867 ) , .SI ( n3474 ) , 
+SDFFX1_RVT delay_reg_46__2_ ( .D ( n867 ) , .SI ( net_PTECO_HOLD_NET584 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_46__2_ ) , 
     .QN ( n3049 ) ) ;
-SDFFX1_RVT delay_reg_46__1_ ( .D ( n868 ) , .SI ( n3488 ) , 
+SDFFX1_RVT delay_reg_46__1_ ( .D ( n868 ) , .SI ( net_PTECO_HOLD_NET1110 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_46__1_ ) , 
     .QN ( n3050 ) ) ;
-SDFFX1_RVT delay_reg_46__0_ ( .D ( n869 ) , .SI ( n3050 ) , 
+SDFFX1_RVT delay_reg_46__0_ ( .D ( n869 ) , .SI ( net_PTECO_HOLD_NET1034 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_46__0_ ) , 
     .QN ( n2648 ) ) ;
-SDFFX1_RVT delay_reg_47__16_ ( .D ( n870 ) , .SI ( n3021 ) , 
+SDFFX1_RVT delay_reg_47__16_ ( .D ( n870 ) , .SI ( net_PTECO_HOLD_NET90 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_3 ) , .Q ( delay_47__16_ ) , 
     .QN ( n2667 ) ) ;
-SDFFX1_RVT delay_reg_47__15_ ( .D ( n871 ) , .SI ( delay_15__16_ ) , 
+SDFFX1_RVT delay_reg_47__15_ ( .D ( n871 ) , .SI ( net_PTECO_HOLD_NET1251 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_47__15_ ) , 
     .QN ( n3021 ) ) ;
-SDFFX1_RVT delay_reg_47__14_ ( .D ( n872 ) , .SI ( n3037 ) , 
+SDFFX1_RVT delay_reg_47__14_ ( .D ( n872 ) , .SI ( net_PTECO_HOLD_NET957 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_47__14_ ) , 
     .QN ( n3022 ) ) ;
-SDFFX1_RVT delay_reg_47__13_ ( .D ( n873 ) , .SI ( n2658 ) , 
+SDFFX1_RVT delay_reg_47__13_ ( .D ( n873 ) , .SI ( net_PTECO_HOLD_NET1215 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_47__13_ ) , 
     .QN ( n3023 ) ) ;
-SDFFX1_RVT delay_reg_47__12_ ( .D ( n874 ) , .SI ( delay_31__14_ ) , 
+SDFFX1_RVT delay_reg_47__12_ ( .D ( n874 ) , .SI ( net_PTECO_HOLD_NET1350 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_47__12_ ) , 
     .QN ( n3024 ) ) ;
-SDFFX1_RVT delay_reg_47__11_ ( .D ( n875 ) , .SI ( n3010 ) , 
+SDFFX1_RVT delay_reg_47__11_ ( .D ( n875 ) , .SI ( net_PTECO_HOLD_NET1151 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_47__11_ ) , 
     .QN ( n3025 ) ) ;
-SDFFX1_RVT delay_reg_47__10_ ( .D ( n876 ) , .SI ( n2707 ) , 
+SDFFX1_RVT delay_reg_47__10_ ( .D ( n876 ) , .SI ( net_PTECO_HOLD_NET1345 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_47__10_ ) , 
     .QN ( n3026 ) ) ;
-SDFFX1_RVT delay_reg_47__9_ ( .D ( n877 ) , .SI ( n3255 ) , 
+SDFFX1_RVT delay_reg_47__9_ ( .D ( n877 ) , .SI ( net_PTECO_HOLD_NET1012 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_13 ) , .Q ( delay_47__9_ ) , 
     .QN ( n3027 ) ) ;
-SDFFX1_RVT delay_reg_47__8_ ( .D ( n878 ) , .SI ( n3497 ) , 
+SDFFX1_RVT delay_reg_47__8_ ( .D ( n878 ) , .SI ( net_PTECO_HOLD_NET719 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_47__8_ ) , 
     .QN ( n3028 ) ) ;
-SDFFX1_RVT delay_reg_47__7_ ( .D ( n879 ) , .SI ( n3044 ) , 
+SDFFX1_RVT delay_reg_47__7_ ( .D ( n879 ) , .SI ( net_PTECO_HOLD_NET904 ) , 
     .SE ( HFSNET_1165 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_47__7_ ) , 
     .QN ( n3029 ) ) ;
-SDFFX1_RVT delay_reg_47__6_ ( .D ( n880 ) , .SI ( delay_31__4_ ) , 
+SDFFX1_RVT delay_reg_47__6_ ( .D ( n880 ) , .SI ( net_PTECO_HOLD_NET1341 ) , 
     .SE ( ZBUF_601_9 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_47__6_ ) , 
     .QN ( n3030 ) ) ;
-SDFFX1_RVT delay_reg_47__5_ ( .D ( n881 ) , .SI ( n3046 ) , 
+SDFFX1_RVT delay_reg_47__5_ ( .D ( n881 ) , .SI ( net_PTECO_HOLD_NET843 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_12 ) , .Q ( delay_47__5_ ) , 
     .QN ( n3031 ) ) ;
-SDFFX1_RVT delay_reg_47__4_ ( .D ( n882 ) , .SI ( n3486 ) , 
+SDFFX1_RVT delay_reg_47__4_ ( .D ( n882 ) , .SI ( net_PTECO_HOLD_NET599 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_47__4_ ) , 
     .QN ( n3032 ) ) ;
-SDFFX1_RVT delay_reg_47__3_ ( .D ( n883 ) , .SI ( n3473 ) , 
+SDFFX1_RVT delay_reg_47__3_ ( .D ( n883 ) , .SI ( net_PTECO_HOLD_NET57 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_47__3_ ) , 
     .QN ( n3033 ) ) ;
-SDFFX1_RVT delay_reg_47__2_ ( .D ( n884 ) , .SI ( n3503 ) , 
+SDFFX1_RVT delay_reg_47__2_ ( .D ( n884 ) , .SI ( net_PTECO_HOLD_NET392 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_47__2_ ) , 
     .QN ( n3034 ) ) ;
-SDFFX1_RVT delay_reg_47__1_ ( .D ( n885 ) , .SI ( n3489 ) , 
+SDFFX1_RVT delay_reg_47__1_ ( .D ( n885 ) , .SI ( net_PTECO_HOLD_NET779 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_47__1_ ) , 
     .QN ( n3035 ) ) ;
-SDFFX1_RVT delay_reg_47__0_ ( .D ( n886 ) , .SI ( n2702 ) , 
+SDFFX1_RVT delay_reg_47__0_ ( .D ( n886 ) , .SI ( net_PTECO_HOLD_NET1121 ) , 
     .SE ( ZBUF_748_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_47__0_ ) , 
     .QN ( n2641 ) ) ;
-SDFFX1_RVT delay_reg_48__16_ ( .D ( n887 ) , .SI ( n3505 ) , 
+SDFFX1_RVT delay_reg_48__16_ ( .D ( n887 ) , .SI ( net_PTECO_HOLD_NET383 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_48__16_ ) , 
     .QN ( n2748 ) ) ;
-SDFFX1_RVT delay_reg_48__15_ ( .D ( n888 ) , .SI ( n3490 ) , 
+SDFFX1_RVT delay_reg_48__15_ ( .D ( n888 ) , .SI ( net_PTECO_HOLD_NET264 ) , 
     .SE ( HFSNET_1142 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_48__15_ ) , 
     .QN ( n3006 ) ) ;
-SDFFX1_RVT delay_reg_48__14_ ( .D ( n889 ) , .SI ( n3491 ) , 
+SDFFX1_RVT delay_reg_48__14_ ( .D ( n889 ) , .SI ( net_PTECO_HOLD_NET828 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_48__14_ ) , 
     .QN ( n3007 ) ) ;
-SDFFX1_RVT delay_reg_48__13_ ( .D ( n890 ) , .SI ( n3024 ) , 
+SDFFX1_RVT delay_reg_48__13_ ( .D ( n890 ) , .SI ( net_PTECO_HOLD_NET375 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_48__13_ ) , 
     .QN ( n3008 ) ) ;
-SDFFX1_RVT delay_reg_48__12_ ( .D ( n891 ) , .SI ( n3007 ) , 
+SDFFX1_RVT delay_reg_48__12_ ( .D ( n891 ) , .SI ( net_PTECO_HOLD_NET1164 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_48__12_ ) , 
     .QN ( n3009 ) ) ;
-SDFFX1_RVT delay_reg_48__11_ ( .D ( n892 ) , .SI ( n3510 ) , 
+SDFFX1_RVT delay_reg_48__11_ ( .D ( n892 ) , .SI ( net_PTECO_HOLD_NET688 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_48__11_ ) , 
     .QN ( n3010 ) ) ;
-SDFFX1_RVT delay_reg_48__10_ ( .D ( n893 ) , .SI ( n3525 ) , 
+SDFFX1_RVT delay_reg_48__10_ ( .D ( n893 ) , .SI ( net_PTECO_HOLD_NET1173 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_48__10_ ) , 
     .QN ( n3011 ) ) ;
-SDFFX1_RVT delay_reg_48__9_ ( .D ( n894 ) , .SI ( n3511 ) , 
+SDFFX1_RVT delay_reg_48__9_ ( .D ( n894 ) , .SI ( net_PTECO_HOLD_NET997 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_48__9_ ) , 
     .QN ( n3012 ) ) ;
-SDFFX1_RVT delay_reg_48__8_ ( .D ( n895 ) , .SI ( n3512 ) , 
+SDFFX1_RVT delay_reg_48__8_ ( .D ( n895 ) , .SI ( net_PTECO_HOLD_NET770 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_48__8_ ) , 
     .QN ( n3013 ) ) ;
-SDFFX1_RVT delay_reg_48__7_ ( .D ( n896 ) , .SI ( n3015 ) , 
+SDFFX1_RVT delay_reg_48__7_ ( .D ( n896 ) , .SI ( net_PTECO_HOLD_NET745 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_48__7_ ) , 
     .QN ( n3014 ) ) ;
-SDFFX1_RVT delay_reg_48__6_ ( .D ( n897 ) , .SI ( n3499 ) , 
+SDFFX1_RVT delay_reg_48__6_ ( .D ( n897 ) , .SI ( net_PTECO_HOLD_NET431 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_48__6_ ) , 
     .QN ( n3015 ) ) ;
-SDFFX1_RVT delay_reg_48__5_ ( .D ( n898 ) , .SI ( n2985 ) , 
+SDFFX1_RVT delay_reg_48__5_ ( .D ( n898 ) , .SI ( net_PTECO_HOLD_NET990 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_48__5_ ) , 
     .QN ( n3016 ) ) ;
-SDFFX1_RVT delay_reg_48__4_ ( .D ( n899 ) , .SI ( n3516 ) , 
+SDFFX1_RVT delay_reg_48__4_ ( .D ( n899 ) , .SI ( net_PTECO_HOLD_NET802 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_48__4_ ) , 
     .QN ( n3017 ) ) ;
-SDFFX1_RVT delay_reg_48__3_ ( .D ( n900 ) , .SI ( n3532 ) , 
+SDFFX1_RVT delay_reg_48__3_ ( .D ( n900 ) , .SI ( net_PTECO_HOLD_NET751 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_48__3_ ) , 
     .QN ( n3018 ) ) ;
-SDFFX1_RVT delay_reg_48__2_ ( .D ( n901 ) , .SI ( n3517 ) , 
+SDFFX1_RVT delay_reg_48__2_ ( .D ( n901 ) , .SI ( net_PTECO_HOLD_NET1074 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_48__2_ ) , 
     .QN ( n3019 ) ) ;
-SDFFX1_RVT delay_reg_48__1_ ( .D ( n902 ) , .SI ( n3504 ) , 
+SDFFX1_RVT delay_reg_48__1_ ( .D ( n902 ) , .SI ( net_PTECO_HOLD_NET927 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_48__1_ ) , 
     .QN ( n3020 ) ) ;
-SDFFX1_RVT delay_reg_48__0_ ( .D ( n903 ) , .SI ( n2724 ) , 
+SDFFX1_RVT delay_reg_48__0_ ( .D ( n903 ) , .SI ( net_PTECO_HOLD_NET1097 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_48__0_ ) , 
     .QN ( n2649 ) ) ;
-SDFFX1_RVT delay_reg_49__16_ ( .D ( n904 ) , .SI ( delay_50__16_ ) , 
+SDFFX1_RVT delay_reg_49__16_ ( .D ( n904 ) , .SI ( net_PTECO_HOLD_NET1297 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_49__16_ ) , 
     .QN ( n2682 ) ) ;
-SDFFX1_RVT delay_reg_49__15_ ( .D ( n905 ) , .SI ( n3520 ) , 
+SDFFX1_RVT delay_reg_49__15_ ( .D ( n905 ) , .SI ( net_PTECO_HOLD_NET263 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_49__15_ ) , 
     .QN ( n2990 ) ) ;
-SDFFX1_RVT delay_reg_49__14_ ( .D ( n906 ) , .SI ( n3492 ) , 
+SDFFX1_RVT delay_reg_49__14_ ( .D ( n906 ) , .SI ( net_PTECO_HOLD_NET376 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_49__14_ ) , 
     .QN ( n2991 ) ) ;
-SDFFX1_RVT delay_reg_49__13_ ( .D ( n907 ) , .SI ( n3521 ) , 
+SDFFX1_RVT delay_reg_49__13_ ( .D ( n907 ) , .SI ( net_PTECO_HOLD_NET1092 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_49__13_ ) , 
     .QN ( n2992 ) ) ;
-SDFFX1_RVT delay_reg_49__12_ ( .D ( n908 ) , .SI ( n3524 ) , 
+SDFFX1_RVT delay_reg_49__12_ ( .D ( n908 ) , .SI ( net_PTECO_HOLD_NET497 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_49__12_ ) , 
     .QN ( n2993 ) ) ;
-SDFFX1_RVT delay_reg_49__11_ ( .D ( n909 ) , .SI ( n3541 ) , 
+SDFFX1_RVT delay_reg_49__11_ ( .D ( n909 ) , .SI ( net_PTECO_HOLD_NET952 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_49__11_ ) , 
     .QN ( n2994 ) ) ;
-SDFFX1_RVT delay_reg_49__10_ ( .D ( n910 ) , .SI ( n2980 ) , 
+SDFFX1_RVT delay_reg_49__10_ ( .D ( n910 ) , .SI ( net_PTECO_HOLD_NET851 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_49__10_ ) , 
     .QN ( n2995 ) ) ;
-SDFFX1_RVT delay_reg_49__9_ ( .D ( n911 ) , .SI ( n3012 ) , 
+SDFFX1_RVT delay_reg_49__9_ ( .D ( n911 ) , .SI ( net_PTECO_HOLD_NET1184 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_49__9_ ) , 
     .QN ( n2996 ) ) ;
-SDFFX1_RVT delay_reg_49__8_ ( .D ( n912 ) , .SI ( n3527 ) , 
+SDFFX1_RVT delay_reg_49__8_ ( .D ( n912 ) , .SI ( net_PTECO_HOLD_NET783 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_49__8_ ) , 
     .QN ( n2997 ) ) ;
-SDFFX1_RVT delay_reg_49__7_ ( .D ( n913 ) , .SI ( n2999 ) , 
+SDFFX1_RVT delay_reg_49__7_ ( .D ( n913 ) , .SI ( net_PTECO_HOLD_NET551 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_49__7_ ) , 
     .QN ( n2998 ) ) ;
-SDFFX1_RVT delay_reg_49__6_ ( .D ( n914 ) , .SI ( n3514 ) , 
+SDFFX1_RVT delay_reg_49__6_ ( .D ( n914 ) , .SI ( net_PTECO_HOLD_NET999 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_49__6_ ) , 
     .QN ( n2999 ) ) ;
-SDFFX1_RVT delay_reg_49__5_ ( .D ( n915 ) , .SI ( n3546 ) , 
+SDFFX1_RVT delay_reg_49__5_ ( .D ( n915 ) , .SI ( net_PTECO_HOLD_NET475 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_49__5_ ) , 
     .QN ( n3000 ) ) ;
-SDFFX1_RVT delay_reg_49__4_ ( .D ( n916 ) , .SI ( n3530 ) , 
+SDFFX1_RVT delay_reg_49__4_ ( .D ( n916 ) , .SI ( net_PTECO_HOLD_NET899 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_49__4_ ) , 
     .QN ( n3001 ) ) ;
-SDFFX1_RVT delay_reg_49__3_ ( .D ( n917 ) , .SI ( n2986 ) , 
+SDFFX1_RVT delay_reg_49__3_ ( .D ( n917 ) , .SI ( net_PTECO_HOLD_NET1143 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_49__3_ ) , 
     .QN ( n3002 ) ) ;
-SDFFX1_RVT delay_reg_49__2_ ( .D ( n918 ) , .SI ( n3019 ) , 
+SDFFX1_RVT delay_reg_49__2_ ( .D ( n918 ) , .SI ( net_PTECO_HOLD_NET831 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_49__2_ ) , 
     .QN ( n3003 ) ) ;
-SDFFX1_RVT delay_reg_49__1_ ( .D ( n919 ) , .SI ( n3005 ) , 
+SDFFX1_RVT delay_reg_49__1_ ( .D ( n919 ) , .SI ( net_PTECO_HOLD_NET380 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_49__1_ ) , 
     .QN ( n3004 ) ) ;
-SDFFX1_RVT delay_reg_49__0_ ( .D ( n920 ) , .SI ( n3535 ) , 
+SDFFX1_RVT delay_reg_49__0_ ( .D ( n920 ) , .SI ( net_PTECO_HOLD_NET881 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_49__0_ ) , 
     .QN ( n3005 ) ) ;
-SDFFX1_RVT delay_reg_50__16_ ( .D ( n921 ) , .SI ( n2975 ) , 
+SDFFX1_RVT delay_reg_50__16_ ( .D ( n921 ) , .SI ( net_PTECO_HOLD_NET197 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_50__16_ ) , 
     .QN ( n2753 ) ) ;
-SDFFX1_RVT delay_reg_50__15_ ( .D ( n922 ) , .SI ( delay_12__16_ ) , 
+SDFFX1_RVT delay_reg_50__15_ ( .D ( n922 ) , .SI ( net_PTECO_HOLD_NET1292 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_50__15_ ) , 
     .QN ( n2975 ) ) ;
-SDFFX1_RVT delay_reg_50__14_ ( .D ( n923 ) , .SI ( n2977 ) , 
+SDFFX1_RVT delay_reg_50__14_ ( .D ( n923 ) , .SI ( net_PTECO_HOLD_NET231 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_50__14_ ) , 
     .QN ( n2976 ) ) ;
-SDFFX1_RVT delay_reg_50__13_ ( .D ( n924 ) , .SI ( n3522 ) , 
+SDFFX1_RVT delay_reg_50__13_ ( .D ( n924 ) , .SI ( net_PTECO_HOLD_NET232 ) , 
     .SE ( HFSNET_1154 ) , .CLK ( ZCTSNET_5 ) , .Q ( delay_50__13_ ) , 
     .QN ( n2977 ) ) ;
-SDFFX1_RVT delay_reg_50__12_ ( .D ( n925 ) , .SI ( n3523 ) , 
+SDFFX1_RVT delay_reg_50__12_ ( .D ( n925 ) , .SI ( net_PTECO_HOLD_NET973 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_50__12_ ) , 
     .QN ( n2978 ) ) ;
-SDFFX1_RVT delay_reg_50__11_ ( .D ( n926 ) , .SI ( n3539 ) , 
+SDFFX1_RVT delay_reg_50__11_ ( .D ( n926 ) , .SI ( net_PTECO_HOLD_NET1179 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_50__11_ ) , 
     .QN ( n2979 ) ) ;
-SDFFX1_RVT delay_reg_50__10_ ( .D ( n927 ) , .SI ( n3011 ) , 
+SDFFX1_RVT delay_reg_50__10_ ( .D ( n927 ) , .SI ( net_PTECO_HOLD_NET678 ) , 
     .SE ( HFSNET_1155 ) , .CLK ( ZCTSNET_6 ) , .Q ( delay_50__10_ ) , 
     .QN ( n2980 ) ) ;
-SDFFX1_RVT delay_reg_50__9_ ( .D ( n928 ) , .SI ( n2982 ) , 
+SDFFX1_RVT delay_reg_50__9_ ( .D ( n928 ) , .SI ( net_PTECO_HOLD_NET738 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_50__9_ ) , 
     .QN ( n2981 ) ) ;
-SDFFX1_RVT delay_reg_50__8_ ( .D ( n929 ) , .SI ( n2786 ) , 
+SDFFX1_RVT delay_reg_50__8_ ( .D ( n929 ) , .SI ( net_PTECO_HOLD_NET30 ) , 
     .SE ( ZBUF_704_0 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_50__8_ ) , 
     .QN ( n2982 ) ) ;
-SDFFX1_RVT delay_reg_50__7_ ( .D ( n930 ) , .SI ( n3545 ) , 
+SDFFX1_RVT delay_reg_50__7_ ( .D ( n930 ) , .SI ( net_PTECO_HOLD_NET694 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_50__7_ ) , 
     .QN ( n2983 ) ) ;
-SDFFX1_RVT delay_reg_50__6_ ( .D ( n931 ) , .SI ( n2998 ) , 
+SDFFX1_RVT delay_reg_50__6_ ( .D ( n931 ) , .SI ( net_PTECO_HOLD_NET1147 ) , 
     .SE ( HFSNET_1157 ) , .CLK ( ZCTSNET_8 ) , .Q ( delay_50__6_ ) , 
     .QN ( n2984 ) ) ;
-SDFFX1_RVT delay_reg_50__5_ ( .D ( n932 ) , .SI ( n3000 ) , 
+SDFFX1_RVT delay_reg_50__5_ ( .D ( n932 ) , .SI ( net_PTECO_HOLD_NET732 ) , 
     .SE ( HFSNET_1163 ) , .CLK ( ZCTSNET_7 ) , .Q ( delay_50__5_ ) , 
     .QN ( n2985 ) ) ;
-SDFFX1_RVT delay_reg_50__4_ ( .D ( n933 ) , .SI ( n3547 ) , 
+SDFFX1_RVT delay_reg_50__4_ ( .D ( n933 ) , .SI ( net_PTECO_HOLD_NET890 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_50__4_ ) , 
     .QN ( n2986 ) ) ;
-SDFFX1_RVT delay_reg_50__3_ ( .D ( n934 ) , .SI ( n3548 ) , 
+SDFFX1_RVT delay_reg_50__3_ ( .D ( n934 ) , .SI ( net_PTECO_HOLD_NET456 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_50__3_ ) , 
     .QN ( n2987 ) ) ;
-SDFFX1_RVT delay_reg_50__2_ ( .D ( n935 ) , .SI ( n3534 ) , 
+SDFFX1_RVT delay_reg_50__2_ ( .D ( n935 ) , .SI ( net_PTECO_HOLD_NET382 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_50__2_ ) , 
     .QN ( n2988 ) ) ;
-SDFFX1_RVT delay_reg_50__1_ ( .D ( n936 ) , .SI ( n2710 ) , 
+SDFFX1_RVT delay_reg_50__1_ ( .D ( n936 ) , .SI ( net_PTECO_HOLD_NET1167 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_50__1_ ) , 
     .QN ( n2989 ) ) ;
-SDFFX1_RVT delay_reg_50__0_ ( .D ( n937 ) , .SI ( n2637 ) , 
+SDFFX1_RVT delay_reg_50__0_ ( .D ( n937 ) , .SI ( net_PTECO_HOLD_NET1111 ) , 
     .SE ( ZBUF_654_0 ) , .CLK ( ZCTSNET_15 ) , .Q ( delay_50__0_ ) , 
     .QN ( n2710 ) ) ;
-SDFFX1_RVT delay_reg_51__16_ ( .D ( n938 ) , .SI ( n3567 ) , 
+SDFFX1_RVT delay_reg_51__16_ ( .D ( n938 ) , .SI ( net_PTECO_HOLD_NET443 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_51__16_ ) , 
     .QN ( n2674 ) ) ;
-SDFFX1_RVT delay_reg_51__15_ ( .D ( n939 ) , .SI ( n3551 ) , 
+SDFFX1_RVT delay_reg_51__15_ ( .D ( n939 ) , .SI ( net_PTECO_HOLD_NET190 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_51__15_ ) , 
     .QN ( n2960 ) ) ;
-SDFFX1_RVT delay_reg_51__14_ ( .D ( n940 ) , .SI ( n3536 ) , 
+SDFFX1_RVT delay_reg_51__14_ ( .D ( n940 ) , .SI ( net_PTECO_HOLD_NET140 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_51__14_ ) , 
     .QN ( n2961 ) ) ;
-SDFFX1_RVT delay_reg_51__13_ ( .D ( n941 ) , .SI ( n3538 ) , 
+SDFFX1_RVT delay_reg_51__13_ ( .D ( n941 ) , .SI ( net_PTECO_HOLD_NET216 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_51__13_ ) , 
     .QN ( n2962 ) ) ;
-SDFFX1_RVT delay_reg_51__12_ ( .D ( n942 ) , .SI ( n3554 ) , 
+SDFFX1_RVT delay_reg_51__12_ ( .D ( n942 ) , .SI ( net_PTECO_HOLD_NET227 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_51__12_ ) , 
     .QN ( n2963 ) ) ;
-SDFFX1_RVT delay_reg_51__11_ ( .D ( n943 ) , .SI ( n3585 ) , 
+SDFFX1_RVT delay_reg_51__11_ ( .D ( n943 ) , .SI ( net_PTECO_HOLD_NET916 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_51__11_ ) , 
     .QN ( n2964 ) ) ;
-SDFFX1_RVT delay_reg_51__10_ ( .D ( n944 ) , .SI ( n2950 ) , 
+SDFFX1_RVT delay_reg_51__10_ ( .D ( n944 ) , .SI ( net_PTECO_HOLD_NET793 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_51__10_ ) , 
     .QN ( n2965 ) ) ;
-SDFFX1_RVT delay_reg_51__9_ ( .D ( n945 ) , .SI ( n3573 ) , 
+SDFFX1_RVT delay_reg_51__9_ ( .D ( n945 ) , .SI ( net_PTECO_HOLD_NET79 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_51__9_ ) , 
     .QN ( n2966 ) ) ;
-SDFFX1_RVT delay_reg_51__8_ ( .D ( n946 ) , .SI ( n3559 ) , 
+SDFFX1_RVT delay_reg_51__8_ ( .D ( n946 ) , .SI ( net_PTECO_HOLD_NET272 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_51__8_ ) , 
     .QN ( n2967 ) ) ;
-SDFFX1_RVT delay_reg_51__7_ ( .D ( n947 ) , .SI ( n3560 ) , 
+SDFFX1_RVT delay_reg_51__7_ ( .D ( n947 ) , .SI ( net_PTECO_HOLD_NET394 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_51__7_ ) , 
     .QN ( n2968 ) ) ;
-SDFFX1_RVT delay_reg_51__6_ ( .D ( n948 ) , .SI ( n3576 ) , 
+SDFFX1_RVT delay_reg_51__6_ ( .D ( n948 ) , .SI ( net_PTECO_HOLD_NET607 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_51__6_ ) , 
     .QN ( n2969 ) ) ;
-SDFFX1_RVT delay_reg_51__5_ ( .D ( n949 ) , .SI ( n2956 ) , 
+SDFFX1_RVT delay_reg_51__5_ ( .D ( n949 ) , .SI ( net_PTECO_HOLD_NET65 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_51__5_ ) , 
     .QN ( n2970 ) ) ;
-SDFFX1_RVT delay_reg_51__4_ ( .D ( n950 ) , .SI ( n3562 ) , 
+SDFFX1_RVT delay_reg_51__4_ ( .D ( n950 ) , .SI ( net_PTECO_HOLD_NET223 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_51__4_ ) , 
     .QN ( n2971 ) ) ;
-SDFFX1_RVT delay_reg_51__3_ ( .D ( n951 ) , .SI ( n2943 ) , 
+SDFFX1_RVT delay_reg_51__3_ ( .D ( n951 ) , .SI ( net_PTECO_HOLD_NET325 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_51__3_ ) , 
     .QN ( n2972 ) ) ;
-SDFFX1_RVT delay_reg_51__2_ ( .D ( n952 ) , .SI ( n3580 ) , 
+SDFFX1_RVT delay_reg_51__2_ ( .D ( n952 ) , .SI ( net_PTECO_HOLD_NET299 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_51__2_ ) , 
     .QN ( n2973 ) ) ;
-SDFFX1_RVT delay_reg_51__1_ ( .D ( n953 ) , .SI ( n3565 ) , 
+SDFFX1_RVT delay_reg_51__1_ ( .D ( n953 ) , .SI ( net_PTECO_HOLD_NET194 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_51__1_ ) , 
     .QN ( n2974 ) ) ;
 SDFFX1_RVT delay_reg_51__0_ ( .D ( n954 ) , .SI ( ropt_net_64 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_51__0_ ) , 
     .QN ( n2650 ) ) ;
-SDFFX1_RVT delay_reg_52__16_ ( .D ( n955 ) , .SI ( n2961 ) , 
+SDFFX1_RVT delay_reg_52__16_ ( .D ( n955 ) , .SI ( net_PTECO_HOLD_NET476 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_52__16_ ) , 
     .QN ( n2751 ) ) ;
-SDFFX1_RVT delay_reg_52__15_ ( .D ( n956 ) , .SI ( n2960 ) , 
+SDFFX1_RVT delay_reg_52__15_ ( .D ( n956 ) , .SI ( net_PTECO_HOLD_NET218 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_52__15_ ) , 
     .QN ( dftopt56_gOb11 ) ) ;
-SDFFX1_RVT delay_reg_52__14_ ( .D ( n957 ) , .SI ( delay_52__16_ ) , 
+SDFFX1_RVT delay_reg_52__14_ ( .D ( n957 ) , .SI ( net_PTECO_HOLD_NET1205 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_52__14_ ) , 
     .QN ( n2946 ) ) ;
-SDFFX1_RVT delay_reg_52__13_ ( .D ( n958 ) , .SI ( n2962 ) , 
+SDFFX1_RVT delay_reg_52__13_ ( .D ( n958 ) , .SI ( net_PTECO_HOLD_NET127 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_52__13_ ) , 
     .QN ( n2947 ) ) ;
-SDFFX1_RVT delay_reg_52__12_ ( .D ( n959 ) , .SI ( n3599 ) , 
+SDFFX1_RVT delay_reg_52__12_ ( .D ( n959 ) , .SI ( net_PTECO_HOLD_NET590 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_52__12_ ) , 
     .QN ( n2948 ) ) ;
-SDFFX1_RVT delay_reg_52__11_ ( .D ( n960 ) , .SI ( n3584 ) , 
+SDFFX1_RVT delay_reg_52__11_ ( .D ( n960 ) , .SI ( net_PTECO_HOLD_NET915 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_52__11_ ) , 
     .QN ( n2949 ) ) ;
-SDFFX1_RVT delay_reg_52__10_ ( .D ( n961 ) , .SI ( n3571 ) , 
+SDFFX1_RVT delay_reg_52__10_ ( .D ( n961 ) , .SI ( net_PTECO_HOLD_NET275 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_52__10_ ) , 
     .QN ( n2950 ) ) ;
-SDFFX1_RVT delay_reg_52__9_ ( .D ( n962 ) , .SI ( n3557 ) , 
+SDFFX1_RVT delay_reg_52__9_ ( .D ( n962 ) , .SI ( net_PTECO_HOLD_NET330 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_52__9_ ) , 
     .QN ( n2951 ) ) ;
-SDFFX1_RVT delay_reg_52__8_ ( .D ( n963 ) , .SI ( n2920 ) , 
+SDFFX1_RVT delay_reg_52__8_ ( .D ( n963 ) , .SI ( net_PTECO_HOLD_NET804 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_52__8_ ) , 
     .QN ( n2952 ) ) ;
-SDFFX1_RVT delay_reg_52__7_ ( .D ( n964 ) , .SI ( n2921 ) , 
+SDFFX1_RVT delay_reg_52__7_ ( .D ( n964 ) , .SI ( net_PTECO_HOLD_NET1058 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_52__7_ ) , 
     .QN ( n2953 ) ) ;
-SDFFX1_RVT delay_reg_52__6_ ( .D ( n965 ) , .SI ( n3561 ) , 
+SDFFX1_RVT delay_reg_52__6_ ( .D ( n965 ) , .SI ( net_PTECO_HOLD_NET488 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_52__6_ ) , 
     .QN ( n2954 ) ) ;
-SDFFX1_RVT delay_reg_52__5_ ( .D ( n966 ) , .SI ( n2941 ) , 
+SDFFX1_RVT delay_reg_52__5_ ( .D ( n966 ) , .SI ( net_PTECO_HOLD_NET148 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_52__5_ ) , 
     .QN ( n2955 ) ) ;
-SDFFX1_RVT delay_reg_52__4_ ( .D ( n967 ) , .SI ( n2971 ) , 
+SDFFX1_RVT delay_reg_52__4_ ( .D ( n967 ) , .SI ( net_PTECO_HOLD_NET73 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_52__4_ ) , 
     .QN ( n2956 ) ) ;
-SDFFX1_RVT delay_reg_52__3_ ( .D ( n968 ) , .SI ( n3578 ) , 
+SDFFX1_RVT delay_reg_52__3_ ( .D ( n968 ) , .SI ( net_PTECO_HOLD_NET121 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_52__3_ ) , 
     .QN ( n2957 ) ) ;
-SDFFX1_RVT delay_reg_52__2_ ( .D ( n969 ) , .SI ( n3564 ) , 
+SDFFX1_RVT delay_reg_52__2_ ( .D ( n969 ) , .SI ( net_PTECO_HOLD_NET295 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_52__2_ ) , 
     .QN ( n2958 ) ) ;
-SDFFX1_RVT delay_reg_52__1_ ( .D ( n970 ) , .SI ( n2725 ) , 
+SDFFX1_RVT delay_reg_52__1_ ( .D ( n970 ) , .SI ( net_PTECO_HOLD_NET593 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_52__1_ ) , 
     .QN ( n2959 ) ) ;
-SDFFX1_RVT delay_reg_52__0_ ( .D ( n971 ) , .SI ( n2711 ) , 
+SDFFX1_RVT delay_reg_52__0_ ( .D ( n971 ) , .SI ( net_PTECO_HOLD_NET1072 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_52__0_ ) , 
     .QN ( n2654 ) ) ;
-SDFFX1_RVT delay_reg_53__16_ ( .D ( n972 ) , .SI ( n2914 ) , 
+SDFFX1_RVT delay_reg_53__16_ ( .D ( n972 ) , .SI ( net_PTECO_HOLD_NET159 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_53__16_ ) , 
     .QN ( n2688 ) ) ;
-SDFFX1_RVT delay_reg_53__15_ ( .D ( n973 ) , .SI ( delay_53__16_ ) , 
+SDFFX1_RVT delay_reg_53__15_ ( .D ( n973 ) , .SI ( net_PTECO_HOLD_NET1219 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_53__15_ ) , 
     .QN ( n2930 ) ) ;
-SDFFX1_RVT delay_reg_53__14_ ( .D ( n974 ) , .SI ( dftopt49_gOb9 ) , 
+SDFFX1_RVT delay_reg_53__14_ ( .D ( n974 ) , .SI ( net_PTECO_HOLD_NET1234 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_53__14_ ) , 
     .QN ( n2931 ) ) ;
-SDFFX1_RVT delay_reg_53__13_ ( .D ( n975 ) , .SI ( n3583 ) , 
+SDFFX1_RVT delay_reg_53__13_ ( .D ( n975 ) , .SI ( net_PTECO_HOLD_NET1045 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_53__13_ ) , 
     .QN ( n2932 ) ) ;
-SDFFX1_RVT delay_reg_53__12_ ( .D ( n976 ) , .SI ( n2948 ) , 
+SDFFX1_RVT delay_reg_53__12_ ( .D ( n976 ) , .SI ( net_PTECO_HOLD_NET317 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_53__12_ ) , 
     .QN ( n2933 ) ) ;
-SDFFX1_RVT delay_reg_53__11_ ( .D ( n977 ) , .SI ( n2949 ) , 
+SDFFX1_RVT delay_reg_53__11_ ( .D ( n977 ) , .SI ( net_PTECO_HOLD_NET594 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_53__11_ ) , 
     .QN ( n2934 ) ) ;
-SDFFX1_RVT delay_reg_53__10_ ( .D ( n978 ) , .SI ( n3572 ) , 
+SDFFX1_RVT delay_reg_53__10_ ( .D ( n978 ) , .SI ( net_PTECO_HOLD_NET473 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_53__10_ ) , 
     .QN ( n2935 ) ) ;
-SDFFX1_RVT delay_reg_53__9_ ( .D ( n979 ) , .SI ( n2951 ) , 
+SDFFX1_RVT delay_reg_53__9_ ( .D ( n979 ) , .SI ( net_PTECO_HOLD_NET149 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_53__9_ ) , 
     .QN ( n2936 ) ) ;
-SDFFX1_RVT delay_reg_53__8_ ( .D ( n980 ) , .SI ( n3558 ) , 
+SDFFX1_RVT delay_reg_53__8_ ( .D ( n980 ) , .SI ( net_PTECO_HOLD_NET603 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_53__8_ ) , 
     .QN ( n2937 ) ) ;
-SDFFX1_RVT delay_reg_53__7_ ( .D ( n981 ) , .SI ( n2953 ) , 
+SDFFX1_RVT delay_reg_53__7_ ( .D ( n981 ) , .SI ( net_PTECO_HOLD_NET691 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_53__7_ ) , 
     .QN ( n2938 ) ) ;
-SDFFX1_RVT delay_reg_53__6_ ( .D ( n982 ) , .SI ( n2954 ) , 
+SDFFX1_RVT delay_reg_53__6_ ( .D ( n982 ) , .SI ( net_PTECO_HOLD_NET765 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_53__6_ ) , 
     .QN ( n2939 ) ) ;
-SDFFX1_RVT delay_reg_53__5_ ( .D ( n983 ) , .SI ( n2955 ) , 
+SDFFX1_RVT delay_reg_53__5_ ( .D ( n983 ) , .SI ( net_PTECO_HOLD_NET146 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_53__5_ ) , 
     .QN ( n2940 ) ) ;
-SDFFX1_RVT delay_reg_53__4_ ( .D ( n984 ) , .SI ( n2970 ) , 
+SDFFX1_RVT delay_reg_53__4_ ( .D ( n984 ) , .SI ( net_PTECO_HOLD_NET161 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_53__4_ ) , 
     .QN ( n2941 ) ) ;
-SDFFX1_RVT delay_reg_53__3_ ( .D ( n985 ) , .SI ( n2912 ) , 
+SDFFX1_RVT delay_reg_53__3_ ( .D ( n985 ) , .SI ( net_PTECO_HOLD_NET247 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_53__3_ ) , 
     .QN ( n2942 ) ) ;
-SDFFX1_RVT delay_reg_53__2_ ( .D ( n986 ) , .SI ( n3579 ) , 
+SDFFX1_RVT delay_reg_53__2_ ( .D ( n986 ) , .SI ( net_PTECO_HOLD_NET70 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_53__2_ ) , 
     .QN ( n2943 ) ) ;
-SDFFX1_RVT delay_reg_53__1_ ( .D ( n987 ) , .SI ( n2959 ) , 
+SDFFX1_RVT delay_reg_53__1_ ( .D ( n987 ) , .SI ( net_PTECO_HOLD_NET67 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_53__1_ ) , 
     .QN ( n2944 ) ) ;
-SDFFX1_RVT delay_reg_53__0_ ( .D ( n988 ) , .SI ( n2638 ) , 
+SDFFX1_RVT delay_reg_53__0_ ( .D ( n988 ) , .SI ( net_PTECO_HOLD_NET759 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_53__0_ ) , 
     .QN ( n2709 ) ) ;
-SDFFX1_RVT delay_reg_54__16_ ( .D ( n989 ) , .SI ( delay_8__16_ ) , 
+SDFFX1_RVT delay_reg_54__16_ ( .D ( n989 ) , .SI ( net_PTECO_HOLD_NET1236 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( dftopt49_gOb9 ) , 
     .QN ( n2762 ) ) ;
-SDFFX1_RVT delay_reg_54__15_ ( .D ( n990 ) , .SI ( n2931 ) , 
+SDFFX1_RVT delay_reg_54__15_ ( .D ( n990 ) , .SI ( net_PTECO_HOLD_NET114 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_54__15_ ) , 
     .QN ( n2914 ) ) ;
-SDFFX1_RVT delay_reg_54__14_ ( .D ( n991 ) , .SI ( n3613 ) , 
+SDFFX1_RVT delay_reg_54__14_ ( .D ( n991 ) , .SI ( net_PTECO_HOLD_NET693 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_54__14_ ) , 
     .QN ( n2915 ) ) ;
-SDFFX1_RVT delay_reg_54__13_ ( .D ( n992 ) , .SI ( n3627 ) , 
+SDFFX1_RVT delay_reg_54__13_ ( .D ( n992 ) , .SI ( net_PTECO_HOLD_NET257 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_54__13_ ) , 
     .QN ( n2916 ) ) ;
-SDFFX1_RVT delay_reg_54__12_ ( .D ( n993 ) , .SI ( n2934 ) , 
+SDFFX1_RVT delay_reg_54__12_ ( .D ( n993 ) , .SI ( net_PTECO_HOLD_NET390 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_54__12_ ) , 
     .QN ( n2917 ) ) ;
-SDFFX1_RVT delay_reg_54__11_ ( .D ( n994 ) , .SI ( n2917 ) , 
+SDFFX1_RVT delay_reg_54__11_ ( .D ( n994 ) , .SI ( net_PTECO_HOLD_NET913 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_54__11_ ) , 
     .QN ( n2918 ) ) ;
-SDFFX1_RVT delay_reg_54__10_ ( .D ( n995 ) , .SI ( n2935 ) , 
+SDFFX1_RVT delay_reg_54__10_ ( .D ( n995 ) , .SI ( net_PTECO_HOLD_NET610 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_54__10_ ) , 
     .QN ( n2919 ) ) ;
-SDFFX1_RVT delay_reg_54__9_ ( .D ( n996 ) , .SI ( n3588 ) , 
+SDFFX1_RVT delay_reg_54__9_ ( .D ( n996 ) , .SI ( net_PTECO_HOLD_NET177 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_54__9_ ) , 
     .QN ( n2920 ) ) ;
-SDFFX1_RVT delay_reg_54__8_ ( .D ( n997 ) , .SI ( n3574 ) , 
+SDFFX1_RVT delay_reg_54__8_ ( .D ( n997 ) , .SI ( net_PTECO_HOLD_NET513 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_54__8_ ) , 
     .QN ( n2921 ) ) ;
-SDFFX1_RVT delay_reg_54__7_ ( .D ( n998 ) , .SI ( n3590 ) , 
+SDFFX1_RVT delay_reg_54__7_ ( .D ( n998 ) , .SI ( net_PTECO_HOLD_NET516 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_54__7_ ) , 
     .QN ( n2922 ) ) ;
-SDFFX1_RVT delay_reg_54__6_ ( .D ( n999 ) , .SI ( n2908 ) , 
+SDFFX1_RVT delay_reg_54__6_ ( .D ( n999 ) , .SI ( net_PTECO_HOLD_NET641 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_54__6_ ) , 
     .QN ( n2923 ) ) ;
-SDFFX1_RVT delay_reg_54__5_ ( .D ( n1000 ) , .SI ( n2940 ) , 
+SDFFX1_RVT delay_reg_54__5_ ( .D ( n1000 ) , .SI ( net_PTECO_HOLD_NET123 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_54__5_ ) , 
     .QN ( n2924 ) ) ;
-SDFFX1_RVT delay_reg_54__4_ ( .D ( n1001 ) , .SI ( n2926 ) , 
+SDFFX1_RVT delay_reg_54__4_ ( .D ( n1001 ) , .SI ( net_PTECO_HOLD_NET63 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_54__4_ ) , 
     .QN ( n2925 ) ) ;
-SDFFX1_RVT delay_reg_54__3_ ( .D ( n1002 ) , .SI ( n3624 ) , 
+SDFFX1_RVT delay_reg_54__3_ ( .D ( n1002 ) , .SI ( net_PTECO_HOLD_NET98 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_54__3_ ) , 
     .QN ( n2926 ) ) ;
-SDFFX1_RVT delay_reg_54__2_ ( .D ( n1003 ) , .SI ( n2957 ) , 
+SDFFX1_RVT delay_reg_54__2_ ( .D ( n1003 ) , .SI ( net_PTECO_HOLD_NET573 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_54__2_ ) , 
     .QN ( n2927 ) ) ;
-SDFFX1_RVT delay_reg_54__1_ ( .D ( n1004 ) , .SI ( n3595 ) , 
+SDFFX1_RVT delay_reg_54__1_ ( .D ( n1004 ) , .SI ( net_PTECO_HOLD_NET268 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_54__1_ ) , 
     .QN ( n2928 ) ) ;
-SDFFX1_RVT delay_reg_54__0_ ( .D ( n1005 ) , .SI ( n2709 ) , 
+SDFFX1_RVT delay_reg_54__0_ ( .D ( n1005 ) , .SI ( net_PTECO_HOLD_NET1052 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_54__0_ ) , 
     .QN ( n2929 ) ) ;
-SDFFX1_RVT delay_reg_55__16_ ( .D ( n1006 ) , .SI ( delay_7__16_ ) , 
+SDFFX1_RVT delay_reg_55__16_ ( .D ( n1006 ) , .SI ( net_PTECO_HOLD_NET1224 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_55__16_ ) , 
     .QN ( n2668 ) ) ;
-SDFFX1_RVT delay_reg_55__15_ ( .D ( n1007 ) , .SI ( n3612 ) , 
+SDFFX1_RVT delay_reg_55__15_ ( .D ( n1007 ) , .SI ( net_PTECO_HOLD_NET198 ) , 
     .SE ( HFSNET_1130 ) , .CLK ( ZCTSNET_26 ) , .Q ( delay_55__15_ ) , 
     .QN ( n2899 ) ) ;
-SDFFX1_RVT delay_reg_55__14_ ( .D ( n1008 ) , .SI ( n2915 ) , 
+SDFFX1_RVT delay_reg_55__14_ ( .D ( n1008 ) , .SI ( net_PTECO_HOLD_NET578 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_55__14_ ) , 
     .QN ( n2900 ) ) ;
-SDFFX1_RVT delay_reg_55__13_ ( .D ( n1009 ) , .SI ( n3614 ) , 
+SDFFX1_RVT delay_reg_55__13_ ( .D ( n1009 ) , .SI ( net_PTECO_HOLD_NET595 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_55__13_ ) , 
     .QN ( n2901 ) ) ;
-SDFFX1_RVT delay_reg_55__12_ ( .D ( n1010 ) , .SI ( n2878 ) , 
+SDFFX1_RVT delay_reg_55__12_ ( .D ( n1010 ) , .SI ( net_PTECO_HOLD_NET508 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_55__12_ ) , 
     .QN ( n2902 ) ) ;
-SDFFX1_RVT delay_reg_55__11_ ( .D ( n1011 ) , .SI ( n2887 ) , 
+SDFFX1_RVT delay_reg_55__11_ ( .D ( n1011 ) , .SI ( net_PTECO_HOLD_NET414 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_55__11_ ) , 
     .QN ( n2903 ) ) ;
-SDFFX1_RVT delay_reg_55__10_ ( .D ( n1012 ) , .SI ( n2888 ) , 
+SDFFX1_RVT delay_reg_55__10_ ( .D ( n1012 ) , .SI ( net_PTECO_HOLD_NET1108 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_55__10_ ) , 
     .QN ( n2904 ) ) ;
-SDFFX1_RVT delay_reg_55__9_ ( .D ( n1013 ) , .SI ( n3618 ) , 
+SDFFX1_RVT delay_reg_55__9_ ( .D ( n1013 ) , .SI ( net_PTECO_HOLD_NET183 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_55__9_ ) , 
     .QN ( n2905 ) ) ;
-SDFFX1_RVT delay_reg_55__8_ ( .D ( n1014 ) , .SI ( n3589 ) , 
+SDFFX1_RVT delay_reg_55__8_ ( .D ( n1014 ) , .SI ( net_PTECO_HOLD_NET460 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_55__8_ ) , 
     .QN ( n2906 ) ) ;
-SDFFX1_RVT delay_reg_55__7_ ( .D ( n1015 ) , .SI ( n3605 ) , 
+SDFFX1_RVT delay_reg_55__7_ ( .D ( n1015 ) , .SI ( net_PTECO_HOLD_NET577 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_55__7_ ) , 
     .QN ( n2907 ) ) ;
-SDFFX1_RVT delay_reg_55__6_ ( .D ( n1016 ) , .SI ( n3591 ) , 
+SDFFX1_RVT delay_reg_55__6_ ( .D ( n1016 ) , .SI ( net_PTECO_HOLD_NET397 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_55__6_ ) , 
     .QN ( n2908 ) ) ;
-SDFFX1_RVT delay_reg_55__5_ ( .D ( n1017 ) , .SI ( n2894 ) , 
+SDFFX1_RVT delay_reg_55__5_ ( .D ( n1017 ) , .SI ( net_PTECO_HOLD_NET78 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_55__5_ ) , 
     .QN ( n2909 ) ) ;
-SDFFX1_RVT delay_reg_55__4_ ( .D ( n1018 ) , .SI ( n2911 ) , 
+SDFFX1_RVT delay_reg_55__4_ ( .D ( n1018 ) , .SI ( net_PTECO_HOLD_NET86 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_55__4_ ) , 
     .QN ( n2910 ) ) ;
-SDFFX1_RVT delay_reg_55__3_ ( .D ( n1019 ) , .SI ( n3622 ) , 
+SDFFX1_RVT delay_reg_55__3_ ( .D ( n1019 ) , .SI ( net_PTECO_HOLD_NET1181 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_55__3_ ) , 
     .QN ( n2911 ) ) ;
-SDFFX1_RVT delay_reg_55__2_ ( .D ( n1020 ) , .SI ( n3625 ) , 
+SDFFX1_RVT delay_reg_55__2_ ( .D ( n1020 ) , .SI ( net_PTECO_HOLD_NET83 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_55__2_ ) , 
     .QN ( n2912 ) ) ;
-SDFFX1_RVT delay_reg_55__1_ ( .D ( n1021 ) , .SI ( n3610 ) , 
+SDFFX1_RVT delay_reg_55__1_ ( .D ( n1021 ) , .SI ( net_PTECO_HOLD_NET99 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_55__1_ ) , 
     .QN ( n2913 ) ) ;
-SDFFX1_RVT delay_reg_55__0_ ( .D ( n1022 ) , .SI ( n3611 ) , 
+SDFFX1_RVT delay_reg_55__0_ ( .D ( n1022 ) , .SI ( net_PTECO_HOLD_NET157 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_20 ) , .Q ( delay_55__0_ ) , 
     .QN ( n2727 ) ) ;
-SDFFX1_RVT delay_reg_56__16_ ( .D ( n1023 ) , .SI ( n2932 ) , 
+SDFFX1_RVT delay_reg_56__16_ ( .D ( n1023 ) , .SI ( net_PTECO_HOLD_NET542 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_56__16_ ) , 
     .QN ( n2765 ) ) ;
-SDFFX1_RVT delay_reg_56__15_ ( .D ( n1024 ) , .SI ( n2900 ) , 
+SDFFX1_RVT delay_reg_56__15_ ( .D ( n1024 ) , .SI ( net_PTECO_HOLD_NET1160 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_56__15_ ) , 
     .QN ( n2884 ) ) ;
-SDFFX1_RVT delay_reg_56__14_ ( .D ( n1025 ) , .SI ( n3628 ) , 
+SDFFX1_RVT delay_reg_56__14_ ( .D ( n1025 ) , .SI ( net_PTECO_HOLD_NET468 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_56__14_ ) , 
     .QN ( n2885 ) ) ;
-SDFFX1_RVT delay_reg_56__13_ ( .D ( n1026 ) , .SI ( n3629 ) , 
+SDFFX1_RVT delay_reg_56__13_ ( .D ( n1026 ) , .SI ( net_PTECO_HOLD_NET319 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_56__13_ ) , 
     .QN ( n2886 ) ) ;
-SDFFX1_RVT delay_reg_56__12_ ( .D ( n1027 ) , .SI ( n3630 ) , 
+SDFFX1_RVT delay_reg_56__12_ ( .D ( n1027 ) , .SI ( net_PTECO_HOLD_NET329 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_56__12_ ) , 
     .QN ( n2887 ) ) ;
-SDFFX1_RVT delay_reg_56__11_ ( .D ( n1028 ) , .SI ( n2734 ) , 
+SDFFX1_RVT delay_reg_56__11_ ( .D ( n1028 ) , .SI ( net_PTECO_HOLD_NET1132 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_56__11_ ) , 
     .QN ( n2888 ) ) ;
-SDFFX1_RVT delay_reg_56__10_ ( .D ( n1029 ) , .SI ( n3631 ) , 
+SDFFX1_RVT delay_reg_56__10_ ( .D ( n1029 ) , .SI ( net_PTECO_HOLD_NET850 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_56__10_ ) , 
     .QN ( n2889 ) ) ;
-SDFFX1_RVT delay_reg_56__9_ ( .D ( n1030 ) , .SI ( n3661 ) , 
+SDFFX1_RVT delay_reg_56__9_ ( .D ( n1030 ) , .SI ( net_PTECO_HOLD_NET1029 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_56__9_ ) , 
     .QN ( n2890 ) ) ;
-SDFFX1_RVT delay_reg_56__8_ ( .D ( n1031 ) , .SI ( delay_57__9_ ) , 
+SDFFX1_RVT delay_reg_56__8_ ( .D ( n1031 ) , .SI ( net_PTECO_HOLD_NET1332 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_56__8_ ) , 
     .QN ( n2891 ) ) ;
-SDFFX1_RVT delay_reg_56__7_ ( .D ( n1032 ) , .SI ( n2867 ) , 
+SDFFX1_RVT delay_reg_56__7_ ( .D ( n1032 ) , .SI ( net_PTECO_HOLD_NET924 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_56__7_ ) , 
     .QN ( n2892 ) ) ;
-SDFFX1_RVT delay_reg_56__6_ ( .D ( n1033 ) , .SI ( n2869 ) , 
+SDFFX1_RVT delay_reg_56__6_ ( .D ( n1033 ) , .SI ( net_PTECO_HOLD_NET50 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( clk ) , .Q ( delay_56__6_ ) , .QN ( n2893 ) ) ;
-SDFFX1_RVT delay_reg_56__5_ ( .D ( n1034 ) , .SI ( n3607 ) , 
+SDFFX1_RVT delay_reg_56__5_ ( .D ( n1034 ) , .SI ( net_PTECO_HOLD_NET118 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_56__5_ ) , 
     .QN ( n2894 ) ) ;
-SDFFX1_RVT delay_reg_56__4_ ( .D ( n1035 ) , .SI ( n2715 ) , 
+SDFFX1_RVT delay_reg_56__4_ ( .D ( n1035 ) , .SI ( net_PTECO_HOLD_NET1206 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_56__4_ ) , 
     .QN ( n2895 ) ) ;
-SDFFX1_RVT delay_reg_56__3_ ( .D ( n1036 ) , .SI ( n3608 ) , 
+SDFFX1_RVT delay_reg_56__3_ ( .D ( n1036 ) , .SI ( net_PTECO_HOLD_NET602 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_56__3_ ) , 
     .QN ( n2896 ) ) ;
-SDFFX1_RVT delay_reg_56__2_ ( .D ( n1037 ) , .SI ( n3639 ) , 
+SDFFX1_RVT delay_reg_56__2_ ( .D ( n1037 ) , .SI ( net_PTECO_HOLD_NET401 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_56__2_ ) , 
     .QN ( n2897 ) ) ;
-SDFFX1_RVT delay_reg_56__1_ ( .D ( n1038 ) , .SI ( n2652 ) , 
+SDFFX1_RVT delay_reg_56__1_ ( .D ( n1038 ) , .SI ( net_PTECO_HOLD_NET1085 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_56__1_ ) , 
     .QN ( n2898 ) ) ;
-SDFFX1_RVT delay_reg_56__0_ ( .D ( n1039 ) , .SI ( n2655 ) , 
+SDFFX1_RVT delay_reg_56__0_ ( .D ( n1039 ) , .SI ( net_PTECO_HOLD_NET51 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_56__0_ ) , 
     .QN ( n2716 ) ) ;
-SDFFX1_RVT delay_reg_57__16_ ( .D ( n1040 ) , .SI ( delay_56__16_ ) , 
+SDFFX1_RVT delay_reg_57__16_ ( .D ( n1040 ) , .SI ( net_PTECO_HOLD_NET1240 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_57__16_ ) , 
     .QN ( n2875 ) ) ;
-SDFFX1_RVT delay_reg_57__15_ ( .D ( n1041 ) , .SI ( n2875 ) , 
+SDFFX1_RVT delay_reg_57__15_ ( .D ( n1041 ) , .SI ( net_PTECO_HOLD_NET740 ) , 
     .SE ( HFSNET_1127 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_57__15_ ) , 
     .QN ( n2876 ) ) ;
-SDFFX1_RVT delay_reg_57__14_ ( .D ( n1042 ) , .SI ( n2861 ) , 
+SDFFX1_RVT delay_reg_57__14_ ( .D ( n1042 ) , .SI ( net_PTECO_HOLD_NET387 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_57__14_ ) , 
     .QN ( n2877 ) ) ;
-SDFFX1_RVT delay_reg_57__13_ ( .D ( n1043 ) , .SI ( n2903 ) , 
+SDFFX1_RVT delay_reg_57__13_ ( .D ( n1043 ) , .SI ( net_PTECO_HOLD_NET303 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_57__13_ ) , 
     .QN ( n2878 ) ) ;
-SDFFX1_RVT delay_reg_57__12_ ( .D ( n1044 ) , .SI ( n3660 ) , 
+SDFFX1_RVT delay_reg_57__12_ ( .D ( n1044 ) , .SI ( net_PTECO_HOLD_NET875 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_57__12_ ) , 
     .QN ( n2734 ) ) ;
-SDFFX1_RVT delay_reg_57__11_ ( .D ( n1045 ) , .SI ( n3601 ) , 
+SDFFX1_RVT delay_reg_57__11_ ( .D ( n1045 ) , .SI ( net_PTECO_HOLD_NET494 ) , 
     .SE ( HFSNET_1133 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_57__11_ ) , 
     .QN ( n2879 ) ) ;
-SDFFX1_RVT delay_reg_57__10_ ( .D ( n1046 ) , .SI ( n3632 ) , 
+SDFFX1_RVT delay_reg_57__10_ ( .D ( n1046 ) , .SI ( net_PTECO_HOLD_NET199 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_57__10_ ) , 
     .QN ( n2880 ) ) ;
-SDFFX1_RVT delay_reg_57__9_ ( .D ( n1047 ) , .SI ( n2866 ) , 
+SDFFX1_RVT delay_reg_57__9_ ( .D ( n1047 ) , .SI ( net_PTECO_HOLD_NET601 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_57__9_ ) , 
     .QN ( n2700 ) ) ;
-SDFFX1_RVT delay_reg_57__8_ ( .D ( n1048 ) , .SI ( n3620 ) , 
+SDFFX1_RVT delay_reg_57__8_ ( .D ( n1048 ) , .SI ( net_PTECO_HOLD_NET481 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_57__8_ ) , 
     .QN ( n2714 ) ) ;
-SDFFX1_RVT delay_reg_57__7_ ( .D ( n1049 ) , .SI ( n3650 ) , 
+SDFFX1_RVT delay_reg_57__7_ ( .D ( n1049 ) , .SI ( net_PTECO_HOLD_NET652 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_57__7_ ) , 
     .QN ( n2881 ) ) ;
-SDFFX1_RVT delay_reg_57__6_ ( .D ( n1050 ) , .SI ( n3606 ) , 
+SDFFX1_RVT delay_reg_57__6_ ( .D ( n1050 ) , .SI ( net_PTECO_HOLD_NET75 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_57__6_ ) , 
     .QN ( n2713 ) ) ;
-SDFFX1_RVT delay_reg_57__5_ ( .D ( n1051 ) , .SI ( n3652 ) , 
+SDFFX1_RVT delay_reg_57__5_ ( .D ( n1051 ) , .SI ( net_PTECO_HOLD_NET110 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_57__5_ ) , 
     .QN ( n2720 ) ) ;
-SDFFX1_RVT delay_reg_57__4_ ( .D ( n1052 ) , .SI ( n2871 ) , 
+SDFFX1_RVT delay_reg_57__4_ ( .D ( n1052 ) , .SI ( net_PTECO_HOLD_NET195 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_57__4_ ) , 
     .QN ( n2715 ) ) ;
-SDFFX1_RVT delay_reg_57__3_ ( .D ( n1053 ) , .SI ( n2896 ) , 
+SDFFX1_RVT delay_reg_57__3_ ( .D ( n1053 ) , .SI ( net_PTECO_HOLD_NET96 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_57__3_ ) , 
     .QN ( n2639 ) ) ;
-SDFFX1_RVT delay_reg_57__2_ ( .D ( n1054 ) , .SI ( n3640 ) , 
+SDFFX1_RVT delay_reg_57__2_ ( .D ( n1054 ) , .SI ( net_PTECO_HOLD_NET246 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_57__2_ ) , 
     .QN ( n2882 ) ) ;
-SDFFX1_RVT delay_reg_57__1_ ( .D ( n1055 ) , .SI ( n2844 ) , 
+SDFFX1_RVT delay_reg_57__1_ ( .D ( n1055 ) , .SI ( net_PTECO_HOLD_NET543 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_57__1_ ) , 
     .QN ( n2660 ) ) ;
-SDFFX1_RVT delay_reg_57__0_ ( .D ( n1056 ) , .SI ( n3656 ) , 
+SDFFX1_RVT delay_reg_57__0_ ( .D ( n1056 ) , .SI ( net_PTECO_HOLD_NET723 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_57__0_ ) , 
     .QN ( n2883 ) ) ;
-SDFFX1_RVT delay_reg_58__16_ ( .D ( n1057 ) , .SI ( n2884 ) , 
+SDFFX1_RVT delay_reg_58__16_ ( .D ( n1057 ) , .SI ( net_PTECO_HOLD_NET334 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_58__16_ ) , 
     .QN ( n2669 ) ) ;
-SDFFX1_RVT delay_reg_58__15_ ( .D ( n1058 ) , .SI ( n2901 ) , 
+SDFFX1_RVT delay_reg_58__15_ ( .D ( n1058 ) , .SI ( net_PTECO_HOLD_NET429 ) , 
     .SE ( HFSNET_1128 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_58__15_ ) , 
     .QN ( n2860 ) ) ;
-SDFFX1_RVT delay_reg_58__14_ ( .D ( n1059 ) , .SI ( n3658 ) , 
+SDFFX1_RVT delay_reg_58__14_ ( .D ( n1059 ) , .SI ( net_PTECO_HOLD_NET895 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_58__14_ ) , 
     .QN ( n2861 ) ) ;
-SDFFX1_RVT delay_reg_58__13_ ( .D ( n1060 ) , .SI ( n2886 ) , 
+SDFFX1_RVT delay_reg_58__13_ ( .D ( n1060 ) , .SI ( net_PTECO_HOLD_NET1128 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_58__13_ ) , 
     .QN ( n2862 ) ) ;
-SDFFX1_RVT delay_reg_58__12_ ( .D ( n1061 ) , .SI ( n3645 ) , 
+SDFFX1_RVT delay_reg_58__12_ ( .D ( n1061 ) , .SI ( net_PTECO_HOLD_NET942 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_58__12_ ) , 
     .QN ( n2863 ) ) ;
-SDFFX1_RVT delay_reg_58__11_ ( .D ( n1062 ) , .SI ( n2849 ) , 
+SDFFX1_RVT delay_reg_58__11_ ( .D ( n1062 ) , .SI ( net_PTECO_HOLD_NET320 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_58__11_ ) , 
     .QN ( n2864 ) ) ;
-SDFFX1_RVT delay_reg_58__10_ ( .D ( n1063 ) , .SI ( n2835 ) , 
+SDFFX1_RVT delay_reg_58__10_ ( .D ( n1063 ) , .SI ( net_PTECO_HOLD_NET126 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_58__10_ ) , 
     .QN ( n2865 ) ) ;
-SDFFX1_RVT delay_reg_58__9_ ( .D ( n1064 ) , .SI ( n3663 ) , 
+SDFFX1_RVT delay_reg_58__9_ ( .D ( n1064 ) , .SI ( net_PTECO_HOLD_NET186 ) , 
     .SE ( HFSNET_1132 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_58__9_ ) , 
     .QN ( n2866 ) ) ;
-SDFFX1_RVT delay_reg_58__8_ ( .D ( n1065 ) , .SI ( n2714 ) , 
+SDFFX1_RVT delay_reg_58__8_ ( .D ( n1065 ) , .SI ( net_PTECO_HOLD_NET1213 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_58__8_ ) , 
     .QN ( n2867 ) ) ;
-SDFFX1_RVT delay_reg_58__7_ ( .D ( n1066 ) , .SI ( n3635 ) , 
+SDFFX1_RVT delay_reg_58__7_ ( .D ( n1066 ) , .SI ( net_PTECO_HOLD_NET714 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_58__7_ ) , 
     .QN ( n2868 ) ) ;
-SDFFX1_RVT delay_reg_58__6_ ( .D ( n1067 ) , .SI ( n2870 ) , 
+SDFFX1_RVT delay_reg_58__6_ ( .D ( n1067 ) , .SI ( net_PTECO_HOLD_NET95 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( clk ) , .Q ( delay_58__6_ ) , .QN ( n2869 ) ) ;
-SDFFX1_RVT delay_reg_58__5_ ( .D ( n1068 ) , .SI ( n3666 ) , 
+SDFFX1_RVT delay_reg_58__5_ ( .D ( n1068 ) , .SI ( net_PTECO_HOLD_NET677 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( clk ) , .Q ( delay_58__5_ ) , .QN ( n2870 ) ) ;
-SDFFX1_RVT delay_reg_58__4_ ( .D ( n1069 ) , .SI ( n2872 ) , 
+SDFFX1_RVT delay_reg_58__4_ ( .D ( n1069 ) , .SI ( net_PTECO_HOLD_NET61 ) , 
     .SE ( HFSNET_1137 ) , .CLK ( ZCTSNET_17 ) , .Q ( delay_58__4_ ) , 
     .QN ( n2871 ) ) ;
-SDFFX1_RVT delay_reg_58__3_ ( .D ( n1070 ) , .SI ( n2856 ) , 
+SDFFX1_RVT delay_reg_58__3_ ( .D ( n1070 ) , .SI ( net_PTECO_HOLD_NET361 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_58__3_ ) , 
     .QN ( n2872 ) ) ;
-SDFFX1_RVT delay_reg_58__2_ ( .D ( n1071 ) , .SI ( n3670 ) , 
+SDFFX1_RVT delay_reg_58__2_ ( .D ( n1071 ) , .SI ( net_PTECO_HOLD_NET322 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_58__2_ ) , 
     .QN ( n2873 ) ) ;
-SDFFX1_RVT delay_reg_58__1_ ( .D ( n1072 ) , .SI ( n2651 ) , 
+SDFFX1_RVT delay_reg_58__1_ ( .D ( n1072 ) , .SI ( net_PTECO_HOLD_NET796 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_58__1_ ) , 
     .QN ( n2874 ) ) ;
-SDFFX1_RVT delay_reg_58__0_ ( .D ( n1073 ) , .SI ( n2883 ) , 
+SDFFX1_RVT delay_reg_58__0_ ( .D ( n1073 ) , .SI ( net_PTECO_HOLD_NET531 ) , 
     .SE ( HFSNET_1136 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_58__0_ ) , 
     .QN ( n2646 ) ) ;
-SDFFX1_RVT delay_reg_59__16_ ( .D ( n1074 ) , .SI ( n3597 ) , 
+SDFFX1_RVT delay_reg_59__16_ ( .D ( n1074 ) , .SI ( net_PTECO_HOLD_NET358 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_30 ) , .Q ( dftopt7_gOb3 ) , 
     .QN ( n2745 ) ) ;
-SDFFX1_RVT delay_reg_59__15_ ( .D ( n1075 ) , .SI ( delay_1__16_ ) , 
+SDFFX1_RVT delay_reg_59__15_ ( .D ( n1075 ) , .SI ( net_PTECO_HOLD_NET1243 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_59__15_ ) , 
     .QN ( n2845 ) ) ;
-SDFFX1_RVT delay_reg_59__14_ ( .D ( n1076 ) , .SI ( n3657 ) , 
+SDFFX1_RVT delay_reg_59__14_ ( .D ( n1076 ) , .SI ( net_PTECO_HOLD_NET336 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_30 ) , .Q ( delay_59__14_ ) , 
     .QN ( n2846 ) ) ;
-SDFFX1_RVT delay_reg_59__13_ ( .D ( n1077 ) , .SI ( n3659 ) , 
+SDFFX1_RVT delay_reg_59__13_ ( .D ( n1077 ) , .SI ( net_PTECO_HOLD_NET107 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_59__13_ ) , 
     .QN ( n2847 ) ) ;
-SDFFX1_RVT delay_reg_59__12_ ( .D ( n1078 ) , .SI ( n3646 ) , 
+SDFFX1_RVT delay_reg_59__12_ ( .D ( n1078 ) , .SI ( net_PTECO_HOLD_NET709 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_27 ) , .Q ( delay_59__12_ ) , 
     .QN ( n2848 ) ) ;
-SDFFX1_RVT delay_reg_59__11_ ( .D ( n1079 ) , .SI ( n3676 ) , 
+SDFFX1_RVT delay_reg_59__11_ ( .D ( n1079 ) , .SI ( net_PTECO_HOLD_NET88 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_59__11_ ) , 
     .QN ( n2849 ) ) ;
-SDFFX1_RVT delay_reg_59__10_ ( .D ( n1080 ) , .SI ( n2865 ) , 
+SDFFX1_RVT delay_reg_59__10_ ( .D ( n1080 ) , .SI ( net_PTECO_HOLD_NET158 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_59__10_ ) , 
     .QN ( n2850 ) ) ;
-SDFFX1_RVT delay_reg_59__9_ ( .D ( n1081 ) , .SI ( n3678 ) , 
+SDFFX1_RVT delay_reg_59__9_ ( .D ( n1081 ) , .SI ( net_PTECO_HOLD_NET130 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_59__9_ ) , 
     .QN ( n2851 ) ) ;
-SDFFX1_RVT delay_reg_59__8_ ( .D ( n1082 ) , .SI ( n2868 ) , 
+SDFFX1_RVT delay_reg_59__8_ ( .D ( n1082 ) , .SI ( net_PTECO_HOLD_NET403 ) , 
     .SE ( HFSNET_1135 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_59__8_ ) , 
     .QN ( n2852 ) ) ;
-SDFFX1_RVT delay_reg_59__7_ ( .D ( n1083 ) , .SI ( n2837 ) , 
+SDFFX1_RVT delay_reg_59__7_ ( .D ( n1083 ) , .SI ( net_PTECO_HOLD_NET1032 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_59__7_ ) , 
     .QN ( n2853 ) ) ;
-SDFFX1_RVT delay_reg_59__6_ ( .D ( n1084 ) , .SI ( n3681 ) , 
+SDFFX1_RVT delay_reg_59__6_ ( .D ( n1084 ) , .SI ( net_PTECO_HOLD_NET785 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_59__6_ ) , .QN ( n2854 ) ) ;
-SDFFX1_RVT delay_reg_59__5_ ( .D ( n1085 ) , .SI ( n2854 ) , 
+SDFFX1_RVT delay_reg_59__5_ ( .D ( n1085 ) , .SI ( net_PTECO_HOLD_NET735 ) , 
     .SE ( HFSNET_1140 ) , .CLK ( clk ) , .Q ( delay_59__5_ ) , .QN ( n2855 ) ) ;
-SDFFX1_RVT delay_reg_59__4_ ( .D ( n1086 ) , .SI ( n2841 ) , 
+SDFFX1_RVT delay_reg_59__4_ ( .D ( n1086 ) , .SI ( net_PTECO_HOLD_NET225 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_59__4_ ) , 
     .QN ( n2856 ) ) ;
-SDFFX1_RVT delay_reg_59__3_ ( .D ( n1087 ) , .SI ( n3669 ) , 
+SDFFX1_RVT delay_reg_59__3_ ( .D ( n1087 ) , .SI ( net_PTECO_HOLD_NET103 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_59__3_ ) , 
     .QN ( n2857 ) ) ;
-SDFFX1_RVT delay_reg_59__2_ ( .D ( n1088 ) , .SI ( n3686 ) , 
+SDFFX1_RVT delay_reg_59__2_ ( .D ( n1088 ) , .SI ( net_PTECO_HOLD_NET208 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_59__2_ ) , 
     .QN ( n2858 ) ) ;
-SDFFX1_RVT delay_reg_59__1_ ( .D ( n1089 ) , .SI ( n2874 ) , 
+SDFFX1_RVT delay_reg_59__1_ ( .D ( n1089 ) , .SI ( net_PTECO_HOLD_NET226 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_59__1_ ) , 
     .QN ( n2859 ) ) ;
-SDFFX1_RVT delay_reg_59__0_ ( .D ( n1090 ) , .SI ( n2731 ) , 
+SDFFX1_RVT delay_reg_59__0_ ( .D ( n1090 ) , .SI ( net_PTECO_HOLD_NET1135 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_59__0_ ) , 
     .QN ( n2722 ) ) ;
-SDFFX1_RVT delay_reg_60__16_ ( .D ( n1091 ) , .SI ( dftopt45_gOb7 ) , 
+SDFFX1_RVT delay_reg_60__16_ ( .D ( n1091 ) , .SI ( net_PTECO_HOLD_NET1232 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_30 ) , .Q ( dftopt70 ) , 
     .QN ( n2687 ) ) ;
-SDFFX1_RVT delay_reg_60__15_ ( .D ( n1092 ) , .SI ( dftopt72 ) , 
+SDFFX1_RVT delay_reg_60__15_ ( .D ( n1092 ) , .SI ( net_PTECO_HOLD_NET1152 ) , 
     .SE ( HFSNET_1129 ) , .CLK ( ZCTSNET_24 ) , .Q ( delay_60__15_ ) , 
     .QN ( dftopt73 ) ) ;
-SDFFX1_RVT delay_reg_60__14_ ( .D ( n1093 ) , .SI ( n3673 ) , 
+SDFFX1_RVT delay_reg_60__14_ ( .D ( n1093 ) , .SI ( net_PTECO_HOLD_NET104 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_60__14_ ) , 
     .QN ( n2831 ) ) ;
-SDFFX1_RVT delay_reg_60__13_ ( .D ( n1094 ) , .SI ( n2817 ) , 
+SDFFX1_RVT delay_reg_60__13_ ( .D ( n1094 ) , .SI ( net_PTECO_HOLD_NET283 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_60__13_ ) , 
     .QN ( n2832 ) ) ;
-SDFFX1_RVT delay_reg_60__12_ ( .D ( n1095 ) , .SI ( n2659 ) , 
+SDFFX1_RVT delay_reg_60__12_ ( .D ( n1095 ) , .SI ( net_PTECO_HOLD_NET1170 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_60__12_ ) , 
     .QN ( n2833 ) ) ;
-SDFFX1_RVT delay_reg_60__11_ ( .D ( n1096 ) , .SI ( n3691 ) , 
+SDFFX1_RVT delay_reg_60__11_ ( .D ( n1096 ) , .SI ( net_PTECO_HOLD_NET182 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_60__11_ ) , 
     .QN ( n2834 ) ) ;
-SDFFX1_RVT delay_reg_60__10_ ( .D ( n1097 ) , .SI ( n2851 ) , 
+SDFFX1_RVT delay_reg_60__10_ ( .D ( n1097 ) , .SI ( net_PTECO_HOLD_NET129 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_16 ) , .Q ( delay_60__10_ ) , 
     .QN ( n2835 ) ) ;
-SDFFX1_RVT delay_reg_60__9_ ( .D ( n1098 ) , .SI ( n2820 ) , 
+SDFFX1_RVT delay_reg_60__9_ ( .D ( n1098 ) , .SI ( net_PTECO_HOLD_NET661 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_60__9_ ) , 
     .QN ( n2836 ) ) ;
-SDFFX1_RVT delay_reg_60__8_ ( .D ( n1099 ) , .SI ( n3664 ) , 
+SDFFX1_RVT delay_reg_60__8_ ( .D ( n1099 ) , .SI ( net_PTECO_HOLD_NET1073 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( ZCTSNET_23 ) , .Q ( delay_60__8_ ) , 
     .QN ( n2837 ) ) ;
-SDFFX1_RVT delay_reg_60__7_ ( .D ( n1100 ) , .SI ( n3680 ) , 
+SDFFX1_RVT delay_reg_60__7_ ( .D ( n1100 ) , .SI ( net_PTECO_HOLD_NET366 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_60__7_ ) , .QN ( n2838 ) ) ;
-SDFFX1_RVT delay_reg_60__6_ ( .D ( n1101 ) , .SI ( n2838 ) , 
+SDFFX1_RVT delay_reg_60__6_ ( .D ( n1101 ) , .SI ( net_PTECO_HOLD_NET1022 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_60__6_ ) , .QN ( n2839 ) ) ;
-SDFFX1_RVT delay_reg_60__5_ ( .D ( n1102 ) , .SI ( n3696 ) , .SE ( test_se ) , 
-    .CLK ( clk ) , .Q ( delay_60__5_ ) , .QN ( n2840 ) ) ;
-SDFFX1_RVT delay_reg_60__4_ ( .D ( n1103 ) , .SI ( n2857 ) , 
+SDFFX1_RVT delay_reg_60__5_ ( .D ( n1102 ) , .SI ( net_PTECO_HOLD_NET797 ) , 
+    .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_60__5_ ) , .QN ( n2840 ) ) ;
+SDFFX1_RVT delay_reg_60__4_ ( .D ( n1103 ) , .SI ( net_PTECO_HOLD_NET135 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_60__4_ ) , 
     .QN ( n2841 ) ) ;
-SDFFX1_RVT delay_reg_60__3_ ( .D ( n1104 ) , .SI ( n3684 ) , 
+SDFFX1_RVT delay_reg_60__3_ ( .D ( n1104 ) , .SI ( net_PTECO_HOLD_NET242 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_60__3_ ) , 
     .QN ( n2842 ) ) ;
-SDFFX1_RVT delay_reg_60__2_ ( .D ( n1105 ) , .SI ( n3700 ) , 
+SDFFX1_RVT delay_reg_60__2_ ( .D ( n1105 ) , .SI ( net_PTECO_HOLD_NET111 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_60__2_ ) , 
     .QN ( n2843 ) ) ;
-SDFFX1_RVT delay_reg_60__1_ ( .D ( n1106 ) , .SI ( n2859 ) , 
+SDFFX1_RVT delay_reg_60__1_ ( .D ( n1106 ) , .SI ( net_PTECO_HOLD_NET440 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_60__1_ ) , 
     .QN ( n2844 ) ) ;
-SDFFX1_RVT delay_reg_60__0_ ( .D ( n1107 ) , .SI ( n2653 ) , 
+SDFFX1_RVT delay_reg_60__0_ ( .D ( n1107 ) , .SI ( net_PTECO_HOLD_NET636 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_60__0_ ) , 
     .QN ( n2651 ) ) ;
-SDFFX1_RVT delay_reg_61__16_ ( .D ( n1108 ) , .SI ( dftopt43_gOb6 ) , 
+SDFFX1_RVT delay_reg_61__16_ ( .D ( n1108 ) , .SI ( net_PTECO_HOLD_NET373 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( dftopt5_gOb2 ) , 
     .QN ( n2759 ) ) ;
-SDFFX1_RVT delay_reg_61__15_ ( .D ( n1109 ) , .SI ( dftopt41_gOb5 ) , 
+SDFFX1_RVT delay_reg_61__15_ ( .D ( n1109 ) , .SI ( net_PTECO_HOLD_NET415 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_61__15_ ) , 
     .QN ( dftopt9 ) ) ;
-SDFFX1_RVT delay_reg_61__14_ ( .D ( n1110 ) , .SI ( n3688 ) , 
+SDFFX1_RVT delay_reg_61__14_ ( .D ( n1110 ) , .SI ( net_PTECO_HOLD_NET350 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_61__14_ ) , 
     .QN ( n2816 ) ) ;
-SDFFX1_RVT delay_reg_61__13_ ( .D ( n1111 ) , .SI ( delay_62__15_ ) , 
+SDFFX1_RVT delay_reg_61__13_ ( .D ( n1111 ) , .SI ( net_PTECO_HOLD_NET1225 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_61__13_ ) , 
     .QN ( n2817 ) ) ;
-SDFFX1_RVT delay_reg_61__12_ ( .D ( n1112 ) , .SI ( dftopt65 ) , 
+SDFFX1_RVT delay_reg_61__12_ ( .D ( n1112 ) , .SI ( net_PTECO_HOLD_NET1339 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_61__12_ ) , 
     .QN ( n2818 ) ) ;
-SDFFX1_RVT delay_reg_61__11_ ( .D ( n1113 ) , .SI ( delay_62__12_ ) , 
+SDFFX1_RVT delay_reg_61__11_ ( .D ( n1113 ) , .SI ( net_PTECO_HOLD_NET1230 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_61__11_ ) , 
     .QN ( n2819 ) ) ;
-SDFFX1_RVT delay_reg_61__10_ ( .D ( n1114 ) , .SI ( n2807 ) , 
+SDFFX1_RVT delay_reg_61__10_ ( .D ( n1114 ) , .SI ( net_PTECO_HOLD_NET369 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_61__10_ ) , 
     .QN ( n2820 ) ) ;
-SDFFX1_RVT delay_reg_61__9_ ( .D ( n1115 ) , .SI ( dftopt1_gOb0 ) , 
+SDFFX1_RVT delay_reg_61__9_ ( .D ( n1115 ) , .SI ( net_PTECO_HOLD_NET144 ) , 
     .SE ( HFSNET_1123 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_61__9_ ) , 
     .QN ( dftopt28 ) ) ;
-SDFFX1_RVT delay_reg_61__8_ ( .D ( n1116 ) , .SI ( dftopt32_gOb3 ) , 
+SDFFX1_RVT delay_reg_61__8_ ( .D ( n1116 ) , .SI ( net_PTECO_HOLD_NET228 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_61__8_ ) , 
     .QN ( dftopt17_gOb6 ) ) ;
-SDFFX1_RVT delay_reg_61__7_ ( .D ( n1117 ) , .SI ( n3710 ) , 
+SDFFX1_RVT delay_reg_61__7_ ( .D ( n1117 ) , .SI ( net_PTECO_HOLD_NET215 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_61__7_ ) , .QN ( n2823 ) ) ;
-SDFFX1_RVT delay_reg_61__6_ ( .D ( n1118 ) , .SI ( n2839 ) , .SE ( test_se ) , 
-    .CLK ( clk ) , .Q ( delay_61__6_ ) , .QN ( n2824 ) ) ;
-SDFFX1_RVT delay_reg_61__5_ ( .D ( n1119 ) , .SI ( n3697 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_61__5_ ) , .QN ( n2825 ) ) ;
-SDFFX1_RVT delay_reg_61__4_ ( .D ( n1120 ) , .SI ( n2827 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_61__4_ ) , .QN ( n2826 ) ) ;
-SDFFX1_RVT delay_reg_61__3_ ( .D ( n1121 ) , .SI ( n3714 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_61__3_ ) , .QN ( n2827 ) ) ;
-SDFFX1_RVT delay_reg_61__2_ ( .D ( n1122 ) , .SI ( n2812 ) , 
+SDFFX1_RVT delay_reg_61__6_ ( .D ( n1118 ) , .SI ( net_PTECO_HOLD_NET944 ) , 
+    .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_61__6_ ) , .QN ( n2824 ) ) ;
+SDFFX1_RVT delay_reg_61__5_ ( .D ( n1119 ) , .SI ( net_PTECO_HOLD_NET42 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_61__5_ ) , 
+    .QN ( n2825 ) ) ;
+SDFFX1_RVT delay_reg_61__4_ ( .D ( n1120 ) , .SI ( net_PTECO_HOLD_NET74 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_61__4_ ) , 
+    .QN ( n2826 ) ) ;
+SDFFX1_RVT delay_reg_61__3_ ( .D ( n1121 ) , .SI ( net_PTECO_HOLD_NET71 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_61__3_ ) , 
+    .QN ( n2827 ) ) ;
+SDFFX1_RVT delay_reg_61__2_ ( .D ( n1122 ) , .SI ( net_PTECO_HOLD_NET490 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_61__2_ ) , 
     .QN ( n2828 ) ) ;
-SDFFX1_RVT delay_reg_61__1_ ( .D ( n1123 ) , .SI ( n2735 ) , 
+SDFFX1_RVT delay_reg_61__1_ ( .D ( n1123 ) , .SI ( net_PTECO_HOLD_NET1217 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_61__1_ ) , 
     .QN ( n2829 ) ) ;
-SDFFX1_RVT delay_reg_61__0_ ( .D ( n1124 ) , .SI ( n2722 ) , 
+SDFFX1_RVT delay_reg_61__0_ ( .D ( n1124 ) , .SI ( net_PTECO_HOLD_NET929 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_61__0_ ) , 
     .QN ( n2732 ) ) ;
-SDFFX1_RVT delay_reg_62__16_ ( .D ( n1125 ) , .SI ( n2816 ) , 
+SDFFX1_RVT delay_reg_62__16_ ( .D ( n1125 ) , .SI ( net_PTECO_HOLD_NET766 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_62__16_ ) , 
     .QN ( n2803 ) ) ;
-SDFFX1_RVT delay_reg_62__15_ ( .D ( n1126 ) , .SI ( n2788 ) , 
+SDFFX1_RVT delay_reg_62__15_ ( .D ( n1126 ) , .SI ( net_PTECO_HOLD_NET824 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_62__15_ ) , 
     .QN ( n2733 ) ) ;
-SDFFX1_RVT delay_reg_62__14_ ( .D ( n1127 ) , .SI ( dftopt69 ) , 
+SDFFX1_RVT delay_reg_62__14_ ( .D ( n1127 ) , .SI ( net_PTECO_HOLD_NET1298 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_62__14_ ) , 
     .QN ( dftopt11_gOb0 ) ) ;
-SDFFX1_RVT delay_reg_62__13_ ( .D ( n1128 ) , .SI ( dftopt63 ) , 
+SDFFX1_RVT delay_reg_62__13_ ( .D ( n1128 ) , .SI ( net_PTECO_HOLD_NET176 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_62__13_ ) , 
     .QN ( n2805 ) ) ;
-SDFFX1_RVT delay_reg_62__12_ ( .D ( n1129 ) , .SI ( n3705 ) , 
+SDFFX1_RVT delay_reg_62__12_ ( .D ( n1129 ) , .SI ( net_PTECO_HOLD_NET794 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_62__12_ ) , 
     .QN ( n2636 ) ) ;
-SDFFX1_RVT delay_reg_62__11_ ( .D ( n1130 ) , .SI ( n3706 ) , 
+SDFFX1_RVT delay_reg_62__11_ ( .D ( n1130 ) , .SI ( net_PTECO_HOLD_NET222 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_62__11_ ) , 
     .QN ( n2806 ) ) ;
-SDFFX1_RVT delay_reg_62__10_ ( .D ( n1131 ) , .SI ( n3693 ) , 
+SDFFX1_RVT delay_reg_62__10_ ( .D ( n1131 ) , .SI ( net_PTECO_HOLD_NET66 ) , 
     .SE ( HFSNET_1134 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_62__10_ ) , 
     .QN ( n2807 ) ) ;
-SDFFX1_RVT delay_reg_62__9_ ( .D ( n1132 ) , .SI ( n3708 ) , 
+SDFFX1_RVT delay_reg_62__9_ ( .D ( n1132 ) , .SI ( net_PTECO_HOLD_NET167 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_62__9_ ) , 
     .QN ( n2723 ) ) ;
-SDFFX1_RVT delay_reg_62__8_ ( .D ( n1133 ) , .SI ( n3695 ) , 
+SDFFX1_RVT delay_reg_62__8_ ( .D ( n1133 ) , .SI ( net_PTECO_HOLD_NET187 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_62__8_ ) , .QN ( n2808 ) ) ;
-SDFFX1_RVT delay_reg_62__7_ ( .D ( n1134 ) , .SI ( n3711 ) , 
+SDFFX1_RVT delay_reg_62__7_ ( .D ( n1134 ) , .SI ( net_PTECO_HOLD_NET132 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_62__7_ ) , .QN ( n2809 ) ) ;
-SDFFX1_RVT delay_reg_62__6_ ( .D ( n1135 ) , .SI ( n3682 ) , .SE ( test_se ) , 
-    .CLK ( clk ) , .Q ( delay_62__6_ ) , .QN ( n2726 ) ) ;
-SDFFX1_RVT delay_reg_62__5_ ( .D ( n1136 ) , .SI ( n3712 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_62__5_ ) , .QN ( n2810 ) ) ;
-SDFFX1_RVT delay_reg_62__4_ ( .D ( n1137 ) , .SI ( n3728 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_62__4_ ) , .QN ( n2811 ) ) ;
-SDFFX1_RVT delay_reg_62__3_ ( .D ( n1138 ) , .SI ( n3715 ) , 
+SDFFX1_RVT delay_reg_62__6_ ( .D ( n1135 ) , .SI ( net_PTECO_HOLD_NET53 ) , 
+    .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_62__6_ ) , .QN ( n2726 ) ) ;
+SDFFX1_RVT delay_reg_62__5_ ( .D ( n1136 ) , .SI ( net_PTECO_HOLD_NET203 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_62__5_ ) , 
+    .QN ( n2810 ) ) ;
+SDFFX1_RVT delay_reg_62__4_ ( .D ( n1137 ) , .SI ( net_PTECO_HOLD_NET452 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_62__4_ ) , 
+    .QN ( n2811 ) ) ;
+SDFFX1_RVT delay_reg_62__3_ ( .D ( n1138 ) , .SI ( net_PTECO_HOLD_NET82 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_62__3_ ) , 
     .QN ( n2812 ) ) ;
-SDFFX1_RVT delay_reg_62__2_ ( .D ( n1139 ) , .SI ( n3716 ) , 
+SDFFX1_RVT delay_reg_62__2_ ( .D ( n1139 ) , .SI ( net_PTECO_HOLD_NET808 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_62__2_ ) , 
     .QN ( n2735 ) ) ;
-SDFFX1_RVT delay_reg_62__1_ ( .D ( n1140 ) , .SI ( n2732 ) , 
+SDFFX1_RVT delay_reg_62__1_ ( .D ( n1140 ) , .SI ( net_PTECO_HOLD_NET1144 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_62__1_ ) , 
     .QN ( n2813 ) ) ;
-SDFFX1_RVT delay_reg_62__0_ ( .D ( n1141 ) , .SI ( n2813 ) , 
+SDFFX1_RVT delay_reg_62__0_ ( .D ( n1141 ) , .SI ( net_PTECO_HOLD_NET384 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_62__0_ ) , 
     .QN ( n2814 ) ) ;
-SDFFX1_RVT delay_reg_63__16_ ( .D ( n1142 ) , .SI ( n3717 ) , 
+SDFFX1_RVT delay_reg_63__16_ ( .D ( n1142 ) , .SI ( net_PTECO_HOLD_NET420 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_63__16_ ) , 
     .QN ( n2747 ) ) ;
-SDFFX1_RVT delay_reg_63__15_ ( .D ( n1143 ) , .SI ( n3674 ) , 
+SDFFX1_RVT delay_reg_63__15_ ( .D ( n1143 ) , .SI ( net_PTECO_HOLD_NET59 ) , 
     .SE ( HFSNET_1126 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_63__15_ ) , 
     .QN ( n2787 ) ) ;
-SDFFX1_RVT delay_reg_63__14_ ( .D ( n1144 ) , .SI ( dftopt11_gOb0 ) , 
+SDFFX1_RVT delay_reg_63__14_ ( .D ( n1144 ) , .SI ( net_PTECO_HOLD_NET152 ) , 
     .SE ( HFSNET_1125 ) , .CLK ( ZCTSNET_22 ) , .Q ( delay_63__14_ ) , 
     .QN ( n2788 ) ) ;
-SDFFX1_RVT delay_reg_63__13_ ( .D ( n1145 ) , .SI ( n3704 ) , 
+SDFFX1_RVT delay_reg_63__13_ ( .D ( n1145 ) , .SI ( net_PTECO_HOLD_NET175 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_63__13_ ) , 
     .QN ( dftopt64 ) ) ;
-SDFFX1_RVT delay_reg_63__12_ ( .D ( n1146 ) , .SI ( dftopt13_gOb4 ) , 
+SDFFX1_RVT delay_reg_63__12_ ( .D ( n1146 ) , .SI ( net_PTECO_HOLD_NET449 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_63__12_ ) , 
     .QN ( dftopt36 ) ) ;
-SDFFX1_RVT delay_reg_63__11_ ( .D ( n1147 ) , .SI ( n2806 ) , 
+SDFFX1_RVT delay_reg_63__11_ ( .D ( n1147 ) , .SI ( net_PTECO_HOLD_NET487 ) , 
     .SE ( HFSNET_1122 ) , .CLK ( ZCTSNET_25 ) , .Q ( delay_63__11_ ) , 
     .QN ( dftopt62 ) ) ;
-SDFFX1_RVT delay_reg_63__10_ ( .D ( n1148 ) , .SI ( dftopt61 ) , 
+SDFFX1_RVT delay_reg_63__10_ ( .D ( n1148 ) , .SI ( net_PTECO_HOLD_NET1242 ) , 
     .SE ( HFSNET_1123 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_63__10_ ) , 
     .QN ( dftopt35_gOb4 ) ) ;
-SDFFX1_RVT delay_reg_63__9_ ( .D ( n1149 ) , .SI ( dftopt2 ) , 
+SDFFX1_RVT delay_reg_63__9_ ( .D ( n1149 ) , .SI ( net_PTECO_HOLD_NET1237 ) , 
     .SE ( HFSNET_1123 ) , .CLK ( ZCTSNET_21 ) , .Q ( delay_63__9_ ) , 
     .QN ( dftopt60 ) ) ;
-SDFFX1_RVT delay_reg_63__8_ ( .D ( n1150 ) , .SI ( n2808 ) , 
+SDFFX1_RVT delay_reg_63__8_ ( .D ( n1150 ) , .SI ( net_PTECO_HOLD_NET323 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_63__8_ ) , 
     .QN ( dftopt32_gOb3 ) ) ;
-SDFFX1_RVT delay_reg_63__7_ ( .D ( n1151 ) , .SI ( dftopt31 ) , 
+SDFFX1_RVT delay_reg_63__7_ ( .D ( n1151 ) , .SI ( net_PTECO_HOLD_NET260 ) , 
     .SE ( HFSNET_1124 ) , .CLK ( clk ) , .Q ( delay_63__7_ ) , 
     .QN ( dftopt30_gOb2 ) ) ;
-SDFFX1_RVT delay_reg_63__6_ ( .D ( n1152 ) , .SI ( delay_62__6_ ) , 
+SDFFX1_RVT delay_reg_63__6_ ( .D ( n1152 ) , .SI ( net_PTECO_HOLD_NET1233 ) , 
     .SE ( test_se ) , .CLK ( clk ) , .Q ( delay_63__6_ ) , 
     .QN ( dftopt21_gOb1 ) ) ;
-SDFFX1_RVT delay_reg_63__5_ ( .D ( n1153 ) , .SI ( n3727 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_63__5_ ) , .QN ( n2797 ) ) ;
-SDFFX1_RVT delay_reg_63__4_ ( .D ( n1154 ) , .SI ( n2797 ) , .SE ( test_se ) , 
-    .CLK ( ZCTSNET_19 ) , .Q ( delay_63__4_ ) , .QN ( n2798 ) ) ;
-SDFFX1_RVT delay_reg_63__3_ ( .D ( n1155 ) , .SI ( n2811 ) , 
+SDFFX1_RVT delay_reg_63__5_ ( .D ( n1153 ) , .SI ( net_PTECO_HOLD_NET168 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_63__5_ ) , 
+    .QN ( n2797 ) ) ;
+SDFFX1_RVT delay_reg_63__4_ ( .D ( n1154 ) , .SI ( net_PTECO_HOLD_NET628 ) , 
+    .SE ( test_se ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_63__4_ ) , 
+    .QN ( n2798 ) ) ;
+SDFFX1_RVT delay_reg_63__3_ ( .D ( n1155 ) , .SI ( net_PTECO_HOLD_NET365 ) , 
     .SE ( HFSNET_1138 ) , .CLK ( ZCTSNET_19 ) , .Q ( delay_63__3_ ) , 
     .QN ( n2799 ) ) ;
-SDFFX1_RVT delay_reg_63__2_ ( .D ( n1156 ) , .SI ( n3731 ) , 
+SDFFX1_RVT delay_reg_63__2_ ( .D ( n1156 ) , .SI ( net_PTECO_HOLD_NET240 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_63__2_ ) , 
     .QN ( n2800 ) ) ;
-SDFFX1_RVT delay_reg_63__1_ ( .D ( n1157 ) , .SI ( n2802 ) , 
+SDFFX1_RVT delay_reg_63__1_ ( .D ( n1157 ) , .SI ( net_PTECO_HOLD_NET359 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_63__1_ ) , 
     .QN ( n2801 ) ) ;
-SDFFX1_RVT delay_reg_63__0_ ( .D ( n1177 ) , .SI ( n2814 ) , 
+SDFFX1_RVT delay_reg_63__0_ ( .D ( n1177 ) , .SI ( net_PTECO_HOLD_NET699 ) , 
     .SE ( HFSNET_1139 ) , .CLK ( ZCTSNET_18 ) , .Q ( delay_63__0_ ) , 
     .QN ( n2802 ) ) ;
 FADDX1_RVT intadd_3_U34 ( .A ( intadd_3_B_0_ ) , .B ( HFSNET_329 ) , 
@@ -15430,7 +16572,7 @@ FADDX1_RVT intadd_28_U8 ( .A ( HFSNET_887 ) , .B ( HFSNET_831 ) ,
     .CI ( intadd_28_n8 ) , .CO ( intadd_28_n7 ) , .S ( intadd_28_SUM_10_ ) ) ;
 FADDX1_RVT intadd_28_U7 ( .A ( HFSNET_743 ) , .B ( HFSNET_811 ) , 
     .CI ( intadd_28_n7 ) , .CO ( intadd_28_n6 ) , .S ( intadd_27_B_13_ ) ) ;
-FADDX1_RVT intadd_28_U6 ( .A ( intadd_28_B_12_ ) , .B ( intadd_28_A_12_ ) , 
+FADDX1_RVT intadd_28_U6 ( .A ( intadd_28_B_12_ ) , .B ( eco_net ) , 
     .CI ( intadd_28_n6 ) , .CO ( intadd_28_n5 ) , .S ( intadd_28_SUM_12_ ) ) ;
 FADDX1_RVT intadd_28_U5 ( .A ( intadd_28_B_13_ ) , .B ( HFSNET_664 ) , 
     .CI ( intadd_28_n5 ) , .CO ( intadd_28_n4 ) , .S ( intadd_28_SUM_13_ ) ) ;
@@ -17057,7 +18199,7 @@ FADDX1_RVT intadd_85_U10 ( .A ( HFSNET_508 ) , .B ( HFSNET_542 ) ,
     .CI ( intadd_85_CI ) , .CO ( intadd_85_n9 ) , .S ( intadd_70_B_5_ ) ) ;
 FADDX1_RVT intadd_85_U9 ( .A ( HFSNET_309 ) , .B ( intadd_85_A_1_ ) , 
     .CI ( intadd_85_n9 ) , .CO ( intadd_85_n8 ) , .S ( intadd_85_SUM_1_ ) ) ;
-FADDX1_RVT intadd_85_U8 ( .A ( HFSNET_680 ) , .B ( intadd_28_A_12_ ) , 
+FADDX1_RVT intadd_85_U8 ( .A ( HFSNET_680 ) , .B ( eco_net ) , 
     .CI ( intadd_85_n8 ) , .CO ( intadd_85_n7 ) , .S ( intadd_85_SUM_2_ ) ) ;
 FADDX1_RVT intadd_85_U7 ( .A ( intadd_85_B_3_ ) , .B ( intadd_85_A_3_ ) , 
     .CI ( intadd_85_n7 ) , .CO ( intadd_85_n6 ) , .S ( intadd_85_SUM_3_ ) ) ;
@@ -19566,7 +20708,7 @@ INVX0_RVT HFSINV_201_418 ( .A ( intadd_47_SUM_6_ ) , .Y ( HFSNET_409 ) ) ;
 INVX2_RVT HFSINV_215_584 ( .A ( intadd_44_SUM_13_ ) , .Y ( HFSNET_575 ) ) ;
 INVX0_RVT HFSINV_95_83 ( .A ( intadd_25_A_13_ ) , .Y ( HFSNET_78 ) ) ;
 INVX0_RVT U801 ( .A ( intadd_64_SUM_6_ ) , .Y ( intadd_194_CI ) ) ;
-INVX2_RVT HFSINV_360_709 ( .A ( intadd_28_A_12_ ) , .Y ( HFSNET_698 ) ) ;
+INVX2_RVT HFSINV_360_709 ( .A ( eco_net ) , .Y ( HFSNET_698 ) ) ;
 INVX0_RVT U803 ( .A ( intadd_178_n1 ) , .Y ( intadd_10_B_8_ ) ) ;
 INVX0_RVT U804 ( .A ( intadd_82_SUM_3_ ) , .Y ( intadd_194_A_0_ ) ) ;
 INVX2_RVT HFSINV_156_605 ( .A ( intadd_49_SUM_14_ ) , .Y ( HFSNET_596 ) ) ;
@@ -20277,7 +21419,8 @@ AO22X2_RVT U1422 ( .A1 ( delay_16__0_ ) , .A2 ( n2648 ) ,
     .A3 ( delay_46__0_ ) , .A4 ( n2718 ) , .Y ( intadd_10_B_0_ ) ) ;
 AO22X1_RVT U1423 ( .A1 ( delay_26__0_ ) , .A2 ( n2634 ) , .A3 ( n2698 ) , 
     .A4 ( delay_36__0_ ) , .Y ( intadd_213_B_0_ ) ) ;
-NBUFFX2_RVT copt_gre_h_inst_2275 ( .A ( copt_gre_net_58 ) , .Y ( y_out_14_ ) ) ;
+NBUFFX2_RVT copt_gre_h_inst_2275 ( .A ( net_PTECO_HOLD_NET7 ) , 
+    .Y ( y_out_14_ ) ) ;
 OR2X1_RVT U1425 ( .A1 ( delay_62__1_ ) , .A2 ( delay_57__0_ ) , 
     .Y ( intadd_127_CI ) ) ;
 INVX0_RVT HFSINV_169_266 ( .A ( intadd_43_SUM_2_ ) , .Y ( HFSNET_258 ) ) ;
@@ -21792,8 +22935,8 @@ OA21X1_RVT U2378 ( .A1 ( n2142 ) , .A2 ( n2721 ) , .A3 ( n2141 ) ,
     .Y ( intadd_69_B_0_ ) ) ;
 FADDX1_RVT U2379 ( .A ( intadd_22_A_10_ ) , .B ( intadd_50_SUM_12_ ) , 
     .CI ( n2143 ) , .CO ( intadd_23_B_11_ ) , .S ( n1421 ) ) ;
-FADDX1_RVT U2380 ( .A ( ropt_net_82 ) , .B ( intadd_28_A_12_ ) , 
-    .CI ( n2144 ) , .CO ( n2145 ) , .S ( intadd_172_CI ) ) ;
+FADDX1_RVT U2380 ( .A ( ropt_net_82 ) , .B ( eco_net ) , .CI ( n2144 ) , 
+    .CO ( n2145 ) , .S ( intadd_172_CI ) ) ;
 FADDX1_RVT U2381 ( .A ( HFSNET_773 ) , .B ( intadd_42_SUM_13_ ) , 
     .CI ( n2145 ) , .CO ( SYNOPSYS_UNCONNECTED_77 ) , .S ( intadd_172_A_1_ ) ) ;
 FADDX1_RVT U2382 ( .A ( HFSNET_701 ) , .B ( n2147 ) , .CI ( n2146 ) , 
@@ -21913,6 +23056,8 @@ FADDX1_RVT U2447 ( .A ( HFSNET_767 ) , .B ( delay_31__7_ ) ,
     .CI ( HFSNET_921 ) , .CO ( intadd_67_B_3_ ) , .S ( intadd_67_B_2_ ) ) ;
 HADDX1_RVT U2448 ( .A0 ( HFSNET_925 ) , .B0 ( n2204 ) , 
     .C1 ( SYNOPSYS_UNCONNECTED_83 ) , .SO ( intadd_67_B_4_ ) ) ;
+NBUFFX4_RVT eco_cell ( .A ( intadd_28_A_12_ ) , .Y ( eco_net ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF2 ( .A ( n2772 ) , .Y ( net_PTECO_HOLD_NET2 ) ) ;
 AO22X1_RVT U2451 ( .A1 ( HFSNET_765 ) , .A2 ( n2207 ) , .A3 ( HFSNET_921 ) , 
     .A4 ( HFSNET_920 ) , .Y ( intadd_76_A_1_ ) ) ;
 FADDX1_RVT U2452 ( .A ( n2210 ) , .B ( n2209 ) , .CI ( n2208 ) , 
@@ -21958,6 +23103,17 @@ FADDX1_RVT U2474 ( .A ( intadd_56_SUM_13_ ) , .B ( n2233 ) ,
     .CI ( intadd_27_A_14_ ) , .CO ( intadd_65_A_13_ ) , .S ( n1331 ) ) ;
 FADDX1_RVT U2475 ( .A ( HFSNET_662 ) , .B ( n2234 ) , 
     .CI ( intadd_51_SUM_14_ ) , .CO ( n1353 ) , .S ( intadd_90_A_6_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF4 ( .A ( n2773 ) , .Y ( net_PTECO_HOLD_NET4 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF6 ( .A ( n2778 ) , .Y ( net_PTECO_HOLD_NET6 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF7 ( .A ( copt_gre_net_58 ) , 
+    .Y ( net_PTECO_HOLD_NET7 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF8 ( .A ( n2771 ) , .Y ( net_PTECO_HOLD_NET8 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF10 ( .A ( n2777 ) , .Y ( net_PTECO_HOLD_NET10 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF11 ( .A ( aps_rename_4_ ) , 
+    .Y ( net_PTECO_HOLD_NET11 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF12 ( .A ( n2774 ) , .Y ( net_PTECO_HOLD_NET12 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF13 ( .A ( aps_rename_6_ ) , 
+    .Y ( net_PTECO_HOLD_NET13 ) ) ;
 FADDX1_RVT U2484 ( .A ( intadd_56_SUM_10_ ) , .B ( n2244 ) , 
     .CI ( intadd_55_SUM_10_ ) , .CO ( n2240 ) , .S ( intadd_142_A_2_ ) ) ;
 INVX0_RVT HFSINV_232_963 ( .A ( intadd_52_SUM_8_ ) , .Y ( HFSNET_950 ) ) ;
@@ -22005,6 +23161,9 @@ FADDX1_RVT U2505 ( .A ( intadd_49_SUM_12_ ) , .B ( intadd_69_SUM_8_ ) ,
 FADDX1_RVT U2506 ( .A ( n2258 ) , .B ( intadd_69_SUM_9_ ) , 
     .CI ( intadd_49_SUM_13_ ) , .CO ( intadd_27_A_15_ ) , 
     .S ( intadd_37_B_15_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF14 ( .A ( n2776 ) , .Y ( net_PTECO_HOLD_NET14 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF15 ( .A ( aps_rename_2_ ) , 
+    .Y ( net_PTECO_HOLD_NET15 ) ) ;
 INVX0_RVT U2509 ( .A ( intadd_142_n1 ) , .Y ( n2262 ) ) ;
 FADDX1_RVT U2510 ( .A ( HFSNET_862 ) , .B ( HFSNET_813 ) , .CI ( n2262 ) , 
     .CO ( intadd_151_B_1_ ) , .S ( intadd_85_A_6_ ) ) ;
@@ -22014,6 +23173,10 @@ FADDX1_RVT U2512 ( .A ( intadd_45_n1 ) , .B ( n2263 ) ,
 INVX0_RVT U2513 ( .A ( intadd_69_SUM_12_ ) , .Y ( n2264 ) ) ;
 FADDX1_RVT U2514 ( .A ( n2266 ) , .B ( n2265 ) , .CI ( n2264 ) , 
     .CO ( intadd_151_B_2_ ) , .S ( intadd_85_A_7_ ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF17 ( .A ( aps_rename_1_ ) , 
+    .Y ( net_PTECO_HOLD_NET17 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF19 ( .A ( aps_rename_8_ ) , 
+    .Y ( net_PTECO_HOLD_NET19 ) ) ;
 FADDX1_RVT U2517 ( .A ( n2269 ) , .B ( intadd_28_SUM_10_ ) , 
     .CI ( intadd_49_SUM_11_ ) , .CO ( intadd_90_A_3_ ) , .S ( n1304 ) ) ;
 OA22X1_RVT U2518 ( .A1 ( intadd_57_SUM_14_ ) , .A2 ( intadd_58_SUM_14_ ) , 
@@ -22028,9 +23191,17 @@ FADDX1_RVT U2521 ( .A ( HFSNET_802 ) , .B ( intadd_108_SUM_4_ ) ,
 FADDX1_RVT U2522 ( .A ( HFSNET_955 ) , .B ( intadd_78_SUM_1_ ) , 
     .CI ( intadd_48_SUM_7_ ) , .CO ( intadd_41_A_10_ ) , 
     .S ( intadd_26_B_10_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF20 ( .A ( n2783 ) , .Y ( net_PTECO_HOLD_NET20 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF21 ( .A ( aps_rename_3_ ) , 
+    .Y ( net_PTECO_HOLD_NET21 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF24 ( .A ( n2779 ) , .Y ( net_PTECO_HOLD_NET24 ) ) ;
 AO222X1_RVT U2526 ( .A1 ( intadd_55_SUM_12_ ) , .A2 ( intadd_49_SUM_12_ ) , 
     .A3 ( intadd_55_SUM_12_ ) , .A4 ( HFSNET_986 ) , 
     .A5 ( intadd_49_SUM_12_ ) , .A6 ( HFSNET_986 ) , .Y ( intadd_102_B_1_ ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF25 ( .A ( aps_rename_9_ ) , 
+    .Y ( net_PTECO_HOLD_NET25 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF26 ( .A ( n2784 ) , .Y ( net_PTECO_HOLD_NET26 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF28 ( .A ( n2781 ) , .Y ( net_PTECO_HOLD_NET28 ) ) ;
 AO22X1_RVT U2530 ( .A1 ( intadd_48_n1 ) , .A2 ( intadd_49_n1 ) , 
     .A3 ( HFSNET_755 ) , .A4 ( n2280 ) , .Y ( n2284 ) ) ;
 FADDX1_RVT U2531 ( .A ( HFSNET_781 ) , .B ( n2281 ) , .CI ( HFSNET_615 ) , 
@@ -22063,6 +23234,9 @@ FADDX1_RVT U2545 ( .A ( HFSNET_666 ) , .B ( intadd_41_B_9_ ) ,
     .CI ( ropt_net_79 ) , .CO ( intadd_5_B_9_ ) , .S ( intadd_212_B_0_ ) ) ;
 FADDX1_RVT U2546 ( .A ( n2296 ) , .B ( intadd_43_SUM_12_ ) , 
     .CI ( HFSNET_397 ) , .CO ( intadd_37_A_14_ ) , .S ( n2328 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF30 ( .A ( n2786 ) , .Y ( net_PTECO_HOLD_NET30 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF32 ( .A ( n2780 ) , .Y ( net_PTECO_HOLD_NET32 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF34 ( .A ( n2785 ) , .Y ( net_PTECO_HOLD_NET34 ) ) ;
 NBUFFX2_RVT ZBUF_50_inst_2155 ( .A ( HFSNET_1166 ) , .Y ( ZBUF_50_9 ) ) ;
 FADDX1_RVT U2551 ( .A ( n2301 ) , .B ( n2300 ) , .CI ( HFSNET_588 ) , 
     .CO ( n1321 ) , .S ( intadd_70_A_4_ ) ) ;
@@ -22077,6 +23251,8 @@ FADDX1_RVT U2555 ( .A ( HFSNET_918 ) , .B ( intadd_43_SUM_9_ ) ,
 FADDX1_RVT U2556 ( .A ( HFSNET_776 ) , .B ( intadd_53_SUM_13_ ) , 
     .CI ( n2305 ) , .CO ( intadd_26_A_15_ ) , .S ( n2389 ) ) ;
 NBUFFX4_RVT ZBUF_686_inst_2156 ( .A ( HFSNET_1060 ) , .Y ( ZBUF_686_9 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF35 ( .A ( aps_rename_7_ ) , 
+    .Y ( net_PTECO_HOLD_NET35 ) ) ;
 FADDX1_RVT U2559 ( .A ( intadd_57_SUM_15_ ) , .B ( intadd_58_SUM_15_ ) , 
     .CI ( intadd_53_SUM_15_ ) , .CO ( n2308 ) , .S ( n1271 ) ) ;
 INVX0_RVT U2560 ( .A ( n2308 ) , .Y ( n2311 ) ) ;
@@ -22092,6 +23268,7 @@ FADDX1_RVT U2566 ( .A ( HFSNET_751 ) , .B ( n2313 ) ,
     .CI ( intadd_75_SUM_4_ ) , .CO ( intadd_26_A_10_ ) , .S ( n1268 ) ) ;
 FADDX1_RVT U2567 ( .A ( HFSNET_1004 ) , .B ( HFSNET_311 ) , 
     .CI ( intadd_26_SUM_8_ ) , .CO ( n1265 ) , .S ( intadd_89_A_1_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF36 ( .A ( n2782 ) , .Y ( net_PTECO_HOLD_NET36 ) ) ;
 NBUFFX4_RVT ZBUF_601_inst_2159 ( .A ( HFSNET_1165 ) , .Y ( ZBUF_601_9 ) ) ;
 FADDX1_RVT U2570 ( .A ( HFSNET_840 ) , .B ( HFSNET_444 ) , .CI ( n2316 ) , 
     .CO ( n1294 ) , .S ( intadd_10_B_12_ ) ) ;
@@ -22162,6 +23339,8 @@ FADDX1_RVT U2606 ( .A ( HFSNET_938 ) , .B ( n2353 ) , .CI ( HFSNET_376 ) ,
     .CO ( intadd_18_A_14_ ) , .S ( n1219 ) ) ;
 FADDX1_RVT U2607 ( .A ( HFSNET_862 ) , .B ( HFSNET_325 ) , .CI ( n2355 ) , 
     .CO ( intadd_163_A_1_ ) , .S ( n1181 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF38 ( .A ( aps_rename_5_ ) , 
+    .Y ( net_PTECO_HOLD_NET38 ) ) ;
 AO222X1_RVT U2609 ( .A1 ( HFSNET_929 ) , .A2 ( intadd_32_SUM_15_ ) , 
     .A3 ( HFSNET_929 ) , .A4 ( HFSNET_944 ) , .A5 ( intadd_32_SUM_15_ ) , 
     .A6 ( HFSNET_944 ) , .Y ( intadd_101_A_3_ ) ) ;
@@ -22228,6 +23407,11 @@ FADDX1_RVT U2640 ( .A ( n2384 ) , .B ( n2383 ) , .CI ( intadd_100_SUM_2_ ) ,
 NBUFFX2_RVT HFSBUF_225_941 ( .A ( intadd_40_n1 ) , .Y ( HFSNET_929 ) ) ;
 AO22X1_RVT U2642 ( .A1 ( intadd_45_n1 ) , .A2 ( HFSNET_928 ) , 
     .A3 ( HFSNET_944 ) , .A4 ( HFSNET_929 ) , .Y ( n2435 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF39 ( .A ( dftopt23_gOb7 ) , 
+    .Y ( net_PTECO_HOLD_NET39 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF40 ( .A ( n2727 ) , .Y ( net_PTECO_HOLD_NET40 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF41 ( .A ( delay_55__0_ ) , 
+    .Y ( net_PTECO_HOLD_NET41 ) ) ;
 FADDX1_RVT U2646 ( .A ( intadd_47_SUM_15_ ) , .B ( intadd_36_SUM_15_ ) , 
     .CI ( intadd_10_SUM_13_ ) , .CO ( n2394 ) , .S ( intadd_22_B_14_ ) ) ;
 FADDX1_RVT U2647 ( .A ( n2390 ) , .B ( n2389 ) , .CI ( n2388 ) , 
@@ -22415,6 +23599,7 @@ NAND2X0_RVT U2744 ( .A1 ( intadd_95_SUM_2_ ) , .A2 ( intadd_95_SUM_3_ ) ,
     .Y ( n2499 ) ) ;
 OA222X1_RVT U2745 ( .A1 ( n2500 ) , .A2 ( HFSNET_1038 ) , .A3 ( n2500 ) , 
     .A4 ( n2509 ) , .A5 ( n2500 ) , .A6 ( n2499 ) , .Y ( n1176 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF42 ( .A ( n3697 ) , .Y ( net_PTECO_HOLD_NET42 ) ) ;
 INVX0_RVT U2747 ( .A ( n2502 ) , .Y ( n2505 ) ) ;
 NAND2X0_RVT U2748 ( .A1 ( n2503 ) , .A2 ( ropt_net_91 ) , .Y ( n2504 ) ) ;
 NAND3X0_RVT U2749 ( .A1 ( n2501 ) , .A2 ( n2505 ) , .A3 ( n2504 ) , 
@@ -22657,7 +23842,7 @@ AO22X1_RVT U2891 ( .A1 ( HFSNET_1066 ) , .A2 ( delay_57__4_ ) ,
     .A3 ( HFSNET_1082 ) , .A4 ( delay_58__4_ ) , .Y ( n1069 ) ) ;
 AO22X1_RVT U2892 ( .A1 ( HFSNET_1072 ) , .A2 ( delay_57__5_ ) , 
     .A3 ( HFSNET_1087 ) , .A4 ( delay_58__5_ ) , .Y ( n1068 ) ) ;
-AO22X1_RVT U2893 ( .A1 ( HFSNET_1067 ) , .A2 ( delay_57__6_ ) , 
+AO22X1_RVT U2893 ( .A1 ( HFSNET_1067 ) , .A2 ( net_PTECO_HOLD_NET45 ) , 
     .A3 ( HFSNET_1083 ) , .A4 ( delay_58__6_ ) , .Y ( n1067 ) ) ;
 AO22X1_RVT U2894 ( .A1 ( HFSNET_1073 ) , .A2 ( delay_57__7_ ) , 
     .A3 ( HFSNET_1089 ) , .A4 ( delay_58__7_ ) , .Y ( n1066 ) ) ;
@@ -22716,7 +23901,7 @@ AO22X1_RVT U2921 ( .A1 ( HFSNET_1078 ) , .A2 ( delay_56__15_ ) ,
 NBUFFX4_RVT HFSBUF_2182_1144 ( .A ( HFSNET_1119 ) , .Y ( HFSNET_1112 ) ) ;
 AO22X1_RVT U2923 ( .A1 ( HFSNET_1078 ) , .A2 ( delay_56__16_ ) , 
     .A3 ( HFSNET_1096 ) , .A4 ( HFSNET_154 ) , .Y ( n1040 ) ) ;
-AO22X1_RVT U2924 ( .A1 ( HFSNET_1070 ) , .A2 ( delay_55__0_ ) , 
+AO22X1_RVT U2924 ( .A1 ( HFSNET_1070 ) , .A2 ( net_PTECO_HOLD_NET41 ) , 
     .A3 ( HFSNET_1084 ) , .A4 ( delay_56__0_ ) , .Y ( n1039 ) ) ;
 AO22X1_RVT U2925 ( .A1 ( HFSNET_1070 ) , .A2 ( delay_55__1_ ) , 
     .A3 ( HFSNET_1084 ) , .A4 ( delay_56__1_ ) , .Y ( n1038 ) ) ;
@@ -22890,7 +24075,7 @@ AO22X1_RVT U3012 ( .A1 ( HFSNET_1077 ) , .A2 ( delay_51__14_ ) ,
     .A3 ( HFSNET_1095 ) , .A4 ( delay_52__14_ ) , .Y ( n957 ) ) ;
 AO22X1_RVT U3013 ( .A1 ( HFSNET_1077 ) , .A2 ( delay_51__15_ ) , 
     .A3 ( HFSNET_1095 ) , .A4 ( delay_52__15_ ) , .Y ( n956 ) ) ;
-AO22X1_RVT U3014 ( .A1 ( HFSNET_1078 ) , .A2 ( delay_51__16_ ) , 
+AO22X1_RVT U3014 ( .A1 ( HFSNET_1078 ) , .A2 ( net_PTECO_HOLD_NET1161 ) , 
     .A3 ( HFSNET_1096 ) , .A4 ( delay_52__16_ ) , .Y ( n955 ) ) ;
 AO22X1_RVT U3015 ( .A1 ( HFSNET_1071 ) , .A2 ( HFSNET_335 ) , 
     .A3 ( HFSNET_1085 ) , .A4 ( delay_51__0_ ) , .Y ( n954 ) ) ;
@@ -22926,7 +24111,7 @@ AO22X1_RVT U3030 ( .A1 ( HFSNET_1077 ) , .A2 ( HFSNET_140 ) ,
 AO22X1_RVT U3031 ( .A1 ( HFSNET_1077 ) , .A2 ( HFSNET_141 ) , 
     .A3 ( HFSNET_1095 ) , .A4 ( delay_51__15_ ) , .Y ( n939 ) ) ;
 AO22X1_RVT U3032 ( .A1 ( HFSNET_1077 ) , .A2 ( HFSNET_142 ) , 
-    .A3 ( HFSNET_1095 ) , .A4 ( delay_51__16_ ) , .Y ( n938 ) ) ;
+    .A3 ( HFSNET_1095 ) , .A4 ( net_PTECO_HOLD_NET1161 ) , .Y ( n938 ) ) ;
 AO22X1_RVT U3033 ( .A1 ( HFSNET_1055 ) , .A2 ( delay_49__0_ ) , 
     .A3 ( HFSNET_1116 ) , .A4 ( HFSNET_335 ) , .Y ( n937 ) ) ;
 AO22X1_RVT U3034 ( .A1 ( HFSNET_1055 ) , .A2 ( delay_49__1_ ) , 
@@ -23592,6 +24777,8 @@ AO22X1_RVT U3372 ( .A1 ( HFSNET_1042 ) , .A2 ( HFSNET_923 ) ,
     .A3 ( HFSNET_1101 ) , .A4 ( delay_32__16_ ) , .Y ( n615 ) ) ;
 AO22X1_RVT U3373 ( .A1 ( HFSNET_1052 ) , .A2 ( delay_30__0_ ) , 
     .A3 ( HFSNET_1113 ) , .A4 ( delay_31__0_ ) , .Y ( n614 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF43 ( .A ( delay_2__5_ ) , 
+    .Y ( net_PTECO_HOLD_NET43 ) ) ;
 NBUFFX4_RVT HFSBUF_8130_1153 ( .A ( n2533 ) , .Y ( HFSNET_1121 ) ) ;
 AO22X1_RVT U3376 ( .A1 ( HFSNET_1052 ) , .A2 ( delay_30__1_ ) , 
     .A3 ( HFSNET_1113 ) , .A4 ( delay_31__1_ ) , .Y ( n613 ) ) ;
@@ -24572,7 +25759,7 @@ AO22X1_RVT U3873 ( .A1 ( HFSNET_1075 ) , .A2 ( delay_2__3_ ) ,
     .A3 ( HFSNET_1086 ) , .A4 ( delay_3__3_ ) , .Y ( n135 ) ) ;
 AO22X1_RVT U3874 ( .A1 ( HFSNET_1072 ) , .A2 ( delay_2__4_ ) , 
     .A3 ( HFSNET_1087 ) , .A4 ( delay_3__4_ ) , .Y ( n134 ) ) ;
-AO22X1_RVT U3875 ( .A1 ( HFSNET_1072 ) , .A2 ( delay_2__5_ ) , 
+AO22X1_RVT U3875 ( .A1 ( HFSNET_1072 ) , .A2 ( net_PTECO_HOLD_NET43 ) , 
     .A3 ( HFSNET_1087 ) , .A4 ( delay_3__5_ ) , .Y ( n133 ) ) ;
 AO22X1_RVT U3876 ( .A1 ( HFSNET_1073 ) , .A2 ( delay_2__6_ ) , 
     .A3 ( HFSNET_1089 ) , .A4 ( delay_3__6_ ) , .Y ( n132 ) ) ;
@@ -24588,7 +25775,7 @@ AO22X1_RVT U3881 ( .A1 ( HFSNET_1076 ) , .A2 ( delay_2__11_ ) ,
     .A3 ( HFSNET_1092 ) , .A4 ( delay_3__11_ ) , .Y ( n127 ) ) ;
 AO22X1_RVT U3882 ( .A1 ( HFSNET_1065 ) , .A2 ( delay_2__12_ ) , 
     .A3 ( HFSNET_1093 ) , .A4 ( delay_3__12_ ) , .Y ( n126 ) ) ;
-AO22X1_RVT U3883 ( .A1 ( HFSNET_1065 ) , .A2 ( delay_2__13_ ) , 
+AO22X1_RVT U3883 ( .A1 ( HFSNET_1065 ) , .A2 ( net_PTECO_HOLD_NET55 ) , 
     .A3 ( HFSNET_1093 ) , .A4 ( delay_3__13_ ) , .Y ( n125 ) ) ;
 AO22X1_RVT U3884 ( .A1 ( HFSNET_1064 ) , .A2 ( delay_2__14_ ) , 
     .A3 ( HFSNET_1094 ) , .A4 ( delay_3__14_ ) , .Y ( n124 ) ) ;
@@ -24700,6 +25887,7 @@ AO22X1_RVT U3937 ( .A1 ( HFSNET_1064 ) , .A2 ( x_in[16] ) ,
     .A3 ( HFSNET_1094 ) , .A4 ( HFSNET_116 ) , .Y ( n71 ) ) ;
 INVX8_RVT HFSINV_9392_1188 ( .A ( ZBUF_289_2 ) , .Y ( HFSNET_1150 ) ) ;
 INVX4_RVT HFSINV_9252_1189 ( .A ( ZBUF_289_2 ) , .Y ( HFSNET_1151 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF44 ( .A ( n2713 ) , .Y ( net_PTECO_HOLD_NET44 ) ) ;
 INVX8_RVT HFSINV_12781_1191 ( .A ( HFSNET_1166 ) , .Y ( HFSNET_1153 ) ) ;
 INVX8_RVT HFSINV_13028_1192 ( .A ( ZBUF_50_9 ) , .Y ( HFSNET_1154 ) ) ;
 INVX8_RVT HFSINV_13172_1193 ( .A ( ZBUF_50_9 ) , .Y ( HFSNET_1155 ) ) ;
@@ -24714,22 +25902,358 @@ INVX8_RVT HFSINV_15017_1201 ( .A ( HFSNET_1166 ) , .Y ( HFSNET_1163 ) ) ;
 INVX8_RVT HFSINV_13737_1202 ( .A ( HFSNET_1166 ) , .Y ( HFSNET_1164 ) ) ;
 INVX0_RVT HFSINV_13868_1203 ( .A ( HFSNET_1166 ) , .Y ( HFSNET_1165 ) ) ;
 INVX8_RVT HFSINV_17503_1204 ( .A ( HFSNET_1132 ) , .Y ( HFSNET_1166 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF45 ( .A ( delay_57__6_ ) , 
+    .Y ( net_PTECO_HOLD_NET45 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF47 ( .A ( n3587 ) , .Y ( net_PTECO_HOLD_NET47 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF48 ( .A ( n2716 ) , .Y ( net_PTECO_HOLD_NET48 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF50 ( .A ( n2869 ) , .Y ( net_PTECO_HOLD_NET50 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF51 ( .A ( n2655 ) , .Y ( net_PTECO_HOLD_NET51 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF52 ( .A ( n3463 ) , .Y ( net_PTECO_HOLD_NET52 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF53 ( .A ( n3682 ) , .Y ( net_PTECO_HOLD_NET53 ) ) ;
 AO222X1_RVT ctmTdsLR_1_1502 ( .A1 ( n2501 ) , .A2 ( tmp_net19 ) , 
     .A3 ( HFSNET_1038 ) , .A4 ( tmp_net20 ) , .A5 ( HFSNET_1102 ) , 
     .A6 ( y_out_14_ ) , .Y ( n1162 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF54 ( .A ( n3689 ) , .Y ( net_PTECO_HOLD_NET54 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF55 ( .A ( delay_2__13_ ) , 
+    .Y ( net_PTECO_HOLD_NET55 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF56 ( .A ( n3365 ) , .Y ( net_PTECO_HOLD_NET56 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF57 ( .A ( n3473 ) , .Y ( net_PTECO_HOLD_NET57 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF58 ( .A ( n3271 ) , .Y ( net_PTECO_HOLD_NET58 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF59 ( .A ( n3674 ) , .Y ( net_PTECO_HOLD_NET59 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF60 ( .A ( n2853 ) , .Y ( net_PTECO_HOLD_NET60 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF61 ( .A ( n2872 ) , .Y ( net_PTECO_HOLD_NET61 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF62 ( .A ( n3369 ) , .Y ( net_PTECO_HOLD_NET62 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF63 ( .A ( n2926 ) , .Y ( net_PTECO_HOLD_NET63 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF64 ( .A ( n2909 ) , .Y ( net_PTECO_HOLD_NET64 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF65 ( .A ( n2956 ) , .Y ( net_PTECO_HOLD_NET65 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF66 ( .A ( n3693 ) , .Y ( net_PTECO_HOLD_NET66 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF67 ( .A ( n2959 ) , .Y ( net_PTECO_HOLD_NET67 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF68 ( .A ( n3637 ) , .Y ( net_PTECO_HOLD_NET68 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF69 ( .A ( n2843 ) , .Y ( net_PTECO_HOLD_NET69 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF70 ( .A ( n3579 ) , .Y ( net_PTECO_HOLD_NET70 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF71 ( .A ( n3714 ) , .Y ( net_PTECO_HOLD_NET71 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF72 ( .A ( n2826 ) , .Y ( net_PTECO_HOLD_NET72 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF73 ( .A ( n2971 ) , .Y ( net_PTECO_HOLD_NET73 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF74 ( .A ( n2827 ) , .Y ( net_PTECO_HOLD_NET74 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF75 ( .A ( n3606 ) , .Y ( net_PTECO_HOLD_NET75 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF76 ( .A ( n2895 ) , .Y ( net_PTECO_HOLD_NET76 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF78 ( .A ( n2894 ) , .Y ( net_PTECO_HOLD_NET78 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF79 ( .A ( n3573 ) , .Y ( net_PTECO_HOLD_NET79 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF80 ( .A ( n3677 ) , .Y ( net_PTECO_HOLD_NET80 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF81 ( .A ( n3668 ) , .Y ( net_PTECO_HOLD_NET81 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF82 ( .A ( n3715 ) , .Y ( net_PTECO_HOLD_NET82 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF83 ( .A ( n3625 ) , .Y ( net_PTECO_HOLD_NET83 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF84 ( .A ( n3653 ) , .Y ( net_PTECO_HOLD_NET84 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF85 ( .A ( n2905 ) , .Y ( net_PTECO_HOLD_NET85 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF86 ( .A ( n2911 ) , .Y ( net_PTECO_HOLD_NET86 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF87 ( .A ( n2952 ) , .Y ( net_PTECO_HOLD_NET87 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF88 ( .A ( n3676 ) , .Y ( net_PTECO_HOLD_NET88 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF90 ( .A ( n3021 ) , .Y ( net_PTECO_HOLD_NET90 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF91 ( .A ( n3563 ) , .Y ( net_PTECO_HOLD_NET91 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF92 ( .A ( n3626 ) , .Y ( net_PTECO_HOLD_NET92 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF94 ( .A ( n3059 ) , .Y ( net_PTECO_HOLD_NET94 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF95 ( .A ( n2870 ) , .Y ( net_PTECO_HOLD_NET95 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF96 ( .A ( n2896 ) , .Y ( net_PTECO_HOLD_NET96 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF97 ( .A ( n2974 ) , .Y ( net_PTECO_HOLD_NET97 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF98 ( .A ( n3624 ) , .Y ( net_PTECO_HOLD_NET98 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF99 ( .A ( n3610 ) , .Y ( net_PTECO_HOLD_NET99 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF100 ( .A ( n3623 ) , 
+    .Y ( net_PTECO_HOLD_NET100 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF101 ( .A ( n3552 ) , 
+    .Y ( net_PTECO_HOLD_NET101 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF103 ( .A ( n3669 ) , 
+    .Y ( net_PTECO_HOLD_NET103 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF104 ( .A ( n3673 ) , 
+    .Y ( net_PTECO_HOLD_NET104 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF105 ( .A ( n3699 ) , 
+    .Y ( net_PTECO_HOLD_NET105 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF106 ( .A ( n2855 ) , 
+    .Y ( net_PTECO_HOLD_NET106 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF107 ( .A ( n3659 ) , 
+    .Y ( net_PTECO_HOLD_NET107 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF108 ( .A ( n3683 ) , 
+    .Y ( net_PTECO_HOLD_NET108 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF110 ( .A ( n3652 ) , 
+    .Y ( net_PTECO_HOLD_NET110 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF111 ( .A ( n3700 ) , 
+    .Y ( net_PTECO_HOLD_NET111 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF112 ( .A ( n2944 ) , 
+    .Y ( net_PTECO_HOLD_NET112 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF113 ( .A ( n2913 ) , 
+    .Y ( net_PTECO_HOLD_NET113 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF114 ( .A ( n2931 ) , 
+    .Y ( net_PTECO_HOLD_NET114 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF115 ( .A ( n3566 ) , 
+    .Y ( net_PTECO_HOLD_NET115 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF116 ( .A ( n3692 ) , 
+    .Y ( net_PTECO_HOLD_NET116 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF118 ( .A ( n3607 ) , 
+    .Y ( net_PTECO_HOLD_NET118 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF119 ( .A ( n2897 ) , 
+    .Y ( net_PTECO_HOLD_NET119 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF120 ( .A ( n2928 ) , 
+    .Y ( net_PTECO_HOLD_NET120 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF121 ( .A ( n3578 ) , 
+    .Y ( net_PTECO_HOLD_NET121 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF122 ( .A ( n3642 ) , 
+    .Y ( net_PTECO_HOLD_NET122 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF123 ( .A ( n2940 ) , 
+    .Y ( net_PTECO_HOLD_NET123 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF125 ( .A ( n3662 ) , 
+    .Y ( net_PTECO_HOLD_NET125 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF126 ( .A ( n2835 ) , 
+    .Y ( net_PTECO_HOLD_NET126 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF127 ( .A ( n2962 ) , 
+    .Y ( net_PTECO_HOLD_NET127 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF128 ( .A ( n2846 ) , 
+    .Y ( net_PTECO_HOLD_NET128 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF129 ( .A ( n2851 ) , 
+    .Y ( net_PTECO_HOLD_NET129 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF130 ( .A ( n3678 ) , 
+    .Y ( net_PTECO_HOLD_NET130 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF132 ( .A ( n3711 ) , 
+    .Y ( net_PTECO_HOLD_NET132 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF135 ( .A ( n2857 ) , 
+    .Y ( net_PTECO_HOLD_NET135 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF136 ( .A ( n3698 ) , 
+    .Y ( net_PTECO_HOLD_NET136 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF137 ( .A ( dftopt37 ) , 
+    .Y ( net_PTECO_HOLD_NET137 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF138 ( .A ( n3675 ) , 
+    .Y ( net_PTECO_HOLD_NET138 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF139 ( .A ( n3713 ) , 
+    .Y ( net_PTECO_HOLD_NET139 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF140 ( .A ( n3536 ) , 
+    .Y ( net_PTECO_HOLD_NET140 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF141 ( .A ( n3638 ) , 
+    .Y ( net_PTECO_HOLD_NET141 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF142 ( .A ( n2916 ) , 
+    .Y ( net_PTECO_HOLD_NET142 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF143 ( .A ( n2899 ) , 
+    .Y ( net_PTECO_HOLD_NET143 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF144 ( .A ( dftopt1_gOb0 ) , 
+    .Y ( net_PTECO_HOLD_NET144 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF146 ( .A ( n2955 ) , 
+    .Y ( net_PTECO_HOLD_NET146 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF148 ( .A ( n2941 ) , 
+    .Y ( net_PTECO_HOLD_NET148 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF149 ( .A ( n2951 ) , 
+    .Y ( net_PTECO_HOLD_NET149 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF150 ( .A ( n2880 ) , 
+    .Y ( net_PTECO_HOLD_NET150 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF151 ( .A ( dftopt54 ) , 
+    .Y ( net_PTECO_HOLD_NET151 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF152 ( .A ( dftopt11_gOb0 ) , 
+    .Y ( net_PTECO_HOLD_NET152 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF153 ( .A ( n3644 ) , 
+    .Y ( net_PTECO_HOLD_NET153 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF154 ( .A ( n3648 ) , 
+    .Y ( net_PTECO_HOLD_NET154 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF156 ( .A ( n2891 ) , 
+    .Y ( net_PTECO_HOLD_NET156 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF157 ( .A ( n3611 ) , 
+    .Y ( net_PTECO_HOLD_NET157 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF158 ( .A ( n2865 ) , 
+    .Y ( net_PTECO_HOLD_NET158 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF159 ( .A ( n2914 ) , 
+    .Y ( net_PTECO_HOLD_NET159 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF160 ( .A ( n3593 ) , 
+    .Y ( net_PTECO_HOLD_NET160 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF161 ( .A ( n2970 ) , 
+    .Y ( net_PTECO_HOLD_NET161 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF163 ( .A ( n2801 ) , 
+    .Y ( net_PTECO_HOLD_NET163 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF164 ( .A ( n2965 ) , 
+    .Y ( net_PTECO_HOLD_NET164 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF165 ( .A ( n2847 ) , 
+    .Y ( net_PTECO_HOLD_NET165 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF166 ( .A ( dftopt35_gOb4 ) , 
+    .Y ( net_PTECO_HOLD_NET166 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF167 ( .A ( n3708 ) , 
+    .Y ( net_PTECO_HOLD_NET167 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF168 ( .A ( n3727 ) , 
+    .Y ( net_PTECO_HOLD_NET168 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF170 ( .A ( dftopt47_gOb8 ) , 
+    .Y ( net_PTECO_HOLD_NET170 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF173 ( .A ( n3654 ) , 
+    .Y ( net_PTECO_HOLD_NET173 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF174 ( .A ( n2825 ) , 
+    .Y ( net_PTECO_HOLD_NET174 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF175 ( .A ( n3704 ) , 
+    .Y ( net_PTECO_HOLD_NET175 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF176 ( .A ( dftopt63 ) , 
+    .Y ( net_PTECO_HOLD_NET176 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF177 ( .A ( n3588 ) , 
+    .Y ( net_PTECO_HOLD_NET177 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF180 ( .A ( n2919 ) , 
+    .Y ( net_PTECO_HOLD_NET180 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF181 ( .A ( n3381 ) , 
+    .Y ( net_PTECO_HOLD_NET181 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF182 ( .A ( n3691 ) , 
+    .Y ( net_PTECO_HOLD_NET182 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF183 ( .A ( n3618 ) , 
+    .Y ( net_PTECO_HOLD_NET183 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF184 ( .A ( n2966 ) , 
+    .Y ( net_PTECO_HOLD_NET184 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF185 ( .A ( n3186 ) , 
+    .Y ( net_PTECO_HOLD_NET185 ) ) ;
 NBUFFX2_RVT HFSBUF_2_1 ( .A ( n1619_CDR1 ) , .Y ( HFSNET_1 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF186 ( .A ( n3663 ) , 
+    .Y ( net_PTECO_HOLD_NET186 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF187 ( .A ( n3695 ) , 
+    .Y ( net_PTECO_HOLD_NET187 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF188 ( .A ( n3556 ) , 
+    .Y ( net_PTECO_HOLD_NET188 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF189 ( .A ( n2936 ) , 
+    .Y ( net_PTECO_HOLD_NET189 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF190 ( .A ( n3551 ) , 
+    .Y ( net_PTECO_HOLD_NET190 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF191 ( .A ( n3667 ) , 
+    .Y ( net_PTECO_HOLD_NET191 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF193 ( .A ( n2823 ) , 
+    .Y ( net_PTECO_HOLD_NET193 ) ) ;
 NBUFFX2_RVT HFSBUF_2_9 ( .A ( n2733 ) , .Y ( HFSNET_9 ) ) ;
 NBUFFX2_RVT HFSBUF_2_10 ( .A ( n2723 ) , .Y ( HFSNET_10 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF194 ( .A ( n3565 ) , 
+    .Y ( net_PTECO_HOLD_NET194 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF195 ( .A ( n2871 ) , 
+    .Y ( net_PTECO_HOLD_NET195 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF196 ( .A ( n2972 ) , 
+    .Y ( net_PTECO_HOLD_NET196 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF197 ( .A ( n2975 ) , 
+    .Y ( net_PTECO_HOLD_NET197 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF198 ( .A ( n3612 ) , 
+    .Y ( net_PTECO_HOLD_NET198 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF199 ( .A ( n3632 ) , 
+    .Y ( net_PTECO_HOLD_NET199 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF200 ( .A ( n3217 ) , 
+    .Y ( net_PTECO_HOLD_NET200 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF202 ( .A ( n3206 ) , 
+    .Y ( net_PTECO_HOLD_NET202 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF203 ( .A ( n3712 ) , 
+    .Y ( net_PTECO_HOLD_NET203 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF204 ( .A ( n3230 ) , 
+    .Y ( net_PTECO_HOLD_NET204 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF205 ( .A ( n2876 ) , 
+    .Y ( net_PTECO_HOLD_NET205 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF206 ( .A ( n2799 ) , 
+    .Y ( net_PTECO_HOLD_NET206 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF208 ( .A ( n3686 ) , 
+    .Y ( net_PTECO_HOLD_NET208 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF209 ( .A ( n3404 ) , 
+    .Y ( net_PTECO_HOLD_NET209 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF211 ( .A ( n2805 ) , 
+    .Y ( net_PTECO_HOLD_NET211 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF213 ( .A ( n2958 ) , 
+    .Y ( net_PTECO_HOLD_NET213 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF214 ( .A ( n2929 ) , 
+    .Y ( net_PTECO_HOLD_NET214 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF215 ( .A ( n3710 ) , 
+    .Y ( net_PTECO_HOLD_NET215 ) ) ;
 NBUFFX2_RVT HFSBUF_28_34 ( .A ( n2692 ) , .Y ( HFSNET_33 ) ) ;
-NBUFFX2_RVT HFSBUF_34_68 ( .A ( aps_rename_5_ ) , .Y ( y_out_10_ ) ) ;
-NBUFFX2_RVT HFSBUF_34_69 ( .A ( aps_rename_4_ ) , .Y ( y_out_11_ ) ) ;
-NBUFFX4_RVT HFSBUF_34_70 ( .A ( aps_rename_3_ ) , .Y ( y_out_15_ ) ) ;
-NBUFFX4_RVT HFSBUF_34_71 ( .A ( aps_rename_2_ ) , .Y ( y_out_16_ ) ) ;
-NBUFFX4_RVT HFSBUF_34_72 ( .A ( aps_rename_1_ ) , .Y ( y_out_17_ ) ) ;
-NBUFFX4_RVT HFSBUF_19_73 ( .A ( aps_rename_9_ ) , .Y ( y_out_1_ ) ) ;
-NBUFFX4_RVT HFSBUF_34_74 ( .A ( aps_rename_8_ ) , .Y ( y_out_2_ ) ) ;
-NBUFFX2_RVT HFSBUF_34_75 ( .A ( aps_rename_7_ ) , .Y ( y_out_3_ ) ) ;
-NBUFFX4_RVT HFSBUF_19_79 ( .A ( aps_rename_6_ ) , .Y ( y_out_9_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF216 ( .A ( n3538 ) , 
+    .Y ( net_PTECO_HOLD_NET216 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF217 ( .A ( n3188 ) , 
+    .Y ( net_PTECO_HOLD_NET217 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF218 ( .A ( n2960 ) , 
+    .Y ( net_PTECO_HOLD_NET218 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF220 ( .A ( n2879 ) , 
+    .Y ( net_PTECO_HOLD_NET220 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF222 ( .A ( n3706 ) , 
+    .Y ( net_PTECO_HOLD_NET222 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF223 ( .A ( n3562 ) , 
+    .Y ( net_PTECO_HOLD_NET223 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF225 ( .A ( n2841 ) , 
+    .Y ( net_PTECO_HOLD_NET225 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF226 ( .A ( n2874 ) , 
+    .Y ( net_PTECO_HOLD_NET226 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF227 ( .A ( n3554 ) , 
+    .Y ( net_PTECO_HOLD_NET227 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF228 ( .A ( dftopt32_gOb3 ) , 
+    .Y ( net_PTECO_HOLD_NET228 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF229 ( .A ( n3568 ) , 
+    .Y ( net_PTECO_HOLD_NET229 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF230 ( .A ( n2889 ) , 
+    .Y ( net_PTECO_HOLD_NET230 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF231 ( .A ( n2977 ) , 
+    .Y ( net_PTECO_HOLD_NET231 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF232 ( .A ( n3522 ) , 
+    .Y ( net_PTECO_HOLD_NET232 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF233 ( .A ( n2904 ) , 
+    .Y ( net_PTECO_HOLD_NET233 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF234 ( .A ( n3323 ) , 
+    .Y ( net_PTECO_HOLD_NET234 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF235 ( .A ( n2925 ) , 
+    .Y ( net_PTECO_HOLD_NET235 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF236 ( .A ( n2881 ) , 
+    .Y ( net_PTECO_HOLD_NET236 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF237 ( .A ( n3679 ) , 
+    .Y ( net_PTECO_HOLD_NET237 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF238 ( .A ( n2850 ) , 
+    .Y ( net_PTECO_HOLD_NET238 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF240 ( .A ( n3731 ) , 
+    .Y ( net_PTECO_HOLD_NET240 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF242 ( .A ( n3684 ) , 
+    .Y ( net_PTECO_HOLD_NET242 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF243 ( .A ( dftopt56_gOb11 ) , 
+    .Y ( net_PTECO_HOLD_NET243 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF244 ( .A ( n2832 ) , 
+    .Y ( net_PTECO_HOLD_NET244 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF245 ( .A ( n2858 ) , 
+    .Y ( net_PTECO_HOLD_NET245 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF246 ( .A ( n3640 ) , 
+    .Y ( net_PTECO_HOLD_NET246 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF247 ( .A ( n2912 ) , 
+    .Y ( net_PTECO_HOLD_NET247 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF248 ( .A ( n3592 ) , 
+    .Y ( net_PTECO_HOLD_NET248 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF249 ( .A ( n2809 ) , 
+    .Y ( net_PTECO_HOLD_NET249 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF251 ( .A ( n3248 ) , 
+    .Y ( net_PTECO_HOLD_NET251 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF252 ( .A ( n3619 ) , 
+    .Y ( net_PTECO_HOLD_NET252 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF253 ( .A ( n3322 ) , 
+    .Y ( net_PTECO_HOLD_NET253 ) ) ;
+NBUFFX2_RVT HFSBUF_34_68 ( .A ( net_PTECO_HOLD_NET38 ) , .Y ( y_out_10_ ) ) ;
+NBUFFX2_RVT HFSBUF_34_69 ( .A ( net_PTECO_HOLD_NET11 ) , .Y ( y_out_11_ ) ) ;
+NBUFFX4_RVT HFSBUF_34_70 ( .A ( net_PTECO_HOLD_NET21 ) , .Y ( y_out_15_ ) ) ;
+NBUFFX4_RVT HFSBUF_34_71 ( .A ( net_PTECO_HOLD_NET15 ) , .Y ( y_out_16_ ) ) ;
+NBUFFX4_RVT HFSBUF_34_72 ( .A ( net_PTECO_HOLD_NET17 ) , .Y ( y_out_17_ ) ) ;
+NBUFFX4_RVT HFSBUF_19_73 ( .A ( net_PTECO_HOLD_NET25 ) , .Y ( y_out_1_ ) ) ;
+NBUFFX4_RVT HFSBUF_34_74 ( .A ( net_PTECO_HOLD_NET19 ) , .Y ( y_out_2_ ) ) ;
+NBUFFX2_RVT HFSBUF_34_75 ( .A ( net_PTECO_HOLD_NET35 ) , .Y ( y_out_3_ ) ) ;
+NBUFFX4_RVT HFSBUF_19_79 ( .A ( net_PTECO_HOLD_NET13 ) , .Y ( y_out_9_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF254 ( .A ( dftopt17_gOb6 ) , 
+    .Y ( net_PTECO_HOLD_NET254 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF255 ( .A ( n3071 ) , 
+    .Y ( net_PTECO_HOLD_NET255 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF256 ( .A ( n3410 ) , 
+    .Y ( net_PTECO_HOLD_NET256 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF257 ( .A ( n3627 ) , 
+    .Y ( net_PTECO_HOLD_NET257 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF258 ( .A ( n2836 ) , 
+    .Y ( net_PTECO_HOLD_NET258 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF259 ( .A ( n2942 ) , 
+    .Y ( net_PTECO_HOLD_NET259 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF260 ( .A ( dftopt31 ) , 
+    .Y ( net_PTECO_HOLD_NET260 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF261 ( .A ( n3328 ) , 
+    .Y ( net_PTECO_HOLD_NET261 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF262 ( .A ( n3732 ) , 
+    .Y ( net_PTECO_HOLD_NET262 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF263 ( .A ( n3520 ) , 
+    .Y ( net_PTECO_HOLD_NET263 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF264 ( .A ( n3490 ) , 
+    .Y ( net_PTECO_HOLD_NET264 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF267 ( .A ( n3161 ) , 
+    .Y ( net_PTECO_HOLD_NET267 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF268 ( .A ( n3595 ) , 
+    .Y ( net_PTECO_HOLD_NET268 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF269 ( .A ( n2864 ) , 
+    .Y ( net_PTECO_HOLD_NET269 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF271 ( .A ( n3435 ) , 
+    .Y ( net_PTECO_HOLD_NET271 ) ) ;
 NBUFFX2_RVT HFSBUF_17_122 ( .A ( delay_0__12_ ) , .Y ( HFSNET_114 ) ) ;
 NBUFFX2_RVT HFSBUF_12_123 ( .A ( delay_0__14_ ) , .Y ( HFSNET_115 ) ) ;
 NBUFFX2_RVT HFSBUF_59_124 ( .A ( delay_0__16_ ) , .Y ( HFSNET_116 ) ) ;
@@ -24750,6 +26274,8 @@ NBUFFX2_RVT HFSBUF_39_138 ( .A ( delay_11__9_ ) , .Y ( HFSNET_130 ) ) ;
 NBUFFX2_RVT HFSBUF_47_139 ( .A ( delay_12__13_ ) , .Y ( HFSNET_131 ) ) ;
 NBUFFX2_RVT HFSBUF_24_140 ( .A ( delay_12__14_ ) , .Y ( HFSNET_132 ) ) ;
 NBUFFX2_RVT HFSBUF_51_141 ( .A ( delay_12__15_ ) , .Y ( HFSNET_133 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF272 ( .A ( n3559 ) , 
+    .Y ( net_PTECO_HOLD_NET272 ) ) ;
 NBUFFX2_RVT HFSBUF_64_143 ( .A ( n2625 ) , .Y ( HFSNET_135 ) ) ;
 NBUFFX2_RVT HFSBUF_32_144 ( .A ( delay_50__10_ ) , .Y ( HFSNET_136 ) ) ;
 NBUFFX2_RVT HFSBUF_86_145 ( .A ( delay_50__11_ ) , .Y ( HFSNET_137 ) ) ;
@@ -24777,132 +26303,1920 @@ NBUFFX2_RVT HFSBUF_32_166 ( .A ( delay_5__16_ ) , .Y ( HFSNET_158 ) ) ;
 NBUFFX2_RVT HFSBUF_47_167 ( .A ( delay_62__13_ ) , .Y ( HFSNET_159 ) ) ;
 NBUFFX2_RVT HFSBUF_65_168 ( .A ( delay_62__16_ ) , .Y ( HFSNET_160 ) ) ;
 NBUFFX2_RVT HFSBUF_32_169 ( .A ( delay_62__8_ ) , .Y ( HFSNET_161 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF273 ( .A ( n2842 ) , 
+    .Y ( net_PTECO_HOLD_NET273 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF274 ( .A ( n3249 ) , 
+    .Y ( net_PTECO_HOLD_NET274 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF275 ( .A ( n3571 ) , 
+    .Y ( net_PTECO_HOLD_NET275 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF276 ( .A ( n2898 ) , 
+    .Y ( net_PTECO_HOLD_NET276 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF277 ( .A ( n3189 ) , 
+    .Y ( net_PTECO_HOLD_NET277 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF278 ( .A ( n3596 ) , 
+    .Y ( net_PTECO_HOLD_NET278 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF282 ( .A ( n3672 ) , 
+    .Y ( net_PTECO_HOLD_NET282 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF283 ( .A ( n2817 ) , 
+    .Y ( net_PTECO_HOLD_NET283 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF284 ( .A ( n3446 ) , 
+    .Y ( net_PTECO_HOLD_NET284 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF285 ( .A ( n3227 ) , 
+    .Y ( net_PTECO_HOLD_NET285 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF287 ( .A ( n3411 ) , 
+    .Y ( net_PTECO_HOLD_NET287 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF288 ( .A ( n3231 ) , 
+    .Y ( net_PTECO_HOLD_NET288 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF289 ( .A ( n2947 ) , 
+    .Y ( net_PTECO_HOLD_NET289 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF290 ( .A ( n3424 ) , 
+    .Y ( net_PTECO_HOLD_NET290 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF291 ( .A ( n3215 ) , 
+    .Y ( net_PTECO_HOLD_NET291 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF292 ( .A ( n3586 ) , 
+    .Y ( net_PTECO_HOLD_NET292 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF293 ( .A ( n3017 ) , 
+    .Y ( net_PTECO_HOLD_NET293 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF294 ( .A ( n3417 ) , 
+    .Y ( net_PTECO_HOLD_NET294 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF295 ( .A ( n3564 ) , 
+    .Y ( net_PTECO_HOLD_NET295 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF296 ( .A ( n3577 ) , 
+    .Y ( net_PTECO_HOLD_NET296 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF297 ( .A ( n3553 ) , 
+    .Y ( net_PTECO_HOLD_NET297 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF298 ( .A ( n3085 ) , 
+    .Y ( net_PTECO_HOLD_NET298 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF299 ( .A ( n3580 ) , 
+    .Y ( net_PTECO_HOLD_NET299 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF300 ( .A ( n2902 ) , 
+    .Y ( net_PTECO_HOLD_NET300 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF301 ( .A ( n3235 ) , 
+    .Y ( net_PTECO_HOLD_NET301 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF302 ( .A ( n3089 ) , 
+    .Y ( net_PTECO_HOLD_NET302 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF303 ( .A ( n2903 ) , 
+    .Y ( net_PTECO_HOLD_NET303 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF304 ( .A ( n2833 ) , 
+    .Y ( net_PTECO_HOLD_NET304 ) ) ;
 NBUFFX2_RVT HFSBUF_17_198 ( .A ( intadd_27_B_2_ ) , .Y ( HFSNET_190 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF305 ( .A ( n3690 ) , 
+    .Y ( net_PTECO_HOLD_NET305 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF307 ( .A ( n3641 ) , 
+    .Y ( net_PTECO_HOLD_NET307 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF308 ( .A ( n3243 ) , 
+    .Y ( net_PTECO_HOLD_NET308 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF309 ( .A ( n3442 ) , 
+    .Y ( net_PTECO_HOLD_NET309 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF310 ( .A ( n3108 ) , 
+    .Y ( net_PTECO_HOLD_NET310 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF311 ( .A ( n3515 ) , 
+    .Y ( net_PTECO_HOLD_NET311 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF313 ( .A ( n2976 ) , 
+    .Y ( net_PTECO_HOLD_NET313 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF314 ( .A ( n3324 ) , 
+    .Y ( net_PTECO_HOLD_NET314 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF316 ( .A ( n3655 ) , 
+    .Y ( net_PTECO_HOLD_NET316 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF317 ( .A ( n2948 ) , 
+    .Y ( net_PTECO_HOLD_NET317 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF318 ( .A ( n3056 ) , 
+    .Y ( net_PTECO_HOLD_NET318 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF319 ( .A ( n3629 ) , 
+    .Y ( net_PTECO_HOLD_NET319 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF320 ( .A ( n2849 ) , 
+    .Y ( net_PTECO_HOLD_NET320 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF321 ( .A ( n3341 ) , 
+    .Y ( net_PTECO_HOLD_NET321 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF322 ( .A ( n3670 ) , 
+    .Y ( net_PTECO_HOLD_NET322 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF323 ( .A ( n2808 ) , 
+    .Y ( net_PTECO_HOLD_NET323 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF324 ( .A ( n2845 ) , 
+    .Y ( net_PTECO_HOLD_NET324 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF325 ( .A ( n2943 ) , 
+    .Y ( net_PTECO_HOLD_NET325 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF327 ( .A ( n2810 ) , 
+    .Y ( net_PTECO_HOLD_NET327 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF329 ( .A ( n3630 ) , 
+    .Y ( net_PTECO_HOLD_NET329 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF330 ( .A ( n3557 ) , 
+    .Y ( net_PTECO_HOLD_NET330 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF331 ( .A ( n3325 ) , 
+    .Y ( net_PTECO_HOLD_NET331 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF332 ( .A ( n3155 ) , 
+    .Y ( net_PTECO_HOLD_NET332 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF333 ( .A ( n2831 ) , 
+    .Y ( net_PTECO_HOLD_NET333 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF334 ( .A ( n2884 ) , 
+    .Y ( net_PTECO_HOLD_NET334 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF336 ( .A ( n3657 ) , 
+    .Y ( net_PTECO_HOLD_NET336 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF337 ( .A ( n2803 ) , 
+    .Y ( net_PTECO_HOLD_NET337 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF339 ( .A ( n2818 ) , 
+    .Y ( net_PTECO_HOLD_NET339 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF341 ( .A ( n3718 ) , 
+    .Y ( net_PTECO_HOLD_NET341 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF342 ( .A ( n3352 ) , 
+    .Y ( net_PTECO_HOLD_NET342 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF345 ( .A ( n3333 ) , 
+    .Y ( net_PTECO_HOLD_NET345 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF346 ( .A ( n3064 ) , 
+    .Y ( net_PTECO_HOLD_NET346 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF347 ( .A ( n3280 ) , 
+    .Y ( net_PTECO_HOLD_NET347 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF348 ( .A ( n3257 ) , 
+    .Y ( net_PTECO_HOLD_NET348 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF349 ( .A ( n2890 ) , 
+    .Y ( net_PTECO_HOLD_NET349 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF350 ( .A ( n3688 ) , 
+    .Y ( net_PTECO_HOLD_NET350 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF351 ( .A ( n3537 ) , 
+    .Y ( net_PTECO_HOLD_NET351 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF352 ( .A ( n2938 ) , 
+    .Y ( net_PTECO_HOLD_NET352 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF353 ( .A ( n3359 ) , 
+    .Y ( net_PTECO_HOLD_NET353 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF354 ( .A ( n3267 ) , 
+    .Y ( net_PTECO_HOLD_NET354 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF356 ( .A ( n3043 ) , 
+    .Y ( net_PTECO_HOLD_NET356 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF357 ( .A ( n2989 ) , 
+    .Y ( net_PTECO_HOLD_NET357 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF358 ( .A ( n3597 ) , 
+    .Y ( net_PTECO_HOLD_NET358 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF359 ( .A ( n2802 ) , 
+    .Y ( net_PTECO_HOLD_NET359 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF360 ( .A ( n2964 ) , 
+    .Y ( net_PTECO_HOLD_NET360 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF361 ( .A ( n2856 ) , 
+    .Y ( net_PTECO_HOLD_NET361 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF362 ( .A ( n3237 ) , 
+    .Y ( net_PTECO_HOLD_NET362 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF363 ( .A ( n3006 ) , 
+    .Y ( net_PTECO_HOLD_NET363 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF365 ( .A ( n2811 ) , 
+    .Y ( net_PTECO_HOLD_NET365 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF366 ( .A ( n3680 ) , 
+    .Y ( net_PTECO_HOLD_NET366 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF368 ( .A ( n2828 ) , 
+    .Y ( net_PTECO_HOLD_NET368 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF369 ( .A ( n2807 ) , 
+    .Y ( net_PTECO_HOLD_NET369 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF370 ( .A ( n3038 ) , 
+    .Y ( net_PTECO_HOLD_NET370 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF371 ( .A ( n3496 ) , 
+    .Y ( net_PTECO_HOLD_NET371 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF372 ( .A ( n3152 ) , 
+    .Y ( net_PTECO_HOLD_NET372 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF373 ( .A ( dftopt43_gOb6 ) , 
+    .Y ( net_PTECO_HOLD_NET373 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF375 ( .A ( n3024 ) , 
+    .Y ( net_PTECO_HOLD_NET375 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF376 ( .A ( n3492 ) , 
+    .Y ( net_PTECO_HOLD_NET376 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF377 ( .A ( n2798 ) , 
+    .Y ( net_PTECO_HOLD_NET377 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF378 ( .A ( n3263 ) , 
+    .Y ( net_PTECO_HOLD_NET378 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF379 ( .A ( n3232 ) , 
+    .Y ( net_PTECO_HOLD_NET379 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF380 ( .A ( n3005 ) , 
+    .Y ( net_PTECO_HOLD_NET380 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF381 ( .A ( n3146 ) , 
+    .Y ( net_PTECO_HOLD_NET381 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF382 ( .A ( n3534 ) , 
+    .Y ( net_PTECO_HOLD_NET382 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF383 ( .A ( n3505 ) , 
+    .Y ( net_PTECO_HOLD_NET383 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF384 ( .A ( n2813 ) , 
+    .Y ( net_PTECO_HOLD_NET384 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF385 ( .A ( n3609 ) , 
+    .Y ( net_PTECO_HOLD_NET385 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF387 ( .A ( n2861 ) , 
+    .Y ( net_PTECO_HOLD_NET387 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF388 ( .A ( n3603 ) , 
+    .Y ( net_PTECO_HOLD_NET388 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF389 ( .A ( n3338 ) , 
+    .Y ( net_PTECO_HOLD_NET389 ) ) ;
 NBUFFX2_RVT HFSBUF_47_336 ( .A ( x_in[0] ) , .Y ( HFSNET_328 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF390 ( .A ( n2934 ) , 
+    .Y ( net_PTECO_HOLD_NET390 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF391 ( .A ( n3054 ) , 
+    .Y ( net_PTECO_HOLD_NET391 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF392 ( .A ( n3503 ) , 
+    .Y ( net_PTECO_HOLD_NET392 ) ) ;
 NBUFFX2_RVT HFSBUF_20_341 ( .A ( n2630 ) , .Y ( HFSNET_332 ) ) ;
 NBUFFX4_RVT HFSBUF_66_342 ( .A ( n2633 ) , .Y ( HFSNET_333 ) ) ;
 NBUFFX2_RVT HFSBUF_20_343 ( .A ( n2705 ) , .Y ( HFSNET_334 ) ) ;
 NBUFFX2_RVT HFSBUF_125_344 ( .A ( delay_50__0_ ) , .Y ( HFSNET_335 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF393 ( .A ( n3273 ) , 
+    .Y ( net_PTECO_HOLD_NET393 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF394 ( .A ( n3560 ) , 
+    .Y ( net_PTECO_HOLD_NET394 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF395 ( .A ( n3099 ) , 
+    .Y ( net_PTECO_HOLD_NET395 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF396 ( .A ( n3023 ) , 
+    .Y ( net_PTECO_HOLD_NET396 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF397 ( .A ( n3591 ) , 
+    .Y ( net_PTECO_HOLD_NET397 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF398 ( .A ( n3174 ) , 
+    .Y ( net_PTECO_HOLD_NET398 ) ) ;
 NBUFFX2_RVT HFSBUF_39_351 ( .A ( intadd_44_SUM_9_ ) , .Y ( HFSNET_342 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF399 ( .A ( n3053 ) , 
+    .Y ( net_PTECO_HOLD_NET399 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF400 ( .A ( n3295 ) , 
+    .Y ( net_PTECO_HOLD_NET400 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF401 ( .A ( n3639 ) , 
+    .Y ( net_PTECO_HOLD_NET401 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF402 ( .A ( n3671 ) , 
+    .Y ( net_PTECO_HOLD_NET402 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF403 ( .A ( n2868 ) , 
+    .Y ( net_PTECO_HOLD_NET403 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF404 ( .A ( n3569 ) , 
+    .Y ( net_PTECO_HOLD_NET404 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF405 ( .A ( n3409 ) , 
+    .Y ( net_PTECO_HOLD_NET405 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF406 ( .A ( n2933 ) , 
+    .Y ( net_PTECO_HOLD_NET406 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF407 ( .A ( n3214 ) , 
+    .Y ( net_PTECO_HOLD_NET407 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF408 ( .A ( n2800 ) , 
+    .Y ( net_PTECO_HOLD_NET408 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF409 ( .A ( n3375 ) , 
+    .Y ( net_PTECO_HOLD_NET409 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF410 ( .A ( n2967 ) , 
+    .Y ( net_PTECO_HOLD_NET410 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF411 ( .A ( n3022 ) , 
+    .Y ( net_PTECO_HOLD_NET411 ) ) ;
 NBUFFX4_RVT HFSBUF_92_365 ( .A ( intadd_22_A_1_ ) , .Y ( HFSNET_356 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF412 ( .A ( n3396 ) , 
+    .Y ( net_PTECO_HOLD_NET412 ) ) ;
 NBUFFX2_RVT HFSBUF_60_367 ( .A ( intadd_56_n1 ) , .Y ( HFSNET_358 ) ) ;
 NBUFFX2_RVT HFSBUF_57_368 ( .A ( intadd_41_A_15_ ) , .Y ( HFSNET_359 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF413 ( .A ( n3210 ) , 
+    .Y ( net_PTECO_HOLD_NET413 ) ) ;
 NBUFFX2_RVT HFSBUF_51_370 ( .A ( intadd_41_A_13_ ) , .Y ( HFSNET_361 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF414 ( .A ( n2887 ) , 
+    .Y ( net_PTECO_HOLD_NET414 ) ) ;
 NBUFFX2_RVT HFSBUF_64_372 ( .A ( intadd_58_n1 ) , .Y ( HFSNET_363 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF415 ( .A ( dftopt41_gOb5 ) , 
+    .Y ( net_PTECO_HOLD_NET415 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF416 ( .A ( n2981 ) , 
+    .Y ( net_PTECO_HOLD_NET416 ) ) ;
 NBUFFX2_RVT HFSBUF_38_375 ( .A ( intadd_59_SUM_11_ ) , .Y ( HFSNET_366 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF417 ( .A ( n3065 ) , 
+    .Y ( net_PTECO_HOLD_NET417 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF419 ( .A ( n3153 ) , 
+    .Y ( net_PTECO_HOLD_NET419 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF420 ( .A ( n3717 ) , 
+    .Y ( net_PTECO_HOLD_NET420 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF421 ( .A ( n2840 ) , 
+    .Y ( net_PTECO_HOLD_NET421 ) ) ;
 NBUFFX2_RVT HFSBUF_174_385 ( .A ( intadd_40_SUM_15_ ) , .Y ( HFSNET_376 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF423 ( .A ( n2829 ) , 
+    .Y ( net_PTECO_HOLD_NET423 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF424 ( .A ( n3067 ) , 
+    .Y ( net_PTECO_HOLD_NET424 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF425 ( .A ( n2910 ) , 
+    .Y ( net_PTECO_HOLD_NET425 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF426 ( .A ( n3159 ) , 
+    .Y ( net_PTECO_HOLD_NET426 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF427 ( .A ( n3636 ) , 
+    .Y ( net_PTECO_HOLD_NET427 ) ) ;
 NBUFFX2_RVT HFSBUF_133_396 ( .A ( intadd_13_B_2_ ) , .Y ( HFSNET_387 ) ) ;
 NBUFFX2_RVT HFSBUF_132_398 ( .A ( intadd_44_SUM_2_ ) , .Y ( HFSNET_389 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF428 ( .A ( n2787 ) , 
+    .Y ( net_PTECO_HOLD_NET428 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF429 ( .A ( n2901 ) , 
+    .Y ( net_PTECO_HOLD_NET429 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF430 ( .A ( n3402 ) , 
+    .Y ( net_PTECO_HOLD_NET430 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF431 ( .A ( n3499 ) , 
+    .Y ( net_PTECO_HOLD_NET431 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF432 ( .A ( n3314 ) , 
+    .Y ( net_PTECO_HOLD_NET432 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF434 ( .A ( n3190 ) , 
+    .Y ( net_PTECO_HOLD_NET434 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF435 ( .A ( n3057 ) , 
+    .Y ( net_PTECO_HOLD_NET435 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF436 ( .A ( n3286 ) , 
+    .Y ( net_PTECO_HOLD_NET436 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF437 ( .A ( n2834 ) , 
+    .Y ( net_PTECO_HOLD_NET437 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF438 ( .A ( n3239 ) , 
+    .Y ( net_PTECO_HOLD_NET438 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF439 ( .A ( n3355 ) , 
+    .Y ( net_PTECO_HOLD_NET439 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF440 ( .A ( n2859 ) , 
+    .Y ( net_PTECO_HOLD_NET440 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF441 ( .A ( n3507 ) , 
+    .Y ( net_PTECO_HOLD_NET441 ) ) ;
 NBUFFX2_RVT HFSBUF_184_424 ( .A ( intadd_6_A_1_ ) , .Y ( HFSNET_415 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF442 ( .A ( n3513 ) , 
+    .Y ( net_PTECO_HOLD_NET442 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF443 ( .A ( n3567 ) , 
+    .Y ( net_PTECO_HOLD_NET443 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF444 ( .A ( n3331 ) , 
+    .Y ( net_PTECO_HOLD_NET444 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF446 ( .A ( n3035 ) , 
+    .Y ( net_PTECO_HOLD_NET446 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF447 ( .A ( n3408 ) , 
+    .Y ( net_PTECO_HOLD_NET447 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF448 ( .A ( n3145 ) , 
+    .Y ( net_PTECO_HOLD_NET448 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF449 ( .A ( dftopt13_gOb4 ) , 
+    .Y ( net_PTECO_HOLD_NET449 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF450 ( .A ( n3075 ) , 
+    .Y ( net_PTECO_HOLD_NET450 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF451 ( .A ( n3414 ) , 
+    .Y ( net_PTECO_HOLD_NET451 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF452 ( .A ( n3728 ) , 
+    .Y ( net_PTECO_HOLD_NET452 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF453 ( .A ( n3262 ) , 
+    .Y ( net_PTECO_HOLD_NET453 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF454 ( .A ( n3533 ) , 
+    .Y ( net_PTECO_HOLD_NET454 ) ) ;
 NBUFFX2_RVT HFSBUF_133_450 ( .A ( intadd_52_SUM_7_ ) , .Y ( HFSNET_441 ) ) ;
 NBUFFX2_RVT HFSBUF_169_452 ( .A ( intadd_22_A_0_ ) , .Y ( HFSNET_443 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF455 ( .A ( n3480 ) , 
+    .Y ( net_PTECO_HOLD_NET455 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF456 ( .A ( n3548 ) , 
+    .Y ( net_PTECO_HOLD_NET456 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF457 ( .A ( n3382 ) , 
+    .Y ( net_PTECO_HOLD_NET457 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF458 ( .A ( n3135 ) , 
+    .Y ( net_PTECO_HOLD_NET458 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF459 ( .A ( n3455 ) , 
+    .Y ( net_PTECO_HOLD_NET459 ) ) ;
 NBUFFX2_RVT HFSBUF_184_462 ( .A ( intadd_56_SUM_2_ ) , .Y ( HFSNET_453 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF460 ( .A ( n3589 ) , 
+    .Y ( net_PTECO_HOLD_NET460 ) ) ;
 NBUFFX2_RVT HFSBUF_174_466 ( .A ( intadd_56_SUM_11_ ) , .Y ( HFSNET_457 ) ) ;
 NBUFFX2_RVT HFSBUF_176_468 ( .A ( intadd_58_SUM_2_ ) , .Y ( HFSNET_459 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF462 ( .A ( n3268 ) , 
+    .Y ( net_PTECO_HOLD_NET462 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF463 ( .A ( n3272 ) , 
+    .Y ( net_PTECO_HOLD_NET463 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF464 ( .A ( n3389 ) , 
+    .Y ( net_PTECO_HOLD_NET464 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF465 ( .A ( n3364 ) , 
+    .Y ( net_PTECO_HOLD_NET465 ) ) ;
 NBUFFX4_RVT HFSBUF_143_478 ( .A ( intadd_11_A_2_ ) , .Y ( HFSNET_469 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF466 ( .A ( n3175 ) , 
+    .Y ( net_PTECO_HOLD_NET466 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF467 ( .A ( n3110 ) , 
+    .Y ( net_PTECO_HOLD_NET467 ) ) ;
 NBUFFX2_RVT HFSBUF_132_484 ( .A ( intadd_59_SUM_10_ ) , .Y ( HFSNET_475 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF468 ( .A ( n3628 ) , 
+    .Y ( net_PTECO_HOLD_NET468 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF469 ( .A ( n3617 ) , 
+    .Y ( net_PTECO_HOLD_NET469 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF470 ( .A ( n3502 ) , 
+    .Y ( net_PTECO_HOLD_NET470 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF471 ( .A ( n3111 ) , 
+    .Y ( net_PTECO_HOLD_NET471 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF472 ( .A ( n2983 ) , 
+    .Y ( net_PTECO_HOLD_NET472 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF473 ( .A ( n3572 ) , 
+    .Y ( net_PTECO_HOLD_NET473 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF474 ( .A ( n2852 ) , 
+    .Y ( net_PTECO_HOLD_NET474 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF475 ( .A ( n3546 ) , 
+    .Y ( net_PTECO_HOLD_NET475 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF476 ( .A ( n2961 ) , 
+    .Y ( net_PTECO_HOLD_NET476 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF477 ( .A ( n3114 ) , 
+    .Y ( net_PTECO_HOLD_NET477 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF478 ( .A ( n3651 ) , 
+    .Y ( net_PTECO_HOLD_NET478 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF479 ( .A ( n3205 ) , 
+    .Y ( net_PTECO_HOLD_NET479 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF481 ( .A ( n3620 ) , 
+    .Y ( net_PTECO_HOLD_NET481 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF482 ( .A ( n3451 ) , 
+    .Y ( net_PTECO_HOLD_NET482 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF483 ( .A ( n3031 ) , 
+    .Y ( net_PTECO_HOLD_NET483 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF484 ( .A ( n3195 ) , 
+    .Y ( net_PTECO_HOLD_NET484 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF486 ( .A ( n3283 ) , 
+    .Y ( net_PTECO_HOLD_NET486 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF487 ( .A ( n2806 ) , 
+    .Y ( net_PTECO_HOLD_NET487 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF488 ( .A ( n3561 ) , 
+    .Y ( net_PTECO_HOLD_NET488 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF489 ( .A ( n3458 ) , 
+    .Y ( net_PTECO_HOLD_NET489 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF490 ( .A ( n2812 ) , 
+    .Y ( net_PTECO_HOLD_NET490 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF491 ( .A ( n3615 ) , 
+    .Y ( net_PTECO_HOLD_NET491 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF492 ( .A ( n3290 ) , 
+    .Y ( net_PTECO_HOLD_NET492 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF493 ( .A ( n3380 ) , 
+    .Y ( net_PTECO_HOLD_NET493 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF494 ( .A ( n3601 ) , 
+    .Y ( net_PTECO_HOLD_NET494 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF495 ( .A ( n3063 ) , 
+    .Y ( net_PTECO_HOLD_NET495 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF496 ( .A ( dftopt30_gOb2 ) , 
+    .Y ( net_PTECO_HOLD_NET496 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF497 ( .A ( n3524 ) , 
+    .Y ( net_PTECO_HOLD_NET497 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF498 ( .A ( n3080 ) , 
+    .Y ( net_PTECO_HOLD_NET498 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF499 ( .A ( n3219 ) , 
+    .Y ( net_PTECO_HOLD_NET499 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF500 ( .A ( n3196 ) , 
+    .Y ( net_PTECO_HOLD_NET500 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF501 ( .A ( n3177 ) , 
+    .Y ( net_PTECO_HOLD_NET501 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF502 ( .A ( n3218 ) , 
+    .Y ( net_PTECO_HOLD_NET502 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF503 ( .A ( n3233 ) , 
+    .Y ( net_PTECO_HOLD_NET503 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF504 ( .A ( n3288 ) , 
+    .Y ( net_PTECO_HOLD_NET504 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF506 ( .A ( dftopt21_gOb1 ) , 
+    .Y ( net_PTECO_HOLD_NET506 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF508 ( .A ( n2878 ) , 
+    .Y ( net_PTECO_HOLD_NET508 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF510 ( .A ( n3201 ) , 
+    .Y ( net_PTECO_HOLD_NET510 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF511 ( .A ( n3298 ) , 
+    .Y ( net_PTECO_HOLD_NET511 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF512 ( .A ( n3550 ) , 
+    .Y ( net_PTECO_HOLD_NET512 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF513 ( .A ( n3574 ) , 
+    .Y ( net_PTECO_HOLD_NET513 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF514 ( .A ( n3265 ) , 
+    .Y ( net_PTECO_HOLD_NET514 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF515 ( .A ( n3439 ) , 
+    .Y ( net_PTECO_HOLD_NET515 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF516 ( .A ( n3590 ) , 
+    .Y ( net_PTECO_HOLD_NET516 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF517 ( .A ( n3321 ) , 
+    .Y ( net_PTECO_HOLD_NET517 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF518 ( .A ( n3073 ) , 
+    .Y ( net_PTECO_HOLD_NET518 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF519 ( .A ( n3052 ) , 
+    .Y ( net_PTECO_HOLD_NET519 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF520 ( .A ( n3701 ) , 
+    .Y ( net_PTECO_HOLD_NET520 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF521 ( .A ( n3185 ) , 
+    .Y ( net_PTECO_HOLD_NET521 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF522 ( .A ( n2988 ) , 
+    .Y ( net_PTECO_HOLD_NET522 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF523 ( .A ( n3082 ) , 
+    .Y ( net_PTECO_HOLD_NET523 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF524 ( .A ( n3296 ) , 
+    .Y ( net_PTECO_HOLD_NET524 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF525 ( .A ( n2973 ) , 
+    .Y ( net_PTECO_HOLD_NET525 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF526 ( .A ( n3105 ) , 
+    .Y ( net_PTECO_HOLD_NET526 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF527 ( .A ( n3303 ) , 
+    .Y ( net_PTECO_HOLD_NET527 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF528 ( .A ( n2863 ) , 
+    .Y ( net_PTECO_HOLD_NET528 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF529 ( .A ( n2924 ) , 
+    .Y ( net_PTECO_HOLD_NET529 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF530 ( .A ( n3090 ) , 
+    .Y ( net_PTECO_HOLD_NET530 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF531 ( .A ( n2883 ) , 
+    .Y ( net_PTECO_HOLD_NET531 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF532 ( .A ( n3643 ) , 
+    .Y ( net_PTECO_HOLD_NET532 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF533 ( .A ( n3045 ) , 
+    .Y ( net_PTECO_HOLD_NET533 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF534 ( .A ( n2963 ) , 
+    .Y ( net_PTECO_HOLD_NET534 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF535 ( .A ( n3131 ) , 
+    .Y ( net_PTECO_HOLD_NET535 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF536 ( .A ( n3244 ) , 
+    .Y ( net_PTECO_HOLD_NET536 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF537 ( .A ( n3481 ) , 
+    .Y ( net_PTECO_HOLD_NET537 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF538 ( .A ( n3449 ) , 
+    .Y ( net_PTECO_HOLD_NET538 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF539 ( .A ( n3004 ) , 
+    .Y ( net_PTECO_HOLD_NET539 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF540 ( .A ( n2922 ) , 
+    .Y ( net_PTECO_HOLD_NET540 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF541 ( .A ( n3236 ) , 
+    .Y ( net_PTECO_HOLD_NET541 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF542 ( .A ( n2932 ) , 
+    .Y ( net_PTECO_HOLD_NET542 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF543 ( .A ( n2844 ) , 
+    .Y ( net_PTECO_HOLD_NET543 ) ) ;
 NBUFFX2_RVT HFSBUF_47_626 ( .A ( delay_31__0_ ) , .Y ( HFSNET_617 ) ) ;
 NBUFFX4_RVT HFSBUF_131_627 ( .A ( n2717 ) , .Y ( HFSNET_618 ) ) ;
 NBUFFX2_RVT HFSBUF_62_628 ( .A ( delay_31__3_ ) , .Y ( HFSNET_619 ) ) ;
 NBUFFX2_RVT HFSBUF_77_629 ( .A ( delay_31__3_ ) , .Y ( HFSNET_620 ) ) ;
 NBUFFX2_RVT HFSBUF_30_630 ( .A ( n2703 ) , .Y ( HFSNET_621 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF545 ( .A ( n3454 ) , 
+    .Y ( net_PTECO_HOLD_NET545 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF546 ( .A ( n3197 ) , 
+    .Y ( net_PTECO_HOLD_NET546 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF547 ( .A ( n3475 ) , 
+    .Y ( net_PTECO_HOLD_NET547 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF548 ( .A ( n3373 ) , 
+    .Y ( net_PTECO_HOLD_NET548 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF549 ( .A ( n3276 ) , 
+    .Y ( net_PTECO_HOLD_NET549 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF550 ( .A ( n3633 ) , 
+    .Y ( net_PTECO_HOLD_NET550 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF551 ( .A ( n2999 ) , 
+    .Y ( net_PTECO_HOLD_NET551 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF552 ( .A ( n3403 ) , 
+    .Y ( net_PTECO_HOLD_NET552 ) ) ;
 NBUFFX2_RVT HFSBUF_62_639 ( .A ( intadd_53_SUM_6_ ) , .Y ( HFSNET_630 ) ) ;
 NBUFFX2_RVT HFSBUF_115_641 ( .A ( intadd_54_SUM_9_ ) , .Y ( HFSNET_632 ) ) ;
 NBUFFX2_RVT HFSBUF_101_642 ( .A ( intadd_56_SUM_4_ ) , .Y ( HFSNET_633 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF555 ( .A ( n3469 ) , 
+    .Y ( net_PTECO_HOLD_NET555 ) ) ;
 NBUFFX2_RVT HFSBUF_99_644 ( .A ( intadd_56_SUM_3_ ) , .Y ( HFSNET_635 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF556 ( .A ( n3098 ) , 
+    .Y ( net_PTECO_HOLD_NET556 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF557 ( .A ( n3438 ) , 
+    .Y ( net_PTECO_HOLD_NET557 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF558 ( .A ( n3250 ) , 
+    .Y ( net_PTECO_HOLD_NET558 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF559 ( .A ( n3137 ) , 
+    .Y ( net_PTECO_HOLD_NET559 ) ) ;
 INVX2_RVT HFSINV_227_652 ( .A ( intadd_91_A_1_ ) , .Y ( HFSNET_643 ) ) ;
 AOI22X2_RVT U1424 ( .A1 ( delay_24__0_ ) , .A2 ( n2647 ) , 
     .A3 ( delay_38__0_ ) , .A4 ( n2719 ) , .Y ( intadd_91_A_1_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF560 ( .A ( dftopt53_gOb10 ) , 
+    .Y ( net_PTECO_HOLD_NET560 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF561 ( .A ( n3001 ) , 
+    .Y ( net_PTECO_HOLD_NET561 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF562 ( .A ( n3102 ) , 
+    .Y ( net_PTECO_HOLD_NET562 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF563 ( .A ( n3354 ) , 
+    .Y ( net_PTECO_HOLD_NET563 ) ) ;
 NBUFFX2_RVT HFSBUF_143_665 ( .A ( intadd_29_B_0_ ) , .Y ( HFSNET_655 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF564 ( .A ( dftopt74 ) , 
+    .Y ( net_PTECO_HOLD_NET564 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF565 ( .A ( n3199 ) , 
+    .Y ( net_PTECO_HOLD_NET565 ) ) ;
 NBUFFX4_RVT HFSBUF_205_670 ( .A ( intadd_10_A_6_ ) , .Y ( HFSNET_660 ) ) ;
 NBUFFX4_RVT HFSBUF_217_672 ( .A ( intadd_54_SUM_14_ ) , .Y ( HFSNET_662 ) ) ;
 NBUFFX4_RVT HFSBUF_146_674 ( .A ( intadd_28_A_13_ ) , .Y ( HFSNET_664 ) ) ;
 NBUFFX2_RVT HFSBUF_208_676 ( .A ( intadd_28_A_8_ ) , .Y ( HFSNET_666 ) ) ;
 NBUFFX2_RVT HFSBUF_239_678 ( .A ( intadd_55_SUM_2_ ) , .Y ( HFSNET_668 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF566 ( .A ( n3604 ) , 
+    .Y ( net_PTECO_HOLD_NET566 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF567 ( .A ( n3254 ) , 
+    .Y ( net_PTECO_HOLD_NET567 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF569 ( .A ( n3440 ) , 
+    .Y ( net_PTECO_HOLD_NET569 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF570 ( .A ( n2893 ) , 
+    .Y ( net_PTECO_HOLD_NET570 ) ) ;
 INVX2_RVT HFSINV_214_687 ( .A ( intadd_11_B_0_ ) , .Y ( HFSNET_677 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF571 ( .A ( n3343 ) , 
+    .Y ( net_PTECO_HOLD_NET571 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF572 ( .A ( n3118 ) , 
+    .Y ( net_PTECO_HOLD_NET572 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF573 ( .A ( n2957 ) , 
+    .Y ( net_PTECO_HOLD_NET573 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF575 ( .A ( n3326 ) , 
+    .Y ( net_PTECO_HOLD_NET575 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF576 ( .A ( n3385 ) , 
+    .Y ( net_PTECO_HOLD_NET576 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF577 ( .A ( n3605 ) , 
+    .Y ( net_PTECO_HOLD_NET577 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF578 ( .A ( n2915 ) , 
+    .Y ( net_PTECO_HOLD_NET578 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF579 ( .A ( n2979 ) , 
+    .Y ( net_PTECO_HOLD_NET579 ) ) ;
 NBUFFX2_RVT HFSBUF_150_705 ( .A ( intadd_54_SUM_3_ ) , .Y ( HFSNET_694 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF580 ( .A ( n3401 ) , 
+    .Y ( net_PTECO_HOLD_NET580 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF581 ( .A ( n2862 ) , 
+    .Y ( net_PTECO_HOLD_NET581 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF582 ( .A ( n3140 ) , 
+    .Y ( net_PTECO_HOLD_NET582 ) ) ;
 NBUFFX2_RVT HFSBUF_236_712 ( .A ( intadd_54_SUM_10_ ) , .Y ( HFSNET_701 ) ) ;
 NBUFFX2_RVT HFSBUF_186_714 ( .A ( intadd_54_SUM_8_ ) , .Y ( HFSNET_703 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF583 ( .A ( n3287 ) , 
+    .Y ( net_PTECO_HOLD_NET583 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF584 ( .A ( n3474 ) , 
+    .Y ( net_PTECO_HOLD_NET584 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF585 ( .A ( n3238 ) , 
+    .Y ( net_PTECO_HOLD_NET585 ) ) ;
 NBUFFX2_RVT HFSBUF_208_721 ( .A ( intadd_55_SUM_9_ ) , .Y ( HFSNET_710 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF586 ( .A ( n3426 ) , 
+    .Y ( net_PTECO_HOLD_NET586 ) ) ;
 NBUFFX2_RVT HFSBUF_199_725 ( .A ( intadd_61_SUM_2_ ) , .Y ( HFSNET_714 ) ) ;
 NBUFFX2_RVT HFSBUF_208_727 ( .A ( intadd_61_SUM_1_ ) , .Y ( HFSNET_716 ) ) ;
 NBUFFX2_RVT HFSBUF_160_729 ( .A ( intadd_61_SUM_0_ ) , .Y ( HFSNET_718 ) ) ;
 NBUFFX2_RVT HFSBUF_217_731 ( .A ( intadd_61_SUM_15_ ) , .Y ( HFSNET_720 ) ) ;
 NBUFFX2_RVT HFSBUF_165_733 ( .A ( intadd_61_SUM_14_ ) , .Y ( HFSNET_722 ) ) ;
 NBUFFX2_RVT HFSBUF_160_735 ( .A ( intadd_23_A_10_ ) , .Y ( HFSNET_724 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF587 ( .A ( n2930 ) , 
+    .Y ( net_PTECO_HOLD_NET587 ) ) ;
 NBUFFX2_RVT HFSBUF_246_738 ( .A ( intadd_61_SUM_11_ ) , .Y ( HFSNET_727 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF588 ( .A ( n3184 ) , 
+    .Y ( net_PTECO_HOLD_NET588 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF589 ( .A ( n3013 ) , 
+    .Y ( net_PTECO_HOLD_NET589 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF590 ( .A ( n3599 ) , 
+    .Y ( net_PTECO_HOLD_NET590 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF591 ( .A ( n3306 ) , 
+    .Y ( net_PTECO_HOLD_NET591 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF593 ( .A ( n2725 ) , 
+    .Y ( net_PTECO_HOLD_NET593 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF594 ( .A ( n2949 ) , 
+    .Y ( net_PTECO_HOLD_NET594 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF595 ( .A ( n3614 ) , 
+    .Y ( net_PTECO_HOLD_NET595 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF596 ( .A ( n3040 ) , 
+    .Y ( net_PTECO_HOLD_NET596 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF597 ( .A ( n3194 ) , 
+    .Y ( net_PTECO_HOLD_NET597 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF598 ( .A ( n2984 ) , 
+    .Y ( net_PTECO_HOLD_NET598 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF599 ( .A ( n3486 ) , 
+    .Y ( net_PTECO_HOLD_NET599 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF600 ( .A ( n3544 ) , 
+    .Y ( net_PTECO_HOLD_NET600 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF601 ( .A ( n2866 ) , 
+    .Y ( net_PTECO_HOLD_NET601 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF602 ( .A ( n3608 ) , 
+    .Y ( net_PTECO_HOLD_NET602 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF603 ( .A ( n3558 ) , 
+    .Y ( net_PTECO_HOLD_NET603 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF604 ( .A ( n3477 ) , 
+    .Y ( net_PTECO_HOLD_NET604 ) ) ;
 NBUFFX2_RVT HFSBUF_67_772 ( .A ( intadd_185_B_0_ ) , .Y ( HFSNET_761 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF605 ( .A ( n3570 ) , 
+    .Y ( net_PTECO_HOLD_NET605 ) ) ;
 NBUFFX2_RVT HFSBUF_124_774 ( .A ( n2658 ) , .Y ( HFSNET_763 ) ) ;
 NBUFFX2_RVT HFSBUF_134_775 ( .A ( n2658 ) , .Y ( HFSNET_764 ) ) ;
 NBUFFX2_RVT HFSBUF_69_776 ( .A ( delay_31__2_ ) , .Y ( HFSNET_765 ) ) ;
 NBUFFX2_RVT HFSBUF_114_777 ( .A ( delay_31__2_ ) , .Y ( HFSNET_766 ) ) ;
 NBUFFX4_RVT HFSBUF_47_778 ( .A ( delay_31__6_ ) , .Y ( HFSNET_767 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF606 ( .A ( n3616 ) , 
+    .Y ( net_PTECO_HOLD_NET606 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF607 ( .A ( n3576 ) , 
+    .Y ( net_PTECO_HOLD_NET607 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF608 ( .A ( n3397 ) , 
+    .Y ( net_PTECO_HOLD_NET608 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF609 ( .A ( n2824 ) , 
+    .Y ( net_PTECO_HOLD_NET609 ) ) ;
 NBUFFX4_RVT HFSBUF_170_783 ( .A ( intadd_22_B_0_ ) , .Y ( HFSNET_772 ) ) ;
 NBUFFX2_RVT HFSBUF_105_784 ( .A ( intadd_47_SUM_13_ ) , .Y ( HFSNET_773 ) ) ;
 NBUFFX2_RVT HFSBUF_86_786 ( .A ( intadd_57_n1 ) , .Y ( HFSNET_775 ) ) ;
 NBUFFX2_RVT HFSBUF_84_787 ( .A ( intadd_27_A_14_ ) , .Y ( HFSNET_776 ) ) ;
 NBUFFX2_RVT HFSBUF_112_788 ( .A ( intadd_57_SUM_11_ ) , .Y ( HFSNET_777 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF610 ( .A ( n2935 ) , 
+    .Y ( net_PTECO_HOLD_NET610 ) ) ;
 NBUFFX2_RVT HFSBUF_156_790 ( .A ( intadd_28_B_9_ ) , .Y ( HFSNET_779 ) ) ;
 NBUFFX2_RVT HFSBUF_93_792 ( .A ( intadd_60_n1 ) , .Y ( HFSNET_781 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF611 ( .A ( n3164 ) , 
+    .Y ( net_PTECO_HOLD_NET611 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF612 ( .A ( n3329 ) , 
+    .Y ( net_PTECO_HOLD_NET612 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF613 ( .A ( n3444 ) , 
+    .Y ( net_PTECO_HOLD_NET613 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF614 ( .A ( n3266 ) , 
+    .Y ( net_PTECO_HOLD_NET614 ) ) ;
 NBUFFX2_RVT HFSBUF_227_798 ( .A ( intadd_92_B_0_ ) , .Y ( HFSNET_787 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF615 ( .A ( n3086 ) , 
+    .Y ( net_PTECO_HOLD_NET615 ) ) ;
 INVX4_RVT HFSINV_39_802 ( .A ( HFSNET_792 ) , .Y ( HFSNET_791 ) ) ;
 INVX0_RVT HFSINV_169_803 ( .A ( intadd_13_A_1_ ) , .Y ( HFSNET_792 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF616 ( .A ( n2991 ) , 
+    .Y ( net_PTECO_HOLD_NET616 ) ) ;
 NBUFFX2_RVT HFSBUF_16_807 ( .A ( intadd_12_A_0_ ) , .Y ( HFSNET_796 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF617 ( .A ( n3398 ) , 
+    .Y ( net_PTECO_HOLD_NET617 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF619 ( .A ( n3437 ) , 
+    .Y ( net_PTECO_HOLD_NET619 ) ) ;
 NBUFFX2_RVT HFSBUF_339_813 ( .A ( intadd_28_A_7_ ) , .Y ( HFSNET_802 ) ) ;
 NBUFFX2_RVT HFSBUF_334_815 ( .A ( intadd_57_SUM_5_ ) , .Y ( HFSNET_804 ) ) ;
 NBUFFX4_RVT HFSBUF_332_817 ( .A ( intadd_41_A_4_ ) , .Y ( HFSNET_806 ) ) ;
 NBUFFX4_RVT HFSBUF_217_819 ( .A ( intadd_60_SUM_1_ ) , .Y ( HFSNET_808 ) ) ;
 NBUFFX2_RVT HFSBUF_175_821 ( .A ( intadd_60_SUM_13_ ) , .Y ( HFSNET_810 ) ) ;
 NBUFFX2_RVT HFSBUF_174_823 ( .A ( intadd_60_SUM_10_ ) , .Y ( HFSNET_812 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF620 ( .A ( n3399 ) , 
+    .Y ( net_PTECO_HOLD_NET620 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF621 ( .A ( n3093 ) , 
+    .Y ( net_PTECO_HOLD_NET621 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF622 ( .A ( n3134 ) , 
+    .Y ( net_PTECO_HOLD_NET622 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF623 ( .A ( n3246 ) , 
+    .Y ( net_PTECO_HOLD_NET623 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF624 ( .A ( n3494 ) , 
+    .Y ( net_PTECO_HOLD_NET624 ) ) ;
 NBUFFX2_RVT HFSBUF_257_835 ( .A ( intadd_10_A_1_ ) , .Y ( HFSNET_824 ) ) ;
 NBUFFX2_RVT HFSBUF_186_837 ( .A ( intadd_6_A_14_ ) , .Y ( HFSNET_826 ) ) ;
 NBUFFX2_RVT HFSBUF_246_839 ( .A ( intadd_6_A_13_ ) , .Y ( HFSNET_828 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF625 ( .A ( n3160 ) , 
+    .Y ( net_PTECO_HOLD_NET625 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF626 ( .A ( n3081 ) , 
+    .Y ( net_PTECO_HOLD_NET626 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF628 ( .A ( n2797 ) , 
+    .Y ( net_PTECO_HOLD_NET628 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF629 ( .A ( n3088 ) , 
+    .Y ( net_PTECO_HOLD_NET629 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF630 ( .A ( n3665 ) , 
+    .Y ( net_PTECO_HOLD_NET630 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF631 ( .A ( n3725 ) , 
+    .Y ( net_PTECO_HOLD_NET631 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF633 ( .A ( n3345 ) , 
+    .Y ( net_PTECO_HOLD_NET633 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF634 ( .A ( n3100 ) , 
+    .Y ( net_PTECO_HOLD_NET634 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF635 ( .A ( n3729 ) , 
+    .Y ( net_PTECO_HOLD_NET635 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF636 ( .A ( n2653 ) , 
+    .Y ( net_PTECO_HOLD_NET636 ) ) ;
 INVX4_RVT HFSINV_313_859 ( .A ( intadd_60_SUM_7_ ) , .Y ( HFSNET_848 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF637 ( .A ( n3026 ) , 
+    .Y ( net_PTECO_HOLD_NET637 ) ) ;
 NBUFFX4_RVT HFSBUF_114_861 ( .A ( n2721 ) , .Y ( HFSNET_850 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF638 ( .A ( n3061 ) , 
+    .Y ( net_PTECO_HOLD_NET638 ) ) ;
 NBUFFX2_RVT HFSBUF_131_863 ( .A ( delay_31__13_ ) , .Y ( HFSNET_852 ) ) ;
 NBUFFX2_RVT HFSBUF_116_864 ( .A ( delay_31__4_ ) , .Y ( HFSNET_853 ) ) ;
 NBUFFX2_RVT HFSBUF_116_865 ( .A ( delay_31__5_ ) , .Y ( HFSNET_854 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF639 ( .A ( n3362 ) , 
+    .Y ( net_PTECO_HOLD_NET639 ) ) ;
 NBUFFX2_RVT HFSBUF_211_867 ( .A ( intadd_51_SUM_7_ ) , .Y ( HFSNET_856 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF640 ( .A ( n3277 ) , 
+    .Y ( net_PTECO_HOLD_NET640 ) ) ;
 NBUFFX2_RVT HFSBUF_161_869 ( .A ( intadd_55_SUM_1_ ) , .Y ( HFSNET_858 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF641 ( .A ( n2908 ) , 
+    .Y ( net_PTECO_HOLD_NET641 ) ) ;
 NBUFFX2_RVT HFSBUF_202_875 ( .A ( intadd_57_SUM_10_ ) , .Y ( HFSNET_864 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF642 ( .A ( n3387 ) , 
+    .Y ( net_PTECO_HOLD_NET642 ) ) ;
 INVX4_RVT HFSINV_42_879 ( .A ( HFSNET_869 ) , .Y ( HFSNET_868 ) ) ;
 INVX0_RVT HFSINV_239_880 ( .A ( intadd_6_A_6_ ) , .Y ( HFSNET_869 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF643 ( .A ( n3575 ) , 
+    .Y ( net_PTECO_HOLD_NET643 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF644 ( .A ( n3069 ) , 
+    .Y ( net_PTECO_HOLD_NET644 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF645 ( .A ( n3555 ) , 
+    .Y ( net_PTECO_HOLD_NET645 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF646 ( .A ( dftopt76 ) , 
+    .Y ( net_PTECO_HOLD_NET646 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF647 ( .A ( n3204 ) , 
+    .Y ( net_PTECO_HOLD_NET647 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF648 ( .A ( n3202 ) , 
+    .Y ( net_PTECO_HOLD_NET648 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF649 ( .A ( n3198 ) , 
+    .Y ( net_PTECO_HOLD_NET649 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF651 ( .A ( n3008 ) , 
+    .Y ( net_PTECO_HOLD_NET651 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF652 ( .A ( n3650 ) , 
+    .Y ( net_PTECO_HOLD_NET652 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF653 ( .A ( n3460 ) , 
+    .Y ( net_PTECO_HOLD_NET653 ) ) ;
 NBUFFX2_RVT HFSBUF_184_901 ( .A ( intadd_3_A_1_ ) , .Y ( HFSNET_890 ) ) ;
 NBUFFX2_RVT HFSBUF_326_903 ( .A ( intadd_62_SUM_4_ ) , .Y ( HFSNET_892 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF654 ( .A ( n3356 ) , 
+    .Y ( net_PTECO_HOLD_NET654 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF655 ( .A ( n3068 ) , 
+    .Y ( net_PTECO_HOLD_NET655 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF656 ( .A ( n3313 ) , 
+    .Y ( net_PTECO_HOLD_NET656 ) ) ;
 NBUFFX2_RVT HFSBUF_277_912 ( .A ( intadd_62_SUM_15_ ) , .Y ( HFSNET_901 ) ) ;
 NBUFFX2_RVT HFSBUF_206_914 ( .A ( intadd_62_SUM_14_ ) , .Y ( HFSNET_903 ) ) ;
 NBUFFX2_RVT HFSBUF_281_916 ( .A ( intadd_9_A_8_ ) , .Y ( HFSNET_905 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF657 ( .A ( n3433 ) , 
+    .Y ( net_PTECO_HOLD_NET657 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF658 ( .A ( n3379 ) , 
+    .Y ( net_PTECO_HOLD_NET658 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF659 ( .A ( n2654 ) , 
+    .Y ( net_PTECO_HOLD_NET659 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF660 ( .A ( n3270 ) , 
+    .Y ( net_PTECO_HOLD_NET660 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF661 ( .A ( n2820 ) , 
+    .Y ( net_PTECO_HOLD_NET661 ) ) ;
 INVX2_RVT HFSINV_151_927 ( .A ( HFSNET_917 ) , .Y ( HFSNET_916 ) ) ;
 INVX0_RVT HFSINV_196_928 ( .A ( intadd_11_A_1_ ) , .Y ( HFSNET_917 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF662 ( .A ( n3421 ) , 
+    .Y ( net_PTECO_HOLD_NET662 ) ) ;
 NBUFFX2_RVT HFSBUF_127_931 ( .A ( delay_31__14_ ) , .Y ( HFSNET_920 ) ) ;
 NBUFFX2_RVT HFSBUF_168_932 ( .A ( delay_31__15_ ) , .Y ( HFSNET_921 ) ) ;
 NBUFFX2_RVT HFSBUF_81_933 ( .A ( delay_31__16_ ) , .Y ( HFSNET_922 ) ) ;
 NBUFFX2_RVT HFSBUF_154_934 ( .A ( delay_31__16_ ) , .Y ( HFSNET_923 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF663 ( .A ( n3312 ) , 
+    .Y ( net_PTECO_HOLD_NET663 ) ) ;
 NBUFFX2_RVT HFSBUF_176_936 ( .A ( delay_31__9_ ) , .Y ( HFSNET_925 ) ) ;
 INVX2_RVT HFSINV_163_938 ( .A ( intadd_25_B_0_ ) , .Y ( HFSNET_927 ) ) ;
 AOI22X1_RVT U1421 ( .A1 ( delay_15__0_ ) , .A2 ( n2641 ) , .A3 ( n2702 ) , 
     .A4 ( delay_47__0_ ) , .Y ( intadd_25_B_0_ ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF664 ( .A ( n3112 ) , 
+    .Y ( net_PTECO_HOLD_NET664 ) ) ;
 NBUFFX2_RVT HFSBUF_157_945 ( .A ( intadd_44_SUM_15_ ) , .Y ( HFSNET_933 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF665 ( .A ( n3281 ) , 
+    .Y ( net_PTECO_HOLD_NET665 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF666 ( .A ( n3284 ) , 
+    .Y ( net_PTECO_HOLD_NET666 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF667 ( .A ( n2882 ) , 
+    .Y ( net_PTECO_HOLD_NET667 ) ) ;
 NBUFFX2_RVT HFSBUF_175_953 ( .A ( intadd_55_SUM_3_ ) , .Y ( HFSNET_941 ) ) ;
 INVX2_RVT HFSINV_39_955 ( .A ( ZBUF_47_0 ) , .Y ( HFSNET_943 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF668 ( .A ( n3501 ) , 
+    .Y ( net_PTECO_HOLD_NET668 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF669 ( .A ( n3055 ) , 
+    .Y ( net_PTECO_HOLD_NET669 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF670 ( .A ( n3058 ) , 
+    .Y ( net_PTECO_HOLD_NET670 ) ) ;
 NBUFFX2_RVT HFSBUF_187_964 ( .A ( intadd_52_SUM_8_ ) , .Y ( HFSNET_951 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF671 ( .A ( n3180 ) , 
+    .Y ( net_PTECO_HOLD_NET671 ) ) ;
 NBUFFX2_RVT HFSBUF_469_968 ( .A ( intadd_57_SUM_7_ ) , .Y ( HFSNET_955 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF672 ( .A ( n3106 ) , 
+    .Y ( net_PTECO_HOLD_NET672 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF673 ( .A ( n3144 ) , 
+    .Y ( net_PTECO_HOLD_NET673 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF674 ( .A ( n3083 ) , 
+    .Y ( net_PTECO_HOLD_NET674 ) ) ;
 NBUFFX2_RVT HFSBUF_370_976 ( .A ( intadd_54_SUM_2_ ) , .Y ( HFSNET_963 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF675 ( .A ( n3304 ) , 
+    .Y ( net_PTECO_HOLD_NET675 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF676 ( .A ( n3319 ) , 
+    .Y ( net_PTECO_HOLD_NET676 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF677 ( .A ( n3666 ) , 
+    .Y ( net_PTECO_HOLD_NET677 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF678 ( .A ( n3011 ) , 
+    .Y ( net_PTECO_HOLD_NET678 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF679 ( .A ( n3582 ) , 
+    .Y ( net_PTECO_HOLD_NET679 ) ) ;
 NBUFFX2_RVT HFSBUF_174_986 ( .A ( delay_31__8_ ) , .Y ( HFSNET_973 ) ) ;
 NBUFFX4_RVT HFSBUF_213_988 ( .A ( intadd_27_A_2_ ) , .Y ( HFSNET_975 ) ) ;
 NBUFFX4_RVT HFSBUF_184_990 ( .A ( intadd_55_SUM_0_ ) , .Y ( HFSNET_977 ) ) ;
 NBUFFX2_RVT HFSBUF_172_992 ( .A ( intadd_41_A_5_ ) , .Y ( HFSNET_979 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF681 ( .A ( n3113 ) , 
+    .Y ( net_PTECO_HOLD_NET681 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF682 ( .A ( n3226 ) , 
+    .Y ( net_PTECO_HOLD_NET682 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF683 ( .A ( n3301 ) , 
+    .Y ( net_PTECO_HOLD_NET683 ) ) ;
 NBUFFX2_RVT HFSBUF_494_999 ( .A ( intadd_60_SUM_12_ ) , .Y ( HFSNET_986 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF684 ( .A ( n2885 ) , 
+    .Y ( net_PTECO_HOLD_NET684 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF685 ( .A ( n3383 ) , 
+    .Y ( net_PTECO_HOLD_NET685 ) ) ;
 NBUFFX2_RVT HFSBUF_393_1004 ( .A ( intadd_57_SUM_1_ ) , .Y ( HFSNET_991 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF686 ( .A ( n3279 ) , 
+    .Y ( net_PTECO_HOLD_NET686 ) ) ;
 NBUFFX2_RVT HFSBUF_478_1007 ( .A ( intadd_62_SUM_3_ ) , .Y ( HFSNET_994 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF687 ( .A ( n3183 ) , 
+    .Y ( net_PTECO_HOLD_NET687 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF688 ( .A ( n3510 ) , 
+    .Y ( net_PTECO_HOLD_NET688 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF689 ( .A ( n3039 ) , 
+    .Y ( net_PTECO_HOLD_NET689 ) ) ;
 NBUFFX2_RVT HFSBUF_63_1014 ( .A ( intadd_93_B_0_ ) , .Y ( HFSNET_1001 ) ) ;
 NBUFFX4_RVT HFSBUF_204_1016 ( .A ( intadd_57_SUM_0_ ) , .Y ( HFSNET_1003 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF690 ( .A ( n3425 ) , 
+    .Y ( net_PTECO_HOLD_NET690 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF691 ( .A ( n2953 ) , 
+    .Y ( net_PTECO_HOLD_NET691 ) ) ;
 NBUFFX4_RVT HFSBUF_369_1022 ( .A ( intadd_4_A_1_ ) , .Y ( HFSNET_1009 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF692 ( .A ( n3395 ) , 
+    .Y ( net_PTECO_HOLD_NET692 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF693 ( .A ( n3613 ) , 
+    .Y ( net_PTECO_HOLD_NET693 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF694 ( .A ( n3545 ) , 
+    .Y ( net_PTECO_HOLD_NET694 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF695 ( .A ( n3096 ) , 
+    .Y ( net_PTECO_HOLD_NET695 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF696 ( .A ( n3079 ) , 
+    .Y ( net_PTECO_HOLD_NET696 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF697 ( .A ( n3124 ) , 
+    .Y ( net_PTECO_HOLD_NET697 ) ) ;
 NBUFFX2_RVT HFSBUF_387_1034 ( .A ( intadd_62_SUM_7_ ) , .Y ( HFSNET_1021 ) ) ;
 INVX4_RVT HFSINV_40_1036 ( .A ( HFSNET_1024 ) , .Y ( HFSNET_1023 ) ) ;
 INVX0_RVT HFSINV_225_1037 ( .A ( intadd_62_SUM_11_ ) , .Y ( HFSNET_1024 ) ) ;
 NBUFFX2_RVT HFSBUF_334_1039 ( .A ( intadd_213_B_0_ ) , .Y ( HFSNET_1026 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF699 ( .A ( n2814 ) , 
+    .Y ( net_PTECO_HOLD_NET699 ) ) ;
 NBUFFX4_RVT HFSBUF_380_1042 ( .A ( intadd_62_SUM_2_ ) , .Y ( HFSNET_1029 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF700 ( .A ( n3459 ) , 
+    .Y ( net_PTECO_HOLD_NET700 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF701 ( .A ( n3200 ) , 
+    .Y ( net_PTECO_HOLD_NET701 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF703 ( .A ( n3330 ) , 
+    .Y ( net_PTECO_HOLD_NET703 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF704 ( .A ( n2968 ) , 
+    .Y ( net_PTECO_HOLD_NET704 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF705 ( .A ( n3133 ) , 
+    .Y ( net_PTECO_HOLD_NET705 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF707 ( .A ( n3179 ) , 
+    .Y ( net_PTECO_HOLD_NET707 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF708 ( .A ( n3042 ) , 
+    .Y ( net_PTECO_HOLD_NET708 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF709 ( .A ( n3646 ) , 
+    .Y ( net_PTECO_HOLD_NET709 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF710 ( .A ( n3172 ) , 
+    .Y ( net_PTECO_HOLD_NET710 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF711 ( .A ( n3157 ) , 
+    .Y ( net_PTECO_HOLD_NET711 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF712 ( .A ( n3420 ) , 
+    .Y ( net_PTECO_HOLD_NET712 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF713 ( .A ( n3400 ) , 
+    .Y ( net_PTECO_HOLD_NET713 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF714 ( .A ( n3635 ) , 
+    .Y ( net_PTECO_HOLD_NET714 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF715 ( .A ( n3178 ) , 
+    .Y ( net_PTECO_HOLD_NET715 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF716 ( .A ( n2993 ) , 
+    .Y ( net_PTECO_HOLD_NET716 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF718 ( .A ( n3116 ) , 
+    .Y ( net_PTECO_HOLD_NET718 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF719 ( .A ( n3497 ) , 
+    .Y ( net_PTECO_HOLD_NET719 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF720 ( .A ( n3416 ) , 
+    .Y ( net_PTECO_HOLD_NET720 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF721 ( .A ( n3350 ) , 
+    .Y ( net_PTECO_HOLD_NET721 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF723 ( .A ( n3656 ) , 
+    .Y ( net_PTECO_HOLD_NET723 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF724 ( .A ( n3366 ) , 
+    .Y ( net_PTECO_HOLD_NET724 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF725 ( .A ( n3543 ) , 
+    .Y ( net_PTECO_HOLD_NET725 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF726 ( .A ( n3128 ) , 
+    .Y ( net_PTECO_HOLD_NET726 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF727 ( .A ( n3300 ) , 
+    .Y ( net_PTECO_HOLD_NET727 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF728 ( .A ( n3222 ) , 
+    .Y ( net_PTECO_HOLD_NET728 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF729 ( .A ( n3275 ) , 
+    .Y ( net_PTECO_HOLD_NET729 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF730 ( .A ( n3372 ) , 
+    .Y ( net_PTECO_HOLD_NET730 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF731 ( .A ( n3531 ) , 
+    .Y ( net_PTECO_HOLD_NET731 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF732 ( .A ( n3000 ) , 
+    .Y ( net_PTECO_HOLD_NET732 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF733 ( .A ( n3259 ) , 
+    .Y ( net_PTECO_HOLD_NET733 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF734 ( .A ( n2969 ) , 
+    .Y ( net_PTECO_HOLD_NET734 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF735 ( .A ( n2854 ) , 
+    .Y ( net_PTECO_HOLD_NET735 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF736 ( .A ( n3282 ) , 
+    .Y ( net_PTECO_HOLD_NET736 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF737 ( .A ( n3252 ) , 
+    .Y ( net_PTECO_HOLD_NET737 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF738 ( .A ( n2982 ) , 
+    .Y ( net_PTECO_HOLD_NET738 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF739 ( .A ( n3130 ) , 
+    .Y ( net_PTECO_HOLD_NET739 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF740 ( .A ( n2875 ) , 
+    .Y ( net_PTECO_HOLD_NET740 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF741 ( .A ( n3123 ) , 
+    .Y ( net_PTECO_HOLD_NET741 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF742 ( .A ( n3315 ) , 
+    .Y ( net_PTECO_HOLD_NET742 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF743 ( .A ( n3221 ) , 
+    .Y ( net_PTECO_HOLD_NET743 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF744 ( .A ( n3139 ) , 
+    .Y ( net_PTECO_HOLD_NET744 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF745 ( .A ( n3015 ) , 
+    .Y ( net_PTECO_HOLD_NET745 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF746 ( .A ( n3602 ) , 
+    .Y ( net_PTECO_HOLD_NET746 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF747 ( .A ( n3422 ) , 
+    .Y ( net_PTECO_HOLD_NET747 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF748 ( .A ( n3448 ) , 
+    .Y ( net_PTECO_HOLD_NET748 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF749 ( .A ( n3419 ) , 
+    .Y ( net_PTECO_HOLD_NET749 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF750 ( .A ( n3358 ) , 
+    .Y ( net_PTECO_HOLD_NET750 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF751 ( .A ( n3532 ) , 
+    .Y ( net_PTECO_HOLD_NET751 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF752 ( .A ( n3443 ) , 
+    .Y ( net_PTECO_HOLD_NET752 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF754 ( .A ( n3018 ) , 
+    .Y ( net_PTECO_HOLD_NET754 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF755 ( .A ( n3049 ) , 
+    .Y ( net_PTECO_HOLD_NET755 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF756 ( .A ( n3191 ) , 
+    .Y ( net_PTECO_HOLD_NET756 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF758 ( .A ( n3598 ) , 
+    .Y ( net_PTECO_HOLD_NET758 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF759 ( .A ( n2638 ) , 
+    .Y ( net_PTECO_HOLD_NET759 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF760 ( .A ( n3479 ) , 
+    .Y ( net_PTECO_HOLD_NET760 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF761 ( .A ( n3115 ) , 
+    .Y ( net_PTECO_HOLD_NET761 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF762 ( .A ( n2860 ) , 
+    .Y ( net_PTECO_HOLD_NET762 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF763 ( .A ( n3318 ) , 
+    .Y ( net_PTECO_HOLD_NET763 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF764 ( .A ( n3187 ) , 
+    .Y ( net_PTECO_HOLD_NET764 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF765 ( .A ( n2954 ) , 
+    .Y ( net_PTECO_HOLD_NET765 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF766 ( .A ( n2816 ) , 
+    .Y ( net_PTECO_HOLD_NET766 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF768 ( .A ( n3487 ) , 
+    .Y ( net_PTECO_HOLD_NET768 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF770 ( .A ( n3512 ) , 
+    .Y ( net_PTECO_HOLD_NET770 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF771 ( .A ( n3220 ) , 
+    .Y ( net_PTECO_HOLD_NET771 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF772 ( .A ( n2907 ) , 
+    .Y ( net_PTECO_HOLD_NET772 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF773 ( .A ( n3291 ) , 
+    .Y ( net_PTECO_HOLD_NET773 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF774 ( .A ( n2937 ) , 
+    .Y ( net_PTECO_HOLD_NET774 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF775 ( .A ( n2819 ) , 
+    .Y ( net_PTECO_HOLD_NET775 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF776 ( .A ( n3320 ) , 
+    .Y ( net_PTECO_HOLD_NET776 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF778 ( .A ( n3317 ) , 
+    .Y ( net_PTECO_HOLD_NET778 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF779 ( .A ( n3489 ) , 
+    .Y ( net_PTECO_HOLD_NET779 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF780 ( .A ( n3078 ) , 
+    .Y ( net_PTECO_HOLD_NET780 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF781 ( .A ( n3127 ) , 
+    .Y ( net_PTECO_HOLD_NET781 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF782 ( .A ( n3125 ) , 
+    .Y ( net_PTECO_HOLD_NET782 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF783 ( .A ( n3527 ) , 
+    .Y ( net_PTECO_HOLD_NET783 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF784 ( .A ( n3028 ) , 
+    .Y ( net_PTECO_HOLD_NET784 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF785 ( .A ( n3681 ) , 
+    .Y ( net_PTECO_HOLD_NET785 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF786 ( .A ( n3367 ) , 
+    .Y ( net_PTECO_HOLD_NET786 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF787 ( .A ( n3242 ) , 
+    .Y ( net_PTECO_HOLD_NET787 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF788 ( .A ( n3299 ) , 
+    .Y ( net_PTECO_HOLD_NET788 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF789 ( .A ( n3429 ) , 
+    .Y ( net_PTECO_HOLD_NET789 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF790 ( .A ( n3020 ) , 
+    .Y ( net_PTECO_HOLD_NET790 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF791 ( .A ( n3484 ) , 
+    .Y ( net_PTECO_HOLD_NET791 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF792 ( .A ( n3445 ) , 
+    .Y ( net_PTECO_HOLD_NET792 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF793 ( .A ( n2950 ) , 
+    .Y ( net_PTECO_HOLD_NET793 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF794 ( .A ( n3705 ) , 
+    .Y ( net_PTECO_HOLD_NET794 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF795 ( .A ( n3464 ) , 
+    .Y ( net_PTECO_HOLD_NET795 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF796 ( .A ( n2651 ) , 
+    .Y ( net_PTECO_HOLD_NET796 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF797 ( .A ( n3696 ) , 
+    .Y ( net_PTECO_HOLD_NET797 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF798 ( .A ( n3229 ) , 
+    .Y ( net_PTECO_HOLD_NET798 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF800 ( .A ( n3542 ) , 
+    .Y ( net_PTECO_HOLD_NET800 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF801 ( .A ( n3363 ) , 
+    .Y ( net_PTECO_HOLD_NET801 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF802 ( .A ( n3516 ) , 
+    .Y ( net_PTECO_HOLD_NET802 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF804 ( .A ( n2920 ) , 
+    .Y ( net_PTECO_HOLD_NET804 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF806 ( .A ( n3251 ) , 
+    .Y ( net_PTECO_HOLD_NET806 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF807 ( .A ( n2946 ) , 
+    .Y ( net_PTECO_HOLD_NET807 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF808 ( .A ( n3716 ) , 
+    .Y ( net_PTECO_HOLD_NET808 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF809 ( .A ( n3120 ) , 
+    .Y ( net_PTECO_HOLD_NET809 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF810 ( .A ( n2990 ) , 
+    .Y ( net_PTECO_HOLD_NET810 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF811 ( .A ( n3649 ) , 
+    .Y ( net_PTECO_HOLD_NET811 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF812 ( .A ( n3258 ) , 
+    .Y ( net_PTECO_HOLD_NET812 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF813 ( .A ( n3518 ) , 
+    .Y ( net_PTECO_HOLD_NET813 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF814 ( .A ( n3297 ) , 
+    .Y ( net_PTECO_HOLD_NET814 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF815 ( .A ( n3509 ) , 
+    .Y ( net_PTECO_HOLD_NET815 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF816 ( .A ( n3339 ) , 
+    .Y ( net_PTECO_HOLD_NET816 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF817 ( .A ( n3478 ) , 
+    .Y ( net_PTECO_HOLD_NET817 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF818 ( .A ( n3432 ) , 
+    .Y ( net_PTECO_HOLD_NET818 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF821 ( .A ( n3181 ) , 
+    .Y ( net_PTECO_HOLD_NET821 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF822 ( .A ( n3467 ) , 
+    .Y ( net_PTECO_HOLD_NET822 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF823 ( .A ( n3132 ) , 
+    .Y ( net_PTECO_HOLD_NET823 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF824 ( .A ( n2788 ) , 
+    .Y ( net_PTECO_HOLD_NET824 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF825 ( .A ( n3332 ) , 
+    .Y ( net_PTECO_HOLD_NET825 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF826 ( .A ( n3506 ) , 
+    .Y ( net_PTECO_HOLD_NET826 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF827 ( .A ( n3213 ) , 
+    .Y ( net_PTECO_HOLD_NET827 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF828 ( .A ( n3491 ) , 
+    .Y ( net_PTECO_HOLD_NET828 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF829 ( .A ( n3156 ) , 
+    .Y ( net_PTECO_HOLD_NET829 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF830 ( .A ( n3307 ) , 
+    .Y ( net_PTECO_HOLD_NET830 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF831 ( .A ( n3019 ) , 
+    .Y ( net_PTECO_HOLD_NET831 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF833 ( .A ( n3495 ) , 
+    .Y ( net_PTECO_HOLD_NET833 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF834 ( .A ( n3436 ) , 
+    .Y ( net_PTECO_HOLD_NET834 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF835 ( .A ( n3033 ) , 
+    .Y ( net_PTECO_HOLD_NET835 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF836 ( .A ( n3261 ) , 
+    .Y ( net_PTECO_HOLD_NET836 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF837 ( .A ( n3121 ) , 
+    .Y ( net_PTECO_HOLD_NET837 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF838 ( .A ( n3346 ) , 
+    .Y ( net_PTECO_HOLD_NET838 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF839 ( .A ( n3029 ) , 
+    .Y ( net_PTECO_HOLD_NET839 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF840 ( .A ( n3234 ) , 
+    .Y ( net_PTECO_HOLD_NET840 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF841 ( .A ( n3456 ) , 
+    .Y ( net_PTECO_HOLD_NET841 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF842 ( .A ( n3293 ) , 
+    .Y ( net_PTECO_HOLD_NET842 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF843 ( .A ( n3046 ) , 
+    .Y ( net_PTECO_HOLD_NET843 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF845 ( .A ( n2877 ) , 
+    .Y ( net_PTECO_HOLD_NET845 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF846 ( .A ( n2987 ) , 
+    .Y ( net_PTECO_HOLD_NET846 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF847 ( .A ( n3182 ) , 
+    .Y ( net_PTECO_HOLD_NET847 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF848 ( .A ( n3094 ) , 
+    .Y ( net_PTECO_HOLD_NET848 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF849 ( .A ( n3141 ) , 
+    .Y ( net_PTECO_HOLD_NET849 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF850 ( .A ( n3631 ) , 
+    .Y ( net_PTECO_HOLD_NET850 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF851 ( .A ( n2980 ) , 
+    .Y ( net_PTECO_HOLD_NET851 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF852 ( .A ( n3427 ) , 
+    .Y ( net_PTECO_HOLD_NET852 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF853 ( .A ( n3447 ) , 
+    .Y ( net_PTECO_HOLD_NET853 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF854 ( .A ( n3142 ) , 
+    .Y ( net_PTECO_HOLD_NET854 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF856 ( .A ( n2939 ) , 
+    .Y ( net_PTECO_HOLD_NET856 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF857 ( .A ( n3457 ) , 
+    .Y ( net_PTECO_HOLD_NET857 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF858 ( .A ( n3500 ) , 
+    .Y ( net_PTECO_HOLD_NET858 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF859 ( .A ( n3117 ) , 
+    .Y ( net_PTECO_HOLD_NET859 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF860 ( .A ( n3168 ) , 
+    .Y ( net_PTECO_HOLD_NET860 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF861 ( .A ( n3103 ) , 
+    .Y ( net_PTECO_HOLD_NET861 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF862 ( .A ( n3709 ) , 
+    .Y ( net_PTECO_HOLD_NET862 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF863 ( .A ( n3176 ) , 
+    .Y ( net_PTECO_HOLD_NET863 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF864 ( .A ( n2906 ) , 
+    .Y ( net_PTECO_HOLD_NET864 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF865 ( .A ( n3027 ) , 
+    .Y ( net_PTECO_HOLD_NET865 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF866 ( .A ( n3453 ) , 
+    .Y ( net_PTECO_HOLD_NET866 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF867 ( .A ( n3351 ) , 
+    .Y ( net_PTECO_HOLD_NET867 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF868 ( .A ( n3048 ) , 
+    .Y ( net_PTECO_HOLD_NET868 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF869 ( .A ( n3173 ) , 
+    .Y ( net_PTECO_HOLD_NET869 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF870 ( .A ( n3526 ) , 
+    .Y ( net_PTECO_HOLD_NET870 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF871 ( .A ( n3353 ) , 
+    .Y ( net_PTECO_HOLD_NET871 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF872 ( .A ( n3095 ) , 
+    .Y ( net_PTECO_HOLD_NET872 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF874 ( .A ( n3342 ) , 
+    .Y ( net_PTECO_HOLD_NET874 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF875 ( .A ( n3660 ) , 
+    .Y ( net_PTECO_HOLD_NET875 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF876 ( .A ( n2892 ) , 
+    .Y ( net_PTECO_HOLD_NET876 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF877 ( .A ( n2650 ) , 
+    .Y ( net_PTECO_HOLD_NET877 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF878 ( .A ( n3165 ) , 
+    .Y ( net_PTECO_HOLD_NET878 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF879 ( .A ( n3428 ) , 
+    .Y ( net_PTECO_HOLD_NET879 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF880 ( .A ( n3634 ) , 
+    .Y ( net_PTECO_HOLD_NET880 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF881 ( .A ( n3535 ) , 
+    .Y ( net_PTECO_HOLD_NET881 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF882 ( .A ( n2995 ) , 
+    .Y ( net_PTECO_HOLD_NET882 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF883 ( .A ( n3357 ) , 
+    .Y ( net_PTECO_HOLD_NET883 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF884 ( .A ( n3371 ) , 
+    .Y ( net_PTECO_HOLD_NET884 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF885 ( .A ( n3147 ) , 
+    .Y ( net_PTECO_HOLD_NET885 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF886 ( .A ( n3360 ) , 
+    .Y ( net_PTECO_HOLD_NET886 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF887 ( .A ( n2994 ) , 
+    .Y ( net_PTECO_HOLD_NET887 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF889 ( .A ( n3171 ) , 
+    .Y ( net_PTECO_HOLD_NET889 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF890 ( .A ( n3547 ) , 
+    .Y ( net_PTECO_HOLD_NET890 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF891 ( .A ( n3101 ) , 
+    .Y ( net_PTECO_HOLD_NET891 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF892 ( .A ( n3241 ) , 
+    .Y ( net_PTECO_HOLD_NET892 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF894 ( .A ( n2923 ) , 
+    .Y ( net_PTECO_HOLD_NET894 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF895 ( .A ( n3658 ) , 
+    .Y ( net_PTECO_HOLD_NET895 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF897 ( .A ( n3418 ) , 
+    .Y ( net_PTECO_HOLD_NET897 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF898 ( .A ( dftopt3_gOb1 ) , 
+    .Y ( net_PTECO_HOLD_NET898 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF899 ( .A ( n3530 ) , 
+    .Y ( net_PTECO_HOLD_NET899 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF901 ( .A ( n3441 ) , 
+    .Y ( net_PTECO_HOLD_NET901 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF902 ( .A ( n3076 ) , 
+    .Y ( net_PTECO_HOLD_NET902 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF903 ( .A ( n3245 ) , 
+    .Y ( net_PTECO_HOLD_NET903 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF904 ( .A ( n3044 ) , 
+    .Y ( net_PTECO_HOLD_NET904 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF905 ( .A ( n3498 ) , 
+    .Y ( net_PTECO_HOLD_NET905 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF906 ( .A ( n3529 ) , 
+    .Y ( net_PTECO_HOLD_NET906 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF907 ( .A ( n3452 ) , 
+    .Y ( net_PTECO_HOLD_NET907 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF908 ( .A ( n3062 ) , 
+    .Y ( net_PTECO_HOLD_NET908 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF909 ( .A ( n3471 ) , 
+    .Y ( net_PTECO_HOLD_NET909 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF910 ( .A ( n3311 ) , 
+    .Y ( net_PTECO_HOLD_NET910 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF911 ( .A ( n3370 ) , 
+    .Y ( net_PTECO_HOLD_NET911 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF912 ( .A ( n3166 ) , 
+    .Y ( net_PTECO_HOLD_NET912 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF913 ( .A ( n2917 ) , 
+    .Y ( net_PTECO_HOLD_NET913 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF914 ( .A ( n3247 ) , 
+    .Y ( net_PTECO_HOLD_NET914 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF915 ( .A ( n3584 ) , 
+    .Y ( net_PTECO_HOLD_NET915 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF916 ( .A ( n3585 ) , 
+    .Y ( net_PTECO_HOLD_NET916 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF917 ( .A ( n3092 ) , 
+    .Y ( net_PTECO_HOLD_NET917 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF918 ( .A ( n3074 ) , 
+    .Y ( net_PTECO_HOLD_NET918 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF921 ( .A ( n3285 ) , 
+    .Y ( net_PTECO_HOLD_NET921 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF922 ( .A ( n3077 ) , 
+    .Y ( net_PTECO_HOLD_NET922 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF923 ( .A ( n3084 ) , 
+    .Y ( net_PTECO_HOLD_NET923 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF924 ( .A ( n2867 ) , 
+    .Y ( net_PTECO_HOLD_NET924 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF926 ( .A ( n3361 ) , 
+    .Y ( net_PTECO_HOLD_NET926 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF927 ( .A ( n3504 ) , 
+    .Y ( net_PTECO_HOLD_NET927 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF928 ( .A ( n3394 ) , 
+    .Y ( net_PTECO_HOLD_NET928 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF929 ( .A ( n2722 ) , 
+    .Y ( net_PTECO_HOLD_NET929 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF931 ( .A ( n2992 ) , 
+    .Y ( net_PTECO_HOLD_NET931 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF932 ( .A ( n3461 ) , 
+    .Y ( net_PTECO_HOLD_NET932 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF933 ( .A ( n3292 ) , 
+    .Y ( net_PTECO_HOLD_NET933 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF934 ( .A ( n3138 ) , 
+    .Y ( net_PTECO_HOLD_NET934 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF935 ( .A ( n3158 ) , 
+    .Y ( net_PTECO_HOLD_NET935 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF936 ( .A ( n3391 ) , 
+    .Y ( net_PTECO_HOLD_NET936 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF937 ( .A ( n2978 ) , 
+    .Y ( net_PTECO_HOLD_NET937 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF939 ( .A ( n3032 ) , 
+    .Y ( net_PTECO_HOLD_NET939 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF940 ( .A ( n3349 ) , 
+    .Y ( net_PTECO_HOLD_NET940 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF941 ( .A ( n2719 ) , 
+    .Y ( net_PTECO_HOLD_NET941 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF942 ( .A ( n3645 ) , 
+    .Y ( net_PTECO_HOLD_NET942 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF943 ( .A ( n3368 ) , 
+    .Y ( net_PTECO_HOLD_NET943 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF944 ( .A ( n2839 ) , 
+    .Y ( net_PTECO_HOLD_NET944 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF945 ( .A ( n3405 ) , 
+    .Y ( net_PTECO_HOLD_NET945 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF946 ( .A ( n3310 ) , 
+    .Y ( net_PTECO_HOLD_NET946 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF947 ( .A ( n3154 ) , 
+    .Y ( net_PTECO_HOLD_NET947 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF949 ( .A ( n3240 ) , 
+    .Y ( net_PTECO_HOLD_NET949 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF950 ( .A ( n3091 ) , 
+    .Y ( net_PTECO_HOLD_NET950 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF951 ( .A ( n3274 ) , 
+    .Y ( net_PTECO_HOLD_NET951 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF952 ( .A ( n3541 ) , 
+    .Y ( net_PTECO_HOLD_NET952 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF953 ( .A ( n3450 ) , 
+    .Y ( net_PTECO_HOLD_NET953 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF954 ( .A ( n2646 ) , 
+    .Y ( net_PTECO_HOLD_NET954 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF955 ( .A ( n3289 ) , 
+    .Y ( net_PTECO_HOLD_NET955 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF956 ( .A ( n3107 ) , 
+    .Y ( net_PTECO_HOLD_NET956 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF957 ( .A ( n3037 ) , 
+    .Y ( net_PTECO_HOLD_NET957 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF960 ( .A ( n3253 ) , 
+    .Y ( net_PTECO_HOLD_NET960 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF961 ( .A ( n3294 ) , 
+    .Y ( net_PTECO_HOLD_NET961 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF962 ( .A ( n3337 ) , 
+    .Y ( net_PTECO_HOLD_NET962 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF963 ( .A ( n2644 ) , 
+    .Y ( net_PTECO_HOLD_NET963 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF964 ( .A ( n3036 ) , 
+    .Y ( net_PTECO_HOLD_NET964 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF966 ( .A ( n3143 ) , 
+    .Y ( net_PTECO_HOLD_NET966 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF967 ( .A ( n3119 ) , 
+    .Y ( net_PTECO_HOLD_NET967 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF968 ( .A ( n3264 ) , 
+    .Y ( net_PTECO_HOLD_NET968 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF969 ( .A ( n3493 ) , 
+    .Y ( net_PTECO_HOLD_NET969 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF970 ( .A ( n3162 ) , 
+    .Y ( net_PTECO_HOLD_NET970 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF971 ( .A ( n3412 ) , 
+    .Y ( net_PTECO_HOLD_NET971 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF972 ( .A ( n3466 ) , 
+    .Y ( net_PTECO_HOLD_NET972 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF973 ( .A ( n3523 ) , 
+    .Y ( net_PTECO_HOLD_NET973 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF974 ( .A ( n3149 ) , 
+    .Y ( net_PTECO_HOLD_NET974 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF975 ( .A ( n3470 ) , 
+    .Y ( net_PTECO_HOLD_NET975 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF976 ( .A ( n3685 ) , 
+    .Y ( net_PTECO_HOLD_NET976 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF977 ( .A ( n3041 ) , 
+    .Y ( net_PTECO_HOLD_NET977 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF978 ( .A ( n3600 ) , 
+    .Y ( net_PTECO_HOLD_NET978 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF981 ( .A ( n3302 ) , 
+    .Y ( net_PTECO_HOLD_NET981 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF982 ( .A ( n3072 ) , 
+    .Y ( net_PTECO_HOLD_NET982 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF983 ( .A ( n3472 ) , 
+    .Y ( net_PTECO_HOLD_NET983 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF984 ( .A ( n3150 ) , 
+    .Y ( net_PTECO_HOLD_NET984 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF985 ( .A ( n3308 ) , 
+    .Y ( net_PTECO_HOLD_NET985 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF986 ( .A ( n3386 ) , 
+    .Y ( net_PTECO_HOLD_NET986 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF987 ( .A ( dftopt66 ) , 
+    .Y ( net_PTECO_HOLD_NET987 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF988 ( .A ( n3224 ) , 
+    .Y ( net_PTECO_HOLD_NET988 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF989 ( .A ( n3136 ) , 
+    .Y ( net_PTECO_HOLD_NET989 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF990 ( .A ( n2985 ) , 
+    .Y ( net_PTECO_HOLD_NET990 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF991 ( .A ( n3169 ) , 
+    .Y ( net_PTECO_HOLD_NET991 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF992 ( .A ( n3415 ) , 
+    .Y ( net_PTECO_HOLD_NET992 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF993 ( .A ( n3209 ) , 
+    .Y ( net_PTECO_HOLD_NET993 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF994 ( .A ( n3348 ) , 
+    .Y ( net_PTECO_HOLD_NET994 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF996 ( .A ( n3336 ) , 
+    .Y ( net_PTECO_HOLD_NET996 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF997 ( .A ( n3511 ) , 
+    .Y ( net_PTECO_HOLD_NET997 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF999 ( .A ( n3514 ) , 
+    .Y ( net_PTECO_HOLD_NET999 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1000 ( .A ( n3384 ) , 
+    .Y ( net_PTECO_HOLD_NET1000 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1002 ( .A ( n3030 ) , 
+    .Y ( net_PTECO_HOLD_NET1002 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1003 ( .A ( n3203 ) , 
+    .Y ( net_PTECO_HOLD_NET1003 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1004 ( .A ( dftopt24 ) , 
+    .Y ( net_PTECO_HOLD_NET1004 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1005 ( .A ( n3260 ) , 
+    .Y ( net_PTECO_HOLD_NET1005 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1006 ( .A ( n3003 ) , 
+    .Y ( net_PTECO_HOLD_NET1006 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1007 ( .A ( n3009 ) , 
+    .Y ( net_PTECO_HOLD_NET1007 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1009 ( .A ( n3104 ) , 
+    .Y ( net_PTECO_HOLD_NET1009 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1010 ( .A ( n3468 ) , 
+    .Y ( net_PTECO_HOLD_NET1010 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1011 ( .A ( n3126 ) , 
+    .Y ( net_PTECO_HOLD_NET1011 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1012 ( .A ( n3255 ) , 
+    .Y ( net_PTECO_HOLD_NET1012 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1013 ( .A ( n3097 ) , 
+    .Y ( net_PTECO_HOLD_NET1013 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1014 ( .A ( n3129 ) , 
+    .Y ( net_PTECO_HOLD_NET1014 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1016 ( .A ( n3462 ) , 
+    .Y ( net_PTECO_HOLD_NET1016 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1017 ( .A ( n3193 ) , 
+    .Y ( net_PTECO_HOLD_NET1017 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1018 ( .A ( n3070 ) , 
+    .Y ( net_PTECO_HOLD_NET1018 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1019 ( .A ( n3334 ) , 
+    .Y ( net_PTECO_HOLD_NET1019 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1020 ( .A ( n2647 ) , 
+    .Y ( net_PTECO_HOLD_NET1020 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1021 ( .A ( n3335 ) , 
+    .Y ( net_PTECO_HOLD_NET1021 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1022 ( .A ( n2838 ) , 
+    .Y ( net_PTECO_HOLD_NET1022 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1024 ( .A ( n3393 ) , 
+    .Y ( net_PTECO_HOLD_NET1024 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1025 ( .A ( n2657 ) , 
+    .Y ( net_PTECO_HOLD_NET1025 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1026 ( .A ( n3167 ) , 
+    .Y ( net_PTECO_HOLD_NET1026 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1027 ( .A ( n3316 ) , 
+    .Y ( net_PTECO_HOLD_NET1027 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1028 ( .A ( n3413 ) , 
+    .Y ( net_PTECO_HOLD_NET1028 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1029 ( .A ( n3661 ) , 
+    .Y ( net_PTECO_HOLD_NET1029 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1030 ( .A ( n3483 ) , 
+    .Y ( net_PTECO_HOLD_NET1030 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1031 ( .A ( n3392 ) , 
+    .Y ( net_PTECO_HOLD_NET1031 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1032 ( .A ( n2837 ) , 
+    .Y ( net_PTECO_HOLD_NET1032 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1033 ( .A ( n3066 ) , 
+    .Y ( net_PTECO_HOLD_NET1033 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1034 ( .A ( n3050 ) , 
+    .Y ( net_PTECO_HOLD_NET1034 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1035 ( .A ( n3305 ) , 
+    .Y ( net_PTECO_HOLD_NET1035 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1036 ( .A ( n3212 ) , 
+    .Y ( net_PTECO_HOLD_NET1036 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1039 ( .A ( n2691 ) , 
+    .Y ( net_PTECO_HOLD_NET1039 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1040 ( .A ( n2706 ) , 
+    .Y ( net_PTECO_HOLD_NET1040 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1041 ( .A ( n2632 ) , 
+    .Y ( net_PTECO_HOLD_NET1041 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1042 ( .A ( n3228 ) , 
+    .Y ( net_PTECO_HOLD_NET1042 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1044 ( .A ( n2634 ) , 
+    .Y ( net_PTECO_HOLD_NET1044 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1045 ( .A ( n3583 ) , 
+    .Y ( net_PTECO_HOLD_NET1045 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1046 ( .A ( n2873 ) , 
+    .Y ( net_PTECO_HOLD_NET1046 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1047 ( .A ( n3423 ) , 
+    .Y ( net_PTECO_HOLD_NET1047 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1048 ( .A ( n3002 ) , 
+    .Y ( net_PTECO_HOLD_NET1048 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1049 ( .A ( n3163 ) , 
+    .Y ( net_PTECO_HOLD_NET1049 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1050 ( .A ( n3430 ) , 
+    .Y ( net_PTECO_HOLD_NET1050 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1052 ( .A ( n2709 ) , 
+    .Y ( net_PTECO_HOLD_NET1052 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1054 ( .A ( n2693 ) , 
+    .Y ( net_PTECO_HOLD_NET1054 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1055 ( .A ( n3519 ) , 
+    .Y ( net_PTECO_HOLD_NET1055 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1057 ( .A ( n3407 ) , 
+    .Y ( net_PTECO_HOLD_NET1057 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1058 ( .A ( n2921 ) , 
+    .Y ( net_PTECO_HOLD_NET1058 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1059 ( .A ( n3647 ) , 
+    .Y ( net_PTECO_HOLD_NET1059 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1060 ( .A ( n3406 ) , 
+    .Y ( net_PTECO_HOLD_NET1060 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1061 ( .A ( n3025 ) , 
+    .Y ( net_PTECO_HOLD_NET1061 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1062 ( .A ( n3390 ) , 
+    .Y ( net_PTECO_HOLD_NET1062 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1063 ( .A ( n3378 ) , 
+    .Y ( net_PTECO_HOLD_NET1063 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1064 ( .A ( n3208 ) , 
+    .Y ( net_PTECO_HOLD_NET1064 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1065 ( .A ( n3376 ) , 
+    .Y ( net_PTECO_HOLD_NET1065 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1066 ( .A ( n3223 ) , 
+    .Y ( net_PTECO_HOLD_NET1066 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1067 ( .A ( n3388 ) , 
+    .Y ( net_PTECO_HOLD_NET1067 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1068 ( .A ( n2708 ) , 
+    .Y ( net_PTECO_HOLD_NET1068 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1069 ( .A ( n2701 ) , 
+    .Y ( net_PTECO_HOLD_NET1069 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1070 ( .A ( n2631 ) , 
+    .Y ( net_PTECO_HOLD_NET1070 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1071 ( .A ( n3016 ) , 
+    .Y ( net_PTECO_HOLD_NET1071 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1072 ( .A ( n2711 ) , 
+    .Y ( net_PTECO_HOLD_NET1072 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1073 ( .A ( n3664 ) , 
+    .Y ( net_PTECO_HOLD_NET1073 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1074 ( .A ( n3517 ) , 
+    .Y ( net_PTECO_HOLD_NET1074 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1075 ( .A ( n2642 ) , 
+    .Y ( net_PTECO_HOLD_NET1075 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1076 ( .A ( n3014 ) , 
+    .Y ( net_PTECO_HOLD_NET1076 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1079 ( .A ( n3508 ) , 
+    .Y ( net_PTECO_HOLD_NET1079 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1080 ( .A ( n2627 ) , 
+    .Y ( net_PTECO_HOLD_NET1080 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1081 ( .A ( n3465 ) , 
+    .Y ( net_PTECO_HOLD_NET1081 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1082 ( .A ( n3211 ) , 
+    .Y ( net_PTECO_HOLD_NET1082 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1083 ( .A ( n3340 ) , 
+    .Y ( net_PTECO_HOLD_NET1083 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1084 ( .A ( n3278 ) , 
+    .Y ( net_PTECO_HOLD_NET1084 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1085 ( .A ( n2652 ) , 
+    .Y ( net_PTECO_HOLD_NET1085 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1086 ( .A ( n2996 ) , 
+    .Y ( net_PTECO_HOLD_NET1086 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1088 ( .A ( n2656 ) , 
+    .Y ( net_PTECO_HOLD_NET1088 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1089 ( .A ( n3148 ) , 
+    .Y ( net_PTECO_HOLD_NET1089 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1091 ( .A ( n3730 ) , 
+    .Y ( net_PTECO_HOLD_NET1091 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1092 ( .A ( n3521 ) , 
+    .Y ( net_PTECO_HOLD_NET1092 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1093 ( .A ( n3269 ) , 
+    .Y ( net_PTECO_HOLD_NET1093 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1094 ( .A ( n2696 ) , 
+    .Y ( net_PTECO_HOLD_NET1094 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1095 ( .A ( n3109 ) , 
+    .Y ( net_PTECO_HOLD_NET1095 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1096 ( .A ( n3047 ) , 
+    .Y ( net_PTECO_HOLD_NET1096 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1097 ( .A ( n2724 ) , 
+    .Y ( net_PTECO_HOLD_NET1097 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1100 ( .A ( n3377 ) , 
+    .Y ( net_PTECO_HOLD_NET1100 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1101 ( .A ( n2695 ) , 
+    .Y ( net_PTECO_HOLD_NET1101 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1102 ( .A ( n3347 ) , 
+    .Y ( net_PTECO_HOLD_NET1102 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1104 ( .A ( n3207 ) , 
+    .Y ( net_PTECO_HOLD_NET1104 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1105 ( .A ( n2712 ) , 
+    .Y ( net_PTECO_HOLD_NET1105 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1106 ( .A ( n3256 ) , 
+    .Y ( net_PTECO_HOLD_NET1106 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1108 ( .A ( n2888 ) , 
+    .Y ( net_PTECO_HOLD_NET1108 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1109 ( .A ( n2640 ) , 
+    .Y ( net_PTECO_HOLD_NET1109 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1110 ( .A ( n3488 ) , 
+    .Y ( net_PTECO_HOLD_NET1110 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1111 ( .A ( n2637 ) , 
+    .Y ( net_PTECO_HOLD_NET1111 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1112 ( .A ( n2718 ) , 
+    .Y ( net_PTECO_HOLD_NET1112 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1113 ( .A ( n2997 ) , 
+    .Y ( net_PTECO_HOLD_NET1113 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1114 ( .A ( n2660 ) , 
+    .Y ( net_PTECO_HOLD_NET1114 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1115 ( .A ( n3087 ) , 
+    .Y ( net_PTECO_HOLD_NET1115 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1116 ( .A ( n2698 ) , 
+    .Y ( net_PTECO_HOLD_NET1116 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1117 ( .A ( n3434 ) , 
+    .Y ( net_PTECO_HOLD_NET1117 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1118 ( .A ( n3051 ) , 
+    .Y ( net_PTECO_HOLD_NET1118 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1119 ( .A ( n2918 ) , 
+    .Y ( net_PTECO_HOLD_NET1119 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1120 ( .A ( n3034 ) , 
+    .Y ( net_PTECO_HOLD_NET1120 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1121 ( .A ( n2702 ) , 
+    .Y ( net_PTECO_HOLD_NET1121 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1122 ( .A ( n3060 ) , 
+    .Y ( net_PTECO_HOLD_NET1122 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1123 ( .A ( n3482 ) , 
+    .Y ( net_PTECO_HOLD_NET1123 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1124 ( .A ( n3151 ) , 
+    .Y ( net_PTECO_HOLD_NET1124 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1125 ( .A ( n3694 ) , 
+    .Y ( net_PTECO_HOLD_NET1125 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1126 ( .A ( n3122 ) , 
+    .Y ( net_PTECO_HOLD_NET1126 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1127 ( .A ( n2626 ) , 
+    .Y ( net_PTECO_HOLD_NET1127 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1128 ( .A ( n2886 ) , 
+    .Y ( net_PTECO_HOLD_NET1128 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1129 ( .A ( n2694 ) , 
+    .Y ( net_PTECO_HOLD_NET1129 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1132 ( .A ( n2734 ) , 
+    .Y ( net_PTECO_HOLD_NET1132 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1135 ( .A ( n2731 ) , 
+    .Y ( net_PTECO_HOLD_NET1135 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1136 ( .A ( n3621 ) , 
+    .Y ( net_PTECO_HOLD_NET1136 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1137 ( .A ( n3374 ) , 
+    .Y ( net_PTECO_HOLD_NET1137 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1138 ( .A ( n2648 ) , 
+    .Y ( net_PTECO_HOLD_NET1138 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1139 ( .A ( n3549 ) , 
+    .Y ( net_PTECO_HOLD_NET1139 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1140 ( .A ( n3594 ) , 
+    .Y ( net_PTECO_HOLD_NET1140 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1142 ( .A ( dftopt33 ) , 
+    .Y ( net_PTECO_HOLD_NET1142 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1143 ( .A ( n2986 ) , 
+    .Y ( net_PTECO_HOLD_NET1143 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1144 ( .A ( n2732 ) , 
+    .Y ( net_PTECO_HOLD_NET1144 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1145 ( .A ( n2728 ) , 
+    .Y ( net_PTECO_HOLD_NET1145 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1146 ( .A ( n2628 ) , 
+    .Y ( net_PTECO_HOLD_NET1146 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1147 ( .A ( n2998 ) , 
+    .Y ( net_PTECO_HOLD_NET1147 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1148 ( .A ( n3309 ) , 
+    .Y ( net_PTECO_HOLD_NET1148 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1149 ( .A ( n2690 ) , 
+    .Y ( net_PTECO_HOLD_NET1149 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1151 ( .A ( n3010 ) , 
+    .Y ( net_PTECO_HOLD_NET1151 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1152 ( .A ( dftopt72 ) , 
+    .Y ( net_PTECO_HOLD_NET1152 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1154 ( .A ( n3540 ) , 
+    .Y ( net_PTECO_HOLD_NET1154 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1155 ( .A ( n2848 ) , 
+    .Y ( net_PTECO_HOLD_NET1155 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1157 ( .A ( n3528 ) , 
+    .Y ( net_PTECO_HOLD_NET1157 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1158 ( .A ( n3170 ) , 
+    .Y ( net_PTECO_HOLD_NET1158 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1159 ( .A ( n2717 ) , 
+    .Y ( net_PTECO_HOLD_NET1159 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1160 ( .A ( n2900 ) , 
+    .Y ( net_PTECO_HOLD_NET1160 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1161 ( .A ( delay_51__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1161 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1162 ( .A ( n3225 ) , 
+    .Y ( net_PTECO_HOLD_NET1162 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1163 ( .A ( n3327 ) , 
+    .Y ( net_PTECO_HOLD_NET1163 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1164 ( .A ( n3007 ) , 
+    .Y ( net_PTECO_HOLD_NET1164 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1167 ( .A ( n2710 ) , 
+    .Y ( net_PTECO_HOLD_NET1167 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1168 ( .A ( n2641 ) , 
+    .Y ( net_PTECO_HOLD_NET1168 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1169 ( .A ( n2629 ) , 
+    .Y ( net_PTECO_HOLD_NET1169 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1170 ( .A ( n2659 ) , 
+    .Y ( net_PTECO_HOLD_NET1170 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1171 ( .A ( n3216 ) , 
+    .Y ( net_PTECO_HOLD_NET1171 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1172 ( .A ( n3476 ) , 
+    .Y ( net_PTECO_HOLD_NET1172 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1173 ( .A ( n3525 ) , 
+    .Y ( net_PTECO_HOLD_NET1173 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1174 ( .A ( n3431 ) , 
+    .Y ( net_PTECO_HOLD_NET1174 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1175 ( .A ( n3485 ) , 
+    .Y ( net_PTECO_HOLD_NET1175 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1176 ( .A ( n3192 ) , 
+    .Y ( net_PTECO_HOLD_NET1176 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1177 ( .A ( n2649 ) , 
+    .Y ( net_PTECO_HOLD_NET1177 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1178 ( .A ( n2927 ) , 
+    .Y ( net_PTECO_HOLD_NET1178 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1179 ( .A ( n3539 ) , 
+    .Y ( net_PTECO_HOLD_NET1179 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1180 ( .A ( n3344 ) , 
+    .Y ( net_PTECO_HOLD_NET1180 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1181 ( .A ( n3622 ) , 
+    .Y ( net_PTECO_HOLD_NET1181 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1184 ( .A ( n3012 ) , 
+    .Y ( net_PTECO_HOLD_NET1184 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1205 ( .A ( delay_52__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1205 ) ) ;
+NBUFFX8_RVT U_PTECO_HOLD_BUF1206 ( .A ( n2715 ) , 
+    .Y ( net_PTECO_HOLD_NET1206 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1210 ( .A ( n2705 ) , 
+    .Y ( net_PTECO_HOLD_NET1210 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1213 ( .A ( n2714 ) , 
+    .Y ( net_PTECO_HOLD_NET1213 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1215 ( .A ( n2658 ) , 
+    .Y ( net_PTECO_HOLD_NET1215 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1217 ( .A ( n2735 ) , 
+    .Y ( net_PTECO_HOLD_NET1217 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1218 ( .A ( delay_5__3_ ) , 
+    .Y ( net_PTECO_HOLD_NET1218 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1219 ( .A ( delay_53__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1219 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1220 ( .A ( delay_11__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1220 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1222 ( .A ( n2630 ) , 
+    .Y ( net_PTECO_HOLD_NET1222 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1223 ( .A ( delay_5__11_ ) , 
+    .Y ( net_PTECO_HOLD_NET1223 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1224 ( .A ( delay_7__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1224 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1225 ( .A ( delay_62__15_ ) , 
+    .Y ( net_PTECO_HOLD_NET1225 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1226 ( .A ( delay_62__9_ ) , 
+    .Y ( net_PTECO_HOLD_NET1226 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1227 ( .A ( delay_63__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1227 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1228 ( .A ( delay_10__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1228 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1229 ( .A ( delay_3__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1229 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1230 ( .A ( delay_62__12_ ) , 
+    .Y ( net_PTECO_HOLD_NET1230 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1232 ( .A ( dftopt45_gOb7 ) , 
+    .Y ( net_PTECO_HOLD_NET1232 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1233 ( .A ( delay_62__6_ ) , 
+    .Y ( net_PTECO_HOLD_NET1233 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1234 ( .A ( dftopt49_gOb9 ) , 
+    .Y ( net_PTECO_HOLD_NET1234 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1235 ( .A ( delay_32__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1235 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1236 ( .A ( delay_8__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1236 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1237 ( .A ( dftopt2 ) , 
+    .Y ( net_PTECO_HOLD_NET1237 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1238 ( .A ( dftopt7_gOb3 ) , 
+    .Y ( net_PTECO_HOLD_NET1238 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1240 ( .A ( delay_56__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1240 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1242 ( .A ( dftopt61 ) , 
+    .Y ( net_PTECO_HOLD_NET1242 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1243 ( .A ( delay_1__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1243 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1246 ( .A ( delay_38__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1246 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1250 ( .A ( delay_30__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1250 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1251 ( .A ( delay_15__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1251 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1254 ( .A ( delay_40__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1254 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1256 ( .A ( delay_22__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1256 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1258 ( .A ( delay_13__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1258 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1259 ( .A ( delay_58__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1259 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1260 ( .A ( delay_43__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1260 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1262 ( .A ( delay_42__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1262 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1263 ( .A ( delay_24__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1263 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1265 ( .A ( delay_37__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1265 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1266 ( .A ( delay_26__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1266 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1269 ( .A ( delay_21__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1269 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1271 ( .A ( delay_46__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1271 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1275 ( .A ( delay_4__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1275 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1277 ( .A ( delay_57__3_ ) , 
+    .Y ( net_PTECO_HOLD_NET1277 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1281 ( .A ( delay_31__15_ ) , 
+    .Y ( net_PTECO_HOLD_NET1281 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1284 ( .A ( delay_28__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1284 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1285 ( .A ( delay_39__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1285 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1288 ( .A ( delay_16__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1288 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1291 ( .A ( dftopt5_gOb2 ) , 
+    .Y ( net_PTECO_HOLD_NET1291 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1292 ( .A ( delay_12__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1292 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1293 ( .A ( delay_18__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1293 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1294 ( .A ( dftopt77 ) , 
+    .Y ( net_PTECO_HOLD_NET1294 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1295 ( .A ( delay_48__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1295 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1296 ( .A ( delay_33__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1296 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1297 ( .A ( delay_50__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1297 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1298 ( .A ( dftopt69 ) , 
+    .Y ( net_PTECO_HOLD_NET1298 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1299 ( .A ( delay_44__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1299 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1301 ( .A ( delay_49__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1301 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1302 ( .A ( delay_14__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1302 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1304 ( .A ( n2699 ) , 
+    .Y ( net_PTECO_HOLD_NET1304 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1306 ( .A ( delay_41__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1306 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1308 ( .A ( delay_29__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1308 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1310 ( .A ( delay_6__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1310 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1311 ( .A ( delay_17__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1311 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1313 ( .A ( delay_36__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1313 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1315 ( .A ( delay_20__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1315 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1318 ( .A ( delay_35__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1318 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1320 ( .A ( delay_19__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1320 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1324 ( .A ( delay_57__5_ ) , 
+    .Y ( net_PTECO_HOLD_NET1324 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1326 ( .A ( n2697 ) , 
+    .Y ( net_PTECO_HOLD_NET1326 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1327 ( .A ( dftopt71 ) , 
+    .Y ( net_PTECO_HOLD_NET1327 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1330 ( .A ( delay_47__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1330 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1332 ( .A ( delay_57__9_ ) , 
+    .Y ( net_PTECO_HOLD_NET1332 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1333 ( .A ( delay_27__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1333 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1334 ( .A ( delay_55__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1334 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1336 ( .A ( delay_23__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1336 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1337 ( .A ( dftopt67 ) , 
+    .Y ( net_PTECO_HOLD_NET1337 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1339 ( .A ( dftopt65 ) , 
+    .Y ( net_PTECO_HOLD_NET1339 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1340 ( .A ( delay_34__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1340 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1341 ( .A ( delay_31__4_ ) , 
+    .Y ( net_PTECO_HOLD_NET1341 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1342 ( .A ( delay_31__6_ ) , 
+    .Y ( net_PTECO_HOLD_NET1342 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1343 ( .A ( delay_25__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1343 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1344 ( .A ( n2721 ) , 
+    .Y ( net_PTECO_HOLD_NET1344 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1345 ( .A ( n2707 ) , 
+    .Y ( net_PTECO_HOLD_NET1345 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1347 ( .A ( delay_45__16_ ) , 
+    .Y ( net_PTECO_HOLD_NET1347 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1350 ( .A ( delay_31__14_ ) , 
+    .Y ( net_PTECO_HOLD_NET1350 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1351 ( .A ( delay_31__8_ ) , 
+    .Y ( net_PTECO_HOLD_NET1351 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1352 ( .A ( ropt_net_70 ) , 
+    .Y ( net_PTECO_HOLD_NET1352 ) ) ;
 endmodule
 
 
@@ -24917,7 +28231,11 @@ input  scan_en ;
 input  scan_in ;
 output scan_out ;
 
+wire net_PTECO_HOLD_NET1353 ;
+wire net_PTECO_HOLD_NET1 ;
+wire net_PTECO_HOLD_NET3 ;
 wire copt_net_53 ;
+wire net_PTECO_HOLD_NET5 ;
 wire aps_rename_10_ ;
 wire aps_rename_11_ ;
 wire aps_rename_12_ ;
@@ -25291,14 +28609,18 @@ wire n165 ;
 wire dftopt17 ;
 wire dftopt18 ;
 wire n169 ;
+wire net_PTECO_HOLD_NET9 ;
+wire net_PTECO_HOLD_NET16 ;
 wire n173 ;
 wire n174 ;
 wire n175 ;
 wire n176 ;
+wire net_PTECO_HOLD_NET18 ;
 wire n178 ;
 wire n179 ;
 wire n180 ;
 wire n181 ;
+wire net_PTECO_HOLD_NET22 ;
 wire n183 ;
 wire n184 ;
 wire n185 ;
@@ -25308,6 +28630,7 @@ wire n188 ;
 wire n189 ;
 wire n190 ;
 wire n191 ;
+wire net_PTECO_HOLD_NET23 ;
 wire n193 ;
 wire n194 ;
 wire n195 ;
@@ -25317,6 +28640,7 @@ wire n198 ;
 wire n199 ;
 wire n200 ;
 wire n201 ;
+wire net_PTECO_HOLD_NET27 ;
 wire n203 ;
 wire n204 ;
 wire n205 ;
@@ -25430,6 +28754,7 @@ wire n313 ;
 wire n314 ;
 wire HFSNET_14 ;
 wire HFSNET_18 ;
+wire net_PTECO_HOLD_NET29 ;
 wire n318 ;
 wire n319 ;
 wire n320 ;
@@ -25586,6 +28911,7 @@ wire n470 ;
 wire n471 ;
 wire n472 ;
 wire n473 ;
+wire net_PTECO_HOLD_NET31 ;
 wire HFSNET_8 ;
 wire n476 ;
 wire n477 ;
@@ -25851,16 +29177,19 @@ wire ZCTSNET_3 ;
 wire ZCTSNET_4 ;
 wire ZCTSNET_5 ;
 wire dftopt4 ;
+wire net_PTECO_HOLD_NET33 ;
 wire ZCTSNET_6 ;
 wire ZCTSNET_7 ;
 wire ZCTSNET_8 ;
 wire dftopt9 ;
 wire ctosc_drc_cln_0 ;
 wire dftopt12 ;
+wire net_PTECO_HOLD_NET46 ;
 wire ZBUF_2068_2 ;
 wire ctosc_drc_cln_1 ;
 wire ZBUF_990_2 ;
 wire tmp_net9 ;
+wire net_PTECO_HOLD_NET49 ;
 wire dftopt0 ;
 wire HFSNET_25 ;
 wire HFSNET_27 ;
@@ -25884,6 +29213,225 @@ wire dftopt7 ;
 wire dftopt8 ;
 wire dftopt11 ;
 wire tmp_net29 ;
+wire net_PTECO_HOLD_NET77 ;
+wire net_PTECO_HOLD_NET89 ;
+wire net_PTECO_HOLD_NET93 ;
+wire net_PTECO_HOLD_NET102 ;
+wire net_PTECO_HOLD_NET109 ;
+wire net_PTECO_HOLD_NET117 ;
+wire net_PTECO_HOLD_NET124 ;
+wire net_PTECO_HOLD_NET131 ;
+wire net_PTECO_HOLD_NET133 ;
+wire net_PTECO_HOLD_NET134 ;
+wire net_PTECO_HOLD_NET145 ;
+wire net_PTECO_HOLD_NET147 ;
+wire net_PTECO_HOLD_NET155 ;
+wire net_PTECO_HOLD_NET162 ;
+wire net_PTECO_HOLD_NET169 ;
+wire net_PTECO_HOLD_NET171 ;
+wire net_PTECO_HOLD_NET172 ;
+wire net_PTECO_HOLD_NET178 ;
+wire net_PTECO_HOLD_NET179 ;
+wire net_PTECO_HOLD_NET192 ;
+wire net_PTECO_HOLD_NET201 ;
+wire net_PTECO_HOLD_NET207 ;
+wire net_PTECO_HOLD_NET210 ;
+wire net_PTECO_HOLD_NET212 ;
+wire net_PTECO_HOLD_NET219 ;
+wire net_PTECO_HOLD_NET221 ;
+wire net_PTECO_HOLD_NET224 ;
+wire net_PTECO_HOLD_NET239 ;
+wire net_PTECO_HOLD_NET241 ;
+wire net_PTECO_HOLD_NET250 ;
+wire net_PTECO_HOLD_NET265 ;
+wire net_PTECO_HOLD_NET266 ;
+wire net_PTECO_HOLD_NET270 ;
+wire net_PTECO_HOLD_NET279 ;
+wire net_PTECO_HOLD_NET280 ;
+wire net_PTECO_HOLD_NET281 ;
+wire net_PTECO_HOLD_NET286 ;
+wire net_PTECO_HOLD_NET306 ;
+wire net_PTECO_HOLD_NET312 ;
+wire net_PTECO_HOLD_NET315 ;
+wire net_PTECO_HOLD_NET326 ;
+wire net_PTECO_HOLD_NET328 ;
+wire net_PTECO_HOLD_NET335 ;
+wire net_PTECO_HOLD_NET338 ;
+wire net_PTECO_HOLD_NET340 ;
+wire net_PTECO_HOLD_NET343 ;
+wire net_PTECO_HOLD_NET344 ;
+wire net_PTECO_HOLD_NET355 ;
+wire net_PTECO_HOLD_NET364 ;
+wire net_PTECO_HOLD_NET367 ;
+wire net_PTECO_HOLD_NET374 ;
+wire net_PTECO_HOLD_NET386 ;
+wire net_PTECO_HOLD_NET418 ;
+wire net_PTECO_HOLD_NET422 ;
+wire net_PTECO_HOLD_NET433 ;
+wire net_PTECO_HOLD_NET445 ;
+wire net_PTECO_HOLD_NET461 ;
+wire net_PTECO_HOLD_NET480 ;
+wire net_PTECO_HOLD_NET485 ;
+wire net_PTECO_HOLD_NET505 ;
+wire net_PTECO_HOLD_NET507 ;
+wire net_PTECO_HOLD_NET509 ;
+wire net_PTECO_HOLD_NET544 ;
+wire net_PTECO_HOLD_NET553 ;
+wire net_PTECO_HOLD_NET554 ;
+wire net_PTECO_HOLD_NET568 ;
+wire net_PTECO_HOLD_NET574 ;
+wire net_PTECO_HOLD_NET592 ;
+wire net_PTECO_HOLD_NET618 ;
+wire net_PTECO_HOLD_NET627 ;
+wire net_PTECO_HOLD_NET632 ;
+wire net_PTECO_HOLD_NET650 ;
+wire net_PTECO_HOLD_NET680 ;
+wire net_PTECO_HOLD_NET698 ;
+wire net_PTECO_HOLD_NET702 ;
+wire net_PTECO_HOLD_NET706 ;
+wire net_PTECO_HOLD_NET717 ;
+wire net_PTECO_HOLD_NET722 ;
+wire net_PTECO_HOLD_NET753 ;
+wire net_PTECO_HOLD_NET757 ;
+wire net_PTECO_HOLD_NET767 ;
+wire net_PTECO_HOLD_NET769 ;
+wire net_PTECO_HOLD_NET777 ;
+wire net_PTECO_HOLD_NET799 ;
+wire net_PTECO_HOLD_NET803 ;
+wire net_PTECO_HOLD_NET805 ;
+wire net_PTECO_HOLD_NET819 ;
+wire net_PTECO_HOLD_NET820 ;
+wire net_PTECO_HOLD_NET832 ;
+wire net_PTECO_HOLD_NET844 ;
+wire net_PTECO_HOLD_NET855 ;
+wire net_PTECO_HOLD_NET873 ;
+wire net_PTECO_HOLD_NET888 ;
+wire net_PTECO_HOLD_NET893 ;
+wire net_PTECO_HOLD_NET896 ;
+wire net_PTECO_HOLD_NET900 ;
+wire net_PTECO_HOLD_NET919 ;
+wire net_PTECO_HOLD_NET920 ;
+wire net_PTECO_HOLD_NET925 ;
+wire net_PTECO_HOLD_NET930 ;
+wire net_PTECO_HOLD_NET938 ;
+wire net_PTECO_HOLD_NET948 ;
+wire net_PTECO_HOLD_NET958 ;
+wire net_PTECO_HOLD_NET959 ;
+wire net_PTECO_HOLD_NET965 ;
+wire net_PTECO_HOLD_NET979 ;
+wire net_PTECO_HOLD_NET980 ;
+wire net_PTECO_HOLD_NET995 ;
+wire net_PTECO_HOLD_NET998 ;
+wire net_PTECO_HOLD_NET1001 ;
+wire net_PTECO_HOLD_NET1008 ;
+wire net_PTECO_HOLD_NET1015 ;
+wire net_PTECO_HOLD_NET1023 ;
+wire net_PTECO_HOLD_NET1037 ;
+wire net_PTECO_HOLD_NET1038 ;
+wire net_PTECO_HOLD_NET1043 ;
+wire net_PTECO_HOLD_NET1051 ;
+wire net_PTECO_HOLD_NET1053 ;
+wire net_PTECO_HOLD_NET1056 ;
+wire net_PTECO_HOLD_NET1077 ;
+wire net_PTECO_HOLD_NET1078 ;
+wire net_PTECO_HOLD_NET1087 ;
+wire net_PTECO_HOLD_NET1090 ;
+wire net_PTECO_HOLD_NET1098 ;
+wire net_PTECO_HOLD_NET1099 ;
+wire net_PTECO_HOLD_NET1103 ;
+wire net_PTECO_HOLD_NET1107 ;
+wire net_PTECO_HOLD_NET1130 ;
+wire net_PTECO_HOLD_NET1131 ;
+wire net_PTECO_HOLD_NET1133 ;
+wire net_PTECO_HOLD_NET1134 ;
+wire net_PTECO_HOLD_NET1141 ;
+wire net_PTECO_HOLD_NET1150 ;
+wire net_PTECO_HOLD_NET1153 ;
+wire net_PTECO_HOLD_NET1156 ;
+wire net_PTECO_HOLD_NET1165 ;
+wire net_PTECO_HOLD_NET1166 ;
+wire net_PTECO_HOLD_NET1182 ;
+wire net_PTECO_HOLD_NET1183 ;
+wire net_PTECO_HOLD_NET1185 ;
+wire net_PTECO_HOLD_NET1186 ;
+wire net_PTECO_HOLD_NET1187 ;
+wire net_PTECO_HOLD_NET1188 ;
+wire net_PTECO_HOLD_NET1189 ;
+wire net_PTECO_HOLD_NET1190 ;
+wire net_PTECO_HOLD_NET1191 ;
+wire net_PTECO_HOLD_NET1192 ;
+wire net_PTECO_HOLD_NET1193 ;
+wire net_PTECO_HOLD_NET1194 ;
+wire net_PTECO_HOLD_NET1195 ;
+wire net_PTECO_HOLD_NET1196 ;
+wire net_PTECO_HOLD_NET1197 ;
+wire net_PTECO_HOLD_NET1198 ;
+wire net_PTECO_HOLD_NET1199 ;
+wire net_PTECO_HOLD_NET1200 ;
+wire net_PTECO_HOLD_NET1201 ;
+wire net_PTECO_HOLD_NET1202 ;
+wire net_PTECO_HOLD_NET1203 ;
+wire net_PTECO_HOLD_NET1204 ;
+wire net_PTECO_HOLD_NET1207 ;
+wire net_PTECO_HOLD_NET1208 ;
+wire net_PTECO_HOLD_NET1209 ;
+wire net_PTECO_HOLD_NET1211 ;
+wire net_PTECO_HOLD_NET1212 ;
+wire net_PTECO_HOLD_NET1214 ;
+wire net_PTECO_HOLD_NET1216 ;
+wire net_PTECO_HOLD_NET1221 ;
+wire net_PTECO_HOLD_NET1231 ;
+wire net_PTECO_HOLD_NET1239 ;
+wire net_PTECO_HOLD_NET1241 ;
+wire net_PTECO_HOLD_NET1244 ;
+wire net_PTECO_HOLD_NET1245 ;
+wire net_PTECO_HOLD_NET1247 ;
+wire net_PTECO_HOLD_NET1248 ;
+wire net_PTECO_HOLD_NET1249 ;
+wire net_PTECO_HOLD_NET1252 ;
+wire net_PTECO_HOLD_NET1253 ;
+wire net_PTECO_HOLD_NET1255 ;
+wire net_PTECO_HOLD_NET1257 ;
+wire net_PTECO_HOLD_NET1261 ;
+wire net_PTECO_HOLD_NET1264 ;
+wire net_PTECO_HOLD_NET1267 ;
+wire net_PTECO_HOLD_NET1268 ;
+wire net_PTECO_HOLD_NET1270 ;
+wire net_PTECO_HOLD_NET1272 ;
+wire net_PTECO_HOLD_NET1273 ;
+wire net_PTECO_HOLD_NET1274 ;
+wire net_PTECO_HOLD_NET1276 ;
+wire net_PTECO_HOLD_NET1278 ;
+wire net_PTECO_HOLD_NET1279 ;
+wire net_PTECO_HOLD_NET1280 ;
+wire net_PTECO_HOLD_NET1282 ;
+wire net_PTECO_HOLD_NET1283 ;
+wire net_PTECO_HOLD_NET1286 ;
+wire net_PTECO_HOLD_NET1287 ;
+wire net_PTECO_HOLD_NET1289 ;
+wire net_PTECO_HOLD_NET1290 ;
+wire net_PTECO_HOLD_NET1300 ;
+wire net_PTECO_HOLD_NET1303 ;
+wire net_PTECO_HOLD_NET1305 ;
+wire net_PTECO_HOLD_NET1307 ;
+wire net_PTECO_HOLD_NET1309 ;
+wire net_PTECO_HOLD_NET1312 ;
+wire net_PTECO_HOLD_NET1314 ;
+wire net_PTECO_HOLD_NET1316 ;
+wire net_PTECO_HOLD_NET1317 ;
+wire net_PTECO_HOLD_NET1319 ;
+wire net_PTECO_HOLD_NET1321 ;
+wire net_PTECO_HOLD_NET1322 ;
+wire net_PTECO_HOLD_NET1323 ;
+wire net_PTECO_HOLD_NET1325 ;
+wire net_PTECO_HOLD_NET1328 ;
+wire net_PTECO_HOLD_NET1329 ;
+wire net_PTECO_HOLD_NET1331 ;
+wire net_PTECO_HOLD_NET1335 ;
+wire net_PTECO_HOLD_NET1338 ;
+wire net_PTECO_HOLD_NET1346 ;
+wire net_PTECO_HOLD_NET1348 ;
+wire net_PTECO_HOLD_NET1349 ;
 wire SYNOPSYS_UNCONNECTED_1 ;
 wire SYNOPSYS_UNCONNECTED_2 ;
 wire SYNOPSYS_UNCONNECTED_3 ;
@@ -26007,689 +29555,733 @@ wire SYNOPSYS_UNCONNECTED_120 ;
 wire SYNOPSYS_UNCONNECTED_121 ;
 wire SYNOPSYS_UNCONNECTED_122 ;
 
-assign y_out[18] = scan_out ;
-
 SDFFX1_RVT u_cic_u_integradores_int3_reg_0_ ( 
-    .D ( u_cic_u_integradores_N39 ) , .SI ( dftopt12 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n[55] ) , .QN ( n653 ) ) ;
+    .D ( u_cic_u_integradores_N39 ) , .SI ( net_PTECO_HOLD_NET18 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n[55] ) , .QN ( n653 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_1_ ( 
-    .D ( u_cic_u_integradores_N40 ) , .SI ( n635 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n[54] ) , .QN ( n652 ) ) ;
+    .D ( u_cic_u_integradores_N40 ) , .SI ( net_PTECO_HOLD_NET77 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n[54] ) , .QN ( n652 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_2_ ( 
-    .D ( u_cic_u_integradores_N41 ) , .SI ( n652 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n[53] ) , .QN ( n651 ) ) ;
+    .D ( u_cic_u_integradores_N41 ) , .SI ( net_PTECO_HOLD_NET343 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n[53] ) , .QN ( n651 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_3_ ( 
-    .D ( u_cic_u_integradores_N42 ) , .SI ( n651 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n[52] ) , .QN ( n650 ) ) ;
+    .D ( u_cic_u_integradores_N42 ) , .SI ( net_PTECO_HOLD_NET210 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n[52] ) , .QN ( n650 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_4_ ( 
-    .D ( u_cic_u_integradores_N43 ) , .SI ( u_cic_int4[3] ) , 
+    .D ( u_cic_u_integradores_N43 ) , .SI ( net_PTECO_HOLD_NET1280 ) , 
     .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_u_integradores_n[51] ) , .QN ( n649 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_5_ ( 
-    .D ( u_cic_u_integradores_N44 ) , .SI ( n647 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n[50] ) , .QN ( n648 ) ) ;
+    .D ( u_cic_u_integradores_N44 ) , .SI ( net_PTECO_HOLD_NET250 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n[50] ) , .QN ( n648 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_6_ ( 
-    .D ( u_cic_u_integradores_N45 ) , .SI ( n646 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n[49] ) , .QN ( n647 ) ) ;
+    .D ( u_cic_u_integradores_N45 ) , .SI ( net_PTECO_HOLD_NET281 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n[49] ) , .QN ( n647 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_7_ ( 
-    .D ( u_cic_u_integradores_N46 ) , .SI ( u_cic_int4[6] ) , 
+    .D ( u_cic_u_integradores_N46 ) , .SI ( net_PTECO_HOLD_NET1349 ) , 
     .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_u_integradores_n[48] ) , .QN ( n646 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_8_ ( 
-    .D ( u_cic_u_integradores_N47 ) , .SI ( n643 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[47] ) , .QN ( n645 ) ) ;
+    .D ( u_cic_u_integradores_N47 ) , .SI ( net_PTECO_HOLD_NET873 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[47] ) , .QN ( n645 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_9_ ( 
-    .D ( u_cic_u_integradores_N48 ) , .SI ( n661 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[46] ) , .QN ( n644 ) ) ;
+    .D ( u_cic_u_integradores_N48 ) , .SI ( net_PTECO_HOLD_NET958 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[46] ) , .QN ( n644 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_10_ ( 
-    .D ( u_cic_u_integradores_N49 ) , .SI ( n642 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[45] ) , .QN ( n643 ) ) ;
+    .D ( u_cic_u_integradores_N49 ) , .SI ( net_PTECO_HOLD_NET568 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[45] ) , .QN ( n643 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_11_ ( 
-    .D ( u_cic_u_integradores_N50 ) , .SI ( n516 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[44] ) , .QN ( n642 ) ) ;
+    .D ( u_cic_u_integradores_N50 ) , .SI ( net_PTECO_HOLD_NET1216 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[44] ) , .QN ( n642 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_12_ ( 
-    .D ( u_cic_u_integradores_N51 ) , .SI ( n659 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[43] ) , .QN ( n641 ) ) ;
+    .D ( u_cic_u_integradores_N51 ) , .SI ( net_PTECO_HOLD_NET805 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[43] ) , .QN ( n641 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_13_ ( 
-    .D ( u_cic_u_integradores_N52 ) , .SI ( n520 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[42] ) , .QN ( n640 ) ) ;
+    .D ( u_cic_u_integradores_N52 ) , .SI ( net_PTECO_HOLD_NET1214 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[42] ) , .QN ( n640 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_14_ ( 
-    .D ( u_cic_u_integradores_N53 ) , .SI ( n638 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[41] ) , .QN ( n639 ) ) ;
+    .D ( u_cic_u_integradores_N53 ) , .SI ( net_PTECO_HOLD_NET554 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[41] ) , .QN ( n639 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_15_ ( 
-    .D ( u_cic_u_integradores_N54 ) , .SI ( n637 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[40] ) , .QN ( n638 ) ) ;
+    .D ( u_cic_u_integradores_N54 ) , .SI ( net_PTECO_HOLD_NET698 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[40] ) , .QN ( n638 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_16_ ( 
-    .D ( u_cic_u_integradores_N55 ) , .SI ( n563 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[39] ) , .QN ( n637 ) ) ;
+    .D ( u_cic_u_integradores_N55 ) , .SI ( net_PTECO_HOLD_NET1183 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[39] ) , .QN ( n637 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int3_reg_17_ ( 
-    .D ( u_cic_u_integradores_N56 ) , .SI ( n634 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n[38] ) , .QN ( n636 ) ) ;
+    .D ( u_cic_u_integradores_N56 ) , .SI ( net_PTECO_HOLD_NET145 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .Q ( u_cic_u_integradores_n[38] ) , .QN ( n636 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_0_ ( 
-    .D ( u_cic_u_integradores_N21 ) , .SI ( dftopt11 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n37 ) , .QN ( n671 ) ) ;
+    .D ( u_cic_u_integradores_N21 ) , .SI ( net_PTECO_HOLD_NET16 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n37 ) , .QN ( n671 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_1_ ( 
-    .D ( u_cic_u_integradores_N22 ) , .SI ( n671 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n36 ) , .QN ( n670 ) ) ;
+    .D ( u_cic_u_integradores_N22 ) , .SI ( net_PTECO_HOLD_NET155 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n36 ) , .QN ( n670 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_2_ ( 
-    .D ( u_cic_u_integradores_N23 ) , .SI ( n668 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n35 ) , .QN ( n669 ) ) ;
+    .D ( u_cic_u_integradores_N23 ) , .SI ( net_PTECO_HOLD_NET162 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n35 ) , .QN ( n669 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_3_ ( 
-    .D ( u_cic_u_integradores_N24 ) , .SI ( n689 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n34 ) , .QN ( n668 ) ) ;
+    .D ( u_cic_u_integradores_N24 ) , .SI ( net_PTECO_HOLD_NET124 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( u_cic_u_integradores_n34 ) , .QN ( n668 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_4_ ( 
-    .D ( u_cic_u_integradores_N25 ) , .SI ( n649 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n33 ) , .QN ( n667 ) ) ;
+    .D ( u_cic_u_integradores_N25 ) , .SI ( net_PTECO_HOLD_NET131 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n33 ) , 
+    .QN ( n667 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_5_ ( 
-    .D ( u_cic_u_integradores_N26 ) , .SI ( n664 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n32 ) , .QN ( n666 ) ) ;
+    .D ( u_cic_u_integradores_N26 ) , .SI ( net_PTECO_HOLD_NET702 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n32 ) , 
+    .QN ( n666 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_6_ ( 
-    .D ( u_cic_u_integradores_N27 ) , .SI ( n681 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n31 ) , .QN ( n665 ) ) ;
+    .D ( u_cic_u_integradores_N27 ) , .SI ( net_PTECO_HOLD_NET1194 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n31 ) , 
+    .QN ( n665 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_7_ ( 
-    .D ( u_cic_u_integradores_N28 ) , .SI ( n665 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n30 ) , .QN ( n664 ) ) ;
+    .D ( u_cic_u_integradores_N28 ) , .SI ( net_PTECO_HOLD_NET340 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_u_integradores_n30 ) , 
+    .QN ( n664 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_8_ ( 
-    .D ( u_cic_u_integradores_N29 ) , .SI ( n680 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n29 ) , .QN ( n663 ) ) ;
+    .D ( u_cic_u_integradores_N29 ) , .SI ( net_PTECO_HOLD_NET1201 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n29 ) , 
+    .QN ( n663 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_9_ ( 
-    .D ( u_cic_u_integradores_N30 ) , .SI ( n663 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n28 ) , .QN ( n662 ) ) ;
+    .D ( u_cic_u_integradores_N30 ) , .SI ( net_PTECO_HOLD_NET592 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n28 ) , 
+    .QN ( n662 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_10_ ( 
-    .D ( u_cic_u_integradores_N31 ) , .SI ( n662 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n27 ) , .QN ( n661 ) ) ;
+    .D ( u_cic_u_integradores_N31 ) , .SI ( net_PTECO_HOLD_NET355 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n27 ) , 
+    .QN ( n661 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_11_ ( 
-    .D ( u_cic_u_integradores_N32 ) , .SI ( n644 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n26 ) , .QN ( n660 ) ) ;
+    .D ( u_cic_u_integradores_N32 ) , .SI ( net_PTECO_HOLD_NET505 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n26 ) , 
+    .QN ( n660 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_12_ ( 
-    .D ( u_cic_u_integradores_N33 ) , .SI ( n660 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n25 ) , .QN ( n659 ) ) ;
+    .D ( u_cic_u_integradores_N33 ) , .SI ( net_PTECO_HOLD_NET480 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n25 ) , 
+    .QN ( n659 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_13_ ( 
-    .D ( u_cic_u_integradores_N34 ) , .SI ( n657 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n24 ) , .QN ( n658 ) ) ;
+    .D ( u_cic_u_integradores_N34 ) , .SI ( net_PTECO_HOLD_NET280 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n24 ) , 
+    .QN ( n658 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_14_ ( 
-    .D ( u_cic_u_integradores_N35 ) , .SI ( n674 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n23 ) , .QN ( n657 ) ) ;
+    .D ( u_cic_u_integradores_N35 ) , .SI ( net_PTECO_HOLD_NET1202 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n23 ) , 
+    .QN ( n657 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_15_ ( 
-    .D ( u_cic_u_integradores_N36 ) , .SI ( n639 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n22 ) , .QN ( n656 ) ) ;
+    .D ( u_cic_u_integradores_N36 ) , .SI ( net_PTECO_HOLD_NET172 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n22 ) , 
+    .QN ( n656 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_16_ ( 
-    .D ( u_cic_u_integradores_N37 ) , .SI ( n656 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n21 ) , .QN ( n655 ) ) ;
+    .D ( u_cic_u_integradores_N37 ) , .SI ( net_PTECO_HOLD_NET338 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n21 ) , 
+    .QN ( n655 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int2_reg_17_ ( 
-    .D ( u_cic_u_integradores_N38 ) , .SI ( n636 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n20 ) , .QN ( n654 ) ) ;
+    .D ( u_cic_u_integradores_N38 ) , .SI ( net_PTECO_HOLD_NET265 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n20 ) , 
+    .QN ( n654 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_0_ ( .D ( u_cic_u_integradores_N3 ) , 
-    .SI ( n687 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , .Q ( n688 ) , 
-    .QN ( n479 ) ) ;
+    .SI ( net_PTECO_HOLD_NET1186 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( n688 ) , .QN ( n479 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_1_ ( .D ( u_cic_u_integradores_N4 ) , 
-    .SI ( n686 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , .Q ( n687 ) , 
-    .QN ( n544 ) ) ;
+    .SI ( net_PTECO_HOLD_NET1192 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( n687 ) , .QN ( n544 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_2_ ( .D ( u_cic_u_integradores_N5 ) , 
-    .SI ( n685 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , .Q ( n686 ) , 
-    .QN ( n545 ) ) ;
+    .SI ( net_PTECO_HOLD_NET1188 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( n686 ) , .QN ( n545 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_3_ ( .D ( u_cic_u_integradores_N6 ) , 
-    .SI ( n684 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , .Q ( n685 ) , 
-    .QN ( n546 ) ) ;
+    .SI ( net_PTECO_HOLD_NET1190 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( n685 ) , .QN ( n546 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_4_ ( .D ( u_cic_u_integradores_N7 ) , 
-    .SI ( n683 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , .Q ( n684 ) , 
-    .QN ( n547 ) ) ;
+    .SI ( net_PTECO_HOLD_NET1191 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( n684 ) , .QN ( n547 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_5_ ( .D ( u_cic_u_integradores_N8 ) , 
-    .SI ( n666 ) , .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( n683 ) , 
-    .QN ( n548 ) ) ;
+    .SI ( net_PTECO_HOLD_NET192 ) , .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( n683 ) , .QN ( n548 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_6_ ( .D ( u_cic_u_integradores_N9 ) , 
-    .SI ( n667 ) , .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( n682 ) , 
-    .QN ( n549 ) ) ;
+    .SI ( net_PTECO_HOLD_NET224 ) , .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , 
+    .Q ( n682 ) , .QN ( n549 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_7_ ( 
-    .D ( u_cic_u_integradores_N10 ) , .SI ( n682 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( n681 ) , .QN ( n550 ) ) ;
+    .D ( u_cic_u_integradores_N10 ) , .SI ( net_PTECO_HOLD_NET1193 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( n681 ) , .QN ( n550 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_8_ ( 
-    .D ( u_cic_u_integradores_N11 ) , .SI ( n679 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n680 ) , .QN ( n551 ) ) ;
+    .D ( u_cic_u_integradores_N11 ) , .SI ( net_PTECO_HOLD_NET1195 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( n680 ) , .QN ( n551 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_9_ ( 
-    .D ( u_cic_u_integradores_N12 ) , .SI ( n678 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n679 ) , .QN ( n552 ) ) ;
+    .D ( u_cic_u_integradores_N12 ) , .SI ( net_PTECO_HOLD_NET1197 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( n679 ) , .QN ( n552 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_10_ ( 
-    .D ( u_cic_u_integradores_N13 ) , .SI ( n677 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n678 ) , .QN ( n555 ) ) ;
+    .D ( u_cic_u_integradores_N13 ) , .SI ( net_PTECO_HOLD_NET1187 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( n678 ) , .QN ( n555 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_11_ ( 
-    .D ( u_cic_u_integradores_N14 ) , .SI ( n676 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n677 ) , .QN ( n558 ) ) ;
+    .D ( u_cic_u_integradores_N14 ) , .SI ( net_PTECO_HOLD_NET1203 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( n677 ) , .QN ( n558 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_12_ ( 
-    .D ( u_cic_u_integradores_N15 ) , .SI ( n675 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n676 ) , .QN ( n559 ) ) ;
+    .D ( u_cic_u_integradores_N15 ) , .SI ( net_PTECO_HOLD_NET1198 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( n676 ) , .QN ( n559 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_13_ ( 
-    .D ( u_cic_u_integradores_N16 ) , .SI ( n658 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n675 ) , .QN ( n560 ) ) ;
+    .D ( u_cic_u_integradores_N16 ) , .SI ( net_PTECO_HOLD_NET422 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( n675 ) , .QN ( n560 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_14_ ( 
-    .D ( u_cic_u_integradores_N17 ) , .SI ( n673 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n674 ) , .QN ( n561 ) ) ;
+    .D ( u_cic_u_integradores_N17 ) , .SI ( net_PTECO_HOLD_NET1196 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( n674 ) , .QN ( n561 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_15_ ( 
-    .D ( u_cic_u_integradores_N18 ) , .SI ( n655 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( n673 ) , .QN ( n562 ) ) ;
+    .D ( u_cic_u_integradores_N18 ) , .SI ( net_PTECO_HOLD_NET171 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( n673 ) , .QN ( n562 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_16_ ( 
-    .D ( u_cic_u_integradores_N19 ) , .SI ( n672 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n3 ) , .QN ( n563 ) ) ;
+    .D ( u_cic_u_integradores_N19 ) , .SI ( net_PTECO_HOLD_NET418 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n3 ) , 
+    .QN ( n563 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int1_reg_17_ ( 
-    .D ( u_cic_u_integradores_N20 ) , .SI ( n654 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n2 ) , .QN ( n672 ) ) ;
+    .D ( u_cic_u_integradores_N20 ) , .SI ( net_PTECO_HOLD_NET335 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_u_integradores_n2 ) , 
+    .QN ( n672 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_0_ ( 
-    .D ( u_cic_u_integradores_N57 ) , .SI ( n653 ) , .SE ( ZBUF_545_0 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_int4[0] ) , .QN ( n635 ) ) ;
+    .D ( u_cic_u_integradores_N57 ) , .SI ( net_PTECO_HOLD_NET507 ) , 
+    .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_int4[0] ) , 
+    .QN ( n635 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_1_ ( 
-    .D ( u_cic_u_integradores_N58 ) , .SI ( u_cic_int4[2] ) , 
+    .D ( u_cic_u_integradores_N58 ) , .SI ( net_PTECO_HOLD_NET1270 ) , 
     .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_int4[1] ) , 
     .QN ( n480 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_2_ ( 
-    .D ( u_cic_u_integradores_N59 ) , .SI ( n565 ) , .SE ( HFSNET_35 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_int4[2] ) , .QN ( n482 ) ) ;
+    .D ( u_cic_u_integradores_N59 ) , .SI ( net_PTECO_HOLD_NET855 ) , 
+    .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_int4[2] ) , 
+    .QN ( n482 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_3_ ( 
-    .D ( u_cic_u_integradores_N60 ) , .SI ( n648 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_6 ) , .Q ( u_cic_int4[3] ) , .QN ( n486 ) ) ;
+    .D ( u_cic_u_integradores_N60 ) , .SI ( net_PTECO_HOLD_NET722 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_6 ) , .Q ( u_cic_int4[3] ) , 
+    .QN ( n486 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_4_ ( 
-    .D ( u_cic_u_integradores_N61 ) , .SI ( n566 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_5 ) , .Q ( u_cic_int4[4] ) , .QN ( n490 ) ) ;
+    .D ( u_cic_u_integradores_N61 ) , .SI ( net_PTECO_HOLD_NET920 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_5 ) , .Q ( u_cic_int4[4] ) , 
+    .QN ( n490 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_5_ ( 
-    .D ( u_cic_u_integradores_N62 ) , .SI ( u_cic_int4[4] ) , 
+    .D ( u_cic_u_integradores_N62 ) , .SI ( net_PTECO_HOLD_NET1248 ) , 
     .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_5 ) , .Q ( u_cic_int4[5] ) , 
     .QN ( n494 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_6_ ( 
-    .D ( u_cic_u_integradores_N63 ) , .SI ( u_cic_int4[7] ) , 
+    .D ( u_cic_u_integradores_N63 ) , .SI ( net_PTECO_HOLD_NET1319 ) , 
     .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[6] ) , 
     .QN ( n498 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_7_ ( 
-    .D ( u_cic_u_integradores_N64 ) , .SI ( n645 ) , .SE ( HFSNET_38 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[7] ) , .QN ( n502 ) ) ;
+    .D ( u_cic_u_integradores_N64 ) , .SI ( net_PTECO_HOLD_NET374 ) , 
+    .SE ( HFSNET_38 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[7] ) , 
+    .QN ( n502 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_8_ ( 
-    .D ( u_cic_u_integradores_N65 ) , .SI ( n573 ) , .SE ( HFSNET_40 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[8] ) , .QN ( n506 ) ) ;
+    .D ( u_cic_u_integradores_N65 ) , .SI ( net_PTECO_HOLD_NET1103 ) , 
+    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[8] ) , 
+    .QN ( n506 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_9_ ( 
-    .D ( u_cic_u_integradores_N66 ) , .SI ( u_cic_int4[8] ) , 
+    .D ( u_cic_u_integradores_N66 ) , .SI ( net_PTECO_HOLD_NET1278 ) , 
     .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[9] ) , 
     .QN ( n510 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_10_ ( 
-    .D ( u_cic_u_integradores_N67 ) , .SI ( u_cic_int4[9] ) , 
+    .D ( u_cic_u_integradores_N67 ) , .SI ( net_PTECO_HOLD_NET1255 ) , 
     .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[10] ) , 
     .QN ( n516 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_11_ ( 
-    .D ( u_cic_u_integradores_N68 ) , .SI ( n524 ) , .SE ( HFSNET_40 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[11] ) , .QN ( n520 ) ) ;
+    .D ( u_cic_u_integradores_N68 ) , .SI ( net_PTECO_HOLD_NET1207 ) , 
+    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[11] ) , 
+    .QN ( n520 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_12_ ( 
-    .D ( u_cic_u_integradores_N69 ) , .SI ( n574 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[12] ) , .QN ( n524 ) ) ;
+    .D ( u_cic_u_integradores_N69 ) , .SI ( net_PTECO_HOLD_NET1015 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[12] ) , 
+    .QN ( n524 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_13_ ( 
-    .D ( u_cic_u_integradores_N70 ) , .SI ( n640 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[13] ) , .QN ( n528 ) ) ;
+    .D ( u_cic_u_integradores_N70 ) , .SI ( net_PTECO_HOLD_NET1051 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[13] ) , 
+    .QN ( n528 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_14_ ( 
-    .D ( u_cic_u_integradores_N71 ) , .SI ( n528 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[14] ) , .QN ( n532 ) ) ;
+    .D ( u_cic_u_integradores_N71 ) , .SI ( net_PTECO_HOLD_NET1208 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[14] ) , 
+    .QN ( n532 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_15_ ( 
-    .D ( u_cic_u_integradores_N72 ) , .SI ( n532 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[15] ) , .QN ( n536 ) ) ;
+    .D ( u_cic_u_integradores_N72 ) , .SI ( net_PTECO_HOLD_NET1211 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[15] ) , 
+    .QN ( n536 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_16_ ( 
-    .D ( u_cic_u_integradores_N73 ) , .SI ( n722 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[16] ) , .QN ( n540 ) ) ;
+    .D ( u_cic_u_integradores_N73 ) , .SI ( net_PTECO_HOLD_NET207 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[16] ) , 
+    .QN ( n540 ) ) ;
 SDFFX1_RVT u_cic_u_integradores_int4_reg_17_ ( 
-    .D ( u_cic_u_integradores_N74 ) , .SI ( n540 ) , .SE ( HFSNET_37 ) , 
-    .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[17] ) , .QN ( n634 ) ) ;
+    .D ( u_cic_u_integradores_N74 ) , .SI ( net_PTECO_HOLD_NET1209 ) , 
+    .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , .Q ( u_cic_int4[17] ) , 
+    .QN ( n634 ) ) ;
 SDFFX1_RVT u_cic_u_decimador_count_reg_3_ ( .D ( u_cic_u_decimador_N10 ) , 
-    .SI ( n688 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .SI ( net_PTECO_HOLD_NET1185 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_u_decimador_n[1] ) , .QN ( n690 ) ) ;
 SDFFX1_RVT u_cic_u_decimador_count_reg_0_ ( .D ( u_cic_u_decimador_N7 ) , 
-    .SI ( n691 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .SI ( net_PTECO_HOLD_NET315 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_u_decimador_n[4] ) , .QN ( n628 ) ) ;
 SDFFX1_RVT u_cic_u_decimador_count_reg_1_ ( .D ( u_cic_u_decimador_N8 ) , 
-    .SI ( dftopt28 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .SI ( net_PTECO_HOLD_NET22 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_u_decimador_n[3] ) , .QN ( n692 ) ) ;
 SDFFX1_RVT u_cic_u_decimador_count_reg_2_ ( .D ( u_cic_u_decimador_N9 ) , 
-    .SI ( n692 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .SI ( net_PTECO_HOLD_NET367 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_u_decimador_n[2] ) , .QN ( n691 ) ) ;
 SDFFX1_RVT u_cic_u_decimador_valid_reg ( .D ( u_cic_u_decimador_N11 ) , 
-    .SI ( n650 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
+    .SI ( net_PTECO_HOLD_NET178 ) , .SE ( ZBUF_545_0 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_dec_valid ) , .QN ( n689 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_0_ ( .D ( n156 ) , .SI ( n567 ) , 
-    .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , .Q ( u_cic_u_combs_comb1[0] ) , 
-    .QN ( n721 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_1_ ( .D ( n155 ) , .SI ( n580 ) , 
-    .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , .Q ( u_cic_u_combs_comb1[1] ) , 
-    .QN ( n481 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_2_ ( .D ( n154 ) , .SI ( n582 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , .Q ( u_cic_u_combs_comb1[2] ) , 
-    .QN ( n485 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_3_ ( .D ( n153 ) , .SI ( n721 ) , 
-    .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , .Q ( u_cic_u_combs_comb1[3] ) , 
-    .QN ( n489 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_4_ ( .D ( n152 ) , .SI ( n581 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , .Q ( u_cic_u_combs_comb1[4] ) , 
-    .QN ( n493 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_0_ ( .D ( n156 ) , 
+    .SI ( net_PTECO_HOLD_NET1153 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .Q ( u_cic_u_combs_comb1[0] ) , .QN ( n721 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_1_ ( .D ( n155 ) , 
+    .SI ( net_PTECO_HOLD_NET938 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .Q ( u_cic_u_combs_comb1[1] ) , .QN ( n481 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_2_ ( .D ( n154 ) , 
+    .SI ( net_PTECO_HOLD_NET461 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+    .Q ( u_cic_u_combs_comb1[2] ) , .QN ( n485 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_3_ ( .D ( n153 ) , 
+    .SI ( net_PTECO_HOLD_NET306 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .Q ( u_cic_u_combs_comb1[3] ) , .QN ( n489 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_4_ ( .D ( n152 ) , 
+    .SI ( net_PTECO_HOLD_NET1056 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+    .Q ( u_cic_u_combs_comb1[4] ) , .QN ( n493 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_5_ ( .D ( n151 ) , 
-    .SI ( u_cic_u_combs_comb1[6] ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1305 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb1[5] ) , .QN ( n497 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_6_ ( .D ( n150 ) , .SI ( n584 ) , 
-    .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb1[6] ) , 
-    .QN ( n501 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_7_ ( .D ( n149 ) , .SI ( n572 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb1[7] ) , 
-    .QN ( n505 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_6_ ( .D ( n150 ) , 
+    .SI ( net_PTECO_HOLD_NET717 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb1[6] ) , .QN ( n501 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_7_ ( .D ( n149 ) , 
+    .SI ( net_PTECO_HOLD_NET1077 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb1[7] ) , .QN ( n505 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_8_ ( .D ( n148 ) , 
-    .SI ( u_cic_u_combs_comb1[9] ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1335 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb1[8] ) , .QN ( n509 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_9_ ( .D ( n147 ) , 
-    .SI ( u_cic_u_combs_comb1[7] ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1283 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb1[9] ) , .QN ( n513 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_10_ ( .D ( n146 ) , .SI ( n590 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb1[10] ) , 
-    .QN ( n517 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_11_ ( .D ( n145 ) , .SI ( n589 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb1[11] ) , 
-    .QN ( n521 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_12_ ( .D ( n144 ) , .SI ( n723 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb1[12] ) , 
-    .QN ( n525 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_13_ ( .D ( n143 ) , .SI ( n592 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb1[13] ) , 
-    .QN ( n529 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_10_ ( .D ( n146 ) , 
+    .SI ( net_PTECO_HOLD_NET832 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb1[10] ) , .QN ( n517 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_11_ ( .D ( n145 ) , 
+    .SI ( net_PTECO_HOLD_NET819 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb1[11] ) , .QN ( n521 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_12_ ( .D ( n144 ) , 
+    .SI ( net_PTECO_HOLD_NET344 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb1[12] ) , .QN ( n525 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_13_ ( .D ( n143 ) , 
+    .SI ( net_PTECO_HOLD_NET680 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb1[13] ) , .QN ( n529 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_14_ ( .D ( n142 ) , 
-    .SI ( u_cic_u_combs_comb1[13] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1257 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb1[14] ) , .QN ( n533 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_15_ ( .D ( n141 ) , 
-    .SI ( u_cic_u_combs_comb1[14] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1325 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb1[15] ) , .QN ( n537 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_16_ ( .D ( n140 ) , 
-    .SI ( u_cic_u_combs_comb1[15] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1321 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb1[16] ) , .QN ( n541 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_y_out_reg_17_ ( .D ( n139 ) , 
-    .SI ( u_cic_u_combs_comb1[16] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1264 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb1[17] ) , .QN ( n720 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_0_ ( .D ( n138 ) , .SI ( n564 ) , 
-    .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_0_ ( .D ( n138 ) , 
+    .SI ( net_PTECO_HOLD_NET1131 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[0] ) , .QN ( n553 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_1_ ( .D ( n137 ) , 
-    .SI ( dftopt24 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1231 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[1] ) , .QN ( n564 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_2_ ( .D ( n136 ) , .SI ( n669 ) , 
-    .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_6 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_2_ ( .D ( n136 ) , 
+    .SI ( net_PTECO_HOLD_NET1090 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_6 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[2] ) , .QN ( n565 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_3_ ( .D ( n135 ) , 
-    .SI ( u_cic_u_combs_u_comb1_x_delay[0] ) , .SE ( HFSNET_35 ) , 
-    .CLK ( ZCTSNET_5 ) , .Q ( u_cic_u_combs_u_comb1_x_delay[3] ) , 
-    .QN ( n566 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_4_ ( .D ( n134 ) , .SI ( n568 ) , 
-    .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1199 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .Q ( u_cic_u_combs_u_comb1_x_delay[3] ) , .QN ( n566 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_4_ ( .D ( n134 ) , 
+    .SI ( net_PTECO_HOLD_NET965 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[4] ) , .QN ( n567 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_5_ ( .D ( n133 ) , 
-    .SI ( u_cic_int4[5] ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1272 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[5] ) , .QN ( n568 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_6_ ( .D ( n132 ) , 
-    .SI ( u_cic_u_combs_comb1[2] ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1253 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[6] ) , .QN ( n569 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_7_ ( .D ( n131 ) , .SI ( n569 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_7_ ( .D ( n131 ) , 
+    .SI ( net_PTECO_HOLD_NET820 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[7] ) , .QN ( n570 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_8_ ( .D ( n130 ) , 
-    .SI ( u_cic_u_combs_comb1[4] ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1268 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[8] ) , .QN ( n571 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_9_ ( .D ( n129 ) , .SI ( n583 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_9_ ( .D ( n129 ) , 
+    .SI ( net_PTECO_HOLD_NET49 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[9] ) , .QN ( n572 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_10_ ( .D ( n128 ) , 
-    .SI ( n641 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , 
+    .SI ( net_PTECO_HOLD_NET1156 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[10] ) , .QN ( n573 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_11_ ( .D ( n127 ) , 
-    .SI ( n575 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , 
+    .SI ( net_PTECO_HOLD_NET1141 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_7 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[11] ) , .QN ( n574 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_12_ ( .D ( n126 ) , 
-    .SI ( u_cic_u_combs_comb1[11] ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1279 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[12] ) , .QN ( n575 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_13_ ( .D ( n125 ) , 
-    .SI ( n577 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET979 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[13] ) , .QN ( n576 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_14_ ( .D ( n124 ) , 
-    .SI ( u_cic_u_combs_comb1[12] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1276 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[14] ) , .QN ( n577 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_15_ ( .D ( n123 ) , 
-    .SI ( n720 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET574 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[15] ) , .QN ( n578 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_16_ ( .D ( n122 ) , 
-    .SI ( n578 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1134 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[16] ) , .QN ( n579 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_x_delay_reg_17_ ( .D ( n157 ) , 
-    .SI ( n536 ) , .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
+    .SI ( net_PTECO_HOLD_NET1212 ) , .SE ( HFSNET_37 ) , .CLK ( ZCTSNET_7 ) , 
     .Q ( u_cic_u_combs_u_comb1_x_delay[17] ) , .QN ( n722 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb1_valid_out_reg ( .D ( ZBUF_2068_2 ) , 
-    .SI ( n595 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1038 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_valid1 ) , .QN ( n723 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_0_ ( .D ( n120 ) , .SI ( n587 ) , 
-    .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb2[0] ) , 
-    .QN ( n717 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_1_ ( .D ( n119 ) , .SI ( n588 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb2[1] ) , 
-    .QN ( n483 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_2_ ( .D ( n118 ) , .SI ( n597 ) , 
-    .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb2[2] ) , 
-    .QN ( n487 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_3_ ( .D ( n117 ) , .SI ( n717 ) , 
-    .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb2[3] ) , 
-    .QN ( n491 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_0_ ( .D ( n120 ) , 
+    .SI ( net_PTECO_HOLD_NET1165 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb2[0] ) , .QN ( n717 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_1_ ( .D ( n119 ) , 
+    .SI ( net_PTECO_HOLD_NET1150 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb2[1] ) , .QN ( n483 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_2_ ( .D ( n118 ) , 
+    .SI ( net_PTECO_HOLD_NET980 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb2[2] ) , .QN ( n487 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_3_ ( .D ( n117 ) , 
+    .SI ( net_PTECO_HOLD_NET959 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb2[3] ) , .QN ( n491 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_4_ ( .D ( n116 ) , 
-    .SI ( dftopt4 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET239 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_comb2[4] ) , .QN ( n495 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_5_ ( .D ( n115 ) , .SI ( n600 ) , 
-    .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_comb2[5] ) , 
-    .QN ( n499 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_6_ ( .D ( n114 ) , .SI ( n695 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_comb2[6] ) , 
-    .QN ( n503 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_7_ ( .D ( n113 ) , .SI ( n601 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_comb2[7] ) , 
-    .QN ( n507 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_5_ ( .D ( n115 ) , 
+    .SI ( net_PTECO_HOLD_NET1099 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_comb2[5] ) , .QN ( n499 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_6_ ( .D ( n114 ) , 
+    .SI ( net_PTECO_HOLD_NET627 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_comb2[6] ) , .QN ( n503 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_7_ ( .D ( n113 ) , 
+    .SI ( net_PTECO_HOLD_NET46 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_comb2[7] ) , .QN ( n507 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_8_ ( .D ( n112 ) , 
-    .SI ( dftopt3 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET109 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_comb2[8] ) , .QN ( n511 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_9_ ( .D ( n111 ) , .SI ( n603 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , .Q ( u_cic_u_combs_comb2[9] ) , 
-    .QN ( n514 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_10_ ( .D ( n110 ) , .SI ( n605 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , .Q ( u_cic_u_combs_comb2[10] ) , 
-    .QN ( n518 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_11_ ( .D ( n109 ) , .SI ( n606 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_comb2[11] ) , 
-    .QN ( n522 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_12_ ( .D ( n108 ) , .SI ( n607 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_comb2[12] ) , 
-    .QN ( n526 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_13_ ( .D ( n107 ) , .SI ( n611 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_comb2[13] ) , 
-    .QN ( n530 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_9_ ( .D ( n111 ) , 
+    .SI ( net_PTECO_HOLD_NET799 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .Q ( u_cic_u_combs_comb2[9] ) , .QN ( n514 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_10_ ( .D ( n110 ) , 
+    .SI ( net_PTECO_HOLD_NET888 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .Q ( u_cic_u_combs_comb2[10] ) , .QN ( n518 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_11_ ( .D ( n109 ) , 
+    .SI ( net_PTECO_HOLD_NET893 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_comb2[11] ) , .QN ( n522 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_12_ ( .D ( n108 ) , 
+    .SI ( net_PTECO_HOLD_NET650 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_comb2[12] ) , .QN ( n526 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_13_ ( .D ( n107 ) , 
+    .SI ( net_PTECO_HOLD_NET1133 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_comb2[13] ) , .QN ( n530 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_14_ ( .D ( n106 ) , 
-    .SI ( u_cic_u_combs_comb2[13] ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1309 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_comb2[14] ) , .QN ( n534 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_15_ ( .D ( n105 ) , 
-    .SI ( u_cic_u_combs_comb2[16] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1316 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_comb2[15] ) , .QN ( n538 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_16_ ( .D ( n104 ) , .SI ( n718 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb2[16] ) , 
-    .QN ( n542 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_17_ ( .D ( n103 ) , .SI ( n596 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , .Q ( u_cic_u_combs_comb2[17] ) , 
-    .QN ( n716 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_16_ ( .D ( n104 ) , 
+    .SI ( net_PTECO_HOLD_NET1001 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb2[16] ) , .QN ( n542 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_y_out_reg_17_ ( .D ( n103 ) , 
+    .SI ( net_PTECO_HOLD_NET1023 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .Q ( u_cic_u_combs_comb2[17] ) , .QN ( n716 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_0_ ( .D ( n102 ) , 
-    .SI ( dftopt7 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1348 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[0] ) , .QN ( n554 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_1_ ( .D ( n101 ) , 
-    .SI ( u_cic_u_combs_u_comb2_x_delay[0] ) , .SE ( HFSNET_35 ) , 
-    .CLK ( ZCTSNET_5 ) , .Q ( u_cic_u_combs_u_comb2_x_delay[1] ) , 
-    .QN ( n580 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_2_ ( .D ( n100 ) , .SI ( n570 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1200 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .Q ( u_cic_u_combs_u_comb2_x_delay[1] ) , .QN ( n580 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_2_ ( .D ( n100 ) , 
+    .SI ( net_PTECO_HOLD_NET1107 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[2] ) , .QN ( n581 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_3_ ( .D ( n99 ) , 
-    .SI ( u_cic_u_combs_comb1[3] ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
+    .SI ( net_PTECO_HOLD_NET1241 ) , .SE ( HFSNET_35 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[3] ) , .QN ( n582 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_4_ ( .D ( n98 ) , .SI ( n571 ) , 
-    .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_4_ ( .D ( n98 ) , 
+    .SI ( net_PTECO_HOLD_NET919 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_5 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[4] ) , .QN ( n583 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_5_ ( .D ( n97 ) , 
-    .SI ( dftopt8 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET179 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[5] ) , .QN ( n584 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_6_ ( .D ( n96 ) , .SI ( n712 ) , 
-    .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_6_ ( .D ( n96 ) , 
+    .SI ( net_PTECO_HOLD_NET1189 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[6] ) , .QN ( n585 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_7_ ( .D ( n95 ) , 
-    .SI ( u_cic_u_combs_comb1[5] ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1303 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[7] ) , .QN ( n586 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_8_ ( .D ( n94 ) , .SI ( n586 ) , 
-    .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_8_ ( .D ( n94 ) , 
+    .SI ( net_PTECO_HOLD_NET1098 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[8] ) , .QN ( n587 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_9_ ( .D ( n93 ) , 
-    .SI ( u_cic_u_combs_comb2[2] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1290 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[9] ) , .QN ( n588 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_10_ ( .D ( n92 ) , 
-    .SI ( u_cic_u_combs_comb1[10] ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1274 ) , .SE ( HFSNET_40 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[10] ) , .QN ( n589 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_11_ ( .D ( n91 ) , .SI ( n591 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_11_ ( .D ( n91 ) , 
+    .SI ( net_PTECO_HOLD_NET1078 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[11] ) , .QN ( n590 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_12_ ( .D ( n90 ) , .SI ( n576 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_12_ ( .D ( n90 ) , 
+    .SI ( net_PTECO_HOLD_NET1182 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[12] ) , .QN ( n591 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_13_ ( .D ( n89 ) , .SI ( n593 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_13_ ( .D ( n89 ) , 
+    .SI ( net_PTECO_HOLD_NET769 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[13] ) , .QN ( n592 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_14_ ( .D ( n88 ) , .SI ( n714 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_14_ ( .D ( n88 ) , 
+    .SI ( net_PTECO_HOLD_NET286 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[14] ) , .QN ( n593 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_15_ ( .D ( n87 ) , .SI ( n716 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_15_ ( .D ( n87 ) , 
+    .SI ( net_PTECO_HOLD_NET328 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[15] ) , .QN ( n594 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_16_ ( .D ( n86 ) , .SI ( n579 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_16_ ( .D ( n86 ) , 
+    .SI ( net_PTECO_HOLD_NET1166 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[16] ) , .QN ( n595 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_x_delay_reg_17_ ( .D ( n121 ) , 
-    .SI ( n594 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET757 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb2_x_delay[17] ) , .QN ( n718 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb2_valid_out_reg ( .D ( HFSNET_19 ) , 
-    .SI ( u_cic_u_combs_comb3[15] ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1300 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_valid2 ) , .QN ( n719 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_valid_out_reg ( .D ( n477 ) , 
-    .SI ( u_cic_u_combs_comb3[13] ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET1287 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_valid3 ) , .QN ( n715 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_valid_out_reg ( .D ( ZBUF_447_0 ) , 
-    .SI ( u_cic_u_combs_comb1[8] ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1346 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( n712 ) , .QN ( n632 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_1_ ( .D ( n67 ) , .SI ( n707 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[0] ) , 
-    .QN ( n709 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_2_ ( .D ( n66 ) , .SI ( n705 ) , 
-    .SE ( HFSNET_26 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[1] ) , 
-    .QN ( n708 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_1_ ( .D ( n67 ) , 
+    .SI ( net_PTECO_HOLD_NET326 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[0] ) , .QN ( n709 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_2_ ( .D ( n66 ) , 
+    .SI ( net_PTECO_HOLD_NET553 ) , .SE ( HFSNET_26 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[1] ) , .QN ( n708 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_3_ ( .D ( n65 ) , 
-    .SI ( u_cic_u_combs_comb3[6] ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+    .SI ( net_PTECO_HOLD_NET1331 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
     .Q ( cic_out[2] ) , .QN ( n707 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_4_ ( .D ( n64 ) , .SI ( dftopt0 ) , 
-    .SE ( HFSNET_26 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[3] ) , 
-    .QN ( n706 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_5_ ( .D ( n63 ) , .SI ( n706 ) , 
-    .SE ( HFSNET_26 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[4] ) , 
-    .QN ( n705 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_6_ ( .D ( n62 ) , .SI ( n708 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[5] ) , 
-    .QN ( n704 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_7_ ( .D ( n61 ) , .SI ( n704 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[6] ) , 
-    .QN ( n703 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_8_ ( .D ( n60 ) , .SI ( n709 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[7] ) , 
-    .QN ( n702 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_9_ ( .D ( n59 ) , .SI ( n617 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , .Q ( cic_out[8] ) , 
-    .QN ( n701 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_4_ ( .D ( n64 ) , 
+    .SI ( net_PTECO_HOLD_NET169 ) , .SE ( HFSNET_26 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[3] ) , .QN ( n706 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_5_ ( .D ( n63 ) , 
+    .SI ( net_PTECO_HOLD_NET219 ) , .SE ( HFSNET_26 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[4] ) , .QN ( n705 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_6_ ( .D ( n62 ) , 
+    .SI ( net_PTECO_HOLD_NET445 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[5] ) , .QN ( n704 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_7_ ( .D ( n61 ) , 
+    .SI ( net_PTECO_HOLD_NET312 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[6] ) , .QN ( n703 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_8_ ( .D ( n60 ) , 
+    .SI ( net_PTECO_HOLD_NET279 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[7] ) , .QN ( n702 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_9_ ( .D ( n59 ) , 
+    .SI ( net_PTECO_HOLD_NET998 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( cic_out[8] ) , .QN ( n701 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_10_ ( .D ( n58 ) , 
-    .SI ( u_cic_u_combs_comb3[9] ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET1267 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( cic_out[9] ) , .QN ( n700 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_11_ ( .D ( n57 ) , 
-    .SI ( u_cic_u_combs_comb3[2] ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET1261 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( cic_out[10] ) , .QN ( n699 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_12_ ( .D ( n56 ) , 
-    .SI ( dftopt2 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET266 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( cic_out[11] ) , .QN ( n698 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_13_ ( .D ( n55 ) , 
-    .SI ( dftopt17 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET93 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( cic_out[12] ) , .QN ( n697 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_14_ ( .D ( n54 ) , .SI ( n711 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , .Q ( cic_out[13] ) , 
-    .QN ( n696 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_14_ ( .D ( n54 ) , 
+    .SI ( net_PTECO_HOLD_NET147 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .Q ( cic_out[13] ) , .QN ( n696 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_15_ ( .D ( n53 ) , 
-    .SI ( dftopt18 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET386 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( cic_out[14] ) , .QN ( n695 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_16_ ( .D ( n52 ) , 
-    .SI ( u_cic_u_combs_comb2[5] ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1328 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( cic_out[15] ) , .QN ( n694 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_17_ ( .D ( n51 ) , .SI ( n694 ) , 
-    .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , .Q ( cic_out[16] ) , 
-    .QN ( n693 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_y_out_reg_17_ ( .D ( n51 ) , 
+    .SI ( net_PTECO_HOLD_NET134 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( cic_out[16] ) , .QN ( n693 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_0_ ( .D ( n85 ) , 
-    .SI ( u_cic_u_combs_comb3[14] ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET1338 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_comb3[0] ) , .QN ( n557 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_0_ ( .D ( n50 ) , 
-    .SI ( u_cic_u_combs_comb3[0] ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET1221 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[0] ) , .QN ( n711 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_1_ ( .D ( n84 ) , .SI ( n612 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_4 ) , .Q ( u_cic_u_combs_comb3[1] ) , 
-    .QN ( n484 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_1_ ( .D ( n49 ) , .SI ( n698 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_4 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_1_ ( .D ( n84 ) , 
+    .SI ( net_PTECO_HOLD_NET632 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_4 ) , 
+    .Q ( u_cic_u_combs_comb3[1] ) , .QN ( n484 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_1_ ( .D ( n49 ) , 
+    .SI ( net_PTECO_HOLD_NET364 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[1] ) , .QN ( n612 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_2_ ( .D ( n83 ) , .SI ( n622 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , .Q ( u_cic_u_combs_comb3[2] ) , 
-    .QN ( n488 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_2_ ( .D ( n48 ) , .SI ( n614 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_2_ ( .D ( n83 ) , 
+    .SI ( net_PTECO_HOLD_NET1087 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .Q ( u_cic_u_combs_comb3[2] ) , .QN ( n488 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_2_ ( .D ( n48 ) , 
+    .SI ( net_PTECO_HOLD_NET1037 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[2] ) , .QN ( n613 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_3_ ( .D ( n82 ) , 
-    .SI ( dftopt26 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET485 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_comb3[3] ) , .QN ( n492 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_3_ ( .D ( n47 ) , .SI ( n700 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_3_ ( .D ( n47 ) , 
+    .SI ( net_PTECO_HOLD_NET270 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[3] ) , .QN ( n614 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_4_ ( .D ( n81 ) , 
-    .SI ( dftopt13 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET117 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_comb3[4] ) , .QN ( n496 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_4_ ( .D ( n46 ) , 
-    .SI ( dftopt1 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET930 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[4] ) , .QN ( n615 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_5_ ( .D ( n80 ) , .SI ( n615 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , .Q ( u_cic_u_combs_comb3[5] ) , 
-    .QN ( n500 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_5_ ( .D ( n80 ) , 
+    .SI ( net_PTECO_HOLD_NET896 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .Q ( u_cic_u_combs_comb3[5] ) , .QN ( n500 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_5_ ( .D ( n45 ) , 
-    .SI ( u_cic_u_combs_comb3[7] ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET1273 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[5] ) , .QN ( n616 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_6_ ( .D ( n79 ) , .SI ( dftopt9 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , .Q ( u_cic_u_combs_comb3[6] ) , 
-    .QN ( n504 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_6_ ( .D ( n44 ) , .SI ( n702 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_6_ ( .D ( n79 ) , 
+    .SI ( net_PTECO_HOLD_NET221 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
+    .Q ( u_cic_u_combs_comb3[6] ) , .QN ( n504 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_6_ ( .D ( n44 ) , 
+    .SI ( net_PTECO_HOLD_NET212 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_0 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[6] ) , .QN ( n617 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_7_ ( .D ( n78 ) , .SI ( n618 ) , 
-    .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_1 ) , .Q ( u_cic_u_combs_comb3[7] ) , 
-    .QN ( n508 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_7_ ( .D ( n78 ) , 
+    .SI ( net_PTECO_HOLD_NET844 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_1 ) , 
+    .Q ( u_cic_u_combs_comb3[7] ) , .QN ( n508 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_7_ ( .D ( n43 ) , 
-    .SI ( u_cic_u_combs_comb3[5] ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET1314 ) , .SE ( HFSNET_30 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[7] ) , .QN ( n618 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_8_ ( .D ( n77 ) , .SI ( n619 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , .Q ( u_cic_u_combs_comb3[8] ) , 
-    .QN ( n512 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_8_ ( .D ( n42 ) , .SI ( n616 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_8_ ( .D ( n77 ) , 
+    .SI ( net_PTECO_HOLD_NET1043 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .Q ( u_cic_u_combs_comb3[8] ) , .QN ( n512 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_8_ ( .D ( n42 ) , 
+    .SI ( net_PTECO_HOLD_NET1008 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[8] ) , .QN ( n619 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_9_ ( .D ( n76 ) , .SI ( n620 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , .Q ( u_cic_u_combs_comb3[9] ) , 
-    .QN ( n515 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_9_ ( .D ( n76 ) , 
+    .SI ( net_PTECO_HOLD_NET995 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .Q ( u_cic_u_combs_comb3[9] ) , .QN ( n515 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_9_ ( .D ( n41 ) , 
-    .SI ( u_cic_u_combs_comb3[8] ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET1286 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[9] ) , .QN ( n620 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_10_ ( .D ( n75 ) , .SI ( n613 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , .Q ( u_cic_u_combs_comb3[10] ) , 
-    .QN ( n519 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_10_ ( .D ( n75 ) , 
+    .SI ( net_PTECO_HOLD_NET509 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .Q ( u_cic_u_combs_comb3[10] ) , .QN ( n519 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_10_ ( .D ( n40 ) , 
-    .SI ( u_cic_u_combs_comb3[10] ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET1247 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[10] ) , .QN ( n621 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_11_ ( .D ( n74 ) , .SI ( n621 ) , 
-    .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , .Q ( u_cic_u_combs_comb3[11] ) , 
-    .QN ( n523 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_11_ ( .D ( n74 ) , 
+    .SI ( net_PTECO_HOLD_NET803 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .Q ( u_cic_u_combs_comb3[11] ) , .QN ( n523 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_11_ ( .D ( n39 ) , 
-    .SI ( u_cic_u_combs_comb3[11] ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
+    .SI ( net_PTECO_HOLD_NET1239 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_1 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[11] ) , .QN ( n622 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_12_ ( .D ( n73 ) , .SI ( n623 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , .Q ( u_cic_u_combs_comb3[12] ) , 
-    .QN ( n527 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_12_ ( .D ( n73 ) , 
+    .SI ( net_PTECO_HOLD_NET706 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .Q ( u_cic_u_combs_comb3[12] ) , .QN ( n527 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_12_ ( .D ( n38 ) , 
-    .SI ( u_cic_u_combs_comb3[1] ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET1244 ) , .SE ( HFSNET_29 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[12] ) , .QN ( n623 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_13_ ( .D ( n72 ) , .SI ( n624 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , .Q ( u_cic_u_combs_comb3[13] ) , 
-    .QN ( n531 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_13_ ( .D ( n72 ) , 
+    .SI ( net_PTECO_HOLD_NET618 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .Q ( u_cic_u_combs_comb3[13] ) , .QN ( n531 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_13_ ( .D ( n37 ) , 
-    .SI ( u_cic_u_combs_comb3[12] ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET1249 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[13] ) , .QN ( n624 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_14_ ( .D ( n71 ) , 
-    .SI ( u_cic_u_combs_comb2[10] ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET1317 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_comb3[14] ) , .QN ( n535 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_14_ ( .D ( n36 ) , .SI ( n715 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_14_ ( .D ( n36 ) , 
+    .SI ( net_PTECO_HOLD_NET241 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[14] ) , .QN ( n625 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_15_ ( .D ( n70 ) , .SI ( n626 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_comb3[15] ) , 
-    .QN ( n539 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_15_ ( .D ( n35 ) , .SI ( n627 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_15_ ( .D ( n70 ) , 
+    .SI ( net_PTECO_HOLD_NET753 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_comb3[15] ) , .QN ( n539 ) ) ;
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_15_ ( .D ( n35 ) , 
+    .SI ( net_PTECO_HOLD_NET948 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[15] ) , .QN ( n626 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_16_ ( .D ( n69 ) , 
-    .SI ( u_cic_u_combs_comb2[14] ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1329 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_comb3[16] ) , .QN ( n543 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_16_ ( .D ( n34 ) , 
-    .SI ( u_cic_u_combs_comb2[7] ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1323 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[16] ) , .QN ( n627 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_y_out_reg_17_ ( .D ( n68 ) , 
-    .SI ( u_cic_u_combs_comb3[16] ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1322 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_comb3[17] ) , .QN ( n713 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_17_ ( .D ( n33 ) , .SI ( n693 ) , 
-    .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb4_x_delay_reg_17_ ( .D ( n33 ) , 
+    .SI ( net_PTECO_HOLD_NET133 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb4_x_delay[17] ) , .QN ( n710 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_0_ ( .D ( n32 ) , .SI ( n713 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_0_ ( .D ( n32 ) , 
+    .SI ( net_PTECO_HOLD_NET102 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[0] ) , .QN ( n556 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_1_ ( .D ( n31 ) , 
-    .SI ( u_cic_u_combs_comb2[1] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1282 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[1] ) , .QN ( n596 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_2_ ( .D ( n30 ) , 
-    .SI ( u_cic_u_combs_comb2[3] ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1307 ) , .SE ( HFSNET_34 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[2] ) , .QN ( n597 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_3_ ( .D ( n29 ) , 
-    .SI ( u_cic_u_combs_u_comb3_x_delay[0] ) , .SE ( HFSNET_32 ) , 
-    .CLK ( ZCTSNET_2 ) , .Q ( u_cic_u_combs_u_comb3_x_delay[3] ) , 
-    .QN ( n598 ) ) ;
+    .SI ( net_PTECO_HOLD_NET1204 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+    .Q ( u_cic_u_combs_u_comb3_x_delay[3] ) , .QN ( n598 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_4_ ( .D ( n28 ) , 
-    .SI ( dftopt6 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET201 ) , .SE ( HFSNET_32 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[4] ) , .QN ( n599 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_5_ ( .D ( n27 ) , .SI ( n599 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_5_ ( .D ( n27 ) , 
+    .SI ( net_PTECO_HOLD_NET925 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[5] ) , .QN ( n600 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_6_ ( .D ( n26 ) , .SI ( n602 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_4 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_6_ ( .D ( n26 ) , 
+    .SI ( net_PTECO_HOLD_NET544 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[6] ) , .QN ( n601 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_7_ ( .D ( n25 ) , 
-    .SI ( u_cic_u_combs_comb2[9] ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+    .SI ( net_PTECO_HOLD_NET1289 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[7] ) , .QN ( n602 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_8_ ( .D ( n24 ) , .SI ( n604 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_8_ ( .D ( n24 ) , 
+    .SI ( net_PTECO_HOLD_NET767 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[8] ) , .QN ( n603 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_9_ ( .D ( n23 ) , .SI ( n697 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_9_ ( .D ( n23 ) , 
+    .SI ( net_PTECO_HOLD_NET89 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[9] ) , .QN ( n604 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_10_ ( .D ( n22 ) , .SI ( n625 ) , 
-    .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_10_ ( .D ( n22 ) , 
+    .SI ( net_PTECO_HOLD_NET900 ) , .SE ( HFSNET_27 ) , .CLK ( ZCTSNET_4 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[10] ) , .QN ( n605 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_11_ ( .D ( n21 ) , .SI ( n719 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_11_ ( .D ( n21 ) , 
+    .SI ( net_PTECO_HOLD_NET433 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[11] ) , .QN ( n606 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_12_ ( .D ( n20 ) , 
-    .SI ( u_cic_u_combs_comb2[11] ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1245 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[12] ) , .QN ( n607 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_13_ ( .D ( n19 ) , 
-    .SI ( u_cic_u_combs_comb2[12] ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+    .SI ( net_PTECO_HOLD_NET1252 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[13] ) , .QN ( n608 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_14_ ( .D ( n18 ) , .SI ( n608 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_14_ ( .D ( n18 ) , 
+    .SI ( net_PTECO_HOLD_NET1053 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[14] ) , .QN ( n609 ) ) ;
 SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_15_ ( .D ( n17 ) , 
-    .SI ( u_cic_u_combs_comb2[15] ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+    .SI ( net_PTECO_HOLD_NET1312 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[15] ) , .QN ( n610 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_16_ ( .D ( n16 ) , .SI ( n609 ) , 
-    .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_16_ ( .D ( n16 ) , 
+    .SI ( net_PTECO_HOLD_NET777 ) , .SE ( HFSNET_33 ) , .CLK ( ZCTSNET_2 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[16] ) , .QN ( n611 ) ) ;
-SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_17_ ( .D ( n14 ) , .SI ( n610 ) , 
-    .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
+SDFFX1_RVT u_cic_u_combs_u_comb3_x_delay_reg_17_ ( .D ( n14 ) , 
+    .SI ( net_PTECO_HOLD_NET1130 ) , .SE ( HFSNET_31 ) , .CLK ( ZCTSNET_3 ) , 
     .Q ( u_cic_u_combs_u_comb3_x_delay[17] ) , .QN ( n714 ) ) ;
 FADDX1_RVT intadd_0_U18 ( .A ( intadd_0_B_0_ ) , 
     .B ( u_cic_u_integradores_n[54] ) , .CI ( intadd_0_CI ) , 
@@ -26907,6 +30499,8 @@ OA221X1_RVT U306 ( .A1 ( intadd_0_SUM_1_ ) , .A2 ( n179 ) , .A3 ( n180 ) ,
     .A4 ( n178 ) , .A5 ( HFSNET_24 ) , .Y ( u_cic_u_integradores_N59 ) ) ;
 OA222X1_RVT U307 ( .A1 ( n482 ) , .A2 ( n181 ) , .A3 ( n482 ) , .A4 ( n180 ) , 
     .A5 ( n181 ) , .A6 ( n180 ) , .Y ( n185 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF1 ( .A ( net_PTECO_HOLD_NET1 ) , 
+    .Y ( y_out[13] ) ) ;
 NOR2X1_RVT ctmTdsLR_1_2189 ( .A1 ( rst ) , .A2 ( u_cic_dec_valid ) , 
     .Y ( HFSNET_14 ) ) ;
 INVX0_RVT U310 ( .A ( n183 ) , .Y ( n184 ) ) ;
@@ -26937,7 +30531,7 @@ OA222X1_RVT U325 ( .A1 ( n494 ) , .A2 ( n196 ) , .A3 ( n494 ) , .A4 ( n195 ) ,
     .A5 ( n196 ) , .A6 ( n195 ) , .Y ( n201 ) ) ;
 MUX21X1_RVT ctmTdsLR_1_1570 ( .A1 ( u_cic_int4[9] ) , .A2 ( n510 ) , 
     .S0 ( n216 ) , .Y ( n213 ) ) ;
-NBUFFX2_RVT copt_h_inst_2274 ( .A ( copt_net_53 ) , .Y ( y_out[8] ) ) ;
+NBUFFX2_RVT copt_h_inst_2274 ( .A ( net_PTECO_HOLD_NET9 ) , .Y ( y_out[8] ) ) ;
 INVX0_RVT U328 ( .A ( n198 ) , .Y ( n199 ) ) ;
 INVX0_RVT U329 ( .A ( intadd_0_SUM_5_ ) , .Y ( n200 ) ) ;
 OA221X1_RVT U330 ( .A1 ( intadd_0_SUM_5_ ) , .A2 ( n199 ) , .A3 ( n200 ) , 
@@ -26946,18 +30540,28 @@ OA222X1_RVT U331 ( .A1 ( n498 ) , .A2 ( n201 ) , .A3 ( n498 ) , .A4 ( n200 ) ,
     .A5 ( n201 ) , .A6 ( n200 ) , .Y ( n206 ) ) ;
 NBUFFX2_RVT copt_gre_mc_inst_2276 ( .A ( cic_out[2] ) , 
     .Y ( copt_gre_net_59 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF3 ( .A ( net_PTECO_HOLD_NET3 ) , 
+    .Y ( y_out[12] ) ) ;
 INVX0_RVT U334 ( .A ( n203 ) , .Y ( n204 ) ) ;
 INVX0_RVT U335 ( .A ( intadd_0_SUM_6_ ) , .Y ( n205 ) ) ;
 OA221X1_RVT U336 ( .A1 ( intadd_0_SUM_6_ ) , .A2 ( n204 ) , .A3 ( n205 ) , 
     .A4 ( n203 ) , .A5 ( HFSNET_23 ) , .Y ( u_cic_u_integradores_N64 ) ) ;
 OA222X1_RVT U337 ( .A1 ( n502 ) , .A2 ( n206 ) , .A3 ( n502 ) , .A4 ( n205 ) , 
     .A5 ( n206 ) , .A6 ( n205 ) , .Y ( n211 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF5 ( .A ( net_PTECO_HOLD_NET5 ) , 
+    .Y ( y_out[7] ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF9 ( .A ( copt_net_53 ) , 
+    .Y ( net_PTECO_HOLD_NET9 ) ) ;
 INVX0_RVT U340 ( .A ( n208 ) , .Y ( n209 ) ) ;
 INVX0_RVT U341 ( .A ( intadd_0_SUM_7_ ) , .Y ( n210 ) ) ;
 OA221X1_RVT U342 ( .A1 ( intadd_0_SUM_7_ ) , .A2 ( n209 ) , .A3 ( n210 ) , 
     .A4 ( n208 ) , .A5 ( HFSNET_23 ) , .Y ( u_cic_u_integradores_N65 ) ) ;
 OA222X1_RVT U343 ( .A1 ( n506 ) , .A2 ( n211 ) , .A3 ( n506 ) , .A4 ( n210 ) , 
     .A5 ( n211 ) , .A6 ( n210 ) , .Y ( n216 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF16 ( .A ( dftopt11 ) , 
+    .Y ( net_PTECO_HOLD_NET16 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF18 ( .A ( dftopt12 ) , 
+    .Y ( net_PTECO_HOLD_NET18 ) ) ;
 INVX0_RVT U346 ( .A ( n213 ) , .Y ( n214 ) ) ;
 INVX0_RVT U347 ( .A ( intadd_0_SUM_8_ ) , .Y ( n215 ) ) ;
 OA221X1_RVT U348 ( .A1 ( intadd_0_SUM_8_ ) , .A2 ( n214 ) , .A3 ( n215 ) , 
@@ -27162,6 +30766,8 @@ AND3X1_RVT U452 ( .A1 ( u_cic_u_decimador_n[1] ) , .A2 ( n261 ) ,
     .A3 ( HFSNET_24 ) , .Y ( u_cic_u_decimador_N11 ) ) ;
 AND3X1_RVT U453 ( .A1 ( HFSNET_24 ) , .A2 ( n262 ) , .A3 ( n628 ) , 
     .Y ( u_cic_u_decimador_N7 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF22 ( .A ( dftopt28 ) , 
+    .Y ( net_PTECO_HOLD_NET22 ) ) ;
 AO22X1_RVT U455 ( .A1 ( u_cic_int4[17] ) , .A2 ( ZBUF_2068_2 ) , 
     .A3 ( u_cic_u_combs_u_comb1_x_delay[17] ) , .A4 ( ZBUF_990_2 ) , 
     .Y ( n157 ) ) ;
@@ -27981,10 +31587,10 @@ fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15_test_1 u_fir (
     .test_si ( SYNOPSYS_UNCONNECTED_79 ) , .test_se ( HFSNET_26 ) , 
     .y_out_18__BAR ( n732 ) , .y_out_17_ ( y_out[17] ) , 
     .y_out_16_ ( y_out[16] ) , .y_out_15_ ( y_out[15] ) , 
-    .y_out_14_ ( y_out[14] ) , .y_out_13_ ( y_out[13] ) , 
-    .y_out_12_ ( y_out[12] ) , .y_out_11_ ( y_out[11] ) , 
+    .y_out_14_ ( y_out[14] ) , .y_out_13_ ( net_PTECO_HOLD_NET1 ) , 
+    .y_out_12_ ( net_PTECO_HOLD_NET3 ) , .y_out_11_ ( y_out[11] ) , 
     .y_out_10_ ( y_out[10] ) , .y_out_9_ ( y_out[9] ) , 
-    .y_out_8_ ( copt_net_53 ) , .y_out_7_ ( y_out[7] ) , 
+    .y_out_8_ ( copt_net_53 ) , .y_out_7_ ( net_PTECO_HOLD_NET5 ) , 
     .y_out_6_ ( aps_rename_10_ ) , .y_out_5_ ( aps_rename_11_ ) , 
     .y_out_4_ ( aps_rename_12_ ) , .y_out_3_ ( y_out[3] ) , 
     .y_out_2_ ( y_out[2] ) , .y_out_1_ ( y_out[1] ) , 
@@ -28042,10 +31648,10 @@ fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15_test_1 u_fir (
     .ZCTSNET_24 ( ZCTSNET_3 ) , .ZCTSNET_25 ( ZCTSNET_4 ) , 
     .ZCTSNET_26 ( ZCTSNET_5 ) , .ZCTSNET_28 ( ZCTSNET_6 ) , 
     .ZCTSNET_29 ( ZCTSNET_8 ) , .ctosc_drc_cln_0 ( ctosc_drc_cln_0 ) , 
-    .ctosc_drc_cln_1 ( ctosc_drc_cln_1 ) , .ZBUF_19_0 ( y_out[12] ) , 
-    .dftopt59 ( dftopt0 ) , .dftopt60 ( dftopt1 ) , 
-    .dftopt61 ( u_cic_u_combs_comb3[3] ) , .dftopt62 ( dftopt2 ) , 
-    .dftopt63 ( n696 ) , .dftopt64 ( dftopt3 ) , 
+    .ctosc_drc_cln_1 ( ctosc_drc_cln_1 ) , 
+    .ZBUF_19_0 ( net_PTECO_HOLD_NET3 ) , .dftopt59 ( dftopt0 ) , 
+    .dftopt60 ( dftopt1 ) , .dftopt61 ( u_cic_u_combs_comb3[3] ) , 
+    .dftopt62 ( dftopt2 ) , .dftopt63 ( n696 ) , .dftopt64 ( dftopt3 ) , 
     .dftopt65 ( u_cic_u_combs_comb2[8] ) , .dftopt66 ( n598 ) , 
     .dftopt67 ( u_cic_u_combs_comb2[4] ) , .dftopt68 ( dftopt6 ) , 
     .dftopt69 ( u_cic_u_combs_comb2[6] ) , .dftopt70 ( dftopt7 ) , 
@@ -28053,17 +31659,29 @@ fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15_test_1 u_fir (
     .dftopt73 ( dftopt8 ) , .dftopt74 ( n690 ) , .dftopt75 ( dftopt11 ) , 
     .dftopt76 ( n670 ) , .dftopt77 ( u_cic_int4[1] ) ) ;
 NBUFFX8_RVT HFSBUF_119_1154 ( .A ( HFSNET_30 ) , .Y ( HFSNET_26 ) ) ;
-INVX4_RVT HFSINV_66_119 ( .A ( n732 ) , .Y ( scan_out ) ) ;
+INVX4_RVT HFSINV_66_119 ( .A ( n732 ) , .Y ( net_PTECO_HOLD_NET1353 ) ) ;
 NBUFFX2_RVT HFSBUF_58_120 ( .A ( cic_out[1] ) , .Y ( HFSNET_6 ) ) ;
-NBUFFX2_RVT HFSBUF_4_26 ( .A ( aps_rename_14_ ) , .Y ( valid_out ) ) ;
-NBUFFX4_RVT HFSBUF_11_67 ( .A ( aps_rename_13_ ) , .Y ( y_out[0] ) ) ;
-NBUFFX2_RVT HFSBUF_11_76 ( .A ( aps_rename_12_ ) , .Y ( y_out[4] ) ) ;
-NBUFFX2_RVT HFSBUF_11_77 ( .A ( aps_rename_11_ ) , .Y ( y_out[5] ) ) ;
-NBUFFX2_RVT HFSBUF_11_78 ( .A ( aps_rename_10_ ) , .Y ( y_out[6] ) ) ;
+NBUFFX2_RVT HFSBUF_4_26 ( .A ( net_PTECO_HOLD_NET29 ) , .Y ( valid_out ) ) ;
+NBUFFX4_RVT HFSBUF_11_67 ( .A ( net_PTECO_HOLD_NET33 ) , .Y ( y_out[0] ) ) ;
+NBUFFX2_RVT HFSBUF_11_76 ( .A ( net_PTECO_HOLD_NET27 ) , .Y ( y_out[4] ) ) ;
+NBUFFX2_RVT HFSBUF_11_77 ( .A ( net_PTECO_HOLD_NET31 ) , .Y ( y_out[5] ) ) ;
+NBUFFX2_RVT HFSBUF_11_78 ( .A ( net_PTECO_HOLD_NET23 ) , .Y ( y_out[6] ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF23 ( .A ( aps_rename_10_ ) , 
+    .Y ( net_PTECO_HOLD_NET23 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF27 ( .A ( aps_rename_12_ ) , 
+    .Y ( net_PTECO_HOLD_NET27 ) ) ;
 MUX21X1_RVT ctmTdsLR_1_1505 ( .A1 ( u_cic_int4[2] ) , .A2 ( n482 ) , 
     .S0 ( n181 ) , .Y ( n178 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF29 ( .A ( aps_rename_14_ ) , 
+    .Y ( net_PTECO_HOLD_NET29 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF31 ( .A ( aps_rename_11_ ) , 
+    .Y ( net_PTECO_HOLD_NET31 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF33 ( .A ( aps_rename_13_ ) , 
+    .Y ( net_PTECO_HOLD_NET33 ) ) ;
 MUX21X1_RVT ctmTdsLR_1_1507 ( .A1 ( u_cic_int4[4] ) , .A2 ( n490 ) , 
     .S0 ( n191 ) , .Y ( n188 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF37 ( .A ( net_PTECO_HOLD_NET1353 ) , 
+    .Y ( y_out[18] ) ) ;
 INVX8_RVT HFSINV_6472_1072 ( .A ( rst ) , .Y ( HFSNET_25 ) ) ;
 INVX8_RVT HFSINV_487_1155 ( .A ( HFSNET_28 ) , .Y ( HFSNET_27 ) ) ;
 INVX0_RVT HFSINV_500_1156 ( .A ( HFSNET_30 ) , .Y ( HFSNET_28 ) ) ;
@@ -28077,11 +31695,451 @@ INVX8_RVT HFSINV_1584_1165 ( .A ( HFSNET_36 ) , .Y ( HFSNET_35 ) ) ;
 INVX0_RVT HFSINV_1597_1166 ( .A ( HFSNET_40 ) , .Y ( HFSNET_36 ) ) ;
 NBUFFX8_RVT HFSBUF_2013_1167 ( .A ( HFSNET_40 ) , .Y ( HFSNET_37 ) ) ;
 NBUFFX8_RVT HFSBUF_1711_1168 ( .A ( HFSNET_40 ) , .Y ( HFSNET_38 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF46 ( .A ( n601 ) , .Y ( net_PTECO_HOLD_NET46 ) ) ;
 NBUFFX8_RVT HFSBUF_3026_1170 ( .A ( scan_en ) , .Y ( HFSNET_40 ) ) ;
 MUX21X1_RVT ctmTdsLR_1_1508 ( .A1 ( u_cic_int4[6] ) , .A2 ( n498 ) , 
     .S0 ( n201 ) , .Y ( n198 ) ) ;
 MUX21X1_RVT ctmTdsLR_1_1509 ( .A1 ( u_cic_int4[8] ) , .A2 ( n506 ) , 
     .S0 ( n211 ) , .Y ( n208 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF49 ( .A ( n583 ) , .Y ( net_PTECO_HOLD_NET49 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF77 ( .A ( n635 ) , .Y ( net_PTECO_HOLD_NET77 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF89 ( .A ( n697 ) , .Y ( net_PTECO_HOLD_NET89 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF93 ( .A ( dftopt17 ) , 
+    .Y ( net_PTECO_HOLD_NET93 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF102 ( .A ( n713 ) , 
+    .Y ( net_PTECO_HOLD_NET102 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF109 ( .A ( dftopt3 ) , 
+    .Y ( net_PTECO_HOLD_NET109 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF117 ( .A ( dftopt13 ) , 
+    .Y ( net_PTECO_HOLD_NET117 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF124 ( .A ( n689 ) , 
+    .Y ( net_PTECO_HOLD_NET124 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF131 ( .A ( n649 ) , 
+    .Y ( net_PTECO_HOLD_NET131 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF133 ( .A ( n693 ) , 
+    .Y ( net_PTECO_HOLD_NET133 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF134 ( .A ( n694 ) , 
+    .Y ( net_PTECO_HOLD_NET134 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF145 ( .A ( n634 ) , 
+    .Y ( net_PTECO_HOLD_NET145 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF147 ( .A ( n711 ) , 
+    .Y ( net_PTECO_HOLD_NET147 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF155 ( .A ( n671 ) , 
+    .Y ( net_PTECO_HOLD_NET155 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF162 ( .A ( n668 ) , 
+    .Y ( net_PTECO_HOLD_NET162 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF169 ( .A ( dftopt0 ) , 
+    .Y ( net_PTECO_HOLD_NET169 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF171 ( .A ( n655 ) , 
+    .Y ( net_PTECO_HOLD_NET171 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF172 ( .A ( n639 ) , 
+    .Y ( net_PTECO_HOLD_NET172 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF178 ( .A ( n650 ) , 
+    .Y ( net_PTECO_HOLD_NET178 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF179 ( .A ( dftopt8 ) , 
+    .Y ( net_PTECO_HOLD_NET179 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF192 ( .A ( n666 ) , 
+    .Y ( net_PTECO_HOLD_NET192 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF201 ( .A ( dftopt6 ) , 
+    .Y ( net_PTECO_HOLD_NET201 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF207 ( .A ( n722 ) , 
+    .Y ( net_PTECO_HOLD_NET207 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF210 ( .A ( n651 ) , 
+    .Y ( net_PTECO_HOLD_NET210 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF212 ( .A ( n702 ) , 
+    .Y ( net_PTECO_HOLD_NET212 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF219 ( .A ( n706 ) , 
+    .Y ( net_PTECO_HOLD_NET219 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF221 ( .A ( dftopt9 ) , 
+    .Y ( net_PTECO_HOLD_NET221 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF224 ( .A ( n667 ) , 
+    .Y ( net_PTECO_HOLD_NET224 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF239 ( .A ( dftopt4 ) , 
+    .Y ( net_PTECO_HOLD_NET239 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF241 ( .A ( n715 ) , 
+    .Y ( net_PTECO_HOLD_NET241 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF250 ( .A ( n647 ) , 
+    .Y ( net_PTECO_HOLD_NET250 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF265 ( .A ( n636 ) , 
+    .Y ( net_PTECO_HOLD_NET265 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF266 ( .A ( dftopt2 ) , 
+    .Y ( net_PTECO_HOLD_NET266 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF270 ( .A ( n700 ) , 
+    .Y ( net_PTECO_HOLD_NET270 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF279 ( .A ( n709 ) , 
+    .Y ( net_PTECO_HOLD_NET279 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF280 ( .A ( n657 ) , 
+    .Y ( net_PTECO_HOLD_NET280 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF281 ( .A ( n646 ) , 
+    .Y ( net_PTECO_HOLD_NET281 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF286 ( .A ( n714 ) , 
+    .Y ( net_PTECO_HOLD_NET286 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF306 ( .A ( n721 ) , 
+    .Y ( net_PTECO_HOLD_NET306 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF312 ( .A ( n704 ) , 
+    .Y ( net_PTECO_HOLD_NET312 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF315 ( .A ( n691 ) , 
+    .Y ( net_PTECO_HOLD_NET315 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF326 ( .A ( n707 ) , 
+    .Y ( net_PTECO_HOLD_NET326 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF328 ( .A ( n716 ) , 
+    .Y ( net_PTECO_HOLD_NET328 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF335 ( .A ( n654 ) , 
+    .Y ( net_PTECO_HOLD_NET335 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF338 ( .A ( n656 ) , 
+    .Y ( net_PTECO_HOLD_NET338 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF340 ( .A ( n665 ) , 
+    .Y ( net_PTECO_HOLD_NET340 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF343 ( .A ( n652 ) , 
+    .Y ( net_PTECO_HOLD_NET343 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF344 ( .A ( n723 ) , 
+    .Y ( net_PTECO_HOLD_NET344 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF355 ( .A ( n662 ) , 
+    .Y ( net_PTECO_HOLD_NET355 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF364 ( .A ( n698 ) , 
+    .Y ( net_PTECO_HOLD_NET364 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF367 ( .A ( n692 ) , 
+    .Y ( net_PTECO_HOLD_NET367 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF374 ( .A ( n645 ) , 
+    .Y ( net_PTECO_HOLD_NET374 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF386 ( .A ( dftopt18 ) , 
+    .Y ( net_PTECO_HOLD_NET386 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF418 ( .A ( n672 ) , 
+    .Y ( net_PTECO_HOLD_NET418 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF422 ( .A ( n658 ) , 
+    .Y ( net_PTECO_HOLD_NET422 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF433 ( .A ( n719 ) , 
+    .Y ( net_PTECO_HOLD_NET433 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF445 ( .A ( n708 ) , 
+    .Y ( net_PTECO_HOLD_NET445 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF461 ( .A ( n582 ) , 
+    .Y ( net_PTECO_HOLD_NET461 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF480 ( .A ( n660 ) , 
+    .Y ( net_PTECO_HOLD_NET480 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF485 ( .A ( dftopt26 ) , 
+    .Y ( net_PTECO_HOLD_NET485 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF505 ( .A ( n644 ) , 
+    .Y ( net_PTECO_HOLD_NET505 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF507 ( .A ( n653 ) , 
+    .Y ( net_PTECO_HOLD_NET507 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF509 ( .A ( n613 ) , 
+    .Y ( net_PTECO_HOLD_NET509 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF544 ( .A ( n602 ) , 
+    .Y ( net_PTECO_HOLD_NET544 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF553 ( .A ( n705 ) , 
+    .Y ( net_PTECO_HOLD_NET553 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF554 ( .A ( n638 ) , 
+    .Y ( net_PTECO_HOLD_NET554 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF568 ( .A ( n642 ) , 
+    .Y ( net_PTECO_HOLD_NET568 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF574 ( .A ( n720 ) , 
+    .Y ( net_PTECO_HOLD_NET574 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF592 ( .A ( n663 ) , 
+    .Y ( net_PTECO_HOLD_NET592 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF618 ( .A ( n624 ) , 
+    .Y ( net_PTECO_HOLD_NET618 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF627 ( .A ( n695 ) , 
+    .Y ( net_PTECO_HOLD_NET627 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF632 ( .A ( n612 ) , 
+    .Y ( net_PTECO_HOLD_NET632 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF650 ( .A ( n607 ) , 
+    .Y ( net_PTECO_HOLD_NET650 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF680 ( .A ( n592 ) , 
+    .Y ( net_PTECO_HOLD_NET680 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF698 ( .A ( n637 ) , 
+    .Y ( net_PTECO_HOLD_NET698 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF702 ( .A ( n664 ) , 
+    .Y ( net_PTECO_HOLD_NET702 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF706 ( .A ( n623 ) , 
+    .Y ( net_PTECO_HOLD_NET706 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF717 ( .A ( n584 ) , 
+    .Y ( net_PTECO_HOLD_NET717 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF722 ( .A ( n648 ) , 
+    .Y ( net_PTECO_HOLD_NET722 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF753 ( .A ( n626 ) , 
+    .Y ( net_PTECO_HOLD_NET753 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF757 ( .A ( n594 ) , 
+    .Y ( net_PTECO_HOLD_NET757 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF767 ( .A ( n604 ) , 
+    .Y ( net_PTECO_HOLD_NET767 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF769 ( .A ( n593 ) , 
+    .Y ( net_PTECO_HOLD_NET769 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF777 ( .A ( n609 ) , 
+    .Y ( net_PTECO_HOLD_NET777 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF799 ( .A ( n603 ) , 
+    .Y ( net_PTECO_HOLD_NET799 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF803 ( .A ( n621 ) , 
+    .Y ( net_PTECO_HOLD_NET803 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF805 ( .A ( n659 ) , 
+    .Y ( net_PTECO_HOLD_NET805 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF819 ( .A ( n589 ) , 
+    .Y ( net_PTECO_HOLD_NET819 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF820 ( .A ( n569 ) , 
+    .Y ( net_PTECO_HOLD_NET820 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF832 ( .A ( n590 ) , 
+    .Y ( net_PTECO_HOLD_NET832 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF844 ( .A ( n618 ) , 
+    .Y ( net_PTECO_HOLD_NET844 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF855 ( .A ( n565 ) , 
+    .Y ( net_PTECO_HOLD_NET855 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF873 ( .A ( n643 ) , 
+    .Y ( net_PTECO_HOLD_NET873 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF888 ( .A ( n605 ) , 
+    .Y ( net_PTECO_HOLD_NET888 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF893 ( .A ( n606 ) , 
+    .Y ( net_PTECO_HOLD_NET893 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF896 ( .A ( n615 ) , 
+    .Y ( net_PTECO_HOLD_NET896 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF900 ( .A ( n625 ) , 
+    .Y ( net_PTECO_HOLD_NET900 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF919 ( .A ( n571 ) , 
+    .Y ( net_PTECO_HOLD_NET919 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF920 ( .A ( n566 ) , 
+    .Y ( net_PTECO_HOLD_NET920 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF925 ( .A ( n599 ) , 
+    .Y ( net_PTECO_HOLD_NET925 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF930 ( .A ( dftopt1 ) , 
+    .Y ( net_PTECO_HOLD_NET930 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF938 ( .A ( n580 ) , 
+    .Y ( net_PTECO_HOLD_NET938 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF948 ( .A ( n627 ) , 
+    .Y ( net_PTECO_HOLD_NET948 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF958 ( .A ( n661 ) , 
+    .Y ( net_PTECO_HOLD_NET958 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF959 ( .A ( n717 ) , 
+    .Y ( net_PTECO_HOLD_NET959 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF965 ( .A ( n568 ) , 
+    .Y ( net_PTECO_HOLD_NET965 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF979 ( .A ( n577 ) , 
+    .Y ( net_PTECO_HOLD_NET979 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF980 ( .A ( n597 ) , 
+    .Y ( net_PTECO_HOLD_NET980 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF995 ( .A ( n620 ) , 
+    .Y ( net_PTECO_HOLD_NET995 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF998 ( .A ( n617 ) , 
+    .Y ( net_PTECO_HOLD_NET998 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1001 ( .A ( n718 ) , 
+    .Y ( net_PTECO_HOLD_NET1001 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1008 ( .A ( n616 ) , 
+    .Y ( net_PTECO_HOLD_NET1008 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1015 ( .A ( n574 ) , 
+    .Y ( net_PTECO_HOLD_NET1015 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1023 ( .A ( n596 ) , 
+    .Y ( net_PTECO_HOLD_NET1023 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1037 ( .A ( n614 ) , 
+    .Y ( net_PTECO_HOLD_NET1037 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1038 ( .A ( n595 ) , 
+    .Y ( net_PTECO_HOLD_NET1038 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1043 ( .A ( n619 ) , 
+    .Y ( net_PTECO_HOLD_NET1043 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1051 ( .A ( n640 ) , 
+    .Y ( net_PTECO_HOLD_NET1051 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1053 ( .A ( n608 ) , 
+    .Y ( net_PTECO_HOLD_NET1053 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1056 ( .A ( n581 ) , 
+    .Y ( net_PTECO_HOLD_NET1056 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1077 ( .A ( n572 ) , 
+    .Y ( net_PTECO_HOLD_NET1077 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1078 ( .A ( n591 ) , 
+    .Y ( net_PTECO_HOLD_NET1078 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1087 ( .A ( n622 ) , 
+    .Y ( net_PTECO_HOLD_NET1087 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1090 ( .A ( n669 ) , 
+    .Y ( net_PTECO_HOLD_NET1090 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1098 ( .A ( n586 ) , 
+    .Y ( net_PTECO_HOLD_NET1098 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1099 ( .A ( n600 ) , 
+    .Y ( net_PTECO_HOLD_NET1099 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1103 ( .A ( n573 ) , 
+    .Y ( net_PTECO_HOLD_NET1103 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1107 ( .A ( n570 ) , 
+    .Y ( net_PTECO_HOLD_NET1107 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1130 ( .A ( n610 ) , 
+    .Y ( net_PTECO_HOLD_NET1130 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1131 ( .A ( n564 ) , 
+    .Y ( net_PTECO_HOLD_NET1131 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1133 ( .A ( n611 ) , 
+    .Y ( net_PTECO_HOLD_NET1133 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1134 ( .A ( n578 ) , 
+    .Y ( net_PTECO_HOLD_NET1134 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1141 ( .A ( n575 ) , 
+    .Y ( net_PTECO_HOLD_NET1141 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1150 ( .A ( n588 ) , 
+    .Y ( net_PTECO_HOLD_NET1150 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1153 ( .A ( n567 ) , 
+    .Y ( net_PTECO_HOLD_NET1153 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1156 ( .A ( n641 ) , 
+    .Y ( net_PTECO_HOLD_NET1156 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1165 ( .A ( n587 ) , 
+    .Y ( net_PTECO_HOLD_NET1165 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1166 ( .A ( n579 ) , 
+    .Y ( net_PTECO_HOLD_NET1166 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1182 ( .A ( n576 ) , 
+    .Y ( net_PTECO_HOLD_NET1182 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1183 ( .A ( n563 ) , 
+    .Y ( net_PTECO_HOLD_NET1183 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1185 ( .A ( n688 ) , 
+    .Y ( net_PTECO_HOLD_NET1185 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1186 ( .A ( n687 ) , 
+    .Y ( net_PTECO_HOLD_NET1186 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1187 ( .A ( n677 ) , 
+    .Y ( net_PTECO_HOLD_NET1187 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1188 ( .A ( n685 ) , 
+    .Y ( net_PTECO_HOLD_NET1188 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1189 ( .A ( n712 ) , 
+    .Y ( net_PTECO_HOLD_NET1189 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1190 ( .A ( n684 ) , 
+    .Y ( net_PTECO_HOLD_NET1190 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1191 ( .A ( n683 ) , 
+    .Y ( net_PTECO_HOLD_NET1191 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1192 ( .A ( n686 ) , 
+    .Y ( net_PTECO_HOLD_NET1192 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1193 ( .A ( n682 ) , 
+    .Y ( net_PTECO_HOLD_NET1193 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1194 ( .A ( n681 ) , 
+    .Y ( net_PTECO_HOLD_NET1194 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1195 ( .A ( n679 ) , 
+    .Y ( net_PTECO_HOLD_NET1195 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1196 ( .A ( n673 ) , 
+    .Y ( net_PTECO_HOLD_NET1196 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1197 ( .A ( n678 ) , 
+    .Y ( net_PTECO_HOLD_NET1197 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1198 ( .A ( n675 ) , 
+    .Y ( net_PTECO_HOLD_NET1198 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1199 ( .A ( u_cic_u_combs_u_comb1_x_delay[0] ) , 
+    .Y ( net_PTECO_HOLD_NET1199 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1200 ( .A ( u_cic_u_combs_u_comb2_x_delay[0] ) , 
+    .Y ( net_PTECO_HOLD_NET1200 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1201 ( .A ( n680 ) , 
+    .Y ( net_PTECO_HOLD_NET1201 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1202 ( .A ( n674 ) , 
+    .Y ( net_PTECO_HOLD_NET1202 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1203 ( .A ( n676 ) , 
+    .Y ( net_PTECO_HOLD_NET1203 ) ) ;
+DELLN1X2_RVT U_PTECO_HOLD_BUF1204 ( .A ( u_cic_u_combs_u_comb3_x_delay[0] ) , 
+    .Y ( net_PTECO_HOLD_NET1204 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1207 ( .A ( n524 ) , 
+    .Y ( net_PTECO_HOLD_NET1207 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1208 ( .A ( n528 ) , 
+    .Y ( net_PTECO_HOLD_NET1208 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1209 ( .A ( n540 ) , 
+    .Y ( net_PTECO_HOLD_NET1209 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1211 ( .A ( n532 ) , 
+    .Y ( net_PTECO_HOLD_NET1211 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1212 ( .A ( n536 ) , 
+    .Y ( net_PTECO_HOLD_NET1212 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1214 ( .A ( n520 ) , 
+    .Y ( net_PTECO_HOLD_NET1214 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1216 ( .A ( n516 ) , 
+    .Y ( net_PTECO_HOLD_NET1216 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1221 ( .A ( u_cic_u_combs_comb3[0] ) , 
+    .Y ( net_PTECO_HOLD_NET1221 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1231 ( .A ( dftopt24 ) , 
+    .Y ( net_PTECO_HOLD_NET1231 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1239 ( .A ( u_cic_u_combs_comb3[11] ) , 
+    .Y ( net_PTECO_HOLD_NET1239 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1241 ( .A ( u_cic_u_combs_comb1[3] ) , 
+    .Y ( net_PTECO_HOLD_NET1241 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1244 ( .A ( u_cic_u_combs_comb3[1] ) , 
+    .Y ( net_PTECO_HOLD_NET1244 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1245 ( .A ( u_cic_u_combs_comb2[11] ) , 
+    .Y ( net_PTECO_HOLD_NET1245 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1247 ( .A ( u_cic_u_combs_comb3[10] ) , 
+    .Y ( net_PTECO_HOLD_NET1247 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1248 ( .A ( u_cic_int4[4] ) , 
+    .Y ( net_PTECO_HOLD_NET1248 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1249 ( .A ( u_cic_u_combs_comb3[12] ) , 
+    .Y ( net_PTECO_HOLD_NET1249 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1252 ( .A ( u_cic_u_combs_comb2[12] ) , 
+    .Y ( net_PTECO_HOLD_NET1252 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1253 ( .A ( u_cic_u_combs_comb1[2] ) , 
+    .Y ( net_PTECO_HOLD_NET1253 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1255 ( .A ( u_cic_int4[9] ) , 
+    .Y ( net_PTECO_HOLD_NET1255 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1257 ( .A ( u_cic_u_combs_comb1[13] ) , 
+    .Y ( net_PTECO_HOLD_NET1257 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1261 ( .A ( u_cic_u_combs_comb3[2] ) , 
+    .Y ( net_PTECO_HOLD_NET1261 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1264 ( .A ( u_cic_u_combs_comb1[16] ) , 
+    .Y ( net_PTECO_HOLD_NET1264 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1267 ( .A ( u_cic_u_combs_comb3[9] ) , 
+    .Y ( net_PTECO_HOLD_NET1267 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1268 ( .A ( u_cic_u_combs_comb1[4] ) , 
+    .Y ( net_PTECO_HOLD_NET1268 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1270 ( .A ( u_cic_int4[2] ) , 
+    .Y ( net_PTECO_HOLD_NET1270 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1272 ( .A ( u_cic_int4[5] ) , 
+    .Y ( net_PTECO_HOLD_NET1272 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1273 ( .A ( u_cic_u_combs_comb3[7] ) , 
+    .Y ( net_PTECO_HOLD_NET1273 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1274 ( .A ( u_cic_u_combs_comb1[10] ) , 
+    .Y ( net_PTECO_HOLD_NET1274 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1276 ( .A ( u_cic_u_combs_comb1[12] ) , 
+    .Y ( net_PTECO_HOLD_NET1276 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1278 ( .A ( u_cic_int4[8] ) , 
+    .Y ( net_PTECO_HOLD_NET1278 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1279 ( .A ( u_cic_u_combs_comb1[11] ) , 
+    .Y ( net_PTECO_HOLD_NET1279 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1280 ( .A ( u_cic_int4[3] ) , 
+    .Y ( net_PTECO_HOLD_NET1280 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1282 ( .A ( u_cic_u_combs_comb2[1] ) , 
+    .Y ( net_PTECO_HOLD_NET1282 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1283 ( .A ( u_cic_u_combs_comb1[7] ) , 
+    .Y ( net_PTECO_HOLD_NET1283 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1286 ( .A ( u_cic_u_combs_comb3[8] ) , 
+    .Y ( net_PTECO_HOLD_NET1286 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1287 ( .A ( u_cic_u_combs_comb3[13] ) , 
+    .Y ( net_PTECO_HOLD_NET1287 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1289 ( .A ( u_cic_u_combs_comb2[9] ) , 
+    .Y ( net_PTECO_HOLD_NET1289 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1290 ( .A ( u_cic_u_combs_comb2[2] ) , 
+    .Y ( net_PTECO_HOLD_NET1290 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1300 ( .A ( u_cic_u_combs_comb3[15] ) , 
+    .Y ( net_PTECO_HOLD_NET1300 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1303 ( .A ( u_cic_u_combs_comb1[5] ) , 
+    .Y ( net_PTECO_HOLD_NET1303 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1305 ( .A ( u_cic_u_combs_comb1[6] ) , 
+    .Y ( net_PTECO_HOLD_NET1305 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1307 ( .A ( u_cic_u_combs_comb2[3] ) , 
+    .Y ( net_PTECO_HOLD_NET1307 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1309 ( .A ( u_cic_u_combs_comb2[13] ) , 
+    .Y ( net_PTECO_HOLD_NET1309 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1312 ( .A ( u_cic_u_combs_comb2[15] ) , 
+    .Y ( net_PTECO_HOLD_NET1312 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1314 ( .A ( u_cic_u_combs_comb3[5] ) , 
+    .Y ( net_PTECO_HOLD_NET1314 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1316 ( .A ( u_cic_u_combs_comb2[16] ) , 
+    .Y ( net_PTECO_HOLD_NET1316 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1317 ( .A ( u_cic_u_combs_comb2[10] ) , 
+    .Y ( net_PTECO_HOLD_NET1317 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1319 ( .A ( u_cic_int4[7] ) , 
+    .Y ( net_PTECO_HOLD_NET1319 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1321 ( .A ( u_cic_u_combs_comb1[15] ) , 
+    .Y ( net_PTECO_HOLD_NET1321 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1322 ( .A ( u_cic_u_combs_comb3[16] ) , 
+    .Y ( net_PTECO_HOLD_NET1322 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1323 ( .A ( u_cic_u_combs_comb2[7] ) , 
+    .Y ( net_PTECO_HOLD_NET1323 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1325 ( .A ( u_cic_u_combs_comb1[14] ) , 
+    .Y ( net_PTECO_HOLD_NET1325 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1328 ( .A ( u_cic_u_combs_comb2[5] ) , 
+    .Y ( net_PTECO_HOLD_NET1328 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1329 ( .A ( u_cic_u_combs_comb2[14] ) , 
+    .Y ( net_PTECO_HOLD_NET1329 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1331 ( .A ( u_cic_u_combs_comb3[6] ) , 
+    .Y ( net_PTECO_HOLD_NET1331 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1335 ( .A ( u_cic_u_combs_comb1[9] ) , 
+    .Y ( net_PTECO_HOLD_NET1335 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1338 ( .A ( u_cic_u_combs_comb3[14] ) , 
+    .Y ( net_PTECO_HOLD_NET1338 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1346 ( .A ( u_cic_u_combs_comb1[8] ) , 
+    .Y ( net_PTECO_HOLD_NET1346 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1348 ( .A ( dftopt7 ) , 
+    .Y ( net_PTECO_HOLD_NET1348 ) ) ;
+NBUFFX2_RVT U_PTECO_HOLD_BUF1349 ( .A ( u_cic_int4[6] ) , 
+    .Y ( net_PTECO_HOLD_NET1349 ) ) ;
+DELLN2X2_RVT U_PTECO_HOLD_BUF1353 ( .A ( net_PTECO_HOLD_NET1353 ) , 
+    .Y ( scan_out ) ) ;
 endmodule
 
 

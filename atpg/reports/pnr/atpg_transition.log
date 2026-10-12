@@ -8,21 +8,21 @@ read_netlist $SAED32_V -library
 read_netlist $NETLIST
  Begin reading netlist ( pnr/output/filtro_pdm_pnr.v )...
  End parsing Verilog file pnr/output/filtro_pdm_pnr.v with 0 errors.
- End reading netlist: #modules=2, top=filtro_pdm, #lines=28087, CPU_time=0.07 sec, Memory=4MB
+ End reading netlist: #modules=2, top=filtro_pdm, #lines=32145, CPU_time=0.08 sec, Memory=5MB
 run_build_model filtro_pdm
  ------------------------------------------------------------------------------
  Begin build model for topcut = filtro_pdm ...
  ------------------------------------------------------------------------------
- There were 49597 primitives and 176 faultable pins removed during model optimizations
+ There were 49596 primitives and 176 faultable pins removed during model optimizations
  Warning: Rule B7 (undriven module output pin) was violated 20 times.
  Warning: Rule B8 (unconnected module input pin) was violated 24 times.
  Warning: Rule B9 (undriven module internal net) was violated 24 times.
  Warning: Rule B10 (unconnected module internal net) was violated 220 times.
  Warning: Rule N20 (underspecified UDP) was violated 2 times.
- End build model: #primitives=36098, CPU_time=0.07 sec, Memory=13MB
+ End build model: #primitives=37452, CPU_time=0.09 sec, Memory=14MB
  ------------------------------------------------------------------------------
  Begin learning analyses...
- End learning analyses, total learning CPU time=0.25 sec.
+ End learning analyses, total learning CPU time=0.26 sec.
  ------------------------------------------------------------------------------
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
@@ -57,7 +57,7 @@ run_drc $SPF
  ------------------------------------------------------------------------------
  Begin DRC dependent learning...
  Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.00 sec
- DRC dependent learning completed, CPU time=0.01 sec.
+ DRC dependent learning completed, CPU time=0.02 sec.
  ------------------------------------------------------------------------------
  Begin set operation for load unload constant latches...
  Set operation for load unload constant latches completed, CPU time=0.00 sec.
@@ -72,7 +72,7 @@ run_drc $SPF
 # ------------------------------------------------------------
 set_faults -model transition
 add_faults -all
- 64606 faults were added to fault list.
+ 70022 faults were added to fault list.
 # Limite de tentativas por falha (padrao: 10).
 # Com o padrao, ~1.400 falhas foram abandonadas (abort) e
 # ficaram como "not detected". Um limite maior permite ao
@@ -94,36 +94,36 @@ run_atpg -auto_compression
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=59250, abort_limit=200...
+ Begin deterministic ATPG: #uncollapsed_faults=59350, abort_limit=200...
  Optimized clock launch transition fault ATPG is enabled.
- 32          46139  13111        0/0/21    79.71%     12.76
- 62           3051  10051        9/0/56    84.44%     13.39
- 93           5917   4130       9/4/283    93.60%     20.66
- 125          2165   1965       9/4/630    96.95%     25.81
- 143           380   1585      9/4/1194    97.54%     32.06
+ 32          47592  11758        0/0/22    83.21%      7.59
+ 62           4745   7004        9/0/57    90.00%      9.78
+ 92           3973   3027       9/4/367    95.67%     19.46
+ 124          1767   1260       9/4/823    98.19%     25.84
+ 131            90   1170      9/4/1205    98.32%     29.79
  
    Uncollapsed Transition Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      63008
+ Detected                         DT      68839
  Possibly detected                PT          0
  Undetectable                     UD          9
  ATPG untestable                  AU          4
- Not detected                     ND       1585
+ Not detected                     ND       1170
  -----------------------------------------------
- total faults                             64606
- test coverage                            97.54%
+ total faults                             70022
+ test coverage                            98.32%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                         143
+ #internal patterns                         131
      #basic_scan patterns                     1
-     #fast_sequential patterns              142
+     #fast_sequential patterns              130
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                           32.07
+ Total CPU time                           29.79
  -----------------------------------------------
 report_summaries > $REP/transition_summary.rpt
 # ------------------------------------------------------------
@@ -131,8 +131,8 @@ report_summaries > $REP/transition_summary.rpt
 # ------------------------------------------------------------
 write_patterns $OUT/filtro_pdm_transition.stil \
     -format stil -replace
- Patterns written reference 575 V statements, generating 192239 test cycles
- End writing file 'filtro_pdm_transition.stil' with 143 patterns, File_size = 488119, CPU_time = 0.0 sec.
+ Patterns written reference 527 V statements, generating 176219 test cycles
+ End writing file 'filtro_pdm_transition.stil' with 131 patterns, File_size = 453211, CPU_time = 0.0 sec.
 puts "ATPG transition: script executado ate o final."
 ATPG transition: script executado ate o final.
 puts "Cobertura em $REP/transition_summary.rpt"

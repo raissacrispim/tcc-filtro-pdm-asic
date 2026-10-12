@@ -19,7 +19,7 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-Time Started: 2026-10-12 10:21:23
+Time Started: 2026-10-12 10:48:28
 Running on: srv-microeletronica3 4.18.0-553.132.1.el8_10.x86_64
 
 -------------
@@ -47,9 +47,9 @@ Parsing runset "saed32nm_1p9m_lvs_rules_local.rs"
 Using 'ssh' as remote login program.
 
 Loaded runset from cache: /home/raissa.crispim/.icvrscache/c52178185207cfd616661a2d0f5c1134-5BF62B49-44FF-4AAF-88EE-1493D5C21EC4-srv-microeletronica3-4016166.rscache
-Cached Runset Compile Time=0:00:03 User=3.02 Sys=0.08 Mem=0.922 GB
+Cached Runset Compile Time=0:00:03 User=2.93 Sys=0.09 Mem=0.916 GB
 
-Virtual Machine Init Time=0:00:01 User=0.01 Sys=0.00 Mem=0.922 GB
+Virtual Machine Init Time=0:00:00 User=0.01 Sys=0.00 Mem=0.916 GB
 
 
 DP Connect: Starting Redis server
@@ -60,7 +60,7 @@ Selecting "srv-microeletronica3" as Primary host
 
 Started 3 cluster nodes
 Fully initialized cluster with 3 nodes.
-System Startup Time=0:00:06 User=0.02 Sys=0.11 Mem=0.922 GB
+System Startup Time=0:00:06 User=0.02 Sys=0.10 Mem=0.916 GB
 
 
 Command execution begins.  Details recorded in the summary and log files:
@@ -69,32 +69,32 @@ Command execution begins.  Details recorded in the summary and log files:
 
 Running ...
   [0:00:06][0%]   Total: 2 CPUs on 1 host
-  [0:00:08][1%]   
-  [0:00:08][2%]   
+  [0:00:09][1%]   
+  [0:00:09][2%]   
   [0:00:12][3%]   Rules: 0/6, Rules with Violations: 0, Total Violations: 0
   [0:00:12][4%]   
   [0:00:12][5%]   
 saed32nm_1p9m_lvs_rules_local.rs:1457: warning: No equiv pair is provided. This can lead to non-optimal LVS performance.
-  [0:00:13][10%]  Rules: 4/6, Rules with Violations: 0, Total Violations: 0
-  [0:00:13][15%]  
+  [0:00:14][10%]  Rules: 4/6, Rules with Violations: 0, Total Violations: 0
+  [0:00:14][15%]  
   [0:00:14][20%]  
   [0:00:14][25%]  
   [0:00:14][30%]  
   [0:00:16][35%]  
-  [0:00:27][40%]  
+  [0:00:28][40%]  
   [0:00:28][45%]  
-  [0:00:28][50%]  
-  [0:00:28][55%]  
-  [0:00:29][60%]  
-  [0:00:30][65%]  
-  [0:00:31][70%]  Rules: 6/6, Rules with Violations: 0, Total Violations: 0
-  [0:00:31][75%]  
-  [0:00:33][80%]  Rules: 6/6, Rules with Violations: 1, Total Violations: 1
-  [0:00:33][85%]  
-  [0:00:34][90%]  
-  [0:00:37][95%]  
+  [0:00:29][50%]  
+  [0:00:29][55%]  
+  [0:00:30][60%]  
+  [0:00:32][65%]  
+  [0:00:32][70%]  
+  [0:00:32][75%]  
+  [0:00:34][80%]  Rules: 5/6, Rules with Violations: 1, Total Violations: 1
+  [0:00:35][85%]  Rules: 6/6, Rules with Violations: 1, Total Violations: 1
+  [0:00:36][90%]  
+  [0:00:40][95%]  
 Comparing schematic and layout netlists.
-LVS compare start time    : 2026-10-12 10:22:13
+LVS compare start time    : 2026-10-12 10:49:21
   ICV_Compare [0:00:00][0%]
   ICV_Compare [0:00:00][5%]
   ICV_Compare [0:00:00][10%]
@@ -102,39 +102,39 @@ LVS compare start time    : 2026-10-12 10:22:13
   ICV_Compare [0:00:00][20%]
   ICV_Compare [0:00:00][25%]
   ICV_Compare [0:00:00][30%]
-  ICV_Compare [0:00:03][100%]
-LVS compare end time      : 2026-10-12 10:22:17
-Total runtime for LVS compare Time=0:00:03  User=4.51 Sys=0.16 Mem=0.115 GB
-   Check Time=0:00:04  User=0.02 Sys=0.01 Mem=0.027 GB
+  ICV_Compare [0:00:05][100%]
+LVS compare end time      : 2026-10-12 10:49:27
+Total runtime for LVS compare Time=0:00:05  User=6.73 Sys=0.28 Mem=0.180 GB
+   Check Time=0:00:06  User=0.01 Sys=0.01 Mem=0.029 GB
 
-  [0:00:49][100%] Rules: 6/6, Rules with Violations: 1, Total Violations: 1
+  [0:00:55][100%] Rules: 6/6, Rules with Violations: 1, Total Violations: 1
 
 Completing error storage...
-  Overall error storage time: User=0.00 Sys=0.00 Mem=0.001 GB
+  Overall error storage time: User=0.01 Sys=0.00 Mem=0.001 GB
 
 Generating filtro_pdm.LAYOUT_ERRORS...
   Generation Time=0:00:00  User=0.00 Sys=0.00 Mem=0.001 GB
 
 
 -------------
-IC Validator Run: Time=0:00:55
+IC Validator Run: Time=0:01:00
 DP Connect: Shutting down Redis server
 
 IC Validator Machine Memory Report
-srv-microeletronica3 : Average = 1.591 GB, Peak = 1.591 GB
+srv-microeletronica3 : Average = 0.959 GB, Peak = 1.698 GB
 
-Overall Disk Usage Disk=0.034 GB
-Network Disk Usage Peak=0.014 GB (no group)
-Group File Disk Usage Peak=0.020 GB
+Overall Disk Usage Disk=0.036 GB
+Network Disk Usage Peak=0.011 GB (no group)
+Group File Disk Usage Peak=0.025 GB
 
 Allocated Hosts = 1
 Allocated CPUs = 2
 Allocated CPU Time = 0.0 CPU hours
 
-Overall engine Time=0:00:55 Highest command Mem=0.464 GB
+Overall engine Time=0:01:00 Highest command Mem=0.563 GB
 
-Overall Manager Mem=1.513 GB
+Overall Manager Mem=1.419 GB
 
-Time Ended: 2026-10-12 10:22:25
+Time Ended: 2026-10-12 10:49:35
 
 IC Validator is done.

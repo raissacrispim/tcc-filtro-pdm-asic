@@ -2,32 +2,53 @@ Information: Using 1 threads for LVS
 [Check Short] Stage 1	Elapsed =    0:00:00, CPU =    0:00:00
 [Check Short] Stage 1-2	Elapsed =    0:00:00, CPU =    0:00:00
 [Check Short] Stage 2	Elapsed =    0:00:00, CPU =    0:00:00
-[Check Short] Stage 2-2	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Short] Stage 3	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Short] End	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] Init	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 10% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 20% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 30% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 40% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 50% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 60% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 70% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 80% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 90% 	Elapsed =    0:00:02, CPU =    0:00:02
+Detected more than 20 short violations. Skip checking short violations
+[Check Short] Stage 3	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Short] End	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] Init	Elapsed =    0:00:01, CPU =    0:00:01
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Net2: u_fir/ZCTSNET_19. BBox: (37.3300 13.5180)(37.3900 13.5510). Layer: M1. (RT-586)
+Information: Detected open violation for Net VDD. BBox: (7.8000 7.8000)(232.6000 229.5600). (RT-585)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_61__2_. BBox: (36.8030 13.7660)(36.8510 13.7800). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_61__2_. BBox: (36.6970 13.6240)(36.8510 13.7640). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (37.6390 12.9190)(37.6890 12.9860). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (38.0190 13.1500)(38.2370 13.2000). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (37.7910 12.9190)(37.8410 12.9790). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (37.7150 13.0500)(38.3730 13.2480). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (37.5630 13.3140)(37.6130 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (36.9550 13.0450)(37.3850 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (37.8670 13.0450)(38.4650 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (36.8030 12.9190)(39.1330 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (37.0010 13.0960)(37.0050 13.2480). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (37.1070 13.1470)(37.1730 13.2480). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Cell2: u_fir/delay_reg_1__2_. BBox: (36.5240 12.9190)(36.5470 12.9790). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Net2: VDD. BBox: (37.5630 13.3140)(37.6130 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Net2: VDD. BBox: (37.8670 13.3140)(37.9170 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Net2: VDD. BBox: (36.9550 13.3140)(37.0050 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Net2: VDD. BBox: (36.8030 13.3140)(39.1330 13.3740). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Net2: u_fir/net_PTECO_HOLD_NET490. BBox: (36.7220 13.7450)(36.7340 13.7640). Layer: M1. (RT-586)
+Information: Detected short violation. Cell1: u_fir/U_PTECO_HOLD_BUF1091. Net2: u_fir/ZCTSNET_19. BBox: (37.3300 13.4410)(37.3900 13.4680). Layer: M1. (RT-586)
+[Check Net] 10% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 20% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 30% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 40% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 50% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 60% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 70% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 80% 	Elapsed =    0:00:01, CPU =    0:00:01
+[Check Net] 90% 	Elapsed =    0:00:01, CPU =    0:00:01
 [Check Net] All nets are submitted.
 [Check Net] 100%	Elapsed =    0:00:02, CPU =    0:00:02
-Information: Detected short violation. Net1: u_fir/intadd_14_SUM_0_. Net2: u_fir/intadd_3_SUM_0_. BBox: (10.8570 99.6520)(10.9670 99.7080). Layer: M2. (RT-586)
-Information: Detected short violation. Net1: u_fir/intadd_14_SUM_0_. Net2: u_fir/intadd_3_SUM_0_. BBox: (10.8840 99.6520)(10.9400 99.7080). Layer: M2. (RT-586)
+Information: Detected open violation for Net VSS. BBox: (7.4000 7.4000)(233.0000 229.9600). (RT-585)
 
 ===============================================================
     Maximum number of violations is set to 20
     Abort checking when more than 20 violations are found
     All violations might not be found.
 ===============================================================
-Total number of input nets is 12045.
-Total number of short violations is 2.
-Total number of open nets is 0.
+Total number of input nets is 13399.
+Total number of short violations is 20.
+Total number of open nets is 2.
+Open nets are VDD VSS 
 Total number of floating route violations is 0.
 
 Elapsed =    0:00:02, CPU =    0:00:02
