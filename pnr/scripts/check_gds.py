@@ -106,10 +106,15 @@ def main():
     print(f"Arquivo        : {sys.argv[1]}")
     print(f"Biblioteca     : {biblioteca}")
     print(f"Celulas        : {len(celulas)}")
-    print(f"Topo           : {', '.join(topos) if topos else '(nenhum)'}")
+    principais = [t for t in topos if celulas[t]["refs"]]
+    print(f"Topo           : {', '.join(principais) if principais else '(nenhum)'}")
+    print(f"Celulas sem uso: {len(topos) - len(principais)} (biblioteca mesclada)")
     print(f"Camadas GDS    : {sorted(camadas)}")
 
-    for topo in topos:
+    # Celulas da biblioteca nao usadas tambem aparecem como "topo"
+    # (o GDS das standard cells e mesclado inteiro). Detalha apenas
+    # as que instanciam outras celulas.
+    for topo in [t for t in topos if celulas[t]["refs"]]:
         c = celulas[topo]
         print()
         print(f"Celula de topo '{topo}':")

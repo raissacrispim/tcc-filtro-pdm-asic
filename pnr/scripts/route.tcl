@@ -27,13 +27,16 @@ open_block filtro_pdm/cts
 # ------------------------------------------------------------
 # 2. Camadas de roteamento de sinais
 #
-# Sinais em M1-M8. M9 e reservada ao anel de alimentacao
-# (vertical) e MRDL e a camada de redistribuicao para pads
-# (largura minima de 2 um), inadequada para sinais.
+# Sinais em M2-M8.
+# M1 fica restrita aos pinos e rails das celulas: trechos
+# curtos de M1 roteados com 0,05 um violaram a regra M1.W.2.1
+# do DRC (largura minima de 0,06 um junto a M1 largo).
+# M9 e reservada ao anel de alimentacao (vertical) e MRDL e a
+# camada de redistribuicao para pads (largura minima de 2 um).
 # ------------------------------------------------------------
 
 set_ignored_layers \
-    -min_routing_layer M1 \
+    -min_routing_layer M2 \
     -max_routing_layer M8
 
 report_ignored_layers

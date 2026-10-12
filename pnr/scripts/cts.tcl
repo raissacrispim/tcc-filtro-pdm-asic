@@ -32,9 +32,12 @@ open_block filtro_pdm/place
 # aqui porque o bloco foi criado antes dessa restricao).
 set_max_transition 0.50 [current_design]
 
-# Camadas de roteamento de sinais e do clock: M1-M8
-# (M9: anel de alimentacao; MRDL: redistribuicao para pads)
-set_ignored_layers -min_routing_layer M1 -max_routing_layer M8
+# Camadas de roteamento de sinais e do clock: M2-M8
+# M1: somente pinos e rails das celulas. Trechos curtos de M1
+#     roteados com 0,05 um violam a regra M1.W.2.1 do DRC
+#     (largura minima de 0,06 um junto a M1 largo).
+# M9: anel de alimentacao; MRDL: redistribuicao para pads.
+set_ignored_layers -min_routing_layer M2 -max_routing_layer M8
 
 # Permite o uso das celulas TIE (TIEH/TIEL) caso a otimizacao
 # gere redes constantes (aviso OPT-200 no placement).

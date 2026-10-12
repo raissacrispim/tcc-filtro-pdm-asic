@@ -46,21 +46,33 @@ rm -rf "$RAIZ/verif/run_lvs"
 mkdir -p "$RAIZ/verif/run_lvs" "$RAIZ/verif/reports/lvs"
 cd "$RAIZ/verif/run_lvs"
 
+# O runset do PDK referencia o caminho da maquina onde o PDK foi
+# gerado (/remote/exchange/.../icv/lvs/Include/functions.rs).
+# Uma copia local aponta para o Include/ instalado no servidor.
+sed "s#/remote/exchange/synopsys/SAED32_PDK/icv/lvs#$PDK/tech/icv_lvs#g" \
+    "$RUNSET" > saed32nm_1p9m_lvs_rules_local.rs
+
+if grep -q "/remote/exchange" saed32nm_1p9m_lvs_rules_local.rs; then
+    echo "Aviso: ainda ha caminhos /remote/exchange no runset:"
+    grep -n "/remote/exchange" saed32nm_1p9m_lvs_rules_local.rs
+fi
+
 # 1. Netlist Verilog + CDL das celulas -> netlist do ICV
 icv_nettran \
     -verilog "$NETLIST" \
     -sp "$CDL" \
     -outName $TOPO.icv.net \
+    -wireLog icv_nettran_wires.log \
     2>&1 | tee icv_nettran.log
 
 # 2. Comparacao layout x netlist
 icv -i "$GDS" -c $TOPO -f GDSII \
     -s $TOPO.icv.net -sf ICV -stc $TOPO \
     -I "$PDK/tech/icv_lvs" \
-    "$RUNSET" \
+    saed32nm_1p9m_lvs_rules_local.rs \
     2>&1 | tee icv_lvs.log
 
-for arq in $TOPO.LVS_ERRORS $TOPO.RESULTS icv_nettran.log icv_lvs.log; do
+for arq in $TOPO.LVS_ERRORS $TOPO.RESULTS icv_nettran.log icv_nettran_wires.log icv_lvs.log; do
     [ -f "$arq" ] && cp "$arq" "$RAIZ/verif/reports/lvs/"
 done
 
