@@ -8,11 +8,12 @@
 # Chamado por sta/scripts/run_sta.sh, que define:
 #   STA_CORNER  nome do corner da biblioteca (ex.: ss0p75v125c)
 #   STA_SPEF    parasitas extraidos (Cmax ou Cmin)
+#   STA_ECO     1 = gerar ECO de hold (sta/eco/hold_eco.tcl)
 #
 # Entradas:
 #   pnr/output/filtro_pdm_pnr.v          netlist pos-layout
 #   pnr/output/filtro_pdm.C*_25.spef     parasitas (finish.tcl)
-#   pnr/constraints/*.sdc                mesmas restricoes do fluxo
+#   pnr/output/filtro_pdm_pnr.sdc        restricoes exportadas pelo FC
 # ============================================================
 
 set CORNER $env(STA_CORNER)
@@ -43,10 +44,13 @@ link_design
 read_parasitics -format SPEF $SPEF
 report_annotated_parasitics > $REP/parasitas.rpt
 
-read_sdc pnr/constraints/filtro_pdm_physical.sdc
-read_sdc pnr/constraints/filtro_pdm_dft.sdc
-
-set_propagated_clock [all_clocks]
+# SDC exportado pelo Fusion Compiler apos o CTS: alem das
+# restricoes originais, contem a latencia do clock para os
+# caminhos de E/S (set_clock_latency). Com o SDC original, as
+# entradas eram lancadas no instante 0 enquanto o clock chega
+# aos flip-flops ~0,12 ns depois, gerando falsas violacoes de
+# hold nos caminhos scan_in/scan_en -> registradores.
+read_sdc pnr/output/filtro_pdm_pnr.sdc
 
 update_timing -full
 
@@ -66,6 +70,31 @@ report_timing -delay_type min -max_paths 10 \
 report_constraint -all_violators > $REP/violadores.rpt
 
 report_clock_timing -type skew > $REP/clock_skew.rpt
+
+# ------------------------------------------------------------
+# 4. ECO de hold (opcional)
+#
+# Insere buffers/celulas de atraso nos caminhos com hold
+# violado e grava os comandos para o Fusion Compiler. A folga
+# de setup e grande (> 50 ns) em todos os corners, portanto o
+# atraso inserido nao compromete o setup.
+# ------------------------------------------------------------
+
+if {[info exists env(STA_ECO)] && $env(STA_ECO) eq "1"} {
+    file mkdir sta/eco
+    set BUFS {}
+    foreach nome {DELLN1X2_RVT DELLN2X2_RVT NBUFFX2_RVT} {
+        if {[sizeof_collection [get_lib_cells -quiet */$nome]] > 0} {
+            lappend BUFS $nome
+        }
+    }
+    puts "ECO de hold com: $BUFS"
+    fix_eco_timing -type hold -methods {size_cell insert_buffer} \
+        -buffer_list $BUFS
+    report_global_timing > $REP/global_timing_apos_eco.rpt
+    write_changes -format icc2tcl -output sta/eco/hold_eco.tcl
+    puts "ECO gravado: sta/eco/hold_eco.tcl"
+}
 
 # Resumo no terminal
 set pior_setup [get_attribute \

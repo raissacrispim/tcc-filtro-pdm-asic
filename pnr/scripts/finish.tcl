@@ -68,6 +68,19 @@ proc maior_drive {ref} {
     return ""
 }
 
+# Posiciona as celulas alteradas/inseridas e refaz as ligacoes
+proc posiciona_e_roteia_eco {} {
+    if {[catch {place_eco_cells -eco_changed_cells -legalize_only} msg]} {
+        puts "Aviso: place_eco_cells ($msg)"
+        if {[catch {legalize_placement -incremental} msg]} {
+            puts "Aviso: legalize_placement -incremental ($msg)"
+            legalize_placement
+        }
+    }
+    route_eco
+    connect_pg_net -automatic
+}
+
 # Pinos que dirigem redes com capacitancia maxima violada
 proc pinos_max_cap {arquivo} {
     report_constraints -all_violators -max_capacitance > $arquivo
@@ -97,24 +110,62 @@ for {set rodada 1} {$rodada <= 3} {incr rodada} {
         if {[sizeof_collection $celula] == 0} { continue }
         set ref  [get_attribute $celula ref_name]
         set nova [maior_drive $ref]
-        if {$nova eq ""} {
-            puts "  $pino ($ref): sem tamanho maior disponivel"
+        if {$nova ne ""} {
+            size_cell $celula $nova
+            puts "  [get_object_name $celula]: $ref -> [get_object_name $nova]"
+            lappend trocadas [get_object_name $celula]
             continue
         }
-        size_cell $celula $nova
-        puts "  [get_object_name $celula]: $ref -> [get_object_name $nova]"
-        lappend trocadas [get_object_name $celula]
+        # Celula ja no maior tamanho (ex.: FADDX2): um buffer
+        # isola a rede, e a celula passa a dirigir so o buffer
+        set rede [get_nets -quiet -of_objects [get_pins $pino]]
+        if {[catch {add_buffer -lib_cell [get_lib_cells */NBUFFX4_RVT] \
+                $rede} msg]} {
+            puts "  $pino ($ref): buffer nao inserido ($msg)"
+        } else {
+            puts "  [get_object_name $rede]: buffer NBUFFX4 inserido"
+            lappend trocadas [get_object_name $rede]
+        }
     }
 
     if {[llength $trocadas] == 0} { break }
 
-    if {[catch {legalize_placement -incremental} msg]} {
-        puts "Aviso: legalize_placement -incremental ($msg)"
-        legalize_placement
-    }
-    route_eco
-    connect_pg_net -automatic
+    posiciona_e_roteia_eco
 }
+
+
+# ------------------------------------------------------------
+# 1c. Correcao de hold nos corners extremos (ECO do PrimeTime)
+#
+# O P&R otimizou o hold somente no corner tipico. A analise
+# do PrimeTime no corner rapido (ff0p95vn40c) gera, com
+# "sta/scripts/run_sta.sh eco", a lista de mudancas
+# sta/eco/hold_eco.tcl (buffers/celulas de atraso). Se o
+# arquivo existir, as mudancas sao aplicadas aqui.
+# ------------------------------------------------------------
+
+set HOLD_ECO sta/eco/hold_eco.tcl
+
+if {[file exists $HOLD_ECO]} {
+    puts "Aplicando ECO de hold: $HOLD_ECO"
+    source -echo $HOLD_ECO
+    posiciona_e_roteia_eco
+} else {
+    puts "ECO de hold nao encontrado ($HOLD_ECO): etapa ignorada."
+}
+
+
+# ------------------------------------------------------------
+# 1d. Limpeza de DRC do roteamento apos os ECOs
+#
+# O route_eco liga as celulas alteradas, mas pode deixar
+# curtos ou espacamentos violados (na primeira execucao:
+# 1 curto em M2 entre duas redes, que reprovou o DRC e o LVS).
+# O detail route incremental corrige essas violacoes.
+# ------------------------------------------------------------
+
+route_detail -incremental true -initial_drc_from_input true
+connect_pg_net -automatic
 
 report_constraints -all_violators \
     > pnr/reports/finish/violadores.rpt

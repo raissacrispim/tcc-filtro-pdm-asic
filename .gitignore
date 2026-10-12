@@ -72,3 +72,9 @@ pnr/output/*.def
 # Arquivos de sessao do PrimeTime
 pt_shell_command*.log
 parasitics_command.log
+
+# Bancos de dados e saidas de depuracao do Fusion Compiler
+pnr/work_*/
+legalizer_debug_plots/
+.graph_data.txt
+compile_rtl.log
