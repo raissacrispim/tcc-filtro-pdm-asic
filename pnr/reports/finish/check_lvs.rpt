@@ -7,26 +7,26 @@ Information: Using 1 threads for LVS
 [Check Short] End	Elapsed =    0:00:02, CPU =    0:00:02
 [Check Net] Init	Elapsed =    0:00:02, CPU =    0:00:02
 [Check Net] 10% 	Elapsed =    0:00:02, CPU =    0:00:02
-[Check Net] 20% 	Elapsed =    0:00:03, CPU =    0:00:03
-[Check Net] 30% 	Elapsed =    0:00:03, CPU =    0:00:03
-[Check Net] 40% 	Elapsed =    0:00:03, CPU =    0:00:03
-[Check Net] 50% 	Elapsed =    0:00:03, CPU =    0:00:03
-[Check Net] 60% 	Elapsed =    0:00:03, CPU =    0:00:03
-[Check Net] 70% 	Elapsed =    0:00:03, CPU =    0:00:03
-[Check Net] 80% 	Elapsed =    0:00:03, CPU =    0:00:03
-[Check Net] 90% 	Elapsed =    0:00:03, CPU =    0:00:03
+[Check Net] 20% 	Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 30% 	Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 40% 	Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 50% 	Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 60% 	Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 70% 	Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 80% 	Elapsed =    0:00:02, CPU =    0:00:02
+[Check Net] 90% 	Elapsed =    0:00:02, CPU =    0:00:02
 [Check Net] All nets are submitted.
-[Check Net] 100%	Elapsed =    0:00:03, CPU =    0:00:03
+[Check Net] 100%	Elapsed =    0:00:02, CPU =    0:00:02
 
 ===============================================================
     Maximum number of violations is set to 20
     Abort checking when more than 20 violations are found
     All violations might not be found.
 ===============================================================
-Total number of input nets is 12048.
+Total number of input nets is 12042.
 Total number of short violations is 0.
 Total number of open nets is 0.
 Total number of floating route violations is 0.
 
-Elapsed =    0:00:03, CPU =    0:00:03
+Elapsed =    0:00:02, CPU =    0:00:02
 1

@@ -99,8 +99,8 @@ PDC app_options settings =========
 	place.legalize.preroute_shape_merge_distance: 0.0
 	place.legalize.enable_non_preferred_direction_span_check: 0
 
-Layer M1: cached 0 shapes out of 3950 total shapes.
-Cached 1442 vias out of 78720 total vias.
+Layer M1: cached 0 shapes out of 1464 total shapes.
+Cached 1442 vias out of 79428 total vias.
 CHF: loading design...
 CHF:: Loading blkInsts from NDM...
 CHF:: Building row/inst relations...
@@ -116,32 +116,32 @@ INFO:: Use fillers in order(1000): SHFILL128_RVT (128 x 1), SHFILL64_RVT (64 x 1
 	90% complete ...
 Regular Filler Insertion Complete
 CHF:: Create all new fillers...
-... 0 of regular filler SHFILL128_RVT inserted
-... 11 of regular filler SHFILL64_RVT inserted
-... 17081 of regular filler SHFILL3_RVT inserted
-... 2185 of regular filler SHFILL2_RVT inserted
-... 2380 of regular filler SHFILL1_RVT inserted
+... 2 of regular filler SHFILL128_RVT inserted
+... 16 of regular filler SHFILL64_RVT inserted
+... 16977 of regular filler SHFILL3_RVT inserted
+... 2139 of regular filler SHFILL2_RVT inserted
+... 2223 of regular filler SHFILL1_RVT inserted
 connect_pg_net -automatic
 Information: Connecting to PG and tie pins in automatic mode. (MV-396)
 ****************************************
 Report : Power/Ground Connection Summary
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:24:56 2026
+Date   : Mon Oct 12 09:38:01 2026
 ****************************************
 P/G net name                  P/G pin count(previous/current)
 --------------------------------------------------------------------------------
-Power net VDD                 8133/29790
-Ground net VSS                8133/29790
+Power net VDD                 8128/29485
+Ground net VSS                8128/29485
 --------------------------------------------------------------------------------
-Information: connections of 43314 power/ground pin(s) are created or changed. (MV-382)
+Information: connections of 42714 power/ground pin(s) are created or changed. (MV-382)
 
 1
 remove_stdcell_fillers_with_violation
 Information: The command 'remove_stdcell_fillers_with_violation' cleared the undo history. (UNDO-016)
 INFO: wire-opt feature for router enabled
 NEX(Warning): extract.rc_techfile_for_diode_mode_26_thickness not set, will igonre it
-Cell Min-Routing-Layer = M1
+Cell Min-Routing-Layer = M2
 Cell Max-Routing-Layer = M8
 Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
 Warning: Cannot find a default contact code for layer CO. (ZRT-022)
@@ -165,11 +165,11 @@ detail.enable_auto_ndr_flow                             :	 true
 
 Printing options for 'route.auto_via_ladder.*'
 
-There are 0 out of total 12048 nets with relaxed min layer from GR.
+There are 0 out of total 12042 nets with relaxed min layer from GR.
 [Start Removing Filler Cells] Elapsed real time: 0:00:00 
 [Start Removing Filler Cells] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
 [Start Removing Filler Cells] Stage (MB): Used    0  Alloctr    0  Proc    0 
-[Start Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 4673 
+[Start Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 4657 
 
 Begin Filler DRC check ...
 
@@ -193,7 +193,7 @@ Partition 10, Fillers with Violations = 0
 [End Removing Filler Cells] Elapsed real time: 0:00:02 
 [End Removing Filler Cells] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
 [End Removing Filler Cells] Stage (MB): Used    0  Alloctr    0  Proc  240 
-[End Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 4913 
+[End Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 4897 
 Updating the database ...
 Deleted 0 cell instances
 # ------------------------------------------------------------
@@ -250,7 +250,7 @@ Information: The command 'write_sdf' cleared the undo history. (UNDO-016)
 1
 # Parasitas extraidos (SPEF)
 write_parasitics -output pnr/output/filtro_pdm
-Information: Design filtro_pdm has 12048 nets, 0 global routed, 12046 detail routed. (NEX-024)
+Information: Design filtro_pdm has 12042 nets, 0 global routed, 12040 detail routed. (NEX-024)
 NEX: extract design filtro_pdm
 Information: batch extract takes 0.00 seconds, elapse 0.00 seconds (NEX-015)
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
@@ -271,7 +271,7 @@ write_def pnr/output/filtro_pdm.def
 ****************************************
 Report : Data Mismatches
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:25:23 2026
+Date   : Mon Oct 12 09:38:24 2026
 ****************************************
 No mismatches exist on the design.
 Information: Fill shapes with 'active_fill' purpose will be skipped from output DEF. (DEFW-032)
@@ -287,13 +287,13 @@ PROPERTYDEFINITIONS            : 1
 DIEAREA                        : 1
 ROW                            : 130
 TRACKS                         : 20
-VIAS                           : 4
+VIAS                           : 3
 NONDEFAULTRULES                : 1
-COMPONENTS                     : 29790
+COMPONENTS                     : 29485
 PINS                           : 28
 PINPROPERTIES                  : 26
-SPECIALNETS                    : 6985
-NETS                           : 12046
+SPECIALNETS                    : 7020
+NETS                           : 12040
 SCANCHAINS                     : 1
 1
 # GDSII com o layout das standard cells incorporado
@@ -321,21 +321,20 @@ Warning: The user specified view ' layout' for lib-cell 'MUX21X1_RVT' is not ava
 Warning: The user specified view ' layout' for lib-cell 'OA221X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'OAI221X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'OA222X1_RVT' is not available. (GDS-034)
-Warning: The user specified view ' layout' for lib-cell 'AO22X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO22X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AO222X1_RVT' is not available. (GDS-034)
-Warning: The user specified view ' layout' for lib-cell 'AO222X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'OA22X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'HADDX1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'XOR2X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AND2X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AND3X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO22X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AO21X1_RVT' is not available. (GDS-034)
-Warning: The user specified view ' layout' for lib-cell 'HADDX2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NBUFFX8_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'FADDX2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'INVX2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'INVX4_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'INVX8_RVT' is not available. (GDS-034)
-Warning: The user specified view ' layout' for lib-cell 'NBUFFX8_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'OR2X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AOI22X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AOI21X1_RVT' is not available. (GDS-034)
@@ -343,31 +342,34 @@ Warning: The user specified view ' layout' for lib-cell 'OAI21X1_RVT' is not ava
 Warning: The user specified view ' layout' for lib-cell 'OAI222X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'NOR2X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'OA21X2_RVT' is not available. (GDS-034)
-Warning: The user specified view ' layout' for lib-cell 'AO22X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'NOR3X0_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'NOR4X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO222X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AO221X1_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'XNOR2X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'NOR2X1_RVT' is not available. (GDS-034)
-Warning: The user specified view ' layout' for lib-cell 'NBUFFX16_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'XOR3X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XOR3X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NBUFFX16_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'HADDX2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'OA22X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'INVX16_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'INVX32_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'OR2X2_RVT' is not available. (GDS-034)
-Warning: The user specified view ' layout' for lib-cell 'SHFILL3_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'SHFILL1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'SHFILL3_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'SHFILL2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'AOI22X2_RVT' is not available. (GDS-034)
 Warning: The user specified view ' layout' for lib-cell 'SHFILL64_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'SHFILL128_RVT' is not available. (GDS-034)
 1
 puts "Finalizacao: script executado ate o final."
 Finalizacao: script executado ate o final.
 puts "GDSII: pnr/output/filtro_pdm.gds"
 GDSII: pnr/output/filtro_pdm.gds
 fc_shell> exit
-Maximum memory usage for this session: 787.67 MB
-Maximum memory usage for this session including child processes: 787.67 MB
-CPU usage for this session:     40 seconds (  0.01 hours)
-Elapsed time for this session:     52 seconds (  0.01 hours)
+Maximum memory usage for this session: 787.37 MB
+Maximum memory usage for this session including child processes: 787.37 MB
+CPU usage for this session:     36 seconds (  0.01 hours)
+Elapsed time for this session:     47 seconds (  0.01 hours)
 Thank you for using Fusion Compiler.

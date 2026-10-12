@@ -2,7 +2,7 @@
 Report : report_utilization
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:16:41 2026
+Date   : Mon Oct 12 09:34:55 2026
 ****************************************
 Utilization Ratio:			0.6873
 Utilization options:
@@ -10,7 +10,7 @@ Utilization options:
  - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
 Total Area:				47906.1440
 Total Capacity Area:			47906.1440
-Total Area of cells:			32924.1011
+Total Area of cells:			32925.6259
 Area of excluded objects:
  - hard_macros         :		0.0000
  - macro_keepouts      :		0.0000

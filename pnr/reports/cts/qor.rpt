@@ -2,7 +2,7 @@
 Report : qor
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:16:41 2026
+Date   : Mon Oct 12 09:34:55 2026
 ****************************************
 
 
@@ -11,7 +11,7 @@ Timing Path Group  '**in2reg_default**'
 ----------------------------------------
 Levels of Logic:                     25
 Critical Path Length:            147.09
-Critical Path Slack:              60.09
+Critical Path Slack:              60.08
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -29,17 +29,17 @@ Critical Path Slack:             187.11
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
+Worst Hold Violation:             -0.00
+Total Hold Violation:             -0.00
+No. of Hold Violations:               1
 ----------------------------------------
 
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                     54
-Critical Path Length:              5.20
-Critical Path Slack:             201.96
+Levels of Logic:                     59
+Critical Path Length:              5.21
+Critical Path Slack:             201.95
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -52,12 +52,12 @@ No. of Hold Violations:               0
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:              1
-Hierarchical Port Count:            141
-Leaf Cell Count:                   8094
-Buf/Inv Cell Count:                1959
-Buf Cell Count:                     311
-Inv Cell Count:                    1648
-Combinational Cell Count:          6762
+Hierarchical Port Count:            142
+Leaf Cell Count:                   8091
+Buf/Inv Cell Count:                1954
+Buf Cell Count:                     305
+Inv Cell Count:                    1649
+Combinational Cell Count:          6759
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -80,27 +80,27 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            21414.43
+Combinational Area:            21415.95
 Noncombinational Area:         11509.67
-Buf/Inv Area:                   3007.29
-Total Buffer Area:               744.90
-Total Inverter Area:            2262.39
+Buf/Inv Area:                   2995.85
+Total Buffer Area:               733.71
+Total Inverter Area:            2262.14
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   93439.47
-Net YLength:                  130655.32
+Net XLength:                   93693.68
+Net YLength:                  130234.24
 ----------------------------------------
-Cell Area (netlist):                          32924.10
-Cell Area (netlist and physical only):        32924.10
-Net Length:                   224094.79
+Cell Area (netlist):                          32925.63
+Cell Area (netlist and physical only):        32925.63
+Net Length:                   223927.92
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             12009
-Nets with Violations:                 0
+Total Number of Nets:             12005
+Nets with Violations:                 2
 Max Trans Violations:                 0
-Max Cap Violations:                   0
+Max Cap Violations:                   2
 ----------------------------------------
 
 1

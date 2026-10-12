@@ -14,7 +14,7 @@
 
 INFO: wire-opt feature for router enabled
 NEX(Warning): extract.rc_techfile_for_diode_mode_26_thickness not set, will igonre it
-Cell Min-Routing-Layer = M1
+Cell Min-Routing-Layer = M2
 Cell Max-Routing-Layer = M8
 Turn off antenna since no rule is specified
 Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
@@ -35,7 +35,7 @@ detail.enable_auto_ndr_flow                             :	 true
 
 Printing options for 'route.auto_via_ladder.*'
 
-There are 0 out of total 12009 nets with relaxed min layer from GR.
+There are 0 out of total 12005 nets with relaxed min layer from GR.
 
 ============================================
 ==  Check for design                      ==
@@ -183,4 +183,4 @@ There are 0 out of total 12009 nets with relaxed min layer from GR.
 Info: Attach forbidden region on filtro_pdm.dlib:filtro_pdm/cts.design
 
 End of check_routability
-rtapiOptAttrInterf: set attribute check_routability_called=1791591936 
+rtapiOptAttrInterf: set attribute check_routability_called=1791808541 

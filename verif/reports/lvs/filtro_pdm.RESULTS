@@ -1,10 +1,20 @@
-                            RESULTS: RUN ABORTED
+                         LVS Compare Results: FAIL
 
-                      ###   ####    ###   ####   #####
-                     #   #  #   #  #   #  #   #    #
-                     #####  ####   #   #  ####     #
-                     #   #  #   #  #   #  #  #     #
-                     #   #  ####    ###   #   #    #
+                          #####   ###   #   #
+                          #      #   #  #   #
+                          ####   #####  #   #
+                          #      #   #  #   #
+                          #      #   #  #   #####
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+                     DRC and Extraction Results: CLEAN
+
+                      ####  #      #####   ###   #   #
+                     #      #      #      #   #  ##  #
+                     #      #      ####   #####  # # #
+                     #      #      #      #   #  #  ##
+                      ####  #####  #####  #   #  #   #
 
 ===========================================================================
 
@@ -34,7 +44,7 @@ ICV Execution
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds -c filtro_pdm -f GDSII -s filtro_pdm.icv.net -sf ICV -stc filtro_pdm -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds -c filtro_pdm -f GDSII -s filtro_pdm.icv.net -sf ICV -stc filtro_pdm -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs saed32nm_1p9m_lvs_rules_local.rs
 
 Command Line Summary:
 icv
@@ -45,20 +55,21 @@ icv
 -sf ICV
 -stc filtro_pdm
 -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs
-/Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+saed32nm_1p9m_lvs_rules_local.rs
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Input file name:        /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds
 Top cell name:          filtro_pdm
 Layout format:          GDSII
-Runset file:            /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+Runset file:            saed32nm_1p9m_lvs_rules_local.rs
 Working directory:      /home/raissa.crispim/tcc_filtro/verif/run_lvs
 Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_details
+LVS error file:         filtro_pdm.LVS_ERRORS
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 09:27:27AM
-Time ended:             2026/10/12 09:27:51AM
+Time started:           2026/10/12 09:40:00AM
+Time ended:             2026/10/12 09:41:05AM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -66,13 +77,70 @@ Time ended:             2026/10/12 09:27:51AM
 Results Summary
 ---------------------------------------------------------------------------
 
-IC Validator failed to complete.
+LVS Device Extraction Error Summary
 
-- Performing DRC checks and/or device extraction ... ERROR
-    Refer to /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_details/saed32nm_1p9m_lvs_rules.dp.log
+6 total rules were run.
+0 rules NOT EXECUTED.
+0 rules have violations.
+There are 0 total violations.
+Refer to filtro_pdm.LAYOUT_ERRORS
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+LVS Compare Summary
+
+LVS Compare Result: FAIL
+TOP equivalence point: [filtro_pdm, filtro_pdm]
+
+    blackbox cells checked: 0
+      passed  0
+      failed  0
+
+    equivalence points checked: 1
+      passed  0
+    * failed  1
+
+Refer to filtro_pdm.LVS_ERRORS for LVS Error Diagnostics
+
+    [FAIL]  filtro_pdm != filtro_pdm   (level 0)
+
+
+
+---------------------------------------------------------------------------
+Assign Layer Statistics
+---------------------------------------------------------------------------
+
+Utilized Assign Layers = 54
+ Empty Utilized Assign Layers = 31
+ Non-Empty Utilized Assign Layers = 23
+Pruned Assign Layers = 37
+
+
 ---------------------------------------------------------------------------
 Run Configuration
 ---------------------------------------------------------------------------
+
+run_options()
+ verbose_results_file = { ERRORS }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+hierarchy_options()
+ delete = { }
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+error_options()
+ error_limit_per_check = 100
+ match_errors = { }
+ match_errors_processing_mode = HIERARCHICAL
+ match_errors_tolerance = 0.0000
+ violation_options = { }
+ report_empty_violations = false
+ clean_classifications = { }
+ report_error_details_limit_per_check = 100000
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Production Environment Variables
 
@@ -93,4 +161,33 @@ Debug Environment Variables
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+Distributed Processing
+ Distributed Cores = 2
 
+Allocated Hosts = 1
+Allocated CPUs = 2
+Allocated CPU Time = 0.0 CPU hours
+ srv-microeletronica3 (2/64)
+   Commands: 2 in parallel, maximum
+   Model: 
+   CPU:   64 cpu 2800 MHz
+   Cores: 32 
+   RAM:   251.109 GB
+   Swap:  15.999 GB
+
+
+---------------------------------------------------------------------------
+Performance Statistics
+---------------------------------------------------------------------------
+
+IC Validator Run Time = 0:01:05
+Peak Single Command Memory = 0.463 GB
+Peak Disk Usage = 0.024 GB
+Network Disk Usage Peak=0.011 GB (no group)
+Group File Disk Usage Peak=0.014 GB
+
+Distributed Host Memory Usage
+ srv-microeletronica3 (2/64)  ....  Average=1.824 GB, Peak=1.824 GB / 251.109 GB
+
+Overall Distributed Utilization: not available
+IC Validator is done.

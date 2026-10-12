@@ -3,7 +3,7 @@ Report : design
         -floorplan
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:25:20 2026
+Date   : Mon Oct 12 09:38:21 2026
 ****************************************
 
 --------------------------------------------------------------------------------
@@ -102,7 +102,7 @@ LAYER INFORMATION
 Layer Name Direction Ignored Pitch  default minWidth minSpacing    sameNet
                                       Width                     MinSpacing
 --------------------------------------------------------------------------
-M1         Ver       NO       0.15     0.05     0.05       0.05       0.00
+M1         Ver       YES      0.15     0.05     0.05       0.05       0.00
 M2         Hor       NO       0.15     0.06     0.06       0.06       0.06
 M3         Ver       NO       0.30     0.06     0.06       0.06       0.06
 M4         Hor       NO       0.30     0.06     0.06       0.06       0.06
