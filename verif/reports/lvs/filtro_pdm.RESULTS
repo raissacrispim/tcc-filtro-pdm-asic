@@ -1,20 +1,20 @@
-                         LVS Compare Results: FAIL
+                         LVS Compare Results: PASS
 
-                          #####   ###   #   #
-                          #      #   #  #   #
-                          ####   #####  #   #
-                          #      #   #  #   #
-                          #      #   #  #   #####
+                          ####   ###    ####   ####
+                         #   #  #   #  #      #
+                         ####   #####  #####  #####
+                         #      #   #      #      #
+                         #      #   #  ####   #### 
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-                     DRC and Extraction Results: CLEAN
+                   DRC and Extraction Results: NOT CLEAN
 
-                      ####  #      #####   ###   #   #
-                     #      #      #      #   #  ##  #
-                     #      #      ####   #####  # # #
-                     #      #      #      #   #  #  ##
-                      ####  #####  #####  #   #  #   #
+         #   #   ###   #####      ####  #      #####   ###   #   #
+         ##  #  #   #    #       #      #      #      #   #  ##  #
+         # # #  #   #    #       #      #      ####   #####  # # #
+         #  ##  #   #    #       #      #      #      #   #  #  ##
+         #   #   ###     #        ####  #####  #####  #   #  #   #
 
 ===========================================================================
 
@@ -44,13 +44,13 @@ ICV Execution
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds -c filtro_pdm -f GDSII -s filtro_pdm.icv.net -sf ICV -stc filtro_pdm -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs saed32nm_1p9m_lvs_rules_local.rs
+Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_final.gds -c filtro_pdm -f GDSII -s filtro_pdm.icv.net -sf ICV -stc filtro_pdm -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs saed32nm_1p9m_lvs_rules_local.rs
 
 Command Line Summary:
 icv
 -c filtro_pdm
 -f GDSII
--i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds
+-i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_final.gds
 -s filtro_pdm.icv.net
 -sf ICV
 -stc filtro_pdm
@@ -59,7 +59,7 @@ saed32nm_1p9m_lvs_rules_local.rs
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Input file name:        /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds
+Input file name:        /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_final.gds
 Top cell name:          filtro_pdm
 Layout format:          GDSII
 Runset file:            saed32nm_1p9m_lvs_rules_local.rs
@@ -68,8 +68,8 @@ Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_detail
 LVS error file:         filtro_pdm.LVS_ERRORS
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 09:40:00AM
-Time ended:             2026/10/12 09:41:05AM
+Time started:           2026/10/12 10:00:54AM
+Time ended:             2026/10/12 10:01:48AM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -81,15 +81,21 @@ LVS Device Extraction Error Summary
 
 6 total rules were run.
 0 rules NOT EXECUTED.
-0 rules have violations.
-There are 0 total violations.
+1 rule has violations.
+There is 1 total violation.
 Refer to filtro_pdm.LAYOUT_ERRORS
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Rule                          Violations Found
+Violation                     v = 1
+  text_net:text_short           v = 1
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 LVS Compare Summary
 
-LVS Compare Result: FAIL
+LVS Compare Result: PASS
 TOP equivalence point: [filtro_pdm, filtro_pdm]
 
     blackbox cells checked: 0
@@ -97,13 +103,13 @@ TOP equivalence point: [filtro_pdm, filtro_pdm]
       failed  0
 
     equivalence points checked: 1
-      passed  0
-    * failed  1
+      passed  1
+      failed  0
 
 Refer to filtro_pdm.LVS_ERRORS for LVS Error Diagnostics
 
-    [FAIL]  filtro_pdm != filtro_pdm   (level 0)
 
+    [PASS]  filtro_pdm == filtro_pdm   (level 0)
 
 
 ---------------------------------------------------------------------------
@@ -111,8 +117,8 @@ Assign Layer Statistics
 ---------------------------------------------------------------------------
 
 Utilized Assign Layers = 54
- Empty Utilized Assign Layers = 31
- Non-Empty Utilized Assign Layers = 23
+ Empty Utilized Assign Layers = 28
+ Non-Empty Utilized Assign Layers = 26
 Pruned Assign Layers = 37
 
 
@@ -180,14 +186,14 @@ Allocated CPU Time = 0.0 CPU hours
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:01:05
+IC Validator Run Time = 0:00:54
 Peak Single Command Memory = 0.463 GB
-Peak Disk Usage = 0.024 GB
-Network Disk Usage Peak=0.011 GB (no group)
-Group File Disk Usage Peak=0.014 GB
+Peak Disk Usage = 0.034 GB
+Network Disk Usage Peak=0.014 GB (no group)
+Group File Disk Usage Peak=0.020 GB
 
 Distributed Host Memory Usage
- srv-microeletronica3 (2/64)  ....  Average=1.824 GB, Peak=1.824 GB / 251.109 GB
+ srv-microeletronica3 (2/64)  ....  Average=1.577 GB, Peak=1.577 GB / 251.109 GB
 
 Overall Distributed Utilization: not available
 IC Validator is done.

@@ -34,11 +34,11 @@ ICV Execution
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds -c filtro_pdm -f GDSII -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_drc /Tools/PDK/SAED32/EDK_Digital/tech/icv_drc/saed32nm_1p9m_drc_rules.rs
+Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_final.gds -c filtro_pdm -f GDSII -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_drc /Tools/PDK/SAED32/EDK_Digital/tech/icv_drc/saed32nm_1p9m_drc_rules.rs
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Input file name:        /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds
+Input file name:        /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_final.gds
 Top cell name:          filtro_pdm
 Layout format:          GDSII
 Runset file:            /Tools/PDK/SAED32/EDK_Digital/tech/icv_drc/saed32nm_1p9m_drc_rules.rs
@@ -46,8 +46,8 @@ Working directory:      /home/raissa.crispim/tcc_filtro/verif/run_drc
 Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_drc/run_details
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 09:52:23AM
-Time ended:             2026/10/12 09:52:52AM
+Time started:           2026/10/12 09:59:18AM
+Time ended:             2026/10/12 09:59:47AM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -127,9 +127,9 @@ Distributed Processing
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:00:28
-Peak Single Command Memory = 0.115 GB
+IC Validator Run Time = 0:00:29
+Peak Single Command Memory = 0.114 GB
 
 Distributed Host Memory Usage
-srv-microeletronica3 (2/2)  ....  Average=0.644 GB, Peak=0.746 GB / 251.112 GB
+srv-microeletronica3 (2/2)  ....  Average=0.686 GB, Peak=0.781 GB / 251.112 GB
 IC Validator is done.
