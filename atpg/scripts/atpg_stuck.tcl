@@ -13,21 +13,31 @@
 #   synth/netlist/filtro_pdm_syn.v    netlist com scan
 #   synth/netlist/filtro_pdm_syn.spf  protocolo de teste
 #
-# Para usar a netlist pos-layout, troque NETLIST abaixo por
-# pnr/output/filtro_pdm_pnr.v.
-#
 # ATENCAO:
 # Versao candidata, ainda nao validada no TestMAX ATPG.
 # ============================================================
 
 set SAED32_V /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
-set NETLIST  synth/netlist/filtro_pdm_syn.v
 set SPF      synth/netlist/filtro_pdm_syn.spf
 
-file mkdir atpg/reports
-file mkdir atpg/output
+# Netlist da sintese (padrao) ou pos-layout (ATPG_ETAPA=pnr,
+# definido por run_atpg.sh). No layout a cadeia de scan foi
+# reordenada pelo placement; o ATPG pos-layout confirma a
+# cadeia e a cobertura na netlist final.
+if {[info exists env(ATPG_ETAPA)] && $env(ATPG_ETAPA) eq "pnr"} {
+    set NETLIST pnr/output/filtro_pdm_pnr.v
+    set REP     atpg/reports/pnr
+    set OUT     atpg/output/pnr
+} else {
+    set NETLIST synth/netlist/filtro_pdm_syn.v
+    set REP     atpg/reports
+    set OUT     atpg/output
+}
 
-set_messages -log atpg/reports/atpg_stuck.log -replace
+file mkdir $REP
+file mkdir $OUT
+
+set_messages -log $REP/atpg_stuck.log -replace
 
 # ------------------------------------------------------------
 # 1. Leitura da biblioteca e da netlist
@@ -45,8 +55,8 @@ run_build_model filtro_pdm
 
 run_drc $SPF
 
-report_rules -fail > atpg/reports/drc_rules.rpt
-report_scan_chains > atpg/reports/scan_chains.rpt
+report_rules -fail > $REP/drc_rules.rpt
+report_scan_chains > $REP/scan_chains.rpt
 
 
 # ------------------------------------------------------------
@@ -64,23 +74,23 @@ set_atpg -abort_limit 200
 
 run_atpg -auto_compression
 
-report_summaries > atpg/reports/stuck_summary.rpt
-report_faults -summary > atpg/reports/stuck_faults.rpt
+report_summaries > $REP/stuck_summary.rpt
+report_faults -summary > $REP/stuck_faults.rpt
 
 
 # ------------------------------------------------------------
 # 4. Exportacao dos vetores e do testbench de simulacao
 # ------------------------------------------------------------
 
-write_patterns atpg/output/filtro_pdm_stuck.stil \
+write_patterns $OUT/filtro_pdm_stuck.stil \
     -format stil -replace
 
 write_testbench \
-    -input atpg/output/filtro_pdm_stuck.stil \
-    -output atpg/output/filtro_pdm_stuck_tb \
+    -input $OUT/filtro_pdm_stuck.stil \
+    -output $OUT/filtro_pdm_stuck_tb \
     -replace
 
 puts "ATPG stuck-at: script executado ate o final."
-puts "Cobertura em atpg/reports/stuck_summary.rpt"
+puts "Cobertura em $REP/stuck_summary.rpt"
 
 exit

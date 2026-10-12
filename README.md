@@ -86,8 +86,12 @@ Todos os comandos são executados a partir da raiz do repositório.
 | Placement | Fusion Compiler | `fc_shell -f pnr/scripts/place.tcl` | raiz |
 | CTS | Fusion Compiler | `fc_shell -f pnr/scripts/cts.tcl` | raiz |
 | Roteamento | Fusion Compiler | `fc_shell -f pnr/scripts/route.tcl` | raiz |
-| Finalização e GDSII | Fusion Compiler | `fc_shell -f pnr/scripts/finish.tcl` | raiz |
-| Simulação pós-layout com SDF | VCS | `sim/scripts/compile_gls.sh pnr sdf` | raiz |
+| Finalização, ECO de capacitância e GDSII | Fusion Compiler | `fc_shell -f pnr/scripts/finish.tcl` | raiz |
+| Simulação pós-layout com SDF | VCS | `sim/scripts/compile_gls.sh pnr sdf` e `sim/scripts/run_gls_regression.sh` | raiz |
+| Atividade de chaveamento (SAIF) | VCS | `sim/scripts/run_saif.sh` | raiz |
+| Potência com SAIF | Fusion Compiler | `fc_shell -f pnr/scripts/power_saif.tcl` | raiz |
+| Timing multi-corner (tt/ss/ff) | PrimeTime | `sta/scripts/run_sta.sh` | raiz |
+| ATPG pós-layout | TestMAX ATPG | `atpg/scripts/run_atpg.sh stuck pnr` e `atpg/scripts/run_atpg.sh transition pnr` | raiz |
 | Verificação do GDS | Python | `python3 pnr/scripts/check_gds.py pnr/output/filtro_pdm_final.gds` | raiz |
 | DRC | IC Validator | `verif/scripts/run_drc.sh` | raiz |
 | LVS | IC Validator | `verif/scripts/run_lvs.sh` | raiz |

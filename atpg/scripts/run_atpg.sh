@@ -8,6 +8,11 @@
 #
 #   atpg/scripts/run_atpg.sh              # stuck-at
 #   atpg/scripts/run_atpg.sh transition   # transition
+#   atpg/scripts/run_atpg.sh stuck pnr    # netlist pos-layout
+#   atpg/scripts/run_atpg.sh transition pnr
+#
+# Com "pnr", relatorios e vetores vao para atpg/reports/pnr/
+# e atpg/output/pnr/, sem sobrescrever os da sintese.
 #
 # No servidor, o tmax (testmax/<versao>/bin, ja no PATH pelo
 # snps.sh) exige SYNOPSYS apontando para uma instalacao com a
@@ -19,19 +24,27 @@
 set -e
 
 MODELO=${1:-stuck}
+ETAPA=${2:-synth}
 
 SYN_HOME=${SYN_HOMEDIR:-/Tools/synopsys/syn/X-2025.06-SP2}
 
 cd "$(dirname "$0")/../.."
 
-mkdir -p atpg/reports atpg/output
+if [ "$ETAPA" = "pnr" ]; then
+    REP=atpg/reports/pnr
+else
+    REP=atpg/reports
+fi
+
+mkdir -p "$REP" atpg/output
 
 export SYNOPSYS=$SYN_HOME
+export ATPG_ETAPA=$ETAPA
 
 tmax -shell "atpg/scripts/atpg_${MODELO}.tcl" \
-    2>&1 | tee "atpg/reports/tmax_${MODELO}_terminal.log"
+    2>&1 | tee "$REP/tmax_${MODELO}_terminal.log"
 
 echo
 grep -iE "test coverage|fault coverage|total patterns|pattern count" \
-    "atpg/reports/${MODELO}_summary.rpt" 2>/dev/null \
+    "$REP/${MODELO}_summary.rpt" 2>/dev/null \
     || echo "Resumo nao encontrado: verifique o log acima."

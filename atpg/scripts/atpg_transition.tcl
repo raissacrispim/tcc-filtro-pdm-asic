@@ -17,13 +17,26 @@
 # ============================================================
 
 set SAED32_V /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
-set NETLIST  synth/netlist/filtro_pdm_syn.v
 set SPF      synth/netlist/filtro_pdm_syn.spf
 
-file mkdir atpg/reports
-file mkdir atpg/output
+# Netlist da sintese (padrao) ou pos-layout (ATPG_ETAPA=pnr,
+# definido por run_atpg.sh). No layout a cadeia de scan foi
+# reordenada pelo placement; o ATPG pos-layout confirma a
+# cadeia e a cobertura na netlist final.
+if {[info exists env(ATPG_ETAPA)] && $env(ATPG_ETAPA) eq "pnr"} {
+    set NETLIST pnr/output/filtro_pdm_pnr.v
+    set REP     atpg/reports/pnr
+    set OUT     atpg/output/pnr
+} else {
+    set NETLIST synth/netlist/filtro_pdm_syn.v
+    set REP     atpg/reports
+    set OUT     atpg/output
+}
 
-set_messages -log atpg/reports/atpg_transition.log -replace
+file mkdir $REP
+file mkdir $OUT
+
+set_messages -log $REP/atpg_transition.log -replace
 
 # ------------------------------------------------------------
 # 1. Leitura da biblioteca e da netlist
@@ -59,17 +72,17 @@ set_atpg -abort_limit 200
 
 run_atpg -auto_compression
 
-report_summaries > atpg/reports/transition_summary.rpt
+report_summaries > $REP/transition_summary.rpt
 
 
 # ------------------------------------------------------------
 # 4. Exportacao dos vetores
 # ------------------------------------------------------------
 
-write_patterns atpg/output/filtro_pdm_transition.stil \
+write_patterns $OUT/filtro_pdm_transition.stil \
     -format stil -replace
 
 puts "ATPG transition: script executado ate o final."
-puts "Cobertura em atpg/reports/transition_summary.rpt"
+puts "Cobertura em $REP/transition_summary.rpt"
 
 exit

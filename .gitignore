@@ -65,3 +65,10 @@ verif/run_lvs/
 pnr/output/*.gds
 pnr/output/*.spef
 pnr/output/*.def
+
+# Atividade de chaveamento (SAIF, arquivo grande)
+*.saif
+
+# Arquivos de sessao do PrimeTime
+pt_shell_command*.log
+parasitics_command.log

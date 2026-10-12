@@ -56,6 +56,23 @@ module tb_filtro_pdm_golden;
 
 
     // ========================================================
+    // ATIVIDADE DE CHAVEAMENTO (SAIF) PARA ANALISE DE POTENCIA
+    //
+    // Compilar com +define+SAIF. Registra as transicoes de
+    // todas as redes do DUT apos o reset e grava o arquivo
+    // filtro_pdm_<teste>.saif ao final da simulacao.
+    // ========================================================
+
+`ifdef SAIF
+    initial begin
+        $set_toggle_region(tb_filtro_pdm_golden.dut);
+        @(negedge rst);
+        $toggle_start;
+    end
+`endif
+
+
+    // ========================================================
     // DUT
     // ========================================================
 
@@ -435,6 +452,21 @@ module tb_filtro_pdm_golden;
             );
 
         end
+
+
+        // ====================================================
+        // GRAVA A ATIVIDADE (SAIF)
+        // ====================================================
+
+`ifdef SAIF
+        $toggle_stop;
+        $toggle_report(
+            {"filtro_pdm_", test_name, ".saif"},
+            1.0e-9,
+            "tb_filtro_pdm_golden.dut"
+        );
+        $display("SAIF gravado: filtro_pdm_%s.saif", test_name);
+`endif
 
 
         // ====================================================

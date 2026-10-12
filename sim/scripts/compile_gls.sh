@@ -9,6 +9,7 @@
 #   sim/scripts/compile_gls.sh                 # netlist da sintese
 #   sim/scripts/compile_gls.sh pnr             # netlist pos-layout
 #   sim/scripts/compile_gls.sh pnr sdf         # pos-layout com SDF
+#   sim/scripts/compile_gls.sh pnr sdf saif    # idem, gravando SAIF
 #
 # Gera sim/simv_filtro_gls, usado por run_gls_regression.sh.
 #
@@ -22,6 +23,7 @@ SAED32_V=/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
 
 ETAPA=${1:-synth}
 ATRASO=${2:-zero}
+ATIVIDADE=${3:-}
 
 cd "$(dirname "$0")/.."
 
@@ -53,6 +55,13 @@ else
     OPCOES_ATRASO="+delay_mode_zero +notimingcheck +nospecify"
 fi
 
+# Gravacao da atividade de chaveamento (SAIF) para potencia
+if [ "$ATIVIDADE" = "saif" ]; then
+    OPCOES_SAIF="+define+SAIF"
+else
+    OPCOES_SAIF=""
+fi
+
 echo "Netlist: $NETLIST"
 echo "Atrasos: $ATRASO"
 
@@ -65,6 +74,7 @@ rm -rf simv_filtro_gls simv_filtro_gls.daidir
 vcs -full64 -sverilog -kdb -debug_access+all \
     -timescale=1ns/1ps \
     +define+DFT \
+    $OPCOES_SAIF \
     $OPCOES_ATRASO \
     -v "$SAED32_V" \
     "$NETLIST" \

@@ -35,6 +35,92 @@ open_block filtro_pdm/route
 
 
 # ------------------------------------------------------------
+# 1b. Correcao das violacoes residuais de capacitancia maxima
+#
+# Apos o route_opt restaram ~11 redes ate 0,10 fF acima do
+# limite da biblioteca (8 ou 16 fF). A correcao e um ECO:
+# a celula que dirige cada rede violada e trocada pela versao
+# de maior drive (ex.: INVX1 -> INVX2), que admite maior
+# carga. Em seguida a posicao e legalizada e as ligacoes sao
+# refeitas com route_eco. Repete ate 3 vezes, pois a celula
+# maior aumenta um pouco a carga da rede anterior.
+# ------------------------------------------------------------
+
+# Mesmas restricoes de roteamento de route.tcl (M2-M8, sem M1)
+set_ignored_layers -min_routing_layer M2 -max_routing_layer M8
+foreach {opcao valor} {
+    route.common.global_min_layer_mode hard
+    route.common.net_min_layer_mode    hard
+} {
+    catch {set_app_options -name $opcao -value $valor}
+}
+
+# Proximo tamanho existente da celula (INVX1_RVT -> INVX2_RVT)
+proc maior_drive {ref} {
+    if {![regexp {^(.*X)([0-9]+)(_RVT)$} $ref -> base n suf]} {
+        return ""
+    }
+    foreach m {1 2 4 8 16 32} {
+        if {$m <= $n} { continue }
+        set lc [get_lib_cells -quiet */${base}${m}${suf}]
+        if {[sizeof_collection $lc] > 0} { return $lc }
+    }
+    return ""
+}
+
+# Pinos que dirigem redes com capacitancia maxima violada
+proc pinos_max_cap {arquivo} {
+    report_constraints -all_violators -max_capacitance > $arquivo
+    set pinos {}
+    set f [open $arquivo r]
+    while {[gets $f linha] >= 0} {
+        if {[regexp {PIN\s*:\s*(\S+)} $linha -> pino]} {
+            lappend pinos $pino
+        }
+    }
+    close $f
+    return [lsort -unique $pinos]
+}
+
+
+for {set rodada 1} {$rodada <= 3} {incr rodada} {
+
+    set pinos [pinos_max_cap \
+        pnr/reports/finish/max_cap_antes_eco_$rodada.rpt]
+
+    puts "ECO max cap, rodada $rodada: [llength $pinos] violacoes"
+    if {[llength $pinos] == 0} { break }
+
+    set trocadas {}
+    foreach pino $pinos {
+        set celula [get_cells -quiet -of_objects [get_pins -quiet $pino]]
+        if {[sizeof_collection $celula] == 0} { continue }
+        set ref  [get_attribute $celula ref_name]
+        set nova [maior_drive $ref]
+        if {$nova eq ""} {
+            puts "  $pino ($ref): sem tamanho maior disponivel"
+            continue
+        }
+        size_cell $celula $nova
+        puts "  [get_object_name $celula]: $ref -> [get_object_name $nova]"
+        lappend trocadas [get_object_name $celula]
+    }
+
+    if {[llength $trocadas] == 0} { break }
+
+    if {[catch {legalize_placement -incremental} msg]} {
+        puts "Aviso: legalize_placement -incremental ($msg)"
+        legalize_placement
+    }
+    route_eco
+    connect_pg_net -automatic
+}
+
+report_constraints -all_violators \
+    > pnr/reports/finish/violadores.rpt
+
+
+# ------------------------------------------------------------
 # 2. Celulas de preenchimento (filler)
 #
 # Preenchem os espacos vazios das linhas de celulas, dando
