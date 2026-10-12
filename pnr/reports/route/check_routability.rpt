@@ -28,6 +28,8 @@ Information: When applicable layer based tapering will taper up to 0.00 in dista
 Printing options for 'route.common.*'
 common.concurrent_redundant_via_mode                    :	 off                 
 common.eco_route_concurrent_redundant_via_mode          :	 off                 
+common.global_min_layer_mode                            :	 hard                
+common.net_min_layer_mode                               :	 hard                
 common.post_detail_route_redundant_via_insertion        :	 off                 
 
 Printing options for 'route.detail.*'
@@ -35,7 +37,7 @@ detail.enable_auto_ndr_flow                             :	 true
 
 Printing options for 'route.auto_via_ladder.*'
 
-There are 0 out of total 12005 nets with relaxed min layer from GR.
+There are 0 out of total 12014 nets with relaxed min layer from GR.
 
 ============================================
 ==  Check for design                      ==
@@ -183,4 +185,4 @@ There are 0 out of total 12005 nets with relaxed min layer from GR.
 Info: Attach forbidden region on filtro_pdm.dlib:filtro_pdm/cts.design
 
 End of check_routability
-rtapiOptAttrInterf: set attribute check_routability_called=1791808541 
+rtapiOptAttrInterf: set attribute check_routability_called=1791809281 

@@ -6,7 +6,7 @@ Report : timing
         -report_by design
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:34:55 2026
+Date   : Mon Oct 12 09:47:19 2026
 ****************************************
 
   Startpoint: u_fir/y_out_reg_13_ (rising edge-triggered flip-flop clocked by clk)
@@ -36,7 +36,7 @@ Date   : Mon Oct 12 09:34:55 2026
   data required time                                         0.26
   data arrival time                                         -0.26
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.00
+  slack (MET)                                                0.00
 
 
 
@@ -107,6 +107,38 @@ Date   : Mon Oct 12 09:34:55 2026
 
 
 
+  Startpoint: u_fir/y_out_reg_18_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: y_out[18] (output port clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **reg2out_default**
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.08      0.08
+
+  u_fir/y_out_reg_18_/CLK (SDFFX1_RVT)             0.00      0.08 r
+  u_fir/y_out_reg_18_/QN (SDFFX1_RVT)              0.14      0.21 f
+  HFSINV_66_119/Y (INVX4_RVT)                      0.06      0.27 r
+  y_out[18] (out)                                  0.00      0.28 r
+  data arrival time                                          0.28
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.16      0.16
+  clock uncertainty                                0.10      0.26
+  output external delay                            0.00      0.26
+  data required time                                         0.26
+  ------------------------------------------------------------------------
+  data required time                                         0.26
+  data arrival time                                         -0.28
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.02
+
+
+
   Startpoint: u_fir/y_out_reg_14_ (rising edge-triggered flip-flop clocked by clk)
   Endpoint: y_out[14] (output port clocked by clk)
   Mode: default
@@ -124,6 +156,38 @@ Date   : Mon Oct 12 09:34:55 2026
   u_fir/y_out_reg_14_/Q (SDFFX1_RVT)               0.14      0.22 r
   u_fir/copt_gre_h_inst_2275/Y (NBUFFX2_RVT)       0.05      0.28 r
   y_out[14] (out)                                  0.00      0.28 r
+  data arrival time                                          0.28
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.16      0.16
+  clock uncertainty                                0.10      0.26
+  output external delay                            0.00      0.26
+  data required time                                         0.26
+  ------------------------------------------------------------------------
+  data required time                                         0.26
+  data arrival time                                         -0.28
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.02
+
+
+
+  Startpoint: u_fir/y_out_reg_18_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: scan_out (output port clocked by clk)
+  Mode: default
+  Corner: default
+  Scenario: default
+  Path Group: **reg2out_default**
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.08      0.08
+
+  u_fir/y_out_reg_18_/CLK (SDFFX1_RVT)             0.00      0.08 r
+  u_fir/y_out_reg_18_/QN (SDFFX1_RVT)              0.14      0.21 f
+  HFSINV_66_119/Y (INVX4_RVT)                      0.06      0.27 r
+  scan_out (out)                                   0.00      0.28 r
   data arrival time                                          0.28
 
   clock clk (rise edge)                            0.00      0.00
@@ -203,38 +267,6 @@ Date   : Mon Oct 12 09:34:55 2026
 
 
 
-  Startpoint: u_fir/y_out_reg_18_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[18] (output port clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: **reg2out_default**
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.08      0.08
-
-  u_fir/y_out_reg_18_/CLK (SDFFX1_RVT)             0.00      0.08 r
-  u_fir/y_out_reg_18_/QN (SDFFX1_RVT)              0.14      0.21 f
-  HFSINV_66_119/Y (INVX4_RVT)                      0.06      0.28 r
-  y_out[18] (out)                                  0.00      0.28 r
-  data arrival time                                          0.28
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.16      0.16
-  clock uncertainty                                0.10      0.26
-  output external delay                            0.00      0.26
-  data required time                                         0.26
-  ------------------------------------------------------------------------
-  data required time                                         0.26
-  data arrival time                                         -0.28
-  ------------------------------------------------------------------------
-  slack (MET)                                                0.02
-
-
-
   Startpoint: u_fir/delay_reg_17__12_ (rising edge-triggered flip-flop clocked by clk)
   Endpoint: u_fir/delay_reg_46__12_ (rising edge-triggered flip-flop clocked by clk)
   Mode: default
@@ -264,38 +296,6 @@ Date   : Mon Oct 12 09:34:55 2026
   data arrival time                                         -0.19
   ------------------------------------------------------------------------
   slack (MET)                                                0.02
-
-
-
-  Startpoint: u_fir/y_out_reg_18_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: scan_out (output port clocked by clk)
-  Mode: default
-  Corner: default
-  Scenario: default
-  Path Group: **reg2out_default**
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.08      0.08
-
-  u_fir/y_out_reg_18_/CLK (SDFFX1_RVT)             0.00      0.08 r
-  u_fir/y_out_reg_18_/QN (SDFFX1_RVT)              0.14      0.21 f
-  HFSINV_66_119/Y (INVX4_RVT)                      0.06      0.28 r
-  scan_out (out)                                   0.00      0.28 r
-  data arrival time                                          0.28
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.16      0.16
-  clock uncertainty                                0.10      0.26
-  output external delay                            0.00      0.26
-  data required time                                         0.26
-  ------------------------------------------------------------------------
-  data required time                                         0.26
-  data arrival time                                         -0.28
-  ------------------------------------------------------------------------
-  slack (MET)                                                0.03
 
 
 

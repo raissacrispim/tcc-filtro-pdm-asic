@@ -1,10 +1,10 @@
-                             RESULTS: NOT CLEAN
+                               RESULTS: CLEAN
 
-         #   #   ###   #####      ####  #      #####   ###   #   #
-         ##  #  #   #    #       #      #      #      #   #  ##  #
-         # # #  #   #    #       #      #      ####   #####  # # #
-         #  ##  #   #    #       #      #      #      #   #  #  ##
-         #   #   ###     #        ####  #####  #####  #   #  #   #
+                      ####  #      #####   ###   #   #
+                     #      #      #      #   #  ##  #
+                     #      #      ####   #####  # # #
+                     #      #      #      #   #  #  ##
+                      ####  #####  #####  #   #  #   #
 
 ===========================================================================
 
@@ -46,8 +46,8 @@ Working directory:      /home/raissa.crispim/tcc_filtro/verif/run_drc
 Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_drc/run_details
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 09:38:54AM
-Time ended:             2026/10/12 09:39:24AM
+Time started:           2026/10/12 09:52:23AM
+Time ended:             2026/10/12 09:52:52AM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -59,14 +59,9 @@ Rule and DRC Error Summary
 
 396 total rules were run.
 0 rules NOT EXECUTED.
-1 rule has violations.
-There are 10 total violations.
+0 rules have violations.
+There are 0 total violations.
 Refer to filtro_pdm.LAYOUT_ERRORS
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-Rule                          Violations Found
-M1.W.2.1                      v = 10
 
 
 ---------------------------------------------------------------------------
@@ -132,9 +127,9 @@ Distributed Processing
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:00:29
-Peak Single Command Memory = 0.117 GB
+IC Validator Run Time = 0:00:28
+Peak Single Command Memory = 0.115 GB
 
 Distributed Host Memory Usage
-srv-microeletronica3 (2/2)  ....  Average=0.643 GB, Peak=0.732 GB / 251.112 GB
+srv-microeletronica3 (2/2)  ....  Average=0.644 GB, Peak=0.746 GB / 251.112 GB
 IC Validator is done.

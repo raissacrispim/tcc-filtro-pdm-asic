@@ -13,8 +13,8 @@ PDC app_options settings =========
 	place.legalize.preroute_shape_merge_distance: 0.0
 	place.legalize.enable_non_preferred_direction_span_check: 0
 
-Layer M1: cached 0 shapes out of 1464 total shapes.
-Cached 1442 vias out of 79428 total vias.
+Layer M1: cached 0 shapes out of 307 total shapes.
+Cached 1442 vias out of 79723 total vias.
 
 check_legality for block design filtro_pdm ... 
 Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
@@ -32,10 +32,10 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.1680 seconds to build cellmap data
+Total 0.1779 seconds to build cellmap data
 Information: Creating classic rule checker.
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
-=====> Processed 63 ref cells (8 fillers) from library
+=====> Processed 61 ref cells (8 fillers) from library
 Design has no advanced rules
 Checking legality
 Checking cell legality:

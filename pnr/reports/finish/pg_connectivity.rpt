@@ -3,7 +3,7 @@ Secondary net will be checked together from primary net. They will be treated as
 Primary Net : VDD    Secondary Net:
 Primary Net : VSS    Secondary Net:
 Loading cell instances...
-Number of Standard Cells: 29485
+Number of Standard Cells: 29407
 Number of Macro Cells: 0
 Number of IO Pad Cells: 0
 Number of Blocks: 0

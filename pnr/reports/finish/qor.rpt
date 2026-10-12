@@ -1,17 +1,17 @@
 Information: Timer using 1 threads
-Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 787 MB / Date: Mon Oct 12 09:38:17 2026
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 785 MB / Date: Mon Oct 12 09:51:47 2026
 
-Timing Update Completed: Mem-peak: 787 MB / Date: Mon Oct 12 09:38:17 2026
+Timing Update Completed: Mem-peak: 785 MB / Date: Mon Oct 12 09:51:47 2026
 
 ****************************************
 Report : qor
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:38:17 2026
+Date   : Mon Oct 12 09:51:47 2026
 ****************************************
 Information: Corner default: no PVT mismatches. (PVT-032)
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
-Information: Design filtro_pdm has 12042 nets, 0 global routed, 12040 detail routed. (NEX-024)
+Information: Design filtro_pdm has 12045 nets, 0 global routed, 12043 detail routed. (NEX-024)
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 ---extraction options---
 Corner: default
@@ -29,7 +29,7 @@ Global options:
  extract.enable_coupling_cap    : false
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 12040 nets are successfully extracted. (NEX-028)
+Information: 12043 nets are successfully extracted. (NEX-028)
 Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
 Information: Activity propagation will be performed for scenario default.
 Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
@@ -38,8 +38,8 @@ Information: Running switching activity propagation in scalar mode!
 
  **** Information : No. of simulation cycles = 6 ****
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 12040, routed nets = 12040, across physical hierarchy nets = 0, parasitics cached nets = 12040, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
-[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[29485]
+Information: Net estimation statistics: timing graph nets = 12043, routed nets = 12043, across physical hierarchy nets = 0, parasitics cached nets = 12043, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[29407]
 ************************************************************
 Timer Settings:
 Delay Calculation Style:                   auto
@@ -60,7 +60,7 @@ Timing Path Group  '**in2reg_default**'
 ----------------------------------------
 Levels of Logic:                     25
 Critical Path Length:            147.10
-Critical Path Slack:              60.08
+Critical Path Slack:              60.07
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -86,9 +86,9 @@ No. of Hold Violations:               0
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                     61
-Critical Path Length:              5.30
-Critical Path Slack:             201.87
+Levels of Logic:                     60
+Critical Path Length:              5.35
+Critical Path Slack:             201.81
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -102,11 +102,11 @@ Cell Count
 ----------------------------------------
 Hierarchical Cell Count:              1
 Hierarchical Port Count:            142
-Leaf Cell Count:                   8128
-Buf/Inv Cell Count:                1991
-Buf Cell Count:                     342
+Leaf Cell Count:                   8131
+Buf/Inv Cell Count:                1994
+Buf Cell Count:                     345
 Inv Cell Count:                    1649
-Combinational Cell Count:          6796
+Combinational Cell Count:          6799
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -129,24 +129,24 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            21475.17
+Combinational Area:            21476.69
 Noncombinational Area:         11509.67
-Buf/Inv Area:                   3082.77
-Total Buffer Area:               815.55
-Total Inverter Area:            2267.22
+Buf/Inv Area:                   3086.07
+Total Buffer Area:               821.90
+Total Inverter Area:            2264.17
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   95356.82
-Net YLength:                  130652.30
+Net XLength:                   95229.43
+Net YLength:                  130934.31
 ----------------------------------------
-Cell Area (netlist):                          32984.84
+Cell Area (netlist):                          32986.37
 Cell Area (netlist and physical only):        47906.14
-Net Length:                   226009.12
+Net Length:                   226163.75
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             12042
+Total Number of Nets:             12045
 Nets with Violations:                12
 Max Trans Violations:                 0
 Max Cap Violations:                  12
