@@ -1,0 +1,88 @@
+
+                                 IC Validator 
+
+          Version X-2025.06-SP2 for linux64 - Oct 16, 2025 cl#12570907
+
+                    Copyright (c) 1996 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Time Started: 2026-10-12 09:27:16
+Running on: srv-microeletronica3 4.18.0-553.132.1.el8_10.x86_64
+
+-------------
+
+Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds -c filtro_pdm -f GDSII -s filtro_pdm.icv.net -sf ICV -stc filtro_pdm -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+
+-------------
+
+Command Line Summary:
+icv
+-c filtro_pdm
+-f GDSII
+-i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds
+-s filtro_pdm.icv.net
+-sf ICV
+-stc filtro_pdm
+-I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs
+/Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+
+-------------
+Parsing runset "/Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs"
+
+
+
+Using 'ssh' as remote login program.
+
+warning: Unknown error while preprocessing compare entrypoints file '/remote/exchange/synopsys/SAED32_PDK/icv/lvs/Include/functions.rs' during cache header write 
+
+Parsing finished
+Runset Compile Time=0:00:07 User=6.65 Sys=0.13 Mem=0.992 GB
+
+Virtual Machine Init Time=0:00:00 User=0.01 Sys=0.01 Mem=0.992 GB
+
+
+DP Connect: Starting Redis server
+Host startup begins.
+Host startup done: 2 successes, 0 failures.
+	srv-microeletronica3: 2 total CPUs, maximum 2 commands in parallel.
+Selecting "srv-microeletronica3" as Primary host
+
+Started 3 cluster nodes
+Fully initialized cluster with 3 nodes.
+System Startup Time=0:00:10 User=0.03 Sys=0.11 Mem=0.992 GB
+
+
+Command execution begins.  Details recorded in the summary and log files:
+    /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_details/filtro_pdm.sum
+    /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_details/saed32nm_1p9m_lvs_rules.dp.log
+
+Running ...
+  [0:00:10][0%]   Total: 2 CPUs on 1 host
+  [0:00:12][1%]   
+  [0:00:12][2%]   
+  [0:00:16][3%]   Rules: 0/6, Rules with Violations: 0, Total Violations: 0
+  [0:00:16][4%]   
+  [0:00:16][5%]   
+/Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs:1457: error: compare(user_functions_file = "/remote/exchange/synopsys/SAED32_PDK/icv/lvs/Include/functions.rs").  The input file is not accessible for reading.
+/remote/exchange/synopsys/SAED32_PDK/icv/lvs/Include/functions.rs: file does not exist
+
+IC Validator VM exited with a run-time error
+DP Connect: Shutting down Redis server
+IC Validator Run: Time=0:00:25
+
+Time Ended: 2026-10-12 09:27:52
+
+IC Validator did not complete.

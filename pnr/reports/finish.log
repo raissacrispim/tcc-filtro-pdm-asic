@@ -1,0 +1,373 @@
+
+
+
+                              Fusion Compiler (TM)
+
+                Version X-2025.06-SP3 for linux64 - Feb 27, 2026
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+set sh_continue_on_error false
+false
+# ============================================================
+# finish.tcl
+# Finalizacao, relatorios finais e exportacao
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys Fusion Compiler
+# Tecnologia: SAED32 RVT
+#
+# Entrada:  filtro_pdm/route
+# Saida:    filtro_pdm/finish
+#           pnr/output/ (GDSII, netlists, SDF, SPEF, DEF)
+#
+# ATENCAO:
+# Versao candidata, ainda nao validada no Fusion Compiler.
+# ============================================================
+# Layout (GDS) das standard cells RVT
+set STDCELL_GDS \
+    /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/gds/saed32nm_rvt_oa.gds
+/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/gds/saed32nm_rvt_oa.gds
+# A numeracao GDS das camadas vem do arquivo de tecnologia.
+# O saed32nm_1p9m_gdsout.map esta no formato do Milkyway e
+# nao e aceito pelo write_gds do Fusion Compiler (GDS-017).
+file mkdir pnr/reports/finish
+file mkdir pnr/output
+# ------------------------------------------------------------
+# 1. Abrir o checkpoint do roteamento
+# ------------------------------------------------------------
+open_lib pnr/work/filtro_pdm.dlib
+Information: Loading library file '/home/raissa.crispim/tcc_filtro/pnr/work/filtro_pdm.dlib' (FILE-007)
+Information: Loading library file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm' (FILE-007)
+{filtro_pdm.dlib}
+open_block filtro_pdm/route
+Information: User units loaded from library 'saed32rvt_base_frame_timing' (LNK-040)
+Opening block 'filtro_pdm.dlib:filtro_pdm/route.design' in edit mode
+{filtro_pdm.dlib:filtro_pdm/route.design}
+# ------------------------------------------------------------
+# 2. Celulas de preenchimento (filler)
+#
+# Preenchem os espacos vazios das linhas de celulas, dando
+# continuidade aos poços (well) e aos rails de alimentacao.
+# Ordem decrescente de largura.
+# ------------------------------------------------------------
+# A lista precisa estar da maior para a menor (aviso CHF-008);
+# fora de ordem, apenas SHFILL1 e utilizada.
+unset -nocomplain FILLERS
+foreach nome {SHFILL128_RVT SHFILL64_RVT SHFILL3_RVT SHFILL2_RVT SHFILL1_RVT} {
+    append_to_collection FILLERS [get_lib_cells */$nome]
+}
+if {[sizeof_collection $FILLERS] == 0} {
+    puts "ERRO: celulas SHFILL*_RVT nao encontradas na biblioteca."
+    return -code error
+}
+create_stdcell_fillers -lib_cells $FILLERS
+Using libraries: filtro_pdm.dlib saed32rvt_base_frame_timing
+Warning: In library filtro_pdm.dlib, no block views exist for block filtro_pdm. (LNK-064)
+Visiting block filtro_pdm.dlib:filtro_pdm/route.design
+Design 'filtro_pdm' was successfully linked.
+* Disjointed site row process : FALSE
+INFO:: begin filler insertions...
+CHF::NPL_CHKQUERY_PNET checking turned off by default
+master SHFILL128_RVT has site unit
+master SHFILL64_RVT has site unit
+master SHFILL3_RVT has site unit
+master SHFILL2_RVT has site unit
+master SHFILL1_RVT has site unit
+ Use site unit (1520)
+Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
+PDC app_options settings =========
+	place.legalize.enable_prerouted_net_check: 1
+	place.legalize.num_tracks_for_access_check: 1
+	place.legalize.use_eol_spacing_for_access_check: 0
+	place.legalize.allow_touch_track_for_access_check: 1
+	place.legalize.reduce_conservatism_in_eol_check: 0
+	place.legalize.preroute_shape_merge_distance: 0.0
+	place.legalize.enable_non_preferred_direction_span_check: 0
+
+Layer M1: cached 0 shapes out of 3950 total shapes.
+Cached 1442 vias out of 78720 total vias.
+CHF: loading design...
+CHF:: Loading blkInsts from NDM...
+CHF:: Building row/inst relations...
+INFO:: Use fillers in order(1000): SHFILL128_RVT (128 x 1), SHFILL64_RVT (64 x 1), SHFILL3_RVT (3 x 1), SHFILL2_RVT (2 x 1), SHFILL1_RVT (1 x 1), 
+	10% complete ...
+	20% complete ...
+	30% complete ...
+	40% complete ...
+	50% complete ...
+	60% complete ...
+	70% complete ...
+	80% complete ...
+	90% complete ...
+Regular Filler Insertion Complete
+CHF:: Create all new fillers...
+... 0 of regular filler SHFILL128_RVT inserted
+... 11 of regular filler SHFILL64_RVT inserted
+... 17081 of regular filler SHFILL3_RVT inserted
+... 2185 of regular filler SHFILL2_RVT inserted
+... 2380 of regular filler SHFILL1_RVT inserted
+connect_pg_net -automatic
+Information: Connecting to PG and tie pins in automatic mode. (MV-396)
+****************************************
+Report : Power/Ground Connection Summary
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Mon Oct 12 09:24:56 2026
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 8133/29790
+Ground net VSS                8133/29790
+--------------------------------------------------------------------------------
+Information: connections of 43314 power/ground pin(s) are created or changed. (MV-382)
+
+1
+remove_stdcell_fillers_with_violation
+Information: The command 'remove_stdcell_fillers_with_violation' cleared the undo history. (UNDO-016)
+INFO: wire-opt feature for router enabled
+NEX(Warning): extract.rc_techfile_for_diode_mode_26_thickness not set, will igonre it
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = M8
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CO. (ZRT-022)
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Information: AutoNdr rule can't be found. Check the settings.
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 5.32 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 5.32 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Printing options for 'route.common.*'
+common.concurrent_redundant_via_mode                    :	 off                 
+common.eco_route_concurrent_redundant_via_mode          :	 off                 
+common.eco_route_fix_existing_drc                       :	 true                
+common.post_detail_route_redundant_via_insertion        :	 off                 
+common.verbose_level                                    :	 0                   
+
+Printing options for 'route.detail.*'
+detail.antenna                                          :	 false               
+detail.eco_route_use_soft_spacing_for_timing_optimization:	 true                
+detail.enable_auto_ndr_flow                             :	 true                
+
+Printing options for 'route.auto_via_ladder.*'
+
+There are 0 out of total 12048 nets with relaxed min layer from GR.
+[Start Removing Filler Cells] Elapsed real time: 0:00:00 
+[Start Removing Filler Cells] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Start Removing Filler Cells] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Start Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 4673 
+
+Begin Filler DRC check ...
+
+Information: Using 1 threads for routing. (ZRT-444)
+Partition 7, Fillers with Violations = 0
+Partition 8, Fillers with Violations = 0
+Partition 5, Fillers with Violations = 0
+Partition 3, Fillers with Violations = 0
+Partition 15, Fillers with Violations = 0
+Partition 6, Fillers with Violations = 0
+Partition 11, Fillers with Violations = 0
+Partition 4, Fillers with Violations = 0
+Partition 13, Fillers with Violations = 0
+Partition 1, Fillers with Violations = 0
+Partition 16, Fillers with Violations = 0
+Partition 9, Fillers with Violations = 0
+Partition 12, Fillers with Violations = 0
+Partition 2, Fillers with Violations = 0
+Partition 14, Fillers with Violations = 0
+Partition 10, Fillers with Violations = 0
+[End Removing Filler Cells] Elapsed real time: 0:00:02 
+[End Removing Filler Cells] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
+[End Removing Filler Cells] Stage (MB): Used    0  Alloctr    0  Proc  240 
+[End Removing Filler Cells] Total (MB): Used    0  Alloctr    0  Proc 4913 
+Updating the database ...
+Deleted 0 cell instances
+# ------------------------------------------------------------
+# 3. Verificacoes fisicas internas do Fusion Compiler
+#
+# Verificacao preliminar. O signoff de DRC e LVS e feito
+# depois no IC Validator, a partir do GDSII.
+# ------------------------------------------------------------
+check_legality        > pnr/reports/finish/legality.rpt
+check_routes          > pnr/reports/finish/check_routes.rpt
+check_pg_drc          > pnr/reports/finish/pg_drc.rpt
+check_pg_connectivity > pnr/reports/finish/pg_connectivity.rpt
+check_lvs             > pnr/reports/finish/check_lvs.rpt
+# ------------------------------------------------------------
+# 4. Relatorios finais
+# ------------------------------------------------------------
+report_qor         > pnr/reports/finish/qor.rpt
+report_utilization > pnr/reports/finish/utilization.rpt
+report_power       > pnr/reports/finish/power.rpt
+report_clock_qor   > pnr/reports/finish/clock_qor.rpt
+report_timing -delay_type max -max_paths 10 \
+    > pnr/reports/finish/timing_max.rpt
+report_timing -delay_type min -max_paths 10 \
+    > pnr/reports/finish/timing_min.rpt
+report_design -floorplan > pnr/reports/finish/design.rpt
+# ------------------------------------------------------------
+# 5. Salvar checkpoint final
+#
+# Remove o checkpoint de uma execucao anterior, se existir.
+# ------------------------------------------------------------
+catch {remove_blocks -force filtro_pdm/finish}
+Information: The command 'remove_blocks' cleared the undo history. (UNDO-016)
+Information: Removed design 'filtro_pdm.dlib:filtro_pdm/finish.design' from memory and disk. (NDMUI-064)
+0
+save_block -label finish
+Information: Saving 'filtro_pdm.dlib:filtro_pdm/route.design' to 'filtro_pdm.dlib:filtro_pdm/finish.design'. (DES-028)
+1
+# ------------------------------------------------------------
+# 6. Exportacao
+# ------------------------------------------------------------
+# Netlist para simulacao pos-layout (sem PG e sem fillers)
+write_verilog \
+    -exclude {pg_objects physical_only_cells leaf_module_declarations} \
+    pnr/output/filtro_pdm_pnr.v
+1
+# Netlist para LVS (com conexoes VDD/VSS)
+write_verilog \
+    -exclude {physical_only_cells leaf_module_declarations} \
+    pnr/output/filtro_pdm_lvs.v
+1
+# Atrasos para simulacao com back-annotation no VCS
+write_sdf pnr/output/filtro_pdm_pnr.sdf
+Information: The command 'write_sdf' cleared the undo history. (UNDO-016)
+1
+# Parasitas extraidos (SPEF)
+write_parasitics -output pnr/output/filtro_pdm
+Information: Design filtro_pdm has 12048 nets, 0 global routed, 12046 detail routed. (NEX-024)
+NEX: extract design filtro_pdm
+Information: batch extract takes 0.00 seconds, elapse 0.00 seconds (NEX-015)
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
+NEX: write corner ID 0 parasitics to pnr/output/filtro_pdm.Cmax_25.spef 
+spefName pnr/output/filtro_pdm.Cmax_25.spef, corner name default 
+NEX: write corner ID 1 parasitics to pnr/output/filtro_pdm.Cmin_25.spef 
+spefName pnr/output/filtro_pdm.Cmin_25.spef, corner name default 
+NEX:Warning write_parasitics supports only Ohm and kOhm as user resistance unit not 1MOhm, we force to set it Ohm.NEX: write_parasitics command finished
+# Restricoes finais
+write_sdc -output pnr/output/filtro_pdm_pnr.sdc
+
+Warning: Multiply cell derates are skipped!
+
+Warning: Multiply net derates are skipped!
+1
+# Descricao fisica (DEF)
+write_def pnr/output/filtro_pdm.def
+****************************************
+Report : Data Mismatches
+Version: X-2025.06-SP3
+Date   : Mon Oct 12 09:25:23 2026
+****************************************
+No mismatches exist on the design.
+Information: Fill shapes with 'active_fill' purpose will be skipped from output DEF. (DEFW-032)
+---------------------------------------
+Number of Written DEF Constructs
+---------------------------------------
+VERSION                        : 1
+DIVIDERCHAR                    : 1
+BUSBITCHARS                    : 1
+DESIGN                         : 1
+UNITS                          : 1
+PROPERTYDEFINITIONS            : 1
+DIEAREA                        : 1
+ROW                            : 130
+TRACKS                         : 20
+VIAS                           : 4
+NONDEFAULTRULES                : 1
+COMPONENTS                     : 29790
+PINS                           : 28
+PINPROPERTIES                  : 26
+SPECIALNETS                    : 6985
+NETS                           : 12046
+SCANCHAINS                     : 1
+1
+# GDSII com o layout das standard cells incorporado
+write_gds \
+    -hierarchy all \
+    -long_names \
+    -merge_files $STDCELL_GDS \
+    pnr/output/filtro_pdm.gds
+Warning: The user specified view ' layout' for lib-cell 'SDFFX1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FADDX1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NBUFFX4_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2X4_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2X0_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NBUFFX2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO21X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XNOR2X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX0_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OA21X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND2X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND2X4_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND2X0_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND4X0_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NAND3X0_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'MUX21X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OA221X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI221X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OA222X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO22X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO222X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO222X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OA22X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'HADDX1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XOR2X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND2X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AND3X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO21X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'HADDX2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'FADDX2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX4_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX8_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NBUFFX8_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OR2X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI22X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI21X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI21X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OAI222X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OA21X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO22X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR3X0_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR4X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AO221X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XNOR2X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NOR2X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'NBUFFX16_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'XOR3X1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OA22X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX16_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'INVX32_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'OR2X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'SHFILL3_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'SHFILL1_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'SHFILL2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'AOI22X2_RVT' is not available. (GDS-034)
+Warning: The user specified view ' layout' for lib-cell 'SHFILL64_RVT' is not available. (GDS-034)
+1
+puts "Finalizacao: script executado ate o final."
+Finalizacao: script executado ate o final.
+puts "GDSII: pnr/output/filtro_pdm.gds"
+GDSII: pnr/output/filtro_pdm.gds
+fc_shell> exit
+Maximum memory usage for this session: 787.67 MB
+Maximum memory usage for this session including child processes: 787.67 MB
+CPU usage for this session:     40 seconds (  0.01 hours)
+Elapsed time for this session:     52 seconds (  0.01 hours)
+Thank you for using Fusion Compiler.

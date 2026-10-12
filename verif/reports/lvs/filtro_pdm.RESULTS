@@ -1,0 +1,96 @@
+                            RESULTS: RUN ABORTED
+
+                      ###   ####    ###   ####   #####
+                     #   #  #   #  #   #  #   #    #
+                     #####  ####   #   #  ####     #
+                     #   #  #   #  #   #  #  #     #
+                     #   #  ####    ###   #   #    #
+
+===========================================================================
+
+
+---------------------------------------------------------------------------
+ICV Execution
+---------------------------------------------------------------------------
+
+
+                                 IC Validator 
+
+          Version X-2025.06-SP2 for linux64 - Oct 16, 2025 cl#12570907
+
+                    Copyright (c) 1996 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Called as: icv -i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds -c filtro_pdm -f GDSII -s filtro_pdm.icv.net -sf ICV -stc filtro_pdm -I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+
+Command Line Summary:
+icv
+-c filtro_pdm
+-f GDSII
+-i /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds
+-s filtro_pdm.icv.net
+-sf ICV
+-stc filtro_pdm
+-I /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs
+/Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Input file name:        /home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm.gds
+Top cell name:          filtro_pdm
+Layout format:          GDSII
+Runset file:            /Tools/PDK/SAED32/EDK_Digital/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
+Working directory:      /home/raissa.crispim/tcc_filtro/verif/run_lvs
+Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_details
+Layout error file:      filtro_pdm.LAYOUT_ERRORS
+User name:              raissa.crispim
+Time started:           2026/10/12 09:27:27AM
+Time ended:             2026/10/12 09:27:51AM
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+---------------------------------------------------------------------------
+Results Summary
+---------------------------------------------------------------------------
+
+IC Validator failed to complete.
+
+- Performing DRC checks and/or device extraction ... ERROR
+    Refer to /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_details/saed32nm_1p9m_lvs_rules.dp.log
+---------------------------------------------------------------------------
+Run Configuration
+---------------------------------------------------------------------------
+
+Production Environment Variables
+
+HOME = "/home/raissa.crispim"
+ICV_HOME_DIR = "/Tools/synopsys/icvalidator/X-2025.06-SP2"
+LM_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
+PATH = "/Tools/synopsys/icvalidator/X-2025.06-SP2/bin/LINUX.64:/Tools/synopsys/icvalidator/X-2025.06-SP2/contrib/bin/LINUX.64:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/home/raissa.crispim/.local/bin:/home/raissa.crispim/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
+SNPSLMD_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
+USER = "raissa.crispim"
+
+6 production environment variables set.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Debug Environment Variables
+
+0 debug environment variables set.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
