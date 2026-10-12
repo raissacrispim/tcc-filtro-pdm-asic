@@ -137,5 +137,11 @@ write_gds \
     -merge_files $STDCELL_GDS \
     pnr/output/filtro_pdm.gds
 
+# GDSII final: textos das portas movidos para as camadas de pino
+# (M*PIN), exigidas pelo LVS do SAED32. Somente textos mudam.
+exec python3 pnr/scripts/fix_gds_pin_text.py \
+    pnr/output/filtro_pdm.gds \
+    pnr/output/filtro_pdm_final.gds >@ stdout
+
 puts "Finalizacao: script executado ate o final."
-puts "GDSII: pnr/output/filtro_pdm.gds"
+puts "GDSII final: pnr/output/filtro_pdm_final.gds"

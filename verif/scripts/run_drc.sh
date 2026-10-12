@@ -24,7 +24,9 @@ RUNSET=$PDK_TECH/icv_drc/saed32nm_1p9m_drc_rules.rs
 TOPO=filtro_pdm
 
 RAIZ="$(cd "$(dirname "$0")/../.." && pwd)"
-GDS=$RAIZ/pnr/output/$TOPO.gds
+# GDS final (textos de porta nas camadas de pino), gerado por
+# finish.tcl via pnr/scripts/fix_gds_pin_text.py
+GDS=$RAIZ/pnr/output/${TOPO}_final.gds
 
 if [ ! -f "$GDS" ]; then
     echo "ERRO: GDS nao encontrado: $GDS"

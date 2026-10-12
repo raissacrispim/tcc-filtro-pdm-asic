@@ -88,7 +88,7 @@ Todos os comandos são executados a partir da raiz do repositório.
 | Roteamento | Fusion Compiler | `fc_shell -f pnr/scripts/route.tcl` | raiz |
 | Finalização e GDSII | Fusion Compiler | `fc_shell -f pnr/scripts/finish.tcl` | raiz |
 | Simulação pós-layout com SDF | VCS | `sim/scripts/compile_gls.sh pnr sdf` | raiz |
-| Verificação do GDS | Python | `python3 pnr/scripts/check_gds.py pnr/output/filtro_pdm.gds` | raiz |
+| Verificação do GDS | Python | `python3 pnr/scripts/check_gds.py pnr/output/filtro_pdm_final.gds` | raiz |
 | DRC | IC Validator | `verif/scripts/run_drc.sh` | raiz |
 | LVS | IC Validator | `verif/scripts/run_lvs.sh` | raiz |
 

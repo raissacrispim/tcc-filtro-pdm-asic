@@ -31,7 +31,9 @@ CDL=$PDK/lib/stdcell_rvt/lvs/saed32nm_rvt.cdl
 TOPO=filtro_pdm
 
 RAIZ="$(cd "$(dirname "$0")/../.." && pwd)"
-GDS=$RAIZ/pnr/output/$TOPO.gds
+# GDS final (textos de porta nas camadas de pino), gerado por
+# finish.tcl via pnr/scripts/fix_gds_pin_text.py
+GDS=$RAIZ/pnr/output/${TOPO}_final.gds
 NETLIST=$RAIZ/pnr/output/${TOPO}_lvs.v
 
 for arq in "$GDS" "$NETLIST"; do
@@ -57,15 +59,19 @@ if grep -q "/remote/exchange" saed32nm_1p9m_lvs_rules_local.rs; then
     grep -n "/remote/exchange" saed32nm_1p9m_lvs_rules_local.rs
 fi
 
-# 1. Netlist Verilog + CDL das celulas -> netlist do ICV
+# 1. CDL com o multiplicador m=N expandido em N transistores,
+#    para que o esquematico seja agrupado como o layout
+python3 "$RAIZ/verif/scripts/expand_cdl_m.py" "$CDL" saed32nm_rvt_expandido.cdl
+
+# 2. Netlist Verilog + CDL das celulas -> netlist do ICV
 icv_nettran \
     -verilog "$NETLIST" \
-    -sp "$CDL" \
+    -sp saed32nm_rvt_expandido.cdl \
     -outName $TOPO.icv.net \
     -wireLog icv_nettran_wires.log \
     2>&1 | tee icv_nettran.log
 
-# 2. Comparacao layout x netlist
+# 3. Comparacao layout x netlist
 icv -i "$GDS" -c $TOPO -f GDSII \
     -s $TOPO.icv.net -sf ICV -stc $TOPO \
     -I "$PDK/tech/icv_lvs" \
