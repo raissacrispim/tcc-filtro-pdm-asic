@@ -24,6 +24,7 @@ HEADER, BGNLIB, LIBNAME, UNITS, ENDLIB = 0x00, 0x01, 0x02, 0x03, 0x04
 BGNSTR, STRNAME, ENDSTR = 0x05, 0x06, 0x07
 BOUNDARY, PATH, SREF, AREF, TEXT = 0x08, 0x09, 0x0A, 0x0B, 0x0C
 LAYER, SNAME, STRING, ENDEL = 0x0D, 0x12, 0x19, 0x11
+TEXTTYPE = 0x16
 
 
 def ler_registros(caminho):
@@ -58,7 +59,9 @@ def analisar(caminho):
             celulas[atual] = {
                 "poligonos": 0, "textos": 0,
                 "refs": defaultdict(int), "camadas": set(),
+                "lista_textos": [],
             }
+            texto_atual = {}
         elif tipo == ENDSTR:
             atual = None
         elif atual is None:
@@ -71,8 +74,17 @@ def analisar(caminho):
         elif tipo == TEXT:
             elemento = "txt"
             celulas[atual]["textos"] += 1
+            texto_atual = {"camada": None, "tipo": None}
         elif tipo == LAYER and elemento in ("geo", "txt"):
-            celulas[atual]["camadas"].add(struct.unpack(">h", conteudo[:2])[0])
+            camada = struct.unpack(">h", conteudo[:2])[0]
+            celulas[atual]["camadas"].add(camada)
+            if elemento == "txt":
+                texto_atual["camada"] = camada
+        elif tipo == TEXTTYPE and elemento == "txt":
+            texto_atual["tipo"] = struct.unpack(">h", conteudo[:2])[0]
+        elif tipo == STRING and elemento == "txt":
+            celulas[atual]["lista_textos"].append(
+                (texto_atual.get("camada"), texto_atual.get("tipo"), texto(conteudo)))
         elif tipo == SNAME and elemento == "ref":
             celulas[atual]["refs"][texto(conteudo)] += 1
         elif tipo == ENDEL:
@@ -122,6 +134,11 @@ def main():
         print(f"  textos (pinos)     : {c['textos']}")
         print(f"  instancias         : {sum(c['refs'].values())}")
         print(f"  tipos de celula    : {len(c['refs'])}")
+        por_camada = defaultdict(list)
+        for camada, tipo_txt, nome in c["lista_textos"]:
+            por_camada[(camada, tipo_txt)].append(nome)
+        for (camada, tipo_txt), nomes in sorted(por_camada.items()):
+            print(f"  textos na camada {camada};{tipo_txt}: {', '.join(sorted(nomes))}")
 
     print()
     print(f"Celulas referenciadas e ausentes do arquivo : {len(ausentes)}")

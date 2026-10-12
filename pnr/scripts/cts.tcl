@@ -39,6 +39,22 @@ set_max_transition 0.50 [current_design]
 # M9: anel de alimentacao; MRDL: redistribuicao para pads.
 set_ignored_layers -min_routing_layer M2 -max_routing_layer M8
 
+# Modo "hard": a camada minima vale tambem para o acesso aos
+# pinos. No modo padrao (allow_pin_connection) o roteador ainda
+# usa ate ~5 um de M1 para chegar aos pinos, o que deixou 10
+# violacoes M1.W.2.1 no DRC. Os pinos em M1 sao acessados por
+# vias VIA12 a partir de M2.
+foreach {opcao valor} {
+    route.common.global_min_layer_mode hard
+    route.common.net_min_layer_mode    hard
+} {
+    if {[catch {set_app_options -name $opcao -value $valor} msg]} {
+        puts "Aviso: opcao $opcao nao aplicada ($msg)"
+    } else {
+        puts "Opcao $opcao = $valor"
+    }
+}
+
 # Permite o uso das celulas TIE (TIEH/TIEL) caso a otimizacao
 # gere redes constantes (aviso OPT-200 no placement).
 set_lib_cell_purpose -include optimization [get_lib_cells */TIE*]

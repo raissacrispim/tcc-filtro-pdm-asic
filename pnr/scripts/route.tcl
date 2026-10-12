@@ -41,6 +41,22 @@ set_ignored_layers \
 
 report_ignored_layers
 
+# Modo "hard": a camada minima vale tambem para o acesso aos
+# pinos. No modo padrao (allow_pin_connection) o roteador ainda
+# usa ate ~5 um de M1 para chegar aos pinos, o que deixou 10
+# violacoes M1.W.2.1 no DRC. Os pinos em M1 sao acessados por
+# vias VIA12 a partir de M2.
+foreach {opcao valor} {
+    route.common.global_min_layer_mode hard
+    route.common.net_min_layer_mode    hard
+} {
+    if {[catch {set_app_options -name $opcao -value $valor} msg]} {
+        puts "Aviso: opcao $opcao nao aplicada ($msg)"
+    } else {
+        puts "Opcao $opcao = $valor"
+    }
+}
+
 
 # ------------------------------------------------------------
 # Vias redundantes desativadas
