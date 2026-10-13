@@ -15,6 +15,7 @@ TESTS=(
     test_05_50k_ruido
     test_06_burst_50k_ruido
     test_07_fundo_escala
+    test_08_50k_interf_130k
 )
 
 cd "$(dirname "$0")/.."

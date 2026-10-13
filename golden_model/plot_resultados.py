@@ -14,6 +14,8 @@
 #                            x saida do chip e diferenca
 #   espectro_<nome>.png      espectro da saida (FFT)
 #   resumo_testes.png        amostras comparadas e erros
+#   filtragem_<nome>.png     entrada PDM -> CIC -> FIR, no tempo e
+#                            no espectro (teste com interferencia)
 #
 # "Saida do chip" e o arquivo *_output_rtl.txt escrito pelo
 # testbench na ultima simulacao executada (RTL, gate-level ou
@@ -54,6 +56,7 @@ TESTES = {
     "test_05_50k_ruido": "50 kHz com ruido",
     "test_06_burst_50k_ruido": "Burst de 50 kHz com ruido",
     "test_07_fundo_escala": "Fundo de escala",
+    "test_08_50k_interf_130k": "50 kHz + interferencia de 130 kHz",
 }
 
 plt.rcParams.update({
@@ -220,6 +223,74 @@ def figura_espectro(nome, titulo):
     plt.close(fig)
 
 
+def espectro_db(x, fs):
+    x = np.asarray(x, dtype=float)
+    x = x - x.mean()
+    janela = np.blackman(len(x))
+    X = np.abs(np.fft.rfft(x * janela)) / (janela.sum() / 2)
+    return np.fft.rfftfreq(len(x), 1 / fs), 20 * np.log10(np.maximum(X, 1e-9))
+
+
+def figura_filtragem(nome, titulo, tons):
+    """Entrada PDM -> saida do CIC -> saida do FIR, no tempo e na frequencia."""
+    pdm = ler(f"{nome}_input_pdm.txt")
+    cic = ler(f"{nome}_output_cic_golden.txt")
+    gold = ler(f"{nome}_output_golden.txt")
+    chip = ler(f"{nome}_output_rtl.txt")
+    if pdm is None or cic is None or gold is None:
+        return
+    saida = chip if chip is not None and len(chip) == len(gold) else gold
+    origem = "chip" if saida is chip else "Golden Model"
+
+    fig, eixos = plt.subplots(3, 2, figsize=(11, 8))
+
+    # Tempo: detalhe de 0,1 ms apos o transitorio
+    t_out = np.arange(len(gold)) / FS_OUT * 1e3
+    t_pdm = np.arange(len(pdm)) / FS_PDM * 1e3
+    jan_out = (t_out >= 1.0) & (t_out <= 1.1)
+    jan_pdm = (t_pdm >= 1.0) & (t_pdm <= 1.1)
+
+    eixos[0, 0].step(t_pdm[jan_pdm], pdm[jan_pdm], where="post", lw=0.6,
+                     color="0.4")
+    eixos[0, 0].set_title("1) Entrada PDM: 1 bit a 4,8 MHz")
+    eixos[1, 0].plot(t_out[jan_out], cic[jan_out] / 2 ** 16, "o-", ms=3,
+                     color="C0")
+    eixos[1, 0].set_title("2) Saida do CIC (300 kHz): 50 kHz + 130 kHz")
+    eixos[2, 0].plot(t_out[jan_out], saida[jan_out] / 2 ** 16, "o-", ms=3,
+                     color="C2")
+    eixos[2, 0].set_title(f"3) Saida do FIR ({origem}): somente 50 kHz")
+    eixos[2, 0].set_xlabel("Tempo (ms)")
+
+    # Frequencia
+    f, X = espectro_db(2 * pdm - 1, FS_PDM)
+    eixos[0, 1].plot(f / 1e3, X, lw=0.6, color="0.4")
+    eixos[0, 1].set_xlim(0, 1200)
+    eixos[0, 1].set_title("Espectro da entrada PDM (ruido de quantizacao "
+                          "cresce com a frequencia)")
+    f, X = espectro_db(cic[80:] / 2 ** 16, FS_OUT)
+    eixos[1, 1].plot(f / 1e3, X, lw=1, color="C0")
+    eixos[1, 1].set_title("Espectro apos o CIC")
+    f, X = espectro_db(saida[80:] / 2 ** 16, FS_OUT)
+    eixos[2, 1].plot(f / 1e3, X, lw=1, color="C2")
+    eixos[2, 1].set_title("Espectro apos o FIR: interferencia removida")
+    eixos[2, 1].set_xlabel("Frequencia (kHz)")
+
+    for eixo in eixos[:, 1]:
+        eixo.set_ylim(-140, 5)
+        eixo.set_ylabel("dBFS")
+        for tom in tons:
+            eixo.axvline(tom / 1e3, ls=":", color="r", lw=0.8)
+    for eixo in eixos[1:, 1]:
+        eixo.set_xlim(0, FS_OUT / 2 / 1e3)
+        eixo.axvspan(FAIXA_PASSAGEM / 1e3, FAIXA_REJEICAO / 1e3,
+                     color="0.9", zorder=0)
+
+    fig.suptitle(f"Filtragem estagio a estagio: {titulo}")
+    fig.tight_layout()
+    fig.savefig(os.path.join(FIGURAS, f"filtragem_{nome}.png"))
+    plt.close(fig)
+
+
 def figura_resumo(resultados):
     nomes = list(resultados)
     amostras = [resultados[n][0] for n in nomes]
@@ -257,6 +328,9 @@ def main():
 
     for nome in ("test_03_50k", "test_05_50k_ruido"):
         figura_espectro(nome, TESTES[nome])
+
+    figura_filtragem("test_08_50k_interf_130k",
+                     TESTES["test_08_50k_interf_130k"], (50e3, 130e3))
 
     if resultados:
         figura_resumo(resultados)

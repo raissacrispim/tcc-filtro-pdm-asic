@@ -298,6 +298,23 @@ def gerar_pdm_burst():
     return sigma_delta_1bit(np.clip(sinal, -1.0, 1.0))
 
 
+def gerar_pdm_50k_interferencia_130k():
+    """
+    Sinal de 50 kHz (faixa de passagem) somado a uma
+    interferencia de 130 kHz (faixa de rejeicao, > 110 kHz).
+
+    Demonstra a filtragem: a saida deve conter apenas os
+    50 kHz; os 130 kHz devem ser atenuados em mais de 80 dB.
+    """
+
+    t = eixo_tempo()
+
+    sinal = (0.4 * np.sin(2 * np.pi * 50e3 * t)
+             + 0.4 * np.sin(2 * np.pi * 130e3 * t))
+
+    return sigma_delta_1bit(sinal)
+
+
 def gerar_pdm_fundo_escala():
     """
     Teste de fundo de escala: blocos de 2400 bits alternando
@@ -327,6 +344,7 @@ def gerar_testes():
         "test_05_50k_ruido": gerar_pdm_50k_ruido(),
         "test_06_burst_50k_ruido": gerar_pdm_burst(),
         "test_07_fundo_escala": gerar_pdm_fundo_escala(),
+        "test_08_50k_interf_130k": gerar_pdm_50k_interferencia_130k(),
     }
 
 
