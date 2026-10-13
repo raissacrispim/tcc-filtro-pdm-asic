@@ -115,10 +115,38 @@ As restrições de timing ficam em `pnr/constraints/filtro_pdm_physical.sdc` e s
 
 As restrições das portas de scan ficam em `pnr/constraints/filtro_pdm_dft.sdc`.
 
-Os scripts de DFT, ATPG, `place.tcl`, `cts.tcl`, `route.tcl`, `finish.tcl` e `timing_setup.tcl` são versões candidatas, ainda não validadas nas ferramentas.
+## Resultados
+
+Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
+
+| Etapa | Resultado |
+|---|---|
+| Simulação RTL x Golden Model | 7/7 testes aprovados |
+| Simulação gate-level pós-síntese | 7/7 testes aprovados |
+| Simulação pós-layout com SDF | 7/7 testes aprovados |
+| DFT | 1 cadeia de scan, 1.332 flip-flops |
+| ATPG pós-layout | stuck-at 98,56%; transition 97,87% |
+| DRC (IC Validator) | CLEAN (396 regras) |
+| LVS (IC Validator) | PASS |
+| Área de células | 40.332 µm² (utilização do core 84%) |
+| Células | 9.932 (sem fillers) |
+| Capacitância/transição máximas | 0 violações |
+| Setup (tt / ss / ff) | +60,1 / +56,6 / +61,8 ns |
+| Hold registrador→registrador (tt / ss / ff) | atendido nos três corners |
+| Potência dinâmica (SAIF, sinal de 50 kHz com ruído) | 53,2 µW (interna 40,3; chaveamento 12,9) |
+| Potência dinâmica sem vetores | 122,4 µW |
+| Potência de fuga | 1,21 mW |
+| Potência total (SAIF) | 1,26 mW (FIR: 87%) |
+
+Corners de timing (PrimeTime): tt0p85v25c, ss0p75v125c (0,75 V, 125 °C) e ff0p95vn40c (0,95 V, −40 °C).
+
+### Hold no corner rápido
+
+- O P&R otimiza somente o corner típico. Para cobrir o corner ff, o CTS e o roteamento usam incerteza de hold de 0,25 ns (`cts.tcl`, `route.tcl`); o `finish.tcl` restaura 0,10 ns.
+- Um ECO de hold do PrimeTime após o roteamento foi testado e descartado: 1.353 células de atraso sem espaço livre geraram sobreposições e falhas de DRC/LVS.
+- No PrimeTime, a incerteza de hold após o CTS é 0,05 ns (jitter + margem). Os 0,10 ns do SDC são a margem pré-CTS, que inclui o skew estimado, já presente no clock propagado. Com 0,10 ns, restam 148 caminhos de scan (Q → SI) com até −0,04 ns no corner ff; esses caminhos só são usados no modo de teste.
+- Caminhos de E/S: com a latência de E/S medida em cada corner, restam no ff 42 caminhos da entrada `rst` com até −0,03 ns. O hold de E/S depende das hipóteses externas preliminares do SDC (atraso mínimo de entrada 0 ns) e deve ser revisto na integração do bloco.
 
 ## Ferramentas
 
-A simulação e depuração RTL foram realizadas utilizando ferramentas Synopsys, incluindo VCS e Verdi.
-
-O fluxo físico (síntese no Design Compiler e floorplan no Fusion Compiler) está em andamento em `synth/` e `pnr/`.
+Synopsys VCS e Verdi (simulação), Design Compiler (síntese e DFT), TestMAX ATPG, Fusion Compiler (P&R), PrimeTime (timing multi-corner) e IC Validator (DRC/LVS).
