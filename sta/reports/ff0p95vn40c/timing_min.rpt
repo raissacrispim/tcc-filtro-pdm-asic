@@ -7,7 +7,7 @@ Report : timing
 	-sort_by slack
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 13 15:05:59 2026
+Date   : Tue Oct 13 15:58:02 2026
 ****************************************
 
 
@@ -30,14 +30,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.248
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.117
+  slack (VIOLATED)                                                 -0.067
 
 
   Startpoint: u_fir/y_out_reg_10_
@@ -59,14 +59,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.252
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.113
+  slack (VIOLATED)                                                 -0.063
 
 
   Startpoint: u_fir/valid_out_reg
@@ -88,14 +88,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.252
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.113
+  slack (VIOLATED)                                                 -0.063
 
 
   Startpoint: u_fir/y_out_reg_6_
@@ -117,14 +117,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.253
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.112
+  slack (VIOLATED)                                                 -0.062
 
 
   Startpoint: u_fir/y_out_reg_4_
@@ -146,14 +146,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.254
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.111
+  slack (VIOLATED)                                                 -0.061
 
 
   Startpoint: u_fir/y_out_reg_5_
@@ -175,14 +175,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.255
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.110
+  slack (VIOLATED)                                                 -0.060
 
 
   Startpoint: u_fir/y_out_reg_3_
@@ -204,14 +204,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.258
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.107
+  slack (VIOLATED)                                                 -0.057
 
 
   Startpoint: u_fir/y_out_reg_0_
@@ -234,14 +234,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.260
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.106
+  slack (VIOLATED)                                                 -0.056
 
 
   Startpoint: u_fir/y_out_reg_16_
@@ -268,14 +268,14 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.263
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.102
+  slack (VIOLATED)                                                 -0.052
 
 
   Startpoint: u_fir/y_out_reg_1_
@@ -299,15 +299,15 @@ Date   : Tue Oct 13 15:05:59 2026
   clock clk (rise edge)                                  0.000      0.000
   clock network delay (ideal)                            0.265      0.265
   clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.100      0.365
-  output external delay                                  0.000      0.365
-  data required time                                                0.365
+  clock uncertainty                                      0.050      0.315
+  output external delay                                  0.000      0.315
+  data required time                                                0.315
   ------------------------------------------------------------------------------
-  data required time                                                0.365
+  data required time                                                0.315
   data arrival time                                                -0.264
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.102
+  slack (VIOLATED)                                                 -0.052
 
-Warning: report_timing has satisfied the max_paths criteria. There are 159 further endpoints which have paths of interest with slack less than    0.000 that were not considered when generating this report. (UITE-502)
+Warning: report_timing has satisfied the max_paths criteria. There are 11 further endpoints which have paths of interest with slack less than    0.000 that were not considered when generating this report. (UITE-502)
 
 1
