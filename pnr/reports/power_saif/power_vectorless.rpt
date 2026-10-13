@@ -1,0 +1,105 @@
+Using libraries: filtro_pdm.dlib saed32rvt_base_frame_timing
+Warning: In library filtro_pdm.dlib, no block views exist for block filtro_pdm. (LNK-064)
+Visiting block filtro_pdm.dlib:filtro_pdm/finish.design
+Design 'filtro_pdm' was successfully linked.
+Information: Timer using 1 threads
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 482 MB / Date: Tue Oct 13 16:07:20 2026
+
+Information: Corner default: no PVT mismatches. (PVT-032)
+Timing Update Completed: Mem-peak: 498 MB / Date: Tue Oct 13 16:07:20 2026
+
+****************************************
+Report : power
+        -significant_digits 2
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Tue Oct 13 16:07:20 2026
+****************************************
+Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/finish.design'. (TIM-125)
+Information: Design filtro_pdm has 13846 nets, 0 global routed, 13844 detail routed. (NEX-024)
+Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
+---extraction options---
+Corner: default
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.enable_coupling_cap    : false
+Extracting design: filtro_pdm 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 13844 nets are successfully extracted. (NEX-028)
+Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 13844, routed nets = 13844, across physical hierarchy nets = 0, parasitics cached nets = 13844, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[21136]
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+Information: Activity for scenario default was cached, no propagation required. (POW-005)
+Mode: default
+Corner: default
+Scenario: default
+Voltage: 0.85
+Temperature: 25.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = 8.75e+07 pW ( 71.5%)
+  Net Switching Power    = 3.49e+07 pW ( 28.5%)
+Total Dynamic Power      = 1.22e+08 pW (100.0%)
+
+Cell Leakage Power       = 1.19e+09 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             2.87e+07               6.57e+06               1.06e+07               4.59e+07    (  3.5%)        i
+register                  1.41e+07               6.13e+06               4.08e+08               4.28e+08    ( 32.7%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             4.47e+07               2.22e+07               7.67e+08               8.34e+08    ( 63.8%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     8.75e+07 pW            3.49e+07 pW            1.19e+09 pW            1.31e+09 pW
+1

@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 13 15:58:02 2026
+Date   : Tue Oct 13 16:08:24 2026
 ****************************************
 
 
@@ -13,27 +13,48 @@ Date   : Tue Oct 13 15:58:02 2026
 
    Endpoint                                                  Slack
    -----------------------------------------------------------------
-   y_out[11]                                                 -0.07  (VIOLATED)
-   y_out[10]                                                 -0.06  (VIOLATED)
-   valid_out                                                 -0.06  (VIOLATED)
-   y_out[6]                                                  -0.06  (VIOLATED)
-   y_out[4]                                                  -0.06  (VIOLATED)
-   y_out[5]                                                  -0.06  (VIOLATED)
-   y_out[3]                                                  -0.06  (VIOLATED)
-   y_out[0]                                                  -0.06  (VIOLATED)
-   y_out[16]                                                 -0.05  (VIOLATED)
-   y_out[1]                                                  -0.05  (VIOLATED)
-   y_out[7]                                                  -0.05  (VIOLATED)
-   y_out[15]                                                 -0.05  (VIOLATED)
-   scan_out                                                  -0.04  (VIOLATED)
-   y_out[18]                                                 -0.04  (VIOLATED)
-   y_out[9]                                                  -0.04  (VIOLATED)
-   y_out[17]                                                 -0.04  (VIOLATED)
-   y_out[2]                                                  -0.04  (VIOLATED)
-   y_out[14]                                                 -0.02  (VIOLATED)
-   y_out[13]                                                 -0.02  (VIOLATED)
-   y_out[8]                                                  -0.02  (VIOLATED)
-   y_out[12]                                                 -0.02  (VIOLATED)
+   u_cic_u_integradores_int1_reg_13_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int1_reg_12_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int1_reg_15_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int4_reg_17_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int1_reg_17_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int3_reg_17_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int2_reg_16_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int1_reg_16_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int2_reg_13_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int1_reg_14_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int3_reg_16_/D                       -0.03  (VIOLATED)
+   u_cic_u_integradores_int2_reg_14_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int3_reg_14_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int2_reg_17_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int3_reg_15_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int2_reg_12_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int2_reg_15_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int2_reg_11_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int3_reg_13_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int3_reg_12_/D                       -0.02  (VIOLATED)
+   u_cic_u_integradores_int4_reg_13_/D                       -0.01  (VIOLATED)
+   u_cic_u_integradores_int4_reg_15_/D                       -0.01  (VIOLATED)
+   u_cic_u_integradores_int4_reg_16_/D                       -0.01  (VIOLATED)
+   u_cic_u_integradores_int4_reg_11_/D                       -0.01  (VIOLATED)
+   u_cic_u_integradores_int4_reg_12_/D                       -0.01  (VIOLATED)
+   u_cic_u_integradores_int4_reg_14_/D                       -0.01  (VIOLATED)
+   u_fir/delay_reg_11__7_/SE                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_51__8_/SE                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_9__7_/SE                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_11__8_/SE                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_10__7_/SE                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_53__8_/SE                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_54__8_/SE                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_55__8_/SE                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_7__8_/SE                                   0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_6__9_/SE                                   0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_11__9_/SE                                  0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_10__8_/SE                                  0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_52__8_/SE                                  0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_51__9_/SE                                  0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_52__9_/SE                                  0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_8__9_/SE                                   0.00  (VIOLATED: increase significant digits)
 
 
 1

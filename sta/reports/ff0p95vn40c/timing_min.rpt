@@ -7,307 +7,319 @@ Report : timing
 	-sort_by slack
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 13 15:58:02 2026
+Date   : Tue Oct 13 16:08:24 2026
 ****************************************
 
 
-  Startpoint: u_fir/y_out_reg_11_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int1_reg_13_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[11] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.065      0.065
-  u_fir/y_out_reg_11_/CLK (SDFFX1_RVT)                   0.000      0.065 r
-  u_fir/y_out_reg_11_/Q (SDFFX1_RVT)                     0.063 &    0.128 r
-  u_fir/HFSBUF_34_69/Y (DELLN2X2_RVT)                    0.119 &    0.248 r
-  y_out[11] (out)                                        0.000 &    0.248 r
-  data arrival time                                                 0.248
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U447/Y (AND2X1_RVT)                                    0.033 &    0.078 f
+  u_cic_u_integradores_int1_reg_13_/D (SDFFX1_RVT)       0.000 &    0.078 f
+  data arrival time                                                 0.078
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int1_reg_13_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.022      0.105
+  data required time                                                0.105
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.248
+  data required time                                                0.105
+  data arrival time                                                -0.078
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.067
+  slack (VIOLATED)                                                 -0.027
 
 
-  Startpoint: u_fir/y_out_reg_10_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int1_reg_12_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[10] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.065      0.065
-  u_fir/y_out_reg_10_/CLK (SDFFX1_RVT)                   0.000      0.065 r
-  u_fir/y_out_reg_10_/Q (SDFFX1_RVT)                     0.062 &    0.128 r
-  u_fir/HFSBUF_34_68/Y (DELLN2X2_RVT)                    0.124 &    0.251 r
-  y_out[10] (out)                                        0.001 &    0.252 r
-  data arrival time                                                 0.252
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U446/Y (AND2X1_RVT)                                    0.033 &    0.078 f
+  u_cic_u_integradores_int1_reg_12_/D (SDFFX1_RVT)       0.000 &    0.078 f
+  data arrival time                                                 0.078
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int1_reg_12_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.022      0.105
+  data required time                                                0.105
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.252
+  data required time                                                0.105
+  data arrival time                                                -0.078
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.063
+  slack (VIOLATED)                                                 -0.027
 
 
-  Startpoint: u_fir/valid_out_reg
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int1_reg_15_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: valid_out (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.067      0.067
-  u_fir/valid_out_reg/CLK (SDFFX1_RVT)                   0.000      0.067 r
-  u_fir/valid_out_reg/Q (SDFFX1_RVT)                     0.066 &    0.133 r
-  HFSBUF_4_26/Y (DELLN2X2_RVT)                           0.119 &    0.252 r
-  valid_out (out)                                        0.001 &    0.252 r
-  data arrival time                                                 0.252
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U449/Y (AND2X1_RVT)                                    0.034 &    0.078 f
+  u_cic_u_integradores_int1_reg_15_/D (SDFFX1_RVT)       0.000 &    0.078 f
+  data arrival time                                                 0.078
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int1_reg_15_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.023      0.105
+  data required time                                                0.105
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.252
+  data required time                                                0.105
+  data arrival time                                                -0.078
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.063
+  slack (VIOLATED)                                                 -0.026
 
 
-  Startpoint: u_fir/y_out_reg_6_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int4_reg_17_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[6] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.066      0.066
-  u_fir/y_out_reg_6_/CLK (SDFFX1_RVT)                    0.000      0.066 r
-  u_fir/y_out_reg_6_/Q (SDFFX1_RVT)                      0.067 &    0.133 r
-  HFSBUF_11_78/Y (DELLN2X2_RVT)                          0.120 &    0.252 r
-  y_out[6] (out)                                         0.000 &    0.253 r
-  data arrival time                                                 0.253
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U397/Y (AND2X1_RVT)                                    0.035 &    0.079 f
+  u_cic_u_integradores_int4_reg_17_/D (SDFFX1_RVT)       0.000 &    0.079 f
+  data arrival time                                                 0.079
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int4_reg_17_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.022      0.105
+  data required time                                                0.105
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.253
+  data required time                                                0.105
+  data arrival time                                                -0.079
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.062
+  slack (VIOLATED)                                                 -0.026
 
 
-  Startpoint: u_fir/y_out_reg_4_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int1_reg_17_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[4] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.066      0.066
-  u_fir/y_out_reg_4_/CLK (SDFFX1_RVT)                    0.000      0.066 r
-  u_fir/y_out_reg_4_/Q (SDFFX1_RVT)                      0.066 &    0.131 r
-  HFSBUF_11_76/Y (DELLN2X2_RVT)                          0.122 &    0.253 r
-  y_out[4] (out)                                         0.001 &    0.254 r
-  data arrival time                                                 0.254
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U451/Y (AND2X1_RVT)                                    0.035 &    0.080 f
+  u_cic_u_integradores_int1_reg_17_/D (SDFFX1_RVT)       0.000 &    0.080 f
+  data arrival time                                                 0.080
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int1_reg_17_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.022      0.106
+  data required time                                                0.106
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.254
+  data required time                                                0.106
+  data arrival time                                                -0.080
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.061
+  slack (VIOLATED)                                                 -0.026
 
 
-  Startpoint: u_fir/y_out_reg_5_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int3_reg_17_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[5] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.066      0.066
-  u_fir/y_out_reg_5_/CLK (SDFFX1_RVT)                    0.000      0.066 r
-  u_fir/y_out_reg_5_/Q (SDFFX1_RVT)                      0.065 &    0.131 r
-  HFSBUF_11_77/Y (DELLN2X2_RVT)                          0.123 &    0.254 r
-  y_out[5] (out)                                         0.001 &    0.255 r
-  data arrival time                                                 0.255
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U415/Y (AND2X1_RVT)                                    0.035 &    0.080 f
+  u_cic_u_integradores_int3_reg_17_/D (SDFFX1_RVT)       0.000 &    0.080 f
+  data arrival time                                                 0.080
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int3_reg_17_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.022      0.106
+  data required time                                                0.106
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.255
+  data required time                                                0.106
+  data arrival time                                                -0.080
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.060
+  slack (VIOLATED)                                                 -0.026
 
 
-  Startpoint: u_fir/y_out_reg_3_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int2_reg_16_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[3] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.066      0.066
-  u_fir/y_out_reg_3_/CLK (SDFFX1_RVT)                    0.000      0.066 r
-  u_fir/y_out_reg_3_/Q (SDFFX1_RVT)                      0.069 &    0.134 r
-  copt_h_inst_2410/Y (DELLN2X2_RVT)                      0.122 &    0.257 r
-  y_out[3] (out)                                         0.001 &    0.258 r
-  data arrival time                                                 0.258
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U432/Y (AND2X1_RVT)                                    0.035 &    0.080 f
+  u_cic_u_integradores_int2_reg_16_/D (SDFFX1_RVT)       0.000 &    0.080 f
+  data arrival time                                                 0.080
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int2_reg_16_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.022      0.105
+  data required time                                                0.105
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.258
+  data required time                                                0.105
+  data arrival time                                                -0.080
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.057
+  slack (VIOLATED)                                                 -0.026
 
 
-  Startpoint: u_fir/y_out_reg_0_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int1_reg_16_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[0] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.065      0.065
-  u_fir/y_out_reg_0_/CLK (SDFFX1_RVT)                    0.000      0.065 r
-  u_fir/y_out_reg_0_/Q (SDFFX1_RVT)                      0.066 &    0.131 r
-  HFSBUF_11_67/Y (NBUFFX2_RVT)                           0.036 &    0.167 r
-  copt_h_inst_2417/Y (DELLN1X2_RVT)                      0.093 &    0.259 r
-  y_out[0] (out)                                         0.000 &    0.260 r
-  data arrival time                                                 0.260
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U450/Y (AND2X1_RVT)                                    0.035 &    0.079 f
+  u_cic_u_integradores_int1_reg_16_/D (SDFFX1_RVT)       0.000 &    0.079 f
+  data arrival time                                                 0.079
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int1_reg_16_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.023      0.105
+  data required time                                                0.105
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.260
+  data required time                                                0.105
+  data arrival time                                                -0.079
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.056
+  slack (VIOLATED)                                                 -0.026
 
 
-  Startpoint: u_fir/y_out_reg_16_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int2_reg_13_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[16] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.060      0.060
-  u_fir/y_out_reg_16_/CLK (SDFFX1_RVT)                   0.000      0.060 r
-  u_fir/y_out_reg_16_/Q (SDFFX1_RVT)                     0.064 &    0.124 r
-  u_fir/HFSBUF_34_71/Y (NBUFFX2_RVT)                     0.030 &    0.154 r
-  copt_h_inst_2400/Y (NBUFFX2_RVT)                       0.020 &    0.175 r
-  copt_h_inst_2401/Y (NBUFFX2_RVT)                       0.019 &    0.193 r
-  copt_h_inst_2402/Y (NBUFFX2_RVT)                       0.018 &    0.212 r
-  copt_h_inst_2403/Y (NBUFFX2_RVT)                       0.019 &    0.230 r
-  copt_h_inst_2404/Y (NBUFFX4_RVT)                       0.029 &    0.260 r
-  y_out[16] (out)                                        0.003 &    0.263 r
-  data arrival time                                                 0.263
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U429/Y (AND2X1_RVT)                                    0.035 &    0.080 f
+  u_cic_u_integradores_int2_reg_13_/D (SDFFX1_RVT)       0.000 &    0.080 f
+  data arrival time                                                 0.080
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int2_reg_13_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.022      0.105
+  data required time                                                0.105
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.263
+  data required time                                                0.105
+  data arrival time                                                -0.080
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.052
+  slack (VIOLATED)                                                 -0.025
 
 
-  Startpoint: u_fir/y_out_reg_1_
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: u_cic_u_integradores_int1_reg_14_
                (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: y_out[1] (output port clocked by clk)
   Path Group: clk
   Path Type: min
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (propagated)                       0.066      0.066
-  u_fir/y_out_reg_1_/CLK (SDFFX1_RVT)                    0.000      0.066 r
-  u_fir/y_out_reg_1_/Q (SDFFX1_RVT)                      0.062 &    0.128 r
-  u_fir/HFSBUF_19_73/Y (NBUFFX2_RVT)                     0.020 &    0.148 r
-  copt_h_inst_2415/Y (DELLN1X2_RVT)                      0.082 &    0.230 r
-  copt_h_inst_2414/Y (NBUFFX4_RVT)                       0.030 &    0.260 r
-  y_out[1] (out)                                         0.003 &    0.264 r
-  data arrival time                                                 0.264
+  clock network delay (ideal)                            0.027      0.027
+  input external delay                                   0.000      0.027 r
+  rst (in)                                               0.000 &    0.027 r
+  HFSINV_6472_1072/Y (INVX8_RVT)                         0.017 &    0.044 f
+  U448/Y (AND2X1_RVT)                                    0.034 &    0.079 f
+  u_cic_u_integradores_int1_reg_14_/D (SDFFX1_RVT)       0.000 &    0.079 f
+  data arrival time                                                 0.079
 
   clock clk (rise edge)                                  0.000      0.000
-  clock network delay (ideal)                            0.265      0.265
-  clock reconvergence pessimism                          0.000      0.265
-  clock uncertainty                                      0.050      0.315
-  output external delay                                  0.000      0.315
-  data required time                                                0.315
+  clock network delay (propagated)                       0.077      0.077
+  u_cic_u_integradores_int1_reg_14_/CLK (SDFFX1_RVT)                0.077 r
+  clock reconvergence pessimism                          0.000      0.077
+  clock uncertainty                                      0.050      0.127
+  library hold time                                     -0.023      0.104
+  data required time                                                0.104
   ------------------------------------------------------------------------------
-  data required time                                                0.315
-  data arrival time                                                -0.264
+  data required time                                                0.104
+  data arrival time                                                -0.079
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.052
+  slack (VIOLATED)                                                 -0.025
 
-Warning: report_timing has satisfied the max_paths criteria. There are 11 further endpoints which have paths of interest with slack less than    0.000 that were not considered when generating this report. (UITE-502)
+Warning: report_timing has satisfied the max_paths criteria. There are 32 further endpoints which have paths of interest with slack less than    0.000 that were not considered when generating this report. (UITE-502)
 
 1
