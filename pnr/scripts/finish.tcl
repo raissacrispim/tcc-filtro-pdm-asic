@@ -109,6 +109,17 @@ for {set rodada 1} {$rodada <= 3} {incr rodada} {
         set celula [get_cells -quiet -of_objects [get_pins -quiet $pino]]
         if {[sizeof_collection $celula] == 0} { continue }
         set ref  [get_attribute $celula ref_name]
+        # Celulas da arvore de clock (ZCTS*, CTS*) ou fixas nao
+        # sao alteradas: o legalizador nao as move, e a troca
+        # por uma versao maior sobrepos uma celula vizinha
+        # (curto em M1 que reprovou DRC/LVS)
+        set status ""
+        catch {set status [get_attribute $celula physical_status]}
+        if {[string match "*CTS*" [get_object_name $celula]] ||
+            $status eq "fixed" || $status eq "application_fixed"} {
+            puts "  [get_object_name $celula] ($ref): celula de clock/fixa, mantida"
+            continue
+        }
         set nova [maior_drive $ref]
         if {$nova ne ""} {
             size_cell $celula $nova
@@ -153,6 +164,15 @@ set_clock_uncertainty -hold 0.10 [get_clocks clk]
 # 1 curto em M2 entre duas redes, que reprovou o DRC e o LVS).
 # O detail route incremental corrige essas violacoes.
 # ------------------------------------------------------------
+
+# Garantia: nenhuma sobreposicao de celulas apos os ECOs
+redirect -variable legalidade {check_legality}
+if {[regexp {([1-9][0-9]*)\s+\d+\s+\d+\s+Two objects overlap} $legalidade]} {
+    puts "Aviso: sobreposicao apos ECO; legalizando novamente"
+    legalize_placement
+    route_eco
+    connect_pg_net -automatic
+}
 
 route_detail -incremental true -initial_drc_from_input true
 connect_pg_net -automatic
