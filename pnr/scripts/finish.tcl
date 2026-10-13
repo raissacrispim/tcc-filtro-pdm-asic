@@ -148,7 +148,7 @@ for {set rodada 1} {$rodada <= 3} {incr rodada} {
 # ------------------------------------------------------------
 # 1c. Incerteza de hold da especificacao
 #
-# cts.tcl e route.tcl otimizam com 0,20 ns (margem para o
+# cts.tcl e route.tcl otimizam com 0,25 ns (margem para o
 # corner rapido). Relatorios e SDC exportado usam o valor
 # da especificacao, 0,10 ns.
 # ------------------------------------------------------------

@@ -69,13 +69,15 @@ set_lib_cell_purpose -include optimization [get_lib_cells */TIE*]
 # as celulas de atraso por ECO depois do roteamento falhou
 # (1.353 celulas sem espaco livre, 1.245 sobreposicoes).
 # Solucao: durante o CTS e o roteamento, a incerteza de hold
-# e aumentada de 0,10 para 0,20 ns, de modo que o proprio
+# e aumentada de 0,10 para 0,25 ns, de modo que o proprio
 # otimizador insira os atrasos com folga para o corner ff.
 # O finish.tcl restaura o valor da especificacao (0,10 ns)
 # antes dos relatorios e da exportacao do SDC.
 # ------------------------------------------------------------
 
-set HOLD_UNCERTAINTY_OTIMIZACAO 0.20
+# 0,20 ns reduziu as violacoes no ff de 2.957 para 141 caminhos
+# entre registradores (pior -0,03 ns); 0,25 ns cobre o restante.
+set HOLD_UNCERTAINTY_OTIMIZACAO 0.25
 set_clock_uncertainty -hold $HOLD_UNCERTAINTY_OTIMIZACAO [get_clocks clk]
 
 # ------------------------------------------------------------

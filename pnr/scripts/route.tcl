@@ -86,7 +86,7 @@ foreach {opcao valor} {
 # Margem de hold para o corner rapido (ver cts.tcl)
 # ------------------------------------------------------------
 
-set_clock_uncertainty -hold 0.20 [get_clocks clk]
+set_clock_uncertainty -hold 0.25 [get_clocks clk]
 
 
 # ------------------------------------------------------------

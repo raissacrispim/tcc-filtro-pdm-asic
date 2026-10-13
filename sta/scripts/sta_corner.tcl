@@ -53,6 +53,31 @@ read_sdc pnr/output/filtro_pdm_pnr.sdc
 
 update_timing -full
 
+# Latencia de clock dos caminhos de E/S por corner
+#
+# O SDC do FC fixa a latencia de E/S com os valores do corner
+# tipico (ex.: 0,17-0,21 ns). No corner rapido a arvore de
+# clock real e mais curta (~0,07 ns), e manter o valor tipico
+# cria falsas violacoes de hold nas saidas (y_out, valid_out,
+# scan_out). Aqui a latencia de E/S e recalculada a partir
+# dos pinos de clock dos registradores no corner analisado.
+set lat_min ""
+set lat_max ""
+foreach_in_collection p [all_registers -clock_pins] {
+    set lmin [get_attribute -quiet $p clock_latency_rise_min]
+    set lmax [get_attribute -quiet $p clock_latency_rise_max]
+    if {$lmin ne "" && ($lat_min eq "" || $lmin < $lat_min)} { set lat_min $lmin }
+    if {$lmax ne "" && ($lat_max eq "" || $lmax > $lat_max)} { set lat_max $lmax }
+}
+if {$lat_min ne "" && $lat_max ne ""} {
+    puts "Latencia de E/S no corner $CORNER: min $lat_min / max $lat_max ns"
+    set_clock_latency -min $lat_min [get_clocks clk]
+    set_clock_latency -max $lat_max [get_clocks clk]
+    update_timing -full
+} else {
+    puts "Aviso: latencia dos registradores nao obtida; mantida a do SDC do FC"
+}
+
 
 # ------------------------------------------------------------
 # 3. Relatorios
