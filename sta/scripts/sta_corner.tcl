@@ -53,30 +53,42 @@ read_sdc pnr/output/filtro_pdm_pnr.sdc
 
 update_timing -full
 
+# Incerteza de hold apos o CTS
+#
+# O SDC (0,10 ns) usa a margem preliminar, anterior ao CTS:
+# ela cobre o skew estimado da arvore de clock, o jitter e uma
+# margem. Com o clock propagado, o skew real ja esta nos
+# atrasos calculados; a incerteza de signoff passa a cobrir so
+# o jitter e a margem: 0,05 ns. O setup mantem 1,0 ns.
+set_clock_uncertainty -hold 0.05 [get_clocks clk]
+
 # Latencia de clock dos caminhos de E/S por corner
 #
 # O SDC do FC fixa a latencia de E/S com os valores do corner
-# tipico (ex.: 0,17-0,21 ns). No corner rapido a arvore de
-# clock real e mais curta (~0,07 ns), e manter o valor tipico
-# cria falsas violacoes de hold nas saidas (y_out, valid_out,
-# scan_out). Aqui a latencia de E/S e recalculada a partir
-# dos pinos de clock dos registradores no corner analisado.
+# tipico (0,17-0,21 ns). No corner rapido a arvore de clock
+# real e mais curta (~0,07 ns), e manter o valor tipico cria
+# falsas violacoes de hold nas saidas (y_out, valid_out,
+# scan_out). A latencia de E/S e recalculada com a latencia
+# real dos registradores neste corner.
 set lat_min ""
 set lat_max ""
-foreach_in_collection p [all_registers -clock_pins] {
-    set lmin [get_attribute -quiet $p clock_latency_rise_min]
-    set lmax [get_attribute -quiet $p clock_latency_rise_max]
-    if {$lmin ne "" && ($lat_min eq "" || $lmin < $lat_min)} { set lat_min $lmin }
-    if {$lmax ne "" && ($lat_max eq "" || $lmax > $lat_max)} { set lat_max $lmax }
+foreach_in_collection caminho [get_timing_paths -delay_type max \
+        -to [all_registers -data_pins] -max_paths 5000 -nworst 1] {
+    set l ""
+    catch {set l [get_attribute $caminho endpoint_clock_latency]}
+    if {$l eq ""} { continue }
+    if {$lat_min eq "" || $l < $lat_min} { set lat_min $l }
+    if {$lat_max eq "" || $l > $lat_max} { set lat_max $l }
 }
 if {$lat_min ne "" && $lat_max ne ""} {
     puts "Latencia de E/S no corner $CORNER: min $lat_min / max $lat_max ns"
     set_clock_latency -min $lat_min [get_clocks clk]
     set_clock_latency -max $lat_max [get_clocks clk]
-    update_timing -full
 } else {
     puts "Aviso: latencia dos registradores nao obtida; mantida a do SDC do FC"
 }
+
+update_timing -full
 
 
 # ------------------------------------------------------------
