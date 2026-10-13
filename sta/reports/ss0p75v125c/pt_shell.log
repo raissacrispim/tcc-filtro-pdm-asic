@@ -55,14 +55,14 @@ read_verilog pnr/output/filtro_pdm_pnr.v
 current_design filtro_pdm
 Information: current_design won't return any data before link (DES-071)
 link_design
-Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.v'
 Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75v125c.db'
+Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.v'
 Linking design filtro_pdm...
 Information: Removing 1 unneeded designs..... (LNK-034)
-Information: 238 (80.95%) library cells are unused in library saed32rvt_ss0p75v125c..... (LNK-045)
-Information: total 238 library cells are unused (LNK-046)
+Information: 235 (79.93%) library cells are unused in library saed32rvt_ss0p75v125c..... (LNK-045)
+Information: total 235 library cells are unused (LNK-046)
 Design 'filtro_pdm' was successfully linked.
-Information: There are 9475 leaf cells, ports, hiers and 13723 nets in the design (LNK-047)
+Information: There are 9960 leaf cells, ports, hiers and 14206 nets in the design (LNK-047)
 1
 # ------------------------------------------------------------
 # 2. Parasitas e restricoes
@@ -93,6 +93,31 @@ Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
 Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
 Information: Building multi voltage information for entire design. (MV-022)
 1
+# Latencia de clock dos caminhos de E/S por corner
+#
+# O SDC do FC fixa a latencia de E/S com os valores do corner
+# tipico (ex.: 0,17-0,21 ns). No corner rapido a arvore de
+# clock real e mais curta (~0,07 ns), e manter o valor tipico
+# cria falsas violacoes de hold nas saidas (y_out, valid_out,
+# scan_out). Aqui a latencia de E/S e recalculada a partir
+# dos pinos de clock dos registradores no corner analisado.
+set lat_min ""
+set lat_max ""
+foreach_in_collection p [all_registers -clock_pins] {
+    set lmin [get_attribute -quiet $p clock_latency_rise_min]
+    set lmax [get_attribute -quiet $p clock_latency_rise_max]
+    if {$lmin ne "" && ($lat_min eq "" || $lmin < $lat_min)} { set lat_min $lmin }
+    if {$lmax ne "" && ($lat_max eq "" || $lmax > $lat_max)} { set lat_max $lmax }
+}
+if {$lat_min ne "" && $lat_max ne ""} {
+    puts "Latencia de E/S no corner $CORNER: min $lat_min / max $lat_max ns"
+    set_clock_latency -min $lat_min [get_clocks clk]
+    set_clock_latency -max $lat_max [get_clocks clk]
+    update_timing -full
+} else {
+    puts "Aviso: latencia dos registradores nao obtida; mantida a do SDC do FC"
+}
+Aviso: latencia dos registradores nao obtida; mantida a do SDC do FC
 # ------------------------------------------------------------
 # 3. Relatorios
 # ------------------------------------------------------------
@@ -103,9 +128,9 @@ report_constraint -all_violators > $REP/violadores.rpt
 report_clock_timing -type skew > $REP/clock_skew.rpt
 # Resumo no terminal
 set pior_setup [get_attribute     [get_timing_paths -delay_type max] slack]
-56.524132
+56.468014
 set pior_hold  [get_attribute     [get_timing_paths -delay_type min] slack]
-0.188740
+0.213313
 puts ""
 
 puts "=================================================="
@@ -115,26 +140,31 @@ Corner     : ss0p75v125c
 puts "Parasitas  : $SPEF"
 Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef
 puts "Pior setup : $pior_setup ns"
-Pior setup : 56.524132 ns
+Pior setup : 56.468014 ns
 puts "Pior hold  : $pior_hold ns"
-Pior hold  : 0.188740 ns
+Pior hold  : 0.213313 ns
 puts "Relatorios : $REP/"
 Relatorios : sta/reports/ss0p75v125c/
 puts "=================================================="
 ==================================================
 exit
+Information: Defining new variable 'p'. (CMD-041)
+Information: Defining new variable 'lat_max'. (CMD-041)
+Information: Defining new variable 'lat_min'. (CMD-041)
 Information: Defining new variable 'DB_DIR'. (CMD-041)
 Information: Defining new variable 'pior_hold'. (CMD-041)
 Information: Defining new variable 'SPEF'. (CMD-041)
 Information: Defining new variable 'pior_setup'. (CMD-041)
+Information: Defining new variable 'lmax'. (CMD-041)
+Information: Defining new variable 'lmin'. (CMD-041)
 Information: Defining new variable 'CORNER'. (CMD-041)
 Information: Defining new variable 'REP'. (CMD-041)
 
 Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
 Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
-Maximum memory usage for this session: 2875.55 MB
+Maximum memory usage for this session: 2874.35 MB
 CPU usage for this session: 14 seconds 
 Elapsed time for this session: 10 seconds
-Diagnostics summary: 3 warnings, 16 informationals
+Diagnostics summary: 3 warnings, 21 informationals
 
 Thank you for using pt_shell!

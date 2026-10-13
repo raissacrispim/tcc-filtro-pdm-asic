@@ -19,7 +19,7 @@
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-Time Started: 2026-10-13 14:44:40
+Time Started: 2026-10-13 15:03:20
 Running on: srv-microeletronica3 4.18.0-553.132.1.el8_10.x86_64
 
 -------------
@@ -39,7 +39,7 @@ icv
 -------------
 Parsing runset "/Tools/PDK/SAED32/EDK_Digital/tech/icv_drc/saed32nm_1p9m_drc_rules.rs"
 
-Runset Processing Time=0:00:03 User=2.44 Sys=0.27 Mem=0.433 GB
+Runset Processing Time=0:00:03 User=2.55 Sys=0.24 Mem=0.374 GB
 
 Parsing finished
 Host startup begins.
@@ -47,7 +47,7 @@ Host startup done: 2 successes, 0 failures.
 	srv-microeletronica3: 2 total CPUs, maximum 2 commands in parallel.
 Selecting "srv-microeletronica3" as Primary host
 
-System Startup Time=0.507236 User=0.0471409
+System Startup Time=0.403819 User=0.0492498
 
 Command execution begins.  Details recorded in the summary file and log db: 
 	"/home/raissa.crispim/tcc_filtro/verif/run_drc/run_details/filtro_pdm.sum"
@@ -56,49 +56,49 @@ Command execution begins.  Details recorded in the summary file and log db:
 Running ...
   [0:00:01][0%]   Added 2 CPUs on host srv-microeletronica3 (Total: 2 CPUs on 1 hosts)
   [0:00:08][1%]   Rules: 1/396, Rules with Violations: 0, Total Violations: 0
-  [0:00:10][2%]   
+  [0:00:09][2%]   
   [0:00:10][3%]   Rules: 10/396, Rules with Violations: 0, Total Violations: 0
   [0:00:10][4%]   Rules: 28/396, Rules with Violations: 0, Total Violations: 0
   [0:00:10][5%]   Rules: 45/396, Rules with Violations: 0, Total Violations: 0
-  [0:00:12][10%]  Rules: 61/396, Rules with Violations: 0, Total Violations: 0
-  [0:00:13][15%]  Rules: 97/396, Rules with Violations: 0, Total Violations: 0
-  [0:00:14][20%]  Rules: 117/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:11][10%]  Rules: 62/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:12][15%]  Rules: 97/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:13][20%]  Rules: 117/396, Rules with Violations: 0, Total Violations: 0
   [0:00:16][25%]  Rules: 136/396, Rules with Violations: 0, Total Violations: 0
-  [0:00:19][30%]  Rules: 157/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:21][35%]  Rules: 186/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:21][40%]  Rules: 214/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:22][45%]  Rules: 234/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:22][50%]  Rules: 257/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:22][55%]  Rules: 276/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:22][60%]  Rules: 293/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:23][65%]  Rules: 312/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:24][70%]  Rules: 335/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:25][75%]  Rules: 348/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:25][80%]  Rules: 359/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:25][85%]  Rules: 369/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:25][90%]  Rules: 379/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:25][95%]  Rules: 385/396, Rules with Violations: 1, Total Violations: 1
-  [0:00:25][100%] Rules: 396/396, Rules with Violations: 1, Total Violations: 1
-Engine Runtime=25.3571 User=1.10908
+  [0:00:19][30%]  Rules: 158/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:21][35%]  Rules: 187/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:21][40%]  Rules: 214/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:21][45%]  Rules: 234/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:22][50%]  Rules: 256/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:22][55%]  Rules: 276/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:22][60%]  Rules: 293/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:23][65%]  Rules: 312/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:24][70%]  Rules: 334/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:25][75%]  Rules: 348/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:25][80%]  Rules: 359/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:25][85%]  Rules: 369/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:25][90%]  Rules: 379/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:25][95%]  Rules: 385/396, Rules with Violations: 0, Total Violations: 0
+  [0:00:25][100%] Rules: 396/396, Rules with Violations: 0, Total Violations: 0
+Engine Runtime=25.6272 User=1.06637
 Error storage stats...
-  User=0.01 Sys=0.00 Mem=0.001 GB
+  None
 
 Generating filtro_pdm.LAYOUT_ERRORS...
-  Generation Time=0:00:00  User=0.01 Sys=0.00 Mem=0.001 GB
+  Generation Time=0:00:00  User=0.00 Sys=0.00 Mem=0.001 GB
 
-Overall engine Time=0:00:29 Highest command Mem=0.069 GB
+Overall engine Time=0:00:29 Highest command Mem=0.061 GB
 
 -------------
 
 IC Validator Machine Memory Report
-srv-microeletronica3 : Average = 0.706 GB, Peak = 0.768 GB
+srv-microeletronica3 : Average = 0.652 GB, Peak = 0.747 GB
 
 Overall Disk Usage Disk=0.014 GB
 Group File Disk Usage Peak=0.006 GB
 
-Overall Manager Mem=0.433 GB
+Overall Manager Mem=0.374 GB
 
 
-Time Ended: 2026-10-13 14:45:12
+Time Ended: 2026-10-13 15:03:57
 
 IC Validator is done.

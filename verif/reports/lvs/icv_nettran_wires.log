@@ -1,2 +1,3 @@
 # icv_nettran_wires.log - Dissolved nets log file 
 # format: cellName  origNetName  newNetName
+ filtro_pdm	y_out[18]	scan_out

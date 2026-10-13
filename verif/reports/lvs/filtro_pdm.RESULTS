@@ -8,13 +8,13 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-                     DRC and Extraction Results: CLEAN
+                   DRC and Extraction Results: NOT CLEAN
 
-                      ####  #      #####   ###   #   #
-                     #      #      #      #   #  ##  #
-                     #      #      ####   #####  # # #
-                     #      #      #      #   #  #  ##
-                      ####  #####  #####  #   #  #   #
+         #   #   ###   #####      ####  #      #####   ###   #   #
+         ##  #  #   #    #       #      #      #      #   #  ##  #
+         # # #  #   #    #       #      #      ####   #####  # # #
+         #  ##  #   #    #       #      #      #      #   #  #  ##
+         #   #   ###     #        ####  #####  #####  #   #  #   #
 
 ===========================================================================
 
@@ -68,8 +68,8 @@ Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_detail
 LVS error file:         filtro_pdm.LVS_ERRORS
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/13 02:45:56PM
-Time ended:             2026/10/13 02:47:02PM
+Time started:           2026/10/13 03:04:20PM
+Time ended:             2026/10/13 03:05:17PM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -81,9 +81,15 @@ LVS Device Extraction Error Summary
 
 6 total rules were run.
 0 rules NOT EXECUTED.
-0 rules have violations.
-There are 0 total violations.
+1 rule has violations.
+There is 1 total violation.
 Refer to filtro_pdm.LAYOUT_ERRORS
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Rule                          Violations Found
+Violation                     v = 1
+  text_net:text_short           v = 1
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -180,14 +186,14 @@ Allocated CPU Time = 0.0 CPU hours
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:01:06
-Peak Single Command Memory = 0.524 GB
-Peak Disk Usage = 0.018 GB
-Network Disk Usage Peak=0.010 GB (no group)
-Group File Disk Usage Peak=0.008 GB
+IC Validator Run Time = 0:00:57
+Peak Single Command Memory = 0.522 GB
+Peak Disk Usage = 0.033 GB
+Network Disk Usage Peak=0.011 GB (no group)
+Group File Disk Usage Peak=0.022 GB
 
 Distributed Host Memory Usage
- srv-microeletronica3 (2/64)  ....  Average=0.296 GB, Peak=1.682 GB / 251.109 GB
+ srv-microeletronica3 (2/64)  ....  Average=1.370 GB, Peak=1.604 GB / 251.109 GB
 
 Overall Distributed Utilization: not available
 IC Validator is done.

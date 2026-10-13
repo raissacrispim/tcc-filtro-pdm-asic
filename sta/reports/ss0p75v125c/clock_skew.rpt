@@ -5,15 +5,15 @@ Report : clock timing
 	-setup
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 13 14:49:49 2026
+Date   : Tue Oct 13 15:05:48 2026
 ****************************************
 
   Clock: clk
 
   Clock Pin                                    Latency  CRP    Skew
 ----------------------------------------------------------------------------
-  u_fir/delay_reg_6__0_/CLK                    0.31                    rp-+
-  u_fir/delay_reg_7__0_/CLK                    0.12    -0.00   0.19    rp-+
+  u_fir/delay_reg_50__9_/CLK                   0.20                    rp-+
+  u_fir/delay_reg_51__9_/CLK                   0.11    -0.00   0.09    rp-+
 ----------------------------------------------------------------------------
 
 1

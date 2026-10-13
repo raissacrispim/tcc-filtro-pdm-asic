@@ -4,17 +4,17 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:43:04 2026
+Date   : Tue Oct 13 15:01:19 2026
 ****************************************
 
 
 
 Information: Deserialized np data
-INFO: timer data loaded from /tmp/filtro_pdm_1781089_593883340.timdat
+INFO: timer data loaded from /tmp/filtro_pdm_1929498_593078884.timdat
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 13358 nets are successfully extracted. (NEX-028)
+Information: 13844 nets are successfully extracted. (NEX-028)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
    Mode: default Corner: default
@@ -23,24 +23,46 @@ Information: Activity for scenario default was cached, no propagation required. 
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/intadd_11_A_1_        16.00          16.75          -0.75  (VIOLATED) 
-     PIN : u_fir/intadd_62_U17/S
-                               16.00          16.75          -0.75  (VIOLATED) 
+   u_fir/ZBUF_99_2             32.00          36.32          -4.32  (VIOLATED) 
+     PIN : u_fir/ZBUF_99_inst_2388/Y
+                               32.00          36.32          -4.32  (VIOLATED) 
 
-   u_fir/ZCTSNET_19            32.00          32.39          -0.39  (VIOLATED) 
-     PIN : u_fir/ZCTSINV_39340_1956/Y
-                               32.00          32.39          -0.39  (VIOLATED) 
+   n370                         8.00          11.37          -3.37  (VIOLATED) 
+     PIN : U245/Y               8.00          11.37          -3.37  (VIOLATED) 
 
-   u_fir/HFSNET_750             8.00           8.01          -0.01  (VIOLATED) 
-     PIN : u_fir/HFSINV_211_761/Y
-                                8.00           8.01          -0.01  (VIOLATED) 
+   u_fir/delay_36__13_          8.00           8.71          -0.71  (VIOLATED) 
+     PIN : u_fir/delay_reg_36__13_/Q
+                                8.00           8.71          -0.71  (VIOLATED) 
 
-   u_fir/HFSNET_291             8.00           8.01          -0.01  (VIOLATED) 
-     PIN : u_fir/HFSINV_153_299/Y
+   u_fir/delay_26__13_          8.00           8.70          -0.70  (VIOLATED) 
+     PIN : u_fir/delay_reg_26__13_/Q
+                                8.00           8.70          -0.70  (VIOLATED) 
+
+   u_fir/HFSNET_1047           16.00          16.58          -0.58  (VIOLATED) 
+     PIN : u_fir/HFSBUF_16760_1079/Y
+                               16.00          16.58          -0.58  (VIOLATED) 
+
+   u_fir/intadd_30_A_5_         8.00           8.14          -0.14  (VIOLATED) 
+     PIN : u_fir/intadd_46_U9/S
+                                8.00           8.14          -0.14  (VIOLATED) 
+
+   u_fir/HFSNET_590             8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_fir/HFSINV_177_599/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
+
+   u_fir/HFSNET_700             8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_fir/HFSINV_265_711/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
+
+   u_fir/intadd_145_B_3_        8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/U1162/Y        8.00           8.02          -0.02  (VIOLATED) 
+
+   u_fir/HFSNET_540             8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSINV_229_549/Y
                                 8.00           8.01          -0.01  (VIOLATED) 
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 4
+   Number of max_capacitance violation(s): 10
 
-   Total number of violation(s): 4
+   Total number of violation(s): 10
 1

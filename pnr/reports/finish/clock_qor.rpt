@@ -6,7 +6,7 @@ Report : clock qor
         -type summary
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:44:14 2026
+Date   : Tue Oct 13 15:02:59 2026
 ****************************************
 
 Attributes
@@ -29,9 +29,9 @@ Skew Group                                                   Repeater  Repeater 
                                                                 Count      Area      Area
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 ### Mode: default, Scenario: default
-clk                                     M,D      1332      4       36    134.70    134.70      0.18      0.08         0         1   7450.84
+clk                                     M,D      1332      3       36    166.72    166.72      0.13      0.03         0         0   7632.10
 --------------------------------------------------------------------------------------------------------------------------------------------------------
-All Clocks                                       1332      4       36    134.70    134.70      0.18      0.08         0         1   7450.84
+All Clocks                                       1332      3       36    166.72    166.72      0.13      0.03         0         0   7632.10
 
 
 Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)

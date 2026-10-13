@@ -3,7 +3,7 @@ Report : constraint
         -all_violators
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:32:51 2026
+Date   : Tue Oct 13 14:59:32 2026
 ****************************************
 
    late_timing
@@ -18,150 +18,660 @@ No paths.
 
 Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
 ----------------------------------------------------------------------------------------------------------
-u_fir/delay_reg_63__16_/SI (SDFFX1_RVT)
-                                   0.24 f         0.31           0.00    -0.07   clk      default
-u_fir/delay_reg_61__14_/SI (SDFFX1_RVT)
-                                   0.24 f         0.31           0.00    -0.06   clk      default
-u_fir/delay_reg_61__15_/SI (SDFFX1_RVT)
-                                   0.24 f         0.31           0.00    -0.06   clk      default
-u_fir/delay_reg_38__5_/SI (SDFFX1_RVT)
-                                   0.19 f         0.25           0.00    -0.06   clk      default
-u_fir/delay_reg_40__11_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.06   clk      default
-u_fir/delay_reg_40__7_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.06   clk      default
-u_cic_u_combs_u_comb4_y_out_reg_9_/SI (SDFFX1_RVT)
-                                   0.24 f         0.30           0.00    -0.06   clk      default
-u_fir/delay_reg_0__8_/SI (SDFFX1_RVT)
-                                   0.24 f         0.30           0.00    -0.06   clk      default
-u_fir/delay_reg_25__13_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.06   clk      default
-u_fir/delay_reg_62__16_/SI (SDFFX1_RVT)
-                                   0.25 f         0.30           0.00    -0.06   clk      default
-u_fir/delay_reg_27__12_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.06   clk      default
-u_fir/delay_reg_37__5_/SI (SDFFX1_RVT)
-                                   0.19 f         0.25           0.00    -0.06   clk      default
-u_fir/delay_reg_27__8_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.06   clk      default
-u_fir/delay_reg_26__13_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_cic_u_combs_u_comb1_valid_out_reg/SI (SDFFX1_RVT)
-                                   0.25 f         0.30           0.00    -0.05   clk      default
-u_fir/delay_reg_35__10_/SI (SDFFX1_RVT)
-                                   0.20 f         0.25           0.00    -0.05   clk      default
-u_fir/delay_reg_37__12_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_26__6_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_27__7_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_26__11_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_25__7_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_24__7_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_25__5_/SI (SDFFX1_RVT)
-                                   0.20 f         0.25           0.00    -0.05   clk      default
-u_fir/delay_reg_28__9_/SI (SDFFX1_RVT)
-                                   0.20 f         0.25           0.00    -0.05   clk      default
-u_fir/delay_reg_37__4_/SI (SDFFX1_RVT)
-                                   0.20 f         0.25           0.00    -0.05   clk      default
-u_fir/delay_reg_27__6_/SI (SDFFX1_RVT)
-                                   0.20 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_38__12_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_27__5_/SI (SDFFX1_RVT)
-                                   0.20 f         0.25           0.00    -0.05   clk      default
-u_fir/delay_reg_25__11_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_27__13_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_63__3_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_39__10_/SI (SDFFX1_RVT)
-                                   0.20 f         0.25           0.00    -0.05   clk      default
-u_fir/delay_reg_63__4_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_39__3_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.05   clk      default
-u_fir/delay_reg_37__13_/SI (SDFFX1_RVT)
-                                   0.21 f         0.26           0.00    -0.04   clk      default
-u_fir/delay_reg_25__9_/SI (SDFFX1_RVT)
-                                   0.21 f         0.25           0.00    -0.04   clk      default
-u_fir/delay_reg_35__9_/SI (SDFFX1_RVT)
-                                   0.21 f         0.25           0.00    -0.04   clk      default
-u_cic_u_combs_u_comb3_y_out_reg_8_/SI (SDFFX1_RVT)
-                                   0.19 f         0.24           0.00    -0.04   clk      default
-u_fir/delay_reg_23__10_/SI (SDFFX1_RVT)
-                                   0.21 f         0.25           0.00    -0.04   clk      default
-u_fir/delay_reg_37__11_/SI (SDFFX1_RVT)
-                                   0.22 f         0.26           0.00    -0.04   clk      default
-u_fir/delay_reg_63__6_/SI (SDFFX1_RVT)
-                                   0.28 r         0.31           0.00    -0.03   clk      default
 u_cic_u_combs_u_comb3_x_delay_reg_4_/SI (SDFFX1_RVT)
-                                   0.29 f         0.31           0.00    -0.03   clk      default
+                                   0.20 f         0.31           0.00    -0.12   clk      default
+u_fir/delay_reg_35__6_/SI (SDFFX1_RVT)
+                                   0.21 f         0.33           0.00    -0.11   clk      default
 u_fir/delay_reg_26__9_/SI (SDFFX1_RVT)
-                                   0.24 f         0.26           0.00    -0.02   clk      default
-u_cic_u_integradores_int1_reg_12_/SI (SDFFX1_RVT)
-                                   0.24 f         0.26           0.00    -0.02   clk      default
-u_fir/delay_reg_0__14_/SI (SDFFX1_RVT)
-                                   0.29 f         0.31           0.00    -0.02   clk      default
-u_fir/delay_reg_23__11_/SI (SDFFX1_RVT)
-                                   0.25 f         0.27           0.00    -0.02   clk      default
-u_cic_u_combs_u_comb1_y_out_reg_17_/SI (SDFFX1_RVT)
-                                   0.29 r         0.30           0.00    -0.02   clk      default
-u_fir/delay_reg_39__9_/SI (SDFFX1_RVT)
-                                   0.24 f         0.26           0.00    -0.02   clk      default
-u_fir/delay_reg_27__11_/SI (SDFFX1_RVT)
-                                   0.25 f         0.27           0.00    -0.02   clk      default
-u_fir/delay_reg_25__8_/SI (SDFFX1_RVT)
-                                   0.25 f         0.26           0.00    -0.01   clk      default
-u_fir/delay_reg_43__10_/SI (SDFFX1_RVT)
-                                   0.25 f         0.26           0.00    -0.01   clk      default
-u_fir/delay_reg_24__10_/SI (SDFFX1_RVT)
-                                   0.26 f         0.27           0.00    -0.01   clk      default
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_25__10_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_25__13_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_24__7_/SI (SDFFX1_RVT)
+                                   0.21 f         0.33           0.00    -0.11   clk      default
+u_fir/delay_reg_40__11_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_0__16_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_35__13_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
 u_fir/delay_reg_35__12_/SI (SDFFX1_RVT)
-                                   0.26 f         0.27           0.00    -0.01   clk      default
-u_cic_u_combs_u_comb4_x_delay_reg_0_/SI (SDFFX1_RVT)
-                                   0.23 r         0.24           0.00    -0.01   clk      default
-u_fir/delay_reg_1__10_/SI (SDFFX1_RVT)
-                                   0.23 f         0.25           0.00    -0.01   clk      default
-u_fir/delay_reg_37__6_/SI (SDFFX1_RVT)
-                                   0.25 f         0.26           0.00    -0.01   clk      default
-u_cic_u_combs_u_comb2_y_out_reg_11_/SI (SDFFX1_RVT)
-                                   0.30 f         0.31           0.00    -0.01   clk      default
-u_fir/delay_reg_37__10_/SI (SDFFX1_RVT)
-                                   0.25 f         0.26           0.00    -0.01   clk      default
-u_fir/delay_reg_24__8_/SI (SDFFX1_RVT)
-                                   0.25 f         0.26           0.00    -0.01   clk      default
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_0__14_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_27__8_/SI (SDFFX1_RVT)
+                                   0.21 f         0.33           0.00    -0.11   clk      default
+u_fir/delay_reg_27__7_/SI (SDFFX1_RVT)
+                                   0.21 f         0.33           0.00    -0.11   clk      default
+u_fir/delay_reg_37__5_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_26__6_/SI (SDFFX1_RVT)
+                                   0.21 f         0.33           0.00    -0.11   clk      default
 u_fir/delay_reg_26__8_/SI (SDFFX1_RVT)
-                                   0.25 f         0.26           0.00    -0.01   clk      default
-u_fir/delay_reg_0__12_/SI (SDFFX1_RVT)
-                                   0.24 f         0.25           0.00    -0.01   clk      default
-u_fir/delay_reg_22__11_/SI (SDFFX1_RVT)
-                                   0.26 f         0.27           0.00    -0.01   clk      default
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_61__14_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_40__12_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_25__7_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_61__15_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_62__16_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_22__4_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_39__9_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_26__11_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_63__16_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_23__11_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_38__12_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_38__5_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_27__12_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_37__4_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_39__8_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_24__14_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_34__11_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_38__3_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_25__5_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
 u_fir/delay_reg_0__15_/SI (SDFFX1_RVT)
-                                   0.30 f         0.31           0.00    -0.01   clk      default
-u_cic_u_combs_u_comb2_x_delay_reg_11_/SI (SDFFX1_RVT)
-                                   0.30 f         0.31           0.00    -0.01   clk      default
-u_fir/delay_reg_0__3_/SI (SDFFX1_RVT)
-                                   0.26 f         0.27           0.00    -0.01   clk      default
-u_cic_u_combs_u_comb4_x_delay_reg_9_/SI (SDFFX1_RVT)
-                                   0.23 r         0.24           0.00    -0.01   clk      default
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_25__8_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_28__7_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_28__13_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_27__5_/SI (SDFFX1_RVT)
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_26__13_/SI (SDFFX1_RVT)
+                                   0.19 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_39__11_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_60__5_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_34__8_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_59__6_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_63__3_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_41__8_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_40__8_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_39__3_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_27__13_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.11   clk      default
 u_fir/delay_reg_25__4_/SI (SDFFX1_RVT)
-                                   0.25 f         0.26           0.00    -0.01   clk      default
+                                   0.21 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_24__8_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_27__6_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_0__8_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.11   clk      default
+u_fir/delay_reg_37__12_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_28__9_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
+u_fir/delay_reg_38__2_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.11   clk      default
+u_fir/delay_reg_29__6_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.11   clk      default
 u_cic_u_combs_u_comb3_x_delay_reg_8_/SI (SDFFX1_RVT)
-                                   0.24 f         0.25           0.00    -0.00   clk      default
+                                   0.20 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_25__11_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_fir/delay_reg_24__12_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_fir/delay_reg_2__15_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_63__4_/SI (SDFFX1_RVT)
+                                   0.20 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_36__3_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_11_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_28__1_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_1_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_9_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_25__9_/SI (SDFFX1_RVT)
+                                   0.22 f         0.32           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_8_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_24__2_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_fir/delay_reg_60__15_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_28__10_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_2_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
 u_cic_u_combs_u_comb3_x_delay_reg_10_/SI (SDFFX1_RVT)
-                                   0.24 f         0.25           0.00    -0.00   clk      default
-u_fir/delay_reg_38__1_/SI (SDFFX1_RVT)
-                                   0.27 f         0.27           0.00    -0.00   clk      default
-u_cic_u_combs_u_comb3_x_delay_reg_6_/SI (SDFFX1_RVT)
-                                   0.24 f         0.25           0.00    -0.00   clk      default
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_37__11_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_fir/delay_reg_1__10_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
 u_cic_u_combs_u_comb3_y_out_reg_12_/SI (SDFFX1_RVT)
-                                   0.25 f         0.25           0.00    -0.00   clk      default
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_11_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb1_valid_out_reg/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_60__6_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_37__13_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_fir/delay_reg_22__3_/SI (SDFFX1_RVT)
+                                   0.20 f         0.30           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_10_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_fir/delay_reg_0__7_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_10_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.10   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_1_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.09   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_12_/SI (SDFFX1_RVT)
+                                   0.21 f         0.31           0.00    -0.09   clk      default
+u_fir/delay_reg_23__10_/SI (SDFFX1_RVT)
+                                   0.24 f         0.33           0.00    -0.09   clk      default
+u_cic_u_integradores_int1_reg_14_/SI (SDFFX1_RVT)
+                                   0.23 r         0.31           0.00    -0.08   clk      default
+u_cic_u_integradores_int3_reg_11_/SI (SDFFX1_RVT)
+                                   0.22 f         0.30           0.00    -0.08   clk      default
+u_cic_u_integradores_int2_reg_8_/SI (SDFFX1_RVT)
+                                   0.23 r         0.31           0.00    -0.08   clk      default
+u_cic_u_integradores_int2_reg_14_/SI (SDFFX1_RVT)
+                                   0.23 r         0.31           0.00    -0.08   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_3_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.07   clk      default
+u_fir/delay_reg_35__10_/SI (SDFFX1_RVT)
+                                   0.26 f         0.33           0.00    -0.07   clk      default
+u_fir/delay_reg_63__6_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.07   clk      default
+u_fir/delay_reg_39__10_/SI (SDFFX1_RVT)
+                                   0.26 f         0.33           0.00    -0.07   clk      default
+u_fir/delay_reg_35__9_/SI (SDFFX1_RVT)
+                                   0.26 f         0.33           0.00    -0.07   clk      default
+u_fir/delay_reg_61__13_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.07   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_14_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.07   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_2_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.07   clk      default
+u_fir/delay_reg_3__7_/SI (SDFFX1_RVT)
+                                   0.25 f         0.32           0.00    -0.07   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_14_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.07   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_0_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.07   clk      default
+u_fir/delay_reg_37__10_/SI (SDFFX1_RVT)
+                                   0.26 f         0.33           0.00    -0.07   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_17_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.07   clk      default
+u_fir/delay_reg_0__12_/SI (SDFFX1_RVT)
+                                   0.25 f         0.32           0.00    -0.07   clk      default
+u_fir/delay_reg_29__15_/SI (SDFFX1_RVT)
+                                   0.24 r         0.30           0.00    -0.07   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_14_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.07   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_12_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_0__5_/SI (SDFFX1_RVT)
+                                   0.25 f         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_12_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_34__15_/SI (SDFFX1_RVT)
+                                   0.24 f         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_13_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_3__14_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_11_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_60__16_/SI (SDFFX1_RVT)
+                                   0.24 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_0__6_/SI (SDFFX1_RVT)
+                                   0.25 f         0.32           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_13_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_16_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_9_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_3_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_16_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_15_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_36__15_/SI (SDFFX1_RVT)
+                                   0.24 r         0.30           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_1_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_5_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb2_valid_out_reg/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_6_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_12_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_9_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_16_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_8_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_5_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_21__2_/SI (SDFFX1_RVT)
+                                   0.25 f         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_9_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_16_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_1__14_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_7_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_0_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_8_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_fir/delay_reg_41__7_/SI (SDFFX1_RVT)
+                                   0.28 f         0.33           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb4_valid_out_reg/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.06   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_14_/SI (SDFFX1_RVT)
+                                   0.25 r         0.31           0.00    -0.05   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_2_/SI (SDFFX1_RVT)
+                                   0.27 f         0.32           0.00    -0.05   clk      default
+u_cic_u_integradores_int1_reg_7_/SI (SDFFX1_RVT)
+                                   0.27 r         0.32           0.00    -0.04   clk      default
+u_cic_u_integradores_int2_reg_6_/SI (SDFFX1_RVT)
+                                   0.28 r         0.32           0.00    -0.04   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_10_/SI (SDFFX1_RVT)
+                                   0.28 r         0.31           0.00    -0.03   clk      default
+u_fir/delay_reg_3__5_/SI (SDFFX1_RVT)
+                                   0.29 f         0.32           0.00    -0.03   clk      default
+u_fir/delay_reg_37__6_/SI (SDFFX1_RVT)
+                                   0.30 f         0.33           0.00    -0.03   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_7_/SI (SDFFX1_RVT)
+                                   0.28 r         0.31           0.00    -0.03   clk      default
+u_fir/delay_reg_63__9_/SI (SDFFX1_RVT)
+                                   0.28 r         0.31           0.00    -0.03   clk      default
+u_fir/delay_reg_24__4_/SI (SDFFX1_RVT)
+                                   0.30 f         0.33           0.00    -0.03   clk      default
+u_fir/delay_reg_3__8_/SI (SDFFX1_RVT)
+                                   0.28 r         0.31           0.00    -0.03   clk      default
+u_fir/delay_reg_63__10_/SI (SDFFX1_RVT)
+                                   0.29 r         0.31           0.00    -0.03   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_3_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_8_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_fir/delay_reg_0__13_/SI (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_fir/delay_reg_7__15_/SI (SDFFX1_RVT)
+                                   0.30 r         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_16_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_2_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_14_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_0_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_13_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_14_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_fir/delay_reg_62__12_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_8_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_7_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_15_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_0_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_6_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_11_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.02   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_7_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_3_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_2_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_9_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_4_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_2_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_1_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_17_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_5_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_63__14_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_37__5_/D (SDFFX1_RVT)
+                                   0.31 f         0.33           0.00    -0.01   clk      default
+u_fir/delay_reg_62__6_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_16_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_13_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_13_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_11_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_12_/D (SDFFX1_RVT)
+                                   0.30 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_10_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_16_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_12_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_12_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_36__4_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_fir/delay_reg_36__5_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_5_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_17_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_6_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.01   clk      default
+u_fir/delay_reg_35__12_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_16_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_25__6_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_x_delay_reg_15_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_13_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_12_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_14_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_26__5_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_1_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_3_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_2_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_x_delay_reg_2_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_63__15_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_3__5_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_26__4_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_17_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_38__2_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.01   clk      default
+u_fir/delay_reg_25__8_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_15_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_14_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_37__9_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_8_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_25__2_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.01   clk      default
+u_fir/delay_reg_37__4_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_36__8_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.01   clk      default
+u_fir/delay_reg_63__8_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_11_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb1_x_delay_reg_13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.01   clk      default
+u_fir/delay_reg_26__8_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_12_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_3__8_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_35__16_/D (SDFFX1_RVT)
+                                   0.30 r         0.31           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_1_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_7_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.01   clk      default
+u_fir/delay_reg_37__6_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.01   clk      default
+u_fir/delay_reg_38__9_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_35__11_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_60__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb4_x_delay_reg_1_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_36__2_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_9_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_17_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_38__8_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_24__9_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_2__16_/D (SDFFX1_RVT)
+                                   0.31 r         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_22__0_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_17_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_63__10_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_25__11_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_2__14_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_63__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_59__8_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_integradores_int1_reg_9_/SI (SDFFX1_RVT)
+                                   0.31 r         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_3__9_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_25__4_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_39__11_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_39__5_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_27__4_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_2__5_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_37__10_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_37__8_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_23__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_22__10_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_25__12_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_11_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_14_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_9_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_59__12_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_15_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_24__11_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_23__11_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_3_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_38__3_/D (SDFFX1_RVT)
+                                   0.30 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_43__10_/D (SDFFX1_RVT)
+                                   0.32 r         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_26__16_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_0_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_24__4_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_35__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_1__3_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_16_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_24__8_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_3__14_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_42__8_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb3_y_out_reg_17_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_1_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_2__8_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_27__12_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb2_y_out_reg_0_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_26__10_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_1__10_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_39__6_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_36__10_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_40__4_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_62__8_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_26__9_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_37__12_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_25__5_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_26__6_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_39__8_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_26__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_28__4_/D (SDFFX1_RVT)
+                                   0.32 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_22__4_/D (SDFFX1_RVT)
+                                   0.32 r         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_23__10_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_27__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_60__8_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb4_y_out_reg_15_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_26__0_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_2__6_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_28__12_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_63__6_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_24__5_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_4__14_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_0__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_1__12_/D (SDFFX1_RVT)
+                                   0.31 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_58__13_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_38__12_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_37__3_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_24__2_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_57__14_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_28__10_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_41__8_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_37__7_/D (SDFFX1_RVT)
+                                   0.33 f         0.33           0.00    -0.00   clk      default
+u_fir/delay_reg_34__11_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_26__15_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_8_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
+u_fir/delay_reg_58__7_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_cic_u_combs_u_comb1_y_out_reg_6_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_37__1_/D (SDFFX1_RVT)
+                                   0.31 f         0.31           0.00    -0.00   clk      default
+u_fir/delay_reg_1__8_/D (SDFFX1_RVT)
+                                   0.32 f         0.32           0.00    -0.00   clk      default
 
    Mode: default Corner: default
    Scenario: default
@@ -169,7 +679,7 @@ u_cic_u_combs_u_comb3_y_out_reg_12_/SI (SDFFX1_RVT)
                              Required        Actual                            
    Net                      Transition     Transition        Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/delay_31__10_          0.08           0.08           0.00  (MET)      
+   y_out[15]                    0.08           0.08           0.00  (MET)      
 
   ---------------------------------------------------------------------------
    Number of max_transition violation(s): 0
@@ -180,64 +690,87 @@ u_cic_u_combs_u_comb3_y_out_reg_12_/SI (SDFFX1_RVT)
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/HFSNET_1060           32.00          33.43          -1.43  (VIOLATED) 
-     PIN : u_fir/HFSBUF_13667_1092/Y
-                               32.00          33.43          -1.43  (VIOLATED) 
+   u_fir/ZBUF_860_6            32.00          33.75          -1.75  (VIOLATED) 
+     PIN : u_fir/ZBUF_860_inst_1936/Y
+                               32.00          33.75          -1.75  (VIOLATED) 
 
-   HFSNET_29                   32.00          32.80          -0.80  (VIOLATED) 
-     PIN : HFSBUF_620_1157/Y
-                               32.00          32.80          -0.80  (VIOLATED) 
+   HFSNET_13                   32.00          33.32          -1.32  (VIOLATED) 
+     PIN : HFSBUF_1261_1059/Y
+                               32.00          33.32          -1.32  (VIOLATED) 
 
-   u_fir/HFSNET_1075           32.00          32.52          -0.52  (VIOLATED) 
-     PIN : u_fir/HFSBUF_33480_1107/Y
-                               32.00          32.52          -0.52  (VIOLATED) 
+   copt_net_2843               64.00          64.83          -0.83  (VIOLATED) 
+     PIN : copt_h_inst_5180/Y
+                               64.00          64.83          -0.83  (VIOLATED) 
 
-   u_fir/ZCTSNET_19            32.00          32.39          -0.39  (VIOLATED) 
-     PIN : u_fir/ZCTSINV_39340_1956/Y
-                               32.00          32.39          -0.39  (VIOLATED) 
+   HFSNET_34                   32.00          32.19          -0.19  (VIOLATED) 
+     PIN : HFSBUF_2362_1164/Y
+                               32.00          32.19          -0.19  (VIOLATED) 
 
-   u_fir/ropt_net_1724         16.00          16.10          -0.10  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4134/Y
-                               16.00          16.10          -0.10  (VIOLATED) 
+   u_fir/ropt_net_3174         16.00          16.17          -0.17  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_5492/Y
+                               16.00          16.17          -0.17  (VIOLATED) 
 
-   u_fir/intadd_71_SUM_4_       8.00           8.10          -0.10  (VIOLATED) 
-     PIN : u_fir/intadd_71_U10/S
-                                8.00           8.10          -0.10  (VIOLATED) 
+   u_fir/ropt_net_3182         16.00          16.11          -0.11  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_5500/Y
+                               16.00          16.11          -0.11  (VIOLATED) 
 
-   u_fir/intadd_12_A_1_        16.00          16.06          -0.06  (VIOLATED) 
-     PIN : u_fir/intadd_52_U17/S
+   u_fir/intadd_59_SUM_15_     16.00          16.11          -0.11  (VIOLATED) 
+     PIN : u_fir/intadd_59_U2/S
+                               16.00          16.11          -0.11  (VIOLATED) 
+
+   u_fir/HFSNET_1151           32.00          32.09          -0.09  (VIOLATED) 
+     PIN : u_fir/HFSINV_9252_1189/Y
+                               32.00          32.09          -0.09  (VIOLATED) 
+
+   u_fir/HFSNET_175            16.00          16.08          -0.08  (VIOLATED) 
+     PIN : u_fir/ctmTdsLR_3_2355/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   u_fir/ropt_net_3184         16.00          16.07          -0.07  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_5502/Y
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   u_fir/intadd_62_SUM_1_      16.00          16.06          -0.06  (VIOLATED) 
+     PIN : u_fir/intadd_62_U16/S
                                16.00          16.06          -0.06  (VIOLATED) 
 
-   u_fir/intadd_91_n9           8.00           8.06          -0.06  (VIOLATED) 
-     PIN : u_fir/intadd_91_U10/CO
-                                8.00           8.06          -0.06  (VIOLATED) 
-
-   u_fir/HFSNET_616            16.00          16.05          -0.05  (VIOLATED) 
-     PIN : u_fir/HFSINV_130_625/Y
-                               16.00          16.05          -0.05  (VIOLATED) 
-
-   u_fir/HFSNET_3               8.00           8.04          -0.04  (VIOLATED) 
-     PIN : u_fir/ctmTdsLR_1_2320/Y
+   u_fir/HFSNET_590             8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_fir/HFSINV_177_599/Y
                                 8.00           8.04          -0.04  (VIOLATED) 
 
-   u_fir/ropt_net_1733         16.00          16.04          -0.04  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4143/Y
-                               16.00          16.04          -0.04  (VIOLATED) 
+   u_fir/HFSNET_700             8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_fir/HFSINV_265_711/Y
+                                8.00           8.03          -0.03  (VIOLATED) 
 
-   u_fir/HFSNET_750             8.00           8.01          -0.01  (VIOLATED) 
-     PIN : u_fir/HFSINV_211_761/Y
+   u_fir/intadd_145_B_3_        8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/U1162/Y        8.00           8.02          -0.02  (VIOLATED) 
+
+   u_fir/intadd_22_SUM_12_      8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/intadd_22_U6/S
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_fir/intadd_28_A_12_        8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/intadd_54_U5/S
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_fir/ZBUF_704_0            32.00          32.01          -0.01  (VIOLATED) 
+     PIN : u_fir/ZBUF_704_inst_1610/Y
+                               32.00          32.01          -0.01  (VIOLATED) 
+
+   u_fir/HFSNET_540             8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSINV_229_549/Y
                                 8.00           8.01          -0.01  (VIOLATED) 
 
-   u_fir/HFSNET_291             8.00           8.01          -0.01  (VIOLATED) 
-     PIN : u_fir/HFSINV_153_299/Y
-                                8.00           8.01          -0.01  (VIOLATED) 
+   u_fir/HFSNET_1009           16.00          16.00          -0.00  (VIOLATED) 
+     PIN : u_fir/HFSBUF_369_1022/Y
+                               16.00          16.00          -0.00  (VIOLATED) 
 
-   u_fir/HFSNET_914            16.00          16.01          -0.01  (VIOLATED) 
-     PIN : u_fir/HFSINV_133_925/Y
-                               16.00          16.01          -0.01  (VIOLATED) 
+   u_fir/intadd_39_SUM_0_       8.00           8.00          -0.00  (VIOLATED) 
+     PIN : u_fir/intadd_39_U17/S
+                                8.00           8.00          -0.00  (VIOLATED) 
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 14
+   Number of max_capacitance violation(s): 20
 
 
    Mode: default Corner: default
@@ -251,5 +784,5 @@ u_cic_u_combs_u_comb3_y_out_reg_12_/SI (SDFFX1_RVT)
 
   ---------------------------------------------------------------------------
    Number of min_pulse_width violation(s): 0
-   Total number of violation(s): 14
+   Total number of violation(s): 20
 1

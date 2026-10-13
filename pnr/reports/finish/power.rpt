@@ -3,7 +3,7 @@ Report : power
         -significant_digits 2
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:44:14 2026
+Date   : Tue Oct 13 15:02:59 2026
 ****************************************
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
@@ -27,11 +27,11 @@ Supply nets:
 VDD (power) probability 1.00 (default)
 VSS (ground) probability 1.00 (default)
 
-  Cell Internal Power    = 8.55e+07 pW ( 71.6%)
-  Net Switching Power    = 3.39e+07 pW ( 28.4%)
-Total Dynamic Power      = 1.19e+08 pW (100.0%)
+  Cell Internal Power    = 8.75e+07 pW ( 71.5%)
+  Net Switching Power    = 3.49e+07 pW ( 28.5%)
+Total Dynamic Power      = 1.22e+08 pW (100.0%)
 
-Cell Leakage Power       = 1.13e+09 pW
+Cell Leakage Power       = 1.19e+09 pW
 
 
   Attributes
@@ -44,10 +44,10 @@ Power Group         Internal Power        Switching Power          Leakage Power
 io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-clock_network             2.84e+07               6.18e+06               8.30e+06               4.29e+07    (  3.4%)        i
-register                  1.40e+07               6.00e+06               4.08e+08               4.28e+08    ( 34.3%)         
+clock_network             2.87e+07               6.57e+06               1.06e+07               4.59e+07    (  3.5%)        i
+register                  1.41e+07               6.13e+06               4.08e+08               4.28e+08    ( 32.7%)         
 sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-combinational             4.31e+07               2.17e+07               7.11e+08               7.75e+08    ( 62.2%)         
+combinational             4.47e+07               2.22e+07               7.67e+08               8.34e+08    ( 63.8%)         
 -----------------------------------------------------------------------------------------------------------------------------
-Total                     8.55e+07 pW            3.39e+07 pW            1.13e+09 pW            1.25e+09 pW
+Total                     8.75e+07 pW            3.49e+07 pW            1.19e+09 pW            1.31e+09 pW
 1
