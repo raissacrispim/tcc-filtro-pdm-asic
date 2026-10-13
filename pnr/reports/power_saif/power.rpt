@@ -3,7 +3,7 @@ Report : power
         -significant_digits 2
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 16:07:27 2026
+Date   : Tue Oct 13 16:17:15 2026
 ****************************************
 Information: Activity propagation will be performed for scenario default.
 Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)

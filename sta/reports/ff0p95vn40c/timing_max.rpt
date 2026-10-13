@@ -7,7 +7,7 @@ Report : timing
 	-sort_by slack
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 13 16:08:24 2026
+Date   : Tue Oct 13 16:18:27 2026
 ****************************************
 
 No paths with slack less than 0.000.
