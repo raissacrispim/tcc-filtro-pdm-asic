@@ -70,16 +70,28 @@ set_clock_uncertainty -hold 0.05 [get_clocks clk]
 # falsas violacoes de hold nas saidas (y_out, valid_out,
 # scan_out). A latencia de E/S e recalculada com a latencia
 # real dos registradores neste corner.
+# Latencias lidas do report_clock_timing (todos os pinos de
+# clock dos registradores): menor no modo early, maior no late.
+proc latencias_clock {modo} {
+    set valores {}
+    if {[catch {redirect -variable txt {report_clock_timing \
+            -type latency $modo -nworst 100000 -significant_digits 4}}]} {
+        redirect -variable txt {report_clock_timing \
+            -type latency -nworst 100000 -significant_digits 4}
+    }
+    foreach linha [split $txt "\n"] {
+        if {[regexp {^\s*\S+/CLK\s+(-?[0-9]+\.[0-9]+)} $linha -> v]} {
+            lappend valores $v
+        }
+    }
+    return [lsort -real $valores]
+}
 set lat_min ""
 set lat_max ""
-foreach_in_collection caminho [get_timing_paths -delay_type max \
-        -to [all_registers -data_pins] -max_paths 5000 -nworst 1] {
-    set l ""
-    catch {set l [get_attribute $caminho endpoint_clock_latency]}
-    if {$l eq ""} { continue }
-    if {$lat_min eq "" || $l < $lat_min} { set lat_min $l }
-    if {$lat_max eq "" || $l > $lat_max} { set lat_max $l }
-}
+set cedo  [latencias_clock -early]
+set tarde [latencias_clock -late]
+if {[llength $cedo] > 0}  { set lat_min [lindex $cedo 0] }
+if {[llength $tarde] > 0} { set lat_max [lindex $tarde end] }
 if {$lat_min ne "" && $lat_max ne ""} {
     puts "Latencia de E/S no corner $CORNER: min $lat_min / max $lat_max ns"
     set_clock_latency -min $lat_min [get_clocks clk]

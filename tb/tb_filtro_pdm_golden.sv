@@ -60,7 +60,7 @@ module tb_filtro_pdm_golden;
     //
     // Compilar com +define+SAIF. Registra as transicoes de
     // todas as redes do DUT apos o reset e grava o arquivo
-    // filtro_pdm_<teste>.saif ao final da simulacao.
+    // filtro_pdm.saif ao final da simulacao.
     // ========================================================
 
 `ifdef SAIF
@@ -460,12 +460,14 @@ module tb_filtro_pdm_golden;
 
 `ifdef SAIF
         $toggle_stop;
+        // Nome fixo: o $toggle_report do VCS nao aceita uma
+        // string montada em tempo de execucao como nome do arquivo
         $toggle_report(
-            {"filtro_pdm_", test_name, ".saif"},
+            "filtro_pdm.saif",
             1.0e-9,
             "tb_filtro_pdm_golden.dut"
         );
-        $display("SAIF gravado: filtro_pdm_%s.saif", test_name);
+        $display("SAIF gravado: filtro_pdm.saif (teste %s)", test_name);
 `endif
 
 

@@ -27,13 +27,22 @@ RAIZ="$(cd "$(dirname "$0")/../.." && pwd)"
 
 cd "$RAIZ/sim"
 
+rm -f filtro_pdm.saif
+
 ./simv_filtro_gls +TEST="$TESTE" > "saif_${TESTE}.log" 2>&1
 
-grep -E "Erros encontrados|APROVADO|REPROVADO|SAIF gravado" \
+grep -E "Erros encontrados|APROVADO|REPROVADO|SAIF gravado|toggle" \
     "saif_${TESTE}.log"
 
+if [ ! -s filtro_pdm.saif ]; then
+    echo "ERRO: filtro_pdm.saif nao foi gerado."
+    echo "Mensagens do VCS sobre o SAIF:"
+    grep -iE "saif|toggle|error" "saif_${TESTE}.log" | head -20
+    exit 1
+fi
+
 mkdir -p "$RAIZ/pnr/activity"
-cp "filtro_pdm_${TESTE}.saif" "$RAIZ/pnr/activity/filtro_pdm.saif"
+cp filtro_pdm.saif "$RAIZ/pnr/activity/filtro_pdm.saif"
 
 echo
 echo "SAIF copiado para pnr/activity/filtro_pdm.saif"
