@@ -4,13 +4,13 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:34:34 2026
+Date   : Tue Oct 13 14:43:32 2026
 ****************************************
 
 
 
 Information: Deserialized np data
-INFO: timer data loaded from /tmp/filtro_pdm_1709543_596807884.timdat
+INFO: timer data loaded from /tmp/filtro_pdm_1781089_593883340.timdat
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
@@ -19,8 +19,16 @@ Information: Update timing completed net estimation for all the timing graph net
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
    Mode: default Corner: default
    Scenario: default
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 0
+   u_fir/ZCTSNET_19            32.00          32.39          -0.39  (VIOLATED) 
+     PIN : u_fir/ZCTSINV_39340_1956/Y
+                               32.00          32.39          -0.39  (VIOLATED) 
 
-   Total number of violation(s): 0
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 1
+
+   Total number of violation(s): 1
 1

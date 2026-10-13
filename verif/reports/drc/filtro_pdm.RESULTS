@@ -46,8 +46,8 @@ Working directory:      /home/raissa.crispim/tcc_filtro/verif/run_drc
 Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_drc/run_details
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/13 02:35:35PM
-Time ended:             2026/10/13 02:36:14PM
+Time started:           2026/10/13 02:44:43PM
+Time ended:             2026/10/13 02:45:12PM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -59,18 +59,13 @@ Rule and DRC Error Summary
 
 396 total rules were run.
 0 rules NOT EXECUTED.
-6 rules have violations.
-There are 24 total violations.
+1 rule has violations.
+There is 1 total violation.
 Refer to filtro_pdm.LAYOUT_ERRORS
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Rule                          Violations Found
-CO.S.1                        v = 5
-CO.S.4                        v = 3
-CO.W.1                        v = 5
-M1.S.1                        v = 6
-M1.W.1                        v = 4
 M1.W.2.1                      v = 1
 
 
@@ -115,7 +110,7 @@ Production Environment Variables
 HOME = "/home/raissa.crispim"
 ICV_HOME_DIR = "/Tools/synopsys/icvalidator/X-2025.06-SP2"
 LM_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
-PATH = "/Tools/synopsys/icvalidator/X-2025.06-SP2/bin/LINUX.64:/Tools/synopsys/icvalidator/X-2025.06-SP2/contrib/bin/LINUX.64:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/home/raissa.crispim/.local/bin:/home/raissa.crispim/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
+PATH = "/Tools/synopsys/icvalidator/X-2025.06-SP2/bin/LINUX.64:/Tools/synopsys/icvalidator/X-2025.06-SP2/contrib/bin/LINUX.64:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/home/raissa.crispim/.local/bin:/home/raissa.crispim/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
 SNPSLMD_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
 USER = "raissa.crispim"
 
@@ -137,9 +132,9 @@ Distributed Processing
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:00:38
-Peak Single Command Memory = 0.122 GB
+IC Validator Run Time = 0:00:29
+Peak Single Command Memory = 0.119 GB
 
 Distributed Host Memory Usage
-srv-microeletronica3 (2/2)  ....  Average=0.674 GB, Peak=0.783 GB / 251.112 GB
+srv-microeletronica3 (2/2)  ....  Average=0.706 GB, Peak=0.768 GB / 251.112 GB
 IC Validator is done.

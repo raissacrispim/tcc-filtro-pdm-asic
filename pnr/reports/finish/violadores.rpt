@@ -3,7 +3,7 @@ Report : constraint
         -all_violators
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:34:49 2026
+Date   : Tue Oct 13 14:43:52 2026
 ****************************************
 
    late_timing
@@ -58,8 +58,16 @@ Information: Activity for scenario default was cached, no propagation required. 
 
    Mode: default Corner: default
    Scenario: default
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 0
+   u_fir/ZCTSNET_19            32.00          32.39          -0.39  (VIOLATED) 
+     PIN : u_fir/ZCTSINV_39340_1956/Y
+                               32.00          32.39          -0.39  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 1
 
 
    Mode: default Corner: default
@@ -73,5 +81,5 @@ Information: Activity for scenario default was cached, no propagation required. 
 
   ---------------------------------------------------------------------------
    Number of min_pulse_width violation(s): 0
-   Total number of violation(s): 0
+   Total number of violation(s): 1
 1

@@ -28,7 +28,6 @@
 # Chamado por sta/scripts/run_sta.sh, que define:
 #   STA_CORNER  nome do corner da biblioteca (ex.: ss0p75v125c)
 #   STA_SPEF    parasitas extraidos (Cmax ou Cmin)
-#   STA_ECO     1 = gerar ECO de hold (sta/eco/hold_eco.tcl)
 #
 # Entradas:
 #   pnr/output/filtro_pdm_pnr.v          netlist pos-layout
@@ -63,7 +62,7 @@ Information: Removing 1 unneeded designs..... (LNK-034)
 Information: 238 (80.95%) library cells are unused in library saed32rvt_ff0p95vn40c..... (LNK-045)
 Information: total 238 library cells are unused (LNK-046)
 Design 'filtro_pdm' was successfully linked.
-Information: There are 9513 leaf cells, ports, hiers and 13757 nets in the design (LNK-047)
+Information: There are 9475 leaf cells, ports, hiers and 13723 nets in the design (LNK-047)
 1
 # ------------------------------------------------------------
 # 2. Parasitas e restricoes
@@ -102,33 +101,11 @@ report_timing -delay_type max -max_paths 10     -significant_digits 3 > $REP/tim
 report_timing -delay_type min -max_paths 10     -significant_digits 3 > $REP/timing_min.rpt
 report_constraint -all_violators > $REP/violadores.rpt
 report_clock_timing -type skew > $REP/clock_skew.rpt
-# ------------------------------------------------------------
-# 4. ECO de hold (opcional)
-#
-# Insere buffers/celulas de atraso nos caminhos com hold
-# violado e grava os comandos para o Fusion Compiler. A folga
-# de setup e grande (> 50 ns) em todos os corners, portanto o
-# atraso inserido nao compromete o setup.
-# ------------------------------------------------------------
-if {[info exists env(STA_ECO)] && $env(STA_ECO) eq "1"} {
-    file mkdir sta/eco
-    set BUFS {}
-    foreach nome {DELLN1X2_RVT DELLN2X2_RVT NBUFFX2_RVT} {
-        if {[sizeof_collection [get_lib_cells -quiet */$nome]] > 0} {
-            lappend BUFS $nome
-        }
-    }
-    puts "ECO de hold com: $BUFS"
-    fix_eco_timing -type hold -methods {size_cell insert_buffer}         -buffer_list $BUFS
-    report_global_timing > $REP/global_timing_apos_eco.rpt
-    write_changes -format icc2tcl -output sta/eco/hold_eco.tcl
-    puts "ECO gravado: sta/eco/hold_eco.tcl"
-}
 # Resumo no terminal
 set pior_setup [get_attribute     [get_timing_paths -delay_type max] slack]
-61.503502
+61.651577
 set pior_hold  [get_attribute     [get_timing_paths -delay_type min] slack]
--0.007479
+-0.103994
 puts ""
 
 puts "=================================================="
@@ -138,9 +115,9 @@ Corner     : ff0p95vn40c
 puts "Parasitas  : $SPEF"
 Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef
 puts "Pior setup : $pior_setup ns"
-Pior setup : 61.503502 ns
+Pior setup : 61.651577 ns
 puts "Pior hold  : $pior_hold ns"
-Pior hold  : -0.007479 ns
+Pior hold  : -0.103994 ns
 puts "Relatorios : $REP/"
 Relatorios : sta/reports/ff0p95vn40c/
 puts "=================================================="
@@ -155,7 +132,7 @@ Information: Defining new variable 'REP'. (CMD-041)
 
 Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
 Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
-Maximum memory usage for this session: 2890.43 MB
+Maximum memory usage for this session: 2890.46 MB
 CPU usage for this session: 14 seconds 
 Elapsed time for this session: 10 seconds
 Diagnostics summary: 4 warnings, 16 informationals

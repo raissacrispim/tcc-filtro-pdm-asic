@@ -17,11 +17,6 @@ Information: Using 1 threads for LVS
 [Check Net] 90% 	Elapsed =    0:00:03, CPU =    0:00:03
 [Check Net] All nets are submitted.
 [Check Net] 100%	Elapsed =    0:00:03, CPU =    0:00:03
-Information: Detected short violation. Cell1: u_fir/U3874. Cell2: u_fir/ZCTSINV_39340_1956. BBox: (54.6630 23.4830)(54.7130 23.7610). Layer: M1. (RT-586)
-Information: Detected short violation. Cell1: u_fir/U3874. Cell2: u_fir/ZCTSINV_39340_1956. BBox: (54.6630 24.4780)(54.7130 24.7440). Layer: M1. (RT-586)
-Information: Detected short violation. Cell1: u_fir/U3874. Cell2: u_fir/ZCTSINV_39340_1956. BBox: (54.7190 24.2330)(54.7690 24.3430). Layer: M1. (RT-586)
-Information: Detected short violation. Cell1: u_fir/U3874. Cell2: u_fir/ZCTSINV_39340_1956. BBox: (54.6330 24.3380)(54.6680 24.3430). Layer: M1. (RT-586)
-Information: Detected short violation. Cell1: u_fir/ZCTSINV_39340_1956. Net2: u_fir/HFSNET_1072. BBox: (54.6580 24.3380)(54.6680 24.3430). Layer: M1. (RT-586)
 
 ===============================================================
     Maximum number of violations is set to 20
@@ -29,7 +24,7 @@ Information: Detected short violation. Cell1: u_fir/ZCTSINV_39340_1956. Net2: u_
     All violations might not be found.
 ===============================================================
 Total number of input nets is 13361.
-Total number of short violations is 5.
+Total number of short violations is 0.
 Total number of open nets is 0.
 Total number of floating route violations is 0.
 

@@ -1,5 +1,5 @@
 // Fusion Compiler Version X-2025.06-SP3 Verilog Writer
-// Generated on 10/13/2026 at 14:35:12
+// Generated on 10/13/2026 at 14:44:14
 // Library Name: filtro_pdm.dlib
 // Block Name: filtro_pdm
 // User Label: route
@@ -22859,7 +22859,7 @@ HADDX1_RVT U2352 ( .A0 ( n2119 ) , .B0 ( n2180 ) ,
 FADDX1_RVT U2353 ( .A ( HFSNET_868 ) , .B ( n2120 ) , .CI ( intadd_16_A_3_ ) , 
     .CO ( n1397 ) , .S ( intadd_109_A_4_ ) ) ;
 INVX8_RVT ZCTSINV_38497_1955 ( .A ( ccd_drc_0 ) , .Y ( ZCTSNET_18 ) ) ;
-INVX8_RVT ZCTSINV_39340_1956 ( .A ( ctosc_drc_cln_0 ) , .Y ( ZCTSNET_19 ) ) ;
+INVX4_RVT ZCTSINV_39340_1956 ( .A ( ctosc_drc_cln_0 ) , .Y ( ZCTSNET_19 ) ) ;
 INVX8_RVT ZCTSINV_40367_1957 ( .A ( ctosc_drc_cln_0 ) , .Y ( ZCTSNET_20 ) ) ;
 FADDX1_RVT U2357 ( .A ( HFSNET_992 ) , .B ( HFSNET_693 ) , 
     .CI ( intadd_43_SUM_3_ ) , .CO ( n2126 ) , .S ( intadd_178_B_1_ ) ) ;

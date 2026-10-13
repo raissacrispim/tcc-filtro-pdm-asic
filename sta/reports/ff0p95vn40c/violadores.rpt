@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Mon Oct 12 10:50:40 2026
+Date   : Tue Oct 13 14:50:00 2026
 ****************************************
 
 
@@ -13,920 +13,168 @@ Date   : Mon Oct 12 10:50:40 2026
 
    Endpoint                                                  Slack
    -----------------------------------------------------------------
-   y_out[13]                                                 -0.01  (VIOLATED)
-   y_out[12]                                                 -0.01  (VIOLATED)
+   y_out[18]                                                 -0.10  (VIOLATED)
+   y_out[9]                                                  -0.10  (VIOLATED)
+   y_out[1]                                                  -0.10  (VIOLATED)
+   y_out[16]                                                 -0.10  (VIOLATED)
+   y_out[0]                                                  -0.10  (VIOLATED)
+   y_out[17]                                                 -0.10  (VIOLATED)
+   y_out[15]                                                 -0.09  (VIOLATED)
+   valid_out                                                 -0.08  (VIOLATED)
+   scan_out                                                  -0.08  (VIOLATED)
+   y_out[14]                                                 -0.08  (VIOLATED)
+   y_out[8]                                                  -0.07  (VIOLATED)
+   y_out[12]                                                 -0.07  (VIOLATED)
+   y_out[13]                                                 -0.07  (VIOLATED)
+   y_out[7]                                                  -0.07  (VIOLATED)
+   y_out[11]                                                 -0.07  (VIOLATED)
+   y_out[6]                                                  -0.07  (VIOLATED)
+   y_out[4]                                                  -0.06  (VIOLATED)
+   y_out[10]                                                 -0.06  (VIOLATED)
+   y_out[5]                                                  -0.06  (VIOLATED)
+   y_out[3]                                                  -0.05  (VIOLATED)
+   y_out[2]                                                  -0.05  (VIOLATED)
+   u_fir/delay_reg_40__11_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_27__12_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_63__3_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_25__13_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_63__4_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_23__10_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_38__5_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_26__11_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_37__12_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_40__7_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_26__13_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_38__12_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_37__5_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_27__8_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_63__16_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_25__11_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_26__6_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_27__7_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_35__10_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_61__14_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_25__7_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_39__3_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_61__15_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_27__13_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_24__7_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_25__5_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_37__4_/SI                                 -0.03  (VIOLATED)
+   u_cic_u_combs_u_comb3_y_out_reg_8_/SI                     -0.03  (VIOLATED)
+   u_fir/delay_reg_27__6_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_27__5_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_28__9_/SI                                 -0.03  (VIOLATED)
+   u_fir/delay_reg_39__10_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_0__8_/SI                                  -0.03  (VIOLATED)
+   u_cic_u_combs_u_comb4_y_out_reg_9_/SI                     -0.03  (VIOLATED)
+   u_fir/delay_reg_62__16_/SI                                -0.03  (VIOLATED)
+   u_fir/delay_reg_37__13_/SI                                -0.03  (VIOLATED)
+   u_cic_u_combs_u_comb1_valid_out_reg/SI                    -0.02  (VIOLATED)
+   u_fir/delay_reg_37__11_/SI                                -0.02  (VIOLATED)
+   u_fir/delay_reg_25__9_/SI                                 -0.02  (VIOLATED)
+   u_fir/delay_reg_35__9_/SI                                 -0.02  (VIOLATED)
+   u_cic_u_integradores_int1_reg_12_/SI                      -0.02  (VIOLATED)
+   u_fir/delay_reg_23__11_/SI                                -0.02  (VIOLATED)
+   u_cic_u_combs_u_comb4_x_delay_reg_0_/SI                   -0.02  (VIOLATED)
+   u_fir/delay_reg_27__11_/SI                                -0.02  (VIOLATED)
+   u_fir/delay_reg_26__9_/SI                                 -0.02  (VIOLATED)
+   u_fir/delay_reg_1__10_/SI                                 -0.02  (VIOLATED)
+   u_fir/delay_reg_24__10_/SI                                -0.02  (VIOLATED)
+   u_fir/delay_reg_63__6_/SI                                 -0.02  (VIOLATED)
+   u_fir/delay_reg_0__3_/SI                                  -0.02  (VIOLATED)
+   u_fir/delay_reg_35__12_/SI                                -0.01  (VIOLATED)
+   u_fir/delay_reg_0__12_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_3__13_/D                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_39__9_/SI                                 -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb4_x_delay_reg_9_/SI                   -0.01  (VIOLATED)
+   u_fir/delay_reg_57__2_/D                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_22__11_/SI                                -0.01  (VIOLATED)
+   u_fir/delay_reg_25__8_/SI                                 -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb3_x_delay_reg_4_/SI                   -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb3_x_delay_reg_10_/SI                  -0.01  (VIOLATED)
+   u_fir/delay_reg_43__10_/SI                                -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb3_x_delay_reg_8_/SI                   -0.01  (VIOLATED)
+   u_fir/delay_reg_37__6_/SI                                 -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb3_x_delay_reg_6_/SI                   -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb2_x_delay_reg_0_/SI                   -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb1_y_out_reg_4_/SI                     -0.01  (VIOLATED)
+   u_fir/delay_reg_37__10_/SI                                -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb2_y_out_reg_10_/SI                    -0.01  (VIOLATED)
+   u_fir/delay_reg_38__1_/SI                                 -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb1_y_out_reg_17_/SI                    -0.01  (VIOLATED)
+   u_fir/delay_reg_24__8_/SI                                 -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb2_x_delay_reg_4_/SI                   -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb3_y_out_reg_12_/SI                    -0.01  (VIOLATED)
+   u_fir/delay_reg_0__14_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_62__2_/D                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_26__8_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_61__12_/SI                                -0.01  (VIOLATED)
+   u_fir/delay_reg_52__0_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_9__15_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_25__4_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_9__1_/SI                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_56__8_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_58__6_/D                                  -0.01  (VIOLATED)
+   u_fir/y_out_reg_16_/SI                                    -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb4_x_delay_reg_2_/SI                   -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb3_y_out_reg_0_/SI                     -0.01  (VIOLATED)
+   u_fir/delay_reg_34__14_/SI                                -0.01  (VIOLATED)
+   u_fir/delay_reg_6__5_/SI                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_28__10_/SI                                -0.01  (VIOLATED)
+   u_fir/delay_reg_28__1_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_10__16_/D                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_56__11_/SI                                -0.01  (VIOLATED)
+   u_fir/delay_reg_58__5_/D                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_31__12_/SI                                -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb2_y_out_reg_11_/SI                    -0.01  (VIOLATED)
+   u_fir/delay_reg_41__7_/SI                                 -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb1_y_out_reg_0_/SI                     -0.01  (VIOLATED)
+   u_cic_u_combs_u_comb1_x_delay_reg_10_/SI                  -0.01  (VIOLATED)
+   u_fir/delay_reg_56__0_/D                                  -0.01  (VIOLATED)
+   u_fir/delay_reg_3__2_/D                                   -0.01  (VIOLATED)
+   u_fir/delay_reg_56__4_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_0__15_/SI                                 -0.01  (VIOLATED)
+   u_fir/delay_reg_7__12_/SI                                  0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_60__12_/SI                                 0.00  (VIOLATED: increase significant digits)
+   u_cic_u_combs_u_comb2_x_delay_reg_11_/SI                   0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_7_/SI                        0.00  (VIOLATED: increase significant digits)
    u_cic_u_integradores_int4_reg_17_/SI                       0.00  (VIOLATED: increase significant digits)
-   u_cic_u_combs_u_comb1_x_delay_reg_17_/SI                   0.00  (VIOLATED: increase significant digits)
-   u_cic_u_integradores_int4_reg_11_/SI                       0.00  (VIOLATED: increase significant digits)
-   y_out[7]                                                   0.00  (VIOLATED: increase significant digits)
-   u_cic_u_integradores_int3_reg_11_/SI                       0.00  (VIOLATED: increase significant digits)
-   u_cic_u_integradores_int4_reg_14_/SI                       0.00  (VIOLATED: increase significant digits)
    u_fir/delay_reg_31__4_/SI                                  0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_58__8_/SI                                  0.00  (VIOLATED: increase significant digits)
-   u_cic_u_integradores_int3_reg_13_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_4_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_cic_u_decimador_count_reg_3_/SI                          0.00  (VIOLATED: increase significant digits)
    u_cic_u_integradores_int4_reg_15_/SI                       0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_56__4_/SI                                  0.00  (VIOLATED: increase significant digits)
-
-
-   max_capacitance
-
-                             Required        Actual
-   Pin                      Capacitance    Capacitance       Slack
-   -----------------------------------------------------------------
-   u_fir/delay_reg_9__4_/QN     8.00          41.14         -33.14  (VIOLATED)
-   u_fir/delay_reg_11__3_/QN
-                                8.00          38.56         -30.56  (VIOLATED)
-   u_fir/delay_reg_5__7_/QN     8.00          38.07         -30.07  (VIOLATED)
-   u_fir/delay_reg_57__2_/QN
-                                8.00          34.31         -26.31  (VIOLATED)
-   u_fir/delay_reg_28__3_/QN
-                                8.00          31.46         -23.46  (VIOLATED)
-   u_fir/delay_reg_7__9_/QN     8.00          31.05         -23.05  (VIOLATED)
-   u_fir/delay_reg_53__7_/QN
-                                8.00          30.87         -22.87  (VIOLATED)
-   u_fir/delay_reg_56__5_/QN
-                                8.00          30.79         -22.79  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF123/Y
-                               16.00          38.64         -22.64  (VIOLATED)
-   u_fir/delay_reg_51__5_/QN
-                                8.00          30.54         -22.54  (VIOLATED)
-   u_fir/delay_reg_51__8_/QN
-                                8.00          30.03         -22.03  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF273/Y
-                               16.00          37.68         -21.68  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1021/Y
-                               16.00          36.86         -20.86  (VIOLATED)
-   u_fir/delay_reg_26__4_/QN
-                                8.00          28.71         -20.71  (VIOLATED)
-   u_fir/delay_reg_11__7_/QN
-                                8.00          28.64         -20.64  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF225/Y
-                               16.00          36.59         -20.59  (VIOLATED)
-   u_fir/delay_reg_22__7_/QN
-                                8.00          27.91         -19.91  (VIOLATED)
-   u_fir/delay_reg_8__6_/QN     8.00          27.72         -19.72  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF496/Y
-                               16.00          35.38         -19.38  (VIOLATED)
-   u_fir/delay_reg_27__7_/QN
-                                8.00          26.97         -18.97  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF118/Y
-                               16.00          34.51         -18.51  (VIOLATED)
-   u_fir/delay_reg_34__5_/QN
-                                8.00          26.50         -18.50  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF110/Y
-                               16.00          34.47         -18.47  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF108/Y
-                               16.00          34.27         -18.27  (VIOLATED)
-   u_fir/delay_reg_11__9_/QN
-                                8.00          25.61         -17.61  (VIOLATED)
-   u_fir/delay_reg_10__6_/QN
-                                8.00          25.52         -17.52  (VIOLATED)
-   u_fir/delay_reg_22__6_/QN
-                                8.00          25.22         -17.22  (VIOLATED)
-   u_fir/delay_reg_33__9_/Q     8.00          25.02         -17.02  (VIOLATED)
-   u_fir/HFSBUF_62_628/Y       16.00          32.45         -16.45  (VIOLATED)
-   u_fir/delay_reg_62__13_/QN
-                                8.00          24.37         -16.37  (VIOLATED)
-   u_fir/delay_reg_29__9_/Q     8.00          24.07         -16.07  (VIOLATED)
-   u_fir/delay_reg_55__10_/QN
-                                8.00          23.93         -15.93  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF577/Y
-                               16.00          31.90         -15.90  (VIOLATED)
-   u_fir/delay_reg_52__8_/QN
-                                8.00          23.88         -15.88  (VIOLATED)
-   u_fir/delay_reg_0__12_/QN
-                                8.00          23.69         -15.69  (VIOLATED)
-   u_fir/delay_reg_16__7_/QN
-                                8.00          23.61         -15.61  (VIOLATED)
-   u_fir/delay_reg_54__10_/QN
-                                8.00          23.56         -15.56  (VIOLATED)
-   u_fir/delay_reg_10__9_/QN
-                                8.00          23.55         -15.55  (VIOLATED)
-   u_fir/delay_reg_35__5_/QN
-                                8.00          23.38         -15.38  (VIOLATED)
-   u_fir/delay_reg_55__11_/QN
-                                8.00          23.25         -15.25  (VIOLATED)
-   u_fir/delay_reg_59__8_/QN
-                                8.00          22.93         -14.93  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF460/Y
-                               16.00          30.69         -14.69  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF254/Y
-                               16.00          30.51         -14.51  (VIOLATED)
-   u_cic_u_combs_u_comb4_x_delay_reg_1_/QN
-                                8.00          22.48         -14.48  (VIOLATED)
-   u_fir/intadd_62_U10/CO       8.00          22.40         -14.40  (VIOLATED)
-   u_fir/delay_reg_7__2_/QN     8.00          21.97         -13.97  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1042/Y
-                               16.00          29.16         -13.16  (VIOLATED)
-   intadd_2_U9/CO               8.00          20.99         -12.99  (VIOLATED)
-   u_fir/delay_reg_58__11_/QN
-                                8.00          20.92         -12.92  (VIOLATED)
-   u_fir/delay_reg_52__11_/QN
-                                8.00          20.87         -12.87  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF360/Y
-                               16.00          28.84         -12.84  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF469/Y
-                               16.00          28.59         -12.59  (VIOLATED)
-   u_fir/delay_reg_11__6_/QN
-                                8.00          20.57         -12.57  (VIOLATED)
-   u_fir/delay_reg_51__7_/QN
-                                8.00          20.53         -12.53  (VIOLATED)
-   u_fir/delay_reg_62__11_/QN
-                                8.00          20.45         -12.45  (VIOLATED)
-   u_fir/delay_reg_0__14_/QN
-                                8.00          20.37         -12.37  (VIOLATED)
-   u_fir/delay_reg_55__12_/QN
-                                8.00          20.33         -12.33  (VIOLATED)
-   u_fir/intadd_62_U9/CO        8.00          19.98         -11.98  (VIOLATED)
-   u_fir/delay_reg_4__0_/QN     8.00          19.73         -11.73  (VIOLATED)
-   U_PTECO_HOLD_BUF312/Y       16.00          27.72         -11.72  (VIOLATED)
-   u_fir/delay_reg_28__12_/QN
-                                8.00          19.70         -11.70  (VIOLATED)
-   u_fir/delay_reg_32__6_/QN
-                                8.00          19.62         -11.62  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF183/Y
-                               16.00          27.54         -11.54  (VIOLATED)
-   u_fir/delay_reg_29__7_/Q     8.00          19.32         -11.32  (VIOLATED)
-   u_fir/delay_reg_46__1_/QN
-                                8.00          19.27         -11.27  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1035/Y
-                               16.00          27.25         -11.25  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF177/Y
-                               16.00          27.20         -11.20  (VIOLATED)
-   u_fir/intadd_61_U8/S         8.00          19.14         -11.14  (VIOLATED)
-   u_fir/delay_reg_28__7_/QN
-                                8.00          19.01         -11.01  (VIOLATED)
-   u_fir/delay_reg_44__12_/QN
-                                8.00          18.79         -10.79  (VIOLATED)
-   u_fir/delay_reg_9__8_/QN     8.00          18.72         -10.72  (VIOLATED)
-   u_fir/intadd_61_U8/CO        8.00          18.70         -10.70  (VIOLATED)
-   u_fir/delay_reg_5__12_/QN
-                                8.00          18.54         -10.54  (VIOLATED)
-   u_fir/delay_reg_63__15_/QN
-                                8.00          18.35         -10.35  (VIOLATED)
-   u_fir/intadd_62_U11/CO       8.00          18.29         -10.29  (VIOLATED)
-   u_fir/delay_reg_27__6_/Q     8.00          18.04         -10.04  (VIOLATED)
-   u_fir/delay_reg_33__7_/Q     8.00          17.97          -9.97  (VIOLATED)
-   u_fir/delay_reg_57__11_/QN
-                                8.00          17.73          -9.73  (VIOLATED)
-   u_fir/delay_reg_7__7_/QN     8.00          17.69          -9.69  (VIOLATED)
-   u_fir/delay_reg_21__1_/QN
-                                8.00          17.24          -9.24  (VIOLATED)
-   u_fir/delay_reg_6__6_/QN     8.00          17.22          -9.22  (VIOLATED)
-   u_cic_u_integradores_int1_reg_8_/QN
-                                8.00          17.04          -9.04  (VIOLATED)
-   u_fir/delay_reg_52__9_/QN
-                                8.00          16.98          -8.98  (VIOLATED)
-   u_fir/delay_reg_6__4_/QN     8.00          16.82          -8.82  (VIOLATED)
-   u_fir/delay_reg_20__8_/QN
-                                8.00          16.62          -8.62  (VIOLATED)
-   u_fir/delay_reg_55__6_/QN
-                                8.00          16.59          -8.59  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF352/Y
-                               16.00          24.50          -8.50  (VIOLATED)
-   intadd_1_U6/CO               8.00          16.47          -8.47  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF180/Y
-                               16.00          24.44          -8.44  (VIOLATED)
-   u_fir/delay_reg_29__0_/QN
-                                8.00          16.42          -8.42  (VIOLATED)
-   u_fir/delay_reg_38__5_/QN
-                                8.00          16.40          -8.40  (VIOLATED)
-   u_fir/intadd_61_U12/CO       8.00          16.33          -8.33  (VIOLATED)
-   intadd_2_U10/S               8.00          16.06          -8.06  (VIOLATED)
-   intadd_1_U5/S                8.00          15.91          -7.91  (VIOLATED)
-   u_fir/intadd_61_U12/S        8.00          15.89          -7.89  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1031/Y
-                               16.00          23.88          -7.88  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1036/Y
-                               16.00          23.84          -7.84  (VIOLATED)
-   intadd_2_U9/S                8.00          15.79          -7.79  (VIOLATED)
-   u_cic_u_integradores_int2_reg_14_/Q
-                                8.00          15.71          -7.71  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF211/Y
-                               16.00          23.50          -7.50  (VIOLATED)
-   u_fir/delay_reg_9__7_/QN     8.00          15.43          -7.43  (VIOLATED)
-   u_fir/delay_reg_58__4_/QN
-                                8.00          15.34          -7.34  (VIOLATED)
-   u_fir/delay_reg_58__14_/QN
-                                8.00          15.32          -7.32  (VIOLATED)
-   u_fir/delay_reg_56__12_/QN
-                                8.00          15.03          -7.03  (VIOLATED)
-   u_cic_u_integradores_int1_reg_7_/QN
-                                8.00          14.98          -6.98  (VIOLATED)
-   u_fir/intadd_36_U10/CO      16.00          22.96          -6.96  (VIOLATED)
-   u_fir/delay_reg_9__5_/QN     8.00          14.87          -6.87  (VIOLATED)
-   u_fir/delay_reg_6__14_/QN
-                                8.00          14.84          -6.84  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1024/Y
-                               16.00          22.81          -6.81  (VIOLATED)
-   u_fir/delay_reg_21__5_/QN
-                                8.00          14.74          -6.74  (VIOLATED)
-   u_fir/delay_reg_55__2_/QN
-                                8.00          14.65          -6.65  (VIOLATED)
-   u_fir/delay_reg_55__4_/QN
-                                8.00          14.64          -6.64  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF581/Y
-                               16.00          22.64          -6.64  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1030/Y
-                               16.00          22.57          -6.57  (VIOLATED)
-   u_fir/delay_reg_14__7_/QN
-                                8.00          14.46          -6.46  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF125/Y
-                               16.00          22.45          -6.45  (VIOLATED)
-   u_fir/delay_reg_57__6_/QN
-                                8.00          14.41          -6.41  (VIOLATED)
-   u_fir/delay_reg_51__14_/QN
-                                8.00          14.32          -6.32  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1027/Y
-                               16.00          22.30          -6.30  (VIOLATED)
-   intadd_1_U5/CO               8.00          14.23          -6.23  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF283/Y
-                               16.00          22.23          -6.23  (VIOLATED)
-   u_fir/delay_reg_52__5_/QN
-                                8.00          14.21          -6.21  (VIOLATED)
-   u_fir/delay_reg_27__10_/Q
-                                8.00          14.17          -6.17  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF63/Y
-                               16.00          22.15          -6.15  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF275/Y
-                               16.00          22.15          -6.15  (VIOLATED)
-   u_fir/delay_reg_3__11_/QN
-                                8.00          14.10          -6.10  (VIOLATED)
-   u_fir/delay_reg_52__4_/QN
-                                8.00          14.08          -6.08  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF606/Y
-                               16.00          22.04          -6.04  (VIOLATED)
-   intadd_2_U12/CO              8.00          13.97          -5.97  (VIOLATED)
-   u_fir/delay_reg_59__4_/QN
-                                8.00          13.89          -5.89  (VIOLATED)
-   u_fir/delay_reg_9__14_/QN
-                                8.00          13.79          -5.79  (VIOLATED)
-   u_cic_u_integradores_int1_reg_0_/QN
-                                8.00          13.69          -5.69  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF388/Y
-                               16.00          21.57          -5.57  (VIOLATED)
-   u_fir/delay_reg_12__5_/QN
-                                8.00          13.43          -5.43  (VIOLATED)
-   u_fir/delay_reg_10__7_/QN
-                                8.00          13.43          -5.43  (VIOLATED)
-   u_fir/intadd_61_U9/CO       16.00          21.42          -5.42  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF387/Y
-                               16.00          21.42          -5.42  (VIOLATED)
-   u_fir/delay_reg_54__14_/QN
-                                8.00          13.37          -5.37  (VIOLATED)
-   u_fir/intadd_61_U13/CO       8.00          13.33          -5.33  (VIOLATED)
-   u_fir/delay_reg_4__6_/QN     8.00          13.23          -5.23  (VIOLATED)
-   U274/Y                       8.00          13.21          -5.21  (VIOLATED)
-   u_fir/delay_reg_7__1_/QN     8.00          13.18          -5.18  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1041/Y
-                               16.00          21.17          -5.17  (VIOLATED)
-   u_fir/delay_reg_14__5_/QN
-                                8.00          13.16          -5.16  (VIOLATED)
-   u_fir/delay_reg_53__4_/QN
-                                8.00          13.13          -5.13  (VIOLATED)
-   u_fir/delay_reg_53__13_/QN
-                                8.00          13.11          -5.11  (VIOLATED)
-   u_fir/delay_reg_11__11_/QN
-                                8.00          13.07          -5.07  (VIOLATED)
-   u_fir/delay_reg_8__2_/QN     8.00          13.04          -5.04  (VIOLATED)
-   u_fir/intadd_62_U9/S         8.00          13.04          -5.04  (VIOLATED)
-   u_fir/delay_reg_10__5_/QN
-                                8.00          13.04          -5.04  (VIOLATED)
-   u_fir/delay_reg_56__14_/QN
-                                8.00          12.94          -4.94  (VIOLATED)
-   u_fir/delay_reg_42__15_/QN
-                                8.00          12.87          -4.87  (VIOLATED)
-   u_fir/delay_reg_6__13_/QN
-                                8.00          12.86          -4.86  (VIOLATED)
-   u_cic_u_integradores_int1_reg_6_/QN
-                                8.00          12.85          -4.85  (VIOLATED)
-   u_fir/delay_reg_60__10_/QN
-                                8.00          12.83          -4.83  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF427/Y
-                               16.00          20.83          -4.83  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_17_/Q
-                                8.00          12.82          -4.82  (VIOLATED)
-   u_fir/delay_reg_57__7_/QN
-                                8.00          12.79          -4.79  (VIOLATED)
-   u_fir/delay_reg_35__6_/Q     8.00          12.72          -4.72  (VIOLATED)
-   u_fir/delay_reg_30__4_/Q     8.00          12.69          -4.69  (VIOLATED)
-   u_fir/delay_reg_8__8_/QN     8.00          12.58          -4.58  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF643/Y
-                               16.00          20.58          -4.58  (VIOLATED)
-   u_fir/delay_reg_31__11_/QN
-                               16.00          20.47          -4.47  (VIOLATED)
-   u_cic_u_integradores_int1_reg_1_/QN
-                                8.00          12.47          -4.47  (VIOLATED)
-   u_fir/delay_reg_62__10_/QN
-                                8.00          12.45          -4.45  (VIOLATED)
-   u_fir/delay_reg_52__7_/QN
-                                8.00          12.41          -4.41  (VIOLATED)
-   U252/Y                      16.00          20.33          -4.33  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF269/Y
-                               16.00          20.32          -4.32  (VIOLATED)
-   u_fir/intadd_158_U5/CO       8.00          12.28          -4.28  (VIOLATED)
-   u_fir/delay_reg_5__5_/QN     8.00          12.21          -4.21  (VIOLATED)
-   intadd_2_U8/CO               8.00          12.17          -4.17  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF657/Y
-                               16.00          20.14          -4.14  (VIOLATED)
-   u_fir/intadd_86_U10/CO       8.00          12.12          -4.12  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1034/Y
-                               16.00          20.05          -4.05  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1026/Y
-                               16.00          20.02          -4.02  (VIOLATED)
-   intadd_2_U15/S               8.00          12.01          -4.01  (VIOLATED)
-   u_fir/delay_reg_56__10_/QN
-                                8.00          11.97          -3.97  (VIOLATED)
-   u_fir/HFSBUF_1995_1143/Y    32.00          35.97          -3.97  (VIOLATED)
-   u_fir/intadd_123_U4/S        8.00          11.91          -3.91  (VIOLATED)
-   u_fir/delay_reg_44__15_/QN
-                                8.00          11.91          -3.91  (VIOLATED)
-   u_fir/intadd_69_U12/S        8.00          11.87          -3.87  (VIOLATED)
-   u_fir/delay_reg_9__3_/QN     8.00          11.85          -3.85  (VIOLATED)
-   U245/Y                       8.00          11.82          -3.82  (VIOLATED)
-   u_fir/delay_reg_32__4_/Q     8.00          11.82          -3.82  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF641/Y
-                               16.00          19.81          -3.81  (VIOLATED)
-   u_fir/delay_reg_10__10_/QN
-                                8.00          11.80          -3.80  (VIOLATED)
-   u_cic_u_integradores_int1_reg_9_/QN
-                                8.00          11.78          -3.78  (VIOLATED)
-   u_fir/intadd_32_U5/CO        8.00          11.77          -3.77  (VIOLATED)
-   u_fir/delay_reg_7__10_/QN
-                                8.00          11.74          -3.74  (VIOLATED)
-   u_fir/delay_reg_53__5_/QN
-                                8.00          11.65          -3.65  (VIOLATED)
-   u_cic_u_integradores_int1_reg_2_/QN
-                                8.00          11.64          -3.64  (VIOLATED)
-   intadd_2_U8/S                8.00          11.55          -3.55  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF540/Y
-                               16.00          19.54          -3.54  (VIOLATED)
-   u_fir/delay_reg_11__12_/QN
-                                8.00          11.52          -3.52  (VIOLATED)
-   u_fir/delay_reg_8__14_/QN
-                                8.00          11.51          -3.51  (VIOLATED)
-   u_fir/HFSBUF_8130_1153/Y    32.00          35.50          -3.50  (VIOLATED)
-   u_fir/delay_reg_58__10_/QN
-                                8.00          11.50          -3.50  (VIOLATED)
-   u_fir/delay_reg_11__4_/QN
-                                8.00          11.38          -3.38  (VIOLATED)
-   u_fir/delay_reg_11__10_/QN
-                                8.00          11.28          -3.28  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF397/Y
-                               16.00          19.26          -3.26  (VIOLATED)
-   u_fir/delay_reg_15__4_/QN
-                                8.00          11.11          -3.11  (VIOLATED)
-   u_fir/delay_reg_60__11_/QN
-                                8.00          11.07          -3.07  (VIOLATED)
-   u_cic_u_integradores_int1_reg_3_/QN
-                                8.00          11.04          -3.04  (VIOLATED)
-   u_fir/delay_reg_41__14_/QN
-                                8.00          11.00          -3.00  (VIOLATED)
-   u_fir/delay_reg_41__11_/QN
-                                8.00          10.90          -2.90  (VIOLATED)
-   u_fir/delay_reg_51__4_/QN
-                                8.00          10.73          -2.73  (VIOLATED)
-   u_fir/delay_reg_31__15_/QN
-                                8.00          10.68          -2.68  (VIOLATED)
-   u_fir/delay_reg_7__8_/QN     8.00          10.67          -2.67  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF292/Y
-                               16.00          18.64          -2.64  (VIOLATED)
-   u_fir/delay_reg_52__12_/QN
-                                8.00          10.61          -2.61  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF615/Y
-                               16.00          18.61          -2.61  (VIOLATED)
-   u_cic_u_integradores_int2_reg_9_/QN
-                                8.00          10.53          -2.53  (VIOLATED)
-   u_fir/intadd_60_U14/CO       8.00          10.50          -2.50  (VIOLATED)
-   u_fir/delay_reg_35__10_/Q
-                                8.00          10.50          -2.50  (VIOLATED)
-   u_fir/delay_reg_10__2_/QN
-                                8.00          10.44          -2.44  (VIOLATED)
-   u_fir/delay_reg_25__9_/QN
-                                8.00          10.39          -2.39  (VIOLATED)
-   u_fir/delay_reg_51__2_/QN
-                                8.00          10.37          -2.37  (VIOLATED)
-   u_cic_u_combs_u_comb2_y_out_reg_16_/Q
-                                8.00          10.32          -2.32  (VIOLATED)
-   u_cic_u_combs_u_comb4_x_delay_reg_8_/QN
-                                8.00          10.24          -2.24  (VIOLATED)
-   u_fir/delay_reg_10__11_/QN
-                                8.00          10.22          -2.22  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_16_/Q
-                                8.00          10.19          -2.19  (VIOLATED)
-   u_fir/delay_reg_1__13_/Q     8.00          10.19          -2.19  (VIOLATED)
-   u_cic_u_combs_u_comb3_x_delay_reg_7_/QN
-                                8.00          10.18          -2.18  (VIOLATED)
-   u_fir/delay_reg_7__11_/QN
-                                8.00          10.14          -2.14  (VIOLATED)
-   u_fir/delay_reg_24__13_/QN
-                                8.00          10.11          -2.11  (VIOLATED)
-   u_fir/delay_reg_7__13_/QN
-                                8.00          10.07          -2.07  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF164/Y
-                               16.00          18.05          -2.05  (VIOLATED)
-   u_cic_u_combs_u_comb3_x_delay_reg_16_/Q
-                                8.00          10.01          -2.01  (VIOLATED)
-   u_fir/delay_reg_33__4_/QN
-                                8.00           9.99          -1.99  (VIOLATED)
-   u_fir/delay_reg_20__9_/QN
-                                8.00           9.96          -1.96  (VIOLATED)
-   intadd_2_U11/S               8.00           9.94          -1.94  (VIOLATED)
-   u_fir/intadd_158_U5/S        8.00           9.92          -1.92  (VIOLATED)
-   u_fir/delay_reg_56__8_/QN
-                                8.00           9.84          -1.84  (VIOLATED)
-   u_fir/delay_reg_10__14_/QN
-                                8.00           9.84          -1.84  (VIOLATED)
-   u_fir/delay_reg_6__5_/QN     8.00           9.75          -1.75  (VIOLATED)
-   u_fir/delay_reg_11__1_/QN
-                                8.00           9.75          -1.75  (VIOLATED)
-   u_fir/delay_reg_4__3_/QN     8.00           9.74          -1.74  (VIOLATED)
-   u_fir/delay_reg_41__9_/QN
-                                8.00           9.74          -1.74  (VIOLATED)
-   u_fir/delay_reg_6__9_/QN     8.00           9.72          -1.72  (VIOLATED)
-   u_fir/delay_reg_19__11_/QN
-                                8.00           9.70          -1.70  (VIOLATED)
-   u_fir/delay_reg_10__3_/QN
-                                8.00           9.70          -1.70  (VIOLATED)
-   intadd_2_U14/CO              8.00           9.68          -1.68  (VIOLATED)
-   u_fir/delay_reg_62__16_/QN
-                                8.00           9.67          -1.67  (VIOLATED)
-   u_cic_u_combs_u_comb2_y_out_reg_3_/Q
-                                8.00           9.64          -1.64  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF87/Y
-                               16.00          17.62          -1.62  (VIOLATED)
-   u_fir/delay_reg_4__7_/QN     8.00           9.62          -1.62  (VIOLATED)
-   u_cic_u_integradores_int2_reg_7_/QN
-                                8.00           9.61          -1.61  (VIOLATED)
-   u_fir/delay_reg_0__3_/QN     8.00           9.59          -1.59  (VIOLATED)
-   u_fir/intadd_69_U13/CO       8.00           9.57          -1.57  (VIOLATED)
-   u_fir/HFSINV_4546_1135/Y    32.00          33.56          -1.56  (VIOLATED)
-   u_fir/delay_reg_30__12_/Q
-                                8.00           9.55          -1.55  (VIOLATED)
-   u_fir/intadd_62_U11/S        8.00           9.53          -1.53  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF668/Y
-                               16.00          17.46          -1.46  (VIOLATED)
-   u_cic_u_combs_u_comb4_x_delay_reg_2_/QN
-                                8.00           9.42          -1.42  (VIOLATED)
-   u_fir/delay_reg_59__5_/QN
-                                8.00           9.41          -1.41  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF88/Y
-                               16.00          17.39          -1.39  (VIOLATED)
-   u_cic_u_integradores_int3_reg_5_/QN
-                                8.00           9.39          -1.39  (VIOLATED)
-   u_fir/intadd_50_U13/S       16.00          17.38          -1.38  (VIOLATED)
-   u_fir/delay_reg_50__6_/QN
-                                8.00           9.36          -1.36  (VIOLATED)
-   u_cic_u_combs_u_comb3_x_delay_reg_3_/QN
-                                8.00           9.36          -1.36  (VIOLATED)
-   u_fir/delay_reg_7__9_/Q      8.00           9.35          -1.35  (VIOLATED)
-   u_fir/delay_reg_61__13_/Q
-                                8.00           9.35          -1.35  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF414/Y
-                               16.00          17.35          -1.35  (VIOLATED)
-   u_fir/HFSBUF_174_823/Y      16.00          17.30          -1.30  (VIOLATED)
-   u_fir/delay_reg_58__13_/QN
-                                8.00           9.28          -1.28  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_12_/Q
-                                8.00           9.27          -1.27  (VIOLATED)
-   u_fir/delay_reg_53__3_/QN
-                                8.00           9.26          -1.26  (VIOLATED)
-   u_fir/delay_reg_38__3_/Q     8.00           9.26          -1.26  (VIOLATED)
-   u_fir/delay_reg_27__11_/QN
-                                8.00           9.24          -1.24  (VIOLATED)
-   u_cic_u_integradores_int3_reg_2_/QN
-                                8.00           9.23          -1.23  (VIOLATED)
-   HFSBUF_4986_1070/Y          32.00          33.23          -1.23  (VIOLATED)
-   u_fir/intadd_40_U13/S        8.00           9.22          -1.22  (VIOLATED)
-   u_fir/delay_reg_5__6_/QN     8.00           9.18          -1.18  (VIOLATED)
-   u_fir/delay_reg_48__8_/QN
-                                8.00           9.18          -1.18  (VIOLATED)
-   u_fir/delay_reg_19__7_/QN
-                                8.00           9.11          -1.11  (VIOLATED)
-   u_fir/intadd_48_U13/S        8.00           9.06          -1.06  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1039/Y
-                               16.00          17.05          -1.05  (VIOLATED)
-   u_fir/delay_reg_0__6_/QN     8.00           9.04          -1.04  (VIOLATED)
-   u_fir/delay_reg_14__10_/QN
-                                8.00           9.03          -1.03  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_8_/Q
-                                8.00           9.01          -1.01  (VIOLATED)
-   u_cic_u_integradores_int2_reg_17_/QN
-                                8.00           8.97          -0.97  (VIOLATED)
-   u_fir/delay_reg_5__0_/QN     8.00           8.97          -0.97  (VIOLATED)
-   u_fir/delay_reg_62__1_/QN
-                                8.00           8.95          -0.95  (VIOLATED)
-   u_fir/delay_reg_52__2_/QN
-                                8.00           8.94          -0.94  (VIOLATED)
-   u_fir/delay_reg_33__10_/Q
-                                8.00           8.93          -0.93  (VIOLATED)
-   u_fir/delay_reg_43__11_/QN
-                                8.00           8.92          -0.92  (VIOLATED)
-   u_fir/delay_reg_54__7_/QN
-                                8.00           8.89          -0.89  (VIOLATED)
-   u_fir/delay_reg_3__10_/QN
-                                8.00           8.86          -0.86  (VIOLATED)
-   u_fir/delay_reg_50__10_/QN
-                                8.00           8.85          -0.85  (VIOLATED)
-   U545/Y                       8.00           8.85          -0.85  (VIOLATED)
-   u_fir/delay_reg_24__13_/Q
-                                8.00           8.78          -0.78  (VIOLATED)
-   u_fir/delay_reg_63__8_/Q     8.00           8.78          -0.78  (VIOLATED)
-   HFSBUF_591_1056/Y           16.00          16.76          -0.76  (VIOLATED)
-   u_fir/delay_reg_45__7_/QN
-                                8.00           8.76          -0.76  (VIOLATED)
-   u_fir/delay_reg_56__6_/QN
-                                8.00           8.74          -0.74  (VIOLATED)
-   u_fir/delay_reg_59__10_/QN
-                                8.00           8.74          -0.74  (VIOLATED)
-   u_fir/intadd_69_U12/CO       8.00           8.74          -0.74  (VIOLATED)
-   u_fir/delay_reg_0__11_/Q     8.00           8.72          -0.72  (VIOLATED)
-   u_cic_u_combs_u_comb2_y_out_reg_0_/Q
-                                8.00           8.71          -0.71  (VIOLATED)
-   u_fir/delay_reg_56__2_/QN
-                                8.00           8.68          -0.68  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_15_/Q
-                                8.00           8.66          -0.66  (VIOLATED)
-   u_fir/delay_reg_6__3_/QN     8.00           8.62          -0.62  (VIOLATED)
-   u_fir/HFSINV_9252_1189/Y    32.00          32.61          -0.61  (VIOLATED)
-   u_cic_u_integradores_int3_reg_4_/QN
-                                8.00           8.60          -0.60  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_0_/Q
-                                8.00           8.60          -0.60  (VIOLATED)
-   u_fir/delay_reg_51__9_/QN
-                                8.00           8.57          -0.57  (VIOLATED)
-   u_fir/delay_reg_42__8_/Q     8.00           8.56          -0.56  (VIOLATED)
-   u_cic_u_combs_u_comb2_y_out_reg_2_/Q
-                                8.00           8.56          -0.56  (VIOLATED)
-   u_fir/delay_reg_34__13_/Q
-                                8.00           8.51          -0.51  (VIOLATED)
-   u_fir/delay_reg_5__15_/QN
-                                8.00           8.50          -0.50  (VIOLATED)
-   u_fir/delay_reg_55__9_/Q     8.00           8.48          -0.48  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF704/Y
-                               16.00          16.46          -0.46  (VIOLATED)
-   u_fir/y_out_reg_16_/QN       8.00           8.45          -0.45  (VIOLATED)
-   u_cic_u_combs_u_comb2_y_out_reg_2_/QN
-                                8.00           8.45          -0.45  (VIOLATED)
-   u_fir/delay_reg_61__15_/Q
-                                8.00           8.44          -0.44  (VIOLATED)
-   u_fir/delay_reg_57__0_/QN
-                                8.00           8.44          -0.44  (VIOLATED)
-   u_cic_u_combs_u_comb3_x_delay_reg_3_/Q
-                                8.00           8.42          -0.42  (VIOLATED)
-   u_fir/delay_reg_52__3_/QN
-                                8.00           8.41          -0.41  (VIOLATED)
-   u_fir/intadd_31_U4/S         8.00           8.41          -0.41  (VIOLATED)
-   HFSBUF_1027_1066/Y          32.00          32.41          -0.41  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_6_/Q
-                                8.00           8.40          -0.40  (VIOLATED)
-   u_fir/delay_reg_2__12_/QN
-                                8.00           8.39          -0.39  (VIOLATED)
-   u_fir/intadd_34_U9/S         8.00           8.39          -0.39  (VIOLATED)
-   u_fir/delay_reg_4__15_/QN
-                                8.00           8.38          -0.38  (VIOLATED)
-   u_fir/delay_reg_56__7_/Q     8.00           8.37          -0.37  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF149/Y
-                               16.00          16.36          -0.36  (VIOLATED)
-   u_fir/intadd_33_U2/CO       16.00          16.36          -0.36  (VIOLATED)
-   u_fir/delay_reg_7__0_/QN     8.00           8.34          -0.34  (VIOLATED)
-   u_cic_u_combs_u_comb4_y_out_reg_14_/QN
-                                8.00           8.34          -0.34  (VIOLATED)
-   u_fir/delay_reg_30__10_/QN
-                                8.00           8.33          -0.33  (VIOLATED)
-   u_fir/delay_reg_63__7_/QN
-                                8.00           8.33          -0.33  (VIOLATED)
-   u_fir/delay_reg_30__12_/QN
-                                8.00           8.28          -0.28  (VIOLATED)
-   u_fir/delay_reg_10__0_/QN
-                                8.00           8.27          -0.27  (VIOLATED)
-   u_fir/delay_reg_3__8_/Q      8.00           8.27          -0.27  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF551/Y
-                               16.00          16.27          -0.27  (VIOLATED)
-   u_fir/delay_reg_28__13_/Q
-                                8.00           8.26          -0.26  (VIOLATED)
-   u_fir/intadd_56_U6/S         8.00           8.26          -0.26  (VIOLATED)
-   u_fir/delay_reg_1__11_/QN
-                                8.00           8.25          -0.25  (VIOLATED)
-   u_cic_u_combs_u_comb3_x_delay_reg_12_/QN
-                                8.00           8.24          -0.24  (VIOLATED)
-   u_fir/delay_reg_60__3_/QN
-                                8.00           8.24          -0.24  (VIOLATED)
-   u_fir/delay_reg_9__6_/QN     8.00           8.23          -0.23  (VIOLATED)
-   u_fir/delay_reg_60__4_/QN
-                                8.00           8.18          -0.18  (VIOLATED)
-   u_fir/delay_reg_43__14_/QN
-                                8.00           8.18          -0.18  (VIOLATED)
-   u_fir/delay_reg_49__12_/QN
-                                8.00           8.18          -0.18  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF516/Y
-                               16.00          16.17          -0.17  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF578/Y
-                               16.00          16.16          -0.16  (VIOLATED)
-   HFSBUF_684_1067/Y           16.00          16.13          -0.13  (VIOLATED)
-   u_fir/delay_reg_22__9_/Q     8.00           8.13          -0.13  (VIOLATED)
-   u_fir/HFSBUF_36591_1111/Y
-                               32.00          32.11          -0.11  (VIOLATED)
-   u_fir/delay_reg_10__13_/QN
-                                8.00           8.10          -0.10  (VIOLATED)
-   u_fir/U2149/Y                8.00           8.10          -0.10  (VIOLATED)
-   intadd_2_U16/S               8.00           8.10          -0.10  (VIOLATED)
-   u_fir/HFSINV_39_955/Y       16.00          16.10          -0.10  (VIOLATED)
-   u_cic_u_combs_u_comb3_x_delay_reg_2_/Q
-                                8.00           8.09          -0.09  (VIOLATED)
-   u_fir/intadd_31_U13/S        8.00           8.09          -0.09  (VIOLATED)
-   u_fir/intadd_40_U15/S        8.00           8.08          -0.08  (VIOLATED)
-   u_fir/intadd_20_U16/S        8.00           8.07          -0.07  (VIOLATED)
-   u_fir/HFSINV_186_303/Y       8.00           8.07          -0.07  (VIOLATED)
-   u_fir/intadd_42_U11/S        8.00           8.07          -0.07  (VIOLATED)
-   u_fir/HFSBUF_168_932/Y      16.00          16.06          -0.06  (VIOLATED)
-   HFSBUF_11_76/Y              16.00          16.06          -0.06  (VIOLATED)
-   u_fir/delay_reg_7__12_/QN
-                                8.00           8.05          -0.05  (VIOLATED)
-   u_fir/delay_reg_0__15_/QN
-                                8.00           8.05          -0.05  (VIOLATED)
-   u_fir/intadd_35_U12/S        8.00           8.03          -0.03  (VIOLATED)
-   HFSBUF_2362_1164/Y          32.00          32.02          -0.02  (VIOLATED)
-   u_cic_u_combs_u_comb2_x_delay_reg_17_/Q
-                                8.00           8.02          -0.02  (VIOLATED)
-   u_fir/intadd_39_U6/S         8.00           8.01          -0.01  (VIOLATED)
-   u_fir/delay_reg_6__7_/Q      8.00           8.01          -0.01  (VIOLATED)
-   u_fir/delay_reg_59__8_/Q     8.00           8.01          -0.01  (VIOLATED)
-   u_fir/delay_reg_24__3_/Q     8.00           8.01          -0.01  (VIOLATED)
-   u_fir/delay_reg_53__1_/QN
-                                8.00           8.00           0.00  (VIOLATED: increase significant digits)
-
-
-   max_transition
-
-                             Required        Actual
-   Pin                      Transition     Transition        Slack
-   -----------------------------------------------------------------
-   u_fir/delay_reg_9__4_/QN     0.08           0.19          -0.11  (VIOLATED)
-   u_fir/delay_reg_11__3_/QN
-                                0.08           0.18          -0.10  (VIOLATED)
-   u_fir/delay_reg_5__7_/QN     0.08           0.17          -0.10  (VIOLATED)
-   u_fir/delay_reg_57__2_/QN
-                                0.08           0.16          -0.08  (VIOLATED)
-   u_fir/delay_reg_33__9_/Q     0.05           0.12          -0.07  (VIOLATED)
-   u_fir/delay_reg_53__7_/QN
-                                0.08           0.15          -0.07  (VIOLATED)
-   u_fir/delay_reg_56__5_/QN
-                                0.08           0.15          -0.07  (VIOLATED)
-   u_fir/delay_reg_51__5_/QN
-                                0.08           0.15          -0.07  (VIOLATED)
-   u_fir/delay_reg_29__9_/Q     0.05           0.11          -0.07  (VIOLATED)
-   u_fir/delay_reg_28__3_/QN
-                                0.08           0.14          -0.07  (VIOLATED)
-   u_fir/delay_reg_51__8_/QN
-                                0.08           0.14          -0.07  (VIOLATED)
-   u_fir/delay_reg_7__9_/QN     0.08           0.14          -0.06  (VIOLATED)
-   u_fir/delay_reg_26__4_/QN
-                                0.08           0.13          -0.06  (VIOLATED)
-   u_fir/delay_reg_11__7_/QN
-                                0.08           0.13          -0.06  (VIOLATED)
-   u_fir/delay_reg_22__7_/QN
-                                0.08           0.13          -0.06  (VIOLATED)
-   u_fir/delay_reg_8__6_/QN     0.08           0.13          -0.06  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF123/Y
-                                0.04           0.10          -0.05  (VIOLATED)
-   u_fir/delay_reg_27__7_/QN
-                                0.08           0.13          -0.05  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF273/Y
-                                0.04           0.09          -0.05  (VIOLATED)
-   u_fir/delay_reg_34__5_/QN
-                                0.08           0.13          -0.05  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1021/Y
-                                0.04           0.09          -0.05  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF225/Y
-                                0.04           0.09          -0.05  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF496/Y
-                                0.04           0.09          -0.05  (VIOLATED)
-   u_fir/delay_reg_10__6_/QN
-                                0.08           0.12          -0.04  (VIOLATED)
-   u_fir/delay_reg_11__9_/QN
-                                0.08           0.12          -0.04  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF108/Y
-                                0.04           0.09          -0.04  (VIOLATED)
-   u_fir/delay_reg_22__6_/QN
-                                0.08           0.12          -0.04  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF118/Y
-                                0.04           0.09          -0.04  (VIOLATED)
-   u_fir/delay_reg_29__7_/Q     0.05           0.09          -0.04  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF110/Y
-                                0.04           0.09          -0.04  (VIOLATED)
-   u_fir/delay_reg_62__13_/QN
-                                0.08           0.12          -0.04  (VIOLATED)
-   u_fir/delay_reg_27__6_/Q     0.05           0.09          -0.04  (VIOLATED)
-   u_fir/delay_reg_33__7_/Q     0.05           0.08          -0.04  (VIOLATED)
-   u_fir/delay_reg_55__10_/QN
-                                0.08           0.12          -0.04  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF577/Y
-                                0.04           0.08          -0.04  (VIOLATED)
-   u_fir/delay_reg_52__8_/QN
-                                0.08           0.11          -0.04  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF460/Y
-                                0.04           0.08          -0.04  (VIOLATED)
-   u_fir/delay_reg_0__12_/QN
-                                0.08           0.11          -0.04  (VIOLATED)
-   u_fir/delay_reg_54__10_/QN
-                                0.08           0.11          -0.04  (VIOLATED)
-   u_fir/delay_reg_16__7_/QN
-                                0.08           0.11          -0.04  (VIOLATED)
-   u_fir/delay_reg_10__9_/QN
-                                0.08           0.11          -0.04  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF254/Y
-                                0.04           0.08          -0.04  (VIOLATED)
-   u_fir/delay_reg_35__5_/QN
-                                0.08           0.11          -0.04  (VIOLATED)
-   u_fir/delay_reg_55__11_/QN
-                                0.08           0.11          -0.03  (VIOLATED)
-   u_fir/delay_reg_59__8_/QN
-                                0.08           0.11          -0.03  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1042/Y
-                                0.04           0.07          -0.03  (VIOLATED)
-   u_cic_u_combs_u_comb4_x_delay_reg_1_/QN
-                                0.08           0.11          -0.03  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF360/Y
-                                0.04           0.07          -0.03  (VIOLATED)
-   u_cic_u_integradores_int2_reg_14_/Q
-                                0.05           0.08          -0.03  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF469/Y
-                                0.04           0.07          -0.03  (VIOLATED)
-   u_fir/delay_reg_7__2_/QN     0.08           0.11          -0.03  (VIOLATED)
-   U_PTECO_HOLD_BUF312/Y        0.04           0.07          -0.03  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF183/Y
-                                0.04           0.07          -0.03  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1035/Y
-                                0.04           0.07          -0.03  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF177/Y
-                                0.04           0.07          -0.03  (VIOLATED)
-   u_fir/delay_reg_52__11_/QN
-                                0.08           0.10          -0.03  (VIOLATED)
-   u_fir/delay_reg_58__11_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/delay_reg_11__6_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/delay_reg_51__7_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/delay_reg_62__11_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/delay_reg_0__14_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/delay_reg_55__12_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF352/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_27__10_/Q
-                                0.05           0.07          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF180/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_4__0_/QN     0.08           0.10          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1036/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_28__12_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/delay_reg_32__6_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1031/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF211/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_46__1_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/delay_reg_28__7_/QN
-                                0.08           0.10          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1024/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1027/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF581/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF125/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1030/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_44__12_/QN
-                                0.08           0.09          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF63/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF275/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_cic_u_combs_u_comb1_y_out_reg_17_/Q
-                                0.05           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF283/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_9__8_/QN     0.08           0.09          -0.02  (VIOLATED)
-   u_fir/delay_reg_35__6_/Q     0.05           0.06          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF606/Y
-                                0.04           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_30__4_/Q     0.05           0.06          -0.02  (VIOLATED)
-   u_fir/delay_reg_5__12_/QN
-                                0.08           0.09          -0.02  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF388/Y
-                                0.04           0.06          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF387/Y
-                                0.04           0.06          -0.01  (VIOLATED)
-   u_fir/delay_reg_63__15_/QN
-                                0.08           0.09          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1041/Y
-                                0.04           0.06          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF427/Y
-                                0.04           0.06          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF643/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF269/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_32__4_/Q     0.05           0.06          -0.01  (VIOLATED)
-   u_fir/delay_reg_57__11_/QN
-                                0.08           0.09          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF657/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1026/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_7__7_/QN     0.08           0.09          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF1034/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF641/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF540/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_21__1_/QN
-                                0.08           0.09          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF397/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_6__6_/QN     0.08           0.09          -0.01  (VIOLATED)
-   u_cic_u_integradores_int1_reg_8_/QN
-                                0.08           0.09          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF615/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_52__9_/QN
-                                0.08           0.09          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF292/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_6__4_/QN     0.08           0.09          -0.01  (VIOLATED)
-   u_fir/delay_reg_55__6_/QN
-                                0.08           0.08          -0.01  (VIOLATED)
-   u_fir/delay_reg_20__8_/QN
-                                0.08           0.08          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF164/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_35__10_/Q
-                                0.05           0.05          -0.01  (VIOLATED)
-   u_fir/delay_reg_38__5_/QN
-                                0.08           0.08          -0.01  (VIOLATED)
-   u_fir/delay_reg_29__0_/QN
-                                0.08           0.08          -0.01  (VIOLATED)
-   u_cic_u_combs_u_comb2_y_out_reg_16_/Q
-                                0.05           0.05          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF87/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF668/Y
-                                0.04           0.05          -0.01  (VIOLATED)
-   u_fir/U_PTECO_HOLD_BUF88/Y
-                                0.04           0.05           0.00  (VIOLATED: increase significant digits)
-   u_cic_u_combs_u_comb1_y_out_reg_16_/Q
-                                0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_1__13_/Q     0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF414/Y
-                                0.04           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF1039/Y
-                                0.04           0.05           0.00  (VIOLATED: increase significant digits)
-   u_cic_u_combs_u_comb3_x_delay_reg_16_/Q
-                                0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF704/Y
-                                0.04           0.05           0.00  (VIOLATED: increase significant digits)
-   u_cic_u_combs_u_comb2_y_out_reg_3_/Q
-                                0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF149/Y
-                                0.04           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF516/Y
-                                0.04           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF551/Y
-                                0.04           0.04           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_30__12_/Q
-                                0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF578/Y
-                                0.04           0.04           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF1040/Y
-                                0.04           0.04           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_9__7_/QN     0.08           0.08           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_7__9_/Q      0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_61__13_/Q
-                                0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_58__4_/QN
-                                0.08           0.08           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_38__3_/Q     0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_cic_u_combs_u_comb1_y_out_reg_12_/Q
-                                0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_58__14_/QN
-                                0.08           0.08           0.00  (VIOLATED: increase significant digits)
-   u_fir/U_PTECO_HOLD_BUF404/Y
-                                0.04           0.04           0.00  (VIOLATED: increase significant digits)
-   u_cic_u_combs_u_comb1_y_out_reg_8_/Q
-                                0.05           0.05           0.00  (VIOLATED: increase significant digits)
-   u_fir/delay_reg_56__12_/QN
-                                0.08           0.08           0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_3__5_/D                                    0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_24__2_/SI                                  0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_43__15_/SI                                 0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_21__16_/D                                  0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_2_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_1_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int2_reg_6_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_61__16_/D                                  0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_10_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int3_reg_13_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_61__1_/SI                                  0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_8_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_cic_u_combs_u_comb2_x_delay_reg_1_/SI                    0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int4_reg_11_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_0_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_cic_u_combs_u_comb2_y_out_reg_0_/D                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_3_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_9_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_cic_u_combs_u_comb1_x_delay_reg_17_/SI                   0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_58__8_/SI                                  0.00  (VIOLATED: increase significant digits)
+   u_cic_u_combs_u_comb1_x_delay_reg_3_/SI                    0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_14_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int4_reg_14_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int1_reg_11_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int3_reg_11_/SI                       0.00  (VIOLATED: increase significant digits)
+   u_cic_u_combs_u_comb1_x_delay_reg_9_/D                     0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_56__1_/D                                   0.00  (VIOLATED: increase significant digits)
+   u_cic_u_integradores_int2_reg_8_/SI                        0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_6__3_/SI                                   0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_39__14_/SI                                 0.00  (VIOLATED: increase significant digits)
+   u_fir/delay_reg_16__9_/SI                                  0.00  (VIOLATED: increase significant digits)
 
 
 1

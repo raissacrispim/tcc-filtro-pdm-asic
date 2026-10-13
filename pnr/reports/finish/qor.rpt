@@ -2,7 +2,7 @@
 Report : qor
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:35:09 2026
+Date   : Tue Oct 13 14:44:12 2026
 ****************************************
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
 Information: Design filtro_pdm has 13361 nets, 0 global routed, 13359 detail routed. (NEX-024)
@@ -104,27 +104,27 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            27417.31
+Combinational Area:            27416.29
 Noncombinational Area:         11509.67
-Buf/Inv Area:                   9042.44
+Buf/Inv Area:                   9041.43
 Total Buffer Area:              6773.95
-Total Inverter Area:            2268.49
+Total Inverter Area:            2267.47
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   97602.39
-Net YLength:                  134778.24
+Net XLength:                   97606.80
+Net YLength:                  134788.50
 ----------------------------------------
-Cell Area (netlist):                          38926.98
-Cell Area (netlist and physical only):        47907.16
-Net Length:                   232380.63
+Cell Area (netlist):                          38925.97
+Cell Area (netlist and physical only):        47906.14
+Net Length:                   232395.31
 
 
 Design Rules
 ----------------------------------------
 Total Number of Nets:             13361
-Nets with Violations:                 0
+Nets with Violations:                 1
 Max Trans Violations:                 0
-Max Cap Violations:                   0
+Max Cap Violations:                   1
 ----------------------------------------
 
 1

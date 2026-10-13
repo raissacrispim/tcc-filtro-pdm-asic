@@ -4,13 +4,13 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:33:26 2026
+Date   : Tue Oct 13 14:42:24 2026
 ****************************************
 
 
 
 Information: Timer using 1 threads
-Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 482 MB / Date: Tue Oct 13 14:33:27 2026
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 483 MB / Date: Tue Oct 13 14:42:24 2026
 
 Information: Corner default: no PVT mismatches. (PVT-032)
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
@@ -56,7 +56,7 @@ LLE:                                       disabled
 ML Acceleration:                           off
 Smart Arc Optimization:                    disabled
 ************************************************************
-Timing Update Completed: Mem-peak: 610 MB / Date: Tue Oct 13 14:33:32 2026
+Timing Update Completed: Mem-peak: 611 MB / Date: Tue Oct 13 14:42:30 2026
 
    Mode: default Corner: default
    Scenario: default

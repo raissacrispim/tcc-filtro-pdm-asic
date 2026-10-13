@@ -6,7 +6,7 @@ Report : timing
         -report_by design
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 14:35:11 2026
+Date   : Tue Oct 13 14:44:14 2026
 ****************************************
 
   Startpoint: u_fir/delay_reg_0__16_ (rising edge-triggered flip-flop clocked by clk)
