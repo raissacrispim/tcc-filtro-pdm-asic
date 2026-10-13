@@ -8,13 +8,13 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-                   DRC and Extraction Results: NOT CLEAN
+                     DRC and Extraction Results: CLEAN
 
-         #   #   ###   #####      ####  #      #####   ###   #   #
-         ##  #  #   #    #       #      #      #      #   #  ##  #
-         # # #  #   #    #       #      #      ####   #####  # # #
-         #  ##  #   #    #       #      #      #      #   #  #  ##
-         #   #   ###     #        ####  #####  #####  #   #  #   #
+                      ####  #      #####   ###   #   #
+                     #      #      #      #   #  ##  #
+                     #      #      ####   #####  # # #
+                     #      #      #      #   #  #  ##
+                      ####  #####  #####  #   #  #   #
 
 ===========================================================================
 
@@ -68,8 +68,8 @@ Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_detail
 LVS error file:         filtro_pdm.LVS_ERRORS
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 10:48:34AM
-Time ended:             2026/10/12 10:49:34AM
+Time started:           2026/10/13 02:36:55PM
+Time ended:             2026/10/13 02:38:02PM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -81,15 +81,9 @@ LVS Device Extraction Error Summary
 
 6 total rules were run.
 0 rules NOT EXECUTED.
-1 rule has violations.
-There is 1 total violation.
+0 rules have violations.
+There are 0 total violations.
 Refer to filtro_pdm.LAYOUT_ERRORS
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-Rule                          Violations Found
-Violation                     v = 1
-  text_net:text_short           v = 1
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -176,7 +170,7 @@ Allocated CPU Time = 0.0 CPU hours
  srv-microeletronica3 (2/64)
    Commands: 2 in parallel, maximum
    Model: 
-   CPU:   64 cpu 807 MHz
+   CPU:   64 cpu 2800 MHz
    Cores: 32 
    RAM:   251.109 GB
    Swap:  15.999 GB
@@ -186,14 +180,14 @@ Allocated CPU Time = 0.0 CPU hours
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:01:00
-Peak Single Command Memory = 0.563 GB
-Peak Disk Usage = 0.036 GB
-Network Disk Usage Peak=0.011 GB (no group)
-Group File Disk Usage Peak=0.025 GB
+IC Validator Run Time = 0:01:07
+Peak Single Command Memory = 0.520 GB
+Peak Disk Usage = 0.018 GB
+Network Disk Usage Peak=0.010 GB (no group)
+Group File Disk Usage Peak=0.008 GB
 
 Distributed Host Memory Usage
- srv-microeletronica3 (2/64)  ....  Average=0.959 GB, Peak=1.698 GB / 251.109 GB
+ srv-microeletronica3 (2/64)  ....  Average=1.376 GB, Peak=1.596 GB / 251.109 GB
 
 Overall Distributed Utilization: not available
 IC Validator is done.

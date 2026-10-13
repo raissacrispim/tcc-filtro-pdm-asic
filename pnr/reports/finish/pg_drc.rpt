@@ -1,13 +1,5 @@
-Command check_pg_drc started  at Mon Oct 12 10:46:28 2026
-Command check_pg_drc finished at Mon Oct 12 10:46:33 2026
-CPU usage for check_pg_drc: 5.09 seconds ( 0.00 hours)
-Elapsed time for check_pg_drc: 5.06 seconds ( 0.00 hours)
-Total number of errors found: 42560
-   3835 shorts on CO
-   20484 shorts on M1
-   5963 insufficient spacings on CO
-   12177 insufficient spacings on M1
-   101 minimal metal area errors on M1
-------------
-Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
-------------
+Command check_pg_drc started  at Tue Oct 13 14:35:01 2026
+Command check_pg_drc finished at Tue Oct 13 14:35:06 2026
+CPU usage for check_pg_drc: 4.69 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 4.70 seconds ( 0.00 hours)
+No errors found.

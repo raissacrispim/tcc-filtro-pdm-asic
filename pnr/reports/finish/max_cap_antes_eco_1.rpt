@@ -4,17 +4,17 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 10:37:07 2026
+Date   : Tue Oct 13 14:33:26 2026
 ****************************************
 
 
 
 Information: Timer using 1 threads
-Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 482 MB / Date: Mon Oct 12 10:37:07 2026
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 482 MB / Date: Tue Oct 13 14:33:27 2026
 
 Information: Corner default: no PVT mismatches. (PVT-032)
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
-Information: Design filtro_pdm has 12045 nets, 0 global routed, 12043 detail routed. (NEX-024)
+Information: Design filtro_pdm has 13359 nets, 0 global routed, 13357 detail routed. (NEX-024)
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 ---extraction options---
 Corner: default
@@ -32,7 +32,7 @@ Global options:
  extract.enable_coupling_cap    : false
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 12043 nets are successfully extracted. (NEX-028)
+Information: 13357 nets are successfully extracted. (NEX-028)
 Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
 Information: Activity propagation will be performed for scenario default.
 Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
@@ -41,8 +41,8 @@ Information: Running switching activity propagation in scalar mode!
 
  **** Information : No. of simulation cycles = 6 ****
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 12043, routed nets = 12043, across physical hierarchy nets = 0, parasitics cached nets = 12043, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
-[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[8131]
+Information: Net estimation statistics: timing graph nets = 13357, routed nets = 13357, across physical hierarchy nets = 0, parasitics cached nets = 13357, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[9445]
 ************************************************************
 Timer Settings:
 Delay Calculation Style:                   auto
@@ -56,7 +56,7 @@ LLE:                                       disabled
 ML Acceleration:                           off
 Smart Arc Optimization:                    disabled
 ************************************************************
-Timing Update Completed: Mem-peak: 594 MB / Date: Mon Oct 12 10:37:12 2026
+Timing Update Completed: Mem-peak: 610 MB / Date: Tue Oct 13 14:33:32 2026
 
    Mode: default Corner: default
    Scenario: default
@@ -64,51 +64,64 @@ Timing Update Completed: Mem-peak: 594 MB / Date: Mon Oct 12 10:37:12 2026
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/HFSNET_518             8.00           8.10          -0.10  (VIOLATED) 
-     PIN : u_fir/HFSINV_188_527/Y
+   u_fir/HFSNET_1060           32.00          33.43          -1.43  (VIOLATED) 
+     PIN : u_fir/HFSBUF_13667_1092/Y
+                               32.00          33.43          -1.43  (VIOLATED) 
+
+   HFSNET_29                   32.00          32.80          -0.80  (VIOLATED) 
+     PIN : HFSBUF_620_1157/Y
+                               32.00          32.80          -0.80  (VIOLATED) 
+
+   u_fir/HFSNET_1075           32.00          32.52          -0.52  (VIOLATED) 
+     PIN : u_fir/HFSBUF_33480_1107/Y
+                               32.00          32.52          -0.52  (VIOLATED) 
+
+   u_fir/ZCTSNET_19            32.00          32.39          -0.39  (VIOLATED) 
+     PIN : u_fir/ZCTSINV_39340_1956/Y
+                               32.00          32.39          -0.39  (VIOLATED) 
+
+   u_fir/ropt_net_1724         16.00          16.10          -0.10  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4134/Y
+                               16.00          16.10          -0.10  (VIOLATED) 
+
+   u_fir/intadd_71_SUM_4_       8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_fir/intadd_71_U10/S
                                 8.00           8.10          -0.10  (VIOLATED) 
 
-   u_fir/HFSNET_806            16.00          16.07          -0.07  (VIOLATED) 
-     PIN : u_fir/HFSBUF_332_817/Y
-                               16.00          16.07          -0.07  (VIOLATED) 
+   u_fir/intadd_12_A_1_        16.00          16.06          -0.06  (VIOLATED) 
+     PIN : u_fir/intadd_52_U17/S
+                               16.00          16.06          -0.06  (VIOLATED) 
 
-   u_fir/HFSNET_458             8.00           8.06          -0.06  (VIOLATED) 
-     PIN : u_fir/HFSINV_205_467/Y
+   u_fir/intadd_91_n9           8.00           8.06          -0.06  (VIOLATED) 
+     PIN : u_fir/intadd_91_U10/CO
                                 8.00           8.06          -0.06  (VIOLATED) 
 
-   u_fir/HFSNET_1146           16.00          16.05          -0.05  (VIOLATED) 
-     PIN : u_fir/HFSINV_9809_1184/Y
+   u_fir/HFSNET_616            16.00          16.05          -0.05  (VIOLATED) 
+     PIN : u_fir/HFSINV_130_625/Y
                                16.00          16.05          -0.05  (VIOLATED) 
 
-   u_fir/ropt_net_65           16.00          16.05          -0.05  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_2282/Y
-                               16.00          16.05          -0.05  (VIOLATED) 
+   u_fir/HFSNET_3               8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_fir/ctmTdsLR_1_2320/Y
+                                8.00           8.04          -0.04  (VIOLATED) 
 
-   u_fir/intadd_28_A_12_       16.00          16.05          -0.05  (VIOLATED) 
-     PIN : u_fir/intadd_54_U5/S
-                               16.00          16.05          -0.05  (VIOLATED) 
+   u_fir/ropt_net_1733         16.00          16.04          -0.04  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4143/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
 
-   u_fir/delay_31__11_          8.00           8.05          -0.05  (VIOLATED) 
-     PIN : u_fir/delay_reg_31__11_/Q
-                                8.00           8.05          -0.05  (VIOLATED) 
+   u_fir/HFSNET_750             8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSINV_211_761/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
 
-   u_fir/HFSNET_808            16.00          16.03          -0.03  (VIOLATED) 
-     PIN : u_fir/HFSBUF_217_819/Y
-                               16.00          16.03          -0.03  (VIOLATED) 
+   u_fir/HFSNET_291             8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSINV_153_299/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
 
-   u_fir/ropt_net_66           16.00          16.03          -0.03  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_2283/Y
-                               16.00          16.03          -0.03  (VIOLATED) 
-
-   u_fir/ropt_net_79           16.00          16.01          -0.01  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_2296/Y
+   u_fir/HFSNET_914            16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSINV_133_925/Y
                                16.00          16.01          -0.01  (VIOLATED) 
 
-   u_fir/intadd_157_A_1_        8.00           8.01          -0.01  (VIOLATED) 
-     PIN : u_fir/U2334/Y        8.00           8.01          -0.01  (VIOLATED) 
-
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 11
+   Number of max_capacitance violation(s): 14
 
-   Total number of violation(s): 11
+   Total number of violation(s): 14
 1

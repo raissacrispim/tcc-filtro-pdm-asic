@@ -4,17 +4,17 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 10:37:40 2026
+Date   : Tue Oct 13 14:34:06 2026
 ****************************************
 
 
 
 Information: Deserialized np data
-INFO: timer data loaded from /tmp/filtro_pdm_4051670_590831820.timdat
+INFO: timer data loaded from /tmp/filtro_pdm_1709543_596807884.timdat
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 12044 nets are successfully extracted. (NEX-028)
+Information: 13358 nets are successfully extracted. (NEX-028)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
    Mode: default Corner: default
@@ -23,16 +23,20 @@ Information: Activity for scenario default was cached, no propagation required. 
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/HFSNET_518             8.00           8.10          -0.10  (VIOLATED) 
-     PIN : u_fir/HFSINV_188_527/Y
-                                8.00           8.10          -0.10  (VIOLATED) 
+   u_fir/intadd_11_A_1_        16.00          16.77          -0.77  (VIOLATED) 
+     PIN : u_fir/intadd_62_U17/S
+                               16.00          16.77          -0.77  (VIOLATED) 
 
-   u_fir/HFSNET_458             8.00           8.06          -0.06  (VIOLATED) 
-     PIN : u_fir/HFSINV_205_467/Y
-                                8.00           8.06          -0.06  (VIOLATED) 
+   u_fir/HFSNET_750             8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSINV_211_761/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
+
+   u_fir/HFSNET_291             8.00           8.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSINV_153_299/Y
+                                8.00           8.01          -0.01  (VIOLATED) 
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 2
+   Number of max_capacitance violation(s): 3
 
-   Total number of violation(s): 2
+   Total number of violation(s): 3
 1

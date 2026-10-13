@@ -2,7 +2,7 @@
 #
 # Design name:  filtro_pdm
 #
-# Created by fc write_sdc on Mon Oct 12 10:46:42 2026
+# Created by fc write_sdc on Tue Oct 13 14:35:15 2026
 #
 ################################################################################
 
@@ -58,9 +58,9 @@ set_voltage 0 -object_list {VSS}
 
 # Set latency for io paths.
 # -origin useful_skew
-set_clock_latency -min 0.125399 [get_clocks {clk}]
+set_clock_latency -min 0.174951 [get_clocks {clk}]
 # -origin useful_skew
-set_clock_latency -max 0.156089 [get_clocks {clk}]
+set_clock_latency -max 0.20564 [get_clocks {clk}]
 # Set propagated on clock sources to avoid removing latency for IO paths.
 set_propagated_clock  [get_ports {clk}]
 set_clock_uncertainty -setup 1 [get_clocks {clk}]

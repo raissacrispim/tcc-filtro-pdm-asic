@@ -13,8 +13,8 @@ PDC app_options settings =========
 	place.legalize.preroute_shape_merge_distance: 0.0
 	place.legalize.enable_non_preferred_direction_span_check: 0
 
-Layer M1: cached 0 shapes out of 421 total shapes.
-Cached 1442 vias out of 101771 total vias.
+Layer M1: cached 0 shapes out of 328 total shapes.
+Cached 1442 vias out of 86568 total vias.
 
 check_legality for block design filtro_pdm ... 
 Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
@@ -33,7 +33,7 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.1150 seconds to build cellmap data
+Total 0.1130 seconds to build cellmap data
 Information: Creating classic rule checker.
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
 =====> Processed 64 ref cells (8 fillers) from library
@@ -53,26 +53,26 @@ Checking packing rule legality.
 
 VIOLATIONS BY CATEGORY:
    MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
-       436          0          0  Two objects overlap.
+         1          0          0  Two objects overlap.
          0          0          0  A cell violates a pnet.
          0          0          0  A cell is illegal at a site.
-       161          0          0  A cell is not aligned with a site.
+         0          0          0  A cell is not aligned with a site.
          0          0          0  A cell has an illegal orientation.
          0          0          0  A cell spacing rule is violated.
          0          0          0  A layer rule is violated.
-         6          0          0  A cell is in the wrong region.
+         0          0          0  A cell is in the wrong region.
          0          0          0  Two cells violate cts margins.
          0          0          0  Two cells violate coloring.
 
-       603          0          0  TOTAL
+         1          0          0  TOTAL
 
-TOTAL 603 Violations.
+TOTAL 1 Violations.
 
 VIOLATIONS BY SUBCATEGORY:
      MOVABLE  APP-FIXED USER-FIXED  DESCRIPTION
 
-       436          0          0    Two objects overlap.
-         436          0          0    Two cells overlap.
+         1          0          0    Two objects overlap.
+           1          0          0    Two cells overlap.
            0          0          0    Two cells have overlapping keepout margins.
            0          0          0    A cell overlaps a blockage.
            0          0          0    A cell keepout margin overlaps a blockage.
@@ -85,8 +85,8 @@ VIOLATIONS BY SUBCATEGORY:
            0          0          0    A cell violates legal index rule.
            0          0          0    A cell has the wrong variant for its location.
 
-       161          0          0    A cell is not aligned with a site.
-         161          0          0    A cell is not aligned with the base site.
+         0          0          0    A cell is not aligned with a site.
+           0          0          0    A cell is not aligned with the base site.
            0          0          0    A cell is not aligned with an overlaid site.
 
          0          0          0    A cell has an illegal orientation.
@@ -106,9 +106,9 @@ VIOLATIONS BY SUBCATEGORY:
            0          0          0    A layer TPO rule is violated.
            0          0          0    Filler cell insertion cannot satisfy layer rules.
 
-         6          0          0    A cell is in the wrong region.
+         0          0          0    A cell is in the wrong region.
            0          0          0    A cell is outside its hard bound.
-           6          0          0    A cell is in the wrong voltage area.
+           0          0          0    A cell is in the wrong voltage area.
            0          0          0    A cell violates an exclusive movebound.
 
          0          0          0    Two cells violate cts margins.

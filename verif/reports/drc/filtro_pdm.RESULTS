@@ -46,8 +46,8 @@ Working directory:      /home/raissa.crispim/tcc_filtro/verif/run_drc
 Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_drc/run_details
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/12 10:47:17AM
-Time ended:             2026/10/12 10:48:05AM
+Time started:           2026/10/13 02:35:35PM
+Time ended:             2026/10/13 02:36:14PM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -59,81 +59,19 @@ Rule and DRC Error Summary
 
 396 total rules were run.
 0 rules NOT EXECUTED.
-60 rules have violations.
-There are 473515 total violations.
+6 rules have violations.
+There are 24 total violations.
 Refer to filtro_pdm.LAYOUT_ERRORS
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Rule                                                       Violations Found
-CO.B.2                                                     v = 18804
-CO.E.10                                                    v = 681
-CO.E.1                                                     v = 2496
-CO.E.6                                                     v = 979
-CO.E.7/CO.E.12                                             v = 92
-CO.E.8                                                     v = 8
-CO.S.1                                                     v = 23439
-CO.S.2                                                     v = 50
-CO.S.3                                                     v = 83114
-CO.S.3                                                     v = 38
-CO.S.4                                                     v = 76618
-CO.S.6                                                     v = 69
-CO.W.1                                                     v = 4510
-DIFF.A.2 DIFF minimum enclosed area must be 0.03           v = 729
-DIFF.E.1 Source/Drain N+active to Pwell edge ( min         v = 1460
-enclosure by well ) must be 0.065
-DIFF.E.1 Source/Drain P+active to Nwell edge ( min         v = 3657
-enclosure by well ) must be 0.065
-DIFF.E.2 NTAP minimum enclosure by NWELL must be 0.07      v = 4567
-DIFF.E.2 PTAP minimum enclosure by PWELL must be 0.07      v = 164
-DIFF.S.1 Minimum spacing must be 0.05                      v = 4047
-DIFF.S.2 Mimimum spacing must be 0.07 when width >= 0.1    v = 2264
-DIFF.W.1 Minimum width must be 0.044                       v = 556
-DIFF.W.2 Minimum space when span on at least one side is   v = 1287
-> 0.09 (for run length > 0.1) must be 0.055
-DIFF.W.3 Minimum space when span on at least one side is   v = 1157
-> 0.15 (for run length > 0.1) must be 0.065
-DIFF.W.4 Channel width range must be [0.1,3.5]             v = 24896
-M1.A.2                                                     v = 10099
-M1.S.1                                                     v = 23742
-M1.S.2                                                     v = 138
-M1.S.9                                                     v = 725
-M1.W.1                                                     v = 548
-M1.W.2.1                                                   v = 549
-M2.S.1                                                     v = 9
-NIMP.E.1 Enclosure of N+Active must be 0.05                v = 2
-NIMP.E.2 Enclosure of NTAP must be 0.02                    v = 2925
-NIMP.O.1 Minimum active overlap must be 0.05               v = 178
-NIMP.S.1 Minimum space is 0.102                            v = 15
-NIMP.S.2                                                   v = 3134
-NIMP.S.3 Minimum spacing to P+Active in N_Well must be     v = 25020
-0.05
-NIMP.W.1 Minimum width must be 0.102                       v = 8
-NWELL.A.2 Mimimum Enclosed area must be 0.45               v = 13
-NWELL.S.1                                                  v = 524
-NWELL.S.2                                                  v = 18
-PIMP.E.1 Enclosure of P+Active must be 0.05                v = 5812
-PIMP.E.2 Enclosure of PTAP must be 0.02                    v = 17
-PIMP.O.1 Minimum active overlap must be 0.05               v = 402
-PIMP.S.1 Minimum space must be 0.102                       v = 88
-PIMP.S.2 Overlap of NIMP and PIMP is not allowed           v = 514
-PIMP.S.3 Minimum spacing to N+Active in P_Well must be     v = 46
-0.05
-PO exact channel length                                    v = 183
-PO.EX.1                                                    v = 787
-PO.EX.2                                                    v = 2
-PO.EX.3                                                    v = 1527
-PO.EX.6 Minimun Active extension of gate must be 0.085     v = 25925
-PO.G.1 45 and 90 degree gate benting is not allowed        v = 9447
-PO.S Exact PO center to center space when gate width =     v = 1638
-0.03, must be 0.152
-PO.S.1                                                     v = 18203
-PO.S.2                                                     v = 59776
-PO.S.5                                                     v = 16061
-PO.S.6                                                     v = 1431
-R.PIMP.S.2                                                 v = 3134
-Violation                                                  v = 5193
-  copy                                                       v = 5193
+Rule                          Violations Found
+CO.S.1                        v = 5
+CO.S.4                        v = 3
+CO.W.1                        v = 5
+M1.S.1                        v = 6
+M1.W.1                        v = 4
+M1.W.2.1                      v = 1
 
 
 ---------------------------------------------------------------------------
@@ -199,9 +137,9 @@ Distributed Processing
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:00:47
-Peak Single Command Memory = 0.134 GB
+IC Validator Run Time = 0:00:38
+Peak Single Command Memory = 0.122 GB
 
 Distributed Host Memory Usage
-srv-microeletronica3 (2/2)  ....  Average=0.756 GB, Peak=0.838 GB / 251.112 GB
+srv-microeletronica3 (2/2)  ....  Average=0.674 GB, Peak=0.783 GB / 251.112 GB
 IC Validator is done.

@@ -2,7 +2,7 @@
 Report : qor
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:49:56 2026
+Date   : Tue Oct 13 14:32:51 2026
 ****************************************
 
 
@@ -10,8 +10,8 @@ Scenario           'default'
 Timing Path Group  '**in2reg_default**'
 ----------------------------------------
 Levels of Logic:                     25
-Critical Path Length:            147.10
-Critical Path Slack:              60.07
+Critical Path Length:            147.17
+Critical Path Slack:              59.95
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -23,9 +23,9 @@ No. of Hold Violations:               0
 Scenario           'default'
 Timing Path Group  '**reg2out_default**'
 ----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.24
-Critical Path Slack:             187.10
+Levels of Logic:                      2
+Critical Path Length:              0.42
+Critical Path Slack:             186.92
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -37,27 +37,27 @@ No. of Hold Violations:               0
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                     60
-Critical Path Length:              5.35
-Critical Path Slack:             201.81
+Levels of Logic:                     61
+Critical Path Length:              5.28
+Critical Path Slack:             201.94
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
+Worst Hold Violation:             -0.07
+Total Hold Violation:             -2.48
+No. of Hold Violations:              72
 ----------------------------------------
 
 
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:              1
-Hierarchical Port Count:            142
-Leaf Cell Count:                   8131
-Buf/Inv Cell Count:                1994
-Buf Cell Count:                     345
-Inv Cell Count:                    1649
-Combinational Cell Count:          6799
+Hierarchical Port Count:            146
+Leaf Cell Count:                   9445
+Buf/Inv Cell Count:                3308
+Buf Cell Count:                    1661
+Inv Cell Count:                    1647
+Combinational Cell Count:          8113
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -80,27 +80,27 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            21476.69
+Combinational Area:            27403.59
 Noncombinational Area:         11509.67
-Buf/Inv Area:                   3086.07
-Total Buffer Area:               821.90
-Total Inverter Area:            2264.17
+Buf/Inv Area:                   9029.99
+Total Buffer Area:              6764.04
+Total Inverter Area:            2265.95
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   95229.43
-Net YLength:                  130934.31
+Net XLength:                   97607.59
+Net YLength:                  134670.99
 ----------------------------------------
-Cell Area (netlist):                          32986.37
-Cell Area (netlist and physical only):        32986.37
-Net Length:                   226163.75
+Cell Area (netlist):                          38913.26
+Cell Area (netlist and physical only):        38913.26
+Net Length:                   232278.58
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             12045
-Nets with Violations:                11
+Total Number of Nets:             13359
+Nets with Violations:                14
 Max Trans Violations:                 0
-Max Cap Violations:                  11
+Max Cap Violations:                  14
 ----------------------------------------
 
 1

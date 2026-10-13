@@ -2,7 +2,7 @@
 Report : qor
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Mon Oct 12 09:47:19 2026
+Date   : Tue Oct 13 09:22:25 2026
 ****************************************
 
 
@@ -10,8 +10,8 @@ Scenario           'default'
 Timing Path Group  '**in2reg_default**'
 ----------------------------------------
 Levels of Logic:                     25
-Critical Path Length:            147.10
-Critical Path Slack:              60.08
+Critical Path Length:            147.13
+Critical Path Slack:              59.99
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -23,41 +23,41 @@ No. of Hold Violations:               0
 Scenario           'default'
 Timing Path Group  '**reg2out_default**'
 ----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.24
-Critical Path Slack:             187.11
+Levels of Logic:                      2
+Critical Path Length:              0.43
+Critical Path Slack:             186.92
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
+Worst Hold Violation:             -0.00
+Total Hold Violation:             -0.00
+No. of Hold Violations:               1
 ----------------------------------------
 
 Scenario           'default'
 Timing Path Group  'clk'
 ----------------------------------------
-Levels of Logic:                     59
-Critical Path Length:              5.22
-Critical Path Slack:             201.95
+Levels of Logic:                     60
+Critical Path Length:              5.21
+Critical Path Slack:             202.02
 Critical Path Clk Period:        208.33
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
+Worst Hold Violation:             -0.07
+Total Hold Violation:             -3.17
+No. of Hold Violations:              99
 ----------------------------------------
 
 
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:              1
-Hierarchical Port Count:            142
-Leaf Cell Count:                   8100
-Buf/Inv Cell Count:                1963
-Buf Cell Count:                     314
-Inv Cell Count:                    1649
-Combinational Cell Count:          6768
+Hierarchical Port Count:            146
+Leaf Cell Count:                   9419
+Buf/Inv Cell Count:                3282
+Buf Cell Count:                    1635
+Inv Cell Count:                    1647
+Combinational Cell Count:          8087
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -80,27 +80,27 @@ Macro Count:                          0
 
 Area
 ----------------------------------------
-Combinational Area:            21427.39
+Combinational Area:            27309.30
 Noncombinational Area:         11509.67
-Buf/Inv Area:                   3010.84
-Total Buffer Area:               749.72
-Total Inverter Area:            2261.12
+Buf/Inv Area:                   8906.22
+Total Buffer Area:              6646.12
+Total Inverter Area:            2260.10
 Macro/Black Box Area:              0.00
 Net Area:                             0
-Net XLength:                   93605.28
-Net YLength:                  130249.66
+Net XLength:                   95799.86
+Net YLength:                  134081.84
 ----------------------------------------
-Cell Area (netlist):                          32937.06
-Cell Area (netlist and physical only):        32937.06
-Net Length:                   223854.94
+Cell Area (netlist):                          38818.97
+Cell Area (netlist and physical only):        38818.97
+Net Length:                   229881.70
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             12014
-Nets with Violations:                 3
+Total Number of Nets:             13333
+Nets with Violations:                 1
 Max Trans Violations:                 0
-Max Cap Violations:                   3
+Max Cap Violations:                   1
 ----------------------------------------
 
 1

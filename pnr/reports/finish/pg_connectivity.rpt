@@ -3,7 +3,7 @@ Secondary net will be checked together from primary net. They will be treated as
 Primary Net : VDD    Secondary Net:
 Primary Net : VSS    Secondary Net:
 Loading cell instances...
-Number of Standard Cells: 23651
+Number of Standard Cells: 22669
 Number of Macro Cells: 0
 Number of IO Pad Cells: 0
 Number of Blocks: 0
@@ -14,7 +14,7 @@ Number of VDD Terminals: 1
 **************Verify net VDD connectivity*****************
   Number of floating wires: 0
   Number of floating vias: 0
-  Number of floating std cells: 82
+  Number of floating std cells: 0
   Number of floating hard macros: 0
   Number of floating I/O pads: 0
   Number of floating terminals: 0
@@ -28,7 +28,7 @@ Number of VSS Terminals: 1
 **************Verify net VSS connectivity*****************
   Number of floating wires: 0
   Number of floating vias: 0
-  Number of floating std cells: 69
+  Number of floating std cells: 0
   Number of floating hard macros: 0
   Number of floating I/O pads: 0
   Number of floating terminals: 0
