@@ -315,6 +315,40 @@ def gerar_pdm_50k_interferencia_130k():
     return sigma_delta_1bit(sinal)
 
 
+def gerar_pdm_varredura():
+    """
+    Varredura de frequencia (chirp linear) de 0 a 150 kHz em 2 ms.
+
+    Como a frequencia cresce linearmente com o tempo, a envoltoria
+    da saida no simulador e a propria resposta em frequencia do
+    filtro: f(t) = 75 kHz/ms * t. Faixa de passagem ate 80 kHz
+    (t ~ 1,07 ms) e rejeicao a partir de 110 kHz (t ~ 1,47 ms).
+    """
+
+    t = eixo_tempo()
+
+    f_final = 150e3
+    duracao = 0.002
+    fase = 2 * np.pi * (f_final / (2 * duracao)) * t ** 2
+
+    return sigma_delta_1bit(0.7 * np.sin(fase))
+
+
+def gerar_pdm_impulso():
+    """
+    Impulso: sequencia 0101... (media zero, frequencia de 2,4 MHz,
+    anulada pelo CIC) com um unico bit invertido.
+
+    A saida e a resposta ao impulso do CIC + FIR; a FFT dessa
+    saida no simulador e a resposta em frequencia em dB.
+    """
+
+    pdm = np.tile(np.array([0, 1], dtype=np.int8), N_PDM // 2)
+    pdm[3200] ^= 1
+
+    return pdm
+
+
 def gerar_pdm_fundo_escala():
     """
     Teste de fundo de escala: blocos de 2400 bits alternando
@@ -345,6 +379,8 @@ def gerar_testes():
         "test_06_burst_50k_ruido": gerar_pdm_burst(),
         "test_07_fundo_escala": gerar_pdm_fundo_escala(),
         "test_08_50k_interf_130k": gerar_pdm_50k_interferencia_130k(),
+        "test_09_varredura": gerar_pdm_varredura(),
+        "test_10_impulso": gerar_pdm_impulso(),
     }
 
 
