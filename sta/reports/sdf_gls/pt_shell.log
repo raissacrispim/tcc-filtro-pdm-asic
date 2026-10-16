@@ -1,0 +1,130 @@
+
+                                 PrimeTime (R)
+
+               Version X-2025.06-SP2 for linux64 - Oct 17, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+# ============================================================
+# write_sdf_gls.tcl
+# SDF para a simulacao pos-layout (VCS)
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys PrimeTime
+# Tecnologia: SAED32 RVT
+#
+# Chamado por sta/scripts/run_sdf_gls.sh.
+#
+# Por que o SDF vem do PrimeTime e nao do write_sdf do FC
+# (docs/auditoria_sdf.md):
+#
+# 1. O FC escreve os bits das portas de barramento como
+#    identificadores escapados (y_out\[18\]). Para o VCS isso e
+#    um nome escalar, inexistente na netlist, que declara o
+#    barramento y_out[18:0]: 19 erros SDFCOM_PONF e as
+#    interconexoes dessas portas nao sao anotadas. O write_sdf
+#    do FC nao tem opcao para mudar esse formato; no PrimeTime,
+#    -context verilog escreve y_out[18] (bit do barramento).
+# 2. O FC grava 2 casas decimais (10 ps): 24.705 das 24.911
+#    interconexoes viram 0,00. Aqui sao 3 casas (1 ps).
+# 3. SETUPHOLD/RECREM correspondem as verificacoes $setuphold e
+#    $recrem dos modelos Verilog da SAED32.
+#
+# Mesmo corner e parasitas do SDF do FC: tt0p85v25c, Cmax.
+# O SDC do FC deixa o clock dos registradores propagado
+# (set_propagated_clock na porta clk); o aviso UITE-305 refere-se
+# apenas a latencia de E/S do objeto clock e nao altera o SDF.
+#
+# As interconexoes das 21 portas de saida (ate 0,004 ns) nao sao
+# escritas (padrao do PrimeTime): o VCS nao as anota como
+# interconexao na fronteira do DUT (SDFCOM_UHICD). Para inclui-las
+# use SDF_SAIDAS=1 em run_sdf_gls.sh.
+# ============================================================
+set DB_DIR /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+set REP    sta/reports/sdf_gls
+sta/reports/sdf_gls
+set SDF    pnr/output/filtro_pdm_pnr_pt.sdf
+pnr/output/filtro_pdm_pnr_pt.sdf
+file mkdir $REP
+set_app_var search_path [list . $DB_DIR]
+. /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+set_app_var link_path   [list * saed32rvt_tt0p85v25c.db]
+* saed32rvt_tt0p85v25c.db
+read_verilog pnr/output/filtro_pdm_pnr.v
+1
+current_design filtro_pdm
+Information: current_design won't return any data before link (DES-071)
+link_design
+Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.v'
+Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
+Linking design filtro_pdm...
+Information: Removing 1 unneeded designs..... (LNK-034)
+Information: 235 (79.93%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
+Information: total 235 library cells are unused (LNK-046)
+Design 'filtro_pdm' was successfully linked.
+Information: There are 9960 leaf cells, ports, hiers and 14206 nets in the design (LNK-047)
+1
+read_parasitics -format SPEF pnr/output/filtro_pdm.Cmax_25.spef
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+Information: read_parasitics command is executed in background
+1
+read_sdc pnr/output/filtro_pdm_pnr.sdc
+
+Reading SDC version 2.2...
+Warning: Nothing implicitly matched 'VDD' (SEL-003)
+Warning: Nothing implicitly matched 'VSS' (SEL-003)
+Warning: Converting a propagated clock 'clk' to an ideal clock. (UITE-305)
+1
+1
+update_timing -full
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Information: Building multi voltage information for entire design. (MV-022)
+1
+report_annotated_parasitics > $REP/parasitas.rpt
+report_annotated_parasitics -list_not_annotated -max_nets 1000     > $REP/nao_anotadas.rpt
+set OPCOES [list -version 3.0 -context verilog -significant_digits 3                  -include {SETUPHOLD RECREM} -input_port_nets]
+-version 3.0 -context verilog -significant_digits 3 -include {SETUPHOLD RECREM} -input_port_nets
+if {[info exists env(SDF_SAIDAS)] && $env(SDF_SAIDAS) eq "1"} {
+    lappend OPCOES -output_port_nets
+}
+write_sdf {*}$OPCOES $SDF
+****************************************
+Report : write_sdf pnr/output/filtro_pdm_pnr_pt.sdf
+	-input_port_nets
+	-include { SETUPHOLD RECREM }
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Fri Oct 16 15:16:11 2026
+****************************************
+
+1
+puts "SDF para simulacao: $SDF"
+SDF para simulacao: pnr/output/filtro_pdm_pnr_pt.sdf
+exit
+Information: Defining new variable 'DB_DIR'. (CMD-041)
+Information: Defining new variable 'OPCOES'. (CMD-041)
+Information: Defining new variable 'REP'. (CMD-041)
+Information: Defining new variable 'SDF'. (CMD-041)
+
+Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 2874.46 MB
+CPU usage for this session: 14 seconds 
+Elapsed time for this session: 10 seconds
+Diagnostics summary: 3 warnings, 13 informationals
+
+Thank you for using pt_shell!
