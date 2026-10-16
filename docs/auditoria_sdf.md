@@ -124,6 +124,20 @@ Com o SDF correto: 0 violações e teste aprovado. Isso mostra que as verificaç
 - 10/10 testes aprovados com o SDF do PT, sem nenhuma `Timing violation`.
 - As 10 saídas `*_output_rtl.txt` são idênticas (`cmp`) às da execução anterior, que foi preservada antes da auditoria em `~/evidencias_sdf_20261016_1448` com `SHA256SUMS`.
 
+### Execução pelo fluxo do repositório
+
+Os comandos `sta/scripts/run_sdf_gls.sh`, `sim/scripts/compile_gls.sh pnr sdf` e `sim/scripts/run_gls_regression.sh` foram executados na raiz do repositório:
+
+- **Anotação:** `Total errors: 0`, `Total warnings: 0`.
+- **Regressão:** 10/10 aprovados, e as 10 saídas são idênticas às preservadas.
+- **Ordem dos blocos:** o PrimeTime não escreve os blocos `CELL` sempre na mesma ordem, por isso o `diff` linha a linha contra o SDF validado mostra apenas blocos trocados de posição. A igualdade de conteúdo é verificada com `sim/auditoria_sdf/mesmo_conteudo_sdf.py`, que compara os blocos independentemente da ordem e o cabeçalho sem a data.
+
+### Variante com portas de saída (`SDF_SAIDAS=1`)
+
+- **21 SDFCOM_UHICD:** um por porta de saída. O VCS aplica o atraso na saída da célula que dirige a porta; isso foi comprovado na reprodução mínima.
+- **1 SDFCOM_IWSBA:** ocorre na interconexão `copt_h_inst_2391.Y → y_out`. Na netlist, essa célula dirige `scan_out`, e `y_out[18]` é ligado a ela por `assign y_out[18] = scan_out;`. O VCS informa que a interconexão "will still be annotated" (ainda será anotada).
+- **Por que essa variante não é a padrão:** os dois avisos se referem a atrasos de no máximo 0,004 ns. Para manter a anotação sem avisos, ela não é usada por padrão.
+
 ## Como reproduzir
 
 Fluxo (a partir da raiz, após `finish.tcl`):
@@ -143,6 +157,7 @@ cp -r tb vectors $R/; cp pnr/output/filtro_pdm_pnr.v $R/netlist/
 rm -f $R/vectors/*_output_rtl.txt
 A=sim/auditoria_sdf
 python3 $A/compara_sdf.py pnr/output/filtro_pdm_pnr.sdf pnr/output/filtro_pdm_pnr_pt.sdf
+python3 $A/mesmo_conteudo_sdf.py pnr/output/filtro_pdm_pnr_pt.sdf outro.sdf   # mesmo conteúdo?
 python3 $A/hold_inflado.py pnr/output/filtro_pdm_pnr_pt.sdf $R/neg.sdf u_cic_u_integradores_int3_reg_0_
 $A/compila_teste.sh sim_fc  pnr/output/filtro_pdm_pnr.sdf
 $A/compila_teste.sh sim_pt  pnr/output/filtro_pdm_pnr_pt.sdf
