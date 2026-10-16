@@ -10,6 +10,12 @@
 #   sim/scripts/compile_gls.sh pnr             # netlist pos-layout
 #   sim/scripts/compile_gls.sh pnr sdf         # pos-layout com SDF
 #   sim/scripts/compile_gls.sh pnr sdf saif    # idem, gravando SAIF
+#   sim/scripts/compile_gls.sh pnr sdf_fc      # SDF do Fusion Compiler
+#
+# SDF pos-layout: gerado pelo PrimeTime (sta/scripts/run_sdf_gls.sh).
+# O SDF do write_sdf do FC (sdf_fc) e mantido so para comparacao:
+# ele escapa os bits das portas de barramento (y_out\[18\]),
+# o que gera 19 erros SDFCOM_PONF no VCS (docs/auditoria_sdf.md).
 #
 # Gera sim/simv_filtro_gls, usado por run_gls_regression.sh.
 #
@@ -34,7 +40,11 @@ case "$ETAPA" in
         ;;
     pnr)
         NETLIST=../pnr/output/filtro_pdm_pnr.v
-        SDF=../pnr/output/filtro_pdm_pnr.sdf
+        if [ "$ATRASO" = "sdf_fc" ]; then
+            SDF=../pnr/output/filtro_pdm_pnr.sdf
+        else
+            SDF=../pnr/output/filtro_pdm_pnr_pt.sdf
+        fi
         ;;
     *)
         echo "ERRO: etapa deve ser 'synth' ou 'pnr'."
@@ -47,9 +57,16 @@ if [ ! -f "$NETLIST" ]; then
     exit 1
 fi
 
-if [ "$ATRASO" = "sdf" ]; then
-    # Simulacao com atrasos reais (back-annotation)
-    OPCOES_ATRASO="-sdf max:tb_filtro_pdm_golden.dut:$SDF +neg_tchk"
+if [ "$ATRASO" = "sdf" ] || [ "$ATRASO" = "sdf_fc" ]; then
+    if [ ! -f "$SDF" ]; then
+        echo "ERRO: SDF nao encontrado: $SDF"
+        [ "$ETAPA" = "pnr" ] && echo "Execute antes: sta/scripts/run_sdf_gls.sh"
+        exit 1
+    fi
+    # Simulacao com atrasos reais (back-annotation).
+    # +neg_tchk: mantem os valores negativos de hold da biblioteca.
+    # +sdfverbose: lista todas as mensagens de anotacao.
+    OPCOES_ATRASO="-sdf max:tb_filtro_pdm_golden.dut:$SDF +neg_tchk +sdfverbose"
 else
     # Simulacao funcional, sem atrasos das celulas
     OPCOES_ATRASO="+delay_mode_zero +notimingcheck +nospecify"
@@ -64,6 +81,7 @@ fi
 
 echo "Netlist: $NETLIST"
 echo "Atrasos: $ATRASO"
+[ -n "${SDF:-}" ] && [ "$ATRASO" != "zero" ] && echo "SDF:     $SDF"
 
 # Remove executavel antigo para nao simular uma netlist anterior
 # caso a compilacao falhe
@@ -81,5 +99,12 @@ vcs -full64 -sverilog -kdb -debug_access+all \
     ../tb/tb_filtro_pdm_golden.sv \
     -o simv_filtro_gls \
     -l compile_gls.log
+
+if [ "$ATRASO" != "zero" ]; then
+    echo "Anotacao do SDF (mensagens do VCS):"
+    grep -oE 'SDFCOM_[A-Z]+' compile_gls.log | sort | uniq -c || true
+    grep -E 'Total (errors|warnings)' compile_gls.log || \
+        echo "  nenhum erro ou aviso de anotacao"
+fi
 
 echo "Compilado: sim/simv_filtro_gls"

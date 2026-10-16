@@ -265,7 +265,10 @@ write_verilog \
     -exclude {physical_only_cells leaf_module_declarations} \
     pnr/output/filtro_pdm_lvs.v
 
-# Atrasos para simulacao com back-annotation no VCS
+# Atrasos do FC, mantidos para comparacao. A simulacao pos-layout
+# usa o SDF do PrimeTime (sta/scripts/run_sdf_gls.sh): este escapa
+# os bits das portas de barramento (y_out\[18\] -> 19 erros
+# SDFCOM_PONF no VCS) e tem resolucao de 10 ps. docs/auditoria_sdf.md
 write_sdf pnr/output/filtro_pdm_pnr.sdf
 
 # Parasitas extraidos (SPEF)

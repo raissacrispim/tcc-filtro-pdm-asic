@@ -87,6 +87,7 @@ Todos os comandos são executados a partir da raiz do repositório.
 | CTS | Fusion Compiler | `fc_shell -f pnr/scripts/cts.tcl` | raiz |
 | Roteamento | Fusion Compiler | `fc_shell -f pnr/scripts/route.tcl` | raiz |
 | Finalização, ECO de capacitância e GDSII | Fusion Compiler | `fc_shell -f pnr/scripts/finish.tcl` | raiz |
+| SDF para simulação pós-layout | PrimeTime | `sta/scripts/run_sdf_gls.sh` | raiz |
 | Simulação pós-layout com SDF | VCS | `sim/scripts/compile_gls.sh pnr sdf` e `sim/scripts/run_gls_regression.sh` | raiz |
 | Atividade de chaveamento (SAIF) | VCS | `sim/scripts/run_saif.sh` | raiz |
 | Potência com SAIF | Fusion Compiler | `fc_shell -f pnr/scripts/power_saif.tcl` | raiz |
@@ -123,7 +124,7 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 |---|---|
 | Simulação RTL x Golden Model | 7/7 testes aprovados |
 | Simulação gate-level pós-síntese | 7/7 testes aprovados |
-| Simulação pós-layout com SDF | 7/7 testes aprovados |
+| Simulação pós-layout com SDF (PrimeTime) | 10/10 testes aprovados; anotação sem erros ou avisos; 0 violações de timing |
 | DFT | 1 cadeia de scan, 1.332 flip-flops |
 | ATPG pós-layout | stuck-at 98,56%; transition 97,87% |
 | DRC (IC Validator) | CLEAN (396 regras) |
@@ -139,6 +140,17 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 | Potência total (SAIF) | 1,26 mW (FIR: 87%) |
 
 Corners de timing (PrimeTime): tt0p85v25c, ss0p75v125c (0,75 V, 125 °C) e ff0p95vn40c (0,95 V, −40 °C).
+
+### SDF da simulação pós-layout
+
+O SDF do `write_sdf` do Fusion Compiler escreve os bits das portas de barramento com escape (`y_out\[18\]`), o que gera 19 erros `SDFCOM_PONF` no VCS, e usa resolução de 10 ps. A simulação pós-layout usa o SDF gerado pelo PrimeTime (`write_sdf -context verilog`, 1 ps).
+
+Foi verificado que:
+- não falta nenhum arco de atraso;
+- o CLK→Q medido no simulador é igual ao do SDF;
+- um hold propositalmente inflado é detectado.
+
+Causa, evidências e comandos: [docs/auditoria_sdf.md](docs/auditoria_sdf.md).
 
 ### Hold no corner rápido
 
