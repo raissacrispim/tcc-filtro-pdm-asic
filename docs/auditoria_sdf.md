@@ -21,10 +21,19 @@ Verificação da causa:
 
 1. **Arquivo:** o SDF do FC contém exatamente 19 nomes escapados, `y_out\[0\]` … `y_out\[18\]`, todos em `INTERCONNECT` para portas de saída. São os mesmos 19 dos erros. Não há nenhum outro erro de anotação.
 2. **Ferramentas:** o `write_sdf` do Fusion Compiler não tem opção que controle o escape. As opções disponíveis são apenas `-significant_digits` e a inclusão ou exclusão de grupos. No PrimeTime, `write_sdf -context verilog` escreve os bits de barramento sem escape. O contexto padrão escapa os colchetes, como o FC.
-3. **Reprodução mínima** (netlist de 2 células, VCS):
-   - Com o SDF escapado: 2 erros PONF, e o atraso de interconexão da porta é **perdido**.
-   - Com o mesmo SDF usando bit de barramento: 0 erros, e o atraso é **aplicado**.
-   - O aviso SDFCOM_UHICD não perde o atraso: o VCS o aplica na saída do driver.
+3. **Reprodução mínima** (`sim/auditoria_sdf/repro/`):
+   - **Circuito:** 3 buffers SAED32 (`mini.v`). `u0` e `u1` dirigem o barramento `y[1:0]` e `u2` dirige a porta escalar `z`. Os buffers têm IOPATH de 1, 2 e 3 ns, e cada interconexão até a porta vale 0,5 ns. A entrada sobe em t = 10 ns.
+   - Os dois SDFs só diferem no escape (`esc.sdf`: `y\[0\]`; `bitsel.sdf`: `y[0]`).
+
+| | Anotação (VCS) | y[0] | y[1] | z |
+|---|---|---|---|---|
+| `esc.sdf` | 2 SDFCOM_PONF (`\y[0]`, `\y[1]`), 1 UHICD | 11,0 ns | 12,0 ns | 13,5 ns |
+| `bitsel.sdf` | 0 erros, 3 UHICD | 11,5 ns | 12,5 ns | 13,5 ns |
+| Esperado (IOPATH + interconexão) | | 11,5 ns | 12,5 ns | 13,5 ns |
+
+   - Com o escape, os 0,5 ns de interconexão das portas do barramento são **perdidos**. Os IOPATH continuam aplicados.
+   - Com bit de barramento, o atraso é aplicado. O aviso SDFCOM_UHICD não perde o atraso: o VCS o aplica na saída do driver, como se vê em `z`.
+   - Logs: `comp_esc.log`, `comp_bitsel.log`, `sim_esc.log` e `sim_bitsel.log`.
 
 Impacto no projeto: no SDF do FC, todas as 21 interconexões para portas de saída valem 0,00 ns. Os erros não alteravam a simulação, e isso explica os 10/10. O problema atingia apenas essas interconexões.
 
@@ -135,7 +144,18 @@ Os comandos `sta/scripts/run_sdf_gls.sh`, `sim/scripts/compile_gls.sh pnr sdf` e
 ### Variante com portas de saída (`SDF_SAIDAS=1`)
 
 - **21 SDFCOM_UHICD:** um por porta de saída. O VCS aplica o atraso na saída da célula que dirige a porta; isso foi comprovado na reprodução mínima.
-- **1 SDFCOM_IWSBA:** ocorre na interconexão `copt_h_inst_2391.Y → y_out`. Na netlist, essa célula dirige `scan_out`, e `y_out[18]` é ligado a ela por `assign y_out[18] = scan_out;`. O VCS informa que a interconexão "will still be annotated" (ainda será anotada).
+- **1 SDFCOM_IWSBA:** mensagem completa:
+
+  ```
+  Warning-[SDFCOM_IWSBA] INTERCONNECT will still be annotated
+  module: NBUFFX4_RVT, "instance: tb_filtro_pdm_golden.dut.copt_h_inst_2391"
+    SDF Warning: INTERCONNECT from copt_h_inst_2391.Y to   y_out has Instance at
+    filtro_pdm_pnr.v:30438, delay will still be annotated.
+  ```
+
+  - `copt_h_inst_2391` dirige `scan_out`, e `y_out[18]` é o mesmo fio: `assign y_out[18] = scan_out;`.
+  - O VCS associa a interconexão ao barramento `y_out` inteiro. A linha 30438 é outra célula ligada a esse barramento (`ZBUF_19_inst_2156`, que dirige `y_out[12]`).
+  - Mesmo assim, o VCS informa que o atraso é anotado. É um aviso informativo, sem perda de atraso.
 - **Por que essa variante não é a padrão:** os dois avisos se referem a atrasos de no máximo 0,004 ns. Para manter a anotação sem avisos, ela não é usada por padrão.
 
 ## Como reproduzir

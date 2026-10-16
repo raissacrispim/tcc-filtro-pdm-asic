@@ -53,7 +53,7 @@ Com entrada -1/+1, a saída do CIC é sempre par (y = 2·S − 65536). O LSB é 
 
 ## Verificação
 
-A implementação RTL é comparada amostra por amostra com o Golden Model para sete vetores de teste:
+A implementação é comparada amostra por amostra com o Golden Model para dez vetores de teste:
 
 - senoide de 10 kHz
 - senoide de 30 kHz
@@ -62,6 +62,9 @@ A implementação RTL é comparada amostra por amostra com o Golden Model para s
 - 50 kHz com ruído
 - burst de 50 kHz com ruído
 - fundo de escala: blocos de 2.400 bits alternando entre todos em 0 e todos em 1
+- 50 kHz com interferência de 130 kHz (fora da banda)
+- varredura de frequência de 0 a 150 kHz em 2 ms
+- impulso: padrão 0101… com um único bit invertido (resposta ao impulso)
 
 Cada teste utiliza 9.600 amostras PDM e produz 600 amostras de saída.
 
