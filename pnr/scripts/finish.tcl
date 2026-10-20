@@ -123,11 +123,13 @@ proc eco_max_cap {tag} {
             puts "  [get_object_name $celula] ($ref): celula de clock/fixa, mantida"
             continue
         }
-        # Flip-flops nao sao trocados por versoes maiores: o pino
-        # CLK maior sobrecarrega a arvore de clock (5 redes
-        # ZCTSNET ate 72 fF para limite de 64 fF quando SDFFX1 ->
-        # SDFFX2). Recebem um buffer na saida, como as celulas
-        # ja no maior tamanho.
+        # Flip-flops nao sao trocados por versoes maiores. Com a
+        # troca SDFFX1 -> SDFFX2 (celula mais larga), a
+        # legalizacao deslocou flip-flops e 5 redes da arvore de
+        # clock (ZCTSNET) passaram do limite (ate 72 fF para 64
+        # fF); o pino CLK tem a mesma capacitancia nas duas
+        # versoes (0,626 fF), o efeito e de fio. Recebem um
+        # buffer na saida, como as celulas ja no maior tamanho.
         set sequencial 0
         if {[catch {set sequencial [get_attribute $celula is_sequential]}]} {
             set sequencial [string match "*DFF*" $ref]
@@ -142,14 +144,24 @@ proc eco_max_cap {tag} {
             lappend trocadas [get_object_name $celula]
             continue
         }
-        # Celula ja no maior tamanho (ex.: FADDX2): um buffer
-        # isola a rede, e a celula passa a dirigir so o buffer
+        # Flip-flop ou celula ja no maior tamanho (ex.: FADDX2):
+        # um buffer isola a rede e a celula passa a dirigir so o
+        # buffer. O buffer e colocado junto da celula: a carga
+        # destas redes e quase toda de fio (ex.: delay_49__4_ com
+        # 16 fF ligada so a entrada de um NBUFFX4, 0,65 fF); com o
+        # buffer longe, o fio ate ele mantinha a violacao.
         set rede [get_nets -quiet -of_objects [get_pins $pino]]
-        if {[catch {add_buffer -lib_cell [get_lib_cells */NBUFFX4_RVT] \
-                $rede} msg]} {
+        if {[catch {set buf [add_buffer -lib_cell \
+                [get_lib_cells */NBUFFX4_RVT] $rede]} msg]} {
             puts "  $pino ($ref): buffer nao inserido ($msg)"
         } else {
-            puts "  [get_object_name $rede]: buffer NBUFFX4 inserido"
+            set bb [get_attribute $celula boundary_bbox]
+            if {[catch {set_cell_location -coordinates [lindex $bb 0] \
+                    [get_cells $buf]} msg]} {
+                puts "  [get_object_name $rede]: buffer inserido, sem mover ($msg)"
+            } else {
+                puts "  [get_object_name $rede]: buffer NBUFFX4 junto de [get_object_name $celula]"
+            }
             lappend trocadas [get_object_name $rede]
         }
     }
