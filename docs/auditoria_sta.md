@@ -112,6 +112,12 @@ O proc de latência foi removido.
    - A primeira versão usava DELLN1X2, cuja capacitância de entrada sobrecarregou as saídas QN (até 20,6 fF para um limite de 8 fF; 50 violações de max cap).
    - A versão atual usa NBUFFX2 em série, se necessário, alternando com o ECO de capacitância máxima até os dois zerarem.
 
+4. **Espaço físico:** mesmo com o buffer colocado junto do driver, cerca de 16 redes continuavam acima da capacitância máxima. Exemplos:
+   - o buffer de `delay_49__4_` foi legalizado a cerca de 100 µm do flip-flop;
+   - o somador `intadd_34_U16` ficou a cerca de 120 µm dos flip-flops `delay_reg_13__2_` e `delay_reg_49__2_`.
+
+   Com 84% de utilização, não havia espaço livre perto dos drivers. O `route_opt` limita o deslocamento de células a 3 linhas. Os ECOs nessa região também geraram 2 violações de DRC `M1.S.1`. Por isso, o core passou de 220,4 × 217,4 µm para 240 × 240 µm, com cerca de 70% de utilização.
+
 ## Critério de aprovação
 
 `sta/scripts/run_sta.sh` deve terminar com:
