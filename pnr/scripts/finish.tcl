@@ -154,6 +154,63 @@ for {set rodada 1} {$rodada <= 3} {incr rodada} {
 # O detail route incremental corrige essas violacoes.
 # ------------------------------------------------------------
 
+# ------------------------------------------------------------
+# 1c. ECO de hold residual
+#
+# Com os cenarios MCMM, o clock_opt e o route_opt corrigiram as
+# entradas (rst, scan_en, scan_in) e os caminhos funcionais, mas
+# deixaram ~59 caminhos de deslocamento da cadeia de scan no
+# cenario scan_ff (Q/QN ligado direto ao SI do flip-flop
+# seguinte, sem logica, ate -0,04 ns). O route_opt nao os
+# corrigiu em duas passadas, sem mensagem de impedimento.
+#
+# Correcao: uma celula de atraso (DELLN1X2) e inserida so no
+# pino de entrada violado. Atrasa apenas aquele ramo da rede
+# (o Q continua alimentando as demais cargas sem atraso). O
+# custo em setup e desprezivel (folga de shift ~187 ns).
+# Repete ate 3 vezes, conferindo todos os cenarios ativos.
+# ------------------------------------------------------------
+
+proc pinos_hold_violados {} {
+    set pinos {}
+    foreach_in_collection t [get_timing_paths -delay_type min \
+            -scenarios [get_scenarios *] -max_paths 10000 \
+            -slack_lesser_than 0.0] {
+        set ep [get_attribute $t endpoint]
+        if {[get_attribute $ep object_class] ne "pin"} { continue }
+        lappend pinos [get_object_name $ep]
+    }
+    return [lsort -unique $pinos]
+}
+
+set CELULA_HOLD [get_lib_cells */DELLN1X2_RVT]
+
+for {set rodada 1} {$rodada <= 3} {incr rodada} {
+    set pinos [pinos_hold_violados]
+    puts "ECO hold, rodada $rodada: [llength $pinos] pinos com hold violado"
+    if {[llength $pinos] == 0} { break }
+    set f [open pnr/reports/finish/hold_eco_$rodada.txt w]
+    foreach p $pinos { puts $f $p }
+    close $f
+    set inseridos 0
+    foreach p $pinos {
+        if {[catch {add_buffer -lib_cell $CELULA_HOLD [get_pins $p]} msg]} {
+            puts "  $p: atraso nao inserido ($msg)"
+        } else {
+            incr inseridos
+        }
+    }
+    puts "  $inseridos celulas DELLN1X2 inseridas"
+    if {$inseridos == 0} { break }
+    posiciona_e_roteia_eco
+}
+
+redirect pnr/reports/finish/hold_apos_eco.rpt {
+    report_timing -delay_type min -scenarios [get_scenarios *] \
+        -max_paths 20 -slack_lesser_than 0.0
+}
+
+
 # Garantia: nenhuma sobreposicao de celulas apos os ECOs
 redirect -variable legalidade {check_legality}
 if {[regexp {([1-9][0-9]*)\s+\d+\s+\d+\s+Two objects overlap} $legalidade]} {
