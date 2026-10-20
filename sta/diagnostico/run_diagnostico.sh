@@ -5,6 +5,7 @@
 # Uso (raiz do repositorio):
 #   sta/diagnostico/run_diagnostico.sh              # todos os casos
 #   sta/diagnostico/run_diagnostico.sh ff0p95vn40c  # um corner
+#   MODOS=todos REFS=porta sta/diagnostico/run_diagnostico.sh ff0p95vn40c
 #
 # Resumo: sta/diagnostico/reports/resumo.txt
 # ============================================================
@@ -22,8 +23,8 @@ mkdir -p sta/diagnostico/reports
 RES=sta/diagnostico/reports/resumo.txt
 : > $RES
 for C in $CORNERS; do
-  for M in func shift; do
-    for R in porta real fc; do
+  for M in ${MODOS:-func shift todos}; do
+    for R in ${REFS:-porta real fc}; do
       D=sta/diagnostico/reports/${C}_${M}_${R}
       mkdir -p $D
       STA_CORNER=$C STA_SPEF=${SPEF[$C]} STA_MODO=$M STA_REF=$R \

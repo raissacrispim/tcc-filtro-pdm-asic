@@ -10,6 +10,8 @@
 #   STA_SPEF    parasitas (Cmax ou Cmin)
 #   STA_MODO    func  (scan_en = 0: caminhos D, funcionais)
 #               shift (scan_en = 1: deslocamento da cadeia, Q -> SI)
+#               todos (sem case analysis: inclui as transicoes de
+#                     scan_en, caminhos porta scan_en -> pinos SE)
 #   STA_REF     referencia temporal dos caminhos de E/S:
 #               fc    latencia de E/S do SDC do FC (0,235/0,265 ns,
 #                     estimativa do corner tipico)
@@ -42,6 +44,7 @@ read_sdc pnr/output/filtro_pdm_pnr.sdc
 switch $MODO {
     func  { set_case_analysis 0 [get_ports scan_en] }
     shift { set_case_analysis 1 [get_ports scan_en] }
+    todos { }
     default { puts "ERRO: STA_MODO invalido: $MODO"; exit 1 }
 }
 
@@ -116,8 +119,21 @@ close $f
 set setup [get_attribute [get_timing_paths -delay_type max] slack]
 set hold  [get_attribute [get_timing_paths -delay_type min] slack]
 
+# Folga de hold das E/S mesmo quando positiva
+proc folga {args} {
+    set t [get_timing_paths -delay_type min {*}$args]
+    if {[sizeof_collection $t] == 0} { return "sem caminho" }
+    return [format "%.4f (%s -> %s)" [get_attribute $t slack] \
+        [get_object_name [get_attribute $t startpoint]] \
+        [get_object_name [get_attribute $t endpoint]]]
+}
+set folga_saida   [folga -to [all_outputs]]
+set folga_entrada [folga -from [remove_from_collection [all_inputs] [get_ports clk]]]
+
 puts ""
 puts "RESUMO $CORNER modo=$MODO ref=$REF  pior setup=[format %.4f $setup]  pior hold=[format %.4f $hold]"
+puts "RESUMO   folga hold saidas  : $folga_saida"
+puts "RESUMO   folga hold entradas: $folga_entrada"
 if {[dict size $n] == 0} {
     puts "RESUMO   nenhum endpoint com hold violado"
 }
