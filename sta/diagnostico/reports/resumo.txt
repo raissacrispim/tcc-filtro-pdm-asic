@@ -1,0 +1,173 @@
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=func ref=porta  pior setup=60.1714  pior hold=-0.0491
+RESUMO   folga hold saidas  : 0.4254 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.0491 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   entrada(rst)->reg            endpoints=  26  WNS= -0.0491  TNS=  -1.0492  pior=u_cic_u_integradores_int1_reg_13_/D
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=func ref=real  pior setup=60.0351  pior hold=0.0314
+RESUMO   folga hold saidas  : 0.2890 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.0314 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=func ref=fc  pior setup=59.9061  pior hold=0.1443
+RESUMO   folga hold saidas  : 0.1601 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.1854 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=shift ref=porta  pior setup=186.5588  pior hold=0.0333
+RESUMO   folga hold saidas  : 0.4254 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.0333 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=shift ref=real  pior setup=186.6393  pior hold=0.0469
+RESUMO   folga hold saidas  : 0.2890 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.1138 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=shift ref=fc  pior setup=186.7933  pior hold=0.0469
+RESUMO   folga hold saidas  : 0.1601 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.2679 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=todos ref=porta  pior setup=60.1714  pior hold=-0.0491
+RESUMO   folga hold saidas  : 0.4254 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.0491 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   entrada(rst)->reg            endpoints=  26  WNS= -0.0491  TNS=  -1.0492  pior=u_cic_u_integradores_int1_reg_13_/D
+RESUMO   entrada(scan_en)->reg        endpoints=  16  WNS= -0.0291  TNS=  -0.3456  pior=u_fir/delay_reg_11__7_/SE
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=todos ref=real  pior setup=60.0351  pior hold=0.0314
+RESUMO   folga hold saidas  : 0.2890 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.0314 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL tt0p85v25c: min 0.080526 max 0.136349 ns
+RESUMO tt0p85v25c modo=todos ref=fc  pior setup=59.9061  pior hold=0.0469
+RESUMO   folga hold saidas  : 0.1601 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.1854 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=func ref=porta  pior setup=56.7333  pior hold=0.0338
+RESUMO   folga hold saidas  : 0.9497 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.0338 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=func ref=real  pior setup=56.5278  pior hold=0.1487
+RESUMO   folga hold saidas  : 0.7443 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.1487 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=func ref=fc  pior setup=56.4680  pior hold=0.2683
+RESUMO   folga hold saidas  : 0.6845 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.2683 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=shift ref=porta  pior setup=185.7676  pior hold=0.2133
+RESUMO   folga hold saidas  : 0.9497 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.2541 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=shift ref=real  pior setup=185.8825  pior hold=0.2133
+RESUMO   folga hold saidas  : 0.7443 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.3690 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=shift ref=fc  pior setup=186.0021  pior hold=0.2133
+RESUMO   folga hold saidas  : 0.6845 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.4886 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=todos ref=porta  pior setup=56.7333  pior hold=0.0338
+RESUMO   folga hold saidas  : 0.9497 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.0338 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=todos ref=real  pior setup=56.5278  pior hold=0.1487
+RESUMO   folga hold saidas  : 0.7443 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.1487 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ss0p75v125c: min 0.114907 max 0.205453 ns
+RESUMO ss0p75v125c modo=todos ref=fc  pior setup=56.4680  pior hold=0.2133
+RESUMO   folga hold saidas  : 0.6845 (u_fir/y_out_reg_16_/CLK -> y_out[16])
+RESUMO   folga hold entradas: 0.2683 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   nenhum endpoint com hold violado
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=func ref=porta  pior setup=61.8647  pior hold=-0.1041
+RESUMO   folga hold saidas  : 0.1481 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.1041 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   entrada(rst)->reg            endpoints= 294  WNS= -0.1041  TNS= -13.1529  pior=u_cic_u_integradores_int1_reg_13_/D
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=func ref=real  pior setup=61.7814  pior hold=-0.0515
+RESUMO   folga hold saidas  : 0.0647 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.0515 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   entrada(rst)->reg            endpoints= 132  WNS= -0.0515  TNS=  -1.7956  pior=u_cic_u_integradores_int1_reg_13_/D
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=func ref=fc  pior setup=61.5995  pior hold=-0.1172
+RESUMO   folga hold saidas  : -0.1172 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.1305 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   reg->saida                   endpoints=  21  WNS= -0.1172  TNS=  -2.0146  pior=y_out[11]
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=shift ref=porta  pior setup=186.9572  pior hold=-0.0736
+RESUMO   folga hold saidas  : 0.1481 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.0736 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   entrada(scan_in)->reg        endpoints=   1  WNS= -0.0736  TNS=  -0.0736  pior=u_fir/delay_reg_12__0_/SI
+RESUMO   reg->reg(SI)                 endpoints= 148  WNS= -0.0366  TNS=  -3.3534  pior=u_cic_u_combs_u_comb3_x_delay_reg_4_/SI
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=shift ref=real  pior setup=187.0098  pior hold=-0.0366
+RESUMO   folga hold saidas  : 0.0647 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.0209 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   reg->reg(SI)                 endpoints= 148  WNS= -0.0366  TNS=  -3.3534  pior=u_cic_u_combs_u_comb3_x_delay_reg_4_/SI
+RESUMO   entrada(scan_in)->reg        endpoints=   1  WNS= -0.0209  TNS=  -0.0209  pior=u_fir/delay_reg_12__0_/SI
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=shift ref=fc  pior setup=186.9798  pior hold=-0.1172
+RESUMO   folga hold saidas  : -0.1172 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.1610 (scan_in -> u_fir/delay_reg_12__0_/SI)
+RESUMO   reg->saida                   endpoints=  21  WNS= -0.1172  TNS=  -2.0146  pior=y_out[11]
+RESUMO   reg->reg(SI)                 endpoints= 148  WNS= -0.0366  TNS=  -3.3534  pior=u_cic_u_combs_u_comb3_x_delay_reg_4_/SI
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=todos ref=porta  pior setup=61.8647  pior hold=-0.1041
+RESUMO   folga hold saidas  : 0.1481 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.1041 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   entrada(rst)->reg            endpoints= 294  WNS= -0.1041  TNS= -13.1529  pior=u_cic_u_integradores_int1_reg_13_/D
+RESUMO   entrada(scan_en)->reg        endpoints= 895  WNS= -0.0878  TNS= -21.8029  pior=u_fir/delay_reg_11__7_/SE
+RESUMO   entrada(scan_in)->reg        endpoints=   1  WNS= -0.0736  TNS=  -0.0736  pior=u_fir/delay_reg_12__0_/SI
+RESUMO   reg->reg(SI)                 endpoints= 148  WNS= -0.0366  TNS=  -3.3534  pior=u_cic_u_combs_u_comb3_x_delay_reg_4_/SI
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=todos ref=real  pior setup=61.7814  pior hold=-0.0515
+RESUMO   folga hold saidas  : 0.0647 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: -0.0515 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   entrada(rst)->reg            endpoints= 132  WNS= -0.0515  TNS=  -1.7956  pior=u_cic_u_integradores_int1_reg_13_/D
+RESUMO   reg->reg(SI)                 endpoints= 148  WNS= -0.0366  TNS=  -3.3534  pior=u_cic_u_combs_u_comb3_x_delay_reg_4_/SI
+RESUMO   entrada(scan_en)->reg        endpoints=  82  WNS= -0.0351  TNS=  -0.5926  pior=u_fir/delay_reg_11__7_/SE
+RESUMO   entrada(scan_in)->reg        endpoints=   1  WNS= -0.0209  TNS=  -0.0209  pior=u_fir/delay_reg_12__0_/SI
+
+LATENCIA_REAL ff0p95vn40c: min 0.052634 max 0.083354 ns
+RESUMO ff0p95vn40c modo=todos ref=fc  pior setup=61.5995  pior hold=-0.1172
+RESUMO   folga hold saidas  : -0.1172 (u_fir/y_out_reg_11_/CLK -> y_out[11])
+RESUMO   folga hold entradas: 0.1305 (rst -> u_cic_u_integradores_int1_reg_13_/D)
+RESUMO   reg->saida                   endpoints=  21  WNS= -0.1172  TNS=  -2.0146  pior=y_out[11]
+RESUMO   reg->reg(SI)                 endpoints= 148  WNS= -0.0366  TNS=  -3.3534  pior=u_cic_u_combs_u_comb3_x_delay_reg_4_/SI
+
