@@ -104,27 +104,42 @@ set_voltage 0.85 -corners tt -object_list [get_supply_nets VDD]
 set_voltage 0.0  -corners tt -object_list [get_supply_nets VSS]
 set_parasitic_parameters -corners tt -early_spec Cmin -late_spec Cmax
 
-set_process_number 1.0 -corners ff
-set_temperature    -40 -corners ff
+# nom_process da biblioteca ff0p95vn40c e 1.01 (tt: 1.00). Com
+# 1.0 no corner ff, o FC preferiu o pane de mesmo processo e
+# temperatura com 0,85 V (tt0p85vn40c), aviso PVT-030.
+set_process_number 1.01 -corners ff
+set_temperature    -40  -corners ff
 set_voltage 0.95 -corners ff -object_list [get_supply_nets VDD]
 set_voltage 0.0  -corners ff -object_list [get_supply_nets VSS]
 set_parasitic_parameters -corners ff -early_spec Cmin -late_spec Cmin
 
-# Confere a biblioteca escolhida para cada corner: a otimizacao
-# de hold no corner errado custaria horas de execucao
-foreach {corner lib} {tt tt0p85v25c ff ff0p95vn40c} {
-    current_corner $corner
-    redirect -variable txt {report_pvt}
-    set f [open pnr/reports/place/pvt_$corner.rpt w]
-    puts $f $txt
-    close $f
-    if {![string match "*$lib*" $txt]} {
-        puts "ERRO: o corner $corner nao usa a biblioteca $lib."
-        puts "Veja pnr/reports/place/pvt_$corner.rpt"
-        return -code error
+# Confere o pane da NDM escolhido para cada corner: processo,
+# tensao e temperatura efetivos devem ser iguais aos pedidos.
+# A otimizacao de hold no corner errado custaria horas de
+# execucao. O report_pvt nao mostra o nome do corner da
+# biblioteca, so os valores especificados e efetivos.
+redirect -variable txt {report_pvt}
+set f [open pnr/reports/place/pvt.rpt w]
+puts $f $txt
+close $f
+set conferidos 0
+set diferencas {}
+foreach linha [split $txt "\n"] {
+    if {[regexp {(Process Number|VDD\) Voltage|Temperature):\s+specified:\s+(-?[0-9.]+)\s.*effective:\s+(-?[0-9.]+)} \
+            $linha -> grandeza pedido efetivo]} {
+        incr conferidos
+        if {abs($pedido - $efetivo) > 1e-6} {
+            lappend diferencas "$grandeza: pedido $pedido, efetivo $efetivo"
+        }
     }
-    puts "Corner $corner: biblioteca $lib"
 }
+if {$conferidos == 0 || [llength $diferencas] > 0} {
+    puts "ERRO: PVT dos corners diferente da biblioteca ($conferidos valores conferidos)."
+    foreach d $diferencas { puts "  $d" }
+    puts "Veja pnr/reports/place/pvt.rpt"
+    return -code error
+}
+puts "PVT conferido: $conferidos valores iguais aos da biblioteca (tt0p85v25c, ff0p95vn40c)"
 
 
 # ------------------------------------------------------------
