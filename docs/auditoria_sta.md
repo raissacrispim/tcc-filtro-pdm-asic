@@ -104,6 +104,14 @@ Com o clock virtual, o FC não gera latência de E/S. O P&R e o PrimeTime passam
 
 O proc de latência foi removido.
 
+### Ajustes após a primeira execução do fluxo corrigido
+
+1. **Corner ff na NDM:** a biblioteca `ff0p95vn40c` tem `nom_process : 1.01` (tt: 1.00). Com 1.0, o FC escolhia o pane `tt0p85vn40c` (aviso PVT-030). O `timing_setup.tcl` passou a usar 1.01, e o fluxo para se o `report_pvt` não trouxer `Corner <c>: no PVT mismatches` (PVT-032) para tt e ff.
+2. **Latência no clock virtual:** durante o CTS, o FC atribuiu ao `vclk` uma latência de *useful skew* (`set_clock_latency 0.112478 [get_clocks {vclk}]`, `-origin useful_skew`). Com ela, o FC via as entradas 0,11 ns mais tarde e não corrigia o hold de `rst`/`scan_en`. O PrimeTime, com latência 0 conforme o SDC original, acusava 356 + 579 endpoints no ff. `pnr/scripts/vclk_ideal.tcl` desliga o ajuste (`ccd.adjust_io_clock_latency false`) e remove a latência em todos os cenários depois de `clock_opt` e de cada `route_opt`. O `finish.tcl` confere que o SDC exportado não tem latência no `vclk`.
+3. **Caminhos Q → SI:** o `route_opt` deixou cerca de 59 caminhos com −0,04 ns no `scan_ff`, ligados direto ao SI. O `finish.tcl` faz um ECO de hold, inserindo um buffer só no pino violado.
+   - A primeira versão usava DELLN1X2, cuja capacitância de entrada sobrecarregou as saídas QN (até 20,6 fF para um limite de 8 fF; 50 violações de max cap).
+   - A versão atual usa NBUFFX2 em série, se necessário, alternando com o ECO de capacitância máxima até os dois zerarem.
+
 ## Critério de aprovação
 
 `sta/scripts/run_sta.sh` deve terminar com:

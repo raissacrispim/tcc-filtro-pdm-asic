@@ -33,6 +33,9 @@ file mkdir pnr/output
 open_lib pnr/work/filtro_pdm.dlib
 open_block filtro_pdm/route
 
+# Clock virtual das E/S ideal antes dos ECOs (ver vclk_ideal.tcl)
+source pnr/scripts/vclk_ideal.tcl
+
 
 # ------------------------------------------------------------
 # 1b. Correcao das violacoes residuais de capacitancia maxima
@@ -42,7 +45,8 @@ open_block filtro_pdm/route
 # a celula que dirige cada rede violada e trocada pela versao
 # de maior drive (ex.: INVX1 -> INVX2), que admite maior
 # carga. Em seguida a posicao e legalizada e as ligacoes sao
-# refeitas com route_eco. Repete ate 3 vezes, pois a celula
+# refeitas com route_eco. Repete (junto com o ECO de hold, 1c),
+# pois a celula
 # maior aumenta um pouco a carga da rede anterior.
 # ------------------------------------------------------------
 
@@ -96,13 +100,12 @@ proc pinos_max_cap {arquivo} {
 }
 
 
-for {set rodada 1} {$rodada <= 3} {incr rodada} {
-
-    set pinos [pinos_max_cap \
-        pnr/reports/finish/max_cap_antes_eco_$rodada.rpt]
-
-    puts "ECO max cap, rodada $rodada: [llength $pinos] violacoes"
-    if {[llength $pinos] == 0} { break }
+# Uma rodada do ECO de capacitancia maxima. Retorna o numero
+# de celulas alteradas (0: nada a corrigir ou nada corrigivel).
+proc eco_max_cap {tag} {
+    set pinos [pinos_max_cap pnr/reports/finish/max_cap_antes_eco_$tag.rpt]
+    puts "ECO max cap, rodada $tag: [llength $pinos] violacoes"
+    if {[llength $pinos] == 0} { return 0 }
 
     set trocadas {}
     foreach pino $pinos {
@@ -138,37 +141,28 @@ for {set rodada 1} {$rodada <= 3} {incr rodada} {
             lappend trocadas [get_object_name $rede]
         }
     }
-
-    if {[llength $trocadas] == 0} { break }
-
-    posiciona_e_roteia_eco
+    if {[llength $trocadas] > 0} { posiciona_e_roteia_eco }
+    return [llength $trocadas]
 }
 
-
-# ------------------------------------------------------------
-# 1d. Limpeza de DRC do roteamento apos os ECOs
-#
-# O route_eco liga as celulas alteradas, mas pode deixar
-# curtos ou espacamentos violados (na primeira execucao:
-# 1 curto em M2 entre duas redes, que reprovou o DRC e o LVS).
-# O detail route incremental corrige essas violacoes.
-# ------------------------------------------------------------
 
 # ------------------------------------------------------------
 # 1c. ECO de hold residual
 #
 # Com os cenarios MCMM, o clock_opt e o route_opt corrigiram as
-# entradas (rst, scan_en, scan_in) e os caminhos funcionais, mas
-# deixaram ~59 caminhos de deslocamento da cadeia de scan no
-# cenario scan_ff (Q/QN ligado direto ao SI do flip-flop
-# seguinte, sem logica, ate -0,04 ns). O route_opt nao os
-# corrigiu em duas passadas, sem mensagem de impedimento.
+# entradas e os caminhos funcionais, mas deixaram ~59 caminhos
+# de deslocamento da cadeia de scan no cenario scan_ff (Q/QN
+# ligado direto ao SI do flip-flop seguinte, sem logica, ate
+# -0,04 ns). O route_opt nao os corrigiu em duas passadas, sem
+# mensagem de impedimento.
 #
-# Correcao: uma celula de atraso (DELLN1X2) e inserida so no
-# pino de entrada violado. Atrasa apenas aquele ramo da rede
-# (o Q continua alimentando as demais cargas sem atraso). O
-# custo em setup e desprezivel (folga de shift ~187 ns).
-# Repete ate 3 vezes, conferindo todos os cenarios ativos.
+# Correcao: um buffer NBUFFX2 e inserido so no pino de entrada
+# violado, atrasando apenas aquele ramo da rede. Se um buffer
+# nao bastar, a rodada seguinte insere outro em serie no mesmo
+# pino. A primeira versao usava DELLN1X2, cuja capacitancia de
+# entrada sobrecarregou as saidas QN dos flip-flops (ate 20,6 fF
+# para limite de 8 fF). O custo em setup e desprezivel (folga
+# de shift ~187 ns).
 # ------------------------------------------------------------
 
 proc pinos_hold_violados {} {
@@ -183,33 +177,54 @@ proc pinos_hold_violados {} {
     return [lsort -unique $pinos]
 }
 
-set CELULA_HOLD [get_lib_cells */DELLN1X2_RVT]
-
-for {set rodada 1} {$rodada <= 3} {incr rodada} {
+# Uma rodada do ECO de hold. Retorna o numero de buffers inseridos.
+proc eco_hold {tag} {
     set pinos [pinos_hold_violados]
-    puts "ECO hold, rodada $rodada: [llength $pinos] pinos com hold violado"
-    if {[llength $pinos] == 0} { break }
-    set f [open pnr/reports/finish/hold_eco_$rodada.txt w]
+    puts "ECO hold, rodada $tag: [llength $pinos] pinos com hold violado"
+    if {[llength $pinos] == 0} { return 0 }
+    set f [open pnr/reports/finish/hold_eco_$tag.txt w]
     foreach p $pinos { puts $f $p }
     close $f
     set inseridos 0
     foreach p $pinos {
-        if {[catch {add_buffer -lib_cell $CELULA_HOLD [get_pins $p]} msg]} {
-            puts "  $p: atraso nao inserido ($msg)"
+        if {[catch {add_buffer -lib_cell [get_lib_cells */NBUFFX2_RVT] \
+                [get_pins $p]} msg]} {
+            puts "  $p: buffer de hold nao inserido ($msg)"
         } else {
             incr inseridos
         }
     }
-    puts "  $inseridos celulas DELLN1X2 inseridas"
-    if {$inseridos == 0} { break }
-    posiciona_e_roteia_eco
+    puts "  $inseridos buffers NBUFFX2 de hold inseridos"
+    if {$inseridos > 0} { posiciona_e_roteia_eco }
+    return $inseridos
 }
+
+# Hold primeiro (insere cargas), depois capacitancia maxima (pode
+# trocar celulas e alterar atrasos); repete ate os dois zerarem.
+for {set ciclo 1} {$ciclo <= 5} {incr ciclo} {
+    set n_hold [eco_hold $ciclo]
+    set n_cap  [eco_max_cap $ciclo]
+    if {$n_hold == 0 && $n_cap == 0} { break }
+}
+
+set res_hold [llength [pinos_hold_violados]]
+set res_cap  [llength [pinos_max_cap pnr/reports/finish/max_cap_final.rpt]]
+puts "Apos os ECOs: $res_hold pinos com hold violado, $res_cap violacoes de max cap"
 
 redirect pnr/reports/finish/hold_apos_eco.rpt {
     report_timing -delay_type min -scenarios [get_scenarios *] \
         -max_paths 20 -slack_lesser_than 0.0
 }
 
+
+# ------------------------------------------------------------
+# 1d. Limpeza de DRC do roteamento apos os ECOs
+#
+# O route_eco liga as celulas alteradas, mas pode deixar
+# curtos ou espacamentos violados (na primeira execucao:
+# 1 curto em M2 entre duas redes, que reprovou o DRC e o LVS).
+# O detail route incremental corrige essas violacoes.
+# ------------------------------------------------------------
 
 # Garantia: nenhuma sobreposicao de celulas apos os ECOs
 redirect -variable legalidade {check_legality}
@@ -323,7 +338,18 @@ write_parasitics -output pnr/output/filtro_pdm
 # Restricoes finais (cenario func_tt). O signoff no PrimeTime
 # usa as restricoes originais de pnr/constraints/ (sta_corner.tcl)
 current_scenario func_tt
+vclk_ideal
 write_sdc -output pnr/output/filtro_pdm_pnr.sdc
+
+# Conferencia: o SDC exportado nao pode ter latencia no vclk
+set f [open pnr/output/filtro_pdm_pnr.sdc r]
+set sdc [read $f]
+close $f
+if {[regexp {set_clock_latency[^\n]*vclk} $sdc]} {
+    puts "ERRO: o SDC exportado tem latencia no clock virtual vclk."
+} else {
+    puts "SDC exportado: vclk sem latencia (clock ideal)"
+}
 
 # Descricao fisica (DEF)
 write_def pnr/output/filtro_pdm.def

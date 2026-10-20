@@ -100,13 +100,17 @@ check_routability > pnr/reports/route/check_routability.rpt
 # route_opt:  otimizacao de timing com parasitas extraidos
 # ------------------------------------------------------------
 
+source pnr/scripts/vclk_ideal.tcl
+
 route_auto
 
 route_opt
+vclk_ideal
 
 # Segunda passada: corrige violacoes residuais de capacitancia
 # maxima e hold deixadas pela primeira otimizacao
 route_opt
+vclk_ideal
 
 
 # ------------------------------------------------------------
