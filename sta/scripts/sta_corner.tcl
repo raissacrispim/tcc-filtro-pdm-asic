@@ -150,25 +150,33 @@ dict for {c k} $n_hold { incr total_hold $k }
 set total_setup 0
 dict for {c k} $n_setup { incr total_setup $k }
 
-puts ""
-puts "=================================================="
-puts "Corner     : $CORNER"
-puts "Modo       : $MODO"
-puts "Parasitas  : $SPEF"
-puts "Pior setup : [folga -delay_type max]"
-puts "Pior hold  : [folga -delay_type min]"
-puts "Hold reg->reg  : [folga -delay_type min -from [all_registers] -to [all_registers]]"
-puts "Hold entradas  : [folga -delay_type min -from $entradas]"
-puts "Hold saidas    : [folga -delay_type min -to [all_outputs]]"
-puts "Endpoints com setup violado: $total_setup"
-puts "Endpoints com hold violado : $total_hold"
+# Resumo com o prefixo "STA|": o pt_shell ecoa os comandos do
+# script, e run_sta.sh mostra so as linhas do resumo
+set R {}
+lappend R "=================================================="
+lappend R "Corner     : $CORNER"
+lappend R "Modo       : $MODO"
+lappend R "Parasitas  : $SPEF"
+lappend R "Pior setup : [folga -delay_type max]"
+lappend R "Pior hold  : [folga -delay_type min]"
+lappend R "Hold reg->reg  : [folga -delay_type min -from [all_registers -clock_pins] -to [all_registers -data_pins]]"
+lappend R "Hold entradas  : [folga -delay_type min -from $entradas]"
+lappend R "Hold saidas    : [folga -delay_type min -to [all_outputs]]"
+lappend R "Endpoints com setup violado: $total_setup"
+lappend R "Endpoints com hold violado : $total_hold"
 dict for {c k} $n_hold {
-    puts [format "  hold %-28s %4d  WNS %.4f ns" $c $k [dict get $wns_hold $c]]
+    lappend R [format "  hold %-28s %4d  WNS %.4f ns" $c $k [dict get $wns_hold $c]]
 }
 dict for {c k} $n_setup {
-    puts [format "  setup %-27s %4d  WNS %.4f ns" $c $k [dict get $wns_setup $c]]
+    lappend R [format "  setup %-27s %4d  WNS %.4f ns" $c $k [dict get $wns_setup $c]]
 }
-puts "Relatorios : $REP/"
-puts "=================================================="
+lappend R "Relatorios : $REP/"
+lappend R "=================================================="
+set f [open $REP/resumo.txt w]
+foreach linha $R {
+    puts "STA| $linha"
+    puts $f $linha
+}
+close $f
 
 exit
