@@ -94,7 +94,7 @@ Todos os comandos são executados a partir da raiz do repositório.
 | Simulação pós-layout com SDF | VCS | `sim/scripts/compile_gls.sh pnr sdf` e `sim/scripts/run_gls_regression.sh` | raiz |
 | Atividade de chaveamento (SAIF) | VCS | `sim/scripts/run_saif.sh` | raiz |
 | Potência com SAIF | Fusion Compiler | `fc_shell -f pnr/scripts/power_saif.tcl` | raiz |
-| Timing multi-corner (tt/ss/ff) | PrimeTime | `sta/scripts/run_sta.sh` | raiz |
+| Timing multi-corner (tt/ss/ff) e multimodo (funcional/scan) | PrimeTime | `sta/scripts/run_sta.sh` | raiz |
 | ATPG pós-layout | TestMAX ATPG | `atpg/scripts/run_atpg.sh stuck pnr` e `atpg/scripts/run_atpg.sh transition pnr` | raiz |
 | Verificação do GDS | Python | `python3 pnr/scripts/check_gds.py pnr/output/filtro_pdm_final.gds` | raiz |
 | DRC | IC Validator | `verif/scripts/run_drc.sh` | raiz |
@@ -135,8 +135,8 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 | Área de células | 40.332 µm² (utilização do core 84%) |
 | Células | 9.932 (sem fillers) |
 | Capacitância/transição máximas | 0 violações |
-| Setup (tt / ss / ff) | +60,1 / +56,6 / +61,8 ns |
-| Hold registrador→registrador (tt / ss / ff) | atendido nos três corners |
+| Setup (tt / ss / ff) | em revisão (ver docs/auditoria_sta.md) |
+| Hold (tt / ss / ff, funcional e scan) | em revisão (ver docs/auditoria_sta.md) |
 | Potência dinâmica (SAIF, sinal de 50 kHz com ruído) | 53,2 µW (interna 40,3; chaveamento 12,9) |
 | Potência dinâmica sem vetores | 122,4 µW |
 | Potência de fuga | 1,21 mW |
@@ -155,12 +155,21 @@ Foi verificado que:
 
 Causa, evidências e comandos: [docs/auditoria_sdf.md](docs/auditoria_sdf.md).
 
-### Hold no corner rápido
+### Timing pós-layout (em revisão)
 
-- O P&R otimiza somente o corner típico. Para cobrir o corner ff, o CTS e o roteamento usam incerteza de hold de 0,25 ns (`cts.tcl`, `route.tcl`); o `finish.tcl` restaura 0,10 ns.
-- Um ECO de hold do PrimeTime após o roteamento foi testado e descartado: 1.353 células de atraso sem espaço livre geraram sobreposições e falhas de DRC/LVS.
-- No PrimeTime, a incerteza de hold após o CTS é 0,05 ns (jitter + margem). Os 0,10 ns do SDC são a margem pré-CTS, que inclui o skew estimado, já presente no clock propagado. Com 0,10 ns, restam 148 caminhos de scan (Q → SI) com até −0,04 ns no corner ff; esses caminhos só são usados no modo de teste.
-- Caminhos de E/S: com a latência de E/S medida em cada corner, restam no ff 42 caminhos da entrada `rst` com até −0,03 ns. O hold de E/S depende das hipóteses externas preliminares do SDC (atraso mínimo de entrada 0 ns) e deve ser revisto na integração do bloco.
+Uma auditoria independente da STA encontrou erros na metodologia anterior:
+- a latência de E/S era lida da coluna de transição;
+- a incerteza de hold era reduzida para 0,05 ns;
+- o corner rápido era aproximado no P&R.
+
+Os resultados de hold publicados anteriormente não são válidos.
+
+A correção, ainda em execução, inclui:
+- clock virtual para as E/S;
+- cenários MCMM (tt/ff, modos funcional e scan) no Fusion Compiler;
+- signoff no PrimeTime com a incerteza do SDC (0,10 ns) em 3 corners × 2 modos.
+
+Causa, diagnóstico e critérios: [docs/auditoria_sta.md](docs/auditoria_sta.md).
 
 ## Ferramentas
 

@@ -82,11 +82,8 @@ foreach {opcao valor} {
 }
 
 
-# ------------------------------------------------------------
-# Margem de hold para o corner rapido (ver cts.tcl)
-# ------------------------------------------------------------
-
-set_clock_uncertainty -hold 0.25 [get_clocks clk]
+# Hold nos corners tt e ff: cenarios MCMM de timing_setup.tcl
+# (ver cts.tcl). Incerteza de hold do SDC, 0,10 ns.
 
 
 # ------------------------------------------------------------

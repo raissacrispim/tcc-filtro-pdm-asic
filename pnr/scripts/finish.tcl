@@ -146,17 +146,6 @@ for {set rodada 1} {$rodada <= 3} {incr rodada} {
 
 
 # ------------------------------------------------------------
-# 1c. Incerteza de hold da especificacao
-#
-# cts.tcl e route.tcl otimizam com 0,25 ns (margem para o
-# corner rapido). Relatorios e SDC exportado usam o valor
-# da especificacao, 0,10 ns.
-# ------------------------------------------------------------
-
-set_clock_uncertainty -hold 0.10 [get_clocks clk]
-
-
-# ------------------------------------------------------------
 # 1d. Limpeza de DRC do roteamento apos os ECOs
 #
 # O route_eco liga as celulas alteradas, mas pode deixar
@@ -274,7 +263,9 @@ write_sdf pnr/output/filtro_pdm_pnr.sdf
 # Parasitas extraidos (SPEF)
 write_parasitics -output pnr/output/filtro_pdm
 
-# Restricoes finais
+# Restricoes finais (cenario func_tt). O signoff no PrimeTime
+# usa as restricoes originais de pnr/constraints/ (sta_corner.tcl)
+current_scenario func_tt
 write_sdc -output pnr/output/filtro_pdm_pnr.sdc
 
 # Descricao fisica (DEF)

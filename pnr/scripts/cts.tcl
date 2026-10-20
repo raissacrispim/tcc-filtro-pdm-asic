@@ -61,24 +61,16 @@ set_lib_cell_purpose -include optimization [get_lib_cells */TIE*]
 
 
 # ------------------------------------------------------------
-# Margem de hold para o corner rapido
+# Hold nos corners tipico e rapido
 #
-# O P&R otimiza somente o corner tipico (tt0p85v25c). No
-# PrimeTime, o corner rapido (ff0p95vn40c) mostrou ~1.330
-# caminhos de scan (Q -> SI) com hold ate -0,06 ns. Inserir
-# as celulas de atraso por ECO depois do roteamento falhou
-# (1.353 celulas sem espaco livre, 1.245 sobreposicoes).
-# Solucao: durante o CTS e o roteamento, a incerteza de hold
-# e aumentada de 0,10 para 0,25 ns, de modo que o proprio
-# otimizador insira os atrasos com folga para o corner ff.
-# O finish.tcl restaura o valor da especificacao (0,10 ns)
-# antes dos relatorios e da exportacao do SDC.
+# Os cenarios func_ff, scan_tt e scan_ff (timing_setup.tcl)
+# fazem o clock_opt corrigir o hold de cada corner/modo com a
+# incerteza do SDC (0,10 ns). Substitui o aumento artificial da
+# incerteza para 0,25 ns no corner tipico usado antes.
 # ------------------------------------------------------------
 
-# 0,20 ns reduziu as violacoes no ff de 2.957 para 141 caminhos
-# entre registradores (pior -0,03 ns); 0,25 ns cobre o restante.
-set HOLD_UNCERTAINTY_OTIMIZACAO 0.25
-set_clock_uncertainty -hold $HOLD_UNCERTAINTY_OTIMIZACAO [get_clocks clk]
+report_scenarios > pnr/reports/cts/scenarios.rpt
+
 
 # ------------------------------------------------------------
 # 3. Verificacoes antes do CTS

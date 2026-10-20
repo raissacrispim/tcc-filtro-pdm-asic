@@ -1,22 +1,25 @@
 #!/bin/bash
 
 # ============================================================
-# Analise de timing pos-layout em varios corners (PrimeTime)
+# Analise de timing pos-layout (signoff) em varios corners e
+# modos (PrimeTime)
 # Filtro PDM CIC + FIR
 #
 # Uso (a partir da raiz do repositorio, apos finish.tcl):
 #
 #   sta/scripts/run_sta.sh
 #
-# O P&R foi otimizado somente no corner tipico. Aqui o mesmo
-# layout e verificado nos extremos de processo, tensao e
-# temperatura (PVT) da biblioteca SAED32:
+# Corners da biblioteca SAED32 (PVT):
+#   tt0p85v25c  tipico   (0,85 V, 25 C)   Cmax
+#   ss0p75v125c lento    (0,75 V, 125 C)  Cmax  - pior caso de setup
+#   ff0p95vn40c rapido   (0,95 V, -40 C)  Cmin  - pior caso de hold
 #
-#   tt0p85v25c  tipico   (0,85 V, 25 C)   - referencia do fluxo
-#   ss0p75v125c lento    (0,75 V, 125 C)  - pior caso de setup
-#   ff0p95vn40c rapido   (0,95 V, -40 C)  - pior caso de hold
+# Modos:
+#   func  operacao normal (scan_en = 0)
+#   scan  cadeia de scan e transicoes de scan_en
 #
-# Parasitas: Cmax no tipico e no lento; Cmin no rapido.
+# Criterio de aprovacao: 0 endpoints com setup ou hold violado
+# em todos os corners e modos (incerteza do SDC, sem alteracao).
 # ============================================================
 
 set -e
@@ -36,8 +39,10 @@ CORNERS=(
     "ss0p75v125c pnr/output/filtro_pdm.Cmax_25.spef"
     "ff0p95vn40c pnr/output/filtro_pdm.Cmin_25.spef"
 )
+MODOS=(func scan)
 
 mkdir -p sta/reports
+FALHAS=0
 
 for ITEM in "${CORNERS[@]}"; do
 
@@ -45,26 +50,38 @@ for ITEM in "${CORNERS[@]}"; do
 
     if [ ! -f "$DB_DIR/saed32rvt_${CORNER}.db" ]; then
         echo "ERRO: biblioteca saed32rvt_${CORNER}.db nao encontrada."
-        echo "Corners disponiveis:"
-        ls "$DB_DIR" | grep '^saed32rvt_.*\.db$'
         exit 1
     fi
-
     if [ ! -f "$SPEF" ]; then
         echo "ERRO: $SPEF nao encontrado. Execute finish.tcl."
         exit 1
     fi
 
-    mkdir -p "sta/reports/$CORNER"
+    for MODO in "${MODOS[@]}"; do
 
-    STA_CORNER=$CORNER STA_SPEF=$SPEF \
-        pt_shell -f sta/scripts/sta_corner.tcl \
-        > "sta/reports/$CORNER/pt_shell.log" 2>&1 || true
+        REP="sta/reports/${CORNER}_${MODO}"
+        mkdir -p "$REP"
 
-    sed -n '/^======/,/^======/p' "sta/reports/$CORNER/pt_shell.log"
+        STA_CORNER=$CORNER STA_SPEF=$SPEF STA_MODO=$MODO \
+            pt_shell -f sta/scripts/sta_corner.tcl \
+            > "$REP/pt_shell.log" 2>&1 || true
 
-    if ! grep -q "Pior setup" "sta/reports/$CORNER/pt_shell.log"; then
-        echo "ERRO no corner $CORNER: veja sta/reports/$CORNER/pt_shell.log"
-    fi
+        sed -n '/^======/,/^======/p' "$REP/pt_shell.log"
 
+        if ! grep -q "Endpoints com hold violado : 0" "$REP/pt_shell.log" ||
+           ! grep -q "Endpoints com setup violado: 0" "$REP/pt_shell.log"; then
+            echo "REPROVADO: $CORNER / $MODO (veja $REP/)"
+            FALHAS=$((FALHAS + 1))
+        fi
+        grep -E '^Error' "$REP/pt_shell.log" | sort | uniq -c || true
+
+    done
 done
+
+echo
+if [ "$FALHAS" -eq 0 ]; then
+    echo "STA APROVADA: 0 violacoes de setup e hold em 3 corners x 2 modos"
+else
+    echo "STA REPROVADA: $FALHAS combinacoes corner/modo com violacoes"
+    exit 1
+fi

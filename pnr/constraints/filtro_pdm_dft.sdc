@@ -11,21 +11,23 @@
 # Fusion Compiler. Em operacao normal, scan_en = 0.
 #
 # Mesmas hipoteses preliminares das demais entradas/saidas:
-# testador sincrono ao clock, orcamento externo de 20 ns.
+# testador sincrono ao clock da placa (vclk, definido em
+# filtro_pdm_physical.sdc), orcamento externo de 20 ns.
 # ============================================================
 
-set_input_delay -clock clk \
+set_input_delay -clock vclk \
     -min 0.0 [get_ports {scan_en scan_in}]
 
-set_input_delay -clock clk \
+set_input_delay -clock vclk \
     -max 20.0 [get_ports {scan_en scan_in}]
 
-set_input_transition 0.10 [get_ports {scan_en scan_in}]
+set_driving_cell -lib_cell NBUFFX8_RVT -pin Y \
+    [get_ports {scan_en scan_in}]
 
-set_output_delay -clock clk \
+set_output_delay -clock vclk \
     -min 0.0 [get_ports scan_out]
 
-set_output_delay -clock clk \
+set_output_delay -clock vclk \
     -max 20.0 [get_ports scan_out]
 
 set_load 2.0 [get_ports scan_out]
