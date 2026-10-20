@@ -123,7 +123,19 @@ proc eco_max_cap {tag} {
             puts "  [get_object_name $celula] ($ref): celula de clock/fixa, mantida"
             continue
         }
-        set nova [maior_drive $ref]
+        # Flip-flops nao sao trocados por versoes maiores: o pino
+        # CLK maior sobrecarrega a arvore de clock (5 redes
+        # ZCTSNET ate 72 fF para limite de 64 fF quando SDFFX1 ->
+        # SDFFX2). Recebem um buffer na saida, como as celulas
+        # ja no maior tamanho.
+        set sequencial 0
+        if {[catch {set sequencial [get_attribute $celula is_sequential]}]} {
+            set sequencial [string match "*DFF*" $ref]
+        }
+        set nova ""
+        if {$sequencial ne "true" && $sequencial ne "1"} {
+            set nova [maior_drive $ref]
+        }
         if {$nova ne ""} {
             size_cell $celula $nova
             puts "  [get_object_name $celula]: $ref -> [get_object_name $nova]"
