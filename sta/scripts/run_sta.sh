@@ -66,10 +66,10 @@ for ITEM in "${CORNERS[@]}"; do
             pt_shell -f sta/scripts/sta_corner.tcl \
             > "$REP/pt_shell.log" 2>&1 || true
 
-        sed -n '/^======/,/^======/p' "$REP/pt_shell.log"
+        sed -n 's/^STA| //p' "$REP/pt_shell.log"
 
-        if ! grep -q "Endpoints com hold violado : 0" "$REP/pt_shell.log" ||
-           ! grep -q "Endpoints com setup violado: 0" "$REP/pt_shell.log"; then
+        if ! grep -q "^STA| Endpoints com hold violado : 0$" "$REP/pt_shell.log" ||
+           ! grep -q "^STA| Endpoints com setup violado: 0$" "$REP/pt_shell.log"; then
             echo "REPROVADO: $CORNER / $MODO (veja $REP/)"
             FALHAS=$((FALHAS + 1))
         fi
