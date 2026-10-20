@@ -129,18 +129,21 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 | Simulação gate-level pós-síntese | 7/7 testes aprovados |
 | Simulação pós-layout com SDF (PrimeTime) | 10/10 testes aprovados; anotação sem erros ou avisos; 0 violações de timing |
 | DFT | 1 cadeia de scan, 1.332 flip-flops |
-| ATPG pós-layout | stuck-at 98,56%; transition 97,87% |
+| ATPG pós-layout | stuck-at 98,63%; transition 98,28% |
 | DRC (IC Validator) | CLEAN (396 regras) |
 | LVS (IC Validator) | PASS |
-| Área de células | 40.332 µm² (utilização do core 84%) |
-| Células | 9.932 (sem fillers) |
+| Core / chip | 240 × 240 µm (57.349 µm²) / 67.328 µm² |
+| Área de células | 40.332 µm² (utilização do core 70,3%) |
+| Células | 9.892 (sem fillers) |
 | Capacitância/transição máximas | 0 violações |
-| Setup (tt / ss / ff) | em revisão (ver docs/auditoria_sta.md) |
-| Hold (tt / ss / ff, funcional e scan) | em revisão (ver docs/auditoria_sta.md) |
-| Potência dinâmica (SAIF, sinal de 50 kHz com ruído) | 53,2 µW (interna 40,3; chaveamento 12,9) |
-| Potência dinâmica sem vetores | 122,4 µW |
-| Potência de fuga | 1,21 mW |
-| Potência total (SAIF) | 1,26 mW (FIR: 87%) |
+| Setup (tt / ss / ff) | +60,21 / +56,83 / +61,88 ns |
+| Hold, modo funcional (tt / ss / ff) | +0,1402 / +0,3938 / +0,0005 ns |
+| Hold, modo scan (tt / ss / ff) | +0,1269 / +0,3627 / +0,0002 ns |
+| STA (3 corners × 2 modos, incerteza de hold 0,10 ns) | 0 violações de setup e hold |
+| Potência dinâmica (SAIF, sinal de 50 kHz com ruído) | 53,4 µW (interna 41,1; chaveamento 12,3) |
+| Potência dinâmica sem vetores | 36,9 µW |
+| Potência de fuga | 1,24 mW |
+| Potência total (SAIF) | 1,29 mW (FIR: 87,4%) |
 
 Corners de timing (PrimeTime): tt0p85v25c, ss0p75v125c (0,75 V, 125 °C) e ff0p95vn40c (0,95 V, −40 °C).
 
@@ -155,21 +158,24 @@ Foi verificado que:
 
 Causa, evidências e comandos: [docs/auditoria_sdf.md](docs/auditoria_sdf.md).
 
-### Timing pós-layout (em revisão)
+### Timing pós-layout
 
 Uma auditoria independente da STA encontrou erros na metodologia anterior:
 - a latência de E/S era lida da coluna de transição;
 - a incerteza de hold era reduzida para 0,05 ns;
 - o corner rápido era aproximado no P&R.
 
-Os resultados de hold publicados anteriormente não são válidos.
+Os resultados publicados antes dela não são válidos.
 
-A correção, ainda em execução, inclui:
-- clock virtual para as E/S;
-- cenários MCMM (tt/ff, modos funcional e scan) no Fusion Compiler;
-- signoff no PrimeTime com a incerteza do SDC (0,10 ns) em 3 corners × 2 modos.
+Correção:
+- **E/S:** referenciadas a um clock virtual (`vclk`, clock da placa), mantido ideal no P&R.
+- **P&R:** cenários MCMM (`func_tt`, `func_ff`, `scan_tt`, `scan_ff`), com a biblioteca `ff0p95vn40c` conferida pelo PVT. O `finish.tcl` corrige o hold residual dos caminhos Q → SI e a capacitância máxima por ECO.
+- **Floorplan:** core ampliado de 220 para 240 µm (84% → 70% de utilização), para dar espaço às correções.
+- **Signoff no PrimeTime:** usa as restrições originais (incerteza de hold de 0,10 ns), em 3 corners × 2 modos (funcional e scan), com a contagem de endpoints com 4 casas decimais.
 
-Causa, diagnóstico e critérios: [docs/auditoria_sta.md](docs/auditoria_sta.md).
+As folgas de hold no corner ff (+0,0005 ns funcional, +0,0002 ns scan) já descontam a incerteza de 0,10 ns, que é a margem de jitter e de projeto.
+
+Causa, diagnóstico, correção e critérios: [docs/auditoria_sta.md](docs/auditoria_sta.md).
 
 ## Ferramentas
 
