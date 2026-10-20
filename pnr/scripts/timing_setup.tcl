@@ -113,33 +113,29 @@ set_voltage 0.95 -corners ff -object_list [get_supply_nets VDD]
 set_voltage 0.0  -corners ff -object_list [get_supply_nets VSS]
 set_parasitic_parameters -corners ff -early_spec Cmin -late_spec Cmin
 
-# Confere o pane da NDM escolhido para cada corner: processo,
-# tensao e temperatura efetivos devem ser iguais aos pedidos.
-# A otimizacao de hold no corner errado custaria horas de
-# execucao. O report_pvt nao mostra o nome do corner da
-# biblioteca, so os valores especificados e efetivos.
+# Confere o pane da NDM escolhido para cada corner. A otimizacao
+# de hold no corner errado custaria horas de execucao.
+# O report_pvt so detalha os corners com diferenca de PVT
+# (PVT-020/PVT-030, valores especificados x efetivos); um corner
+# exato e informado com "Corner <nome>: no PVT mismatches"
+# (PVT-032). O nome do corner da biblioteca nao e mostrado.
 redirect -variable txt {report_pvt}
 set f [open pnr/reports/place/pvt.rpt w]
 puts $f $txt
 close $f
-set conferidos 0
-set diferencas {}
-foreach linha [split $txt "\n"] {
-    if {[regexp {(Process Number|VDD\) Voltage|Temperature):\s+specified:\s+(-?[0-9.]+)\s.*effective:\s+(-?[0-9.]+)} \
-            $linha -> grandeza pedido efetivo]} {
-        incr conferidos
-        if {abs($pedido - $efetivo) > 1e-6} {
-            lappend diferencas "$grandeza: pedido $pedido, efetivo $efetivo"
-        }
+set falhou 0
+foreach corner {tt ff} {
+    if {[string match "*Corner ${corner}: no PVT mismatches*" $txt]} {
+        puts "PVT conferido: corner $corner sem diferencas (PVT-032)"
+    } else {
+        puts "ERRO: corner $corner com PVT diferente da biblioteca."
+        set falhou 1
     }
 }
-if {$conferidos == 0 || [llength $diferencas] > 0} {
-    puts "ERRO: PVT dos corners diferente da biblioteca ($conferidos valores conferidos)."
-    foreach d $diferencas { puts "  $d" }
+if {$falhou} {
     puts "Veja pnr/reports/place/pvt.rpt"
     return -code error
 }
-puts "PVT conferido: $conferidos valores iguais aos da biblioteca (tt0p85v25c, ff0p95vn40c)"
 
 
 # ------------------------------------------------------------
