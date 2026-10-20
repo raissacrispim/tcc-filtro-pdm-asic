@@ -148,4 +148,26 @@ sta/scripts/run_sdf_gls.sh && sim/scripts/compile_gls.sh pnr sdf && sim/scripts/
 
 ## Resultados após a correção
 
-*(a preencher com o resultado da nova execução)*
+Execução de 20/10/2026: core de 240 × 240 µm e fluxo completo (`setup` → `finish`).
+
+| Verificação | Antes da auditoria | Depois da correção |
+|---|---|---|
+| Incerteza de hold no signoff | 0,05 ns (reduzida) | 0,10 ns (SDC) |
+| Modos analisados | 1 (sem case analysis) | funcional e scan |
+| STA, endpoints com hold violado (ff) | 169 (auditoria) | **0** |
+| STA, endpoints com setup violado | 0 | **0** |
+| Setup (tt / ss / ff) | +60,1 / +56,6 / +61,8 ns | +60,21 / +56,83 / +61,88 ns |
+| Hold funcional (tt / ss / ff) | — | +0,1402 / +0,3938 / +0,0005 ns |
+| Hold scan (tt / ss / ff) | — | +0,1269 / +0,3627 / +0,0002 ns |
+| Capacitância máxima (FC) | 0 | 0 |
+| DRC (IC Validator) | CLEAN | 0 violações |
+| LVS | PASS | PASS |
+| GLS pós-layout com SDF | 10/10 | 10/10, saídas idênticas às de referência |
+| ATPG stuck-at / transition | 98,56% / 97,87% | 98,63% / 98,28% |
+| Utilização do core | 84% (220 × 217 µm) | 70,3% (240 × 240 µm) |
+| Células (sem fillers) | 9.932 | 9.892 |
+| Potência total (SAIF) | 1,26 mW | 1,29 mW (dinâmica 53,4 µW; fuga 1,24 mW) |
+
+As folgas de hold no ff são pequenas, mas positivas, e já descontam a incerteza de hold de 0,10 ns, que inclui jitter e margem de projeto. Não foi acrescentada margem extra no P&R.
+
+O `check_routes` do Fusion Compiler acusa DRCs de roteamento que o IC Validator, ferramenta de signoff, não confirma (0 violações).

@@ -78,3 +78,9 @@ pnr/work_*/
 legalizer_debug_plots/
 .graph_data.txt
 compile_rtl.log
+
+# Diagnostico de STA: so o resumo e versionado
+sta/diagnostico/reports/*/
+# Arquivos auxiliares das ferramentas
+check_design.ems
+sim/sdfAnnotateInfo
