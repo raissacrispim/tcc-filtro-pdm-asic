@@ -4,25 +4,25 @@
 read_netlist $SAED32_V -library
  Begin reading netlist ( /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v )...
  End parsing Verilog file /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v with 0 errors.
- End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.10 sec, Memory=2MB
+ End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.12 sec, Memory=2MB
 read_netlist $NETLIST
  Begin reading netlist ( pnr/output/filtro_pdm_pnr.v )...
  End parsing Verilog file pnr/output/filtro_pdm_pnr.v with 0 errors.
- End reading netlist: #modules=2, top=filtro_pdm, #lines=31907, CPU_time=0.08 sec, Memory=5MB
+ End reading netlist: #modules=2, top=filtro_pdm, #lines=31600, CPU_time=0.09 sec, Memory=5MB
 run_build_model filtro_pdm
  ------------------------------------------------------------------------------
  Begin build model for topcut = filtro_pdm ...
  ------------------------------------------------------------------------------
- There were 49597 primitives and 176 faultable pins removed during model optimizations
- Warning: Rule B7 (undriven module output pin) was violated 20 times.
- Warning: Rule B8 (unconnected module input pin) was violated 24 times.
- Warning: Rule B9 (undriven module internal net) was violated 24 times.
- Warning: Rule B10 (unconnected module internal net) was violated 220 times.
+ There were 49412 primitives and 176 faultable pins removed during model optimizations
+ Warning: Rule B7 (undriven module output pin) was violated 3 times.
+ Warning: Rule B8 (unconnected module input pin) was violated 2 times.
+ Warning: Rule B9 (undriven module internal net) was violated 2 times.
+ Warning: Rule B10 (unconnected module internal net) was violated 191 times.
  Warning: Rule N20 (underspecified UDP) was violated 2 times.
- End build model: #primitives=37899, CPU_time=0.07 sec, Memory=14MB
+ End build model: #primitives=37735, CPU_time=0.09 sec, Memory=14MB
  ------------------------------------------------------------------------------
  Begin learning analyses...
- End learning analyses, total learning CPU time=0.25 sec.
+ End learning analyses, total learning CPU time=0.26 sec.
  ------------------------------------------------------------------------------
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
@@ -46,7 +46,7 @@ run_drc $SPF
  Begin clock rules checking...
  Clock rules checking completed, CPU time=0.00 sec.
  Performing clock grouping analysis for 1 clock.
- Clock grouping results: #pairs=0, #groups=0, #serial_pairs=0, #disturbed_pairs=0, CPU time=0.00 sec.
+ Clock grouping results: #pairs=0, #groups=0, #serial_pairs=0, #disturbed_pairs=0, CPU time=0.01 sec.
  ------------------------------------------------------------------------------
  Begin tracing connection cones...
  Tracing connection cones completed, CPU time=0.00 sec.
@@ -72,7 +72,7 @@ run_drc $SPF
 # ------------------------------------------------------------
 set_faults -model transition
 add_faults -all
- 71774 faults were added to fault list.
+ 71742 faults were added to fault list.
 # Limite de tentativas por falha (padrao: 10).
 # Com o padrao, ~1.400 falhas foram abandonadas (abort) e
 # ficaram como "not detected". Um limite maior permite ao
@@ -94,36 +94,36 @@ run_atpg -auto_compression
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=61566, abort_limit=200...
+ Begin deterministic ATPG: #uncollapsed_faults=61086, abort_limit=200...
  Optimized clock launch transition fault ATPG is enabled.
- 32          49823  11743        0/0/20    83.64%      7.12
- 64           3107   8627        9/0/55    87.98%      9.34
- 93           4201   4422       9/4/324    93.83%     21.44
- 125          2534   1888       9/4/759    97.36%     27.64
- 140           366   1522      9/4/1340    97.87%     34.29
+ 32          48858  12228        0/0/22    82.96%      7.73
+ 64           4040   8178        9/1/61    88.60%      9.33
+ 95           4340   3835       9/4/277    94.65%     20.40
+ 127          2383   1452       9/4/699    97.97%     26.69
+ 144           219   1233      9/4/1176    98.28%     32.11
  
    Uncollapsed Transition Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      70239
+ Detected                         DT      70496
  Possibly detected                PT          0
  Undetectable                     UD          9
  ATPG untestable                  AU          4
- Not detected                     ND       1522
+ Not detected                     ND       1233
  -----------------------------------------------
- total faults                             71774
- test coverage                            97.87%
+ total faults                             71742
+ test coverage                            98.28%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                         140
+ #internal patterns                         144
      #basic_scan patterns                     1
-     #fast_sequential patterns              139
+     #fast_sequential patterns              143
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                           34.30
+ Total CPU time                           32.12
  -----------------------------------------------
 report_summaries > $REP/transition_summary.rpt
 # ------------------------------------------------------------
@@ -131,8 +131,8 @@ report_summaries > $REP/transition_summary.rpt
 # ------------------------------------------------------------
 write_patterns $OUT/filtro_pdm_transition.stil \
     -format stil -replace
- Patterns written reference 563 V statements, generating 188234 test cycles
- End writing file 'filtro_pdm_transition.stil' with 140 patterns, File_size = 479392, CPU_time = 0.0 sec.
+ Patterns written reference 579 V statements, generating 193574 test cycles
+ End writing file 'filtro_pdm_transition.stil' with 144 patterns, File_size = 491089, CPU_time = 0.0 sec.
 puts "ATPG transition: script executado ate o final."
 ATPG transition: script executado ate o final.
 puts "Cobertura em $REP/transition_summary.rpt"

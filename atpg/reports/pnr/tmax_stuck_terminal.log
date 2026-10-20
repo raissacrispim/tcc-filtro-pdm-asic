@@ -68,25 +68,25 @@ set_messages -log $REP/atpg_stuck.log -replace
 read_netlist $SAED32_V -library
  Begin reading netlist ( /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v )...
  End parsing Verilog file /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v with 0 errors.
- End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.13 sec, Memory=2MB
+ End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.12 sec, Memory=2MB
 read_netlist $NETLIST
  Begin reading netlist ( pnr/output/filtro_pdm_pnr.v )...
  End parsing Verilog file pnr/output/filtro_pdm_pnr.v with 0 errors.
- End reading netlist: #modules=2, top=filtro_pdm, #lines=31907, CPU_time=0.09 sec, Memory=5MB
+ End reading netlist: #modules=2, top=filtro_pdm, #lines=31600, CPU_time=0.08 sec, Memory=5MB
 run_build_model filtro_pdm
  ------------------------------------------------------------------------------
  Begin build model for topcut = filtro_pdm ...
  ------------------------------------------------------------------------------
- There were 49597 primitives and 176 faultable pins removed during model optimizations
- Warning: Rule B7 (undriven module output pin) was violated 20 times.
- Warning: Rule B8 (unconnected module input pin) was violated 24 times.
- Warning: Rule B9 (undriven module internal net) was violated 24 times.
- Warning: Rule B10 (unconnected module internal net) was violated 220 times.
+ There were 49412 primitives and 176 faultable pins removed during model optimizations
+ Warning: Rule B7 (undriven module output pin) was violated 3 times.
+ Warning: Rule B8 (unconnected module input pin) was violated 2 times.
+ Warning: Rule B9 (undriven module internal net) was violated 2 times.
+ Warning: Rule B10 (unconnected module internal net) was violated 191 times.
  Warning: Rule N20 (underspecified UDP) was violated 2 times.
- End build model: #primitives=37899, CPU_time=0.09 sec, Memory=14MB
+ End build model: #primitives=37735, CPU_time=0.09 sec, Memory=14MB
  ------------------------------------------------------------------------------
  Begin learning analyses...
- End learning analyses, total learning CPU time=0.26 sec.
+ End learning analyses, total learning CPU time=0.25 sec.
  ------------------------------------------------------------------------------
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
@@ -97,7 +97,7 @@ run_drc $SPF
  ------------------------------------------------------------------------------
  Begin reading test protocol file synth/netlist/filtro_pdm_syn.spf...
  End parsing STIL file synth/netlist/filtro_pdm_syn.spf with 0 errors.
- Test protocol file reading completed, CPU time=0.01 sec.
+ Test protocol file reading completed, CPU time=0.00 sec.
  ------------------------------------------------------------------------------
  Begin simulating test protocol procedures...
  Test protocol simulation completed, CPU time=0.00 sec.
@@ -119,8 +119,8 @@ run_drc $SPF
  Nonscan rules checking completed, CPU time=0.00 sec.
  ------------------------------------------------------------------------------
  Begin DRC dependent learning...
- Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.01 sec
- DRC dependent learning completed, CPU time=0.03 sec.
+ Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.00 sec
+ DRC dependent learning completed, CPU time=0.02 sec.
  ------------------------------------------------------------------------------
  Begin set operation for load unload constant latches...
  Set operation for load unload constant latches completed, CPU time=0.00 sec.
@@ -128,7 +128,7 @@ run_drc $SPF
  DRC Summary Report
  ------------------------------------------------------------------------------
  No violations occurred during DRC process.
- Design rules checking was successful, total CPU time=0.06 sec.
+ Design rules checking was successful, total CPU time=0.03 sec.
  ------------------------------------------------------------------------------
 report_rules -fail > $REP/drc_rules.rpt
 report_scan_chains > $REP/scan_chains.rpt
@@ -137,7 +137,7 @@ report_scan_chains > $REP/scan_chains.rpt
 # ------------------------------------------------------------
 set_faults -model stuck
 add_faults -all
- 77510 faults were added to fault list.
+ 77482 faults were added to fault list.
 # Limite de tentativas por falha (padrao: 10).
 # Com o padrao, ~1.400 falhas foram abandonadas (abort) e
 # ficaram como "not detected". Um limite maior permite ao
@@ -158,32 +158,33 @@ run_atpg -auto_compression
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=63029, abort_limit=200...
- 32          59630   3390       9/0/143    95.63%      8.86
- 64           2136   1254       9/0/650    98.38%     14.65
- 74            135   1119       9/0/965    98.56%     17.69
+ Begin deterministic ATPG: #uncollapsed_faults=62533, abort_limit=200...
+ 32          57277   5247        9/0/76    93.23%     10.13
+ 64           3590   1657       9/0/546    97.86%     14.06
+ 94            564   1093       9/0/939    98.59%     17.21
+ 98             35   1058       9/0/961    98.63%     17.39
  
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      76382
+ Detected                         DT      76415
  Possibly detected                PT          0
  Undetectable                     UD          9
  ATPG untestable                  AU          0
- Not detected                     ND       1119
+ Not detected                     ND       1058
  -----------------------------------------------
- total faults                             77510
- test coverage                            98.56%
+ total faults                             77482
+ test coverage                            98.63%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                          74
-     #basic_scan patterns                    74
+ #internal patterns                          98
+     #basic_scan patterns                    98
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                           17.70
+ Total CPU time                           17.40
  -----------------------------------------------
 report_summaries > $REP/stuck_summary.rpt
 report_faults -summary > $REP/stuck_faults.rpt
@@ -192,8 +193,8 @@ report_faults -summary > $REP/stuck_faults.rpt
 # ------------------------------------------------------------
 write_patterns $OUT/filtro_pdm_stuck.stil \
     -format stil -replace
- Patterns written reference 226 V statements, generating 100051 test cycles
- End writing file 'filtro_pdm_stuck.stil' with 74 patterns, File_size = 281706, CPU_time = 0.0 sec.
+ Patterns written reference 298 V statements, generating 132067 test cycles
+ End writing file 'filtro_pdm_stuck.stil' with 98 patterns, File_size = 349711, CPU_time = 0.0 sec.
 write_testbench \
     -input $OUT/filtro_pdm_stuck.stil \
     -output $OUT/filtro_pdm_stuck_tb \
@@ -204,3 +205,4 @@ ATPG stuck-at: script executado ate o final.
 puts "Cobertura em $REP/stuck_summary.rpt"
 Cobertura em atpg/reports/pnr/stuck_summary.rpt
 exit
+xterm: Xt error: Can't open display: :1435.0

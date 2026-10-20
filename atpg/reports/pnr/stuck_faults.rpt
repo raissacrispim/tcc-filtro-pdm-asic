@@ -2,12 +2,12 @@
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      76382
+ Detected                         DT      76415
  Possibly detected                PT          0
  Undetectable                     UD          9
  ATPG untestable                  AU          0
- Not detected                     ND       1119
+ Not detected                     ND       1058
  -----------------------------------------------
- total faults                             77510
- test coverage                            98.56%
+ total faults                             77482
+ test coverage                            98.63%
  -----------------------------------------------
