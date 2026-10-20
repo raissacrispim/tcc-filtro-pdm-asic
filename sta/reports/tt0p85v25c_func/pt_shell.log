@@ -1,0 +1,257 @@
+
+                                 PrimeTime (R)
+
+               Version X-2025.06-SP2 for linux64 - Oct 17, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+# ============================================================
+# sta_corner.tcl
+# Analise estatica de timing pos-layout (signoff)
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys PrimeTime
+# Tecnologia: SAED32 RVT
+#
+# Chamado por sta/scripts/run_sta.sh, que define:
+#   STA_CORNER  corner da biblioteca (tt0p85v25c, ss0p75v125c,
+#               ff0p95vn40c)
+#   STA_SPEF    parasitas extraidos (Cmax ou Cmin)
+#   STA_MODO    func  operacao normal (scan_en = 0)
+#               scan  sem case analysis: deslocamento da cadeia
+#                     (Q -> SI), transicoes de scan_en (-> SE) e
+#                     scan_in, alem dos caminhos funcionais
+#
+# Restricoes: as originais do projeto (pnr/constraints/), com o
+# clock propagado. As E/S sao referenciadas ao clock virtual
+# vclk (clock da placa, ideal). Nenhuma margem e alterada aqui:
+# incerteza de hold 0,10 ns e de setup 1,0 ns, do SDC.
+#
+# Historico (docs/auditoria_sta.md): a versao anterior reduzia a
+# incerteza de hold para 0,05 ns e lia a latencia de E/S da
+# coluna errada do report_clock_timing (transicao).
+# ============================================================
+set CORNER $env(STA_CORNER)
+tt0p85v25c
+set SPEF   $env(STA_SPEF)
+pnr/output/filtro_pdm.Cmax_25.spef
+set MODO   $env(STA_MODO)
+func
+set DB_DIR /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+set REP    sta/reports/${CORNER}_${MODO}
+sta/reports/tt0p85v25c_func
+file mkdir $REP
+# ------------------------------------------------------------
+# 1. Biblioteca do corner, netlist e parasitas
+# ------------------------------------------------------------
+set_app_var search_path [list . $DB_DIR]
+. /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm
+set_app_var link_path   [list * saed32rvt_${CORNER}.db]
+* saed32rvt_tt0p85v25c.db
+read_verilog pnr/output/filtro_pdm_pnr.v
+1
+current_design filtro_pdm
+Information: current_design won't return any data before link (DES-071)
+link_design
+Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.v'
+Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
+Linking design filtro_pdm...
+Information: Removing 1 unneeded designs..... (LNK-034)
+Information: 240 (81.63%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
+Information: total 240 library cells are unused (LNK-046)
+Design 'filtro_pdm' was successfully linked.
+Information: There are 9920 leaf cells, ports, hiers and 14032 nets in the design (LNK-047)
+1
+read_parasitics -format SPEF $SPEF
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+Information: read_parasitics command is executed in background
+1
+report_annotated_parasitics > $REP/parasitas.rpt
+# ------------------------------------------------------------
+# 2. Restricoes e modo
+# ------------------------------------------------------------
+read_sdc pnr/constraints/filtro_pdm_physical.sdc
+
+Reading SDC version 2.2...
+Warning: Creating virtual clock named 'vclk' with no sources. (UITE-121)
+1
+1
+read_sdc pnr/constraints/filtro_pdm_dft.sdc
+
+Reading SDC version 2.2...
+1
+1
+# Arvore de clock real (CTS); vclk permanece ideal
+set_propagated_clock [get_clocks clk]
+1
+switch $MODO {
+    func { set_case_analysis 0 [get_ports scan_en] }
+    scan { }
+    default { puts "ERRO: STA_MODO invalido: $MODO"; exit 1 }
+}
+1
+update_timing -full
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Building multi voltage information for entire design. (MV-022)
+1
+# ------------------------------------------------------------
+# 3. Relatorios
+# ------------------------------------------------------------
+redirect $REP/check_timing.rpt  { check_timing -verbose }
+redirect $REP/clocks.rpt        { report_clock -skew }
+redirect $REP/case_analysis.rpt { report_case_analysis }
+redirect $REP/clock_latency.rpt {
+    report_clock_timing -type latency -nworst 20 -significant_digits 4
+}
+redirect $REP/clock_skew.rpt {
+    report_clock_timing -type skew -significant_digits 4
+}
+report_global_timing -significant_digits 4 > $REP/global_timing.rpt
+report_timing -delay_type max -max_paths 10     -significant_digits 4 > $REP/timing_max.rpt
+report_timing -delay_type min -max_paths 10     -path_type full_clock_expanded -input_pins     -significant_digits 4 > $REP/timing_min.rpt
+report_constraint -all_violators -significant_digits 4     > $REP/violadores.rpt
+# ------------------------------------------------------------
+# 4. Contagem de violacoes por classe de caminho
+#
+# Um caminho por endpoint, 4 casas decimais: um slack que
+# aparece como 0,00 com 2 casas e violado e contado.
+# ------------------------------------------------------------
+proc classe {t} {
+    set ep [get_attribute $t endpoint]
+    set sp [get_attribute $t startpoint]
+    set epn [get_object_name $ep]
+    if {[get_attribute $ep object_class] eq "port"} { return "reg->saida" }
+    if {[get_attribute $sp object_class] eq "port"} {
+        return "entrada([get_object_name $sp])->reg"
+    }
+    if {[string match */SI $epn]} { return "reg->reg(SI)" }
+    if {[string match */SE $epn]} { return "reg->reg(SE)" }
+    return "reg->reg(D)"
+}
+proc violadores {tipo arquivo} {
+    set n {}
+    set wns {}
+    set f [open $arquivo w]
+    foreach_in_collection t [get_timing_paths -delay_type $tipo             -nworst 1 -max_paths 100000 -slack_lesser_than 0.0] {
+        set c [classe $t]
+        set s [get_attribute $t slack]
+        puts $f [format "%-28s %10.4f  %s <- %s" $c $s             [get_object_name [get_attribute $t endpoint]]             [get_object_name [get_attribute $t startpoint]]]
+        dict incr n $c
+        if {![dict exists $wns $c] || $s < [dict get $wns $c]} {
+            dict set wns $c $s
+        }
+    }
+    close $f
+    return [list $n $wns]
+}
+lassign [violadores min $REP/hold_violadores.txt] n_hold wns_hold
+lassign [violadores max $REP/setup_violadores.txt] n_setup wns_setup
+proc folga {args} {
+    set t [get_timing_paths {*}$args]
+    if {[sizeof_collection $t] == 0} { return "sem caminho" }
+    return [format "%.4f ns (%s -> %s)" [get_attribute $t slack]         [get_object_name [get_attribute $t startpoint]]         [get_object_name [get_attribute $t endpoint]]]
+}
+set entradas [remove_from_collection [all_inputs] [get_ports clk]]
+{"rst", "pdm_in", "scan_en", "scan_in"}
+set total_hold 0
+0
+dict for {c k} $n_hold { incr total_hold $k }
+set total_setup 0
+0
+dict for {c k} $n_setup { incr total_setup $k }
+# Resumo com o prefixo "STA|": o pt_shell ecoa os comandos do
+# script, e run_sta.sh mostra so as linhas do resumo
+set R {}
+lappend R "=================================================="
+==================================================
+lappend R "Corner     : $CORNER"
+================================================== {Corner     : tt0p85v25c}
+lappend R "Modo       : $MODO"
+================================================== {Corner     : tt0p85v25c} {Modo       : func}
+lappend R "Parasitas  : $SPEF"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef}
+lappend R "Pior setup : [folga -delay_type max]"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)}
+lappend R "Pior hold  : [folga -delay_type min]"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)}
+lappend R "Hold reg->reg  : [folga -delay_type min -from [all_registers -clock_pins] -to [all_registers -data_pins]]"
+Warning: There are 2664 invalid end points for constrained paths. (UITE-416)
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)}
+lappend R "Hold entradas  : [folga -delay_type min -from $entradas]"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)}
+lappend R "Hold saidas    : [folga -delay_type min -to [all_outputs]]"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)}
+lappend R "Endpoints com setup violado: $total_setup"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0}
+lappend R "Endpoints com hold violado : $total_hold"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0}
+dict for {c k} $n_hold {
+    lappend R [format "  hold %-28s %4d  WNS %.4f ns" $c $k [dict get $wns_hold $c]]
+}
+dict for {c k} $n_setup {
+    lappend R [format "  setup %-27s %4d  WNS %.4f ns" $c $k [dict get $wns_setup $c]]
+}
+lappend R "Relatorios : $REP/"
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/tt0p85v25c_func/}
+lappend R "=================================================="
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/tt0p85v25c_func/} ==================================================
+set f [open $REP/resumo.txt w]
+file36
+foreach linha $R {
+    puts "STA| $linha"
+    puts $f $linha
+}
+STA| ==================================================
+STA| Corner     : tt0p85v25c
+STA| Modo       : func
+STA| Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef
+STA| Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
+STA| Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)
+STA| Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)
+STA| Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)
+STA| Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)
+STA| Endpoints com setup violado: 0
+STA| Endpoints com hold violado : 0
+STA| Relatorios : sta/reports/tt0p85v25c_func/
+STA| ==================================================
+close $f
+exit
+Information: Defining new variable 'R'. (CMD-041)
+Information: Defining new variable 'f'. (CMD-041)
+Information: Defining new variable 'linha'. (CMD-041)
+Information: Defining new variable 'total_hold'. (CMD-041)
+Information: Defining new variable 'n_setup'. (CMD-041)
+Information: Defining new variable 'wns_hold'. (CMD-041)
+Information: Defining new variable 'MODO'. (CMD-041)
+Information: Defining new variable 'DB_DIR'. (CMD-041)
+Information: Defining new variable 'SPEF'. (CMD-041)
+Information: Defining new variable 'CORNER'. (CMD-041)
+Information: Defining new variable 'REP'. (CMD-041)
+Information: Defining new variable 'total_setup'. (CMD-041)
+Information: Defining new variable 'entradas'. (CMD-041)
+Information: Defining new variable 'n_hold'. (CMD-041)
+Information: Defining new variable 'wns_setup'. (CMD-041)
+
+Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
+Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
+Maximum memory usage for this session: 2874.18 MB
+CPU usage for this session: 14 seconds 
+Elapsed time for this session: 10 seconds
+Diagnostics summary: 3 warnings, 25 informationals
+
+Thank you for using pt_shell!

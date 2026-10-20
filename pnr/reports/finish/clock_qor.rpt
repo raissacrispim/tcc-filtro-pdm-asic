@@ -1,12 +1,15 @@
  Info: Initializing timer in CLOCK_SYN_REPORT_MODE
 Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
-Information: Activity for scenario default was cached, no propagation required. (POW-005)
+Warning: The scenario func_ff has max transition DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+Warning: The scenario func_ff has max capacitance DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+Warning: The scenario scan_ff has max transition DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+Warning: The scenario scan_ff has max capacitance DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
 ****************************************
 Report : clock qor
         -type summary
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 15:02:59 2026
+Date   : Tue Oct 20 17:42:00 2026
 ****************************************
 
 Attributes
@@ -18,20 +21,41 @@ U User Defined Skew Group
 D Default Skew Group
 * Generated Clock Balanced Separately
 
-Information: Activity for scenario default was cached, no propagation required. (POW-005)
-==============================================
-==== Summary Reporting for Corner default ====
-==============================================
+=========================================
+==== Summary Reporting for Corner ff ====
+=========================================
 
-=========================================================== Summary Table for Corner default ===========================================================
+============================================================= Summary Table for Corner ff ==============================================================
 Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
 Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
                                                                 Count      Area      Area
 --------------------------------------------------------------------------------------------------------------------------------------------------------
-### Mode: default, Scenario: default
-clk                                     M,D      1332      3       36    166.72    166.72      0.13      0.03         0         0   7632.10
+### Mode: func, Scenario: func_ff
+clk                                     M,D      1332      3       45    193.40    193.40      0.09      0.05         0         0   6781.30
+### Mode: scan, Scenario: scan_ff
+clk                                     M,D      1332      3       45    193.40    193.40      0.09      0.05         0         0   6781.30
 --------------------------------------------------------------------------------------------------------------------------------------------------------
-All Clocks                                       1332      3       36    166.72    166.72      0.13      0.03         0         0   7632.10
+All Clocks                                       1332      3       45    193.40    193.40      0.09      0.05         0         0   6781.30
+
+
+Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
+Warning: The scenario scan_tt has max transition DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+Warning: The scenario scan_tt has max capacitance DRC fixing disabled using the set_scenario_status command.  High DRC count may be expected.
+=========================================
+==== Summary Reporting for Corner tt ====
+=========================================
+
+============================================================= Summary Table for Corner tt ==============================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: func, Scenario: func_tt
+clk                                     M,D      1332      3       45    193.40    193.40      0.17      0.10         0         0   6781.30
+### Mode: scan, Scenario: scan_tt
+clk                                     M,D      1332      3       45    193.40    193.40      0.17      0.10         0         0   6781.30
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                       1332      3       45    193.40    193.40      0.17      0.10         0         0   6781.30
 
 
 Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)

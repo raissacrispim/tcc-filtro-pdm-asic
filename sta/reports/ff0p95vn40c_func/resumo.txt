@@ -1,0 +1,13 @@
+==================================================
+Corner     : ff0p95vn40c
+Modo       : func
+Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef
+Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
+Pior hold  : 0.0005 ns (u_fir/delay_reg_0__13_/CLK -> u_fir/delay_reg_1__13_/D)
+Hold reg->reg  : 0.0005 ns (u_fir/delay_reg_0__13_/CLK -> u_fir/delay_reg_1__13_/D)
+Hold entradas  : 0.0129 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)
+Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)
+Endpoints com setup violado: 0
+Endpoints com hold violado : 0
+Relatorios : sta/reports/ff0p95vn40c_func/
+==================================================

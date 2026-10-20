@@ -8,15 +8,15 @@ Report : annotated_parasitics
 	-pin_to_pin_nets
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Fri Oct 16 15:16:11 2026
+Date   : Tue Oct 20 17:48:20 2026
 ****************************************
 
                     |         |         |         |   RC    |   Not   |
 Net Type            |  Total  | Lumped  |  RC pi  | network |Annotated|
 --------------------+---------+---------+---------+---------+---------+
 Internal nets       |         |         |         |         |         |
-  - Pin to pin nets |   13819 |       0 |       0 |   13819 |       0 |
-  - Driverless nets |      44 |       0 |       0 |       0 |      44 |
+  - Pin to pin nets |   13759 |       0 |       0 |   13759 |       0 |
+  - Driverless nets |       5 |       0 |       0 |       0 |       5 |
   - Loadless nets   |     176 |       0 |       0 |       0 |     176 |
 --------------------+---------+---------+---------+---------+---------+
 Boundary/port nets  |         |         |         |         |         |
@@ -24,6 +24,6 @@ Boundary/port nets  |         |         |         |         |         |
   - Driverless nets |       0 |       0 |       0 |       0 |       0 |
   - Loadless nets   |       0 |       0 |       0 |       0 |       0 |
 --------------------+---------+---------+---------+---------+---------+
-                    |   14064 |       0 |       0 |   13844 |     220 |
+                    |   13965 |       0 |       0 |   13784 |     181 |
 
 1

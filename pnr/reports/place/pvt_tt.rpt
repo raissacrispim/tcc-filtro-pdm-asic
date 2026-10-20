@@ -1,0 +1,48 @@
+Information: Timer using 1 threads
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 465 MB / Date: Tue Oct 20 11:35:57 2026
+
+Warning: Corner ff:  0 process number, 0 process label, 1 voltage, and 0 temperature mismatches. (PVT-030)
+Warning: 8082 cells affected for early, 8082 for late. (PVT-031)
+Warning: 0 port driving_cells affected for early, 0 for late. (PVT-034)
+Information: Corner tt: no PVT mismatches. (PVT-032)
+Timing Update Completed: Mem-peak: 465 MB / Date: Tue Oct 20 11:35:57 2026
+
+****************************************
+Report : pvt
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Tue Oct 20 11:35:57 2026
+****************************************
+
+--------------------------------------------------------------------------------
+Information: Corner tt: no PVT mismatches. (PVT-032)
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+Warning: Corner ff:  0 process number, 0 process label, 1 voltage, and 0 temperature mismatches. (PVT-030)
+Warning: 8082 cells affected for early, 8082 for late. (PVT-031)
+Warning: 0 port driving_cells affected for early, 0 for late. (PVT-034)
+--------------------------------------------------------------------------------
+
+Warning: Mismatched voltage in corner ff. (PVT-020)
+Library has 27 panes
+Entry 69:
+  Lib: saed32rvt_base_frame_timing
+  Pane: 23
+  Process Label:  specified: (none)        effective: (none)      
+  Process Number: specified: 1             effective: 1           
+  Rail 0 (default) Voltage: specified: --            dynamic: --            effective: 0.85          static: 0.85        
+* Rail 1 (VDD) Voltage: specified: 0.95          dynamic: --            effective: 0.85          static: 0.85        
+  Rail 2 (VDDG) Voltage: specified: --            dynamic: --            effective: 0.85          static: 0.85        
+  Rail 3 (VSS) Voltage: specified: 0.00          dynamic: --            effective: 0.00          static: 0.00        
+  Temperature:    specified: -40.00        effective: -40.00      
+  Primary rail: 1  Secondary rail: --  N-bias rail: --  P-bias rail: --
+  early cell refs: 8082     port refs: 0     driving_cell refs: 0     lib refs: 0   
+  late  cell refs: 8082     port refs: 0     driving_cell refs: 0     lib refs: 0   
+
+
+
+1
+

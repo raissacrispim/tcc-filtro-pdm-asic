@@ -4,13 +4,13 @@ Report : power
         -significant_digits 2
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 16:17:16 2026
+Date   : Tue Oct 20 17:55:01 2026
 ****************************************
-Information: Activity for scenario default was cached, no propagation required. (POW-005)
-Information: Activity for scenario default was cached, no propagation required. (POW-005)
-Mode: default
-Corner: default
-Scenario: default
+Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
+Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
+Mode: func
+Corner: tt
+Scenario: func_tt
 Voltage: 0.85
 Temperature: 25.00
 
@@ -31,7 +31,7 @@ VSS (ground) probability 1.00 (default)
 
 Hierarchy                                                  Internal Power        Switching Power          Leakage Power            Total Power       %
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-filtro_pdm                                                       4.03e+07               1.29e+07               1.21e+09               1.26e+09    100.00
+filtro_pdm                                                       4.11e+07               1.23e+07               1.24e+09               1.29e+09    100.00
   u_fir (fir_BITS_IN17_BITS_COEF16_BITS_ACC34_BITS_OUT19_TAPS65_FRAC15_test_1)
-                                                                 3.14e+07               8.57e+06               1.06e+09               1.10e+09     86.84
+                                                                 3.27e+07               9.75e+06               1.09e+09               1.13e+09     87.42
 1

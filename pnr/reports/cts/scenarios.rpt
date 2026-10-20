@@ -1,0 +1,16 @@
+****************************************
+Report : scenario
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Tue Oct 20 17:30:10 2026
+****************************************
+
+                                                                     Leakage  Dynamic                              Cell  Signal
+Name            Mode            Corner          Active  Setup  Hold  Power    Power    Max_tran  Max_cap  Min_cap  EM    EM
+----------------------------------------------------------------------------------------------------------------------------------
+func_ff *       func            ff              true    false  true  false    false    false     false    true     false false
+func_tt *       func            tt              true    true   true  true     true     true      true     true     false false
+scan_ff *       scan            ff              true    false  true  false    false    false     false    true     false false
+scan_tt *       scan            tt              true    false  true  false    false    false     false    true     false false
+
+1

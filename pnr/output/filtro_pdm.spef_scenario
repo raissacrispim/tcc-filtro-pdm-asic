@@ -1,6 +1,12 @@
 pnr/output/filtro_pdm.Cmax_25.spef for scenarios: 
-	 scenario: default, corner type: late
+	 scenario: func_tt, corner type: late
+	 scenario: scan_tt, corner type: late
 
 pnr/output/filtro_pdm.Cmin_25.spef for scenarios: 
-	 scenario: default, corner type: early
+	 scenario: func_tt, corner type: early
+	 scenario: scan_tt, corner type: early
+
+pnr/output/filtro_pdm.Cmin_-40.spef for scenarios: 
+	 scenario: func_ff, corner type: late/early
+	 scenario: scan_ff, corner type: late/early
 

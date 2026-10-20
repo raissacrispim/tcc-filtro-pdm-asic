@@ -1,0 +1,27 @@
+****************************************
+Report : constraint
+        -all_violators
+        -max_capacitance
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Tue Oct 20 17:40:37 2026
+****************************************
+
+
+
+Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
+   Mode: func Corner: tt
+   Scenario: func_tt
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   u_fir/copt_gre_net_1512     16.00          16.17          -0.17  (VIOLATED) 
+     PIN : u_fir/copt_gre_mc_inst_4025/Y
+                               16.00          16.17          -0.17  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 1
+
+   Total number of violation(s): 1
+1

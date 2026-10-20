@@ -1,0 +1,13 @@
+==================================================
+Corner     : tt0p85v25c
+Modo       : scan
+Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef
+Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
+Pior hold  : 0.1269 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
+Hold reg->reg  : 0.1269 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
+Hold entradas  : 0.1536 ns (scan_en -> u_fir/delay_reg_12__1_/SE)
+Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)
+Endpoints com setup violado: 0
+Endpoints com hold violado : 0
+Relatorios : sta/reports/tt0p85v25c_scan/
+==================================================

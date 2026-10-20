@@ -3,19 +3,19 @@ Report : power
         -significant_digits 2
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 13 16:17:15 2026
+Date   : Tue Oct 20 17:55:00 2026
 ****************************************
-Information: Activity propagation will be performed for scenario default.
-Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
-Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Activity propagation will be performed for scenario func_tt.
+Information: Doing activity propagation for mode 'func' and corner 'tt' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario func_tt (POW-052)
 Information: Running switching activity propagation in scalar mode!
 
  **** Information : No. of simulation cycles = 6 ****
-[Non-Incremental Power-Update] SCENE[default_late] PROP[late] InstanceSize[21136]
-Information: Activity for scenario default was cached, no propagation required. (POW-005)
-Mode: default
-Corner: default
-Scenario: default
+[Non-Incremental Power-Update] SCENE[func_tt_late] PROP[late] InstanceSize[30963]
+Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
+Mode: func
+Corner: tt
+Scenario: func_tt
 Voltage: 0.85
 Temperature: 25.00
 
@@ -33,11 +33,11 @@ Supply nets:
 VDD (power) probability 1.00 (default)
 VSS (ground) probability 1.00 (default)
 
-  Cell Internal Power    = 4.03e+07 pW ( 75.8%)
-  Net Switching Power    = 1.29e+07 pW ( 24.2%)
-Total Dynamic Power      = 5.32e+07 pW (100.0%)
+  Cell Internal Power    = 4.11e+07 pW ( 77.0%)
+  Net Switching Power    = 1.23e+07 pW ( 23.0%)
+Total Dynamic Power      = 5.34e+07 pW (100.0%)
 
-Cell Leakage Power       = 1.21e+09 pW
+Cell Leakage Power       = 1.24e+09 pW
 
 
   Attributes
@@ -50,10 +50,10 @@ Power Group         Internal Power        Switching Power          Leakage Power
 io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-clock_network             2.74e+07               6.57e+06               1.06e+07               4.46e+07    (  3.5%)        i
-register                  2.33e+06               5.96e+05               4.10e+08               4.13e+08    ( 32.7%)         
+clock_network             2.83e+07               5.51e+06               2.66e+07               6.04e+07    (  4.7%)        i
+register                  2.17e+06               5.69e+05               4.09e+08               4.12e+08    ( 31.9%)         
 sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-combinational             1.06e+07               5.71e+06               7.88e+08               8.04e+08    ( 63.8%)         
+combinational             1.07e+07               6.21e+06               8.04e+08               8.20e+08    ( 63.5%)         
 -----------------------------------------------------------------------------------------------------------------------------
-Total                     4.03e+07 pW            1.29e+07 pW            1.21e+09 pW            1.26e+09 pW
+Total                     4.11e+07 pW            1.23e+07 pW            1.24e+09 pW            1.29e+09 pW
 1

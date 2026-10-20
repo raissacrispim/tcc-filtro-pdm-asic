@@ -15,7 +15,7 @@ Layout netlist     = /home/raissa.crispim/tcc_filtro/verif/run_lvs/filtro_pdm.ne
 Runset file        = saed32nm_1p9m_lvs_rules_local.rs
 Working directory  = /home/raissa.crispim/tcc_filtro/verif/run_lvs
 Compare directory  = run_details/compare
-Compare start time = 2026-10-13 15:05:05
+Compare start time = 2026-10-20 17:44:34
 
 
 
@@ -42,12 +42,12 @@ TOP-level Post-compare summary (* = unmatched devices, nets or ports):
         Matched      Unmatched    Unmatched        Instance types
                      schematic    layout           [schematic, layout]
         ---------    ---------    ---------        --------------------
-            85282            0            0        NMOS[n105, n105]
-            85286            0            0        PMOS[p105, p105]
+            85045            0            0        NMOS[n105, n105]
+            85049            0            0        PMOS[p105, p105]
         ---------    ---------    ---------        --------------------
-           170568            0            0        Total instances
+           170094            0            0        Total instances
 
-            91468            0            0        Total nets
+            91121            0            0        Total nets
 
                27            0            0        Total ports
 

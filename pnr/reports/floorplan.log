@@ -21,7 +21,6 @@
                  error messages and associated data to Synopsys.
 
  
-Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
 # ============================================================
 # floorplan.tcl
 # Floorplan inicial
@@ -42,17 +41,23 @@ Opening block 'filtro_pdm.dlib:filtro_pdm/init.design' in edit mode
 # ------------------------------------------------------------
 # 2. Cria o floorplan
 # ------------------------------------------------------------
-# Dimensoes fixas do core (largura x altura, em um).
+# Dimensoes do core (largura x altura, em um), fixas para que
+# o tamanho nao varie entre execucoes.
 #
-# Correspondem ao floorplan original, obtido com
-# -core_utilization 0.60 e -side_ratio {1 1}.
-# Fixar as dimensoes mantem validas as coordenadas dos
-# terminais VDD_TOP/VSS_TOP usadas em power_plan.tcl
-# (topo do core 229.03 + offset do anel 2.0).
+# O floorplan original (220,40 x 217,36 um, obtido com
+# -core_utilization 0.60) chegou a 84% de utilizacao depois do
+# CIC de 18 bits e do DFT. Com MCMM (hold no corner ff) faltou
+# espaco para os buffers: o placement deixou somadores do FIR a
+# mais de 100 um dos flip-flops que os alimentam, e nem o
+# route_opt nem o ECO de capacitancia maxima conseguiam colocar
+# buffers perto do driver (docs/auditoria_sta.md). O core passou
+# para 240 x 240 um (~70% de utilizacao). O Fusion Compiler
+# ajusta as dimensoes para um numero inteiro de sites e linhas.
+# O die cresce junto: core_offset de 10 um em cada lado.
 initialize_floorplan \
     -control_type core \
     -shape R \
-    -side_length {220.55 219.03} \
+    -side_length {240.0 240.0} \
     -core_offset {10}
 Using libraries: filtro_pdm.dlib saed32rvt_base_frame_timing
 Warning: In library filtro_pdm.dlib, no block views exist for block filtro_pdm. (LNK-064)
@@ -61,7 +66,7 @@ Design 'filtro_pdm' was successfully linked.
 Use site_def 'unit' to initialize floorplan.
 Removing existing floorplan objects
 Creating core...
-Core utilization ratio = 67.46%
+Core utilization ratio = 56.35%
 Unplacing all cells...
 Creating site array...
 Creating routing tracks...
@@ -71,14 +76,14 @@ report_utilization
 Report : report_utilization
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:02:34 2026
+Date   : Tue Oct 20 17:01:18 2026
 ****************************************
-Utilization Ratio:			0.6746
+Utilization Ratio:			0.5635
 Utilization options:
  - Area calculation based on:		site_row of block filtro_pdm/init
  - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
-Total Area:				47906.1440
-Total Capacity Area:			47906.1440
+Total Area:				57348.6102
+Total Capacity Area:			57348.6102
 Total Area of cells:			32317.9676
 Area of excluded objects:
  - hard_macros         :		0.0000
@@ -90,9 +95,9 @@ Total Area of excluded objects:		0.0000
 Ratio of excluded objects:		0.0000
 
 Utilization of site-rows with:
- - Site 'unit':				0.6746
+ - Site 'unit':				0.5635
 
-0.6746
+0.5635
 # ------------------------------------------------------------
 # 3. Salva checkpoint do floorplan
 # ------------------------------------------------------------
@@ -101,9 +106,8 @@ Information: The command 'save_block' cleared the undo history. (UNDO-016)
 Information: Saving 'filtro_pdm.dlib:filtro_pdm/init.design' to 'filtro_pdm.dlib:filtro_pdm/floorplan.design'. (DES-028)
 1
 1
-fc_shell> exit
-Maximum memory usage for this session: 467.02 MB
-Maximum memory usage for this session including child processes: 467.02 MB
+fc_shell> Maximum memory usage for this session: 465.96 MB
+Maximum memory usage for this session including child processes: 465.96 MB
 CPU usage for this session:     12 seconds (  0.00 hours)
-Elapsed time for this session:     69 seconds (  0.02 hours)
+Elapsed time for this session:     13 seconds (  0.00 hours)
 Thank you for using Fusion Compiler.

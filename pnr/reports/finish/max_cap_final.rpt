@@ -1,0 +1,24 @@
+****************************************
+Report : constraint
+        -all_violators
+        -max_capacitance
+Design : filtro_pdm
+Version: X-2025.06-SP3
+Date   : Tue Oct 20 17:41:15 2026
+****************************************
+
+
+
+   Mode: func Corner: tt
+   Scenario: func_tt
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   u_fir/intadd_9_B_7_          8.00           8.00           0.00  (MET)      
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 0
+
+   Total number of violation(s): 0
+1

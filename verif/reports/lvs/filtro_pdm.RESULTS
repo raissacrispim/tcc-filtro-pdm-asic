@@ -68,8 +68,8 @@ Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_detail
 LVS error file:         filtro_pdm.LVS_ERRORS
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/13 03:04:20PM
-Time ended:             2026/10/13 03:05:17PM
+Time started:           2026/10/20 05:43:49PM
+Time ended:             2026/10/20 05:44:46PM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -153,7 +153,7 @@ Production Environment Variables
 HOME = "/home/raissa.crispim"
 ICV_HOME_DIR = "/Tools/synopsys/icvalidator/X-2025.06-SP2"
 LM_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
-PATH = "/Tools/synopsys/icvalidator/X-2025.06-SP2/bin/LINUX.64:/Tools/synopsys/icvalidator/X-2025.06-SP2/contrib/bin/LINUX.64:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/home/raissa.crispim/.local/bin:/home/raissa.crispim/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
+PATH = "/Tools/synopsys/icvalidator/X-2025.06-SP2/bin/LINUX.64:/Tools/synopsys/icvalidator/X-2025.06-SP2/contrib/bin/LINUX.64:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/home/raissa.crispim/.local/bin:/home/raissa.crispim/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
 SNPSLMD_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
 USER = "raissa.crispim"
 
@@ -176,7 +176,7 @@ Allocated CPU Time = 0.0 CPU hours
  srv-microeletronica3 (2/64)
    Commands: 2 in parallel, maximum
    Model: 
-   CPU:   64 cpu 2800 MHz
+   CPU:   64 cpu 905 MHz
    Cores: 32 
    RAM:   251.109 GB
    Swap:  15.999 GB
@@ -187,13 +187,13 @@ Performance Statistics
 ---------------------------------------------------------------------------
 
 IC Validator Run Time = 0:00:57
-Peak Single Command Memory = 0.522 GB
-Peak Disk Usage = 0.033 GB
+Peak Single Command Memory = 0.542 GB
+Peak Disk Usage = 0.035 GB
 Network Disk Usage Peak=0.011 GB (no group)
-Group File Disk Usage Peak=0.022 GB
+Group File Disk Usage Peak=0.024 GB
 
 Distributed Host Memory Usage
- srv-microeletronica3 (2/64)  ....  Average=1.370 GB, Peak=1.604 GB / 251.109 GB
+ srv-microeletronica3 (2/64)  ....  Average=1.452 GB, Peak=1.666 GB / 251.109 GB
 
 Overall Distributed Utilization: not available
 IC Validator is done.

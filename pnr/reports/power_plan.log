@@ -21,7 +21,6 @@
                  error messages and associated data to Synopsys.
 
  
-Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
 set sh_continue_on_error false
 false
 # ============================================================
@@ -60,7 +59,7 @@ Information: Connecting to PG and tie pins in automatic mode. (MV-396)
 Report : Power/Ground Connection Summary
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Fri Oct  9 21:05:54 2026
+Date   : Tue Oct 20 17:01:33 2026
 ****************************************
 P/G net name                  P/G pin count(previous/current)
 --------------------------------------------------------------------------------
@@ -98,11 +97,11 @@ Creating standard cell rails.
 Creating standard cell rails for strategy std_cell_rail_strategy.
 DRC checking and fixing for standard cell rail strategy std_cell_rail_strategy.
 Number of threads: 1
-Number of partitions: 12
+Number of partitions: 14
 Direction of partitions: horizontal
-Number of wires: 131
-Checking DRC for 131 wires: 0% 100%
-Creating 131 wires after DRC fixing.
+Number of wires: 144
+Checking DRC for 144 wires: 0% 100%
+Creating 144 wires after DRC fixing.
 Wire DRC checking runtime 0.00 seconds.
 Creating via connection between strategies and existing shapes.
 via connection runtime: 0 seconds.
@@ -114,7 +113,7 @@ Commiting wires and vias.
 Setting tag pg_std_rails to committed wires.
 Committing wires takes 0.00 seconds.
 Committing vias takes 0.00 seconds.
-Committed 131 wires.
+Committed 144 wires.
 Committed 0 vias.
 Committed 0 wires for via creation.
 Overall PG creation runtime: 0 seconds.
@@ -232,31 +231,31 @@ Number of detected intersections: 0
 Total runtime of via shapes creation: 0 seconds
 Runtime of via DRC checking for strategy core_strap_strategy: 0.00 seconds.
 Creating via connection between strategies and existing shapes.
-Check and fix DRCs for 743 stacked vias.
+Check and fix DRCs for 814 stacked vias.
 Checking DRC for 22 stacked vias:: 0% 100%
 Number of threads: 1
-Number of partitions: 12
+Number of partitions: 14
 Direction of partitions: horizontal
-Number of vias: 721
-Checking DRC for 721 stacked vias:: 0% 100%
+Number of vias: 792
+Checking DRC for 792 stacked vias:: 0% 100%
 Via DRC checking runtime 0.00 seconds.
-via connection runtime: 1 seconds.
+via connection runtime: 0 seconds.
 Removing dangling/floating wire/vias after DRC check.
 Start iteration 1:
 Checking potential dangling/floating power plan wires.
 Checking dangling/floating vias between strategies and existing shapes.
-Checking 743 stacked vias: 0% 100%
+Checking 814 stacked vias: 0% 100%
 Finish removing all dangling or floating wires and vias.
 Commiting wires and vias.
 Setting tag pg_core_strap_vias to committed wires.
 Committing wires takes 0.00 seconds.
 Committing vias takes 0.00 seconds.
 Committed 11 wires.
-Committed 1552 vias.
-Committed 809 wires for via creation.
-Overall PG creation runtime: 1 seconds.
+Committed 1694 vias.
+Committed 880 wires for via creation.
+Overall PG creation runtime: 0 seconds.
 Successfully compiled PG.
-Overall runtime: 1 seconds.
+Overall runtime: 0 seconds.
 1
 # ------------------------------------------------------------
 # 8. Terminais fisicos VDD e VSS
@@ -319,9 +318,9 @@ proc cria_terminal_no_anel {rede nome} {
     puts "Terminal $nome criado em $limites (M8)"
 }
 cria_terminal_no_anel VDD VDD_TOP
-Terminal VDD_TOP criado em {119.2 229.3600} {121.2 229.5600} (M8)
+Terminal VDD_TOP criado em {128.928 251.0960} {130.928 251.2960} (M8)
 cria_terminal_no_anel VSS VSS_TOP
-Terminal VSS_TOP criado em {119.2 229.7600} {121.2 229.9600} (M8)
+Terminal VSS_TOP criado em {128.928 251.4960} {130.928 251.6960} (M8)
 # ------------------------------------------------------------
 # 9. Relatorios das estrategias
 # ------------------------------------------------------------
@@ -368,7 +367,7 @@ report_pg_strategies
 name: std_cell_rail_strategy
 region: 
 	Region: core area
-	Coordinate: {{10.0000 10.0000} {10.0000 227.3600} {230.4000 227.3600} {230.4000 10.0000} }
+	Coordinate: {{10.0000 10.0000} {10.0000 249.0960} {249.8560 249.0960} {249.8560 10.0000} }
 
 Pattern Expression :
 	pattern: std_cell_rails
@@ -396,7 +395,7 @@ Blockage:
 name: core_ring_strategy
 region: 
 	Region: core area
-	Coordinate: {{10.0000 10.0000} {10.0000 227.3600} {230.4000 227.3600} {230.4000 10.0000} }
+	Coordinate: {{10.0000 10.0000} {10.0000 249.0960} {249.8560 249.0960} {249.8560 10.0000} }
 
 Pattern Expression :
 	pattern: core_ring
@@ -436,7 +435,7 @@ Blockage:
 name: core_strap_strategy
 region: 
 	Region: core area
-	Coordinate: {{10.0000 10.0000} {10.0000 227.3600} {230.4000 227.3600} {230.4000 10.0000} }
+	Coordinate: {{10.0000 10.0000} {10.0000 249.0960} {249.8560 249.0960} {249.8560 10.0000} }
 
 Pattern Expression :
 	pattern: core_straps
@@ -478,10 +477,10 @@ Rule Name: core_strap_via_rule
 # 10. Verificacoes da rede de alimentacao
 # ------------------------------------------------------------
 check_pg_drc
-Command check_pg_drc started  at Fri Oct  9 21:05:55 2026
-Command check_pg_drc finished at Fri Oct  9 21:05:55 2026
-CPU usage for check_pg_drc: 0.01 seconds ( 0.00 hours)
-Elapsed time for check_pg_drc: 0.01 seconds ( 0.00 hours)
+Command check_pg_drc started  at Tue Oct 20 17:01:33 2026
+Command check_pg_drc finished at Tue Oct 20 17:01:33 2026
+CPU usage for check_pg_drc: 0.02 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 0.02 seconds ( 0.00 hours)
 No errors found.
 check_pg_connectivity
 Information: The command 'check_pg_connectivity' cleared the undo history. (UNDO-016)
@@ -495,8 +494,8 @@ Number of Macro Cells: 0
 Number of IO Pad Cells: 0
 Number of Blocks: 0
 Loading P/G wires and vias...
-Number of VDD Wires: 520
-Number of VDD Vias: 856
+Number of VDD Wires: 562
+Number of VDD Vias: 928
 Number of VDD Terminals: 1
 **************Verify net VDD connectivity*****************
   Number of floating wires: 0
@@ -509,8 +508,8 @@ Number of VDD Terminals: 1
 ************************************************************
 Loading cell instances...
 Loading P/G wires and vias...
-Number of VSS Wires: 439
-Number of VSS Vias: 704
+Number of VSS Wires: 481
+Number of VSS Vias: 774
 Number of VSS Terminals: 1
 **************Verify net VSS connectivity*****************
   Number of floating wires: 0
@@ -521,15 +520,16 @@ Number of VSS Terminals: 1
   Number of floating terminals: 0
   Number of floating hierarchical blocks: 0
 ************************************************************
-Overall runtime: 0 seconds.
+Overall runtime: 1 seconds.
 # ------------------------------------------------------------
 # 11. Salvar checkpoint de reproducao
 #
 # Remove o checkpoint de uma execucao anterior, se existir.
 # ------------------------------------------------------------
 catch {remove_blocks -force filtro_pdm/power_plan_reproduzido}
-Information: Removed design 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design' from memory and disk. (NDMUI-064)
-0
+Warning: Nothing implicitly matched 'filtro_pdm/power_plan_reproduzido.*' (SEL-003)
+Error: Nothing matched for blocks (SEL-005)
+1
 save_block -label power_plan_reproduzido
 Information: Saving 'filtro_pdm.dlib:filtro_pdm/floorplan.design' to 'filtro_pdm.dlib:filtro_pdm/power_plan_reproduzido.design'. (DES-028)
 1
@@ -537,9 +537,8 @@ puts "Power planning: script executado ate o final."
 Power planning: script executado ate o final.
 puts "Verifique os relatorios e compare com o checkpoint original."
 Verifique os relatorios e compare com o checkpoint original.
-fc_shell> exit
-Maximum memory usage for this session: 483.23 MB
-Maximum memory usage for this session including child processes: 483.23 MB
+fc_shell> Maximum memory usage for this session: 483.52 MB
+Maximum memory usage for this session including child processes: 483.52 MB
 CPU usage for this session:     12 seconds (  0.00 hours)
-Elapsed time for this session:     74 seconds (  0.02 hours)
+Elapsed time for this session:     13 seconds (  0.00 hours)
 Thank you for using Fusion Compiler.

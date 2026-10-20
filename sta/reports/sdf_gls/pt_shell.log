@@ -72,10 +72,10 @@ Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.
 Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
 Linking design filtro_pdm...
 Information: Removing 1 unneeded designs..... (LNK-034)
-Information: 235 (79.93%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
-Information: total 235 library cells are unused (LNK-046)
+Information: 240 (81.63%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
+Information: total 240 library cells are unused (LNK-046)
 Design 'filtro_pdm' was successfully linked.
-Information: There are 9960 leaf cells, ports, hiers and 14206 nets in the design (LNK-047)
+Information: There are 9920 leaf cells, ports, hiers and 14032 nets in the design (LNK-047)
 1
 read_parasitics -format SPEF pnr/output/filtro_pdm.Cmax_25.spef
 Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
@@ -84,14 +84,15 @@ Information: read_parasitics command is executed in background
 read_sdc pnr/output/filtro_pdm_pnr.sdc
 
 Reading SDC version 2.2...
+Warning: Creating virtual clock named 'vclk' with no sources. (UITE-121)
 Warning: Nothing implicitly matched 'VDD' (SEL-003)
 Warning: Nothing implicitly matched 'VSS' (SEL-003)
-Warning: Converting a propagated clock 'clk' to an ideal clock. (UITE-305)
 1
 1
 update_timing -full
 Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
 Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
 Information: Building multi voltage information for entire design. (MV-022)
 1
 report_annotated_parasitics > $REP/parasitas.rpt
@@ -108,7 +109,7 @@ Report : write_sdf pnr/output/filtro_pdm_pnr_pt.sdf
 	-include { SETUPHOLD RECREM }
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Fri Oct 16 15:16:11 2026
+Date   : Tue Oct 20 17:48:20 2026
 ****************************************
 
 1
@@ -122,9 +123,9 @@ Information: Defining new variable 'SDF'. (CMD-041)
 
 Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
 Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
-Maximum memory usage for this session: 2874.46 MB
+Maximum memory usage for this session: 2874.25 MB
 CPU usage for this session: 14 seconds 
 Elapsed time for this session: 10 seconds
-Diagnostics summary: 3 warnings, 13 informationals
+Diagnostics summary: 4 warnings, 13 informationals
 
 Thank you for using pt_shell!

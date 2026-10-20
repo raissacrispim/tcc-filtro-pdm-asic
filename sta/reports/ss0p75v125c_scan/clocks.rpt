@@ -1,0 +1,25 @@
+****************************************
+Report : clock_skew
+Design : filtro_pdm
+Version: X-2025.06-SP2
+Date   : Tue Oct 20 17:45:55 2026
+****************************************
+
+              Min Rise  Min Fall  Max Rise  Max Fall     Hold          Setup        Related
+Object          Delay     Delay     Delay     Delay   Uncertainty   Uncertainty      Clock
+-----------------------------------------------------------------------------------------------
+clk                 -         -         -         -      0.10          1.00           -- 
+
+
+                From           To              Hold          Setup          Voltage
+                Object         Object       Uncertainty    Uncertainty    Config
+--------------------------------------------------------------------------------
+              clk            vclk         0.10              1.00
+              vclk           clk          0.10              1.00
+
+              Min Rise  Min Fall  Max Rise  Max Fall
+Object        Transition Transition Transition Transition
+--------------------------------------------------------------------------------
+clk              0.10      0.10      0.10      0.10
+
+1
