@@ -162,6 +162,19 @@ proc eco_max_cap {tag} {
             } else {
                 puts "  [get_object_name $rede]: buffer NBUFFX4 junto de [get_object_name $celula]"
             }
+            # O fio antigo (do driver ate todas as cargas) continua
+            # preso a rede do driver depois do add_buffer, e o
+            # route_eco nao o remove: a rede seguia com ~16 fF de
+            # fio e a violacao voltava a cada rodada. As rotas das
+            # duas redes do buffer sao apagadas e refeitas no
+            # route_eco.
+            set redes_buf [get_nets -quiet -of_objects \
+                [get_pins -quiet -of_objects [get_cells $buf] \
+                    -filter "direction==in || direction==out"]]
+            if {[catch {remove_routes -nets $redes_buf -detail_route} msg] &&
+                [catch {remove_routes -nets $redes_buf} msg]} {
+                puts "  [get_object_name $rede]: rotas antigas mantidas ($msg)"
+            }
             lappend trocadas [get_object_name $rede]
         }
     }
