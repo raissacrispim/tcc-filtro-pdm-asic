@@ -90,6 +90,27 @@ check_clock_trees > pnr/reports/cts/check_clock_trees.rpt
 
 source pnr/scripts/vclk_ideal.tcl
 
+# Margem de capacitancia nas redes de clock
+#
+# A arvore e construida antes do roteamento final; o fio
+# adicionado depois deixou uma rede de clock (ZCTSNET_1) com
+# 65,5 fF para o limite de 64 fF do inversor. O ECO de max cap
+# do finish.tcl nao altera celulas de clock (ver finish.tcl),
+# entao a margem e dada aqui: 56 fF (~12%) nas redes de clock,
+# em todos os cenarios. As redes de dados mantem o limite da
+# biblioteca.
+set CAP_MAX_CLOCK 56
+set cenario_atual [get_object_name [current_scenario]]
+foreach_in_collection sc [get_scenarios *] {
+    current_scenario $sc
+    if {[catch {set_max_capacitance $CAP_MAX_CLOCK -clock_path \
+            [get_clocks clk]} msg]} {
+        puts "Aviso: margem de capacitancia do clock nao aplicada ($msg)"
+    }
+}
+current_scenario $cenario_atual
+puts "Capacitancia maxima nas redes de clock: $CAP_MAX_CLOCK fF"
+
 clock_opt
 
 # O clock_opt pode ajustar de novo a latencia do vclk
