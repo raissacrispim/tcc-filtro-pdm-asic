@@ -88,7 +88,12 @@ check_clock_trees > pnr/reports/cts/check_clock_trees.rpt
 #   - otimizacao com clock propagado, incluindo hold
 # ------------------------------------------------------------
 
+source pnr/scripts/vclk_ideal.tcl
+
 clock_opt
+
+# O clock_opt pode ajustar de novo a latencia do vclk
+vclk_ideal
 
 
 # ------------------------------------------------------------
