@@ -10,9 +10,6 @@ set sh_continue_on_error false
 # Entrada:  filtro_pdm/route
 # Saida:    filtro_pdm/finish
 #           pnr/output/ (GDSII, netlists, SDF, SPEF, DEF)
-#
-# ATENCAO:
-# Versao candidata, ainda nao validada no Fusion Compiler.
 # ============================================================
 
 # Layout (GDS) das standard cells RVT
@@ -202,11 +199,25 @@ proc eco_max_cap {tag} {
 # de shift ~187 ns).
 # ------------------------------------------------------------
 
+# Margem minima de hold (P2 de docs/auditoria_final.md)
+#
+# A primeira versao corrigia so folgas negativas no FC. O
+# signoff no PrimeTime (outra extracao) deixou caminhos de scan
+# no corner ff com +0,15 ps, que dependem da correlacao FC x PT
+# e nao de uma margem real. O ECO passa a tratar como violado
+# todo pino com folga de hold abaixo de 10 ps, alem dos 0,10 ns
+# de incerteza do SDC. Custo medido antes da mudanca (PT, ff):
+# ~220 endpoints abaixo de 10 ps no modo scan (144 em SI), 29 no
+# funcional; setup tem ~56 ns (funcional) e ~187 ns (shift) de
+# folga. Nao e relaxamento: a restricao fica mais exigente.
+set HOLD_MARGEM 0.010
+
 proc pinos_hold_violados {} {
+    global HOLD_MARGEM
     set pinos {}
     foreach_in_collection t [get_timing_paths -delay_type min \
             -scenarios [get_scenarios *] -max_paths 10000 \
-            -slack_lesser_than 0.0] {
+            -slack_lesser_than $HOLD_MARGEM] {
         set ep [get_attribute $t endpoint]
         if {[get_attribute $ep object_class] ne "pin"} { continue }
         lappend pinos [get_object_name $ep]
@@ -217,7 +228,7 @@ proc pinos_hold_violados {} {
 # Uma rodada do ECO de hold. Retorna o numero de buffers inseridos.
 proc eco_hold {tag} {
     set pinos [pinos_hold_violados]
-    puts "ECO hold, rodada $tag: [llength $pinos] pinos com hold violado"
+    puts "ECO hold, rodada $tag: [llength $pinos] pinos com folga de hold < [expr {$::HOLD_MARGEM*1000}] ps"
     if {[llength $pinos] == 0} { return 0 }
     set f [open pnr/reports/finish/hold_eco_$tag.txt w]
     foreach p $pinos { puts $f $p }
@@ -238,7 +249,7 @@ proc eco_hold {tag} {
 
 # Hold primeiro (insere cargas), depois capacitancia maxima (pode
 # trocar celulas e alterar atrasos); repete ate os dois zerarem.
-for {set ciclo 1} {$ciclo <= 5} {incr ciclo} {
+for {set ciclo 1} {$ciclo <= 8} {incr ciclo} {
     set n_hold [eco_hold $ciclo]
     set n_cap  [eco_max_cap $ciclo]
     if {$n_hold == 0 && $n_cap == 0} { break }
@@ -246,7 +257,7 @@ for {set ciclo 1} {$ciclo <= 5} {incr ciclo} {
 
 set res_hold [llength [pinos_hold_violados]]
 set res_cap  [llength [pinos_max_cap pnr/reports/finish/max_cap_final.rpt]]
-puts "Apos os ECOs: $res_hold pinos com hold violado, $res_cap violacoes de max cap"
+puts "Apos os ECOs: $res_hold pinos com folga de hold < [expr {$HOLD_MARGEM*1000}] ps, $res_cap violacoes de max cap"
 
 redirect pnr/reports/finish/hold_apos_eco.rpt {
     report_timing -delay_type min -scenarios [get_scenarios *] \
@@ -357,6 +368,18 @@ save_block -label finish
 write_verilog \
     -exclude {pg_objects physical_only_cells leaf_module_declarations} \
     pnr/output/filtro_pdm_pnr.v
+
+# Conferencia: nenhuma porta de saida ligada a outra (assign)
+set f [open pnr/output/filtro_pdm_pnr.v r]
+set nl [read $f]
+close $f
+set assigns [regexp -all -inline -line {^\s*assign\s+.*$} $nl]
+if {[llength $assigns] > 0} {
+    puts "ERRO: a netlist pos-layout tem assign entre redes/portas:"
+    foreach a $assigns { puts "  $a" }
+    return -code error
+}
+puts "Netlist pos-layout: sem assign (cada porta com driver proprio)"
 
 # Netlist para LVS (com conexoes VDD/VSS)
 write_verilog \

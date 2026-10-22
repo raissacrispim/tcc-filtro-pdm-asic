@@ -6,9 +6,28 @@
 # Microfone: Knowles SPH0641LU4H-1
 # Premissa: SELECT = GND
 #
-# As restricoes de reset, saida, carga e incerteza
-# representam um cenario preliminar de integracao.
-# Nao equivalem a especificacoes de um receptor real.
+# Origem de cada valor (docs/auditoria_final.md, P6):
+#
+#   REQUISITO  clock de 4,8 MHz (periodo 208,333 ns): taxa PDM
+#              do microfone; a saida de 300 kHz (R = 16) e
+#              gerada no mesmo dominio, sem outro clock.
+#   DATASHEET  pdm_in: dado valido 18-40 ns apos a borda de
+#              descida (SPH0641LU4H-1, SELECT = GND), sem o
+#              atraso de placa.
+#   HIPOTESE   valores preliminares de integracao, sem fonte
+#              externa; nao equivalem a um receptor real:
+#              - incerteza de clock: setup 1,0 ns, hold 0,10 ns
+#                (jitter da fonte + margem de projeto);
+#              - rst, scan_en, scan_in: atraso de entrada
+#                0 ns (min, pior caso de hold) a 20 ns (max);
+#              - saidas e scan_out: atraso 0 ns (min) a 20 ns
+#                (max), carga de 2 fF (bloco integrado, nao pad);
+#              - entradas dirigidas por NBUFFX8_RVT;
+#              - vclk: circuitos externos recebem o clock da
+#                placa como a porta clk, sem skew de placa;
+#              - clock de shift do scan igual ao funcional.
+#
+# Estes valores nao foram ajustados para melhorar a STA.
 # ============================================================
 
 set_units -time ns -resistance MOhm -capacitance fF \
@@ -38,9 +57,9 @@ create_clock -name vclk \
     -period 208.333 \
     -waveform {0 104.166}
 
-# Margem preliminar de temporizacao.
-# Margens preliminares para setup e hold.
-# Revisar apos CTS e caracterizacao da fonte de clock.
+# HIPOTESE: margens de setup e hold (jitter da fonte de clock
+# e margem de projeto). Mantidas iguais em todo o fluxo e no
+# signoff; revisar com a caracterizacao da fonte de clock.
 set_clock_uncertainty -setup 1.0 [get_clocks clk]
 set_clock_uncertainty -hold 0.10 [get_clocks clk]
 

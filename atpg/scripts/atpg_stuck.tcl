@@ -12,9 +12,6 @@
 # Entradas:
 #   synth/netlist/filtro_pdm_syn.v    netlist com scan
 #   synth/netlist/filtro_pdm_syn.spf  protocolo de teste
-#
-# ATENCAO:
-# Versao candidata, ainda nao validada no TestMAX ATPG.
 # ============================================================
 
 set SAED32_V /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
@@ -48,13 +45,24 @@ read_netlist $NETLIST
 
 run_build_model filtro_pdm
 
+# Avisos do modelo por regra, com as instancias (P4 de
+# docs/auditoria_final.md): N20 vem de duas UDPs do saed32nm.v
+# do PDK; B7/B8 de portas de DFT de u_fir sem uso apos a
+# reordenacao da cadeia; B9 de SYNOPSYS_UNCONNECTED_*; B10 de
+# redes internas dos modelos Verilog das celulas.
+report_violations -all > $REP/build_violations.rpt
+
 
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
 # ------------------------------------------------------------
 
+# scan_en nao e restringido na captura: no teste stuck-at (lento)
+# o testador pode mudar scan_en entre ciclos, e o ATPG usa esse
+# grau de liberdade. No transition ele e fixado em 0 (M487).
 run_drc $SPF
 
+report_violations -all > $REP/drc_violations_stuck.rpt
 report_rules -fail > $REP/drc_rules.rpt
 report_scan_chains > $REP/scan_chains.rpt
 

@@ -9,9 +9,6 @@ set sh_continue_on_error false
 #
 # Entrada:  filtro_pdm/place
 # Saida:    filtro_pdm/cts
-#
-# ATENCAO:
-# Versao candidata, ainda nao validada no Fusion Compiler.
 # ============================================================
 
 file mkdir pnr/reports/cts

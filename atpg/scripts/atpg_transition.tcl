@@ -10,10 +10,8 @@
 #   atpg/scripts/run_atpg.sh transition
 #
 # Lancamento pela captura (launch-on-capture): dois pulsos de
-# clock funcional apos o shift, no mesmo clock do sistema.
-#
-# ATENCAO:
-# Versao candidata, ainda nao validada no TestMAX ATPG.
+# clock funcional apos o shift, no mesmo clock do sistema, com
+# scan_en = 0 e entradas primarias fixas entre os dois pulsos.
 # ============================================================
 
 set SAED32_V /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
@@ -47,6 +45,13 @@ read_netlist $NETLIST
 
 run_build_model filtro_pdm
 
+# Avisos do modelo por regra, com as instancias (P4 de
+# docs/auditoria_final.md): N20 vem de duas UDPs do saed32nm.v
+# do PDK; B7/B8 de portas de DFT de u_fir sem uso apos a
+# reordenacao da cadeia; B9 de SYNOPSYS_UNCONNECTED_*; B10 de
+# redes internas dos modelos Verilog das celulas.
+report_violations -all > $REP/build_violations.rpt
+
 
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
@@ -54,7 +59,21 @@ run_build_model filtro_pdm
 
 set_delay -launch_cycle system_clock
 
+# Protocolo de teste em velocidade (P3 de docs/auditoria_final.md)
+#
+# Sem restricao, o TestMAX podia variar scan_en nos ciclos de
+# lancamento e captura (aviso M487): no testador o scan_en e um
+# sinal global lento, que fica em 0 entre o fim do shift e a
+# captura. As demais entradas primarias (rst, pdm_in) tambem nao
+# podem mudar entre o pulso de lancamento e o de captura, e as
+# saidas nao sao medidas na captura em velocidade.
+add_pi_constraints 0 scan_en
+set_delay -nopi_changes
+set_delay -nopo_measures
+
 run_drc $SPF
+
+report_violations -all > $REP/drc_violations_transition.rpt
 
 
 # ------------------------------------------------------------
@@ -81,6 +100,13 @@ report_summaries > $REP/transition_summary.rpt
 
 write_patterns $OUT/filtro_pdm_transition.stil \
     -format stil -replace
+
+# Testbench Verilog para a simulacao dos padroes
+# (sim/scripts/sim_atpg.sh <etapa> transition)
+write_testbench \
+    -input $OUT/filtro_pdm_transition.stil \
+    -output $OUT/filtro_pdm_transition_tb \
+    -replace
 
 puts "ATPG transition: script executado ate o final."
 puts "Cobertura em $REP/transition_summary.rpt"

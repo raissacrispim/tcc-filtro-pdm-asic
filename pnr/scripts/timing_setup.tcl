@@ -9,9 +9,6 @@
 # As configuracoes ficam salvas no bloco e valem para as
 # etapas seguintes (CTS, roteamento e finalizacao).
 #
-# ATENCAO:
-# Versao candidata, ainda nao validada no Fusion Compiler.
-#
 # Biblioteca de referencia: saed32rvt_base_frame_timing.ndm
 # (definida em setup.tcl), com visoes fisica e de timing.
 # ============================================================

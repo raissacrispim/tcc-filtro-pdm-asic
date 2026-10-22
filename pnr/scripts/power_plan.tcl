@@ -7,9 +7,6 @@ set sh_continue_on_error false
 #
 # Entrada:  filtro_pdm/floorplan
 # Saida:    filtro_pdm/power_plan_reproduzido
-#
-# ATENCAO:
-# Versao candidata, ainda nao validada no Fusion Compiler.
 # Nao sobrescreve o checkpoint power_plan original.
 # ============================================================
 

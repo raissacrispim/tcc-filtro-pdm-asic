@@ -13,17 +13,16 @@
 # convertida pelo icv_nettran, usando o CDL das standard
 # cells para descrever o conteudo de cada celula.
 #
-# Entradas: pnr/output/filtro_pdm.gds
+# Entradas: pnr/output/filtro_pdm_final.gds
 #           pnr/output/filtro_pdm_lvs.v
 # Saida:    verif/reports/lvs/  (resumo da comparacao)
 #           verif/run_lvs/      (arquivos de execucao, ignorados
 #                                pelo git)
-#
-# ATENCAO:
-# Versao candidata, ainda nao validada no IC Validator.
 # ============================================================
 
 set -e
+# Sem pipefail, o codigo de saida de 'icv ... | tee' seria o do tee
+set -o pipefail
 
 PDK=/Tools/PDK/SAED32/EDK_Digital
 RUNSET=$PDK/tech/icv_lvs/saed32nm_1p9m_lvs_rules.rs
@@ -90,3 +89,24 @@ grep -iE "pass|fail|match|error" "$TOPO.LVS_ERRORS" 2>/dev/null | head -20 \
     || echo "Arquivo $TOPO.LVS_ERRORS nao encontrado: verifique icv_lvs.log"
 echo
 echo "Relatorios em verif/reports/lvs/"
+
+# Criterio de aprovacao: comparacao eletrica PASS e nenhuma
+# violacao de regra no .RESULTS (inclui text_net:text_short,
+# curto entre etiquetas de portas). A versao anterior olhava so
+# a comparacao, e um text_short passou despercebido
+# (docs/auditoria_final.md, P1).
+if [ ! -f "$TOPO.RESULTS" ]; then
+    echo "LVS REPROVADO: $TOPO.RESULTS nao gerado"
+    exit 1
+fi
+VIOL=$(awk '/Violations Found/{f=1; next} f && /^- - -/{exit} f && /v = [1-9][0-9]*/{print}' "$TOPO.RESULTS")
+if [ -n "$VIOL" ]; then
+    echo "Violacoes de regra no LVS:"
+    echo "$VIOL"
+fi
+if grep -q "LVS Compare Result: PASS" "$TOPO.RESULTS" && [ -z "$VIOL" ]; then
+    echo "LVS APROVADO: comparacao PASS e 0 violacoes de regra"
+else
+    echo "LVS REPROVADO"
+    exit 1
+fi
