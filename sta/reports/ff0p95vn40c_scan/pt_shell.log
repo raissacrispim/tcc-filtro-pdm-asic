@@ -70,10 +70,10 @@ Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.
 Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_ff0p95vn40c.db'
 Linking design filtro_pdm...
 Information: Removing 1 unneeded designs..... (LNK-034)
-Information: 240 (81.63%) library cells are unused in library saed32rvt_ff0p95vn40c..... (LNK-045)
-Information: total 240 library cells are unused (LNK-046)
+Information: 239 (81.29%) library cells are unused in library saed32rvt_ff0p95vn40c..... (LNK-045)
+Information: total 239 library cells are unused (LNK-046)
 Design 'filtro_pdm' was successfully linked.
-Information: There are 9920 leaf cells, ports, hiers and 14032 nets in the design (LNK-047)
+Information: There are 10095 leaf cells, ports, hiers and 14203 nets in the design (LNK-047)
 1
 read_parasitics -format SPEF $SPEF
 Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
@@ -184,19 +184,19 @@ lappend R "Modo       : $MODO"
 lappend R "Parasitas  : $SPEF"
 ================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef}
 lappend R "Pior setup : [folga -delay_type max]"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)}
 lappend R "Pior hold  : [folga -delay_type min]"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)}
 lappend R "Hold reg->reg  : [folga -delay_type min -from [all_registers -clock_pins] -to [all_registers -data_pins]]"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)}
 lappend R "Hold entradas  : [folga -delay_type min -from $entradas]"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)}
 lappend R "Hold saidas    : [folga -delay_type min -to [all_outputs]]"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)} {Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)} {Hold saidas    : 0.0127 ns (u_fir/valid_out_reg/CLK -> valid_out)}
 lappend R "Endpoints com setup violado: $total_setup"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)} {Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)} {Hold saidas    : 0.0127 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0}
 lappend R "Endpoints com hold violado : $total_hold"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)} {Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)} {Hold saidas    : 0.0127 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0}
 dict for {c k} $n_hold {
     lappend R [format "  hold %-28s %4d  WNS %.4f ns" $c $k [dict get $wns_hold $c]]
 }
@@ -204,9 +204,9 @@ dict for {c k} $n_setup {
     lappend R [format "  setup %-27s %4d  WNS %.4f ns" $c $k [dict get $wns_setup $c]]
 }
 lappend R "Relatorios : $REP/"
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)} {Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/ff0p95vn40c_scan/}
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)} {Hold saidas    : 0.0127 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/ff0p95vn40c_scan/}
 lappend R "=================================================="
-================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)} {Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)} {Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/ff0p95vn40c_scan/} ==================================================
+================================================== {Corner     : ff0p95vn40c} {Modo       : scan} {Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef} {Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)} {Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)} {Hold saidas    : 0.0127 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/ff0p95vn40c_scan/} ==================================================
 set f [open $REP/resumo.txt w]
 file36
 foreach linha $R {
@@ -217,11 +217,11 @@ STA| ==================================================
 STA| Corner     : ff0p95vn40c
 STA| Modo       : scan
 STA| Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef
-STA| Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
-STA| Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
-STA| Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
-STA| Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)
-STA| Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)
+STA| Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
+STA| Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)
+STA| Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)
+STA| Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)
+STA| Hold saidas    : 0.0127 ns (u_fir/valid_out_reg/CLK -> valid_out)
 STA| Endpoints com setup violado: 0
 STA| Endpoints com hold violado : 0
 STA| Relatorios : sta/reports/ff0p95vn40c_scan/
@@ -246,7 +246,7 @@ Information: Defining new variable 'wns_setup'. (CMD-041)
 
 Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
 Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
-Maximum memory usage for this session: 2874.24 MB
+Maximum memory usage for this session: 2874.29 MB
 CPU usage for this session: 14 seconds 
 Elapsed time for this session: 10 seconds
 Diagnostics summary: 1 warning, 25 informationals

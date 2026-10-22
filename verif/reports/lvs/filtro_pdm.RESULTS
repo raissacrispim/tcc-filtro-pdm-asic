@@ -8,13 +8,13 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-                   DRC and Extraction Results: NOT CLEAN
+                     DRC and Extraction Results: CLEAN
 
-         #   #   ###   #####      ####  #      #####   ###   #   #
-         ##  #  #   #    #       #      #      #      #   #  ##  #
-         # # #  #   #    #       #      #      ####   #####  # # #
-         #  ##  #   #    #       #      #      #      #   #  #  ##
-         #   #   ###     #        ####  #####  #####  #   #  #   #
+                      ####  #      #####   ###   #   #
+                     #      #      #      #   #  ##  #
+                     #      #      ####   #####  # # #
+                     #      #      #      #   #  #  ##
+                      ####  #####  #####  #   #  #   #
 
 ===========================================================================
 
@@ -68,8 +68,8 @@ Run details directory:  /home/raissa.crispim/tcc_filtro/verif/run_lvs/run_detail
 LVS error file:         filtro_pdm.LVS_ERRORS
 Layout error file:      filtro_pdm.LAYOUT_ERRORS
 User name:              raissa.crispim
-Time started:           2026/10/20 05:43:49PM
-Time ended:             2026/10/20 05:44:46PM
+Time started:           2026/10/22 11:47:21AM
+Time ended:             2026/10/22 11:48:20AM
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -81,15 +81,9 @@ LVS Device Extraction Error Summary
 
 6 total rules were run.
 0 rules NOT EXECUTED.
-1 rule has violations.
-There is 1 total violation.
+0 rules have violations.
+There are 0 total violations.
 Refer to filtro_pdm.LAYOUT_ERRORS
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-Rule                          Violations Found
-Violation                     v = 1
-  text_net:text_short           v = 1
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -153,7 +147,7 @@ Production Environment Variables
 HOME = "/home/raissa.crispim"
 ICV_HOME_DIR = "/Tools/synopsys/icvalidator/X-2025.06-SP2"
 LM_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
-PATH = "/Tools/synopsys/icvalidator/X-2025.06-SP2/bin/LINUX.64:/Tools/synopsys/icvalidator/X-2025.06-SP2/contrib/bin/LINUX.64:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/home/raissa.crispim/.local/bin:/home/raissa.crispim/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
+PATH = "/Tools/synopsys/icvalidator/X-2025.06-SP2/bin/LINUX.64:/Tools/synopsys/icvalidator/X-2025.06-SP2/contrib/bin/LINUX.64:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/PDK/SAED90/PDK_Analog/scripts:/Tools/PDK/SAED32/PDK_Analog/scripts:/Tools/synopsys/primewavereliability/X-2025.06-SP2-2/bin:/Tools/synopsys/xa/X-2025.06-SP2/bin:/Tools/synopsys/wv/X-2025.06-SP2/bin:/Tools/synopsys/spyglass/X-2025.06-SP2/SPYGLASS_HOME/bin:/Tools/synopsys/identify/W-2025.03/bin:/Tools/synopsys/fpga/W-2025.03/bin:/Tools/synopsys/execman/X-2025.06-SP2/VMS/bin:/Tools/synopsys/pprtl/X-2025.06-SP2/bin:/Tools/synopsys/primelib/X-2025.06-SP2/bin:/Tools/synopsys/vc_static/X-2025.06-SP2/bin:/Tools/synopsys/hspice/X-2025.06-SP2-2/hspice/bin:/Tools/synopsys/lc/X-2025.06-SP2/bin:/Tools/synopsys/fm/X-2025.06-SP3/bin:/Tools/synopsys/verdi/X-2025.06-SP2/bin:/Tools/synopsys/vcs/X-2025.06-SP2/bin:/Tools/synopsys/fusioncompiler/X-2025.06-SP3/bin:/Tools/synopsys/customcompiler/X-2025.06-SP2-2/bin:/Tools/synopsys/starrc/X-2025.06-SP3/bin:/Tools/synopsys/prime/X-2025.06-SP2/bin:/Tools/synopsys/primesim/X-2025.06-SP2-3/bin:/Tools/synopsys/mw/X-2025.06/bin:/Tools/synopsys/icvalidator/X-2025.06-SP2/bin:/Tools/synopsys/icc2/X-2025.06-SP2/bin:/Tools/synopsys/syn/X-2025.06-SP2/bin:/Tools/synopsys/testmax/X-2025.06-SP2/bin:/home/raissa.crispim/.local/bin:/home/raissa.crispim/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
 SNPSLMD_LICENSE_FILE = "27020@melicense.embedded.ufcg.edu.br"
 USER = "raissa.crispim"
 
@@ -176,7 +170,7 @@ Allocated CPU Time = 0.0 CPU hours
  srv-microeletronica3 (2/64)
    Commands: 2 in parallel, maximum
    Model: 
-   CPU:   64 cpu 905 MHz
+   CPU:   64 cpu 839 MHz
    Cores: 32 
    RAM:   251.109 GB
    Swap:  15.999 GB
@@ -186,14 +180,14 @@ Allocated CPU Time = 0.0 CPU hours
 Performance Statistics
 ---------------------------------------------------------------------------
 
-IC Validator Run Time = 0:00:57
-Peak Single Command Memory = 0.542 GB
-Peak Disk Usage = 0.035 GB
-Network Disk Usage Peak=0.011 GB (no group)
-Group File Disk Usage Peak=0.024 GB
+IC Validator Run Time = 0:00:59
+Peak Single Command Memory = 0.540 GB
+Peak Disk Usage = 0.033 GB
+Network Disk Usage Peak=0.010 GB (no group)
+Group File Disk Usage Peak=0.023 GB
 
 Distributed Host Memory Usage
- srv-microeletronica3 (2/64)  ....  Average=1.452 GB, Peak=1.666 GB / 251.109 GB
+ srv-microeletronica3 (2/64)  ....  Average=1.366 GB, Peak=1.615 GB / 251.109 GB
 
 Overall Distributed Utilization: not available
 IC Validator is done.

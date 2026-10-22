@@ -4,10 +4,18 @@ Report : constraint
 	-path slack_only
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 20 17:45:33 2026
+Date   : Thu Oct 22 11:48:48 2026
 ****************************************
 
 
+
+
+   max_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   u_fir/intadd_17_U2/S      16.0000        16.0061        -0.0061  (VIOLATED)
 
 
 1

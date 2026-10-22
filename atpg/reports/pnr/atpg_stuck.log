@@ -4,29 +4,38 @@
 read_netlist $SAED32_V -library
  Begin reading netlist ( /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v )...
  End parsing Verilog file /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v with 0 errors.
- End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.12 sec, Memory=2MB
+ End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.10 sec, Memory=2MB
 read_netlist $NETLIST
  Begin reading netlist ( pnr/output/filtro_pdm_pnr.v )...
  End parsing Verilog file pnr/output/filtro_pdm_pnr.v with 0 errors.
- End reading netlist: #modules=2, top=filtro_pdm, #lines=31600, CPU_time=0.08 sec, Memory=5MB
+ End reading netlist: #modules=2, top=filtro_pdm, #lines=31891, CPU_time=0.08 sec, Memory=5MB
 run_build_model filtro_pdm
  ------------------------------------------------------------------------------
  Begin build model for topcut = filtro_pdm ...
  ------------------------------------------------------------------------------
- There were 49412 primitives and 176 faultable pins removed during model optimizations
- Warning: Rule B7 (undriven module output pin) was violated 3 times.
+ There were 49403 primitives and 176 faultable pins removed during model optimizations
+ Warning: Rule B7 (undriven module output pin) was violated 1 times.
  Warning: Rule B8 (unconnected module input pin) was violated 2 times.
  Warning: Rule B9 (undriven module internal net) was violated 2 times.
- Warning: Rule B10 (unconnected module internal net) was violated 191 times.
+ Warning: Rule B10 (unconnected module internal net) was violated 189 times.
  Warning: Rule N20 (underspecified UDP) was violated 2 times.
- End build model: #primitives=37735, CPU_time=0.09 sec, Memory=14MB
+ End build model: #primitives=37902, CPU_time=0.09 sec, Memory=14MB
  ------------------------------------------------------------------------------
  Begin learning analyses...
  End learning analyses, total learning CPU time=0.25 sec.
  ------------------------------------------------------------------------------
+# Avisos do modelo por regra, com as instancias (P4 de
+# docs/auditoria_final.md): N20 vem de duas UDPs do saed32nm.v
+# do PDK; B7/B8 de portas de DFT de u_fir sem uso apos a
+# reordenacao da cadeia; B9 de SYNOPSYS_UNCONNECTED_*; B10 de
+# redes internas dos modelos Verilog das celulas.
+report_violations -all > $REP/build_violations.rpt
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
 # ------------------------------------------------------------
+# scan_en nao e restringido na captura: no teste stuck-at (lento)
+# o testador pode mudar scan_en entre ciclos, e o ATPG usa esse
+# grau de liberdade. No transition ele e fixado em 0 (M487).
 run_drc $SPF
  ------------------------------------------------------------------------------
  Begin scan design rules checking...
@@ -66,6 +75,7 @@ run_drc $SPF
  No violations occurred during DRC process.
  Design rules checking was successful, total CPU time=0.03 sec.
  ------------------------------------------------------------------------------
+report_violations -all > $REP/drc_violations_stuck.rpt
 report_rules -fail > $REP/drc_rules.rpt
 report_scan_chains > $REP/scan_chains.rpt
 # ------------------------------------------------------------
@@ -73,7 +83,7 @@ report_scan_chains > $REP/scan_chains.rpt
 # ------------------------------------------------------------
 set_faults -model stuck
 add_faults -all
- 77482 faults were added to fault list.
+ 78186 faults were added to fault list.
 # Limite de tentativas por falha (padrao: 10).
 # Com o padrao, ~1.400 falhas foram abandonadas (abort) e
 # ficaram como "not detected". Um limite maior permite ao
@@ -94,33 +104,34 @@ run_atpg -auto_compression
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=62533, abort_limit=200...
- 32          57277   5247        9/0/76    93.23%     10.13
- 64           3590   1657       9/0/546    97.86%     14.06
- 94            564   1093       9/0/939    98.59%     17.21
- 98             35   1058       9/0/961    98.63%     17.39
+ Begin deterministic ATPG: #uncollapsed_faults=62635, abort_limit=200...
+ 31          57443   5183        9/0/22    93.37%      8.74
+ 63           3442   1741       9/0/537    97.77%     14.07
+ 92            626   1115       9/0/923    98.57%     16.95
+ Pattern merging terminated due to truncated interval.
+ 92              0   1115       9/0/924    98.57%     16.95
  
      Uncollapsed Stuck Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      76415
+ Detected                         DT      77062
  Possibly detected                PT          0
  Undetectable                     UD          9
  ATPG untestable                  AU          0
- Not detected                     ND       1058
+ Not detected                     ND       1115
  -----------------------------------------------
- total faults                             77482
- test coverage                            98.63%
+ total faults                             78186
+ test coverage                            98.57%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                          98
-     #basic_scan patterns                    98
+ #internal patterns                          92
+     #basic_scan patterns                    92
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                           17.40
+ Total CPU time                           16.96
  -----------------------------------------------
 report_summaries > $REP/stuck_summary.rpt
 report_faults -summary > $REP/stuck_faults.rpt
@@ -129,8 +140,8 @@ report_faults -summary > $REP/stuck_faults.rpt
 # ------------------------------------------------------------
 write_patterns $OUT/filtro_pdm_stuck.stil \
     -format stil -replace
- Patterns written reference 298 V statements, generating 132067 test cycles
- End writing file 'filtro_pdm_stuck.stil' with 98 patterns, File_size = 349711, CPU_time = 0.0 sec.
+ Patterns written reference 280 V statements, generating 124063 test cycles
+ End writing file 'filtro_pdm_stuck.stil' with 92 patterns, File_size = 332715, CPU_time = 0.0 sec.
 write_testbench \
     -input $OUT/filtro_pdm_stuck.stil \
     -output $OUT/filtro_pdm_stuck_tb \

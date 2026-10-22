@@ -3,14 +3,14 @@ Report : constraint
         -all_violators
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:41:35 2026
+Date   : Thu Oct 22 11:44:23 2026
 ****************************************
 
    late_timing
    -----------
 
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/route.design'. (TIM-125)
-Information: Design filtro_pdm has 13786 nets, 0 global routed, 13784 detail routed. (NEX-024)
+Information: Design filtro_pdm has 13960 nets, 0 global routed, 13958 detail routed. (NEX-024)
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 ---extraction options---
 Corner: tt
@@ -33,11 +33,11 @@ Global options:
  extract.enable_coupling_cap    : false
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 13784 nets are successfully extracted. (NEX-028)
+Information: 13958 nets are successfully extracted. (NEX-028)
 Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
 Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 13784, routed nets = 13784, across physical hierarchy nets = 0, parasitics cached nets = 13784, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Net estimation statistics: timing graph nets = 13958, routed nets = 13958, across physical hierarchy nets = 0, parasitics cached nets = 13958, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
 ----------------------------------------------------------------------------------------------------------
 No paths.
@@ -49,13 +49,14 @@ Endpoint                         Path Delay     Path Required       CRP    Slack
 ----------------------------------------------------------------------------------------------------------
 No paths.
 
+Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
    Mode: func Corner: tt
    Scenario: func_tt
    max_transition                                                              
                              Required        Actual                            
    Net                      Transition     Transition        Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/delay_53__12_          0.08           0.08           0.00  (MET)      
+   u_fir/delay_57__12_          0.08           0.08           0.00  (MET)      
 
   ---------------------------------------------------------------------------
    Number of max_transition violation(s): 0
@@ -66,7 +67,7 @@ No paths.
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/delay_53__12_          8.00           8.00           0.00  (MET)      
+   u_fir/ropt_net_1517         16.00          15.99           0.01  (MET)      
 
   ---------------------------------------------------------------------------
    Number of max_capacitance violation(s): 0

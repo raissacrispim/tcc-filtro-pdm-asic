@@ -4,17 +4,17 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:38:02 2026
+Date   : Thu Oct 22 11:42:27 2026
 ****************************************
 
 
 
 Information: Deserialized np data
-INFO: timer data loaded from /tmp/filtro_pdm_1456258_591984640.timdat
+INFO: timer data loaded from /tmp/filtro_pdm_2904948_593460832.timdat
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 13779 nets are successfully extracted. (NEX-028)
+Information: 13948 nets are successfully extracted. (NEX-028)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
    Mode: func Corner: tt
@@ -23,72 +23,96 @@ Information: Activity for scenario func_tt was cached, no propagation required. 
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/HFSNET_920            16.00          16.06          -0.06  (VIOLATED) 
-     PIN : u_fir/HFSINV_300_944/Y
-                               16.00          16.06          -0.06  (VIOLATED) 
+   u_cic_u_combs_comb1[5]       8.00           8.47          -0.47  (VIOLATED) 
+     PIN : u_cic_u_combs_u_comb1_y_out_reg_5_/Q
+                                8.00           8.47          -0.47  (VIOLATED) 
 
-   u_fir/ZBUF_70_12            16.00          16.06          -0.06  (VIOLATED) 
-     PIN : u_fir/ZBUF_70_inst_1742/Y
-                               16.00          16.06          -0.06  (VIOLATED) 
+   u_fir/ropt_net_1512         16.00          16.33          -0.33  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4027/Y
+                               16.00          16.33          -0.33  (VIOLATED) 
 
-   u_fir/delay_10__2_           8.00           8.06          -0.06  (VIOLATED) 
-     PIN : u_fir/delay_reg_10__2_/Q
-                                8.00           8.06          -0.06  (VIOLATED) 
+   u_fir/delay_1__4_            8.00           8.14          -0.14  (VIOLATED) 
+     PIN : u_fir/delay_reg_1__4_/Q
+                                8.00           8.14          -0.14  (VIOLATED) 
 
-   u_fir/intadd_57_SUM_5_       8.00           8.05          -0.05  (VIOLATED) 
-     PIN : u_fir/intadd_57_U12/S
+   u_fir/ZBUF_9_17             16.00          16.11          -0.11  (VIOLATED) 
+     PIN : u_fir/ZBUF_9_inst_1695/Y
+                               16.00          16.11          -0.11  (VIOLATED) 
+
+   u_fir/delay_1__11_           8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_fir/delay_reg_1__11_/Q
+                                8.00           8.10          -0.10  (VIOLATED) 
+
+   u_fir/intadd_37_SUM_6_       8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_fir/intadd_37_U11/S
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   u_fir/delay_8__16_           8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_fir/delay_reg_8__16_/Q
+                                8.00           8.09          -0.09  (VIOLATED) 
+
+   u_fir/ropt_net_1510         16.00          16.08          -0.08  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4025/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   u_fir/delay_32__9_           8.00           8.08          -0.08  (VIOLATED) 
+     PIN : u_fir/delay_reg_32__9_/Q
+                                8.00           8.08          -0.08  (VIOLATED) 
+
+   u_fir/intadd_57_SUM_9_      16.00          16.07          -0.07  (VIOLATED) 
+     PIN : u_fir/intadd_57_U8/S
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   u_fir/HFSNET_1067           32.00          32.06          -0.06  (VIOLATED) 
+     PIN : u_fir/HFSBUF_3346_1105/Y
+                               32.00          32.06          -0.06  (VIOLATED) 
+
+   u_fir/delay_53__8_           8.00           8.05          -0.05  (VIOLATED) 
+     PIN : u_fir/delay_reg_53__8_/Q
                                 8.00           8.05          -0.05  (VIOLATED) 
 
-   u_fir/HFSNET_1060           32.00          32.05          -0.05  (VIOLATED) 
-     PIN : u_fir/HFSBUF_15436_1098/Y
-                               32.00          32.05          -0.05  (VIOLATED) 
+   u_fir/intadd_28_A_6_        16.00          16.04          -0.04  (VIOLATED) 
+     PIN : u_fir/intadd_56_U12/S
+                               16.00          16.04          -0.04  (VIOLATED) 
 
-   u_fir/HFSNET_505             8.00           8.05          -0.05  (VIOLATED) 
-     PIN : u_fir/HFSINV_231_525/Y
-                                8.00           8.05          -0.05  (VIOLATED) 
-
-   u_fir/HFSNET_97              8.00           8.04          -0.04  (VIOLATED) 
-     PIN : u_fir/HFSINV_196_105/Y
+   cic_out[5]                   8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_cic_u_combs_u_comb4_y_out_reg_6_/Q
                                 8.00           8.04          -0.04  (VIOLATED) 
 
-   u_fir/intadd_20_A_4_        16.00          16.03          -0.03  (VIOLATED) 
-     PIN : u_fir/intadd_38_U15/S
+   u_fir/ZBUF_24_24            16.00          16.04          -0.04  (VIOLATED) 
+     PIN : u_fir/ZBUF_24_inst_1718/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
+
+   u_fir/ropt_net_1536         16.00          16.03          -0.03  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4051/Y
                                16.00          16.03          -0.03  (VIOLATED) 
 
-   u_fir/HFSNET_302            16.00          16.03          -0.03  (VIOLATED) 
-     PIN : u_fir/HFSBUF_130_321/Y
-                               16.00          16.03          -0.03  (VIOLATED) 
+   u_fir/HFSNET_1156           32.00          32.03          -0.03  (VIOLATED) 
+     PIN : u_fir/HFSBUF_4658_1202/Y
+                               32.00          32.03          -0.03  (VIOLATED) 
 
-   u_fir/HFSNET_898            16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/HFSBUF_200_922/Y
+   u_fir/HFSNET_562             8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/HFSINV_148_582/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_fir/intadd_11_A_2_         8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/intadd_59_U16/S
+                                8.00           8.02          -0.02  (VIOLATED) 
+
+   u_fir/intadd_48_SUM_14_     16.00          16.02          -0.02  (VIOLATED) 
+     PIN : u_fir/intadd_48_U3/S
                                16.00          16.02          -0.02  (VIOLATED) 
 
-   u_fir/ropt_net_1535         16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4048/Y
-                               16.00          16.02          -0.02  (VIOLATED) 
-
-   u_fir/ropt_net_1544         16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4057/Y
-                               16.00          16.02          -0.02  (VIOLATED) 
-
-   u_fir/ropt_net_1527         16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4040/Y
-                               16.00          16.02          -0.02  (VIOLATED) 
-
-   u_fir/HFSNET_95             16.00          16.01          -0.01  (VIOLATED) 
-     PIN : u_fir/HFSINV_195_103/Y
+   u_fir/HFSNET_941            16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSBUF_273_965/Y
                                16.00          16.01          -0.01  (VIOLATED) 
 
-   u_fir/HFSNET_1010            8.00           8.00          -0.00  (VIOLATED) 
-     PIN : u_fir/HFSINV_304_1034/Y
-                                8.00           8.00          -0.00  (VIOLATED) 
-
-   u_fir/HFSNET_693            16.00          16.00          -0.00  (VIOLATED) 
-     PIN : u_fir/HFSBUF_253_714/Y
-                               16.00          16.00          -0.00  (VIOLATED) 
+   u_fir/ropt_net_1533         16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4048/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 16
+   Number of max_capacitance violation(s): 22
 
-   Total number of violation(s): 16
+   Total number of violation(s): 22
 1

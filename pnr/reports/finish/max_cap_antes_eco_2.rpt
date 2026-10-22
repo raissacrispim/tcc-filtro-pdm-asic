@@ -4,18 +4,11 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:39:19 2026
+Date   : Thu Oct 22 11:43:11 2026
 ****************************************
 
 
 
-Information: Deserialized np data
-INFO: timer data loaded from /tmp/filtro_pdm_1456258_591984640.timdat
-Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
-Extracting design: filtro_pdm 
-Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 13783 nets are successfully extracted. (NEX-028)
-Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
    Mode: func Corner: tt
    Scenario: func_tt
@@ -23,16 +16,12 @@ Information: Activity for scenario func_tt was cached, no propagation required. 
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/HFSNET_505             8.00           8.05          -0.05  (VIOLATED) 
-     PIN : u_fir/HFSINV_231_525/Y
-                                8.00           8.05          -0.05  (VIOLATED) 
-
-   u_fir/HFSNET_97              8.00           8.04          -0.04  (VIOLATED) 
-     PIN : u_fir/HFSINV_196_105/Y
-                                8.00           8.04          -0.04  (VIOLATED) 
+   u_fir/HFSNET_562             8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/HFSINV_148_582/Y
+                                8.00           8.02          -0.02  (VIOLATED) 
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 2
+   Number of max_capacitance violation(s): 1
 
-   Total number of violation(s): 2
+   Total number of violation(s): 1
 1

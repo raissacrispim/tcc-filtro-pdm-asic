@@ -4,35 +4,53 @@
 read_netlist $SAED32_V -library
  Begin reading netlist ( /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v )...
  End parsing Verilog file /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v with 0 errors.
- End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.12 sec, Memory=2MB
+ End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.10 sec, Memory=2MB
 read_netlist $NETLIST
  Begin reading netlist ( pnr/output/filtro_pdm_pnr.v )...
  End parsing Verilog file pnr/output/filtro_pdm_pnr.v with 0 errors.
- End reading netlist: #modules=2, top=filtro_pdm, #lines=31600, CPU_time=0.09 sec, Memory=5MB
+ End reading netlist: #modules=2, top=filtro_pdm, #lines=31891, CPU_time=0.08 sec, Memory=5MB
 run_build_model filtro_pdm
  ------------------------------------------------------------------------------
  Begin build model for topcut = filtro_pdm ...
  ------------------------------------------------------------------------------
- There were 49412 primitives and 176 faultable pins removed during model optimizations
- Warning: Rule B7 (undriven module output pin) was violated 3 times.
+ There were 49403 primitives and 176 faultable pins removed during model optimizations
+ Warning: Rule B7 (undriven module output pin) was violated 1 times.
  Warning: Rule B8 (unconnected module input pin) was violated 2 times.
  Warning: Rule B9 (undriven module internal net) was violated 2 times.
- Warning: Rule B10 (unconnected module internal net) was violated 191 times.
+ Warning: Rule B10 (unconnected module internal net) was violated 189 times.
  Warning: Rule N20 (underspecified UDP) was violated 2 times.
- End build model: #primitives=37735, CPU_time=0.09 sec, Memory=14MB
+ End build model: #primitives=37902, CPU_time=0.07 sec, Memory=14MB
  ------------------------------------------------------------------------------
  Begin learning analyses...
- End learning analyses, total learning CPU time=0.26 sec.
+ End learning analyses, total learning CPU time=0.24 sec.
  ------------------------------------------------------------------------------
+# Avisos do modelo por regra, com as instancias (P4 de
+# docs/auditoria_final.md): N20 vem de duas UDPs do saed32nm.v
+# do PDK; B7/B8 de portas de DFT de u_fir sem uso apos a
+# reordenacao da cadeia; B9 de SYNOPSYS_UNCONNECTED_*; B10 de
+# redes internas dos modelos Verilog das celulas.
+report_violations -all > $REP/build_violations.rpt
 # ------------------------------------------------------------
 # 2. Verificacao das regras de teste (DRC)
 # ------------------------------------------------------------
 set_delay -launch_cycle system_clock
+# Protocolo de teste em velocidade (P3 de docs/auditoria_final.md)
+#
+# Sem restricao, o TestMAX podia variar scan_en nos ciclos de
+# lancamento e captura (aviso M487): no testador o scan_en e um
+# sinal global lento, que fica em 0 entre o fim do shift e a
+# captura. As demais entradas primarias (rst, pdm_in) tambem nao
+# podem mudar entre o pulso de lancamento e o de captura, e as
+# saidas nao sao medidas na captura em velocidade.
+add_pi_constraints 0 scan_en
+set_delay -nopi_changes
+set_delay -nopo_measures
 run_drc $SPF
  ------------------------------------------------------------------------------
  Begin scan design rules checking...
  ------------------------------------------------------------------------------
  Begin reading test protocol file synth/netlist/filtro_pdm_syn.spf...
+ Warning: Rule V14 (missing state) was violated 1 times.
  End parsing STIL file synth/netlist/filtro_pdm_syn.spf with 0 errors.
  Test protocol file reading completed, CPU time=0.00 sec.
  ------------------------------------------------------------------------------
@@ -46,7 +64,7 @@ run_drc $SPF
  Begin clock rules checking...
  Clock rules checking completed, CPU time=0.00 sec.
  Performing clock grouping analysis for 1 clock.
- Clock grouping results: #pairs=0, #groups=0, #serial_pairs=0, #disturbed_pairs=0, CPU time=0.01 sec.
+ Clock grouping results: #pairs=0, #groups=0, #serial_pairs=0, #disturbed_pairs=0, CPU time=0.00 sec.
  ------------------------------------------------------------------------------
  Begin tracing connection cones...
  Tracing connection cones completed, CPU time=0.00 sec.
@@ -57,29 +75,30 @@ run_drc $SPF
  ------------------------------------------------------------------------------
  Begin DRC dependent learning...
  Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.00 sec
- DRC dependent learning completed, CPU time=0.02 sec.
+ DRC dependent learning completed, CPU time=0.01 sec.
  ------------------------------------------------------------------------------
  Begin set operation for load unload constant latches...
  Set operation for load unload constant latches completed, CPU time=0.00 sec.
  ------------------------------------------------------------------------------
  DRC Summary Report
  ------------------------------------------------------------------------------
- No violations occurred during DRC process.
+ Warning: Rule V14 (missing state) was violated 1 times.
+ There were 1 violations that occurred during DRC process.
  Design rules checking was successful, total CPU time=0.03 sec.
  ------------------------------------------------------------------------------
+report_violations -all > $REP/drc_violations_transition.rpt
 # ------------------------------------------------------------
 # 3. ATPG para falhas de transicao
 # ------------------------------------------------------------
 set_faults -model transition
 add_faults -all
- 71742 faults were added to fault list.
+ 72406 faults were added to fault list.
 # Limite de tentativas por falha (padrao: 10).
 # Com o padrao, ~1.400 falhas foram abandonadas (abort) e
 # ficaram como "not detected". Um limite maior permite ao
 # ATPG insistir nessas falhas.
 set_atpg -abort_limit 200
 run_atpg -auto_compression
- Warning: Unconstrained primary input scan_en used as SCAN ENABLE may change during at-speed cycles. (M487)
  
  ***********************************************************
  *  NOTICE:  The following DRC violations were previously  *
@@ -94,36 +113,39 @@ run_atpg -auto_compression
  #patterns     #faults     #ATPG faults  test      process
  stored     detect/active  red/au/abort  coverage  CPU time
  ---------  -------------  ------------  --------  --------
- Begin deterministic ATPG: #uncollapsed_faults=61086, abort_limit=200...
+ Begin deterministic ATPG: #uncollapsed_faults=61182, abort_limit=200...
+ Warning: Nopi_changes option selected when scan enable can not be identified. (M977)
  Optimized clock launch transition fault ATPG is enabled.
- 32          48858  12228        0/0/22    82.96%      7.73
- 64           4040   8178        9/1/61    88.60%      9.33
- 95           4340   3835       9/4/277    94.65%     20.40
- 127          2383   1452       9/4/699    97.97%     26.69
- 144           219   1233      9/4/1176    98.28%     32.11
+ 32          44879  15987        0/0/21    77.48%     14.38
+ 61           4132  11836       9/10/59    83.20%     15.05
+ Local redundancy analysis results: #redundant_faults=0, CPU_time=0.00 sec
+ 92           4731   7024      9/91/133    89.74%     25.77
+ 124          4148   2859    9/108/1085    95.47%     37.73
+ 156          1128   1731    9/108/1282    97.02%     41.42
+ 165           181   1550    9/108/1693    97.27%     45.88
  
    Uncollapsed Transition Fault Summary Report
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      70496
+ Detected                         DT      70423
  Possibly detected                PT          0
  Undetectable                     UD          9
- ATPG untestable                  AU          4
- Not detected                     ND       1233
+ ATPG untestable                  AU        424
+ Not detected                     ND       1550
  -----------------------------------------------
- total faults                             71742
- test coverage                            98.28%
+ total faults                             72406
+ test coverage                            97.27%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                         144
+ #internal patterns                         165
      #basic_scan patterns                     1
-     #fast_sequential patterns              143
+     #fast_sequential patterns              164
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                           32.12
+ Total CPU time                           45.89
  -----------------------------------------------
 report_summaries > $REP/transition_summary.rpt
 # ------------------------------------------------------------
@@ -131,8 +153,15 @@ report_summaries > $REP/transition_summary.rpt
 # ------------------------------------------------------------
 write_patterns $OUT/filtro_pdm_transition.stil \
     -format stil -replace
- Patterns written reference 579 V statements, generating 193574 test cycles
- End writing file 'filtro_pdm_transition.stil' with 144 patterns, File_size = 491089, CPU_time = 0.0 sec.
+ Patterns written reference 827 V statements, generating 221773 test cycles
+ End writing file 'filtro_pdm_transition.stil' with 165 patterns, File_size = 561137, CPU_time = 0.0 sec.
+# Testbench Verilog para a simulacao dos padroes
+# (sim/scripts/sim_atpg.sh <etapa> transition)
+write_testbench \
+    -input $OUT/filtro_pdm_transition.stil \
+    -output $OUT/filtro_pdm_transition_tb \
+    -replace
+ Executing 'stil2verilog'...
 puts "ATPG transition: script executado ate o final."
 ATPG transition: script executado ate o final.
 puts "Cobertura em $REP/transition_summary.rpt"

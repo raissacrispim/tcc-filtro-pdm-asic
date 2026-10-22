@@ -3,7 +3,7 @@ Report : global_timing
 	-format { narrow }
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 20 17:45:33 2026
+Date   : Thu Oct 22 11:48:48 2026
 ****************************************
 
 No setup violations found.

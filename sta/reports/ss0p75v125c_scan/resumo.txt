@@ -2,11 +2,11 @@
 Corner     : ss0p75v125c
 Modo       : scan
 Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef
-Pior setup : 56.8256 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
-Pior hold  : 0.3627 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
-Hold reg->reg  : 0.3627 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
-Hold entradas  : 0.4632 ns (scan_en -> u_fir/delay_reg_12__1_/SE)
-Hold saidas    : 0.4856 ns (u_fir/valid_out_reg/CLK -> valid_out)
+Pior setup : 56.7977 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
+Pior hold  : 0.3570 ns (u_fir/valid_out_reg/CLK -> valid_out)
+Hold reg->reg  : 0.4036 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)
+Hold entradas  : 0.5081 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)
+Hold saidas    : 0.3570 ns (u_fir/valid_out_reg/CLK -> valid_out)
 Endpoints com setup violado: 0
 Endpoints com hold violado : 0
 Relatorios : sta/reports/ss0p75v125c_scan/

@@ -4,14 +4,14 @@ Warning: The congestion map is out dated. Specify -rerun_global_router option to
 Report : congestion
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:04:19 2026
+Date   : Thu Oct 22 11:34:43 2026
 ****************************************
 
 Layer     |    overflow     |              # GRCs has
 Name      |  total  |  max  | overflow (%)      | max overflow
 ---------------------------------------------------------------
-Both Dirs |       2 |     1 |       2  ( 0.00%) |       2
+Both Dirs |       0 |     0 |       0  ( 0.00%) |       0
 H routing |       0 |     0 |       0  ( 0.00%) |       0
-V routing |       2 |     1 |       2  ( 0.01%) |       2
+V routing |       0 |     0 |       0  ( 0.00%) |       0
 
 1

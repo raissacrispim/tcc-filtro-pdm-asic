@@ -1,0 +1,50 @@
+Command: /home/raissa.crispim/tcc_filtro/atpg/output/pnr/./simv_sim_transition_zero +tmax_serial=1000000 -l /home/raissa.crispim/tcc_filtro/atpg/reports/pnr/sim_transition_zero.log
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Oct 22 11:59 2026
+#############################################################################
+ MAX TB Version X-2025.06-SP2
+ Test Protocol File generated from original file "atpg/output/pnr/filtro_pdm_transition.stil"
+ STIL file version: 1.0
+#############################################################################
+
+XTB: Setting runtime option "tmax_serial" to 1000000.
+XTB: Enabling serial simulation for all patterns.
+XTB: Starting serial simulation of 165 patterns
+XTB: Begin serial scan load for pattern 0 (T=200.00 ns, V=3)
+XTB: Begin serial scan load for pattern 5 (T=668000.00 ns, V=6681)
+XTB: Begin serial scan load for pattern 10 (T=1336000.00 ns, V=13361)
+XTB: Begin serial scan load for pattern 15 (T=2004000.00 ns, V=20041)
+XTB: Begin serial scan load for pattern 20 (T=2672000.00 ns, V=26721)
+XTB: Begin serial scan load for pattern 25 (T=3340000.00 ns, V=33401)
+XTB: Begin serial scan load for pattern 30 (T=4008000.00 ns, V=40081)
+XTB: Begin serial scan load for pattern 35 (T=4676000.00 ns, V=46761)
+XTB: Begin serial scan load for pattern 40 (T=5344000.00 ns, V=53441)
+XTB: Begin serial scan load for pattern 45 (T=6012000.00 ns, V=60121)
+XTB: Begin serial scan load for pattern 50 (T=6680000.00 ns, V=66801)
+XTB: Begin serial scan load for pattern 55 (T=7348000.00 ns, V=73481)
+XTB: Begin serial scan load for pattern 60 (T=8016000.00 ns, V=80161)
+XTB: Begin serial scan load for pattern 65 (T=8684000.00 ns, V=86841)
+XTB: Begin serial scan load for pattern 70 (T=9352000.00 ns, V=93521)
+XTB: Begin serial scan load for pattern 75 (T=10020000.00 ns, V=100201)
+XTB: Begin serial scan load for pattern 80 (T=10688000.00 ns, V=106881)
+XTB: Begin serial scan load for pattern 85 (T=11356000.00 ns, V=113561)
+XTB: Begin serial scan load for pattern 90 (T=12024000.00 ns, V=120241)
+XTB: Begin serial scan load for pattern 95 (T=12692000.00 ns, V=126921)
+XTB: Begin serial scan load for pattern 100 (T=13360000.00 ns, V=133601)
+XTB: Begin serial scan load for pattern 105 (T=14028000.00 ns, V=140281)
+XTB: Begin serial scan load for pattern 110 (T=14696000.00 ns, V=146961)
+XTB: Begin serial scan load for pattern 115 (T=15364000.00 ns, V=153641)
+XTB: Begin serial scan load for pattern 120 (T=16032000.00 ns, V=160321)
+XTB: Begin serial scan load for pattern 125 (T=16700000.00 ns, V=167001)
+XTB: Begin serial scan load for pattern 130 (T=17368000.00 ns, V=173681)
+XTB: Begin serial scan load for pattern 135 (T=18036000.00 ns, V=180361)
+XTB: Begin serial scan load for pattern 140 (T=18704000.00 ns, V=187041)
+XTB: Begin serial scan load for pattern 145 (T=19372000.00 ns, V=193721)
+XTB: Begin serial scan load for pattern 150 (T=20040000.00 ns, V=200401)
+XTB: Begin serial scan load for pattern 155 (T=20708000.00 ns, V=207081)
+XTB: Begin serial scan load for pattern 160 (T=21376000.00 ns, V=213761)
+XTB: Simulation of 165 patterns completed with 0 mismatches (time: 22177300.00 ns, cycles: 221773)
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 22177300000 ps

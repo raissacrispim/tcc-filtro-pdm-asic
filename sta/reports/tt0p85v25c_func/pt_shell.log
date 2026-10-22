@@ -66,14 +66,14 @@ read_verilog pnr/output/filtro_pdm_pnr.v
 current_design filtro_pdm
 Information: current_design won't return any data before link (DES-071)
 link_design
-Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.v'
 Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
+Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.v'
 Linking design filtro_pdm...
 Information: Removing 1 unneeded designs..... (LNK-034)
-Information: 240 (81.63%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
-Information: total 240 library cells are unused (LNK-046)
+Information: 239 (81.29%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
+Information: total 239 library cells are unused (LNK-046)
 Design 'filtro_pdm' was successfully linked.
-Information: There are 9920 leaf cells, ports, hiers and 14032 nets in the design (LNK-047)
+Information: There are 10095 leaf cells, ports, hiers and 14203 nets in the design (LNK-047)
 1
 read_parasitics -format SPEF $SPEF
 Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
@@ -186,20 +186,20 @@ lappend R "Modo       : $MODO"
 lappend R "Parasitas  : $SPEF"
 ================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef}
 lappend R "Pior setup : [folga -delay_type max]"
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)}
 lappend R "Pior hold  : [folga -delay_type min]"
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)}
 lappend R "Hold reg->reg  : [folga -delay_type min -from [all_registers -clock_pins] -to [all_registers -data_pins]]"
 Warning: There are 2664 invalid end points for constrained paths. (UITE-416)
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)}
 lappend R "Hold entradas  : [folga -delay_type min -from $entradas]"
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)} {Hold entradas  : 0.1774 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)}
 lappend R "Hold saidas    : [folga -delay_type min -to [all_outputs]]"
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)} {Hold entradas  : 0.1774 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)} {Hold saidas    : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)}
 lappend R "Endpoints com setup violado: $total_setup"
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)} {Hold entradas  : 0.1774 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)} {Hold saidas    : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0}
 lappend R "Endpoints com hold violado : $total_hold"
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)} {Hold entradas  : 0.1774 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)} {Hold saidas    : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0}
 dict for {c k} $n_hold {
     lappend R [format "  hold %-28s %4d  WNS %.4f ns" $c $k [dict get $wns_hold $c]]
 }
@@ -207,9 +207,9 @@ dict for {c k} $n_setup {
     lappend R [format "  setup %-27s %4d  WNS %.4f ns" $c $k [dict get $wns_setup $c]]
 }
 lappend R "Relatorios : $REP/"
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/tt0p85v25c_func/}
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)} {Hold entradas  : 0.1774 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)} {Hold saidas    : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/tt0p85v25c_func/}
 lappend R "=================================================="
-================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)} {Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)} {Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/tt0p85v25c_func/} ==================================================
+================================================== {Corner     : tt0p85v25c} {Modo       : func} {Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef} {Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)} {Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)} {Hold entradas  : 0.1774 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)} {Hold saidas    : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)} {Endpoints com setup violado: 0} {Endpoints com hold violado : 0} {Relatorios : sta/reports/tt0p85v25c_func/} ==================================================
 set f [open $REP/resumo.txt w]
 file36
 foreach linha $R {
@@ -220,11 +220,11 @@ STA| ==================================================
 STA| Corner     : tt0p85v25c
 STA| Modo       : func
 STA| Parasitas  : pnr/output/filtro_pdm.Cmax_25.spef
-STA| Pior setup : 60.2116 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
-STA| Pior hold  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)
-STA| Hold reg->reg  : 0.1402 ns (u_fir/delay_reg_35__1_/CLK -> u_fir/delay_reg_36__1_/D)
-STA| Hold entradas  : 0.1748 ns (rst -> u_cic_u_integradores_int1_reg_15_/D)
-STA| Hold saidas    : 0.1975 ns (u_fir/valid_out_reg/CLK -> valid_out)
+STA| Pior setup : 60.1993 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
+STA| Pior hold  : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)
+STA| Hold reg->reg  : 0.1532 ns (u_fir/delay_reg_55__16_/CLK -> u_fir/delay_reg_55__16_/D)
+STA| Hold entradas  : 0.1774 ns (rst -> u_cic_u_integradores_int1_reg_13_/D)
+STA| Hold saidas    : 0.1330 ns (u_fir/valid_out_reg/CLK -> valid_out)
 STA| Endpoints com setup violado: 0
 STA| Endpoints com hold violado : 0
 STA| Relatorios : sta/reports/tt0p85v25c_func/
@@ -249,7 +249,7 @@ Information: Defining new variable 'wns_setup'. (CMD-041)
 
 Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
 Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
-Maximum memory usage for this session: 2874.18 MB
+Maximum memory usage for this session: 2874.25 MB
 CPU usage for this session: 14 seconds 
 Elapsed time for this session: 10 seconds
 Diagnostics summary: 3 warnings, 25 informationals

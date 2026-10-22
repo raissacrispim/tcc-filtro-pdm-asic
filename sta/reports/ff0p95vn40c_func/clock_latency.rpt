@@ -6,7 +6,7 @@ Report : clock timing
 	-setup
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 20 17:46:06 2026
+Date   : Thu Oct 22 11:49:22 2026
 ****************************************
 
   Clock: clk
@@ -14,26 +14,26 @@ Date   : Tue Oct 20 17:46:06 2026
                                                  --- Latency ---
   Clock Pin                        Trans    Source   Network  Total
 ----------------------------------------------------------------------------
-  u_fir/delay_reg_13__14_/CLK      0.0308   0.0000   0.0858   0.0858   rp-+
-  u_fir/delay_reg_13__16_/CLK      0.0308   0.0000   0.0858   0.0858   rp-+
-  u_fir/delay_reg_13__15_/CLK      0.0308   0.0000   0.0858   0.0858   rp-+
-  u_fir/delay_reg_49__14_/CLK      0.0308   0.0000   0.0858   0.0858   rp-+
-  u_fir/delay_reg_14__13_/CLK      0.0308   0.0000   0.0858   0.0858   rp-+
-  u_fir/delay_reg_49__13_/CLK      0.0308   0.0000   0.0858   0.0858   rp-+
-  u_fir/delay_reg_48__13_/CLK      0.0308   0.0000   0.0857   0.0857   rp-+
-  u_fir/delay_reg_14__14_/CLK      0.0308   0.0000   0.0857   0.0857   rp-+
-  u_fir/delay_reg_14__16_/CLK      0.0308   0.0000   0.0857   0.0857   rp-+
-  u_fir/delay_reg_49__15_/CLK      0.0308   0.0000   0.0857   0.0857   rp-+
-  u_fir/delay_reg_50__16_/CLK      0.0308   0.0000   0.0857   0.0857   rp-+
-  u_fir/delay_reg_15__14_/CLK      0.0308   0.0000   0.0857   0.0857   rp-+
-  u_fir/delay_reg_15__16_/CLK      0.0308   0.0000   0.0857   0.0857   rp-+
-  u_fir/delay_reg_48__15_/CLK      0.0308   0.0000   0.0856   0.0856   rp-+
-  u_fir/delay_reg_49__16_/CLK      0.0308   0.0000   0.0856   0.0856   rp-+
-  u_fir/delay_reg_14__15_/CLK      0.0308   0.0000   0.0856   0.0856   rp-+
-  u_fir/delay_reg_48__14_/CLK      0.0308   0.0000   0.0856   0.0856   rp-+
-  u_fir/delay_reg_15__15_/CLK      0.0308   0.0000   0.0856   0.0856   rp-+
-  u_fir/delay_reg_47__15_/CLK      0.0308   0.0000   0.0856   0.0856   rp-+
-  u_fir/delay_reg_48__16_/CLK      0.0309   0.0000   0.0856   0.0856   rp-+
+  u_fir/delay_reg_3__11_/CLK       0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_3__10_/CLK       0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_60__11_/CLK      0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_3__9_/CLK        0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_3__8_/CLK        0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_3__13_/CLK       0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_3__7_/CLK        0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_2__9_/CLK        0.0280   0.0000   0.0786   0.0786   rp-+
+  u_fir/delay_reg_2__10_/CLK       0.0280   0.0000   0.0785   0.0785   rp-+
+  u_fir/delay_reg_2__7_/CLK        0.0280   0.0000   0.0785   0.0785   rp-+
+  u_fir/delay_reg_2__8_/CLK        0.0280   0.0000   0.0785   0.0785   rp-+
+  u_fir/delay_reg_0__10_/CLK       0.0280   0.0000   0.0784   0.0784   rp-+
+  u_fir/delay_reg_61__6_/CLK       0.0280   0.0000   0.0784   0.0784   rp-+
+  u_fir/delay_reg_61__11_/CLK      0.0280   0.0000   0.0784   0.0784   rp-+
+  u_fir/delay_reg_62__11_/CLK      0.0280   0.0000   0.0784   0.0784   rp-+
+  u_fir/delay_reg_1__9_/CLK        0.0280   0.0000   0.0783   0.0783   rp-+
+  u_fir/delay_reg_1__10_/CLK       0.0280   0.0000   0.0783   0.0783   rp-+
+  u_fir/delay_reg_60__12_/CLK      0.0280   0.0000   0.0783   0.0783   rp-+
+  u_fir/delay_reg_61__9_/CLK       0.0280   0.0000   0.0783   0.0783   rp-+
+  u_fir/delay_reg_2__13_/CLK       0.0280   0.0000   0.0783   0.0783   rp-+
 ----------------------------------------------------------------------------
 
 1

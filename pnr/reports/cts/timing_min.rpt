@@ -6,43 +6,11 @@ Report : timing
         -report_by design
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:33:38 2026
+Date   : Thu Oct 22 11:38:22 2026
 ****************************************
 
-  Startpoint: u_fir/delay_reg_60__1_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_fir/delay_reg_2__0_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: clk
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.06      0.06
-
-  u_fir/delay_reg_60__1_/CLK (SDFFX1_RVT)          0.00      0.06 r
-  u_fir/delay_reg_60__1_/QN (SDFFX1_RVT)           0.05      0.11 f
-  u_fir/delay_reg_2__0_/SI (SDFFX1_RVT)            0.00      0.11 f
-  data arrival time                                          0.11
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.07      0.07
-  u_fir/delay_reg_2__0_/CLK (SDFFX1_RVT)           0.00      0.07 r
-  clock uncertainty                                0.10      0.17
-  library hold time                               -0.03      0.14
-  data required time                                         0.14
-  ------------------------------------------------------------------------
-  data required time                                         0.14
-  data arrival time                                         -0.11
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.03
-
-
-
-  Startpoint: u_fir/delay_reg_62__0_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_fir/delay_reg_1__3_ (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: u_fir/delay_reg_61__3_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_2__3_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -54,27 +22,27 @@ Date   : Tue Oct 20 17:33:38 2026
   clock clk (rise edge)                            0.00      0.00
   clock network delay (propagated)                 0.04      0.04
 
-  u_fir/delay_reg_62__0_/CLK (SDFFX1_RVT)          0.00      0.04 r
-  u_fir/delay_reg_62__0_/QN (SDFFX1_RVT)           0.05      0.09 f
-  u_fir/delay_reg_1__3_/SI (SDFFX1_RVT)            0.00      0.09 f
+  u_fir/delay_reg_61__3_/CLK (SDFFX1_RVT)          0.00      0.04 r
+  u_fir/delay_reg_61__3_/QN (SDFFX1_RVT)           0.05      0.09 f
+  u_fir/delay_reg_2__3_/SI (SDFFX1_RVT)            0.00      0.09 f
   data arrival time                                          0.09
 
   clock clk (rise edge)                            0.00      0.00
   clock network delay (propagated)                 0.04      0.04
-  u_fir/delay_reg_1__3_/CLK (SDFFX1_RVT)           0.00      0.04 r
+  u_fir/delay_reg_2__3_/CLK (SDFFX1_RVT)           0.00      0.04 r
   clock uncertainty                                0.10      0.14
-  library hold time                               -0.03      0.11
-  data required time                                         0.11
+  library hold time                               -0.03      0.12
+  data required time                                         0.12
   ------------------------------------------------------------------------
-  data required time                                         0.11
+  data required time                                         0.12
   data arrival time                                         -0.09
   ------------------------------------------------------------------------
   slack (VIOLATED)                                          -0.03
 
 
 
-  Startpoint: u_cic_u_integradores_int2_reg_17_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_cic_u_combs_u_comb2_x_delay_reg_17_ (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: u_fir/delay_reg_2__3_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_2__1_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -84,171 +52,28 @@ Date   : Tue Oct 20 17:33:38 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.07      0.07
+  clock network delay (propagated)                 0.04      0.04
 
-  u_cic_u_integradores_int2_reg_17_/CLK (SDFFX1_RVT)
-                                                   0.00      0.07 r
-  u_cic_u_integradores_int2_reg_17_/QN (SDFFX1_RVT)
-                                                   0.05      0.12 f
-  u_cic_u_combs_u_comb2_x_delay_reg_17_/SI (SDFFX1_RVT)
-                                                   0.00      0.12 f
-  data arrival time                                          0.12
+  u_fir/delay_reg_2__3_/CLK (SDFFX1_RVT)           0.00      0.04 r
+  u_fir/delay_reg_2__3_/QN (SDFFX1_RVT)            0.05      0.09 f
+  u_fir/delay_reg_2__1_/SI (SDFFX1_RVT)            0.00      0.09 f
+  data arrival time                                          0.09
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.07      0.07
-  u_cic_u_combs_u_comb2_x_delay_reg_17_/CLK (SDFFX1_RVT)
-                                                   0.00      0.07 r
-  clock uncertainty                                0.10      0.17
-  library hold time                               -0.03      0.14
-  data required time                                         0.14
+  clock network delay (propagated)                 0.04      0.04
+  u_fir/delay_reg_2__1_/CLK (SDFFX1_RVT)           0.00      0.04 r
+  clock uncertainty                                0.10      0.14
+  library hold time                               -0.03      0.12
+  data required time                                         0.12
   ------------------------------------------------------------------------
-  data required time                                         0.14
-  data arrival time                                         -0.12
+  data required time                                         0.12
+  data arrival time                                         -0.09
   ------------------------------------------------------------------------
   slack (VIOLATED)                                          -0.03
 
 
 
-  Startpoint: u_fir/delay_reg_62__4_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_fir/delay_reg_62__1_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: clk
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
-
-  u_fir/delay_reg_62__4_/CLK (SDFFX1_RVT)          0.00      0.04 r
-  u_fir/delay_reg_62__4_/QN (SDFFX1_RVT)           0.05      0.09 f
-  u_fir/delay_reg_62__1_/SI (SDFFX1_RVT)           0.00      0.09 f
-  data arrival time                                          0.09
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
-  u_fir/delay_reg_62__1_/CLK (SDFFX1_RVT)          0.00      0.04 r
-  clock uncertainty                                0.10      0.14
-  library hold time                               -0.03      0.11
-  data required time                                         0.11
-  ------------------------------------------------------------------------
-  data required time                                         0.11
-  data arrival time                                         -0.09
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.02
-
-
-
-  Startpoint: u_fir/delay_reg_35__16_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_fir/delay_reg_34__16_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: clk
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.07      0.07
-
-  u_fir/delay_reg_35__16_/CLK (SDFFX1_RVT)         0.00      0.07 r
-  u_fir/delay_reg_35__16_/Q (SDFFX1_RVT)           0.06      0.13 r
-  u_fir/copt_h_inst_2701/Y (NBUFFX2_RVT)           0.02      0.15 r
-  u_fir/delay_reg_34__16_/SI (SDFFX1_RVT)          0.00      0.15 r
-  data arrival time                                          0.15
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.07      0.07
-  u_fir/delay_reg_34__16_/CLK (SDFFX1_RVT)         0.00      0.07 r
-  clock uncertainty                                0.10      0.17
-  library hold time                               -0.02      0.15
-  data required time                                         0.15
-  ------------------------------------------------------------------------
-  data required time                                         0.15
-  data arrival time                                         -0.15
-  ------------------------------------------------------------------------
-  slack (MET)                                                0.00
-
-
-
-  Startpoint: u_cic_u_integradores_int1_reg_7_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_cic_u_integradores_int4_reg_7_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: clk
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.07      0.07
-
-  u_cic_u_integradores_int1_reg_7_/CLK (SDFFX1_RVT)
-                                                   0.00      0.07 r
-  u_cic_u_integradores_int1_reg_7_/Q (SDFFX1_RVT)
-                                                   0.06      0.13 r
-  copt_h_inst_3947/Y (NBUFFX2_RVT)                 0.02      0.15 r
-  u_cic_u_integradores_int4_reg_7_/SI (SDFFX1_RVT)
-                                                   0.00      0.15 r
-  data arrival time                                          0.15
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.07      0.07
-  u_cic_u_integradores_int4_reg_7_/CLK (SDFFX1_RVT)
-                                                   0.00      0.07 r
-  clock uncertainty                                0.10      0.17
-  library hold time                               -0.02      0.15
-  data required time                                         0.15
-  ------------------------------------------------------------------------
-  data required time                                         0.15
-  data arrival time                                         -0.15
-  ------------------------------------------------------------------------
-  slack (MET)                                                0.00
-
-
-
-  Startpoint: u_cic_u_integradores_int1_reg_2_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_cic_u_integradores_int2_reg_1_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: clk
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
-
-  u_cic_u_integradores_int1_reg_2_/CLK (SDFFX1_RVT)
-                                                   0.00      0.04 r
-  u_cic_u_integradores_int1_reg_2_/Q (SDFFX1_RVT)
-                                                   0.06      0.10 r
-  copt_h_inst_3944/Y (NBUFFX2_RVT)                 0.02      0.12 r
-  u_cic_u_integradores_int2_reg_1_/SI (SDFFX1_RVT)
-                                                   0.00      0.12 r
-  data arrival time                                          0.12
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
-  u_cic_u_integradores_int2_reg_1_/CLK (SDFFX1_RVT)
-                                                   0.00      0.04 r
-  clock uncertainty                                0.10      0.14
-  library hold time                               -0.02      0.12
-  data required time                                         0.12
-  ------------------------------------------------------------------------
-  data required time                                         0.12
-  data arrival time                                         -0.12
-  ------------------------------------------------------------------------
-  slack (MET)                                                0.00
-
-
-
-  Startpoint: u_cic_u_integradores_int3_reg_9_ (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: u_cic_u_integradores_int1_reg_10_ (rising edge-triggered flip-flop clocked by clk)
   Endpoint: u_cic_u_integradores_int2_reg_10_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
@@ -261,31 +86,32 @@ Date   : Tue Oct 20 17:33:38 2026
   clock clk (rise edge)                            0.00      0.00
   clock network delay (propagated)                 0.07      0.07
 
-  u_cic_u_integradores_int3_reg_9_/CLK (SDFFX1_RVT)
+  u_cic_u_integradores_int1_reg_10_/CLK (SDFFX1_RVT)
                                                    0.00      0.07 r
-  u_cic_u_integradores_int3_reg_9_/QN (SDFFX1_RVT)
-                                                   0.05      0.11 f
+  u_cic_u_integradores_int1_reg_10_/Q (SDFFX1_RVT)
+                                                   0.06      0.13 r
+  copt_h_inst_3939/Y (NBUFFX8_RVT)                 0.02      0.15 r
   u_cic_u_integradores_int2_reg_10_/SI (SDFFX1_RVT)
-                                                   0.00      0.11 f
-  data arrival time                                          0.11
+                                                   0.00      0.15 r
+  data arrival time                                          0.15
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
+  clock network delay (propagated)                 0.07      0.07
   u_cic_u_integradores_int2_reg_10_/CLK (SDFFX1_RVT)
-                                                   0.00      0.04 r
-  clock uncertainty                                0.10      0.14
-  library hold time                               -0.03      0.11
-  data required time                                         0.11
+                                                   0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
   ------------------------------------------------------------------------
-  data required time                                         0.11
-  data arrival time                                         -0.11
+  data required time                                         0.15
+  data arrival time                                         -0.15
   ------------------------------------------------------------------------
   slack (MET)                                                0.00
 
 
 
-  Startpoint: u_cic_u_integradores_int1_reg_0_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_cic_u_integradores_int2_reg_0_ (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: u_cic_u_integradores_int1_reg_1_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic_u_integradores_int2_reg_1_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -295,34 +121,34 @@ Date   : Tue Oct 20 17:33:38 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
+  clock network delay (propagated)                 0.07      0.07
 
-  u_cic_u_integradores_int1_reg_0_/CLK (SDFFX1_RVT)
-                                                   0.00      0.04 r
-  u_cic_u_integradores_int1_reg_0_/Q (SDFFX1_RVT)
-                                                   0.06      0.10 r
-  copt_h_inst_3942/Y (NBUFFX2_RVT)                 0.02      0.12 r
-  u_cic_u_integradores_int2_reg_0_/SI (SDFFX1_RVT)
-                                                   0.00      0.12 r
-  data arrival time                                          0.12
+  u_cic_u_integradores_int1_reg_1_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  u_cic_u_integradores_int1_reg_1_/Q (SDFFX1_RVT)
+                                                   0.06      0.13 r
+  copt_h_inst_3933/Y (NBUFFX8_RVT)                 0.02      0.15 r
+  u_cic_u_integradores_int2_reg_1_/SI (SDFFX1_RVT)
+                                                   0.00      0.15 r
+  data arrival time                                          0.15
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
-  u_cic_u_integradores_int2_reg_0_/CLK (SDFFX1_RVT)
-                                                   0.00      0.04 r
-  clock uncertainty                                0.10      0.14
-  library hold time                               -0.02      0.12
-  data required time                                         0.12
+  clock network delay (propagated)                 0.07      0.07
+  u_cic_u_integradores_int2_reg_1_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
   ------------------------------------------------------------------------
-  data required time                                         0.12
-  data arrival time                                         -0.12
+  data required time                                         0.15
+  data arrival time                                         -0.15
   ------------------------------------------------------------------------
   slack (MET)                                                0.00
 
 
 
-  Startpoint: u_fir/delay_reg_31__6_ (rising edge-triggered flip-flop clocked by clk)
-  Endpoint: u_fir/delay_reg_62__13_ (rising edge-triggered flip-flop clocked by clk)
+  Startpoint: u_cic_u_integradores_int1_reg_6_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic_u_integradores_int1_reg_8_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -332,22 +158,200 @@ Date   : Tue Oct 20 17:33:38 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
+  clock network delay (propagated)                 0.07      0.07
 
-  u_fir/delay_reg_31__6_/CLK (SDFFX1_RVT)          0.00      0.04 r
-  u_fir/delay_reg_31__6_/Q (SDFFX1_RVT)            0.08      0.11 r
-  u_fir/delay_reg_62__13_/SI (SDFFX1_RVT)          0.00      0.11 r
-  data arrival time                                          0.11
+  u_cic_u_integradores_int1_reg_6_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  u_cic_u_integradores_int1_reg_6_/Q (SDFFX1_RVT)
+                                                   0.06      0.13 r
+  copt_h_inst_3946/Y (NBUFFX2_RVT)                 0.02      0.15 r
+  u_cic_u_integradores_int1_reg_8_/SI (SDFFX1_RVT)
+                                                   0.00      0.15 r
+  data arrival time                                          0.15
 
   clock clk (rise edge)                            0.00      0.00
-  clock network delay (propagated)                 0.04      0.04
-  u_fir/delay_reg_62__13_/CLK (SDFFX1_RVT)         0.00      0.04 r
-  clock uncertainty                                0.10      0.14
-  library hold time                               -0.03      0.11
-  data required time                                         0.11
+  clock network delay (propagated)                 0.07      0.07
+  u_cic_u_integradores_int1_reg_8_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
   ------------------------------------------------------------------------
-  data required time                                         0.11
-  data arrival time                                         -0.11
+  data required time                                         0.15
+  data arrival time                                         -0.15
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_cic_u_integradores_int1_reg_15_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic_u_combs_u_comb1_x_delay_reg_15_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: scan
+  Corner: ff
+  Scenario: scan_ff
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.07      0.07
+
+  u_cic_u_integradores_int1_reg_15_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  u_cic_u_integradores_int1_reg_15_/Q (SDFFX1_RVT)
+                                                   0.06      0.13 r
+  copt_h_inst_3947/Y (NBUFFX4_RVT)                 0.02      0.15 r
+  u_cic_u_combs_u_comb1_x_delay_reg_15_/SI (SDFFX1_RVT)
+                                                   0.00      0.15 r
+  data arrival time                                          0.15
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.07      0.07
+  u_cic_u_combs_u_comb1_x_delay_reg_15_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
+  ------------------------------------------------------------------------
+  data required time                                         0.15
+  data arrival time                                         -0.15
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_fir/delay_reg_50__4_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_51__4_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: func
+  Corner: ff
+  Scenario: func_ff
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.04      0.04
+
+  u_fir/delay_reg_50__4_/CLK (SDFFX1_RVT)          0.00      0.04 r
+  u_fir/delay_reg_50__4_/Q (SDFFX1_RVT)            0.07      0.11 r
+  u_fir/U3019/Y (AO22X1_RVT)                       0.04      0.15 r
+  u_fir/delay_reg_51__4_/D (SDFFX1_RVT)            0.00      0.15 r
+  data arrival time                                          0.15
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.07      0.07
+  u_fir/delay_reg_51__4_/CLK (SDFFX1_RVT)          0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
+  ------------------------------------------------------------------------
+  data required time                                         0.15
+  data arrival time                                         -0.15
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_cic_u_integradores_int1_reg_8_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_cic_u_integradores_int3_reg_8_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: scan
+  Corner: ff
+  Scenario: scan_ff
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.07      0.07
+
+  u_cic_u_integradores_int1_reg_8_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  u_cic_u_integradores_int1_reg_8_/Q (SDFFX1_RVT)
+                                                   0.06      0.13 r
+  copt_h_inst_3944/Y (NBUFFX8_RVT)                 0.02      0.15 r
+  u_cic_u_integradores_int3_reg_8_/SI (SDFFX1_RVT)
+                                                   0.00      0.15 r
+  data arrival time                                          0.15
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.07      0.07
+  u_cic_u_integradores_int3_reg_8_/CLK (SDFFX1_RVT)
+                                                   0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
+  ------------------------------------------------------------------------
+  data required time                                         0.15
+  data arrival time                                         -0.15
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_fir/delay_reg_29__16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_28__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: scan
+  Corner: ff
+  Scenario: scan_ff
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.06      0.06
+
+  u_fir/delay_reg_29__16_/CLK (SDFFX1_RVT)         0.00      0.06 r
+  u_fir/delay_reg_29__16_/Q (SDFFX1_RVT)           0.06      0.12 r
+  u_fir/copt_h_inst_2718/Y (NBUFFX2_RVT)           0.02      0.15 r
+  u_fir/delay_reg_28__16_/SI (SDFFX1_RVT)          0.00      0.15 r
+  data arrival time                                          0.15
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.07      0.07
+  u_fir/delay_reg_28__16_/CLK (SDFFX1_RVT)         0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
+  ------------------------------------------------------------------------
+  data required time                                         0.15
+  data arrival time                                         -0.15
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.00
+
+
+
+  Startpoint: u_fir/delay_reg_13__16_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_14__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: scan
+  Corner: ff
+  Scenario: scan_ff
+  Path Group: clk
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.06      0.06
+
+  u_fir/delay_reg_13__16_/CLK (SDFFX1_RVT)         0.00      0.06 r
+  u_fir/delay_reg_13__16_/Q (SDFFX1_RVT)           0.06      0.13 r
+  u_fir/copt_h_inst_2717/Y (NBUFFX2_RVT)           0.02      0.15 r
+  u_fir/delay_reg_14__16_/SI (SDFFX1_RVT)          0.00      0.15 r
+  data arrival time                                          0.15
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (propagated)                 0.07      0.07
+  u_fir/delay_reg_14__16_/CLK (SDFFX1_RVT)         0.00      0.07 r
+  clock uncertainty                                0.10      0.17
+  library hold time                               -0.02      0.15
+  data required time                                         0.15
+  ------------------------------------------------------------------------
+  data required time                                         0.15
+  data arrival time                                         -0.15
   ------------------------------------------------------------------------
   slack (MET)                                                0.00
 

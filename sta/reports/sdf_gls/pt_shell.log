@@ -72,10 +72,10 @@ Loading verilog file '/home/raissa.crispim/tcc_filtro/pnr/output/filtro_pdm_pnr.
 Loading db file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/db_nldm/saed32rvt_tt0p85v25c.db'
 Linking design filtro_pdm...
 Information: Removing 1 unneeded designs..... (LNK-034)
-Information: 240 (81.63%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
-Information: total 240 library cells are unused (LNK-046)
+Information: 239 (81.29%) library cells are unused in library saed32rvt_tt0p85v25c..... (LNK-045)
+Information: total 239 library cells are unused (LNK-046)
 Design 'filtro_pdm' was successfully linked.
-Information: There are 9920 leaf cells, ports, hiers and 14032 nets in the design (LNK-047)
+Information: There are 10095 leaf cells, ports, hiers and 14203 nets in the design (LNK-047)
 1
 read_parasitics -format SPEF pnr/output/filtro_pdm.Cmax_25.spef
 Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
@@ -109,7 +109,7 @@ Report : write_sdf pnr/output/filtro_pdm_pnr_pt.sdf
 	-include { SETUPHOLD RECREM }
 Design : filtro_pdm
 Version: X-2025.06-SP2
-Date   : Tue Oct 20 17:48:20 2026
+Date   : Thu Oct 22 11:50:08 2026
 ****************************************
 
 1
@@ -123,8 +123,8 @@ Information: Defining new variable 'SDF'. (CMD-041)
 
 Timing updates: 1 (0 implicit, 1 explicit) (0 incremental, 1 full, 0 logical)
 Noise updates: 0 (0 implicit, 0 explicit) (0 incremental, 0 full)
-Maximum memory usage for this session: 2874.25 MB
-CPU usage for this session: 14 seconds 
+Maximum memory usage for this session: 2875.38 MB
+CPU usage for this session: 13 seconds 
 Elapsed time for this session: 10 seconds
 Diagnostics summary: 4 warnings, 13 informationals
 

@@ -4,7 +4,7 @@ Report : constraint
         -max_capacitance
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:39:58 2026
+Date   : Thu Oct 22 11:43:51 2026
 ****************************************
 
 
@@ -16,16 +16,10 @@ Information: Activity for scenario func_tt was cached, no propagation required. 
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/ropt_net_1561         16.00          16.59          -0.59  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4074/Y
-                               16.00          16.59          -0.59  (VIOLATED) 
-
-   u_fir/intadd_34_SUM_4_      16.00          16.54          -0.54  (VIOLATED) 
-     PIN : u_fir/intadd_34_U13/S
-                               16.00          16.54          -0.54  (VIOLATED) 
+   u_fir/ropt_net_1517         16.00          15.99           0.01  (MET)      
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 2
+   Number of max_capacitance violation(s): 0
 
-   Total number of violation(s): 2
+   Total number of violation(s): 0
 1

@@ -2,18 +2,18 @@
  -----------------------------------------------
  fault class                     code   #faults
  ------------------------------  ----  ---------
- Detected                         DT      70496
+ Detected                         DT      70423
  Possibly detected                PT          0
  Undetectable                     UD          9
- ATPG untestable                  AU          4
- Not detected                     ND       1233
+ ATPG untestable                  AU        424
+ Not detected                     ND       1550
  -----------------------------------------------
- total faults                             71742
- test coverage                            98.28%
+ total faults                             72406
+ test coverage                            97.27%
  -----------------------------------------------
             Pattern Summary Report
  -----------------------------------------------
- #internal patterns                         144
+ #internal patterns                         165
      #basic_scan patterns                     1
-     #fast_sequential patterns              143
+     #fast_sequential patterns              164
  -----------------------------------------------

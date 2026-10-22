@@ -1,7 +1,7 @@
  rule  severity  #fails  description
  ----  --------  ------  ---------------------------------
  N20   warning        2  underspecified UDP
- B7    warning        3  undriven module output pin
+ B7    warning        1  undriven module output pin
  B8    warning        2  unconnected module input pin
  B9    warning        2  undriven module internal net
- B10   warning      191  unconnected module internal net
+ B10   warning      189  unconnected module internal net

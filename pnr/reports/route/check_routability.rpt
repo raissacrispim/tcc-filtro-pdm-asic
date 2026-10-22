@@ -37,7 +37,7 @@ detail.enable_auto_ndr_flow                             :	 true
 
 Printing options for 'route.auto_via_ladder.*'
 
-There are 0 out of total 13731 nets with relaxed min layer from GR.
+There are 0 out of total 13726 nets with relaxed min layer from GR.
 
 ============================================
 ==  Check for design                      ==
@@ -185,4 +185,4 @@ There are 0 out of total 13731 nets with relaxed min layer from GR.
 Info: Attach forbidden region on filtro_pdm.dlib:filtro_pdm/cts.design
 
 End of check_routability
-rtapiOptAttrInterf: set attribute check_routability_called=1792528439 
+rtapiOptAttrInterf: set attribute check_routability_called=1792679922 

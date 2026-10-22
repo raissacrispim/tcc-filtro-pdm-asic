@@ -1,10 +1,10 @@
 Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
 Information: Timer using 1 threads
-Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 483 MB / Date: Tue Oct 20 17:30:10 2026
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 482 MB / Date: Thu Oct 22 11:34:58 2026
 
 Information: Corner ff: no PVT mismatches. (PVT-032)
 Information: Corner tt: no PVT mismatches. (PVT-032)
-Timing Update Completed: Mem-peak: 499 MB / Date: Tue Oct 20 17:30:11 2026
+Timing Update Completed: Mem-peak: 498 MB / Date: Thu Oct 22 11:34:59 2026
 
 Information: CTS will work on the following scenarios. (CTS-101)
    func_ff	(Mode: func; Corner: ff)
@@ -36,7 +36,7 @@ Skip checking the lib cells with low pass rates since analyze_lib_cell_placement
 Report : check_clock_tree
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:30:11 2026
+Date   : Thu Oct 22 11:34:59 2026
 ****************************************
 
 =================================================

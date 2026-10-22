@@ -3,7 +3,7 @@ Report : constraint
         -all_violators
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:37:03 2026
+Date   : Thu Oct 22 11:41:29 2026
 ****************************************
 
    late_timing
@@ -26,7 +26,7 @@ No paths.
                              Required        Actual                            
    Net                      Transition     Transition        Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/delay_10__2_           0.08           0.08           0.00  (MET)      
+   u_fir/delay_1__11_           0.08           0.08           0.00  (MET)      
 
   ---------------------------------------------------------------------------
    Number of max_transition violation(s): 0
@@ -37,77 +37,77 @@ No paths.
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   u_fir/HFSNET_920            16.00          16.06          -0.06  (VIOLATED) 
-     PIN : u_fir/HFSINV_300_944/Y
-                               16.00          16.06          -0.06  (VIOLATED) 
+   u_fir/ZBUF_9_17             16.00          16.11          -0.11  (VIOLATED) 
+     PIN : u_fir/ZBUF_9_inst_1695/Y
+                               16.00          16.11          -0.11  (VIOLATED) 
 
-   u_fir/delay_10__2_           8.00           8.06          -0.06  (VIOLATED) 
-     PIN : u_fir/delay_reg_10__2_/Q
-                                8.00           8.06          -0.06  (VIOLATED) 
+   u_fir/delay_1__11_           8.00           8.10          -0.10  (VIOLATED) 
+     PIN : u_fir/delay_reg_1__11_/Q
+                                8.00           8.10          -0.10  (VIOLATED) 
 
-   u_fir/ZBUF_70_12            16.00          16.06          -0.06  (VIOLATED) 
-     PIN : u_fir/ZBUF_70_inst_1742/Y
-                               16.00          16.06          -0.06  (VIOLATED) 
+   u_fir/intadd_37_SUM_6_       8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_fir/intadd_37_U11/S
+                                8.00           8.09          -0.09  (VIOLATED) 
 
-   y_out[2]                     8.00           8.06          -0.06  (VIOLATED) 
-     PIN : u_fir/y_out_reg_2_/Q
-                                8.00           8.06          -0.06  (VIOLATED) 
+   u_fir/delay_8__16_           8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_fir/delay_reg_8__16_/Q
+                                8.00           8.09          -0.09  (VIOLATED) 
 
-   u_fir/intadd_57_SUM_5_       8.00           8.05          -0.05  (VIOLATED) 
-     PIN : u_fir/intadd_57_U12/S
-                                8.00           8.05          -0.05  (VIOLATED) 
+   u_fir/delay_1__4_            8.00           8.09          -0.09  (VIOLATED) 
+     PIN : u_fir/delay_reg_1__4_/Q
+                                8.00           8.09          -0.09  (VIOLATED) 
 
-   u_fir/HFSNET_1060           32.00          32.05          -0.05  (VIOLATED) 
-     PIN : u_fir/HFSBUF_15436_1098/Y
-                               32.00          32.05          -0.05  (VIOLATED) 
+   u_cic_u_combs_comb1[5]       8.00           8.08          -0.08  (VIOLATED) 
+     PIN : u_cic_u_combs_u_comb1_y_out_reg_5_/Q
+                                8.00           8.08          -0.08  (VIOLATED) 
 
-   u_fir/HFSNET_505             8.00           8.05          -0.05  (VIOLATED) 
-     PIN : u_fir/HFSINV_231_525/Y
-                                8.00           8.05          -0.05  (VIOLATED) 
+   u_fir/delay_32__9_           8.00           8.08          -0.08  (VIOLATED) 
+     PIN : u_fir/delay_reg_32__9_/Q
+                                8.00           8.08          -0.08  (VIOLATED) 
 
-   u_fir/HFSNET_97              8.00           8.04          -0.04  (VIOLATED) 
-     PIN : u_fir/HFSINV_196_105/Y
+   u_fir/ropt_net_1510         16.00          16.08          -0.08  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4025/Y
+                               16.00          16.08          -0.08  (VIOLATED) 
+
+   u_fir/intadd_57_SUM_9_      16.00          16.07          -0.07  (VIOLATED) 
+     PIN : u_fir/intadd_57_U8/S
+                               16.00          16.07          -0.07  (VIOLATED) 
+
+   u_fir/delay_53__8_           8.00           8.04          -0.04  (VIOLATED) 
+     PIN : u_fir/delay_reg_53__8_/Q
                                 8.00           8.04          -0.04  (VIOLATED) 
 
-   u_fir/intadd_20_A_4_        16.00          16.03          -0.03  (VIOLATED) 
-     PIN : u_fir/intadd_38_U15/S
-                               16.00          16.03          -0.03  (VIOLATED) 
+   u_fir/ropt_net_1536         16.00          16.04          -0.04  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4051/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
 
-   u_fir/HFSNET_302            16.00          16.03          -0.03  (VIOLATED) 
-     PIN : u_fir/HFSBUF_130_321/Y
-                               16.00          16.03          -0.03  (VIOLATED) 
+   u_fir/ZBUF_24_24            16.00          16.04          -0.04  (VIOLATED) 
+     PIN : u_fir/ZBUF_24_inst_1718/Y
+                               16.00          16.04          -0.04  (VIOLATED) 
 
-   u_fir/HFSNET_898            16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/HFSBUF_200_922/Y
-                               16.00          16.02          -0.02  (VIOLATED) 
+   u_fir/intadd_28_A_6_        16.00          16.04          -0.04  (VIOLATED) 
+     PIN : u_fir/intadd_56_U12/S
+                               16.00          16.04          -0.04  (VIOLATED) 
 
-   u_fir/ropt_net_1535         16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4048/Y
-                               16.00          16.02          -0.02  (VIOLATED) 
+   cic_out[5]                   8.00           8.03          -0.03  (VIOLATED) 
+     PIN : u_cic_u_combs_u_comb4_y_out_reg_6_/Q
+                                8.00           8.03          -0.03  (VIOLATED) 
 
-   u_fir/ropt_net_1544         16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4057/Y
-                               16.00          16.02          -0.02  (VIOLATED) 
-
-   u_fir/delay_53__12_          8.00           8.02          -0.02  (VIOLATED) 
-     PIN : u_fir/delay_reg_53__12_/Q
+   u_fir/HFSNET_562             8.00           8.02          -0.02  (VIOLATED) 
+     PIN : u_fir/HFSINV_148_582/Y
                                 8.00           8.02          -0.02  (VIOLATED) 
 
-   u_fir/ropt_net_1527         16.00          16.02          -0.02  (VIOLATED) 
-     PIN : u_fir/ropt_mc_inst_4040/Y
+   u_fir/intadd_48_SUM_14_     16.00          16.02          -0.02  (VIOLATED) 
+     PIN : u_fir/intadd_48_U3/S
                                16.00          16.02          -0.02  (VIOLATED) 
 
-   u_fir/HFSNET_95             16.00          16.01          -0.01  (VIOLATED) 
-     PIN : u_fir/HFSINV_195_103/Y
+   u_fir/HFSNET_941            16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_fir/HFSBUF_273_965/Y
                                16.00          16.01          -0.01  (VIOLATED) 
 
-   u_fir/intadd_93_SUM_3_       8.00           8.00          -0.00  (VIOLATED) 
-     PIN : u_fir/intadd_93_U7/S
-                                8.00           8.00          -0.00  (VIOLATED) 
-
-   u_fir/HFSNET_693            16.00          16.00          -0.00  (VIOLATED) 
-     PIN : u_fir/HFSBUF_253_714/Y
-                               16.00          16.00          -0.00  (VIOLATED) 
+   u_fir/ropt_net_1533         16.00          16.01          -0.01  (VIOLATED) 
+     PIN : u_fir/ropt_mc_inst_4048/Y
+                               16.00          16.01          -0.01  (VIOLATED) 
 
   ---------------------------------------------------------------------------
    Number of max_capacitance violation(s): 18

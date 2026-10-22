@@ -1,0 +1,36 @@
+Command: /home/raissa.crispim/tcc_filtro/atpg/output/pnr/./simv_sim_stuck_zero +tmax_serial=1000000 -l /home/raissa.crispim/tcc_filtro/atpg/reports/pnr/sim_stuck_zero.log
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP2_Full64; Runtime version X-2025.06-SP2_Full64;  Oct 22 11:53 2026
+#############################################################################
+ MAX TB Version X-2025.06-SP2
+ Test Protocol File generated from original file "atpg/output/pnr/filtro_pdm_stuck.stil"
+ STIL file version: 1.0
+#############################################################################
+
+XTB: Setting runtime option "tmax_serial" to 1000000.
+XTB: Enabling serial simulation for all patterns.
+XTB: Starting serial simulation of 92 patterns
+XTB: Begin serial scan load for pattern 0 (T=200.00 ns, V=3)
+XTB: Begin serial scan load for pattern 5 (T=667200.00 ns, V=6673)
+XTB: Begin serial scan load for pattern 10 (T=1334200.00 ns, V=13343)
+XTB: Begin serial scan load for pattern 15 (T=2001200.00 ns, V=20013)
+XTB: Begin serial scan load for pattern 20 (T=2668200.00 ns, V=26683)
+XTB: Begin serial scan load for pattern 25 (T=3335200.00 ns, V=33353)
+XTB: Begin serial scan load for pattern 30 (T=4002200.00 ns, V=40023)
+XTB: Begin serial scan load for pattern 35 (T=4669200.00 ns, V=46693)
+XTB: Begin serial scan load for pattern 40 (T=5336200.00 ns, V=53363)
+XTB: Begin serial scan load for pattern 45 (T=6003200.00 ns, V=60033)
+XTB: Begin serial scan load for pattern 50 (T=6670200.00 ns, V=66703)
+XTB: Begin serial scan load for pattern 55 (T=7337200.00 ns, V=73373)
+XTB: Begin serial scan load for pattern 60 (T=8004200.00 ns, V=80043)
+XTB: Begin serial scan load for pattern 65 (T=8671200.00 ns, V=86713)
+XTB: Begin serial scan load for pattern 70 (T=9338200.00 ns, V=93383)
+XTB: Begin serial scan load for pattern 75 (T=10005200.00 ns, V=100053)
+XTB: Begin serial scan load for pattern 80 (T=10672200.00 ns, V=106723)
+XTB: Begin serial scan load for pattern 85 (T=11339200.00 ns, V=113393)
+XTB: Begin serial scan load for pattern 90 (T=12006200.00 ns, V=120063)
+XTB: Simulation of 92 patterns completed with 0 mismatches (time: 12406300.00 ns, cycles: 124063)
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 12406300000 ps

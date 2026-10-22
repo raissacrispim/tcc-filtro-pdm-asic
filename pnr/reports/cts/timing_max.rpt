@@ -9,7 +9,7 @@ Report : timing
         -report_by design
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:33:38 2026
+Date   : Thu Oct 22 11:38:22 2026
 ****************************************
 
   Startpoint: pdm_in (input port clocked by vclk)
@@ -29,31 +29,31 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/S (FADDX1_RVT)                      0.15    144.35 f
   U261/Y (INVX0_RVT)                               0.05    144.40 r
   intadd_1_U18/S (FADDX1_RVT)                      0.16    144.56 f
-  intadd_0_U18/S (FADDX1_RVT)                      0.17    144.72 r
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.72 r
   U299/Y (INVX0_RVT)                               0.04    144.76 f
-  U301/Y (OA222X1_RVT)                             0.11    144.87 f
-  U307/Y (OA222X1_RVT)                             0.13    145.00 f
-  U313/Y (OA222X1_RVT)                             0.11    145.12 f
-  U319/Y (OA222X1_RVT)                             0.13    145.24 f
-  U325/Y (OA222X1_RVT)                             0.13    145.38 f
-  U331/Y (OA222X1_RVT)                             0.13    145.51 f
-  U337/Y (OA222X1_RVT)                             0.13    145.64 f
+  U301/Y (OA222X1_RVT)                             0.12    144.88 f
+  U307/Y (OA222X1_RVT)                             0.13    145.01 f
+  U313/Y (OA222X1_RVT)                             0.12    145.13 f
+  U319/Y (OA222X1_RVT)                             0.13    145.26 f
+  U325/Y (OA222X1_RVT)                             0.13    145.39 f
+  U331/Y (OA222X1_RVT)                             0.13    145.52 f
+  U337/Y (OA222X1_RVT)                             0.13    145.65 f
   U343/Y (OA222X1_RVT)                             0.13    145.77 f
-  U349/Y (OA222X1_RVT)                             0.12    145.88 f
-  U350/Y (INVX0_RVT)                               0.05    145.93 r
-  U355/Y (AO222X1_RVT)                             0.14    146.07 r
-  U360/Y (AO222X1_RVT)                             0.14    146.21 r
-  U365/Y (AO222X1_RVT)                             0.14    146.35 r
-  U370/Y (AO222X1_RVT)                             0.14    146.49 r
-  U375/Y (AO222X1_RVT)                             0.14    146.63 r
-  U381/Y (AO222X1_RVT)                             0.14    146.77 r
-  U394/Y (AO222X1_RVT)                             0.13    146.89 r
-  U395/SO (HADDX1_RVT)                             0.10    146.99 f
-  U396/SO (HADDX1_RVT)                             0.10    147.09 r
-  U397/Y (AND2X1_RVT)                              0.05    147.15 r
+  U349/Y (OA222X1_RVT)                             0.12    145.89 f
+  U350/Y (INVX0_RVT)                               0.05    145.95 r
+  U355/Y (AO222X1_RVT)                             0.14    146.08 r
+  U360/Y (AO222X1_RVT)                             0.14    146.22 r
+  U365/Y (AO222X1_RVT)                             0.14    146.36 r
+  U370/Y (AO222X1_RVT)                             0.14    146.50 r
+  U375/Y (AO222X1_RVT)                             0.14    146.64 r
+  U381/Y (AO222X1_RVT)                             0.14    146.78 r
+  U394/Y (AO222X1_RVT)                             0.13    146.91 r
+  U395/SO (HADDX1_RVT)                             0.10    147.01 f
+  U396/SO (HADDX1_RVT)                             0.10    147.11 r
+  U397/Y (AND2X1_RVT)                              0.05    147.16 r
   u_cic_u_integradores_int4_reg_17_/D (SDFFX1_RVT)
-                                                   0.00    147.15 r
-  data arrival time                                        147.15
+                                                   0.00    147.16 r
+  data arrival time                                        147.16
 
   clock clk (rise edge)                          208.33    208.33
   clock network delay (propagated)                 0.13    208.46
@@ -64,9 +64,9 @@ Date   : Tue Oct 20 17:33:38 2026
   data required time                                       207.36
   ------------------------------------------------------------------------
   data required time                                       207.36
-  data arrival time                                        -147.15
+  data arrival time                                        -147.16
   ------------------------------------------------------------------------
-  slack (MET)                                               60.22
+  slack (MET)                                               60.21
 
 
 
@@ -87,29 +87,29 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/S (FADDX1_RVT)                      0.15    144.35 f
   U261/Y (INVX0_RVT)                               0.05    144.40 r
   intadd_1_U18/S (FADDX1_RVT)                      0.16    144.56 f
-  intadd_0_U18/S (FADDX1_RVT)                      0.17    144.72 r
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.72 r
   U299/Y (INVX0_RVT)                               0.04    144.76 f
-  U301/Y (OA222X1_RVT)                             0.11    144.87 f
-  U307/Y (OA222X1_RVT)                             0.13    145.00 f
-  U313/Y (OA222X1_RVT)                             0.11    145.12 f
-  U319/Y (OA222X1_RVT)                             0.13    145.24 f
-  U325/Y (OA222X1_RVT)                             0.13    145.38 f
-  U331/Y (OA222X1_RVT)                             0.13    145.51 f
-  U337/Y (OA222X1_RVT)                             0.13    145.64 f
+  U301/Y (OA222X1_RVT)                             0.12    144.88 f
+  U307/Y (OA222X1_RVT)                             0.13    145.01 f
+  U313/Y (OA222X1_RVT)                             0.12    145.13 f
+  U319/Y (OA222X1_RVT)                             0.13    145.26 f
+  U325/Y (OA222X1_RVT)                             0.13    145.39 f
+  U331/Y (OA222X1_RVT)                             0.13    145.52 f
+  U337/Y (OA222X1_RVT)                             0.13    145.65 f
   U343/Y (OA222X1_RVT)                             0.13    145.77 f
-  U349/Y (OA222X1_RVT)                             0.12    145.88 f
-  U350/Y (INVX0_RVT)                               0.05    145.93 r
-  U355/Y (AO222X1_RVT)                             0.14    146.07 r
-  U360/Y (AO222X1_RVT)                             0.14    146.21 r
-  U365/Y (AO222X1_RVT)                             0.14    146.35 r
-  U370/Y (AO222X1_RVT)                             0.14    146.49 r
-  U375/Y (AO222X1_RVT)                             0.14    146.63 r
-  U381/Y (AO222X1_RVT)                             0.14    146.77 r
-  U382/SO (HADDX1_RVT)                             0.11    146.87 f
-  U385/Y (OA221X1_RVT)                             0.10    146.97 f
+  U349/Y (OA222X1_RVT)                             0.12    145.89 f
+  U350/Y (INVX0_RVT)                               0.05    145.95 r
+  U355/Y (AO222X1_RVT)                             0.14    146.08 r
+  U360/Y (AO222X1_RVT)                             0.14    146.22 r
+  U365/Y (AO222X1_RVT)                             0.14    146.36 r
+  U370/Y (AO222X1_RVT)                             0.14    146.50 r
+  U375/Y (AO222X1_RVT)                             0.14    146.64 r
+  U381/Y (AO222X1_RVT)                             0.14    146.78 r
+  U382/SO (HADDX1_RVT)                             0.10    146.89 f
+  U385/Y (OA221X1_RVT)                             0.10    146.98 f
   u_cic_u_integradores_int4_reg_16_/D (SDFFX1_RVT)
-                                                   0.00    146.97 f
-  data arrival time                                        146.97
+                                                   0.00    146.98 f
+  data arrival time                                        146.98
 
   clock clk (rise edge)                          208.33    208.33
   clock network delay (propagated)                 0.13    208.46
@@ -120,9 +120,9 @@ Date   : Tue Oct 20 17:33:38 2026
   data required time                                       207.35
   ------------------------------------------------------------------------
   data required time                                       207.35
-  data arrival time                                        -146.97
+  data arrival time                                        -146.98
   ------------------------------------------------------------------------
-  slack (MET)                                               60.38
+  slack (MET)                                               60.37
 
 
 
@@ -143,41 +143,41 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/S (FADDX1_RVT)                      0.15    144.35 f
   U261/Y (INVX0_RVT)                               0.05    144.40 r
   intadd_1_U18/S (FADDX1_RVT)                      0.16    144.56 f
-  intadd_0_U18/S (FADDX1_RVT)                      0.17    144.72 r
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.72 r
   U299/Y (INVX0_RVT)                               0.04    144.76 f
-  U301/Y (OA222X1_RVT)                             0.11    144.87 f
-  U307/Y (OA222X1_RVT)                             0.13    145.00 f
-  U313/Y (OA222X1_RVT)                             0.11    145.12 f
-  U319/Y (OA222X1_RVT)                             0.13    145.24 f
-  U325/Y (OA222X1_RVT)                             0.13    145.38 f
-  U331/Y (OA222X1_RVT)                             0.13    145.51 f
-  U337/Y (OA222X1_RVT)                             0.13    145.64 f
+  U301/Y (OA222X1_RVT)                             0.12    144.88 f
+  U307/Y (OA222X1_RVT)                             0.13    145.01 f
+  U313/Y (OA222X1_RVT)                             0.12    145.13 f
+  U319/Y (OA222X1_RVT)                             0.13    145.26 f
+  U325/Y (OA222X1_RVT)                             0.13    145.39 f
+  U331/Y (OA222X1_RVT)                             0.13    145.52 f
+  U337/Y (OA222X1_RVT)                             0.13    145.65 f
   U343/Y (OA222X1_RVT)                             0.13    145.77 f
-  U349/Y (OA222X1_RVT)                             0.12    145.88 f
-  U350/Y (INVX0_RVT)                               0.05    145.93 r
-  U355/Y (AO222X1_RVT)                             0.14    146.07 r
-  U360/Y (AO222X1_RVT)                             0.14    146.21 r
-  U365/Y (AO222X1_RVT)                             0.14    146.35 r
-  U370/Y (AO222X1_RVT)                             0.14    146.49 r
-  U375/Y (AO222X1_RVT)                             0.14    146.63 r
-  U376/SO (HADDX1_RVT)                             0.11    146.73 f
-  U379/Y (OA221X1_RVT)                             0.10    146.83 f
+  U349/Y (OA222X1_RVT)                             0.12    145.89 f
+  U350/Y (INVX0_RVT)                               0.05    145.95 r
+  U355/Y (AO222X1_RVT)                             0.14    146.08 r
+  U360/Y (AO222X1_RVT)                             0.14    146.22 r
+  U365/Y (AO222X1_RVT)                             0.14    146.36 r
+  U370/Y (AO222X1_RVT)                             0.14    146.50 r
+  U375/Y (AO222X1_RVT)                             0.14    146.64 r
+  U376/SO (HADDX1_RVT)                             0.11    146.75 f
+  U379/Y (OA221X1_RVT)                             0.10    146.85 f
   u_cic_u_integradores_int4_reg_15_/D (SDFFX1_RVT)
-                                                   0.00    146.83 f
-  data arrival time                                        146.83
+                                                   0.00    146.85 f
+  data arrival time                                        146.85
 
   clock clk (rise edge)                          208.33    208.33
-  clock network delay (propagated)                 0.12    208.45
+  clock network delay (propagated)                 0.13    208.46
   u_cic_u_integradores_int4_reg_15_/CLK (SDFFX1_RVT)
-                                                   0.00    208.45 r
-  clock uncertainty                               -1.00    207.45
-  library setup time                              -0.11    207.34
-  data required time                                       207.34
+                                                   0.00    208.46 r
+  clock uncertainty                               -1.00    207.46
+  library setup time                              -0.11    207.35
+  data required time                                       207.35
   ------------------------------------------------------------------------
-  data required time                                       207.34
-  data arrival time                                        -146.83
+  data required time                                       207.35
+  data arrival time                                        -146.85
   ------------------------------------------------------------------------
-  slack (MET)                                               60.51
+  slack (MET)                                               60.50
 
 
 
@@ -198,40 +198,40 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/S (FADDX1_RVT)                      0.15    144.35 f
   U261/Y (INVX0_RVT)                               0.05    144.40 r
   intadd_1_U18/S (FADDX1_RVT)                      0.16    144.56 f
-  intadd_0_U18/S (FADDX1_RVT)                      0.17    144.72 r
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.72 r
   U299/Y (INVX0_RVT)                               0.04    144.76 f
-  U301/Y (OA222X1_RVT)                             0.11    144.87 f
-  U307/Y (OA222X1_RVT)                             0.13    145.00 f
-  U313/Y (OA222X1_RVT)                             0.11    145.12 f
-  U319/Y (OA222X1_RVT)                             0.13    145.24 f
-  U325/Y (OA222X1_RVT)                             0.13    145.38 f
-  U331/Y (OA222X1_RVT)                             0.13    145.51 f
-  U337/Y (OA222X1_RVT)                             0.13    145.64 f
+  U301/Y (OA222X1_RVT)                             0.12    144.88 f
+  U307/Y (OA222X1_RVT)                             0.13    145.01 f
+  U313/Y (OA222X1_RVT)                             0.12    145.13 f
+  U319/Y (OA222X1_RVT)                             0.13    145.26 f
+  U325/Y (OA222X1_RVT)                             0.13    145.39 f
+  U331/Y (OA222X1_RVT)                             0.13    145.52 f
+  U337/Y (OA222X1_RVT)                             0.13    145.65 f
   U343/Y (OA222X1_RVT)                             0.13    145.77 f
-  U349/Y (OA222X1_RVT)                             0.12    145.88 f
-  U350/Y (INVX0_RVT)                               0.05    145.93 r
-  U355/Y (AO222X1_RVT)                             0.14    146.07 r
-  U360/Y (AO222X1_RVT)                             0.14    146.21 r
-  U365/Y (AO222X1_RVT)                             0.14    146.35 r
-  U370/Y (AO222X1_RVT)                             0.14    146.49 r
-  U371/SO (HADDX1_RVT)                             0.11    146.59 f
-  U374/Y (OA221X1_RVT)                             0.10    146.69 f
+  U349/Y (OA222X1_RVT)                             0.12    145.89 f
+  U350/Y (INVX0_RVT)                               0.05    145.95 r
+  U355/Y (AO222X1_RVT)                             0.14    146.08 r
+  U360/Y (AO222X1_RVT)                             0.14    146.22 r
+  U365/Y (AO222X1_RVT)                             0.14    146.36 r
+  U370/Y (AO222X1_RVT)                             0.14    146.50 r
+  U371/SO (HADDX1_RVT)                             0.11    146.61 f
+  U374/Y (OA221X1_RVT)                             0.10    146.71 f
   u_cic_u_integradores_int4_reg_14_/D (SDFFX1_RVT)
-                                                   0.00    146.69 f
-  data arrival time                                        146.69
+                                                   0.00    146.71 f
+  data arrival time                                        146.71
 
   clock clk (rise edge)                          208.33    208.33
-  clock network delay (propagated)                 0.12    208.45
+  clock network delay (propagated)                 0.13    208.46
   u_cic_u_integradores_int4_reg_14_/CLK (SDFFX1_RVT)
-                                                   0.00    208.45 r
-  clock uncertainty                               -1.00    207.45
-  library setup time                              -0.11    207.34
-  data required time                                       207.34
+                                                   0.00    208.46 r
+  clock uncertainty                               -1.00    207.46
+  library setup time                              -0.11    207.35
+  data required time                                       207.35
   ------------------------------------------------------------------------
-  data required time                                       207.34
-  data arrival time                                        -146.69
+  data required time                                       207.35
+  data arrival time                                        -146.71
   ------------------------------------------------------------------------
-  slack (MET)                                               60.65
+  slack (MET)                                               60.64
 
 
 
@@ -252,39 +252,39 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/S (FADDX1_RVT)                      0.15    144.35 f
   U261/Y (INVX0_RVT)                               0.05    144.40 r
   intadd_1_U18/S (FADDX1_RVT)                      0.16    144.56 f
-  intadd_0_U18/S (FADDX1_RVT)                      0.17    144.72 r
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.72 r
   U299/Y (INVX0_RVT)                               0.04    144.76 f
-  U301/Y (OA222X1_RVT)                             0.11    144.87 f
-  U307/Y (OA222X1_RVT)                             0.13    145.00 f
-  U313/Y (OA222X1_RVT)                             0.11    145.12 f
-  U319/Y (OA222X1_RVT)                             0.13    145.24 f
-  U325/Y (OA222X1_RVT)                             0.13    145.38 f
-  U331/Y (OA222X1_RVT)                             0.13    145.51 f
-  U337/Y (OA222X1_RVT)                             0.13    145.64 f
+  U301/Y (OA222X1_RVT)                             0.12    144.88 f
+  U307/Y (OA222X1_RVT)                             0.13    145.01 f
+  U313/Y (OA222X1_RVT)                             0.12    145.13 f
+  U319/Y (OA222X1_RVT)                             0.13    145.26 f
+  U325/Y (OA222X1_RVT)                             0.13    145.39 f
+  U331/Y (OA222X1_RVT)                             0.13    145.52 f
+  U337/Y (OA222X1_RVT)                             0.13    145.65 f
   U343/Y (OA222X1_RVT)                             0.13    145.77 f
-  U349/Y (OA222X1_RVT)                             0.12    145.88 f
-  U350/Y (INVX0_RVT)                               0.05    145.93 r
-  U355/Y (AO222X1_RVT)                             0.14    146.07 r
-  U360/Y (AO222X1_RVT)                             0.14    146.21 r
-  U365/Y (AO222X1_RVT)                             0.14    146.35 r
-  U366/SO (HADDX1_RVT)                             0.11    146.45 f
-  U369/Y (OA221X1_RVT)                             0.10    146.55 f
+  U349/Y (OA222X1_RVT)                             0.12    145.89 f
+  U350/Y (INVX0_RVT)                               0.05    145.95 r
+  U355/Y (AO222X1_RVT)                             0.14    146.08 r
+  U360/Y (AO222X1_RVT)                             0.14    146.22 r
+  U365/Y (AO222X1_RVT)                             0.14    146.36 r
+  U366/SO (HADDX1_RVT)                             0.11    146.47 f
+  U369/Y (OA221X1_RVT)                             0.10    146.57 f
   u_cic_u_integradores_int4_reg_13_/D (SDFFX1_RVT)
-                                                   0.00    146.55 f
-  data arrival time                                        146.55
+                                                   0.00    146.57 f
+  data arrival time                                        146.57
 
   clock clk (rise edge)                          208.33    208.33
-  clock network delay (propagated)                 0.12    208.45
+  clock network delay (propagated)                 0.13    208.46
   u_cic_u_integradores_int4_reg_13_/CLK (SDFFX1_RVT)
-                                                   0.00    208.45 r
-  clock uncertainty                               -1.00    207.45
-  library setup time                              -0.11    207.34
-  data required time                                       207.34
+                                                   0.00    208.46 r
+  clock uncertainty                               -1.00    207.46
+  library setup time                              -0.11    207.35
+  data required time                                       207.35
   ------------------------------------------------------------------------
-  data required time                                       207.34
-  data arrival time                                        -146.55
+  data required time                                       207.35
+  data arrival time                                        -146.57
   ------------------------------------------------------------------------
-  slack (MET)                                               60.79
+  slack (MET)                                               60.78
 
 
 
@@ -305,38 +305,38 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/S (FADDX1_RVT)                      0.15    144.35 f
   U261/Y (INVX0_RVT)                               0.05    144.40 r
   intadd_1_U18/S (FADDX1_RVT)                      0.16    144.56 f
-  intadd_0_U18/S (FADDX1_RVT)                      0.17    144.72 r
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.72 r
   U299/Y (INVX0_RVT)                               0.04    144.76 f
-  U301/Y (OA222X1_RVT)                             0.11    144.87 f
-  U307/Y (OA222X1_RVT)                             0.13    145.00 f
-  U313/Y (OA222X1_RVT)                             0.11    145.12 f
-  U319/Y (OA222X1_RVT)                             0.13    145.24 f
-  U325/Y (OA222X1_RVT)                             0.13    145.38 f
-  U331/Y (OA222X1_RVT)                             0.13    145.51 f
-  U337/Y (OA222X1_RVT)                             0.13    145.64 f
+  U301/Y (OA222X1_RVT)                             0.12    144.88 f
+  U307/Y (OA222X1_RVT)                             0.13    145.01 f
+  U313/Y (OA222X1_RVT)                             0.12    145.13 f
+  U319/Y (OA222X1_RVT)                             0.13    145.26 f
+  U325/Y (OA222X1_RVT)                             0.13    145.39 f
+  U331/Y (OA222X1_RVT)                             0.13    145.52 f
+  U337/Y (OA222X1_RVT)                             0.13    145.65 f
   U343/Y (OA222X1_RVT)                             0.13    145.77 f
-  U349/Y (OA222X1_RVT)                             0.12    145.88 f
-  U350/Y (INVX0_RVT)                               0.05    145.93 r
-  U355/Y (AO222X1_RVT)                             0.14    146.07 r
-  U360/Y (AO222X1_RVT)                             0.14    146.21 r
-  U361/SO (HADDX1_RVT)                             0.10    146.31 f
-  U364/Y (OA221X1_RVT)                             0.09    146.41 f
+  U349/Y (OA222X1_RVT)                             0.12    145.89 f
+  U350/Y (INVX0_RVT)                               0.05    145.95 r
+  U355/Y (AO222X1_RVT)                             0.14    146.08 r
+  U360/Y (AO222X1_RVT)                             0.14    146.22 r
+  U361/SO (HADDX1_RVT)                             0.11    146.33 f
+  U364/Y (OA221X1_RVT)                             0.10    146.44 f
   u_cic_u_integradores_int4_reg_12_/D (SDFFX1_RVT)
-                                                   0.00    146.41 f
-  data arrival time                                        146.41
+                                                   0.00    146.44 f
+  data arrival time                                        146.44
 
   clock clk (rise edge)                          208.33    208.33
-  clock network delay (propagated)                 0.12    208.45
+  clock network delay (propagated)                 0.13    208.46
   u_cic_u_integradores_int4_reg_12_/CLK (SDFFX1_RVT)
-                                                   0.00    208.45 r
-  clock uncertainty                               -1.00    207.45
-  library setup time                              -0.11    207.34
-  data required time                                       207.34
+                                                   0.00    208.46 r
+  clock uncertainty                               -1.00    207.46
+  library setup time                              -0.11    207.35
+  data required time                                       207.35
   ------------------------------------------------------------------------
-  data required time                                       207.34
-  data arrival time                                        -146.41
+  data required time                                       207.35
+  data arrival time                                        -146.44
   ------------------------------------------------------------------------
-  slack (MET)                                               60.94
+  slack (MET)                                               60.91
 
 
 
@@ -357,42 +357,42 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/CO (FADDX1_RVT)                     0.11    144.31 r
   intadd_2_U15/CO (FADDX1_RVT)                     0.09    144.41 r
   intadd_2_U14/CO (FADDX1_RVT)                     0.09    144.50 r
-  intadd_2_U13/CO (FADDX1_RVT)                     0.10    144.60 r
-  intadd_2_U12/CO (FADDX1_RVT)                     0.10    144.70 r
-  intadd_2_U11/CO (FADDX1_RVT)                     0.10    144.79 r
+  intadd_2_U13/CO (FADDX1_RVT)                     0.10    144.59 r
+  intadd_2_U12/CO (FADDX1_RVT)                     0.10    144.69 r
+  intadd_2_U11/CO (FADDX1_RVT)                     0.09    144.79 r
   intadd_2_U10/CO (FADDX1_RVT)                     0.09    144.88 r
-  intadd_2_U9/CO (FADDX1_RVT)                      0.10    144.98 r
-  intadd_2_U8/CO (FADDX1_RVT)                      0.09    145.07 r
+  intadd_2_U9/CO (FADDX1_RVT)                      0.09    144.97 r
+  intadd_2_U8/CO (FADDX1_RVT)                      0.10    145.07 r
   intadd_2_U7/CO (FADDX1_RVT)                      0.10    145.17 r
   intadd_2_U6/CO (FADDX1_RVT)                      0.10    145.26 r
-  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.35 r
-  intadd_2_U4/CO (FADDX1_RVT)                      0.09    145.44 r
-  intadd_2_U3/CO (FADDX1_RVT)                      0.10    145.54 r
+  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.36 r
+  intadd_2_U4/CO (FADDX1_RVT)                      0.10    145.46 r
+  intadd_2_U3/CO (FADDX1_RVT)                      0.10    145.55 r
   intadd_2_U2/CO (FADDX1_RVT)                      0.11    145.66 r
-  U387/Y (INVX0_RVT)                               0.02    145.68 f
-  U388/Y (OA222X1_RVT)                             0.09    145.77 f
-  U389/SO (HADDX1_RVT)                             0.12    145.88 r
-  U390/Y (XOR2X1_RVT)                              0.11    145.99 f
-  U391/Y (XOR2X1_RVT)                              0.13    146.12 r
-  U392/Y (XOR2X1_RVT)                              0.12    146.24 f
-  U393/Y (XOR2X1_RVT)                              0.12    146.35 f
-  U415/Y (AND2X1_RVT)                              0.06    146.41 f
+  U387/Y (INVX0_RVT)                               0.03    145.69 f
+  U388/Y (OA222X1_RVT)                             0.09    145.79 f
+  U389/SO (HADDX1_RVT)                             0.12    145.90 r
+  U390/Y (XOR2X1_RVT)                              0.11    146.02 f
+  U391/Y (XOR2X1_RVT)                              0.13    146.14 r
+  U392/Y (XOR2X1_RVT)                              0.12    146.26 f
+  U393/Y (XOR2X1_RVT)                              0.12    146.38 f
+  U415/Y (AND2X1_RVT)                              0.06    146.44 f
   u_cic_u_integradores_int3_reg_17_/D (SDFFX1_RVT)
-                                                   0.00    146.41 f
-  data arrival time                                        146.41
+                                                   0.00    146.44 f
+  data arrival time                                        146.44
 
   clock clk (rise edge)                          208.33    208.33
   clock network delay (propagated)                 0.13    208.46
   u_cic_u_integradores_int3_reg_17_/CLK (SDFFX1_RVT)
                                                    0.00    208.46 r
   clock uncertainty                               -1.00    207.46
-  library setup time                              -0.11    207.35
-  data required time                                       207.35
+  library setup time                              -0.10    207.36
+  data required time                                       207.36
   ------------------------------------------------------------------------
-  data required time                                       207.35
-  data arrival time                                        -146.41
+  data required time                                       207.36
+  data arrival time                                        -146.44
   ------------------------------------------------------------------------
-  slack (MET)                                               60.94
+  slack (MET)                                               60.92
 
 
 
@@ -413,37 +413,37 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/S (FADDX1_RVT)                      0.15    144.35 f
   U261/Y (INVX0_RVT)                               0.05    144.40 r
   intadd_1_U18/S (FADDX1_RVT)                      0.16    144.56 f
-  intadd_0_U18/S (FADDX1_RVT)                      0.17    144.72 r
+  intadd_0_U18/S (FADDX1_RVT)                      0.16    144.72 r
   U299/Y (INVX0_RVT)                               0.04    144.76 f
-  U301/Y (OA222X1_RVT)                             0.11    144.87 f
-  U307/Y (OA222X1_RVT)                             0.13    145.00 f
-  U313/Y (OA222X1_RVT)                             0.11    145.12 f
-  U319/Y (OA222X1_RVT)                             0.13    145.24 f
-  U325/Y (OA222X1_RVT)                             0.13    145.38 f
-  U331/Y (OA222X1_RVT)                             0.13    145.51 f
-  U337/Y (OA222X1_RVT)                             0.13    145.64 f
+  U301/Y (OA222X1_RVT)                             0.12    144.88 f
+  U307/Y (OA222X1_RVT)                             0.13    145.01 f
+  U313/Y (OA222X1_RVT)                             0.12    145.13 f
+  U319/Y (OA222X1_RVT)                             0.13    145.26 f
+  U325/Y (OA222X1_RVT)                             0.13    145.39 f
+  U331/Y (OA222X1_RVT)                             0.13    145.52 f
+  U337/Y (OA222X1_RVT)                             0.13    145.65 f
   U343/Y (OA222X1_RVT)                             0.13    145.77 f
-  U349/Y (OA222X1_RVT)                             0.12    145.88 f
-  U350/Y (INVX0_RVT)                               0.05    145.93 r
-  U355/Y (AO222X1_RVT)                             0.14    146.07 r
-  U356/SO (HADDX1_RVT)                             0.11    146.17 f
-  U359/Y (OA221X1_RVT)                             0.10    146.27 f
+  U349/Y (OA222X1_RVT)                             0.12    145.89 f
+  U350/Y (INVX0_RVT)                               0.05    145.95 r
+  U355/Y (AO222X1_RVT)                             0.14    146.08 r
+  U356/SO (HADDX1_RVT)                             0.11    146.19 f
+  U359/Y (OA221X1_RVT)                             0.10    146.29 f
   u_cic_u_integradores_int4_reg_11_/D (SDFFX1_RVT)
-                                                   0.00    146.27 f
-  data arrival time                                        146.27
+                                                   0.00    146.29 f
+  data arrival time                                        146.29
 
   clock clk (rise edge)                          208.33    208.33
-  clock network delay (propagated)                 0.06    208.40
+  clock network delay (propagated)                 0.12    208.45
   u_cic_u_integradores_int4_reg_11_/CLK (SDFFX1_RVT)
-                                                   0.00    208.40 r
-  clock uncertainty                               -1.00    207.40
-  library setup time                              -0.11    207.28
-  data required time                                       207.28
+                                                   0.00    208.45 r
+  clock uncertainty                               -1.00    207.45
+  library setup time                              -0.11    207.34
+  data required time                                       207.34
   ------------------------------------------------------------------------
-  data required time                                       207.28
-  data arrival time                                        -146.27
+  data required time                                       207.34
+  data arrival time                                        -146.29
   ------------------------------------------------------------------------
-  slack (MET)                                               61.01
+  slack (MET)                                               61.06
 
 
 
@@ -459,44 +459,44 @@ Date   : Tue Oct 20 17:33:38 2026
   ------------------------------------------------------------------------
   clock vclk (fall edge)                         104.17    104.17
   clock network delay (ideal)                      0.00    104.20
-  input external delay                            40.00    144.20 f
-  pdm_in (in)                                      0.03    144.20 f
-  intadd_2_U16/S (FADDX1_RVT)                      0.16    144.35 r
-  U261/Y (INVX0_RVT)                               0.04    144.39 f
-  intadd_1_U18/S (FADDX1_RVT)                      0.17    144.56 r
-  intadd_0_U18/CO (FADDX1_RVT)                     0.11    144.67 r
-  intadd_0_U17/CO (FADDX1_RVT)                     0.09    144.76 r
-  intadd_0_U16/CO (FADDX1_RVT)                     0.09    144.86 r
-  intadd_0_U15/CO (FADDX1_RVT)                     0.09    144.95 r
-  intadd_0_U14/CO (FADDX1_RVT)                     0.10    145.05 r
-  intadd_0_U13/CO (FADDX1_RVT)                     0.09    145.14 r
-  intadd_0_U12/CO (FADDX1_RVT)                     0.09    145.24 r
-  intadd_0_U11/CO (FADDX1_RVT)                     0.09    145.33 r
-  intadd_0_U10/CO (FADDX1_RVT)                     0.09    145.43 r
-  intadd_0_U9/CO (FADDX1_RVT)                      0.09    145.52 r
-  intadd_0_U8/CO (FADDX1_RVT)                      0.10    145.62 r
-  intadd_0_U7/CO (FADDX1_RVT)                      0.10    145.71 r
-  intadd_0_U6/CO (FADDX1_RVT)                      0.09    145.81 r
-  intadd_0_U5/CO (FADDX1_RVT)                      0.09    145.90 r
-  intadd_0_U4/CO (FADDX1_RVT)                      0.09    146.00 r
-  intadd_0_U3/S (FADDX1_RVT)                       0.15    146.15 f
-  U414/Y (AND2X1_RVT)                              0.06    146.21 f
+  input external delay                            40.00    144.20 r
+  pdm_in (in)                                      0.03    144.20 r
+  intadd_2_U16/CO (FADDX1_RVT)                     0.11    144.31 r
+  intadd_2_U15/CO (FADDX1_RVT)                     0.09    144.41 r
+  intadd_2_U14/CO (FADDX1_RVT)                     0.09    144.50 r
+  intadd_2_U13/CO (FADDX1_RVT)                     0.10    144.59 r
+  intadd_2_U12/CO (FADDX1_RVT)                     0.10    144.69 r
+  intadd_2_U11/CO (FADDX1_RVT)                     0.09    144.79 r
+  intadd_2_U10/CO (FADDX1_RVT)                     0.09    144.88 r
+  intadd_2_U9/CO (FADDX1_RVT)                      0.09    144.97 r
+  intadd_2_U8/CO (FADDX1_RVT)                      0.10    145.07 r
+  intadd_2_U7/CO (FADDX1_RVT)                      0.10    145.17 r
+  intadd_2_U6/CO (FADDX1_RVT)                      0.10    145.26 r
+  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.36 r
+  intadd_2_U4/S (FADDX1_RVT)                       0.13    145.49 f
+  U273/Y (INVX0_RVT)                               0.06    145.55 r
+  intadd_1_U6/CO (FADDX1_RVT)                      0.12    145.66 r
+  intadd_1_U5/CO (FADDX1_RVT)                      0.10    145.76 r
+  intadd_1_U4/CO (FADDX1_RVT)                      0.10    145.85 r
+  intadd_1_U3/S (FADDX1_RVT)                       0.15    146.01 f
+  intadd_0_U3/S (FADDX1_RVT)                       0.18    146.18 r
+  U414/Y (AND2X1_RVT)                              0.05    146.24 r
   u_cic_u_integradores_int3_reg_16_/D (SDFFX1_RVT)
-                                                   0.00    146.21 f
-  data arrival time                                        146.21
+                                                   0.00    146.24 r
+  data arrival time                                        146.24
 
   clock clk (rise edge)                          208.33    208.33
   clock network delay (propagated)                 0.13    208.46
   u_cic_u_integradores_int3_reg_16_/CLK (SDFFX1_RVT)
                                                    0.00    208.46 r
   clock uncertainty                               -1.00    207.46
-  library setup time                              -0.11    207.35
-  data required time                                       207.35
+  library setup time                              -0.10    207.37
+  data required time                                       207.37
   ------------------------------------------------------------------------
-  data required time                                       207.35
-  data arrival time                                        -146.21
+  data required time                                       207.37
+  data arrival time                                        -146.24
   ------------------------------------------------------------------------
-  slack (MET)                                               61.14
+  slack (MET)                                               61.13
 
 
 
@@ -517,40 +517,40 @@ Date   : Tue Oct 20 17:33:38 2026
   intadd_2_U16/CO (FADDX1_RVT)                     0.11    144.31 r
   intadd_2_U15/CO (FADDX1_RVT)                     0.09    144.41 r
   intadd_2_U14/CO (FADDX1_RVT)                     0.09    144.50 r
-  intadd_2_U13/CO (FADDX1_RVT)                     0.10    144.60 r
-  intadd_2_U12/CO (FADDX1_RVT)                     0.10    144.70 r
-  intadd_2_U11/CO (FADDX1_RVT)                     0.10    144.79 r
+  intadd_2_U13/CO (FADDX1_RVT)                     0.10    144.59 r
+  intadd_2_U12/CO (FADDX1_RVT)                     0.10    144.69 r
+  intadd_2_U11/CO (FADDX1_RVT)                     0.09    144.79 r
   intadd_2_U10/CO (FADDX1_RVT)                     0.09    144.88 r
-  intadd_2_U9/CO (FADDX1_RVT)                      0.10    144.98 r
-  intadd_2_U8/CO (FADDX1_RVT)                      0.09    145.07 r
+  intadd_2_U9/CO (FADDX1_RVT)                      0.09    144.97 r
+  intadd_2_U8/CO (FADDX1_RVT)                      0.10    145.07 r
   intadd_2_U7/CO (FADDX1_RVT)                      0.10    145.17 r
   intadd_2_U6/CO (FADDX1_RVT)                      0.10    145.26 r
-  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.35 r
-  intadd_2_U4/CO (FADDX1_RVT)                      0.09    145.44 r
-  intadd_2_U3/CO (FADDX1_RVT)                      0.10    145.54 r
+  intadd_2_U5/CO (FADDX1_RVT)                      0.09    145.36 r
+  intadd_2_U4/CO (FADDX1_RVT)                      0.10    145.46 r
+  intadd_2_U3/CO (FADDX1_RVT)                      0.10    145.55 r
   intadd_2_U2/CO (FADDX1_RVT)                      0.11    145.66 r
-  U387/Y (INVX0_RVT)                               0.02    145.68 f
-  U388/Y (OA222X1_RVT)                             0.09    145.77 f
-  U389/SO (HADDX1_RVT)                             0.12    145.88 r
-  U390/Y (XOR2X1_RVT)                              0.11    145.99 f
-  U391/Y (XOR2X1_RVT)                              0.12    146.11 f
-  U433/Y (AND2X1_RVT)                              0.06    146.17 f
+  U387/Y (INVX0_RVT)                               0.03    145.69 f
+  U388/Y (OA222X1_RVT)                             0.09    145.79 f
+  U389/SO (HADDX1_RVT)                             0.12    145.90 r
+  U390/Y (XOR2X1_RVT)                              0.11    146.02 f
+  U391/Y (XOR2X1_RVT)                              0.12    146.13 f
+  U433/Y (AND2X1_RVT)                              0.06    146.20 f
   u_cic_u_integradores_int2_reg_17_/D (SDFFX1_RVT)
-                                                   0.00    146.17 f
-  data arrival time                                        146.17
+                                                   0.00    146.20 f
+  data arrival time                                        146.20
 
   clock clk (rise edge)                          208.33    208.33
   clock network delay (propagated)                 0.13    208.46
   u_cic_u_integradores_int2_reg_17_/CLK (SDFFX1_RVT)
                                                    0.00    208.46 r
   clock uncertainty                               -1.00    207.46
-  library setup time                              -0.11    207.35
-  data required time                                       207.35
+  library setup time                              -0.10    207.36
+  data required time                                       207.36
   ------------------------------------------------------------------------
-  data required time                                       207.35
-  data arrival time                                        -146.17
+  data required time                                       207.36
+  data arrival time                                        -146.20
   ------------------------------------------------------------------------
-  slack (MET)                                               61.18
+  slack (MET)                                               61.16
 
 
 1

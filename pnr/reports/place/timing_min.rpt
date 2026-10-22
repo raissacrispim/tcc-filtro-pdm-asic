@@ -6,7 +6,7 @@ Report : timing
         -report_by design
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:04:19 2026
+Date   : Thu Oct 22 11:34:43 2026
 ****************************************
 
   Startpoint: scan_in (input port clocked by vclk)
@@ -41,7 +41,7 @@ Date   : Tue Oct 20 17:04:19 2026
 
 
   Startpoint: scan_en (input port clocked by vclk)
-  Endpoint: u_fir/delay_reg_54__10_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_13__2_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -51,116 +51,23 @@ Date   : Tue Oct 20 17:04:19 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_54__10_/SE (SDFFX1_RVT)          0.00      0.02 f
-  data arrival time                                          0.02
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_13__2_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
 
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  u_fir/delay_reg_54__10_/CLK (SDFFX1_RVT)         0.00      0.00 r
+  u_fir/delay_reg_13__2_/CLK (SDFFX1_RVT)          0.00      0.00 r
   clock uncertainty                                0.10      0.10
   library hold time                               -0.03      0.07
   data required time                                         0.07
   ------------------------------------------------------------------------
   data required time                                         0.07
-  data arrival time                                         -0.02
+  data arrival time                                         -0.01
   ------------------------------------------------------------------------
   slack (VIOLATED)                                          -0.05
-
-
-
-  Startpoint: scan_en (input port clocked by vclk)
-  Endpoint: u_fir/delay_reg_12__0_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: **in2reg_default**
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_12__0_/SE (SDFFX1_RVT)           0.00      0.02 f
-  data arrival time                                          0.02
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
-  u_fir/delay_reg_12__0_/CLK (SDFFX1_RVT)          0.00      0.00 r
-  clock uncertainty                                0.10      0.10
-  library hold time                               -0.03      0.07
-  data required time                                         0.07
-  ------------------------------------------------------------------------
-  data required time                                         0.07
-  data arrival time                                         -0.02
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.05
-
-
-
-  Startpoint: scan_en (input port clocked by vclk)
-  Endpoint: u_fir/delay_reg_54__9_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: **in2reg_default**
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_54__9_/SE (SDFFX1_RVT)           0.00      0.02 f
-  data arrival time                                          0.02
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
-  u_fir/delay_reg_54__9_/CLK (SDFFX1_RVT)          0.00      0.00 r
-  clock uncertainty                                0.10      0.10
-  library hold time                               -0.03      0.07
-  data required time                                         0.07
-  ------------------------------------------------------------------------
-  data required time                                         0.07
-  data arrival time                                         -0.02
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.04
-
-
-
-  Startpoint: scan_en (input port clocked by vclk)
-  Endpoint: u_fir/delay_reg_50__3_ (rising edge-triggered flip-flop clocked by clk)
-  Mode: scan
-  Corner: ff
-  Scenario: scan_ff
-  Path Group: **in2reg_default**
-  Path Type: min
-
-  Point                                            Incr      Path  
-  ------------------------------------------------------------------------
-  clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_50__3_/SE (SDFFX1_RVT)           0.00      0.02 f
-  data arrival time                                          0.02
-
-  clock clk (rise edge)                            0.00      0.00
-  clock network delay (ideal)                      0.00      0.00
-  u_fir/delay_reg_50__3_/CLK (SDFFX1_RVT)          0.00      0.00 r
-  clock uncertainty                                0.10      0.10
-  library hold time                               -0.03      0.07
-  data required time                                         0.07
-  ------------------------------------------------------------------------
-  data required time                                         0.07
-  data arrival time                                         -0.02
-  ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.04
 
 
 
@@ -175,11 +82,11 @@ Date   : Tue Oct 20 17:04:19 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_13__1_/SE (SDFFX1_RVT)           0.00      0.02 f
-  data arrival time                                          0.02
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_13__1_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
 
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
@@ -189,14 +96,14 @@ Date   : Tue Oct 20 17:04:19 2026
   data required time                                         0.07
   ------------------------------------------------------------------------
   data required time                                         0.07
-  data arrival time                                         -0.02
+  data arrival time                                         -0.01
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.04
+  slack (VIOLATED)                                          -0.05
 
 
 
   Startpoint: scan_en (input port clocked by vclk)
-  Endpoint: u_fir/delay_reg_13__2_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_50__1_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -206,23 +113,85 @@ Date   : Tue Oct 20 17:04:19 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_13__2_/SE (SDFFX1_RVT)           0.00      0.02 f
-  data arrival time                                          0.02
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_50__1_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
 
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  u_fir/delay_reg_13__2_/CLK (SDFFX1_RVT)          0.00      0.00 r
+  u_fir/delay_reg_50__1_/CLK (SDFFX1_RVT)          0.00      0.00 r
   clock uncertainty                                0.10      0.10
   library hold time                               -0.03      0.07
   data required time                                         0.07
   ------------------------------------------------------------------------
   data required time                                         0.07
-  data arrival time                                         -0.02
+  data arrival time                                         -0.01
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.04
+  slack (VIOLATED)                                          -0.05
+
+
+
+  Startpoint: scan_en (input port clocked by vclk)
+  Endpoint: u_fir/delay_reg_50__3_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: scan
+  Corner: ff
+  Scenario: scan_ff
+  Path Group: **in2reg_default**
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock vclk (rise edge)                           0.00      0.00
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_50__3_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  u_fir/delay_reg_50__3_/CLK (SDFFX1_RVT)          0.00      0.00 r
+  clock uncertainty                                0.10      0.10
+  library hold time                               -0.03      0.07
+  data required time                                         0.07
+  ------------------------------------------------------------------------
+  data required time                                         0.07
+  data arrival time                                         -0.01
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.05
+
+
+
+  Startpoint: scan_en (input port clocked by vclk)
+  Endpoint: u_fir/delay_reg_49__1_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: scan
+  Corner: ff
+  Scenario: scan_ff
+  Path Group: **in2reg_default**
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock vclk (rise edge)                           0.00      0.00
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_49__1_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  u_fir/delay_reg_49__1_/CLK (SDFFX1_RVT)          0.00      0.00 r
+  clock uncertainty                                0.10      0.10
+  library hold time                               -0.03      0.07
+  data required time                                         0.07
+  ------------------------------------------------------------------------
+  data required time                                         0.07
+  data arrival time                                         -0.01
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.05
 
 
 
@@ -237,11 +206,11 @@ Date   : Tue Oct 20 17:04:19 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_14__1_/SE (SDFFX1_RVT)           0.00      0.02 f
-  data arrival time                                          0.02
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_14__1_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
 
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
@@ -251,14 +220,14 @@ Date   : Tue Oct 20 17:04:19 2026
   data required time                                         0.07
   ------------------------------------------------------------------------
   data required time                                         0.07
-  data arrival time                                         -0.02
+  data arrival time                                         -0.01
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.04
+  slack (VIOLATED)                                          -0.05
 
 
 
   Startpoint: scan_en (input port clocked by vclk)
-  Endpoint: u_fir/delay_reg_56__14_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_50__2_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -268,28 +237,28 @@ Date   : Tue Oct 20 17:04:19 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_56__14_/SE (SDFFX1_RVT)          0.00      0.02 f
-  data arrival time                                          0.02
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_50__2_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
 
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  u_fir/delay_reg_56__14_/CLK (SDFFX1_RVT)         0.00      0.00 r
+  u_fir/delay_reg_50__2_/CLK (SDFFX1_RVT)          0.00      0.00 r
   clock uncertainty                                0.10      0.10
   library hold time                               -0.03      0.07
   data required time                                         0.07
   ------------------------------------------------------------------------
   data required time                                         0.07
-  data arrival time                                         -0.02
+  data arrival time                                         -0.01
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.04
+  slack (VIOLATED)                                          -0.05
 
 
 
   Startpoint: scan_en (input port clocked by vclk)
-  Endpoint: u_fir/delay_reg_55__14_ (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: u_fir/delay_reg_14__0_ (rising edge-triggered flip-flop clocked by clk)
   Mode: scan
   Corner: ff
   Scenario: scan_ff
@@ -299,23 +268,54 @@ Date   : Tue Oct 20 17:04:19 2026
   Point                                            Incr      Path  
   ------------------------------------------------------------------------
   clock vclk (rise edge)                           0.00      0.00
-  clock network delay (ideal)                      0.00      0.02
-  input external delay                             0.00      0.02 f
-  scan_en (in)                                     0.02      0.02 f
-  u_fir/delay_reg_55__14_/SE (SDFFX1_RVT)          0.00      0.02 f
-  data arrival time                                          0.02
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_14__0_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
 
   clock clk (rise edge)                            0.00      0.00
   clock network delay (ideal)                      0.00      0.00
-  u_fir/delay_reg_55__14_/CLK (SDFFX1_RVT)         0.00      0.00 r
+  u_fir/delay_reg_14__0_/CLK (SDFFX1_RVT)          0.00      0.00 r
   clock uncertainty                                0.10      0.10
   library hold time                               -0.03      0.07
   data required time                                         0.07
   ------------------------------------------------------------------------
   data required time                                         0.07
-  data arrival time                                         -0.02
+  data arrival time                                         -0.01
   ------------------------------------------------------------------------
-  slack (VIOLATED)                                          -0.04
+  slack (VIOLATED)                                          -0.05
+
+
+
+  Startpoint: scan_en (input port clocked by vclk)
+  Endpoint: u_fir/delay_reg_8__16_ (rising edge-triggered flip-flop clocked by clk)
+  Mode: scan
+  Corner: ff
+  Scenario: scan_ff
+  Path Group: **in2reg_default**
+  Path Type: min
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock vclk (rise edge)                           0.00      0.00
+  clock network delay (ideal)                      0.00      0.01
+  input external delay                             0.00      0.01 f
+  scan_en (in)                                     0.01      0.01 f
+  u_fir/delay_reg_8__16_/SE (SDFFX1_RVT)           0.00      0.01 f
+  data arrival time                                          0.01
+
+  clock clk (rise edge)                            0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  u_fir/delay_reg_8__16_/CLK (SDFFX1_RVT)          0.00      0.00 r
+  clock uncertainty                                0.10      0.10
+  library hold time                               -0.03      0.07
+  data required time                                         0.07
+  ------------------------------------------------------------------------
+  data required time                                         0.07
+  data arrival time                                         -0.01
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.05
 
 
 1

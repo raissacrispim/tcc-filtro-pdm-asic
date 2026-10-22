@@ -2,11 +2,11 @@
 Corner     : ff0p95vn40c
 Modo       : scan
 Parasitas  : pnr/output/filtro_pdm.Cmin_25.spef
-Pior setup : 61.8773 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
-Pior hold  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
-Hold reg->reg  : 0.0002 ns (u_cic_u_integradores_int3_reg_9_/CLK -> u_cic_u_integradores_int2_reg_10_/SI)
-Hold entradas  : 0.0020 ns (scan_en -> u_fir/delay_reg_12__1_/SE)
-Hold saidas    : 0.0420 ns (u_fir/valid_out_reg/CLK -> valid_out)
+Pior setup : 61.8738 ns (pdm_in -> u_cic_u_integradores_int4_reg_17_/D)
+Pior hold  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)
+Hold reg->reg  : 0.0098 ns (u_fir/delay_reg_41__9_/CLK -> u_fir/delay_reg_39__8_/SI)
+Hold entradas  : 0.0111 ns (rst -> u_cic_u_integradores_int4_reg_17_/D)
+Hold saidas    : 0.0127 ns (u_fir/valid_out_reg/CLK -> valid_out)
 Endpoints com setup violado: 0
 Endpoints com hold violado : 0
 Relatorios : sta/reports/ff0p95vn40c_scan/
