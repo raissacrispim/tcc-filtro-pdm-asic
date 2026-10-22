@@ -84,3 +84,6 @@ sta/diagnostico/reports/*/
 # Arquivos auxiliares das ferramentas
 check_design.ems
 sim/sdfAnnotateInfo
+
+# Arquivo auxiliar do VCS (qualquer pasta)
+**/sdfAnnotateInfo

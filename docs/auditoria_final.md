@@ -108,4 +108,46 @@ A coerência com os requisitos foi conferida: o `pdm_in`, lançado na descida e 
 
 ## Revalidação
 
-*(a preencher com os resultados da nova execução)*
+O fluxo foi refeito do `place` ao `finish` (core de 240 × 240 µm, sem mudança no `power_plan`), seguido de todas as verificações. Os resultados estão no commit `9e8981e`.
+
+| Verificação | Antes (`09df172`) | Depois (`9e8981e`) |
+|---|---|---|
+| Drivers de `y_out[18]` / `scan_out` | um só (`HFSINV_66_144`, com `assign`) | separados; netlist sem `assign` |
+| LVS: comparação elétrica | PASS | PASS |
+| LVS: violações de regra | 1 (`text_net:text_short`) | **0** |
+| DRC (IC Validator) | 0 | 0 |
+| STA (3 corners × 2 modos) | 0 violações | 0 violações |
+| Pior hold no ff, funcional / scan | +0,5 ps / +0,15 ps | **+10,5 ps / +9,8 ps** |
+| Setup (tt / ss / ff) | +60,21 / +56,83 / +61,88 ns | +60,20 / +56,80 / +61,87 ns |
+| Pinos tratados pelo ECO de hold | 59 (folga < 0) | 180 (folga < 10 ps) |
+| Capacitância máxima (FC) | 0 | 0 |
+| Utilização / células | 70,3% / 9.892 | 71,0% / 10.067 |
+| GLS com SDF (anotação; testes) | 0 erros e 0 avisos; 10/10 | 0 erros e 0 avisos; 10/10, saídas idênticas (`cmp`) |
+| ATPG stuck-at | 98,63%, 98 padrões | 98,57%, 92 padrões (DT 77.062; UD 9; ND 1.115) |
+| ATPG transition | 98,28%, 144 padrões, aviso M487 | **97,27%**, 165 padrões, **sem M487** (DT 70.423; UD 9; AU 424; ND 1.550) |
+| Simulação dos padrões (carga serial, VCS) | nunca executada | stuck-at 92 e transition 165 padrões, sem atraso e com SDF: **0 mismatches, 0 violações de timing** |
+
+Observações:
+
+- **Hold no ff, modo scan:** a margem do ECO (10 ps, medida no FC) ficou em 9,8 ps no PrimeTime. É a mesma diferença de correlação entre as ferramentas que motivou a margem. O valor fica registrado como saiu, sem nova iteração.
+- **Queda da cobertura de transition (98,28% → 97,27%):** vem do protocolo realista. Com `scan_en` fixo em 0 e entradas sem mudança entre o lançamento e a captura, 424 falhas passam a ser ATPG untestable (AU). Os padrões anteriores dependiam de variar o `scan_en` em velocidade, o que não é realizável no testador.
+- **Stuck-at:** a pequena variação (98,63% → 98,57%) vem da nova netlist pós-layout (mais buffers de hold).
+- **Avisos N20:** os padrões passaram na simulação com 0 divergências. Nos padrões gerados, as duas UDPs incompletas da biblioteca não causaram diferença entre o TestMAX e o VCS.
+
+## Situação do signoff
+
+| Item | Situação |
+|---|---|
+| Comparação elétrica do LVS | aprovada |
+| LVS de etiquetas e regras | aprovado (0 violações) |
+| DRC | aprovado (0 violações, IC Validator) |
+| STA | aprovada (3 corners × 2 modos, restrições do projeto, folga de hold ≥ +9,8 ps) |
+| Simulação funcional pós-layout com SDF | aprovada (10 conjuntos de vetores, saídas iguais às de referência) |
+| Cobertura ATPG | stuck-at 98,57%; transition 97,27% |
+| Simulação dos padrões ATPG | aprovada (stuck-at e transition, sem atraso e com SDF) |
+
+Limitações que permanecem:
+
+- **Restrições de E/S:** são hipóteses de integração (atrasos mínimos de 0 ns, carga de 2 fF, `vclk` sem skew de placa); ver P6. A interface precisa ser revista com o driver e o receptor reais.
+- **Simulação dos padrões com SDF:** usa o período do STIL (100 ns). Não substitui um teste em velocidade de um circuito rápido.
+- **Potência:** o valor do README (SAIF) é do layout de 20/10 e não foi reexecutado depois desta rodada. A variação esperada é pequena (cerca de 175 células a mais).

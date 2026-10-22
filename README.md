@@ -129,18 +129,19 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 | Simulação gate-level pós-síntese | 7/7 testes aprovados |
 | Simulação pós-layout com SDF (PrimeTime) | 10/10 testes aprovados; anotação sem erros ou avisos; 0 violações de timing |
 | DFT | 1 cadeia de scan, 1.332 flip-flops |
-| ATPG pós-layout | stuck-at 98,63%; transition 98,28% |
+| ATPG pós-layout | stuck-at 98,57% (92 padrões); transition 97,27% (165 padrões, `scan_en` = 0 e entradas fixas em velocidade) |
+| Simulação dos padrões ATPG (VCS, carga serial) | stuck-at e transition, sem atraso e com SDF: 0 divergências |
 | DRC (IC Validator) | CLEAN (396 regras) |
-| LVS (IC Validator) | PASS |
+| LVS (IC Validator) | comparação PASS e 0 violações de regra (inclui etiquetas de portas) |
 | Core / chip | 240 × 240 µm (57.349 µm²) / 67.328 µm² |
-| Área de células | 40.332 µm² (utilização do core 70,3%) |
-| Células | 9.892 (sem fillers) |
+| Área de células | 40.705 µm² (utilização do core 71,0%) |
+| Células | 10.067 (sem fillers) |
 | Capacitância/transição máximas | 0 violações |
-| Setup (tt / ss / ff) | +60,21 / +56,83 / +61,88 ns |
-| Hold, modo funcional (tt / ss / ff) | +0,1402 / +0,3938 / +0,0005 ns |
-| Hold, modo scan (tt / ss / ff) | +0,1269 / +0,3627 / +0,0002 ns |
+| Setup (tt / ss / ff) | +60,20 / +56,80 / +61,87 ns |
+| Hold, modo funcional (tt / ss / ff) | +0,1330 / +0,3570 / +0,0105 ns |
+| Hold, modo scan (tt / ss / ff) | +0,1330 / +0,3570 / +0,0098 ns |
 | STA (3 corners × 2 modos, incerteza de hold 0,10 ns) | 0 violações de setup e hold |
-| Potência dinâmica (SAIF, sinal de 50 kHz com ruído) | 53,4 µW (interna 41,1; chaveamento 12,3) |
+| Potência dinâmica (SAIF, sinal de 50 kHz com ruído; layout de 20/10, antes da auditoria final) | 53,4 µW (interna 41,1; chaveamento 12,3) |
 | Potência dinâmica sem vetores | 36,9 µW |
 | Potência de fuga | 1,24 mW |
 | Potência total (SAIF) | 1,29 mW (FIR: 87,4%) |
@@ -173,7 +174,9 @@ Correção:
 - **Floorplan:** core ampliado de 220 para 240 µm (84% → 70% de utilização), para dar espaço às correções.
 - **Signoff no PrimeTime:** usa as restrições originais (incerteza de hold de 0,10 ns), em 3 corners × 2 modos (funcional e scan), com a contagem de endpoints com 4 casas decimais.
 
-As folgas de hold no corner ff (+0,0005 ns funcional, +0,0002 ns scan) já descontam a incerteza de 0,10 ns, que é a margem de jitter e de projeto.
+O ECO de hold do `finish.tcl` corrige com uma margem de 10 ps, além da incerteza de 0,10 ns. No PrimeTime, o pior hold no ff ficou em +10,5 ps (funcional) e +9,8 ps (scan).
+
+A auditoria final (portas de saída, protocolo do ATPG, simulação dos padrões e scripts) está registrada em [docs/auditoria_final.md](docs/auditoria_final.md).
 
 Causa, diagnóstico, correção e critérios: [docs/auditoria_sta.md](docs/auditoria_sta.md).
 
