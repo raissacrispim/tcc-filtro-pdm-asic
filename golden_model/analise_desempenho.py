@@ -7,7 +7,6 @@
 # Uso (a partir da raiz do repositorio):
 #
 #   python3 golden_model/analise_desempenho.py
-#   python3 golden_model/analise_desempenho.py --figuras
 #
 # Somente leitura: usa vectors/fir_coef_q15.txt e as saidas
 # vectors/test_*_output_rtl.txt (gravadas pela ultima regressao,
@@ -19,12 +18,10 @@
 #   banda de rejeicao    a partir de 110 kHz (ate fout/2 = 150 kHz)
 #   interferencia        130 kHz atenuada em mais de 80 dB (teste 08)
 #
-# Resultados: docs/desempenho_filtro.md (texto gerado aqui) e,
-# com --figuras, docs/figuras/desempenho_*.png
+# Resultado: docs/desempenho_filtro.md (texto gerado aqui)
 # ============================================================
 
 import os
-import sys
 
 import numpy as np
 
@@ -268,43 +265,3 @@ texto = "\n".join(linhas) + "\n"
 print(texto)
 with open(os.path.join(RAIZ, "docs", "desempenho_filtro.md"), "w") as fh:
     fh.write(texto)
-
-if "--figuras" in sys.argv:
-    import matplotlib
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-    figs = os.path.join(RAIZ, "docs", "figuras")
-    os.makedirs(figs, exist_ok=True)
-
-    fig, ax = plt.subplots(figsize=(7, 4))
-    ax.plot(f / 1e3, db(H) - ref_db, label="teórica (coef. Q1.15)")
-    ax.plot(f_hw / 1e3, db(Hhw) - ref_hw, "--",
-            label="medida no hardware (teste 10)")
-    ax.axvspan(F_UTIL[0] / 1e3, F_UTIL[1] / 1e3, alpha=0.15, label="banda útil")
-    ax.axvline(F_REJ / 1e3, color="k", lw=0.8, ls=":")
-    ax.set_xlabel("Frequência (kHz)")
-    ax.set_ylabel("Magnitude (dB)")
-    ax.set_ylim(-140, 10)
-    ax.grid(alpha=0.3)
-    ax.legend()
-    fig.tight_layout()
-    fig.savefig(os.path.join(figs, "desempenho_resposta_frequencia.png"), dpi=150)
-
-    fig, ax = plt.subplots(figsize=(7, 4))
-    ax.plot(env_f / 1e3, env_rel)
-    ax.axvspan(F_UTIL[0] / 1e3, F_UTIL[1] / 1e3, alpha=0.15)
-    ax.set_xlabel("Frequência instantânea (kHz)")
-    ax.set_ylabel("Nível relativo (dB)")
-    ax.grid(alpha=0.3)
-    fig.tight_layout()
-    fig.savefig(os.path.join(figs, "desempenho_varredura.png"), dpi=150)
-
-    fy8, Y8 = espectro(carrega("test_08_50k_interf_130k_output_rtl.txt"))
-    fig, ax = plt.subplots(figsize=(7, 4))
-    ax.plot(fy8 / 1e3, db(Y8 / a50))
-    ax.set_xlabel("Frequência (kHz)")
-    ax.set_ylabel("Magnitude relativa a 50 kHz (dB)")
-    ax.grid(alpha=0.3)
-    fig.tight_layout()
-    fig.savefig(os.path.join(figs, "desempenho_interferencia_130k.png"), dpi=150)
-    print("Figuras em docs/figuras/desempenho_*.png")
