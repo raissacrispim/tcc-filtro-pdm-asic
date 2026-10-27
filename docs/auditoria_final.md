@@ -164,7 +164,13 @@ A auditoria v2 (`~/tcc_auditoria_v2`) não encontrou violações nos cenários a
 - Corrigido o comentário do `run_drc.sh`: o DRC usa `filtro_pdm_final.gds`.
 - No README: corrigidas as linhas "7/7" e o parágrafo obsoleto sobre regerar as saídas; criada a seção "Escopo e limitações da verificação"; registrado o arquivo histórico `rtl/fir_antes_sintese.sv`.
 
-**Pendências de evidência, a executar e registrar:**
-- regressão GLS pós-síntese com os 10 testes;
-- potência SAIF no layout atual;
-- comparação de arcos do SDF no layout atual.
+**Revalidação do adendo** (27/10):
+
+| Verificação | Resultado |
+|---|---|
+| ATPG transition com o SPF derivado | **V14 eliminado**; M977 presente (documentado); sem M487; 97,27%, mesma cobertura |
+| `diff` entre o SPF do DC e o derivado | uma linha: `"scan_en" = 0;` |
+| Simulação dos padrões transition (165), sem atraso e com SDF | 0 mismatches, 0 violações de timing |
+| GLS pós-síntese, sem atrasos | 10/10; saídas idênticas às de referência (`cmp`) |
+| Potência (SAIF, 50 kHz com ruído), layout atual | dinâmica 53,4 µW (interna 41,0; chaveamento 12,4); fuga 1,26 mW; total 1,31 mW; FIR 86,7% |
+| Arcos do SDF, FC × PT (`compara_sdf.py`) | 30.475 arcos únicos nos dois; 0 só em um deles. Diferença: mediana 0, de −14 a +9 ps; 4 arcos acima de 10 ps (arredondamento de 10 ps do FC e cálculo de atraso diferente entre as ferramentas); CLK→Q e células de clock dentro de ±6 ps |

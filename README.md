@@ -126,7 +126,7 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 | Etapa | Resultado |
 |---|---|
 | Simulação RTL x Golden Model | 10/10 testes; CIC, FIR e filtro completo: 6.000 amostras cada, 0 divergências (auditoria independente de 27/10) |
-| Simulação gate-level pós-síntese (sem atrasos) | 7/7 testes (antes dos testes 08–10); regressão com 10 testes: ver [docs/auditoria_final.md](docs/auditoria_final.md) |
+| Simulação gate-level pós-síntese (sem atrasos) | 10/10 testes; saídas idênticas às de referência |
 | Simulação pós-layout com SDF (PrimeTime) | 10/10 testes aprovados; anotação sem erros ou avisos; 0 violações de timing |
 | DFT | 1 cadeia de scan, 1.332 flip-flops |
 | ATPG pós-layout | stuck-at 98,57% (92 padrões); transition 97,27% (165 padrões, `scan_en` = 0 e entradas fixas entre lançamento e captura) |
@@ -141,10 +141,10 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 | Hold, modo funcional (tt / ss / ff) | +0,1330 / +0,3570 / +0,0105 ns |
 | Hold, modo scan (tt / ss / ff) | +0,1330 / +0,3570 / +0,0098 ns |
 | STA (3 corners × 2 modos, incerteza de hold 0,10 ns) | 0 violações de setup e hold |
-| Potência dinâmica (SAIF, sinal de 50 kHz com ruído; layout de 20/10, antes da auditoria final) | 53,4 µW (interna 41,1; chaveamento 12,3) |
+| Potência dinâmica (SAIF, sinal de 50 kHz com ruído) | 53,4 µW (interna 41,0; chaveamento 12,4) |
 | Potência dinâmica sem vetores | 36,9 µW |
-| Potência de fuga | 1,24 mW |
-| Potência total (SAIF) | 1,29 mW (FIR: 87,4%) |
+| Potência de fuga | 1,26 mW |
+| Potência total (SAIF) | 1,31 mW (FIR: 86,7%) |
 
 Corners de timing (PrimeTime): tt0p85v25c, ss0p75v125c (0,75 V, 125 °C) e ff0p95vn40c (0,95 V, −40 °C).
 
@@ -191,7 +191,10 @@ Os resultados acima valem nas condições descritas. Eles **não** comprovam:
 Hipóteses e valores a registrar:
 - **Interface:** atrasos de E/S de 0–20 ns, carga de 2 fF, entradas dirigidas por `NBUFFX8_RVT`, `vclk` sem skew de placa e clock de shift igual ao funcional. A porta `clk` não tem driving cell (aviso do `check_timing`). O único valor de datasheet é o `pdm_in` (SPH0641, 18–40 ns). Origem de cada valor: cabeçalho de `pnr/constraints/filtro_pdm_physical.sdc`.
 - **Hold:** o pior caso é +9,771 ps (ff, modo scan, `delay_reg_41__9_/QN → delay_reg_39__8_/SI`), além dos 0,10 ns de incerteza do SDC. É positivo, mas é a menor margem do projeto.
-- **SDF:** a simulação usa o SDF do PrimeTime. O do Fusion Compiler escapa bits de barramento e gera erros de anotação no VCS (`docs/auditoria_sdf.md`). A comparação arco a arco entre os dois foi feita no layout de 16/10; a anotação no layout atual tem 0 erros e 0 avisos, mas a cobertura de arcos não foi medida de novo.
+- **SDF:** a simulação usa o SDF do PrimeTime. O do Fusion Compiler escapa bits de barramento e gera erros de anotação no VCS (`docs/auditoria_sdf.md`).
+  - No layout atual, os dois SDFs têm os mesmos 30.475 arcos de célula, sem nenhum arco só em um deles. Em 30.471 arcos, a diferença está dentro do arredondamento de 10 ps do SDF do FC; em 4, chega a −14 ps.
+  - A anotação no VCS tem 0 erros e 0 avisos.
+  - O que foi comparado é a presença dos arcos nos dois arquivos, não a anotação de cada arco pelo simulador.
 - **ATPG:** a cobertura não é de 100% (stuck-at 98,57%; transition 97,27%). Avisos remanescentes, explicados em `docs/auditoria_final.md`: N20 (biblioteca), B7–B10 (portas de DFT e redes sem uso) e M977 (opção `-nopi_changes` mantida de propósito).
 - **Potência:** estimativa por SAIF, de um único estímulo (50 kHz com ruído).
 - **Fluxo:** o fluxo executado é inteiramente Synopsys (VCS, Design Compiler, Fusion Compiler, PrimeTime, TestMAX ATPG, IC Validator). Nenhuma etapa foi feita com ferramentas Cadence.
