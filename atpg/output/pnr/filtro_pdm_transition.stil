@@ -1,7 +1,7 @@
 STIL 1.0 { Design 2005; }
 Header {
    Title "  TetraMAX(R)  X-2025.06-SP2-i20250827_023447 STIL output";
-   Date "Thu Oct 22 11:53:16 2026";
+   Date "Tue Oct 27 14:38:35 2026";
    Source "Minimal STIL for design `filtro_pdm'";
    History {
       Ann {*  Incoming_Date "Fri Oct  9 20:36:50 2026"  *}
@@ -34,7 +34,6 @@ Header {
       Ann {* B8    warning        2  unconnected module input pin *}
       Ann {* B9    warning        2  undriven module internal net *}
       Ann {* B10   warning      189  unconnected module internal net *}
-      Ann {* V14   warning        1  missing state *}
       Ann {*  *}
       Ann {* clock_name        off  usage *}
       Ann {* ----------------  ---  -------------------------- *}

@@ -1,0 +1,122 @@
+
+
+
+                              Fusion Compiler (TM)
+
+                Version X-2025.06-SP3 for linux64 - Feb 27, 2026
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2026 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+      Inc.  This software may only be used in accordance with the terms and
+  conditions of a written license agreement with Synopsys, Inc.  All other use,
+   reproduction, or distribution of this software is strictly prohibited.  By
+   installing, accessing, using, or executing this software, you agree that it
+  will reside on, operate within, and have access to the computers and networks
+    where such software is used ("Host System"), and that Synopsys may access
+     components and data of the Host System as necessary for it to function
+ properly, to authenticate and validate license keys, to verify that it is used
+ only in conformity with the applicable license restrictions, and to communicate
+                 error messages and associated data to Synopsys.
+
+ 
+Information: Term was not able to be set up using xterm-256color . Using "xterm" by default instead. (CLE-10)
+# ============================================================
+# power_saif.tcl
+# Analise de potencia com atividade de simulacao (SAIF)
+# Projeto: Filtro PDM CIC + FIR
+# Ferramenta: Synopsys Fusion Compiler
+# Tecnologia: SAED32 RVT (tt0p85v25c)
+#
+# Uso (a partir da raiz do repositorio):
+#
+#   sim/scripts/run_saif.sh
+#   fc_shell -f pnr/scripts/power_saif.tcl
+#
+# Entrada:  filtro_pdm/finish
+#           pnr/activity/filtro_pdm.saif
+# Saida:    pnr/reports/power_saif/
+#
+# A potencia de finish.tcl (power.rpt) e "vectorless": usa
+# taxas de chaveamento padrao. Aqui as taxas vem da simulacao
+# pos-layout (SDF) com um sinal de ultrassom real.
+#
+# O bloco NAO e salvo: ao final, saia com "exit" e responda
+# que nao deseja salvar, se perguntado.
+# ============================================================
+set SAIF pnr/activity/filtro_pdm.saif
+pnr/activity/filtro_pdm.saif
+# Hierarquia do DUT dentro do testbench
+set CAMINHO_DUT tb_filtro_pdm_golden/dut
+tb_filtro_pdm_golden/dut
+if {![file exists $SAIF]} {
+    puts "ERRO: $SAIF nao encontrado. Execute sim/scripts/run_saif.sh"
+    return -code error
+}
+file mkdir pnr/reports/power_saif
+open_lib pnr/work/filtro_pdm.dlib
+Information: Loading library file '/home/raissa.crispim/tcc_filtro/pnr/work/filtro_pdm.dlib' (FILE-007)
+Information: Loading library file '/Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/ndm/saed32rvt_base_frame_timing.ndm' (FILE-007)
+{filtro_pdm.dlib}
+open_block filtro_pdm/finish
+Information: User units loaded from library 'saed32rvt_base_frame_timing' (LNK-040)
+Opening block 'filtro_pdm.dlib:filtro_pdm/finish.design' in edit mode
+{filtro_pdm.dlib:filtro_pdm/finish.design}
+# ------------------------------------------------------------
+# 1. Potencia sem vetores (referencia)
+# ------------------------------------------------------------
+report_power > pnr/reports/power_saif/power_vectorless.rpt
+# ------------------------------------------------------------
+# 2. Leitura da atividade simulada
+# ------------------------------------------------------------
+read_saif $SAIF -strip_path $CAMINHO_DUT
+Information: Reading file '/home/raissa.crispim/tcc_filtro/pnr/activity/filtro_pdm.saif'. (POW-073)
+Warning: Unknown keyword in SAIF file. (POW-091)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_1' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_2' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_3' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_4' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_5' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_6' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_7' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_8' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_9' not found. (POW-011)
+Warning: Object for 'NET SYNOPSYS_UNCONNECTED_10' not found. (POW-011)
+Note - message 'POW-011' limit (10) exceeded. Remainder will be suppressed.
+
+SAIF                matched        not matched   in saif
+--------------------------------------------------------
+INSTANCE         1 (100.0%)         0 (  0.0%)         1
+PORT             0 (  0.0%)         0 (  0.0%)         0
+NET          14024 ( 98.7%)       179 (  1.3%)     14203
+IOPATH           0 (  0.0%)         0 (  0.0%)         0
+LEAKAGE          0 (  0.0%)         0 (  0.0%)         0
+
+1
+# Quantas redes receberam atividade da simulacao
+catch {report_activity > pnr/reports/power_saif/activity.rpt}
+0
+# ------------------------------------------------------------
+# 3. Potencia com a atividade simulada
+# ------------------------------------------------------------
+report_power > pnr/reports/power_saif/power.rpt
+# Divisao por bloco (CIC x FIR)
+if {[catch {report_power -hierarchy \
+        > pnr/reports/power_saif/power_hier.rpt} msg]} {
+    puts "Aviso: relatorio hierarquico nao gerado ($msg)"
+}
+puts ""
+
+puts "Potencia com SAIF: pnr/reports/power_saif/power.rpt"
+Potencia com SAIF: pnr/reports/power_saif/power.rpt
+puts "Referencia sem vetores: pnr/reports/power_saif/power_vectorless.rpt"
+Referencia sem vetores: pnr/reports/power_saif/power_vectorless.rpt
+puts "Bloco nao salvo. Saia com: exit"
+Bloco nao salvo. Saia com: exit
+Information: 169 out of 179 POW-011 messages were not printed due to limit 10  (MSG-3913)
+fc_shell> Maximum memory usage for this session: 658.44 MB
+Maximum memory usage for this session including child processes: 658.44 MB
+CPU usage for this session:     22 seconds (  0.01 hours)
+Elapsed time for this session:     23 seconds (  0.01 hours)
+Thank you for using Fusion Compiler.

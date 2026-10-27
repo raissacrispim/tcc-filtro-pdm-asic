@@ -194,4 +194,3 @@
  Warning: Unconnected module internal net ( filtro_pdm/SYNOPSYS_UNCONNECTED_77 ). (B10-187)
  Warning: Unconnected module internal net ( filtro_pdm/SYNOPSYS_UNCONNECTED_78 ). (B10-188)
  Warning: Unconnected module internal net ( filtro_pdm/SYNOPSYS_UNCONNECTED_80 ). (B10-189)
- Warning: Line 426 (synth/netlist/filtro_pdm_syn.spf), missing state (Constraint pin "scan_en" left to opposite of its constraint value in "test_setup"). (V14-1)

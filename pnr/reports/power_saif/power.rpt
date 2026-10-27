@@ -3,7 +3,7 @@ Report : power
         -significant_digits 2
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:55:00 2026
+Date   : Tue Oct 27 15:20:15 2026
 ****************************************
 Information: Activity propagation will be performed for scenario func_tt.
 Information: Doing activity propagation for mode 'func' and corner 'tt' with effort level 'medium'. (POW-024)
@@ -11,7 +11,7 @@ Information: Timer-derived activity data is cached on scenario func_tt (POW-052)
 Information: Running switching activity propagation in scalar mode!
 
  **** Information : No. of simulation cycles = 6 ****
-[Non-Incremental Power-Update] SCENE[func_tt_late] PROP[late] InstanceSize[30963]
+[Non-Incremental Power-Update] SCENE[func_tt_late] PROP[late] InstanceSize[30695]
 Information: Activity for scenario func_tt was cached, no propagation required. (POW-005)
 Mode: func
 Corner: tt
@@ -33,11 +33,11 @@ Supply nets:
 VDD (power) probability 1.00 (default)
 VSS (ground) probability 1.00 (default)
 
-  Cell Internal Power    = 4.11e+07 pW ( 77.0%)
-  Net Switching Power    = 1.23e+07 pW ( 23.0%)
+  Cell Internal Power    = 4.10e+07 pW ( 76.8%)
+  Net Switching Power    = 1.24e+07 pW ( 23.2%)
 Total Dynamic Power      = 5.34e+07 pW (100.0%)
 
-Cell Leakage Power       = 1.24e+09 pW
+Cell Leakage Power       = 1.26e+09 pW
 
 
   Attributes
@@ -50,10 +50,10 @@ Power Group         Internal Power        Switching Power          Leakage Power
 io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-clock_network             2.83e+07               5.51e+06               2.66e+07               6.04e+07    (  4.7%)        i
-register                  2.17e+06               5.69e+05               4.09e+08               4.12e+08    ( 31.9%)         
+clock_network             2.81e+07               5.63e+06               2.40e+07               5.77e+07    (  4.4%)        i
+register                  2.20e+06               5.85e+05               4.09e+08               4.12e+08    ( 31.4%)         
 sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-combinational             1.07e+07               6.21e+06               8.04e+08               8.20e+08    ( 63.5%)         
+combinational             1.07e+07               6.16e+06               8.25e+08               8.42e+08    ( 64.2%)         
 -----------------------------------------------------------------------------------------------------------------------------
-Total                     4.11e+07 pW            1.23e+07 pW            1.24e+09 pW            1.29e+09 pW
+Total                     4.10e+07 pW            1.24e+07 pW            1.26e+09 pW            1.31e+09 pW
 1

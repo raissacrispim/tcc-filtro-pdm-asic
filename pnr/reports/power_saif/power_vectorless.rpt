@@ -3,21 +3,21 @@ Warning: In library filtro_pdm.dlib, no block views exist for block filtro_pdm. 
 Visiting block filtro_pdm.dlib:filtro_pdm/finish.design
 Design 'filtro_pdm' was successfully linked.
 Information: Timer using 1 threads
-Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 499 MB / Date: Tue Oct 20 17:54:51 2026
+Timing Update Started(Full_timing_update) : updateCount: 1 / Mem-peak : 498 MB / Date: Tue Oct 27 15:20:06 2026
 
 Information: Corner ff: no PVT mismatches. (PVT-032)
 Information: Corner tt: no PVT mismatches. (PVT-032)
-Timing Update Completed: Mem-peak: 515 MB / Date: Tue Oct 20 17:54:52 2026
+Timing Update Completed: Mem-peak: 514 MB / Date: Tue Oct 27 15:20:07 2026
 
 ****************************************
 Report : power
         -significant_digits 2
 Design : filtro_pdm
 Version: X-2025.06-SP3
-Date   : Tue Oct 20 17:54:52 2026
+Date   : Tue Oct 27 15:20:07 2026
 ****************************************
 Information: The stitching and editing of coupling caps is turned OFF for design 'filtro_pdm.dlib:filtro_pdm/finish.design'. (TIM-125)
-Information: Design filtro_pdm has 13786 nets, 0 global routed, 13784 detail routed. (NEX-024)
+Information: Design filtro_pdm has 13960 nets, 0 global routed, 13958 detail routed. (NEX-024)
 Information: The RC mode used is DR for design 'filtro_pdm'. (NEX-022)
 ---extraction options---
 Corner: tt
@@ -40,7 +40,7 @@ Global options:
  extract.enable_coupling_cap    : false
 Extracting design: filtro_pdm 
 Information: coupling capacitance is lumped to ground. (NEX-030)
-Information: 13784 nets are successfully extracted. (NEX-028)
+Information: 13958 nets are successfully extracted. (NEX-028)
 Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
 Information: Activity propagation will be performed for scenario func_tt.
 Information: Doing activity propagation for mode 'func' and corner 'tt' with effort level 'medium'. (POW-024)
@@ -49,8 +49,8 @@ Information: Running switching activity propagation in scalar mode!
 
  **** Information : No. of simulation cycles = 7 ****
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 13784, routed nets = 13784, across physical hierarchy nets = 0, parasitics cached nets = 13784, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
-[Non-Incremental Power-Update] SCENE[func_tt_late] PROP[late] InstanceSize[30963]
+Information: Net estimation statistics: timing graph nets = 13958, routed nets = 13958, across physical hierarchy nets = 0, parasitics cached nets = 13958, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+[Non-Incremental Power-Update] SCENE[func_tt_late] PROP[late] InstanceSize[30695]
 ************************************************************
 Timer Settings:
 Delay Calculation Style:                   auto
@@ -85,11 +85,11 @@ Supply nets:
 VDD (power) probability 1.00 (default)
 VSS (ground) probability 1.00 (default)
 
-  Cell Internal Power    = 3.07e+07 pW ( 83.3%)
-  Net Switching Power    = 6.16e+06 pW ( 16.7%)
+  Cell Internal Power    = 3.06e+07 pW ( 82.9%)
+  Net Switching Power    = 6.30e+06 pW ( 17.1%)
 Total Dynamic Power      = 3.69e+07 pW (100.0%)
 
-Cell Leakage Power       = 1.19e+09 pW
+Cell Leakage Power       = 1.20e+09 pW
 
 
   Attributes
@@ -102,10 +102,10 @@ Power Group         Internal Power        Switching Power          Leakage Power
 io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
 black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-clock_network             2.98e+07               5.51e+06               2.66e+07               6.19e+07    (  5.1%)        i
-register                  2.81e+05               9.16e+04               4.09e+08               4.10e+08    ( 33.5%)         
+clock_network             2.96e+07               5.63e+06               2.40e+07               5.92e+07    (  4.8%)        i
+register                  2.93e+05               9.77e+04               4.09e+08               4.10e+08    ( 33.0%)         
 sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
-combinational             7.07e+05               5.62e+05               7.50e+08               7.51e+08    ( 61.4%)         
+combinational             7.46e+05               5.72e+05               7.70e+08               7.71e+08    ( 62.2%)         
 -----------------------------------------------------------------------------------------------------------------------------
-Total                     3.07e+07 pW            6.16e+06 pW            1.19e+09 pW            1.22e+09 pW
+Total                     3.06e+07 pW            6.30e+06 pW            1.20e+09 pW            1.24e+09 pW
 1

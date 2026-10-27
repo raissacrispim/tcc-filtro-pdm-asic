@@ -40,8 +40,16 @@
 # ============================================================
 set SAED32_V /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
 /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
-set SPF      synth/netlist/filtro_pdm_syn.spf
-synth/netlist/filtro_pdm_syn.spf
+# SPF derivado do gerado pelo DC: identico, exceto "scan_en" = 0
+# no test_setup, coerente com add_pi_constraints 0 scan_en
+# (aviso V14). Gerado por run_atpg.sh com
+# atpg/scripts/gera_spf_transition.py.
+set SPF      atpg/spf/filtro_pdm_transition.spf
+atpg/spf/filtro_pdm_transition.spf
+if {![file exists $SPF]} {
+    puts "ERRO: $SPF nao encontrado. Execute por atpg/scripts/run_atpg.sh transition"
+    exit 1
+}
 # Netlist da sintese (padrao) ou pos-layout (ATPG_ETAPA=pnr,
 # definido por run_atpg.sh). No layout a cadeia de scan foi
 # reordenada pelo placement; o ATPG pos-layout confirma a
@@ -65,7 +73,7 @@ set_messages -log $REP/atpg_transition.log -replace
 read_netlist $SAED32_V -library
  Begin reading netlist ( /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v )...
  End parsing Verilog file /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v with 0 errors.
- End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.10 sec, Memory=2MB
+ End reading netlist: #modules=376, top=saed32_xbuf_lvt, #lines=30008, CPU_time=0.11 sec, Memory=2MB
 read_netlist $NETLIST
  Begin reading netlist ( pnr/output/filtro_pdm_pnr.v )...
  End parsing Verilog file pnr/output/filtro_pdm_pnr.v with 0 errors.
@@ -80,10 +88,10 @@ run_build_model filtro_pdm
  Warning: Rule B9 (undriven module internal net) was violated 2 times.
  Warning: Rule B10 (unconnected module internal net) was violated 189 times.
  Warning: Rule N20 (underspecified UDP) was violated 2 times.
- End build model: #primitives=37902, CPU_time=0.07 sec, Memory=14MB
+ End build model: #primitives=37902, CPU_time=0.09 sec, Memory=14MB
  ------------------------------------------------------------------------------
  Begin learning analyses...
- End learning analyses, total learning CPU time=0.24 sec.
+ End learning analyses, total learning CPU time=0.26 sec.
  ------------------------------------------------------------------------------
 # Avisos do modelo por regra, com as instancias (P4 de
 # docs/auditoria_final.md): N20 vem de duas UDPs do saed32nm.v
@@ -104,15 +112,22 @@ set_delay -launch_cycle system_clock
 # podem mudar entre o pulso de lancamento e o de captura, e as
 # saidas nao sao medidas na captura em velocidade.
 add_pi_constraints 0 scan_en
-set_delay -nopi_changes
 set_delay -nopo_measures
+# -nopi_changes: entradas primarias fixas entre o lancamento e a
+# captura. Com scan_en restrito, o TestMAX emite M977 ("scan
+# enable can not be identified"): ele nao reconhece o scan_en
+# como scan enable porque o valor ja esta fixado em 0, e a opcao
+# vale para todas as entradas. Mantida de proposito: sem ela a
+# cobertura cai de 97,27% para 97,25% (auditoria de 27/10) e as
+# entradas poderiam mudar em velocidade, o que o testador nao
+# garante. Os padroes simulam sem divergencias.
+set_delay -nopi_changes
 run_drc $SPF
  ------------------------------------------------------------------------------
  Begin scan design rules checking...
  ------------------------------------------------------------------------------
- Begin reading test protocol file synth/netlist/filtro_pdm_syn.spf...
- Warning: Rule V14 (missing state) was violated 1 times.
- End parsing STIL file synth/netlist/filtro_pdm_syn.spf with 0 errors.
+ Begin reading test protocol file atpg/spf/filtro_pdm_transition.spf...
+ End parsing STIL file atpg/spf/filtro_pdm_transition.spf with 0 errors.
  Test protocol file reading completed, CPU time=0.00 sec.
  ------------------------------------------------------------------------------
  Begin simulating test protocol procedures...
@@ -125,7 +140,7 @@ run_drc $SPF
  Begin clock rules checking...
  Clock rules checking completed, CPU time=0.00 sec.
  Performing clock grouping analysis for 1 clock.
- Clock grouping results: #pairs=0, #groups=0, #serial_pairs=0, #disturbed_pairs=0, CPU time=0.00 sec.
+ Clock grouping results: #pairs=0, #groups=0, #serial_pairs=0, #disturbed_pairs=0, CPU time=0.01 sec.
  ------------------------------------------------------------------------------
  Begin tracing connection cones...
  Tracing connection cones completed, CPU time=0.00 sec.
@@ -136,15 +151,14 @@ run_drc $SPF
  ------------------------------------------------------------------------------
  Begin DRC dependent learning...
  Fast-sequential depth results: control=0(0), observe=0(0), detect=0(0), CPU time=0.00 sec
- DRC dependent learning completed, CPU time=0.01 sec.
+ DRC dependent learning completed, CPU time=0.02 sec.
  ------------------------------------------------------------------------------
  Begin set operation for load unload constant latches...
  Set operation for load unload constant latches completed, CPU time=0.00 sec.
  ------------------------------------------------------------------------------
  DRC Summary Report
  ------------------------------------------------------------------------------
- Warning: Rule V14 (missing state) was violated 1 times.
- There were 1 violations that occurred during DRC process.
+ No violations occurred during DRC process.
  Design rules checking was successful, total CPU time=0.03 sec.
  ------------------------------------------------------------------------------
 report_violations -all > $REP/drc_violations_transition.rpt
@@ -177,13 +191,13 @@ run_atpg -auto_compression
  Begin deterministic ATPG: #uncollapsed_faults=61182, abort_limit=200...
  Warning: Nopi_changes option selected when scan enable can not be identified. (M977)
  Optimized clock launch transition fault ATPG is enabled.
- 32          44879  15987        0/0/21    77.48%     14.38
- 61           4132  11836       9/10/59    83.20%     15.05
+ 32          44879  15987        0/0/21    77.48%     16.13
+ 61           4132  11836       9/10/59    83.20%     16.80
  Local redundancy analysis results: #redundant_faults=0, CPU_time=0.00 sec
- 92           4731   7024      9/91/133    89.74%     25.77
- 124          4148   2859    9/108/1085    95.47%     37.73
- 156          1128   1731    9/108/1282    97.02%     41.42
- 165           181   1550    9/108/1693    97.27%     45.88
+ 92           4731   7024      9/91/133    89.74%     25.54
+ 124          4148   2859    9/108/1085    95.47%     37.51
+ 156          1128   1731    9/108/1282    97.02%     41.22
+ 165           181   1550    9/108/1693    97.27%     45.70
  
    Uncollapsed Transition Fault Summary Report
  -----------------------------------------------
@@ -206,7 +220,7 @@ run_atpg -auto_compression
  -----------------------------------------------
             CPU Usage Summary Report
  -----------------------------------------------
- Total CPU time                           45.89
+ Total CPU time                           45.71
  -----------------------------------------------
 report_summaries > $REP/transition_summary.rpt
 # ------------------------------------------------------------
@@ -215,7 +229,7 @@ report_summaries > $REP/transition_summary.rpt
 write_patterns $OUT/filtro_pdm_transition.stil \
     -format stil -replace
  Patterns written reference 827 V statements, generating 221773 test cycles
- End writing file 'filtro_pdm_transition.stil' with 165 patterns, File_size = 561137, CPU_time = 0.0 sec.
+ End writing file 'filtro_pdm_transition.stil' with 165 patterns, File_size = 561083, CPU_time = 0.0 sec.
 # Testbench Verilog para a simulacao dos padroes
 # (sim/scripts/sim_atpg.sh <etapa> transition)
 write_testbench \
