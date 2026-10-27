@@ -44,7 +44,7 @@ Com entrada -1/+1, a saída do CIC é sempre par (y = 2·S − 65536). O LSB é 
 
 ## Estrutura
 
-- `rtl/`: módulos SystemVerilog sintetizáveis
+- `rtl/`: módulos SystemVerilog sintetizáveis. A síntese usa os arquivos listados em `synth/scripts/synth.tcl`. `rtl/fir_antes_sintese.sv` é uma versão histórica do FIR, que declara o mesmo módulo `fir` e não deve ser compilada junto com `rtl/fir.sv`.
 - `tb/`: testbenches de verificação
 - `golden_model/`: Golden Model em Python
   - `golden_model.py`: modelo oficial e geração dos vetores (`python3 golden_model/golden_model.py`)
@@ -68,7 +68,7 @@ A implementação é comparada amostra por amostra com o Golden Model para dez v
 
 Cada teste utiliza 9.600 amostras PDM e produz 600 amostras de saída.
 
-Os testes 01 a 06 usam os mesmos estímulos PDM da versão anterior. Após a correção do CIC para 18 bits, os vetores de saída foram regenerados e as saídas `*_output_rtl.txt` devem ser obtidas novamente com o VCS. A síntese, a regressão gate-level e o floorplan também precisam ser refeitos.
+Os vetores esperados (`*_golden.txt`) são gerados pelo Golden Model com o CIC de 18 bits. As saídas `*_output_rtl.txt` versionadas são as da última regressão pós-layout com SDF, idênticas às da simulação RTL.
 
 ## Fluxo de execução
 
@@ -125,11 +125,11 @@ Tecnologia SAED32 1P9M RVT, corner típico tt0p85v25c, clock de 4,8 MHz.
 
 | Etapa | Resultado |
 |---|---|
-| Simulação RTL x Golden Model | 7/7 testes aprovados |
-| Simulação gate-level pós-síntese | 7/7 testes aprovados |
+| Simulação RTL x Golden Model | 10/10 testes; CIC, FIR e filtro completo: 6.000 amostras cada, 0 divergências (auditoria independente de 27/10) |
+| Simulação gate-level pós-síntese (sem atrasos) | 7/7 testes (antes dos testes 08–10); regressão com 10 testes: ver [docs/auditoria_final.md](docs/auditoria_final.md) |
 | Simulação pós-layout com SDF (PrimeTime) | 10/10 testes aprovados; anotação sem erros ou avisos; 0 violações de timing |
 | DFT | 1 cadeia de scan, 1.332 flip-flops |
-| ATPG pós-layout | stuck-at 98,57% (92 padrões); transition 97,27% (165 padrões, `scan_en` = 0 e entradas fixas em velocidade) |
+| ATPG pós-layout | stuck-at 98,57% (92 padrões); transition 97,27% (165 padrões, `scan_en` = 0 e entradas fixas entre lançamento e captura) |
 | Simulação dos padrões ATPG (VCS, carga serial) | stuck-at e transition, sem atraso e com SDF: 0 divergências |
 | DRC (IC Validator) | CLEAN (396 regras) |
 | LVS (IC Validator) | comparação PASS e 0 violações de regra (inclui etiquetas de portas) |
@@ -179,6 +179,22 @@ O ECO de hold do `finish.tcl` corrige com uma margem de 10 ps, além da incertez
 A auditoria final (portas de saída, protocolo do ATPG, simulação dos padrões e scripts) está registrada em [docs/auditoria_final.md](docs/auditoria_final.md).
 
 Causa, diagnóstico, correção e critérios: [docs/auditoria_sta.md](docs/auditoria_sta.md).
+
+## Escopo e limitações da verificação
+
+Os resultados acima valem nas condições descritas. Eles **não** comprovam:
+- **Operação em silício.** O chip não foi fabricado nem caracterizado.
+- **Equivalência formal (LEC) entre RTL, síntese e layout.** A equivalência é sustentada por simulação (RTL, GLS pós-síntese e GLS pós-layout com SDF, mesmas saídas) e pela comparação das netlists PNR e LVS, não por uma ferramenta formal.
+- **Teste em velocidade (at-speed).** Os padrões ATPG foram simulados com período de 100 ns (STIL) e com o SDF do PrimeTime, sem divergências. Isso não equivale a um teste em velocidade de um circuito rápido.
+- **Timing em toda condição.** A STA cobre 3 corners (tt0p85v25c, ss0p75v125c, ff0p95vn40c) × 2 modos (funcional e scan). O P&R otimizou 4 cenários (tt e ff × funcional e scan); o ss só é verificado.
+
+Hipóteses e valores a registrar:
+- **Interface:** atrasos de E/S de 0–20 ns, carga de 2 fF, entradas dirigidas por `NBUFFX8_RVT`, `vclk` sem skew de placa e clock de shift igual ao funcional. A porta `clk` não tem driving cell (aviso do `check_timing`). O único valor de datasheet é o `pdm_in` (SPH0641, 18–40 ns). Origem de cada valor: cabeçalho de `pnr/constraints/filtro_pdm_physical.sdc`.
+- **Hold:** o pior caso é +9,771 ps (ff, modo scan, `delay_reg_41__9_/QN → delay_reg_39__8_/SI`), além dos 0,10 ns de incerteza do SDC. É positivo, mas é a menor margem do projeto.
+- **SDF:** a simulação usa o SDF do PrimeTime. O do Fusion Compiler escapa bits de barramento e gera erros de anotação no VCS (`docs/auditoria_sdf.md`). A comparação arco a arco entre os dois foi feita no layout de 16/10; a anotação no layout atual tem 0 erros e 0 avisos, mas a cobertura de arcos não foi medida de novo.
+- **ATPG:** a cobertura não é de 100% (stuck-at 98,57%; transition 97,27%). Avisos remanescentes, explicados em `docs/auditoria_final.md`: N20 (biblioteca), B7–B10 (portas de DFT e redes sem uso) e M977 (opção `-nopi_changes` mantida de propósito).
+- **Potência:** estimativa por SAIF, de um único estímulo (50 kHz com ruído).
+- **Fluxo:** o fluxo executado é inteiramente Synopsys (VCS, Design Compiler, Fusion Compiler, PrimeTime, TestMAX ATPG, IC Validator). Nenhuma etapa foi feita com ferramentas Cadence.
 
 ## Ferramentas
 

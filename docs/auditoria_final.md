@@ -151,3 +151,20 @@ Limitações que permanecem:
 - **Restrições de E/S:** são hipóteses de integração (atrasos mínimos de 0 ns, carga de 2 fF, `vclk` sem skew de placa); ver P6. A interface precisa ser revista com o driver e o receptor reais.
 - **Simulação dos padrões com SDF:** usa o período do STIL (100 ns). Não substitui um teste em velocidade de um circuito rápido.
 - **Potência:** o valor do README (SAIF) é do layout de 20/10 e não foi reexecutado depois desta rodada. A variação esperada é pequena (cerca de 175 células a mais).
+
+## Adendo — auditoria independente v2 (27/10, commit `2762986`)
+
+A auditoria v2 (`~/tcc_auditoria_v2`) não encontrou violações nos cenários analisados. Ela deixou três pontos.
+
+**V14 e M977 (ATPG transition).** Os dois avisos surgiram com a correção do P3 desta auditoria e ficaram registrados no próprio log (`atpg/reports/pnr/atpg_transition.log`), mas não tinham sido conferidos na revalidação.
+- **V14** (*missing state*): o `test_setup` do SPF gerado pelo DC termina com um vetor vazio e deixa `scan_en` oposto ao valor restrito. **Corrigido.** `atpg/scripts/gera_spf_transition.py` gera `atpg/spf/filtro_pdm_transition.spf`, idêntico ao original exceto por `"scan_en" = 0;` nesse vetor, e o ATPG transition passa a usá-lo. O SPF original não é alterado. A auditoria aplicou a mesma alteração numa cópia e obteve os mesmos 165 padrões e a mesma cobertura.
+- **M977** (*Nopi_changes ... scan enable can not be identified*): com o `scan_en` fixado em 0, o TestMAX não o reconhece como scan enable, e o `-nopi_changes` vale para todas as entradas. **Mantido de propósito.** Sem a opção, a cobertura cai para 97,25% (147 padrões) e as entradas poderiam mudar entre lançamento e captura. O comentário em `atpg_transition.tcl` registra a decisão.
+
+**Documentação.**
+- Corrigido o comentário do `run_drc.sh`: o DRC usa `filtro_pdm_final.gds`.
+- No README: corrigidas as linhas "7/7" e o parágrafo obsoleto sobre regerar as saídas; criada a seção "Escopo e limitações da verificação"; registrado o arquivo histórico `rtl/fir_antes_sintese.sv`.
+
+**Pendências de evidência, a executar e registrar:**
+- regressão GLS pós-síntese com os 10 testes;
+- potência SAIF no layout atual;
+- comparação de arcos do SDF no layout atual.

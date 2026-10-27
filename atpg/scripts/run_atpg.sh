@@ -42,6 +42,14 @@ fi
 mkdir -p "$REP" atpg/output
 
 export SYNOPSYS=$SYN_HOME
+
+# O transition usa uma copia do SPF do DC com "scan_en" = 0 no
+# test_setup (aviso V14); o SPF original nao e alterado
+if [ "$MODELO" = "transition" ]; then
+    mkdir -p atpg/spf
+    python3 atpg/scripts/gera_spf_transition.py \
+        synth/netlist/filtro_pdm_syn.spf atpg/spf/filtro_pdm_transition.spf
+fi
 export ATPG_ETAPA=$ETAPA
 
 tmax -shell "atpg/scripts/atpg_${MODELO}.tcl" \

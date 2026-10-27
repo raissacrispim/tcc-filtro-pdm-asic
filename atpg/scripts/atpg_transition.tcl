@@ -15,7 +15,15 @@
 # ============================================================
 
 set SAED32_V /Tools/PDK/SAED32/EDK_Digital/lib/stdcell_rvt/verilog/saed32nm.v
-set SPF      synth/netlist/filtro_pdm_syn.spf
+# SPF derivado do gerado pelo DC: identico, exceto "scan_en" = 0
+# no test_setup, coerente com add_pi_constraints 0 scan_en
+# (aviso V14). Gerado por run_atpg.sh com
+# atpg/scripts/gera_spf_transition.py.
+set SPF      atpg/spf/filtro_pdm_transition.spf
+if {![file exists $SPF]} {
+    puts "ERRO: $SPF nao encontrado. Execute por atpg/scripts/run_atpg.sh transition"
+    exit 1
+}
 
 # Netlist da sintese (padrao) ou pos-layout (ATPG_ETAPA=pnr,
 # definido por run_atpg.sh). No layout a cadeia de scan foi
@@ -68,8 +76,17 @@ set_delay -launch_cycle system_clock
 # podem mudar entre o pulso de lancamento e o de captura, e as
 # saidas nao sao medidas na captura em velocidade.
 add_pi_constraints 0 scan_en
-set_delay -nopi_changes
 set_delay -nopo_measures
+
+# -nopi_changes: entradas primarias fixas entre o lancamento e a
+# captura. Com scan_en restrito, o TestMAX emite M977 ("scan
+# enable can not be identified"): ele nao reconhece o scan_en
+# como scan enable porque o valor ja esta fixado em 0, e a opcao
+# vale para todas as entradas. Mantida de proposito: sem ela a
+# cobertura cai de 97,27% para 97,25% (auditoria de 27/10) e as
+# entradas poderiam mudar em velocidade, o que o testador nao
+# garante. Os padroes simulam sem divergencias.
+set_delay -nopi_changes
 
 run_drc $SPF
 

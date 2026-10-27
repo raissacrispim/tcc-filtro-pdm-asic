@@ -8,7 +8,9 @@
 #
 #   verif/scripts/run_drc.sh
 #
-# Entrada: pnr/output/filtro_pdm.gds (gerado por finish.tcl)
+# Entrada: pnr/output/filtro_pdm_final.gds (gerado por finish.tcl:
+#          GDS do FC com as etiquetas das portas nas camadas de
+#          pino, via pnr/scripts/fix_gds_pin_text.py)
 # Saida:   verif/reports/drc/  (resumo e lista de violacoes)
 #          verif/run_drc/      (arquivos de execucao, ignorados
 #                               pelo git)
