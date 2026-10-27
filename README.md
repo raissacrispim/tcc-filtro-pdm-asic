@@ -178,6 +178,8 @@ O ECO de hold do `finish.tcl` corrige com uma margem de 10 ps, além da incertez
 
 A auditoria final (portas de saída, protocolo do ATPG, simulação dos padrões e scripts) está registrada em [docs/auditoria_final.md](docs/auditoria_final.md).
 
+A versão congelada para o TCC e o registro no INPI (tag `v1.0-tcc`), com os hashes SHA-256 do GDSII, das netlists, do SDF, do SPEF e dos coeficientes, está em [docs/congelamento_v1.0.md](docs/congelamento_v1.0.md).
+
 Causa, diagnóstico, correção e critérios: [docs/auditoria_sta.md](docs/auditoria_sta.md).
 
 ## Escopo e limitações da verificação
