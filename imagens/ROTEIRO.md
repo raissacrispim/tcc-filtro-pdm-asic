@@ -46,7 +46,6 @@ O script abre a biblioteca e os blocos somente para leitura e grava, sem salvar 
 | `09_vdd_vss.png` | VDD (vermelho) e VSS (azul) |
 | `10_portas_io.png` | Portas de I/O |
 | `11_detalhe_celulas.png` | Zoom de 20 × 20 µm no centro do core |
-| `12_densidade_celulas.png` | Mapa de densidade de células |
 
 Ao final, o terminal lista as imagens gravadas e as **falhas**: os comandos da GUI que esta versão do FC não aceitou. Mande essa lista; eu ajusto o script. A GUI fica aberta para você explorar. Feche com `exit` **no prompt do fc_shell**, não no terminal do X2Go.
 

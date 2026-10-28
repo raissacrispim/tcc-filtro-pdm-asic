@@ -217,19 +217,6 @@ if {[abre_etapa finish]} {
     } else {
         grava 11_detalhe_celulas
     }
-
-    # Mapa de densidade de celulas
-    vista_completa
-    set mapa_ok 0
-    foreach m {cellDensityMap {Cell Density} {Cell Density Map}} {
-        if {![catch {gui_show_map -window [janela] -map $m -show true}]} {
-            set mapa_ok 1
-            grava 12_densidade_celulas
-            catch {gui_show_map -window [janela] -map $m -show false}
-            break
-        }
-    }
-    if {!$mapa_ok} { falha "mapa de densidade" "gui_show_map nao aceito" }
 }
 
 
