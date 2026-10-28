@@ -4,6 +4,40 @@ Projeto de implementação em hardware de um filtro digital para processamento d
 
 O projeto faz parte do desenvolvimento de um ASIC utilizando fluxo baseado em standard cells.
 
+Trabalho de Conclusão de Curso — Bacharelado em Engenharia Elétrica, Universidade Federal do Rio Grande do Norte (UFRN).
+
+- **Autora:** Raíssa Priscila Crispim da Silva
+- **Orientação:** Samaherni Morais Dias
+
+## Comece por aqui
+
+| Documento | Conteúdo |
+|---|---|
+| [docs/congelamento_v1.0.md](docs/congelamento_v1.0.md) | Versão entregue (tag `v1.0-tcc`), hashes SHA-256 do layout e das evidências, resumo dos resultados |
+| [docs/imagens.md](docs/imagens.md) | Galeria: síntese, layout, GDSII e simulações, geradas pelas ferramentas |
+| [docs/desempenho_filtro.md](docs/desempenho_filtro.md) | Desempenho do filtro medido nas saídas do hardware: banda, −3 dB, rejeição, SNR e latência |
+| [Resultados](#resultados) e [Escopo e limitações](#escopo-e-limitações-da-verificação) | Resultados de signoff e o que eles não cobrem |
+| [docs/auditoria_final.md](docs/auditoria_final.md), [docs/auditoria_sta.md](docs/auditoria_sta.md), [docs/auditoria_sdf.md](docs/auditoria_sdf.md) | Auditorias: problemas encontrados, causa e correção |
+
+## Demonstração
+
+No servidor, com o ambiente Synopsys carregado, um comando confere e simula a versão entregue:
+
+```bash
+source /Tools/synopsys-scripts/snps.sh
+bash ~/tcc_filtro/demo/demo_banca.sh            # RTL e pós-layout com SDF
+bash ~/tcc_filtro/demo/demo_banca.sh --rapido   # só RTL
+```
+
+O script [`demo/demo_banca.sh`](demo/demo_banca.sh):
+1. confere os hashes do congelamento;
+2. clona a tag `v1.0-tcc` numa pasta nova (`~/tcc_demo_<data>`);
+3. regenera os vetores com o Golden Model e confere que são idênticos aos versionados;
+4. simula o RTL e a netlist pós-layout com SDF nos 10 testes, comparando cada amostra com o Golden Model;
+5. mostra o resumo e como abrir a varredura de frequência no Verdi.
+
+O projeto só é lido. A síntese, o P&R e o signoff não fazem parte da demonstração, porque levam horas; seus resultados estão nos relatórios versionados e em `docs/`.
+
 ## Arquitetura
 
 A cadeia de processamento implementada é:
