@@ -3,7 +3,8 @@
 Todas as imagens desta página foram produzidas pelas ferramentas no servidor, a partir do projeto congelado (tag `v1.0-tcc`, [congelamento_v1.0.md](congelamento_v1.0.md)):
 
 - **Layout:** gravado pelo Fusion Compiler (`gui_write_window_image`), com a biblioteca aberta somente para leitura.
-- **Simulações:** janelas do Verdi com as formas de onda das simulações VCS, gravadas com `import -window` (ImageMagick).
+- **GDSII:** o arquivo congelado aberto no Custom Compiler, somente para leitura.
+- **Simulações:** janelas do Verdi e do WaveView com as formas de onda das simulações VCS, gravadas com `import -window` (ImageMagick).
 
 Nenhuma imagem foi desenhada, editada ou gerada por IA. Os scripts e o passo a passo de cada captura estão em [imagens/ROTEIRO.md](../imagens/ROTEIRO.md).
 
@@ -30,6 +31,28 @@ Script: [`imagens/scripts/fc_imagens.tcl`](../imagens/scripts/fc_imagens.tcl). A
 ![CIC e FIR no layout](imagens/layout/07_blocos_cic_fir.png)
 
 O FIR ocupa a maior parte do core. Isso é coerente com a análise de potência, em que o FIR responde por 86,7% do total.
+
+## GDSII (Custom Compiler)
+
+O GDSII congelado (`pnr/output/filtro_pdm_final.gds`, SHA-256 `4819ebd5…`) importado no Custom Compiler pelo script [`imagens/scripts/cc_importa_gds.sh`](../imagens/scripts/cc_importa_gds.sh), que confere o hash antes da importação. O layout foi aberto somente para leitura, com a tecnologia SAED32 e a hierarquia expandida até o nível 10, de modo que aparece também o desenho interno das células.
+
+Ao contrário das vistas do Fusion Compiler (abstrações de P&R), estas mostram as **camadas de máscara** do circuito, isto é, a topografia.
+
+| Imagem | O que mostra |
+|---|---|
+| [c01_gds_chip_completo.png](imagens/gds/c01_gds_chip_completo.png) | O chip inteiro com todas as camadas |
+| [c05_gds_detalhe_celulas.png](imagens/gds/c05_gds_detalhe_celulas.png) | Detalhe de duas linhas de células junto à borda superior do core |
+
+![GDSII completo](imagens/gds/c01_gds_chip_completo.png)
+
+![Detalhe das células no GDSII](imagens/gds/c05_gds_detalhe_celulas.png)
+
+Leitura do detalhe:
+- **Transistores:** os dedos verticais de polissilício (PO, vermelho) cruzando as regiões de difusão (DIFF, amarelo). Cada cruzamento é um transistor MOS.
+- **Contatos (CO):** os quadrados com X, que ligam a difusão e o poly ao metal 1.
+- **Metais:** M1 (azul) nas ligações internas das células; M2 (magenta, horizontal) e M3 (verde, vertical) entre células.
+- **Alimentação:** os rails horizontais, com vias, na borda de cada linha de células.
+- **NWELL:** a região hachurada em que ficam os transistores PMOS. Ela ocupa metade de cada linha de células e é compartilhada com a linha vizinha.
 
 ## Simulações (VCS + Verdi)
 
