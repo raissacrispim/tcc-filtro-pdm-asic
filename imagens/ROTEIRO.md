@@ -141,6 +141,56 @@ A entrada é um chirp linear de 0 a 150 kHz em 2 ms (9.600 bits PDM). A frequên
 
 A saída chega atrasada em relação à entrada em cerca de 110 µs, a latência do filtro (33 amostras). No Verdi, você pode marcar esses instantes com cursores e marcadores antes da captura.
 
+## 2b. Resposta em frequência em dB (WaveView)
+
+```bash
+cd ~/tcc_imagens_sim/onda_rtl_test_10_impulso
+wv &
+```
+
+1. *Open Waveform* → `filtro_pdm.fsdb`.
+2. Arraste `tb_filtro_pdm_golden → dut → y_out` para a área de ondas.
+3. Aba *Waveform* → *D to A*:
+   - Multiple Bits;
+   - Use Logic Bus Value;
+   - Signed Digital Value (2's Compliment);
+   - sufixo `_analog`.
+4. Selecione o sinal convertido. Em *FFT/DFT*:
+   - 256 pontos;
+   - Sampling Rate `300k`;
+   - Start `603.63u`;
+   - sem zero-padding e com Stop desmarcado;
+   - janela Rectangle;
+   - Normalized.
+
+   O zero-padding desloca a escala do eixo de frequência.
+5. Grave com `import -window` (janela "WaveView Version"): `docs/imagens/simulacao/s12_fft_resposta_frequencia.png`.
+
+## 2c. GDSII (Custom Compiler)
+
+```bash
+bash ~/tcc_filtro/imagens/scripts/cc_importa_gds.sh   # confere o hash e importa em ~/cc_v1
+cd ~/cc_v1 && custom_compiler &
+```
+
+1. No Library Manager, marque *Open Read-Only*.
+2. Abra `chip_filtro_v1 → filtro_pdm → layout`.
+3. Ajuste a profundidade de hierarquia para 10. É o segundo campo numérico da barra.
+4. Aperte `F` para o chip inteiro (`c01_gds_chip_completo.png`) ou dê zoom de poucas linhas de células (`c05_gds_detalhe_celulas.png`).
+5. Grave com `import -window` (janela "Layout Editor") em `docs/imagens/gds/`.
+
+## 2d. Síntese (Design Vision)
+
+```bash
+mkdir -p ~/tcc_imagens_dv && cd ~/tcc_imagens_dv
+design_vision -f ~/tcc_filtro/imagens/scripts/dv_abre.tcl
+```
+
+1. Clique em `filtro_pdm` na hierarquia e abra:
+   - *Schematic → New Symbol View* (`d01_dv_simbolo.png`);
+   - *Schematic → New Schematic View* (`d02_dv_esquematico_topo.png`).
+2. Grave com `import -window` (janela "Design Vision"), numa **outra aba** do terminal. A aba em que o Design Vision foi aberto só aceita comandos dele.
+
 ## 3. Publicação
 
 Confira se o congelamento continua íntegro e envie só as imagens:
