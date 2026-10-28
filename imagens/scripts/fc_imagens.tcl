@@ -141,7 +141,21 @@ foreach {rotulo nome} {
     route                  05_roteamento
     finish                 06_chip_completo
 } {
-    if {[abre_etapa $rotulo]} { grava $nome }
+    if {![abre_etapa $rotulo]} { continue }
+    switch $rotulo {
+        floorplan {
+            # Core vazio: as linhas de sites mostram onde as
+            # celulas serao posicionadas
+            destaca "linhas de sites" light_blue [get_site_rows -quiet *]
+        }
+        power_plan_reproduzido {
+            # So ha a rede de alimentacao: destaque para que o anel
+            # e os straps aparecam na vista do chip inteiro
+            destaca "VDD" red  [get_nets -quiet {VDD}]
+            destaca "VSS" blue [get_nets -quiet {VSS}]
+        }
+    }
+    grava $nome
 }
 
 
