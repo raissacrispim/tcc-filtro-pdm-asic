@@ -50,8 +50,19 @@ echo "GDS conferido (v1.0-tcc): $ATUAL"
 
 mkdir -p "$DEST" || exit 1
 cd "$DEST" || exit 1
+
+# Biblioteca de tecnologia: a mesma usada em ~/cc_saed32 (copia
+# local do PDK criada pelo setup do Custom Compiler). Com o
+# INCLUDE do lib.defs do PDK, o caminho relativo da tecnologia
+# nao existe nesta pasta e o layout abre com "Invalid Technology
+# Reference".
+TECH=${TCC_CC_TECH:-$HOME/cc_saed32/SAED_PDK_32_28}
+if [ ! -f "$TECH/tech.db" ] && [ ! -f "$TECH/.oalib" ]; then
+    echo "ERRO: biblioteca de tecnologia OpenAccess nao encontrada: $TECH"
+    exit 1
+fi
 cat > lib.defs <<FIM
-INCLUDE \$SAED32_28_PDK/lib.defs
+DEFINE SAED_PDK_32_28 $TECH
 DEFINE $LIB ./$LIB
 FIM
 
