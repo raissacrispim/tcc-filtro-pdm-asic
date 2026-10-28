@@ -180,7 +180,7 @@ A auditoria final (portas de saída, protocolo do ATPG, simulação dos padrões
 
 A versão congelada para o TCC e o registro no INPI (tag `v1.0-tcc`), com os hashes SHA-256 do GDSII, das netlists, do SDF, do SPEF e dos coeficientes, está em [docs/congelamento_v1.0.md](docs/congelamento_v1.0.md).
 
-Imagens do layout e das simulações, geradas pelo Fusion Compiler e pelo Verdi a partir da versão congelada: roteiro e scripts em [imagens/ROTEIRO.md](imagens/ROTEIRO.md); imagens em `docs/imagens/`.
+Imagens do layout e das simulações, geradas pelo Fusion Compiler e pelo Verdi a partir da versão congelada: galeria comentada em [docs/imagens.md](docs/imagens.md); roteiro e scripts em [imagens/ROTEIRO.md](imagens/ROTEIRO.md).
 
 Causa, diagnóstico, correção e critérios: [docs/auditoria_sta.md](docs/auditoria_sta.md).
 
