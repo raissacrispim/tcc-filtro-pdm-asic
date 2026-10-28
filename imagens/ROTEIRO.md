@@ -85,11 +85,15 @@ verdi -dbdir ../sim/simv_filtro_gls.daidir -ssf filtro_pdm.fsdb &
 
 Configuração comum na janela de formas de onda (nWave):
 
-- Adicione os sinais pelo painel de hierarquia: `tb_filtro_pdm_golden` → `dut`. Selecione o sinal e clique em *Add* (ou use o botão do meio do mouse).
-- Em `y_out` (e `cic_out`): defina o radix como decimal com sinal, complemento de dois (botão direito → *Set Radix* → *2's Complement*). Depois mude para forma analógica (botão direito → *Analog Waveform*) e aumente a altura do sinal.
-- Para ver o teste inteiro, use *Zoom All* (tecla `f`).
+- Arraste os sinais do painel de hierarquia (`tb_filtro_pdm_golden` → `dut`) para a janela de ondas.
+- Em `y_out` (e `cic_out`): *Analog → Convert to Analog*. A curva analógica (`A_y_out`) já usa o valor com sinal. Depois apague a linha digital do barramento (selecione e aperte `Delete`).
+- Para ver o teste inteiro, aperte `f` (*Zoom Fit*).
+- Arraste para cima a divisória entre o código-fonte e as ondas para aumentar a área das ondas.
+- Salve os sinais em *File → Save Signal...* (por exemplo, `~/tcc_imagens_sim/varredura.rc`). Se o Verdi fechar, a vista volta com `-sswr`:
 
-Os nomes dos menus podem variar um pouco conforme a versão do Verdi.
+```bash
+verdi -dbdir ../sim/simv_filtro_rtl.daidir -ssf filtro_pdm.fsdb -sswr ../varredura.rc &
+```
 
 ### 2.3 Capturas
 
@@ -108,12 +112,15 @@ Os nomes dos menus podem variar um pouco conforme a versão do Verdi.
 
 `cic_out` e `cic_valid` existem só no RTL. Na netlist pós-layout, a hierarquia do CIC foi achatada.
 
-Grave cada uma clicando na janela do Verdi:
+Grave a janela do Verdi pelo identificador. No X2Go, o `import` interativo (clicar ou arrastar) falha com "unable to grab mouse".
 
 ```bash
 mkdir -p ~/tcc_filtro/docs/imagens/simulacao
-import ~/tcc_filtro/docs/imagens/simulacao/s01_varredura_rtl.png
+xwininfo -root -tree | grep -i "nTraceMain"      # identificador 0x... da janela
+sleep 8 && import -window 0x... ~/tcc_filtro/docs/imagens/simulacao/s01_varredura_rtl.png
 ```
+
+Depois de apertar Enter, traga o Verdi à frente e não mexa mais em nada até a gravação. O terminal não pode ficar por cima da janela. O identificador muda a cada vez que o Verdi é aberto.
 
 ### Como ler a varredura (teste 09)
 
