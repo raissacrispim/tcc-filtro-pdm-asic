@@ -14,10 +14,10 @@
 # execucao (~/tcc_imagens_fc), fora do projeto.
 #
 # Saida: docs/imagens/layout/*.png, gravados com
-# gui_write_window_image a partir da janela de layout. A imagem
-# tem o tamanho da area de desenho: maximize a janela do FC
-# antes de executar. Os arquivos .idf gravados junto pelo FC
-# nao sao versionados (.gitignore).
+# gui_write_window_image a partir da janela de layout, em
+# 1800 x 1800 pixels (-size), independente do tamanho da janela.
+# Os arquivos .idf gravados junto pelo FC nao sao versionados
+# (.gitignore).
 # Cada vista e independente: se um comando da GUI nao existir
 # nesta versao do FC, a falha e listada no final e as demais
 # imagens continuam. A GUI fica aberta ao final.
@@ -73,19 +73,34 @@ proc alta_qualidade {w} {
     }
 }
 
+# Tamanho da imagem: -size grava a vista num tamanho fixo,
+# independente da janela (o chip e quadrado: 240 x 240 um).
+set TAMANHO 1800
+set FORMA_TAMANHO ""
+
 proc grava {nome} {
-    global SAIDA GRAVADAS
+    global SAIDA GRAVADAS TAMANHO FORMA_TAMANHO
     set w [janela]
     alta_qualidade $w
     set arq $SAIDA/$nome.png
-    if {[catch {gui_write_window_image -window $w -file $arq \
-            -format png -width 1600 -height 1600} msg]} {
-        puts "Aviso: gravacao com -width/-height nao aceita ($msg)"
-        if {[catch {gui_write_window_image -window $w -file $arq \
-                -format png} msg2]} {
-            falha "gravar $nome" $msg2
-            return
+    set gravou 0
+    foreach forma [list "$TAMANHO $TAMANHO" "${TAMANHO}x${TAMANHO}" ""] {
+        if {$FORMA_TAMANHO ne "" && $forma ne $FORMA_TAMANHO} { continue }
+        set opcoes [list -window $w -file $arq -format png]
+        if {$forma ne ""} { lappend opcoes -size $forma }
+        if {![catch {gui_write_window_image {*}$opcoes} msg]} {
+            set gravou 1
+            if {$FORMA_TAMANHO eq ""} {
+                set FORMA_TAMANHO $forma
+                puts "Tamanho da imagem: -size {$forma}"
+            }
+            break
         }
+        puts "Aviso: gui_write_window_image -size {$forma} nao aceito ($msg)"
+    }
+    if {!$gravou} {
+        falha "gravar $nome" "gui_write_window_image"
+        return
     }
     puts "Gravada: $arq"
     lappend GRAVADAS $nome
