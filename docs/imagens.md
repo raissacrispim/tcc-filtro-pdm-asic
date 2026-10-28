@@ -2,11 +2,29 @@
 
 Todas as imagens desta página foram produzidas pelas ferramentas no servidor, a partir do projeto congelado (tag `v1.0-tcc`, [congelamento_v1.0.md](congelamento_v1.0.md)):
 
+- **Síntese:** a netlist aberta no Design Vision.
 - **Layout:** gravado pelo Fusion Compiler (`gui_write_window_image`), com a biblioteca aberta somente para leitura.
 - **GDSII:** o arquivo congelado aberto no Custom Compiler, somente para leitura.
 - **Simulações:** janelas do Verdi e do WaveView com as formas de onda das simulações VCS, gravadas com `import -window` (ImageMagick).
 
 Nenhuma imagem foi desenhada, editada ou gerada por IA. Os scripts e o passo a passo de cada captura estão em [imagens/ROTEIRO.md](../imagens/ROTEIRO.md).
+
+## Síntese (Design Vision)
+
+A netlist da síntese (`synth/netlist/filtro_pdm_syn.ddc`, gerada na mesma execução que `filtro_pdm_syn.v`) aberta no Design Vision pelo script [`imagens/scripts/dv_abre.tcl`](../imagens/scripts/dv_abre.tcl), com a biblioteca `saed32rvt_tt0p85v25c`.
+
+| Imagem | O que mostra |
+|---|---|
+| [d01_dv_simbolo.png](imagens/sintese/d01_dv_simbolo.png) | O símbolo do `filtro_pdm`. Entradas: `clk`, `rst`, `pdm_in`, `scan_en`, `scan_in`. Saídas: `valid_out`, `scan_out`, `y_out` (19 bits). |
+| [d02_dv_esquematico_topo.png](imagens/sintese/d02_dv_esquematico_topo.png) | O esquemático do topo: o bloco `u_fir` e as células do CIC e do decimador, ligadas a ele |
+
+![Símbolo do filtro_pdm](imagens/sintese/d01_dv_simbolo.png)
+
+![Esquemático do topo](imagens/sintese/d02_dv_esquematico_topo.png)
+
+As portas `scan_en`, `scan_in` e `scan_out` foram criadas pela inserção da cadeia de scan (DFT) na síntese. Elas não existem no RTL.
+
+Na hierarquia sobram só dois níveis: o topo `filtro_pdm` e o FIR (`u_fir`). A síntese achatou o CIC e o decimador dentro do topo.
 
 ## Layout (Fusion Compiler)
 
