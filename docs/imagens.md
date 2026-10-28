@@ -89,6 +89,36 @@ No pós-layout, a saída amostrada é igual ao `y_out` do RTL.
 
 A entrada é a sequência 0101… (média zero) com um único bit invertido. A saída mostra a resposta ao impulso do CIC + FIR: um pico central (por volta de 780 µs, que é o instante do bit invertido mais a latência) e lóbulos laterais simétricos, característicos de um FIR de fase linear.
 
+### Resposta em frequência em dB: FFT do impulso (WaveView)
+
+[s12_fft_resposta_frequencia.png](imagens/simulacao/s12_fft_resposta_frequencia.png): FFT calculada pelo WaveView sobre a saída do teste 10.
+
+![FFT da resposta ao impulso](imagens/simulacao/s12_fft_resposta_frequencia.png)
+
+Procedimento no WaveView:
+1. `y_out` convertido para analógico com *D to A* (Multiple Bits, valor do barramento com sinal).
+2. *FFT/DFT* com 256 pontos a 300 kHz (a taxa da saída), a partir de 603,63 µs. A janela é retangular e cobre a resposta ao impulso inteira, sem o transitório do início.
+3. Magnitude normalizada (0 dB = banda útil).
+
+Leitura da curva:
+- plana até cerca de 85 kHz;
+- −3 dB perto de 90 kHz;
+- um zero em 97 kHz;
+- abaixo de −60 dB a partir de 110 kHz.
+
+Conferência com a mesma FFT (256 amostras, 300 kHz) calculada diretamente das amostras de saída da simulação (`vectors/test_10_impulso_output_rtl.txt`):
+
+| Frequência | Amostras | WaveView |
+|---|---|---|
+| 50 kHz | −0,2 dB | ~0 dB |
+| 90 kHz | −4,8 dB | ~−5 dB |
+| 97 kHz | −34 dB | ~−33 dB |
+| 110 kHz | −61 dB | ~−60 dB |
+| 130 kHz | −65 dB | ~−63 dB |
+| 145 a 148 kHz | −75 dB | sobe até ~−45 dB |
+
+Até cerca de 146 kHz, as duas curvas coincidem. A subida nos últimos pontos, junto de 150 kHz (metade da taxa de amostragem), não existe nas amostras do chip: é um efeito do cálculo da ferramenta sobre o sinal convertido. Ela não mudou ao deslocar o início da janela em meia amostra.
+
 ### Senoides na banda útil (testes 01, 03 e 04)
 
 | Imagem | Frequência | Trecho |
