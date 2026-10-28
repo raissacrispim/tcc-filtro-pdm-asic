@@ -12,8 +12,7 @@
 # vectors/test_*_output_rtl.txt (gravadas pela ultima regressao,
 # identicas as do Golden Model). Nao altera o projeto.
 #
-# Especificacao adotada (golden_model/05_Golden_Model_v2.ipynb e
-# golden_model.py):
+# Especificacao adotada (Golden Model, golden_model/golden_model.py):
 #   banda util           20-80 kHz
 #   banda de rejeicao    a partir de 110 kHz (ate fout/2 = 150 kHz)
 #   interferencia        130 kHz atenuada em mais de 80 dB (teste 08)

@@ -48,7 +48,7 @@ Com entrada -1/+1, a saída do CIC é sempre par (y = 2·S − 65536). O LSB é 
 - `tb/`: testbenches de verificação
 - `golden_model/`: Golden Model em Python
   - `golden_model.py`: modelo oficial e geração dos vetores (`python3 golden_model/golden_model.py`)
-  - `05_Golden_Model_v2.ipynb`: notebook de desenvolvimento e análises (versão com CIC de 17 bits)
+  - `analise_desempenho.py`: métricas de desempenho a partir das saídas do hardware (`docs/desempenho_filtro.md`)
 - `vectors/`: vetores de entrada e resultados do Golden Model
 
 ## Verificação
