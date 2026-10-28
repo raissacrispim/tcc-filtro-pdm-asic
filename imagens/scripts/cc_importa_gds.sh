@@ -65,7 +65,7 @@ importStream -logFile "$LOG" \
 
 echo "============================================"
 grep -E "Messages:|Cells:|Rectangles:|Paths:|Text:" "$LOG"
-if grep -q "Messages: *0 error" "$LOG" && [ -d "$DEST/$LIB/filtro_pdm/layout" ]; then
+if grep -qE "Messages:[[:space:]]*0 error" "$LOG" && [ -d "$DEST/$LIB/filtro_pdm/layout" ]; then
     echo "IMPORTACAO OK: $LIB/filtro_pdm/layout em $DEST"
     echo "Abra com: cd $DEST && custom_compiler &"
 else
