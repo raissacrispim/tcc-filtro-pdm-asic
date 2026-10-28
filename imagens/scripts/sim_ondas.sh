@@ -38,6 +38,12 @@ TESTES_PNR=(
     test_09_varredura
 )
 
+if ! command -v vcs > /dev/null; then
+    echo "ERRO: vcs nao encontrado."
+    echo "Execute antes: source /Tools/synopsys-scripts/snps.sh"
+    exit 1
+fi
+
 if [ -e "$DEST" ]; then
     echo "ERRO: $DEST ja existe e nao sera alterado."
     echo "Use outro diretorio: TCC_ONDAS=~/tcc_imagens_sim2 bash $0"

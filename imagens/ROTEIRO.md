@@ -13,11 +13,12 @@ Tudo roda dentro da sessão **X2Go** (área de trabalho remota), que já tem a i
 
 ## 0. Preparação (uma vez)
 
-Num terminal dentro do X2Go:
+Em **cada terminal novo** dentro do X2Go, carregue o ambiente Synopsys:
 
 ```bash
+source /Tools/synopsys-scripts/snps.sh
 echo "DISPLAY=$DISPLAY"
-which fc_shell verdi import 2>&1
+which fc_shell vcs verdi import 2>&1
 ```
 
 - `DISPLAY` deve ter um valor, por exemplo `:50`.
