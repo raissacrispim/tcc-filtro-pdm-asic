@@ -87,3 +87,6 @@ sim/sdfAnnotateInfo
 
 # Arquivo auxiliar do VCS (qualquer pasta)
 **/sdfAnnotateInfo
+
+# Arquivos auxiliares do gui_write_window_image (Fusion Compiler)
+docs/imagens/**/*.idf

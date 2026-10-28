@@ -14,7 +14,10 @@
 # execucao (~/tcc_imagens_fc), fora do projeto.
 #
 # Saida: docs/imagens/layout/*.png, gravados com
-# gui_write_window_image a partir da janela de layout.
+# gui_write_window_image a partir da janela de layout. A imagem
+# tem o tamanho da area de desenho: maximize a janela do FC
+# antes de executar. Os arquivos .idf gravados junto pelo FC
+# nao sao versionados (.gitignore).
 # Cada vista e independente: se um comando da GUI nao existir
 # nesta versao do FC, a falha e listada no final e as demais
 # imagens continuam. A GUI fica aberta ao final.
@@ -56,12 +59,28 @@ proc vista_completa {} {
     }
 }
 
+# Qualidade de desenho "High quality" com anti-alias (View
+# Settings > Settings > Small object filtering). No padrao "Max
+# speed", objetos menores que um pixel nao sao desenhados: na
+# vista do chip inteiro os fios de roteamento e a rede de
+# alimentacao desaparecem.
+proc alta_qualidade {w} {
+    if {[catch {
+        gui_set_setting -window $w -setting renderQuality -value 1
+        gui_set_setting -window $w -setting renderAntiAlias -value true
+    } msg]} {
+        falha "qualidade de desenho" $msg
+    }
+}
+
 proc grava {nome} {
     global SAIDA GRAVADAS
     set w [janela]
+    alta_qualidade $w
     set arq $SAIDA/$nome.png
     if {[catch {gui_write_window_image -window $w -file $arq \
             -format png -width 1600 -height 1600} msg]} {
+        puts "Aviso: gravacao com -width/-height nao aceita ($msg)"
         if {[catch {gui_write_window_image -window $w -file $arq \
                 -format png} msg2]} {
             falha "gravar $nome" $msg2
@@ -102,6 +121,9 @@ proc abre_etapa {rotulo} {
 # ------------------------------------------------------------
 
 catch {start_gui}
+
+# Opcoes do comando de gravacao nesta versao (para o log)
+catch {help -verbose gui_write_window_image}
 if {[catch {open_lib -read $PROJ/pnr/work/filtro_pdm.dlib} msg]} {
     falha "abrir biblioteca" $msg
 }
