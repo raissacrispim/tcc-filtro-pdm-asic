@@ -58,7 +58,13 @@ A entrada é um chirp linear: a frequência cresce 75 kHz por milissegundo. Como
 
 As duas curvas são iguais: o chip final, com os atrasos reais do layout, filtra como o RTL.
 
-Na imagem pós-layout, a curva é `amostra_saida.y_amostrado`. É o valor de `y_out` na borda de descida do clock com `valid_out = 1`, o mesmo instante em que o testbench compara a saída com o Golden Model ([`imagens/sim/amostra_saida.sv`](../imagens/sim/amostra_saida.sv)). A forma analógica do próprio `y_out` pós-layout mostraria picos verticais nas trocas de valor, porque os bits mudam em instantes ligeiramente diferentes (ver s09).
+Na imagem pós-layout, a curva é `amostra_saida.y_amostrado`. É o valor de `y_out` na borda de descida do clock com `valid_out = 1`, o mesmo instante em que o testbench compara a saída com o Golden Model ([`imagens/sim/amostra_saida.sv`](../imagens/sim/amostra_saida.sv)). Já a forma analógica do próprio `y_out` pós-layout mostra picos verticais nas trocas de valor, porque os bits mudam em instantes ligeiramente diferentes (ver s09):
+
+[s11_glitches_pos_layout.png](imagens/simulacao/s11_glitches_pos_layout.png): `y_out` pós-layout convertido diretamente para analógico, no teste inteiro.
+
+![Glitches pós-layout](imagens/simulacao/s11_glitches_pos_layout.png)
+
+Os picos são valores intermediários de poucos picossegundos logo após cada borda de clock. Eles não afetam o resultado: a saída é lida no meio do ciclo, quando todos os bits já estabilizaram, e os testes pós-layout têm 0 divergências.
 
 ### Rejeição de interferência: 50 kHz + 130 kHz (teste 08)
 

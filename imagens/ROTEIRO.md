@@ -109,6 +109,7 @@ verdi -dbdir ../sim/simv_filtro_rtl.daidir -ssf filtro_pdm.fsdb -sswr ../varredu
 | `s08_detalhe_decimacao.png` | `onda_rtl_test_03_50k` | `clk`, `pdm_in`, `dut.cic_valid`, `valid_out`, `y_out` (decimal) | ~10 µs: `cic_valid` a cada 16 ciclos de clock |
 | `s09_atraso_pos_layout.png` | `onda_pnr_test_09_varredura` | `clk`, `valid_out`, `y_out` (barramento) | ~20 ns em torno de uma borda de clock: atraso real das células |
 | `s10_interferencia_pos_layout.png` | `onda_pnr_amostra_test_08_50k_interf_130k` | `pdm_in`, `amostra_saida.y_amostrado` (analógico) | mesma vista de `s03` |
+| `s11_glitches_pos_layout.png` | `onda_pnr_test_09_varredura` | `y_out` (analógico, sem amostragem) | teste inteiro: picos das trocas de valor |
 
 Na simulação pós-layout com SDF, os bits de `y_out` mudam em instantes ligeiramente diferentes após cada borda de clock. A forma analógica de `y_out` desenha esses valores intermediários (glitches) como picos verticais. Por isso as curvas pós-layout (s02 e s10) usam `amostra_saida.y_amostrado`: é o valor de `y_out` na borda de descida do clock com `valid_out = 1`, o mesmo instante em que o testbench compara a saída com o Golden Model. Esse sinal vem de `imagens/sim/amostra_saida.sv`, um segundo módulo de topo, e é gerado por:
 
